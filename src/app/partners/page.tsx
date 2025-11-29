@@ -8,14 +8,14 @@ interface Partner {
   name: string;
   description: string;
   url: string;
-  category: 'founding' | 'strategic' | 'potential';
+  category: 'founding' | 'validation' | 'potential';
 }
 
 const PARTNERS: Partner[] = [
   {
     id: 'maa',
     name: 'Multilateral Accountability Associates',
-    description: 'Strategic advisory firm specializing in international accountability mechanisms and multilateral cooperation frameworks.',
+    description: 'Strategic advisory firm specializing in international accountability mechanisms and multilateral cooperation frameworks. Designs the Truce Index methodology and serves as methodology gatekeeper.',
     url: 'https://www.multilateralaccountability.com',
     category: 'founding',
   },
@@ -39,6 +39,13 @@ const PARTNERS: Partner[] = [
     description: 'Bridging the gap between business and government through high-level dialogues and partnerships.',
     url: 'https://www.bciu.org',
     category: 'founding',
+  },
+  {
+    id: 'setonhall',
+    name: 'Seton Hall University',
+    description: 'Independent academic validator through the Center for Sports Media, Center for UN and Global Governance Studies, and Sports Polling Institute.',
+    url: 'https://www.shu.edu',
+    category: 'validation',
   },
   {
     id: 'iotc',
@@ -69,23 +76,27 @@ const CATEGORY_CONFIG = {
     description: 'Core organizations driving the Truce Foundation mission',
     color: 'from-blue-500/20 to-blue-600/10',
     border: 'border-blue-500/30',
+    iconColor: 'text-blue-400',
   },
-  strategic: {
-    label: 'Strategic Partners',
-    description: 'Key collaborators in Olympic Truce monitoring and advocacy',
-    color: 'from-emerald-500/20 to-emerald-600/10',
-    border: 'border-emerald-500/30',
+  validation: {
+    label: 'Academic Validation Partner',
+    description: 'Independent institution providing methodology validation and research integrity',
+    color: 'from-purple-500/20 to-purple-600/10',
+    border: 'border-purple-500/30',
+    iconColor: 'text-purple-400',
   },
   potential: {
     label: 'Future Collaborations',
     description: 'Organizations we are in discussions with',
     color: 'from-amber-500/20 to-amber-600/10',
     border: 'border-amber-500/30',
+    iconColor: 'text-amber-400',
   },
 };
 
 export default function PartnersPage() {
   const foundingPartners = PARTNERS.filter((p) => p.category === 'founding');
+  const validationPartners = PARTNERS.filter((p) => p.category === 'validation');
   const potentialPartners = PARTNERS.filter((p) => p.category === 'potential');
 
   return (
@@ -182,8 +193,73 @@ export default function PartnersPage() {
         </div>
       </section>
 
-      {/* Potential Partners */}
+      {/* Academic Validation Partner */}
       <section className="py-12 px-4 bg-slate-900/30">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-8"
+          >
+            <h2 className="text-2xl font-bold text-white mb-2">
+              {CATEGORY_CONFIG.validation.label}
+            </h2>
+            <p className="text-slate-400">
+              {CATEGORY_CONFIG.validation.description}
+            </p>
+          </motion.div>
+
+          <div className="max-w-2xl">
+            {validationPartners.map((partner, index) => (
+              <motion.a
+                key={partner.id}
+                href={partner.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                whileHover={{ scale: 1.02, y: -4 }}
+                className={`block p-6 rounded-2xl bg-gradient-to-br ${CATEGORY_CONFIG.validation.color} border ${CATEGORY_CONFIG.validation.border} hover:border-purple-400/50 transition-all duration-300`}
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-slate-800/50 flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold text-white mb-2">
+                      {partner.name}
+                    </h3>
+                    <p className="text-sm text-slate-400 mb-3">
+                      {partner.description}
+                    </p>
+                    <div className="flex flex-wrap gap-2 mb-3">
+                      <span className="px-2 py-1 text-xs bg-purple-500/20 text-purple-300 rounded-full">Center for Sports Media</span>
+                      <span className="px-2 py-1 text-xs bg-purple-500/20 text-purple-300 rounded-full">UN & Global Governance</span>
+                      <span className="px-2 py-1 text-xs bg-purple-500/20 text-purple-300 rounded-full">Sports Polling Institute</span>
+                    </div>
+                    <span className="inline-flex items-center gap-1 text-xs text-purple-400">
+                      Visit website
+                      <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </motion.a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Potential Partners */}
+      <section className="py-12 px-4">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
