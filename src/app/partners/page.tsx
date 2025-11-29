@@ -9,6 +9,7 @@ interface Partner {
   description: string;
   url: string;
   category: 'founding' | 'validation' | 'potential';
+  logo?: string;
 }
 
 const PARTNERS: Partner[] = [
@@ -60,6 +61,7 @@ const PARTNERS: Partner[] = [
     description: 'Global network of Olympic athletes working together to make a positive impact in the world.',
     url: 'https://www.olympians.org',
     category: 'potential',
+    logo: '/woa-logo.png',
   },
   {
     id: 'peacesport',
@@ -289,6 +291,15 @@ export default function PartnersPage() {
                 whileHover={{ scale: 1.02, y: -4 }}
                 className={`block p-5 rounded-xl bg-gradient-to-br ${CATEGORY_CONFIG.potential.color} border ${CATEGORY_CONFIG.potential.border} hover:border-amber-400/50 transition-all duration-300`}
               >
+                {partner.logo && (
+                  <div className="mb-3 flex justify-center">
+                    <img
+                      src={partner.logo}
+                      alt={`${partner.name} logo`}
+                      className="h-16 w-auto object-contain"
+                    />
+                  </div>
+                )}
                 <h3 className="text-md font-semibold text-white mb-2">
                   {partner.name}
                 </h3>
