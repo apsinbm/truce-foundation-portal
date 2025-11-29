@@ -59,7 +59,7 @@ const PARTNERS: Partner[] = [
     id: 'woa',
     name: 'World Olympians Association',
     description: 'Global network of Olympic athletes working together to make a positive impact in the world.',
-    url: 'https://www.olympians.org',
+    url: 'https://olympians.org',
     category: 'potential',
     logo: '/woa-logo.png',
   },
