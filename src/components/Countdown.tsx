@@ -60,16 +60,11 @@ export default function Countdown() {
 
   const TimeBlock = ({ value, label }: { value: number; label: string }) => (
     <div className="flex flex-col items-center">
-      <motion.div
-        key={value}
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="glass-card px-4 py-3 min-w-[70px] sm:min-w-[80px] pulse-glow"
-      >
+      <div className="glass-card px-4 py-3 min-w-[70px] sm:min-w-[80px]">
         <span className="text-2xl sm:text-3xl font-bold text-white tabular-nums">
           {value.toString().padStart(2, '0')}
         </span>
-      </motion.div>
+      </div>
       <span className="text-xs sm:text-sm text-slate-400 mt-2 uppercase tracking-wider">
         {label}
       </span>
