@@ -24,16 +24,18 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto text-center space-y-8">
-        {/* Logo placeholder - replace with actual logo */}
+        {/* Official Truce Foundation Logo */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
           className="flex justify-center mb-8"
         >
-          <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center shadow-2xl shadow-blue-500/30">
-            <span className="text-4xl sm:text-5xl">🕊️</span>
-          </div>
+          <img
+            src="/tf-logo.png"
+            alt="Truce Foundation"
+            className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 object-contain drop-shadow-2xl"
+          />
         </motion.div>
 
         {/* Title */}
