@@ -27,7 +27,7 @@ export default function Home() {
             className="text-center mb-12"
           >
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
-              Explore the Platform
+              Discover Our Resources
             </h2>
             <p className="text-slate-400 max-w-2xl mx-auto">
               Access real-time compliance monitoring, advocacy resources, and connect with the global truce community.

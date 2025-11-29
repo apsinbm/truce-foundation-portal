@@ -32,9 +32,9 @@ export default function Hero() {
           className="flex justify-center mb-8"
         >
           <img
-            src="/tf-logo.png"
+            src="/truce-foundation-logo.jpg"
             alt="Truce Foundation"
-            className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 object-contain drop-shadow-2xl"
+            className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 object-contain drop-shadow-2xl rounded-full"
           />
         </motion.div>
 

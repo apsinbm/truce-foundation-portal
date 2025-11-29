@@ -9,6 +9,18 @@ interface SubSiteCardProps {
   index: number;
 }
 
+// Varied action words based on card type
+const getActionWord = (id: string): string => {
+  const actions: Record<string, string> = {
+    index: 'View Dashboard',
+    history: 'Browse Timeline',
+    advocacy: 'Access Tools',
+    methodology: 'Learn More',
+    partners: 'Meet Partners',
+  };
+  return actions[id] || 'Visit';
+};
+
 export default function SubSiteCard({ site, index }: SubSiteCardProps) {
   const isLive = site.status === 'live';
   const isExternal = site.external;
@@ -38,7 +50,7 @@ export default function SubSiteCard({ site, index }: SubSiteCardProps) {
       {/* Arrow indicator for live sites */}
       {isLive && (
         <div className="mt-4 flex items-center gap-2 text-blue-400 text-sm font-medium">
-          <span>Explore</span>
+          <span>{getActionWord(site.id)}</span>
           <svg
             className="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
             fill="none"

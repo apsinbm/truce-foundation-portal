@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { WOA_URL, TRUCE_FOUNDATION_URL } from '@/lib/constants';
 
 export default function Footer() {
@@ -29,20 +30,19 @@ export default function Footer() {
             transition={{ delay: 0.2 }}
             className="flex justify-center items-center gap-12"
           >
-            {/* WOA Logo Placeholder - User will provide actual logo */}
             <a
               href={WOA_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center gap-3 opacity-60 hover:opacity-100 transition-opacity group"
+              className="opacity-60 hover:opacity-100 transition-opacity group"
             >
-              <div className="w-16 h-16 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center group-hover:border-slate-600 transition-colors">
-                {/* Placeholder for WOA flame icon */}
-                <span className="text-2xl">🔥</span>
-              </div>
-              <span className="text-xs text-slate-500 group-hover:text-slate-400 transition-colors">
-                World Olympians Association
-              </span>
+              <Image
+                src="/woa-logo.png"
+                alt="World Olympians Association"
+                width={128}
+                height={128}
+                className="group-hover:scale-105 transition-transform"
+              />
             </a>
           </motion.div>
         </div>
@@ -55,9 +55,13 @@ export default function Footer() {
             {/* Logo & Description */}
             <div className="space-y-4">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center">
-                  <span className="text-xl">🕊️</span>
-                </div>
+                <Image
+                  src="/truce-foundation-logo.jpg"
+                  alt="Truce Foundation"
+                  width={40}
+                  height={40}
+                  className="rounded-full"
+                />
                 <span className="font-bold text-white">Truce Foundation</span>
               </div>
               <p className="text-sm text-slate-400 max-w-xs">
