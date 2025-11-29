@@ -29,6 +29,14 @@ export const SUB_SITES: SubSite[] = [
     external: true,
   },
   {
+    id: 'history',
+    icon: '📜',
+    title: 'Truce History',
+    description: 'UN Solemn Appeals and milestone effects from Lillehammer 1994 to Paris 2024',
+    href: '/history',
+    status: 'live',
+  },
+  {
     id: 'forum',
     icon: '💬',
     title: 'Forum',
@@ -42,7 +50,7 @@ export const SUB_SITES: SubSite[] = [
     title: 'Advocacy Toolkit',
     description: 'Infographics, policy briefs, and social media templates',
     href: '/advocacy',
-    status: 'coming-soon',
+    status: 'live',
   },
   {
     id: 'candles',
@@ -61,12 +69,20 @@ export const SUB_SITES: SubSite[] = [
     status: 'coming-soon',
   },
   {
+    id: 'methodology',
+    icon: '📐',
+    title: 'Methodology',
+    description: 'How we measure Olympic Truce compliance',
+    href: '/methodology',
+    status: 'live',
+  },
+  {
     id: 'partners',
-    icon: '🔐',
-    title: 'Partner Portal',
-    description: 'Secure access for UN missions, NGOs, and media',
+    icon: '🤝',
+    title: 'Our Partners',
+    description: 'Organizations supporting the Olympic Truce',
     href: '/partners',
-    status: 'coming-soon',
+    status: 'live',
   },
   {
     id: 'scorecards',
