@@ -312,6 +312,18 @@ interface KeyMoment {
 
 const KEY_MOMENTS: KeyMoment[] = [
   {
+    year: 776,
+    title: 'Ancient Olympic Truce Established',
+    description: 'The Olympic Truce (ekecheiria) is adopted for the first time, followed by the inauguration of the first Olympic Games in Olympia, Greece.',
+    significance: 'milestone',
+  },
+  {
+    year: 1936,
+    title: 'Jesse Owens & Luz Long',
+    description: 'Afro-American athlete Jesse Owens wins Gold in long jump at Berlin, thanks to encouragement from his main opponent, German Luz Long. The two remain friends until the end of their lives - embodying Olympic values.',
+    significance: 'symbolic',
+  },
+  {
     year: 1992,
     title: 'IOC Launches Olympic Truce Appeal',
     description: 'The IOC launched an Appeal for the observance of the Olympic Truce and negotiated with the UN to facilitate participation of athletes from the former Republic of Yugoslavia in Barcelona.',
@@ -349,9 +361,21 @@ const KEY_MOMENTS: KeyMoment[] = [
   },
   {
     year: 2000,
-    title: 'Millennium Declaration & Korean Unity',
-    description: 'The UN Millennium Summit adopted a declaration including Olympic Truce observance. At Sydney 2000, South and North Korean delegations paraded together under the flag of the Korean peninsula.',
+    title: 'IOTC Founded & Korean Unity',
+    description: 'The International Olympic Truce Centre is founded by the IOC. The UN Millennium Summit adopts a declaration including Olympic Truce. At Sydney 2000, North and South Korean delegations parade together under the flag of the Korean peninsula.',
+    significance: 'milestone',
+  },
+  {
+    year: 2002,
+    title: 'Signature Collection Launched',
+    description: 'Collection of signatures by international personalities in support of the Olympic Truce is launched in Ancient Olympia during the Salt Lake City Olympic Flame lighting. Hundreds of Heads of State, religious leaders, and athletes sign.',
     significance: 'symbolic',
+  },
+  {
+    year: 2003,
+    title: '190 Co-Sponsors for Athens 2004',
+    description: 'The nations of the world unanimously urge humanity to celebrate Athens 2004 in peace. 190 UN Member States co-sponsor - unprecedented in UN history at the time.',
+    significance: 'record',
   },
   {
     year: 2004,
@@ -370,6 +394,24 @@ const KEY_MOMENTS: KeyMoment[] = [
     title: 'UN Secretary General\'s Beijing Message',
     description: 'During the Opening Ceremony of the Olympic Games in Beijing, the international community, particularly the United Nations, reiterated the importance of the Games and the value of sport to promote development and peace worldwide.',
     significance: 'diplomatic',
+  },
+  {
+    year: 2012,
+    title: 'Ban Ki-Moon Carries Olympic Flag',
+    description: 'At London 2012 Opening Ceremony, UN Secretary General Ban Ki-Moon carries the Olympic Flag - first time ever. Also first Games where every national team includes at least one woman.',
+    significance: 'milestone',
+  },
+  {
+    year: 2013,
+    title: 'International Day of Sport for Development and Peace',
+    description: 'The UN General Assembly declares April 6 as the International Day of Sport for Development and Peace, celebrating the power of sport to drive social change and foster peace.',
+    significance: 'milestone',
+  },
+  {
+    year: 2016,
+    title: 'First Refugee Olympic Team',
+    description: 'Athletes with refugee status compete at Rio 2016 under the Olympic flag as the Refugee Olympic Team. The Olympic Truce Declaration tradition is also established by IOTC.',
+    significance: 'symbolic',
   },
   {
     year: 2018,
