@@ -461,6 +461,14 @@ const ANCIENT_SOURCES: AncientSource[] = [
     passages: ['Section 1.1'],
     url: 'https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Plutarch/Lives/Lycurgus*.html',
   },
+  {
+    author: 'Aristophanes',
+    title: 'Lysistrata',
+    date: '411 BC',
+    description: 'Comic play where the female protagonist attempts to convince Athenians and Spartans to end their war by pointing to the Olympic Truce as evidence that even bitter enemies could find peaceful common ground - indicating the Truce had become proverbial in 5th-century Greek thought.',
+    passages: ['References to Olympic gatherings and peace'],
+    url: 'http://www.perseus.tufts.edu/hopper/text?doc=Aristoph.+Lys.',
+  },
 ];
 
 // Academic/Scholarly Sources
@@ -559,6 +567,53 @@ const SCHOLARLY_SOURCES: ScholarlySource[] = [
     year: 2024,
     description: 'Critical historical perspective on the modern truce as an "invented tradition."',
     url: 'https://www.swissinfo.ch/eng/sport/the-olympic-truce-noble-myth-harsh-reality/',
+  },
+  {
+    author: 'Finnigan, Muriel',
+    title: 'Olympic Singularity: The Rise of a New Breed of Actor in International Peace and Security',
+    publication: 'PhD thesis, University of Glasgow',
+    year: 2017,
+    description: 'Proposes that Olympic Truce resolutions could be codified into binding treaty law, conceptualizing "Olympic Singularity" - unique characteristics allowing the IOC to function as a quasi-sovereign actor.',
+    url: 'https://theses.gla.ac.uk/8389/',
+  },
+  {
+    author: 'Di Marco, A.',
+    title: 'Integrating the Olympic Truce into International Law',
+    publication: 'International Sports Law Journal',
+    year: 2025,
+    description: 'Argues urgent reform is required to ensure the Olympic Truce\'s effective integration into international law, addressing the current legal vacuum and inconsistent enforcement.',
+    url: 'https://d-nb.info/1368567606/34',
+  },
+  {
+    author: 'Boykoff, Jules',
+    title: 'Athlete Activism and the Olympics',
+    publication: 'Pacific University / Peace Review',
+    year: 2012,
+    description: 'Critiques Olympic Truce effectiveness and selective enforcement, arguing IOC enforcement reflects geopolitical alignment with Western powers rather than principled international law application.',
+  },
+  {
+    author: 'Zirin, Dave',
+    title: 'The Sochi Paralympics, Ukraine and the Olympic Truce',
+    publication: 'The Nation',
+    year: 2014,
+    description: 'Sports editor\'s analysis of the double standards in IOC enforcement - Russia\'s Crimea annexation vs. US military operations during Olympic periods.',
+    url: 'https://www.thenation.com/article/archive/sochi-paralympics-ukraine-and-olympic-truce/',
+  },
+  {
+    author: 'Kobierecki, Michał',
+    title: 'Sports Diplomacy Surrounding the IOC\'s Response to the 2022 Russian Invasion of Ukraine',
+    publication: 'Sport, Politics and Society',
+    year: 2025,
+    description: 'Analysis of the first formal IOC sanctions based on Olympic Truce violation and the evolution from symbolic gesture to enforcement mechanism.',
+    url: 'https://www.tandfonline.com/doi/abs/10.1080/09523367.2025.2518322',
+  },
+  {
+    author: 'Chang, Victor',
+    title: 'Olympic Rings of Peace? The Olympic Movement, Conflict and Peace Building',
+    publication: 'Sport in Society',
+    year: 2012,
+    description: 'Open-access peer-reviewed article analyzing the Truce\'s effectiveness in conflict zones and its role in facilitating diplomatic "windows of opportunity."',
+    url: 'https://vuir.vu.edu.au/24927/1/Sport-in-Society-2012-intro-Olympics.pdf',
   },
 ];
 

@@ -315,7 +315,7 @@ const KEY_MOMENTS: KeyMoment[] = [
   {
     year: -776,
     title: 'Ancient Olympic Truce Established',
-    description: 'King Iphitos of Elis, following the Oracle of Delphi\'s counsel, joins with King Cleisthenes of Pisa and Spartan lawgiver Lycurgus to establish the ekecheiria ("holding of hands"). The treaty is inscribed on a bronze discus stored in the Temple of Hera at Olympia.',
+    description: 'King Iphitos of Elis, following the Oracle of Delphi\'s counsel, joins with King Cleisthenes (Kleosthenes) of Pisa and Spartan lawgiver Lycurgus to establish the ekecheiria ("laying down of arms"). The treaty is inscribed in boustrophedon (alternating left-to-right and right-to-left) on a bronze discus stored in the Temple of Hera at Olympia. Some sources date the foundational pact to 884 BC.',
     significance: 'milestone',
   },
   {
@@ -331,9 +331,15 @@ const KEY_MOMENTS: KeyMoment[] = [
     significance: 'symbolic',
   },
   {
-    year: -362,
+    year: -399,
+    title: 'Second Spartan Invasion',
+    description: 'Sparta invades Olympia again. According to Pausanias, Elean defenders placed archers on temple roofs to repel the attack. Skeletal remains discovered centuries later during temple repairs were believed to be Elean defenders killed in this battle.',
+    significance: 'milestone',
+  },
+  {
+    year: -364,
     title: 'Battle at Olympia',
-    description: 'The Eleans and Arcadians/Pisatans fight within the sacred precincts of Olympia itself - one of the most egregious violations of the ekecheiria in ancient history.',
+    description: 'Arcadians and Pisatans occupy the sacred grove and attempt to hold the Games themselves during the competition - a shocking violation of sanctuary protections. Fighting erupts within the Altis while athletes watch.',
     significance: 'milestone',
   },
   {
@@ -394,7 +400,7 @@ const KEY_MOMENTS: KeyMoment[] = [
   {
     year: 1894,
     title: 'Modern Olympics Founded (Without Truce)',
-    description: 'Coubertin founds the IOC but deliberately omits the Truce from the founding constitution. In the hyper-nationalistic climate, demanding nations surrender their right to wage war for sport would seem "utopian lunacy." This omission meant no protection from war - leading to cancelled 1916, 1940, 1944 Games.',
+    description: 'Coubertin founds the IOC but deliberately omits the Truce from the founding constitution. Despite 80% of original IOC members being affiliated with European peace organizations (and 5 later winning Nobel Peace Prizes), the hyper-nationalistic climate made demanding nations surrender their right to wage war for sport seem "utopian lunacy." Coubertin wrote: "Wars break out because nations misunderstand each other... what better means is there than to bring the youth of all countries periodically together for amicable trials of muscular strength and agility?"',
     significance: 'milestone',
   },
   {
@@ -406,7 +412,7 @@ const KEY_MOMENTS: KeyMoment[] = [
   {
     year: 1992,
     title: 'Modern Olympic Truce Revived at Barcelona',
-    description: 'IOC President Samaranch appeals for Olympic Truce. UN Security Council Resolution 757 imposed sanctions on Yugoslavia. Kéba Mbaye (IOC member, former ICJ judge) drafted legal language allowing Yugoslav athletes to compete as "Independent Olympic Participants" - proving the IOC could negotiate directly with the UN, setting the stage for a formal truce mechanism.',
+    description: 'IOC President Samaranch appeals for Olympic Truce. UN Security Council Resolution 757 became the first SC resolution to include "sport" as a sanctioned element, imposing sanctions on Yugoslavia. Kéba Mbaye (IOC member, former ICJ judge) drafted legal language allowing Yugoslav athletes to compete as "Independent Olympic Participants" - proving the IOC could negotiate directly with the UN Security Council Sanctions Committee, setting the stage for a formal truce mechanism.',
     significance: 'milestone',
   },
   {
@@ -442,7 +448,7 @@ const KEY_MOMENTS: KeyMoment[] = [
   {
     year: 2000,
     title: 'IOTC Founded & Korean Unity',
-    description: 'The International Olympic Truce Centre is established by IOC and Greek Government (July 2000). Founding board: Samaranch, George Papandreou, Kéba Mbaye (who drafted statutes), Henry Kissinger, Kofi Annan. At Sydney 2000, North and South Korea parade together under unified flag for the first time.',
+    description: 'The International Olympic Truce Centre is established by IOC and Greek Government (July 2000). Founding board: Samaranch, George Papandreou, Kéba Mbaye (who drafted statutes), Henry Kissinger, Kofi Annan. At Sydney 2000, North and South Korea parade together under unified flag for the first time - 180 athletes (90 from each country) in a single delegation personally brokered by Samaranch.',
     significance: 'milestone',
   },
   {
@@ -796,7 +802,8 @@ export default function HistoryPage() {
                 </p>
                 <ul className="list-disc list-inside text-xs text-slate-400 space-y-1">
                   <li>Elis declared <em>asylos</em> (sacred and inviolable) - a "mobile sanctuary" around pilgrims</li>
-                  <li>Armed forces forbidden from entering the <em>Altis</em> (sanctuary)</li>
+                  <li>Armed forces forbidden from entering the <em>Altis</em> (sanctuary); no weapons in sacred territory</li>
+                  <li>Official delegations (<em>theoriai</em>) sent by cities received protected status</li>
                   <li>All legal disputes and executions suspended during the truce</li>
                   <li>Wars between states could continue - only Olympia and travelers were protected</li>
                 </ul>
@@ -842,12 +849,12 @@ export default function HistoryPage() {
               <div>
                 <h4 className="font-medium text-white mb-2">Enforcement: The <em>Hellanodikai</em></h4>
                 <p className="mb-2">
-                  The <strong className="text-red-300">Hellanodikai</strong> (Elean judges) acted as the supreme court of the Games.
-                  Enforcement relied on religious fear and social pressure - no "Olympic army" existed. Violators faced <strong className="text-red-300">exclusion</strong>, heavy fines
-                  dedicated to Zeus, and the threat of excommunication from the Panhellenic community.
+                  The <strong className="text-red-300">Hellanodikai</strong> (10 Elean judges, given 10 months of training before each Games) acted as the supreme court of the festival.
+                  Enforcement relied on religious fear (<em>asebeia</em> - sacrilege) and social pressure - no "Olympic army" existed. Violators faced <strong className="text-red-300">exclusion</strong>, heavy fines
+                  converted into bronze statues of Zeus called <strong className="text-red-300">Zanes</strong> - perpetual monuments to the violators' transgression lining the entrance to the stadium.
                 </p>
                 <p className="text-xs text-slate-400 mt-2">
-                  The "Host State Rule" held that the Truce was active the moment proclaimed in Elis - all participants bound from that date.
+                  The "Host State Rule" held that the Truce was active the moment proclaimed in Elis - all participants bound from that date. Aristophanes' <em>Lysistrata</em> (411 BC) cites the Truce as evidence that even bitter enemies could find peaceful common ground.
                 </p>
               </div>
               <div>
