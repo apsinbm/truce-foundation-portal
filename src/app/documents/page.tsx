@@ -73,7 +73,7 @@ const TRUCE_RESOLUTIONS: TruceResolution[] = [
     year: 2014,
     season: 'Winter',
     symbol: 'A/RES/68/9',
-    url: 'https://docs.un.org/en/A/RES/69/6',
+    url: 'https://digitallibrary.un.org/record/762171',
     coSponsors: 121,
     notes: 'Crimea annexed between Olympics and Paralympics.',
   },
@@ -82,7 +82,7 @@ const TRUCE_RESOLUTIONS: TruceResolution[] = [
     year: 2012,
     season: 'Summer',
     symbol: 'A/RES/66/5',
-    url: 'https://docs.un.org/en/A/RES/67/17',
+    url: 'https://digitallibrary.un.org/record/714684',
     coSponsors: 193,
     notes: '100% co-sponsorship - all UN member states.',
   },
@@ -91,7 +91,7 @@ const TRUCE_RESOLUTIONS: TruceResolution[] = [
     year: 2010,
     season: 'Winter',
     symbol: 'A/RES/64/4',
-    url: 'https://docs.un.org/en/A/RES/65/4',
+    url: 'https://digitallibrary.un.org/record/668467',
     coSponsors: 154,
   },
   {
@@ -99,7 +99,7 @@ const TRUCE_RESOLUTIONS: TruceResolution[] = [
     year: 2008,
     season: 'Summer',
     symbol: 'A/RES/62/4',
-    url: 'https://docs.un.org/en/A/RES/62/271',
+    url: 'https://digitallibrary.un.org/record/610688',
     coSponsors: 183,
     notes: 'Russo-Georgian War during Truce window.',
   },
@@ -117,7 +117,7 @@ const TRUCE_RESOLUTIONS: TruceResolution[] = [
     year: 2004,
     season: 'Summer',
     symbol: 'A/RES/58/6',
-    url: 'https://docs.un.org/en/A/RES/58/5',
+    url: 'https://digitallibrary.un.org/record/506061',
     coSponsors: 190,
     notes: 'Return to birthplace of Olympics.',
   },
@@ -126,7 +126,7 @@ const TRUCE_RESOLUTIONS: TruceResolution[] = [
     year: 2002,
     season: 'Winter',
     symbol: 'A/RES/56/75',
-    url: 'https://docs.un.org/en/A/RES/59/10',
+    url: 'https://digitallibrary.un.org/record/454908',
     coSponsors: 172,
     notes: 'Post-9/11 Games.',
   },
@@ -135,7 +135,7 @@ const TRUCE_RESOLUTIONS: TruceResolution[] = [
     year: 2000,
     season: 'Summer',
     symbol: 'A/RES/54/34',
-    url: 'https://docs.un.org/en/A/RES/60/1',
+    url: 'https://digitallibrary.un.org/record/393015',
     coSponsors: 179,
     notes: 'Korean teams marched together.',
   },
@@ -144,7 +144,7 @@ const TRUCE_RESOLUTIONS: TruceResolution[] = [
     year: 1998,
     season: 'Winter',
     symbol: 'A/RES/52/21',
-    url: 'https://docs.un.org/en/A/RES/63/135',
+    url: 'https://digitallibrary.un.org/record/245135',
     coSponsors: 177,
     notes: 'Influenced Iraq mediation.',
   },
@@ -153,7 +153,7 @@ const TRUCE_RESOLUTIONS: TruceResolution[] = [
     year: 1996,
     season: 'Summer',
     symbol: 'A/RES/50/13',
-    url: 'https://docs.un.org/en/A/RES/60/9',
+    url: 'https://digitallibrary.un.org/record/202802',
     coSponsors: 161,
   },
   {
@@ -251,6 +251,46 @@ const FOUNDATIONAL_DOCUMENTS: FoundationalDoc[] = [
     url: 'https://docs.un.org/en/A/RES/S-27/2',
   },
   {
+    symbol: 'A/RES/62/271',
+    title: 'Sport for Peace and Development: Building a Peaceful World',
+    year: 2008,
+    category: 'sport',
+    description: 'Sport for peace resolution during Beijing 2008 Olympics.',
+    url: 'https://docs.un.org/en/A/RES/62/271',
+  },
+  {
+    symbol: 'A/RES/63/135',
+    title: 'Sport as a Means to Promote Education, Health, Development and Peace',
+    year: 2008,
+    category: 'sport',
+    description: 'Comprehensive sport for development resolution.',
+    url: 'https://docs.un.org/en/A/RES/63/135',
+  },
+  {
+    symbol: 'A/RES/65/4',
+    title: 'Olympic Truce (Vancouver 2010)',
+    year: 2009,
+    category: 'peace',
+    description: 'Supporting text for Vancouver 2010 Winter Olympics Truce.',
+    url: 'https://docs.un.org/en/A/RES/65/4',
+  },
+  {
+    symbol: 'A/RES/67/17',
+    title: 'Sport as a Means to Promote Education, Health, Development and Peace',
+    year: 2012,
+    category: 'sport',
+    description: 'Biennial resolution during London 2012 Olympic year.',
+    url: 'https://docs.un.org/en/A/RES/67/17',
+  },
+  {
+    symbol: 'A/RES/69/6',
+    title: 'Olympic Truce (Sochi 2014)',
+    year: 2014,
+    category: 'peace',
+    description: 'Supporting the Sochi 2014 Winter Olympics Truce.',
+    url: 'https://docs.un.org/en/A/RES/69/6',
+  },
+  {
     symbol: 'A/RES/71/160',
     title: 'Sport as a Means to Promote Education, Health, Development and Peace',
     year: 2016,
@@ -343,13 +383,16 @@ const BEIJING_2022_DOCS = [
   },
 ];
 
-// Secretary-General Report 2024
-const SG_REPORT_2024 = {
-  title: 'Sport for Development and Peace Report 2024',
-  symbol: 'A/79/289',
-  url: 'https://documents.un.org/doc/undoc/gen/n24/232/53/pdf/n2423253.pdf',
-  description: 'UN Secretary-General report on sport as driver of sustainable development and peace.',
-};
+// Secretary-General Reports
+const SG_REPORTS = [
+  {
+    title: 'Sport for Development and Peace Report 2024',
+    symbol: 'A/79/289',
+    url: 'https://documents.un.org/doc/undoc/gen/n24/232/53/pdf/n2423253.pdf',
+    alternateUrl: 'https://documents.un.org/doc/undoc/gen/n24/174/10/pdf/n2417410.pdf',
+    description: 'UN Secretary-General report on sport as driver of sustainable development and peace.',
+  },
+];
 
 const getCategoryConfig = (category: FoundationalDoc['category']) => {
   switch (category) {
@@ -407,20 +450,35 @@ export default function DocumentsPage() {
             <div className="flex items-start gap-4">
               <span className="text-4xl">📄</span>
               <div className="flex-1">
-                <span className="text-xs font-mono bg-blue-500/20 text-blue-300 px-2 py-0.5 rounded">{SG_REPORT_2024.symbol}</span>
-                <h2 className="text-xl font-bold text-white mt-2">{SG_REPORT_2024.title}</h2>
-                <p className="text-slate-300 text-sm mt-1">{SG_REPORT_2024.description}</p>
-                <a
-                  href={SG_REPORT_2024.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 mt-3 px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white text-sm font-medium rounded-lg transition-colors"
-                >
-                  View Full Report (PDF)
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                </a>
+                <span className="text-xs font-mono bg-blue-500/20 text-blue-300 px-2 py-0.5 rounded">{SG_REPORTS[0].symbol}</span>
+                <h2 className="text-xl font-bold text-white mt-2">{SG_REPORTS[0].title}</h2>
+                <p className="text-slate-300 text-sm mt-1">{SG_REPORTS[0].description}</p>
+                <div className="flex flex-wrap gap-2 mt-3">
+                  <a
+                    href={SG_REPORTS[0].url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white text-sm font-medium rounded-lg transition-colors"
+                  >
+                    View Full Report (PDF)
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                  {SG_REPORTS[0].alternateUrl && (
+                    <a
+                      href={SG_REPORTS[0].alternateUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white text-sm font-medium rounded-lg transition-colors"
+                    >
+                      Alternate PDF
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
           </div>
