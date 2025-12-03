@@ -30,7 +30,11 @@ const OLYMPIC_TRUCE_HISTORY: OlympicGame[] = [
       'Former Yugoslavia allowed to participate despite ongoing wars',
       'IOC delegation visited Sarajevo in solidarity (1984 Winter Games host)',
     ],
-    significance: 'positive',
+    violations: [
+      'Bosnian War continued - Markale massacre (68 killed) on Opening Day',
+      'Siege of Sarajevo ongoing throughout Games',
+    ],
+    significance: 'negative',
   },
   {
     year: 1996,
@@ -43,7 +47,11 @@ const OLYMPIC_TRUCE_HISTORY: OlympicGame[] = [
       'Resolution supported building peaceful world through sport',
       'Centennial Olympic Games celebrated 100 years of modern Olympics',
     ],
-    significance: 'neutral',
+    violations: [
+      'First Chechen War - Battle of Grozny (Aug 6-22) during Games',
+      'Burundian Civil War - military coup July 25 during Games',
+    ],
+    significance: 'negative',
   },
   {
     year: 1998,
@@ -72,7 +80,11 @@ const OLYMPIC_TRUCE_HISTORY: OlympicGame[] = [
       'Historic moment: North and South Korea marched together under unified flag',
       'Symbolized hope for Korean peninsula reconciliation',
     ],
-    significance: 'positive',
+    violations: [
+      'Second Intifada began September 28, 2000 during Games',
+      'Second Chechen War operations ongoing',
+    ],
+    significance: 'negative',
   },
   {
     year: 2002,
@@ -86,9 +98,11 @@ const OLYMPIC_TRUCE_HISTORY: OlympicGame[] = [
       'US introduced modified resolution amid Afghanistan operations',
     ],
     violations: [
-      'US exempted itself from cessation of hostilities with Afghanistan',
+      'US-led Operation Anaconda (Mar 2-18) during Paralympic period',
+      'Second Intifada - ongoing violence in Israel/Palestine',
+      'Second Chechen War continued',
     ],
-    significance: 'mixed',
+    significance: 'negative',
   },
   {
     year: 2004,
@@ -103,7 +117,12 @@ const OLYMPIC_TRUCE_HISTORY: OlympicGame[] = [
       'Games returned to birthplace of Olympics and ancient Truce tradition',
       'Strongest global endorsement of Olympic Truce to date',
     ],
-    significance: 'positive',
+    violations: [
+      'Iraq War continued - Battle of Najaf (Aug 5-27)',
+      'Darfur genocide ongoing - UN declared humanitarian emergency',
+      'Second Chechen War operations continued',
+    ],
+    significance: 'negative',
   },
   {
     year: 2006,
@@ -116,7 +135,11 @@ const OLYMPIC_TRUCE_HISTORY: OlympicGame[] = [
       'Solemn Appeal extended to Paralympic Games for first time',
       'Established precedent for inclusive Truce coverage',
     ],
-    significance: 'positive',
+    violations: [
+      'Iraq War continued with intense sectarian violence',
+      'Darfur conflict ongoing with continued attacks on civilians',
+    ],
+    significance: 'negative',
   },
   {
     year: 2008,
@@ -145,9 +168,13 @@ const OLYMPIC_TRUCE_HISTORY: OlympicGame[] = [
     solemnAppeal: true,
     milestoneEffects: [
       'Canada hosted second Winter Games (after Calgary 1988)',
-      'Truce observed without major violations',
     ],
-    significance: 'neutral',
+    violations: [
+      'Operation Moshtarak (Feb 13) - major NATO offensive in Afghanistan during Games',
+      'War in North-West Pakistan ongoing',
+      'Somali Civil War continued',
+    ],
+    significance: 'negative',
   },
   {
     year: 2012,
@@ -161,7 +188,10 @@ const OLYMPIC_TRUCE_HISTORY: OlympicGame[] = [
       'First time UN chief participated in Olympic ceremony',
       'Resolution unanimously supported by General Assembly',
     ],
-    significance: 'positive',
+    violations: [
+      'Syrian Civil War intensified during Games period',
+    ],
+    significance: 'negative',
   },
   {
     year: 2014,
@@ -190,7 +220,11 @@ const OLYMPIC_TRUCE_HISTORY: OlympicGame[] = [
       'First South American Olympics',
       'Refugee Olympic Team participated for first time',
     ],
-    significance: 'neutral',
+    violations: [
+      'Syrian Civil War continued with intense fighting in Aleppo',
+      'Yemen - Saudi-led coalition continued military operations',
+    ],
+    significance: 'negative',
   },
   {
     year: 2018,
@@ -219,7 +253,11 @@ const OLYMPIC_TRUCE_HISTORY: OlympicGame[] = [
       'First Olympics held without spectators',
       'Demonstrated resilience of Olympic movement',
     ],
-    significance: 'neutral',
+    violations: [
+      'Taliban offensive and fall of Kabul (Aug 15) during Games',
+      'Tigray conflict escalation in Ethiopia',
+    ],
+    significance: 'negative',
   },
   {
     year: 2022,
@@ -251,10 +289,15 @@ const OLYMPIC_TRUCE_HISTORY: OlympicGame[] = [
     milestoneEffects: [
       '100 years since Paris last hosted (1924)',
       'Russian and Belarusian athletes competed as Individual Neutral Athletes',
-      'Ongoing global conflicts tested Truce principles',
       '118 votes in favour, 2 abstentions for resolution',
     ],
-    significance: 'mixed',
+    violations: [
+      'Russia continued military operations in Ukraine throughout Truce',
+      'Israel-Gaza conflict continued during Truce window',
+      'Sudan civil conflict between SAF and RSF forces',
+      'Myanmar military operations against civilian populations',
+    ],
+    significance: 'negative',
   },
   {
     year: 2026,

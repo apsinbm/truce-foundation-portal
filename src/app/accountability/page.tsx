@@ -775,7 +775,6 @@ export default function AccountabilityPage() {
                         </div>
                         <div>
                           <h3 className="font-bold text-white">{offender.country}</h3>
-                          <span className="text-xs text-slate-500">{offender.countryIso3}</span>
                         </div>
                       </div>
                       <a
@@ -859,7 +858,7 @@ export default function AccountabilityPage() {
                           </span>
                         </div>
                         <p className="text-sm text-slate-400">
-                          {period.city}, {period.country} &middot; {period.unResolution}
+                          {period.country} &middot; {period.unResolution}
                         </p>
                       </div>
                     </div>
