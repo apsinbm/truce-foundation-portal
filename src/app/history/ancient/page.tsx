@@ -239,6 +239,54 @@ export default function AncientHistoryPage() {
         </div>
       </section>
 
+      {/* Timeline */}
+      <section className="py-12 px-4 bg-slate-900/30">
+        <div className="max-w-4xl mx-auto">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-2xl font-bold text-white mb-8 text-center"
+          >
+            Ancient Timeline
+          </motion.h2>
+
+          <div className="space-y-4">
+            {ANCIENT_MOMENTS.map((moment, index) => {
+              const sigConfig = {
+                milestone: { bg: 'bg-blue-500/10', border: 'border-blue-500/30', icon: '📌', color: 'text-blue-300' },
+                violation: { bg: 'bg-red-500/10', border: 'border-red-500/30', icon: '⚠️', color: 'text-red-300' },
+                symbolic: { bg: 'bg-amber-500/10', border: 'border-amber-500/30', icon: '✨', color: 'text-amber-300' },
+              }[moment.significance];
+
+              return (
+                <motion.div
+                  key={moment.year}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.05 }}
+                  className={`p-4 rounded-lg ${sigConfig.bg} border ${sigConfig.border}`}
+                >
+                  <div className="flex items-start gap-3">
+                    <span className="text-2xl">{sigConfig.icon}</span>
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2 mb-1">
+                        <span className={`font-bold ${sigConfig.color}`}>
+                          {moment.year < 0 ? `${Math.abs(moment.year)} BC` : `${moment.year} AD`}
+                        </span>
+                        <h4 className="font-semibold text-white">{moment.title}</h4>
+                      </div>
+                      <p className="text-sm text-slate-300">{moment.description}</p>
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
       {/* Ancient Wisdom Section */}
       <section className="py-12 px-4">
         <div className="max-w-4xl mx-auto">
@@ -325,54 +373,6 @@ export default function AncientHistoryPage() {
                 );
               })}
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Timeline */}
-      <section className="py-12 px-4 bg-slate-900/30">
-        <div className="max-w-4xl mx-auto">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-2xl font-bold text-white mb-8 text-center"
-          >
-            Ancient Timeline
-          </motion.h2>
-
-          <div className="space-y-4">
-            {ANCIENT_MOMENTS.map((moment, index) => {
-              const sigConfig = {
-                milestone: { bg: 'bg-blue-500/10', border: 'border-blue-500/30', icon: '📌', color: 'text-blue-300' },
-                violation: { bg: 'bg-red-500/10', border: 'border-red-500/30', icon: '⚠️', color: 'text-red-300' },
-                symbolic: { bg: 'bg-amber-500/10', border: 'border-amber-500/30', icon: '✨', color: 'text-amber-300' },
-              }[moment.significance];
-
-              return (
-                <motion.div
-                  key={moment.year}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.05 }}
-                  className={`p-4 rounded-lg ${sigConfig.bg} border ${sigConfig.border}`}
-                >
-                  <div className="flex items-start gap-3">
-                    <span className="text-2xl">{sigConfig.icon}</span>
-                    <div className="flex-1">
-                      <div className="flex items-center gap-2 mb-1">
-                        <span className={`font-bold ${sigConfig.color}`}>
-                          {moment.year < 0 ? `${Math.abs(moment.year)} BC` : `${moment.year} AD`}
-                        </span>
-                        <h4 className="font-semibold text-white">{moment.title}</h4>
-                      </div>
-                      <p className="text-sm text-slate-300">{moment.description}</p>
-                    </div>
-                  </div>
-                </motion.div>
-              );
-            })}
           </div>
         </div>
       </section>
