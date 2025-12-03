@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { TRUCE_INDEX_URL } from '@/lib/constants';
@@ -534,6 +534,51 @@ const TRUCE_PERIODS: TrucePeriod[] = [
       },
     ],
   },
+  // Pre-revival era - before formal UN Olympic Truce resolutions (1993)
+  {
+    id: 'barcelona-1992',
+    games: 'Barcelona 1992',
+    year: 1992,
+    city: 'Barcelona',
+    country: 'Spain',
+    season: 'Summer',
+    truceWindow: {
+      start: '1992-07-18',
+      end: '1992-08-16',
+    },
+    unResolution: 'Pre-revival',
+    status: 'violated',
+    violations: [
+      {
+        country: 'Bosnia and Herzegovina',
+        countryIso3: 'BIH',
+        description: 'Bosnian War ongoing - Siege of Sarajevo began April 1992, intensified during Games period',
+        severity: 'critical',
+        sources: ['ICTY', 'UN Reports'],
+      },
+      {
+        country: 'Serbia',
+        countryIso3: 'SRB',
+        description: 'Yugoslav Wars - Serbian forces engaged in ethnic cleansing campaigns in Bosnia',
+        severity: 'critical',
+        sources: ['ICTY', 'UN Reports'],
+      },
+      {
+        country: 'Croatia',
+        countryIso3: 'HRV',
+        description: 'Croatian War of Independence - ongoing military operations',
+        severity: 'major',
+        sources: ['ICTY', 'UN Reports'],
+      },
+      {
+        country: 'Somalia',
+        countryIso3: 'SOM',
+        description: 'Somali Civil War - ongoing conflict and humanitarian crisis',
+        severity: 'major',
+        sources: ['UN Reports'],
+      },
+    ],
+  },
 ];
 
 // Calculate repeat offenders from the data
@@ -623,8 +668,67 @@ const getStatusConfig = (status: string) => {
   }
 };
 
+// Get all unique countries from violations
+const getAllViolatingCountries = () => {
+  const countries = new Map<string, string>();
+  TRUCE_PERIODS.forEach(p => {
+    p.violations.forEach(v => {
+      countries.set(v.countryIso3, v.country);
+    });
+  });
+  return Array.from(countries.entries())
+    .map(([iso3, name]) => ({ iso3, name }))
+    .sort((a, b) => a.name.localeCompare(b.name));
+};
+
+const ALL_VIOLATING_COUNTRIES = getAllViolatingCountries();
+
 export default function AccountabilityPage() {
   const [selectedPeriod, setSelectedPeriod] = useState<string | null>(null);
+
+  // Filter state
+  const [countryFilter, setCountryFilter] = useState<string>('all');
+  const [seasonFilter, setSeasonFilter] = useState<'all' | 'Summer' | 'Winter'>('all');
+  const [statusFilter, setStatusFilter] = useState<'all' | 'observed' | 'violated'>('all');
+  const [searchQuery, setSearchQuery] = useState<string>('');
+
+  // Filter the periods based on selected filters
+  const filteredPeriods = useMemo(() => {
+    return TRUCE_PERIODS.filter(period => {
+      // Country filter - show periods where this country has a violation
+      if (countryFilter !== 'all') {
+        const hasCountry = period.violations.some(v => v.countryIso3 === countryFilter);
+        if (!hasCountry) return false;
+      }
+
+      // Season filter
+      if (seasonFilter !== 'all' && period.season !== seasonFilter) {
+        return false;
+      }
+
+      // Status filter
+      if (statusFilter !== 'all' && period.status !== statusFilter) {
+        return false;
+      }
+
+      // Search query - searches games name, city, country, and violation descriptions
+      if (searchQuery.trim()) {
+        const query = searchQuery.toLowerCase();
+        const matchesGame = period.games.toLowerCase().includes(query);
+        const matchesCity = period.city.toLowerCase().includes(query);
+        const matchesCountry = period.country.toLowerCase().includes(query);
+        const matchesViolation = period.violations.some(
+          v => v.country.toLowerCase().includes(query) ||
+               v.description.toLowerCase().includes(query)
+        );
+        if (!matchesGame && !matchesCity && !matchesCountry && !matchesViolation) {
+          return false;
+        }
+      }
+
+      return true;
+    });
+  }, [countryFilter, seasonFilter, statusFilter, searchQuery]);
 
   const totalViolations = TRUCE_PERIODS.reduce((acc, p) => acc + p.violations.length, 0);
   const violatedPeriods = TRUCE_PERIODS.filter(p => p.status === 'violated').length;
@@ -635,6 +739,15 @@ export default function AccountabilityPage() {
   TRUCE_PERIODS.forEach(p => {
     p.violations.forEach(v => violatingCountries.add(v.countryIso3));
   });
+
+  const hasActiveFilters = countryFilter !== 'all' || seasonFilter !== 'all' || statusFilter !== 'all' || searchQuery.trim() !== '';
+
+  const clearFilters = () => {
+    setCountryFilter('all');
+    setSeasonFilter('all');
+    setStatusFilter('all');
+    setSearchQuery('');
+  };
 
   return (
     <main className="min-h-screen bg-slate-950">
@@ -822,13 +935,106 @@ export default function AccountabilityPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-2xl font-bold text-white mb-8 text-center"
+            className="text-2xl font-bold text-white mb-4 text-center"
           >
             Historical Record by Olympic Games
           </motion.h2>
 
+          {/* Filter Controls */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mb-8 p-4 rounded-xl bg-slate-900/50 border border-slate-700/50"
+          >
+            <div className="flex flex-wrap items-center gap-3">
+              {/* Search */}
+              <div className="flex-1 min-w-[200px]">
+                <div className="relative">
+                  <svg
+                    className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                  <input
+                    type="text"
+                    placeholder="Search Games, countries, conflicts..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-full pl-10 pr-4 py-2 bg-slate-800/50 border border-slate-700/50 rounded-lg text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-blue-500/50"
+                  />
+                </div>
+              </div>
+
+              {/* Country Filter */}
+              <select
+                value={countryFilter}
+                onChange={(e) => setCountryFilter(e.target.value)}
+                className="px-3 py-2 bg-slate-800/50 border border-slate-700/50 rounded-lg text-sm text-white focus:outline-none focus:border-blue-500/50"
+              >
+                <option value="all">All Countries</option>
+                {ALL_VIOLATING_COUNTRIES.map(c => (
+                  <option key={c.iso3} value={c.iso3}>{c.name}</option>
+                ))}
+              </select>
+
+              {/* Season Filter */}
+              <select
+                value={seasonFilter}
+                onChange={(e) => setSeasonFilter(e.target.value as 'all' | 'Summer' | 'Winter')}
+                className="px-3 py-2 bg-slate-800/50 border border-slate-700/50 rounded-lg text-sm text-white focus:outline-none focus:border-blue-500/50"
+              >
+                <option value="all">All Seasons</option>
+                <option value="Summer">Summer</option>
+                <option value="Winter">Winter</option>
+              </select>
+
+              {/* Status Filter */}
+              <select
+                value={statusFilter}
+                onChange={(e) => setStatusFilter(e.target.value as 'all' | 'observed' | 'violated')}
+                className="px-3 py-2 bg-slate-800/50 border border-slate-700/50 rounded-lg text-sm text-white focus:outline-none focus:border-blue-500/50"
+              >
+                <option value="all">All Status</option>
+                <option value="violated">Violated</option>
+                <option value="observed">Observed</option>
+              </select>
+
+              {/* Clear Filters */}
+              {hasActiveFilters && (
+                <button
+                  onClick={clearFilters}
+                  className="px-3 py-2 text-sm text-slate-400 hover:text-white transition-colors"
+                >
+                  Clear filters
+                </button>
+              )}
+            </div>
+
+            {/* Results count */}
+            <div className="mt-3 text-xs text-slate-500">
+              Showing {filteredPeriods.length} of {TRUCE_PERIODS.length} Olympic Games
+              {hasActiveFilters && (
+                <span className="text-blue-400 ml-1">(filtered)</span>
+              )}
+            </div>
+          </motion.div>
+
           <div className="space-y-6">
-            {TRUCE_PERIODS.map((period, index) => {
+            {filteredPeriods.length === 0 ? (
+              <div className="p-8 rounded-xl bg-slate-900/30 border border-slate-700/30 text-center">
+                <p className="text-slate-400">No Olympic Games match your filters.</p>
+                <button
+                  onClick={clearFilters}
+                  className="mt-2 text-sm text-blue-400 hover:text-blue-300"
+                >
+                  Clear all filters
+                </button>
+              </div>
+            ) : (
+            filteredPeriods.map((period, index) => {
               const config = getStatusConfig(period.status);
               const isExpanded = selectedPeriod === period.id;
 
@@ -957,7 +1163,8 @@ export default function AccountabilityPage() {
                   )}
                 </motion.div>
               );
-            })}
+            })
+            )}
           </div>
         </div>
       </section>
