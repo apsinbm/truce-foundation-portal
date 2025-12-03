@@ -127,10 +127,12 @@ const OLYMPIC_TRUCE_HISTORY: OlympicGame[] = [
     solemnAppeal: true,
     milestoneEffects: [
       'China hosted its first Summer Olympic Games',
+      'Symbolic moment: Russian and Georgian shooters embraced on medal podium despite active combat',
     ],
     violations: [
-      'Russo-Georgian War (Aug 1-16) ran through opening ceremony',
-      'First major armed conflict during Games since Truce revival',
+      'August 8 (Opening Ceremony day): Russia invades Georgia; Putin receives real-time updates from the front while attending ceremony in Bird\'s Nest Stadium',
+      '~800,000 Russian troops deployed; 60 civilians killed in Gori alone on August 9',
+      'IOC response: no sanctions against Russia',
     ],
     significance: 'negative',
   },
@@ -321,7 +323,7 @@ const KEY_MOMENTS: KeyMoment[] = [
   {
     year: -420,
     title: 'Sparta Banned from Olympics',
-    description: 'Sparta attacks Lepreum during the truce period. Elis fines Sparta 2,000 minae (over 30 talents of silver) and bans Spartan athletes. Lichas, who enters his chariot under another state\'s name, is publicly flogged when he celebrates victory.',
+    description: 'Sparta attacks Lepreum during the truce period. Elis fines Sparta 2,000 minae (2 minae per soldier × 1,000 hoplites). The ban was taken seriously: 1,000 Argive warriors, 1,000 Mantinean warriors, and Athenian cavalry guarded the Games to deter Spartan attack. Lichas enters his chariot under Thebes\'s name - when he wins and rushes to crown his charioteer, officials discover his identity and publicly flog him with rods.',
     significance: 'milestone',
   },
   {
@@ -339,7 +341,13 @@ const KEY_MOMENTS: KeyMoment[] = [
   {
     year: -364,
     title: 'Battle at Olympia',
-    description: 'Arcadians and Pisatans occupy the sacred grove and attempt to hold the Games themselves during the competition - a shocking violation of sanctuary protections. Fighting erupts within the Altis while athletes watch.',
+    description: 'Arcadians and Pisatans occupy the sacred grove and attempt to hold the 104th Olympiad themselves. According to Xenophon (Hellenica 7.4.28-35), the Elean army counterattacked during the pentathlon - fighting erupted between the senate house, Temple of Hestia, and theatre. The Arcadians pulled down wooden bleachers to build fortifications. Elean leader Stratolas and his "Three Hundred" were killed.',
+    significance: 'milestone',
+  },
+  {
+    year: -348,
+    title: 'Philip II of Macedon Fined',
+    description: 'Macedonian soldiers are convicted of robbing travelers en route to the Games. Philip II is fined. The captivity of Phrynon of Rhamnous by Macedonian pirates required subsequent compensation - demonstrating the Truce\'s reach extended to protecting pilgrims from state-sponsored piracy.',
     significance: 'milestone',
   },
   {
@@ -356,8 +364,8 @@ const KEY_MOMENTS: KeyMoment[] = [
   },
   {
     year: 393,
-    title: 'Ancient Olympics Abolished',
-    description: 'Emperor Theodosius I issues edicts banning all pagan festivals and cults, stripping the Games of legal status and funding. After over 1,100 years, the ekecheiria tradition ends.',
+    title: 'Ancient Olympics End (Scholarly Debate)',
+    description: 'Traditional account: Emperor Theodosius I\'s decrees (389-391 AD) ban pagan festivals; 393 AD is the last recorded Games. Modern revision: court poet Claudian references Olympics in 399 AD (after Theodosius\'s death). Historian Sofie Remijsen argues economic factors: "The contests ended because no one could afford it" - rich elites had to sponsor personally as civic funds were redirected. Olympic festivals at Antioch continued until the early 6th century AD.',
     significance: 'milestone',
   },
   {
@@ -424,7 +432,7 @@ const KEY_MOMENTS: KeyMoment[] = [
   {
     year: 1994,
     title: 'First Modern Truce Observed (Lillehammer)',
-    description: 'Brief ceasefire in Sarajevo during Games. Samaranch\'s closing ceremony (Feb 27): "After many horrors, the situation now seems to be improving. Let us hope that this 17-day-old truce – to which, in our very limited way, we may have contributed – will turn into lasting peace." UN proclaimed 1994 as International Year of Sport.',
+    description: 'Brief ceasefire in Sarajevo during Games. Samaranch led a dangerous solidarity mission to besieged Sarajevo carrying 1,500 kg of food donations. Closing ceremony (Feb 27): "After many horrors, the situation now seems to be improving. Let us hope that this 17-day-old truce – to which, in our very limited way, we may have contributed – will turn into lasting peace." UN proclaimed 1994 as International Year of Sport.',
     significance: 'diplomatic',
   },
   {
@@ -448,7 +456,7 @@ const KEY_MOMENTS: KeyMoment[] = [
   {
     year: 2000,
     title: 'IOTC Founded & Korean Unity',
-    description: 'The International Olympic Truce Centre is established by IOC and Greek Government (July 2000). Founding board: Samaranch, George Papandreou, Kéba Mbaye (who drafted statutes), Henry Kissinger, Kofi Annan. At Sydney 2000, North and South Korea parade together under unified flag for the first time - 180 athletes (90 from each country) in a single delegation personally brokered by Samaranch.',
+    description: 'The International Olympic Truce Centre is officially launched at Zappeion Palace, Athens (July 24, 2000). Key leaders: Samaranch (Chairman), George Papandreou (Vice Chairman), Konstantinos Stefanopoulos (President of Greece), Theodore Ben Gurirab (UN GA Chairman), Javier Pérez de Cuéllar (former UN SG). Fekrou Kidane (Ethiopian journalist/diplomat, IOC Director of International Relations) "played a key role in making the Olympic truce a reality" - campaigning at the UN, contacting every Security Council delegation. At Sydney, North and South Korea parade together under unified flag for the first time.',
     significance: 'milestone',
   },
   {
@@ -466,7 +474,7 @@ const KEY_MOMENTS: KeyMoment[] = [
   {
     year: 2004,
     title: 'Athens Truce Wall Inaugurated',
-    description: 'The "Truce Wall" is inaugurated at Athens 2004 - signed by dignitaries including George W. Bush and Tony Blair. Over 300 personalities from around the world signed the Truce Appeal. Games returned to the birthplace of Olympics and ancient Truce.',
+    description: 'A signature "Truce Wall" at the Olympic Village collected pledges from athletes and world leaders - including George W. Bush and Tony Blair. Over 300 personalities from around the world signed the Truce Appeal. Games returned to the birthplace of Olympics and ancient Truce.',
     significance: 'symbolic',
   },
   {
@@ -502,7 +510,7 @@ const KEY_MOMENTS: KeyMoment[] = [
   {
     year: 2018,
     title: 'Unified Korean Team at PyeongChang',
-    description: 'Teams from DPRK and Republic of Korea marched side by side at the Opening Ceremony; women\'s ice hockey players competed together as a unified team.',
+    description: 'Teams from DPRK and Republic of Korea marched side by side at the Opening Ceremony; women\'s ice hockey players competed together as the first unified Olympic team. Kim Yo-jong (sister of Kim Jong-un) attended - the first member of the Kim dynasty to visit South Korea since the Korean War. Former UN Secretary-General Ban Ki-moon called the 2017 Truce resolution "more important than any in the Organization\'s history."',
     significance: 'diplomatic',
   },
   {
@@ -824,8 +832,14 @@ export default function HistoryPage() {
               <p>
                 The ekecheiria was fundamentally tied to <strong className="text-purple-300">Zeus</strong>, king of the Greek gods.
                 Waging war during Zeus's festival was seen as impious. Inside the Temple of Zeus stood a statue depicting King Iphitos
-                being crowned by <strong className="text-purple-300">Ekecheiria</strong> - a female personification of Peace/Truce,
-                implying the Greeks deified the concept itself.
+                being crowned by <strong className="text-purple-300">Ekecheiria</strong> - a female personification of Peace/Truce (Pausanias 5.10.10),
+                implying the Greeks deified the concept itself. A statue of <strong className="text-purple-300">Agon</strong> (personified Competition)
+                holding dumbbells also stood at Olympia - the Greek concept of <em>agon</em> (ἀγών) channeled competitive spirit from warfare to athletics.
+              </p>
+              <p>
+                Athletes swore sacred oaths on slices of <strong className="text-purple-300">boar's flesh</strong> at the altar of Zeus Horkios ("Zeus of Oaths").
+                Pausanias (5.24.9) notes Zeus in the Council Chamber was called "Oath-god" and "most likely to strike terror into the hearts of sinners."
+                The main sacrifice was a <strong className="text-purple-300">hecatomb</strong> (100 oxen) to Zeus on the third day.
               </p>
               <blockquote className="border-l-2 border-purple-500/50 pl-4 text-slate-400 italic">
                 "We come together in one place, and as we make our prayers and sacrifices in common, we are reminded of the kinship

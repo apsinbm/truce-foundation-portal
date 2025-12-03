@@ -615,6 +615,50 @@ const SCHOLARLY_SOURCES: ScholarlySource[] = [
     description: 'Open-access peer-reviewed article analyzing the Truce\'s effectiveness in conflict zones and its role in facilitating diplomatic "windows of opportunity."',
     url: 'https://vuir.vu.edu.au/24927/1/Sport-in-Society-2012-intro-Olympics.pdf',
   },
+  {
+    author: 'Roy, J.',
+    title: 'Thucydides 5.49.1-50.4: The Quarrel between Elis and Sparta in 420 B.C.',
+    publication: 'Klio',
+    year: 1998,
+    description: 'Detailed scholarly analysis of the 420 BC Spartan violation - the most extensively documented case of ancient truce enforcement.',
+  },
+  {
+    author: 'Hornblower, Simon',
+    title: 'Thucydides, Xenophon, and Lichas: Were the Spartans Excluded from the Olympic Games from 420 to 400 B.C.?',
+    publication: 'Phoenix',
+    year: 2000,
+    description: 'Analysis of the duration and scope of Sparta\'s ban from the Olympics, questioning whether it lasted 20 years or only the 420 BC Games.',
+  },
+  {
+    author: 'Pandey, Vincent',
+    title: 'The Olympic Truce: Symbolic Gesture or Effective Tool',
+    publication: 'University of Denver (International Studies)',
+    year: 2023,
+    description: 'Case study analysis across Yugoslav Wars, India-Pakistan, Cyprus, and Russia - concludes the Truce "has not been effectively used to prevent or end conflict."',
+  },
+  {
+    author: 'Clastres, Patrick',
+    title: 'The Olympic Truce: A Historical Perspective',
+    publication: 'University of Lausanne / IOC',
+    year: 2018,
+    description: 'Historian notes the ancient truce "was more of a safe passage than a ceasefire" - calls the modern revival an "invented tradition" that started with the Games\' late 19th century revival.',
+  },
+  {
+    author: 'Head, Thomas & Landes, R. (Eds.)',
+    title: 'The Peace of God: Social Violence and Religious Response in France around the Year 1000',
+    publication: 'Cornell University Press',
+    year: 1992,
+    description: 'Scholarly analysis of medieval Peace of God and Truce of God movements - instructive parallels to the ancient ekecheiria\'s reliance on religious sanction.',
+    url: 'https://www.cornellpress.cornell.edu/book/9780801481093/the-peace-of-god/',
+  },
+  {
+    author: 'Marchand, Suzanne L.',
+    title: 'Down from Olympus: Archaeology and Philhellenism in Germany, 1750-1970',
+    publication: 'Princeton University Press',
+    year: 1996,
+    description: 'How German excavations at Olympia (1875-1881) transformed the Games from literary concept to tangible place - context for the modern Olympic revival.',
+    url: 'https://press.princeton.edu/books/paperback/9780691114781/down-from-olympus',
+  },
 ];
 
 const getCategoryConfig = (category: FoundationalDoc['category']) => {
