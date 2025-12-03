@@ -394,6 +394,119 @@ const SG_REPORTS = [
   },
 ];
 
+// Ancient Primary Sources
+interface AncientSource {
+  author: string;
+  title: string;
+  date: string;
+  description: string;
+  passages: string[];
+  url: string;
+}
+
+const ANCIENT_SOURCES: AncientSource[] = [
+  {
+    author: 'Pausanias',
+    title: 'Description of Greece',
+    date: '2nd century AD',
+    description: 'Greek traveler\'s account of Olympia, including the origins of the ekecheiria and the bronze Discus of Iphitos.',
+    passages: ['Book 5.4 (Origin myth)', 'Book 5.10 (Statue of Ekecheiria)', 'Book 5.20 (Bronze discus)'],
+    url: 'http://www.perseus.tufts.edu/hopper/text?doc=Paus.+5.4',
+  },
+  {
+    author: 'Thucydides',
+    title: 'History of the Peloponnesian War',
+    date: '5th century BC',
+    description: 'Primary source on the 420 BC Spartan violation - the most famously documented truce breach.',
+    passages: ['Book 5.49-5.50 (Sparta banned, Lichas flogged)'],
+    url: 'http://www.perseus.tufts.edu/hopper/text?doc=Thuc.+5.49',
+  },
+  {
+    author: 'Isocrates',
+    title: 'Panegyricus',
+    date: '380 BC',
+    description: 'Athenian orator\'s speech praising Olympic gatherings and pan-Hellenic unity under the truce.',
+    passages: ['Sections 43-44 (Benefits of Olympic gatherings)'],
+    url: 'http://www.perseus.tufts.edu/hopper/text?doc=Isoc.+4.43',
+  },
+  {
+    author: 'Lysias',
+    title: 'Olympic Oration',
+    date: '388 BC',
+    description: 'Speech delivered at Olympia urging Greek unity - an echo of the truce\'s spirit.',
+    passages: ['Full oration'],
+    url: 'http://www.perseus.tufts.edu/hopper/text?doc=Lys.+33',
+  },
+  {
+    author: 'Plutarch',
+    title: 'Life of Lycurgus',
+    date: '1st-2nd century AD',
+    description: 'References Lycurgus\'s connection to Iphitos and the establishment of the Olympic Truce.',
+    passages: ['Section 1.1'],
+    url: 'http://www.perseus.tufts.edu/hopper/text?doc=Plut.+Lyc.+1',
+  },
+];
+
+// Academic/Scholarly Sources
+interface ScholarlySource {
+  author: string;
+  title: string;
+  publication: string;
+  year: number;
+  description: string;
+  url?: string;
+}
+
+const SCHOLARLY_SOURCES: ScholarlySource[] = [
+  {
+    author: 'Georgiadis, K. (Ed.)',
+    title: 'Ekecheiria: Olympic Truce – Sport as a Platform for Peace',
+    publication: 'IOC/International Olympic Academy',
+    year: 2009,
+    description: 'Definitive academic collection on the Olympic Truce from ancient to modern times.',
+    url: 'https://ioa.org.gr/en/publications/',
+  },
+  {
+    author: 'Christesen, Paul',
+    title: 'Olympic Victor Lists and Ancient Greek History (Ch. 7)',
+    publication: 'Cambridge University Press',
+    year: 2007,
+    description: 'Scholarly analysis of Aristotle\'s view on the truce\'s foundation and Lycurgus\'s role.',
+    url: 'https://www.cambridge.org/core/books/olympic-victor-lists-and-ancient-greek-history/',
+  },
+  {
+    author: 'Guisado Litterio, T.M.',
+    title: 'The Olympic Truce: Tradition or International Law?',
+    publication: 'EJIL:Talk!',
+    year: 2022,
+    description: 'Legal analysis of the Olympic Truce\'s status in international law - soft law vs. binding.',
+    url: 'https://www.ejiltalk.org/the-olympic-truce-tradition-or-international-law/',
+  },
+  {
+    author: 'Young, David C.',
+    title: 'A Brief History of the Olympic Games',
+    publication: 'Blackwell',
+    year: 2004,
+    description: 'Accessible history including sections on the sacred truce with Pausanias citations.',
+  },
+  {
+    author: 'Miller, Stephen G.',
+    title: 'Ancient Greek Athletics',
+    publication: 'Yale University Press',
+    year: 2004,
+    description: 'Archaeological perspective on Olympia, the festival, and the truce heralds.',
+    url: 'https://yalebooks.yale.edu/book/9780300100835/ancient-greek-athletics/',
+  },
+  {
+    author: 'van Berchem, Mathieu',
+    title: 'The Olympic Truce: Noble Myth, Harsh Reality',
+    publication: 'SwissInfo',
+    year: 2024,
+    description: 'Critical historical perspective on the modern truce as an "invented tradition."',
+    url: 'https://www.swissinfo.ch/eng/sport/the-olympic-truce-noble-myth-harsh-reality/',
+  },
+];
+
 const getCategoryConfig = (category: FoundationalDoc['category']) => {
   switch (category) {
     case 'foundation':
@@ -614,6 +727,126 @@ export default function DocumentsPage() {
                   </svg>
                 </a>
               ))}
+            </div>
+          </div>
+        </motion.section>
+
+        {/* Ancient Primary Sources */}
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-12"
+        >
+          <h2 className="text-2xl font-bold mb-6 flex items-center gap-3">
+            <span className="text-3xl">🏛️</span>
+            Ancient Primary Sources
+          </h2>
+          <p className="text-slate-400 text-sm mb-6">
+            Classical Greek and Roman texts documenting the original ekecheiria (Olympic Truce). All texts available via Perseus Digital Library.
+          </p>
+          <div className="grid md:grid-cols-2 gap-4">
+            {ANCIENT_SOURCES.map((source) => (
+              <div key={source.author} className="p-5 rounded-xl bg-gradient-to-br from-amber-500/10 to-amber-600/5 border border-amber-500/30">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-xs px-2 py-0.5 rounded bg-amber-500/20 text-amber-300">{source.date}</span>
+                </div>
+                <h3 className="font-semibold text-white">{source.author}</h3>
+                <p className="text-sm text-amber-200 italic mb-2">{source.title}</p>
+                <p className="text-xs text-slate-400 mb-3">{source.description}</p>
+                <div className="flex flex-wrap gap-1 mb-3">
+                  {source.passages.map((passage) => (
+                    <span key={passage} className="px-2 py-0.5 text-xs bg-slate-800/50 text-slate-300 rounded">{passage}</span>
+                  ))}
+                </div>
+                <a
+                  href={source.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-sm text-blue-400 hover:text-blue-300"
+                >
+                  Read on Perseus
+                  <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </div>
+            ))}
+          </div>
+        </motion.section>
+
+        {/* Academic/Scholarly Sources */}
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-12"
+        >
+          <h2 className="text-2xl font-bold mb-6 flex items-center gap-3">
+            <span className="text-3xl">📚</span>
+            Academic & Scholarly Sources
+          </h2>
+          <p className="text-slate-400 text-sm mb-6">
+            Modern academic works analyzing the Olympic Truce from historical, legal, and political perspectives.
+          </p>
+          <div className="grid gap-3">
+            {SCHOLARLY_SOURCES.map((source) => (
+              <div key={source.title} className="p-4 rounded-xl bg-slate-900/50 border border-slate-700 hover:border-purple-500/50 transition-colors">
+                <div className="flex items-start justify-between gap-4">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="text-xs text-slate-500">{source.year}</span>
+                      <span className="text-xs px-1.5 py-0.5 rounded bg-purple-500/20 text-purple-300">{source.publication}</span>
+                    </div>
+                    <h3 className="font-semibold text-white text-sm">{source.title}</h3>
+                    <p className="text-xs text-slate-500">{source.author}</p>
+                    <p className="text-xs text-slate-400 mt-1">{source.description}</p>
+                  </div>
+                  {source.url && (
+                    <a
+                      href={source.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-shrink-0 p-2 rounded-lg bg-slate-800/50 hover:bg-slate-700/50 transition-colors"
+                    >
+                      <svg className="w-4 h-4 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </a>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </motion.section>
+
+        {/* Legal Framework Note */}
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-12"
+        >
+          <div className="p-6 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700">
+            <h3 className="text-lg font-bold text-white mb-3 flex items-center gap-2">
+              <span>⚖️</span>
+              Legal Status: Soft Law
+            </h3>
+            <div className="space-y-3 text-sm text-slate-300">
+              <p>
+                The Olympic Truce as embodied in UN resolutions is <strong className="text-amber-300">not legally binding</strong> under international law.
+                UN General Assembly resolutions are "recommendations" - they create no obligations the way a treaty or Security Council Chapter VII resolution would.
+              </p>
+              <p>
+                The resolutions use language like "urges," "calls upon," and "requests" rather than "decides" or "demands."
+                They rely on voluntary compliance and peer pressure. As international law scholar <strong>Bruno Simma</strong> notes,
+                GA resolutions "cannot by themselves create legal obligations."
+              </p>
+              <p>
+                While frequent violations (2008, 2014, 2022) demonstrate the truce's weakness as enforceable law, the regular unanimous adoption
+                could signal an <strong className="text-green-300">emerging customary norm</strong>. The IOC's 2022 recommendation to ban Russian/Belarusian
+                athletes was the first quasi-"punishment" aligned with a truce violation.
+              </p>
             </div>
           </div>
         </motion.section>

@@ -311,10 +311,54 @@ interface KeyMoment {
 }
 
 const KEY_MOMENTS: KeyMoment[] = [
+  // Ancient Era (776 BC - 393 AD)
   {
-    year: 776,
+    year: -776,
     title: 'Ancient Olympic Truce Established',
-    description: 'The Olympic Truce (ekecheiria) is adopted for the first time, followed by the inauguration of the first Olympic Games in Olympia, Greece.',
+    description: 'King Iphitos of Elis, following the Oracle of Delphi\'s counsel, joins with King Cleisthenes of Pisa and Spartan lawgiver Lycurgus to establish the ekecheiria ("holding of hands"). The treaty is inscribed on a bronze discus stored in the Temple of Hera at Olympia.',
+    significance: 'milestone',
+  },
+  {
+    year: -420,
+    title: 'Sparta Banned from Olympics',
+    description: 'Sparta attacks Lepreum during the truce period. Elis fines Sparta 2,000 minae (over 30 talents of silver) and bans Spartan athletes. Lichas, who enters his chariot under another state\'s name, is publicly flogged when he celebrates victory.',
+    significance: 'milestone',
+  },
+  {
+    year: -480,
+    title: 'Games Held During Persian Invasion',
+    description: 'The Olympic Games are held even as Xerxes\' Persian army invades Greece, demonstrating the sacred nature of the festival. Greeks at Olympia while others fight for survival at Thermopylae.',
+    significance: 'symbolic',
+  },
+  {
+    year: -362,
+    title: 'Battle at Olympia',
+    description: 'The Eleans and Arcadians/Pisatans fight within the sacred precincts of Olympia itself - one of the most egregious violations of the ekecheiria in ancient history.',
+    significance: 'milestone',
+  },
+  {
+    year: 393,
+    title: 'Ancient Olympics Abolished',
+    description: 'Emperor Theodosius I bans pagan religious festivals including the Olympic Games. After over 1,100 years, the ekecheiria tradition ends. The concept falls into obscurity until the 19th century.',
+    significance: 'milestone',
+  },
+  // Gap Period & Revival
+  {
+    year: 1612,
+    title: 'Cotswold Olympicks',
+    description: 'Robert Dover organizes the "Cotswold Olympicks" in England - early rural games inspired by antiquity, though without international dimension or warfare to pause.',
+    significance: 'symbolic',
+  },
+  {
+    year: 1850,
+    title: 'Wenlock Olympian Games',
+    description: 'William Penny Brookes founds the Wenlock Olympian Games in England, later inspiring Baron Pierre de Coubertin.',
+    significance: 'symbolic',
+  },
+  {
+    year: 1894,
+    title: 'Modern Olympics Founded',
+    description: 'Baron Pierre de Coubertin founds the IOC, believing sports could promote peace. His 1892 speech: "the cause of peace will have received a new and strong ally." The ancient truce is not formally revived but its spirit lives on.',
     significance: 'milestone',
   },
   {
@@ -325,21 +369,21 @@ const KEY_MOMENTS: KeyMoment[] = [
   },
   {
     year: 1992,
-    title: 'IOC Launches Olympic Truce Appeal',
-    description: 'The IOC launched an Appeal for the observance of the Olympic Truce and negotiated with the UN to facilitate participation of athletes from the former Republic of Yugoslavia in Barcelona.',
+    title: 'Modern Olympic Truce Revived at Barcelona',
+    description: 'IOC President Juan Antonio Samaranch makes the first public appeal for Olympic Truce. UN Secretary-General Boutros Boutros-Ghali sends letter calling for "a truce in the former Yugoslavia, which would be the Olympic Truce of classical tradition." IOC flies plane into besieged Sarajevo to evacuate athletes.',
     significance: 'milestone',
   },
   {
     year: 1993,
-    title: 'First UN Resolution Adopted',
-    description: 'The first resolution on the observance of the Olympic Truce was adopted by the 48th Session of the UN General Assembly, facilitating participation of athletes from former Yugoslavia in Lillehammer 1994.',
+    title: 'First UN Resolution (A/RES/48/11)',
+    description: 'On October 25, 1993, the UN General Assembly adopts Resolution 48/11 "Building a peaceful and better world through sport and the Olympic ideal" - the first GA resolution to invoke an ancient tradition in a modern peace context. Greece leads the initiative. Urges observance "from seventh day before to seventh day after" the Games.',
     significance: 'milestone',
   },
   {
     year: 1994,
-    title: 'International Year of Sport',
-    description: 'The year was proclaimed the International Year of Sport and the Olympic Ideal by the UN.',
-    significance: 'symbolic',
+    title: 'First Modern Truce Observed (Lillehammer)',
+    description: 'Brief ceasefire in Sarajevo during Games. Samaranch\'s closing ceremony (Feb 27): "After many horrors, the situation now seems to be improving. Let us hope that this 17-day-old truce – to which, in our very limited way, we may have contributed – will turn into lasting peace." UN proclaimed 1994 as International Year of Sport.',
+    significance: 'diplomatic',
   },
   {
     year: 1995,
@@ -349,8 +393,8 @@ const KEY_MOMENTS: KeyMoment[] = [
   },
   {
     year: 1998,
-    title: 'Truce Influences Iraq Mediation',
-    description: 'The Olympic Truce was taken into consideration during the Nagano Winter Games and contributed to setting up a UN Secretary General mediation mission, leading to a memorandum of understanding with Iraq.',
+    title: 'Kofi Annan\'s Iraq Diplomacy (Nagano)',
+    description: 'During the Nagano Games, tensions with Iraq over UNSCOM inspections reach crisis point. UN Secretary-General Kofi Annan flies to Baghdad in the final days, striking a deal with Saddam Hussein on Feb 23, 1998 - averting immediate war. The Olympic Truce appeal provided moral context for the diplomatic opening.',
     significance: 'diplomatic',
   },
   {
@@ -658,8 +702,130 @@ export default function HistoryPage() {
         </div>
       </section>
 
+      {/* Ancient Ekecheiria Section */}
+      <section className="py-12 px-4 bg-slate-900/30">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-8 text-center"
+          >
+            <h2 className="text-2xl font-bold text-white mb-2">The Ancient Ekecheiria (776 BC - 393 AD)</h2>
+            <p className="text-slate-400">Over 1,100 years of sacred peace</p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="p-6 rounded-2xl bg-gradient-to-br from-amber-500/10 to-amber-600/5 border border-amber-500/30"
+            >
+              <h3 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
+                <span>🏛️</span> Origins & Founders
+              </h3>
+              <div className="space-y-3 text-sm text-slate-300">
+                <p>
+                  Greece in the 8th century BC was suffering from constant wars and plague. <strong className="text-amber-300">King Iphitos of Elis</strong> sought
+                  guidance from the Oracle of Delphi, who ordained that he "must renew the Olympic games."
+                </p>
+                <p>
+                  Iphitos enlisted <strong className="text-amber-300">King Cleisthenes of Pisa</strong> and the Spartan lawgiver <strong className="text-amber-300">Lycurgus</strong> to
+                  forge a sacred peace pact. The treaty was inscribed on a bronze discus stored in the Temple of Hera at Olympia.
+                </p>
+                <p className="text-xs text-slate-500 italic">
+                  "The ekecheiria declared the sanctuary of Olympia and the territory of Elis to be inviolable during the Games." — Pausanias
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="p-6 rounded-2xl bg-gradient-to-br from-green-500/10 to-green-600/5 border border-green-500/30"
+            >
+              <h3 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
+                <span>📜</span> How It Worked
+              </h3>
+              <div className="space-y-3 text-sm text-slate-300">
+                <p>
+                  <strong className="text-green-300">Spondophoroi</strong> ("truce-bearers") - heralds crowned with olive branches -
+                  traveled across Greece announcing the sacred truce and the Games' schedule.
+                </p>
+                <p>
+                  The truce evolved from <strong className="text-green-300">one month to three months</strong> as participation expanded
+                  geographically - allowing athletes from distant Greek colonies time to travel safely.
+                </p>
+                <ul className="list-disc list-inside text-xs text-slate-400 space-y-1">
+                  <li>Armed conflict forbidden between participating city-states</li>
+                  <li>Elis declared neutral ground, immune from attack</li>
+                  <li>Safe passage for athletes, trainers, and pilgrims</li>
+                  <li>Death penalties suspended during the truce period</li>
+                </ul>
+              </div>
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="p-6 rounded-2xl bg-gradient-to-br from-purple-500/10 to-purple-600/5 border border-purple-500/30 mb-8"
+          >
+            <h3 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
+              <span>🎭</span> Religious & Cultural Significance
+            </h3>
+            <div className="space-y-3 text-sm text-slate-300">
+              <p>
+                The ekecheiria was fundamentally tied to <strong className="text-purple-300">Zeus</strong>, king of the Greek gods.
+                Waging war during Zeus's festival was seen as impious. Inside the Temple of Zeus stood a statue depicting King Iphitos
+                being crowned by <strong className="text-purple-300">Ekecheiria</strong> - a female personification of Peace/Truce,
+                implying the Greeks deified the concept itself.
+              </p>
+              <blockquote className="border-l-2 border-purple-500/50 pl-4 text-slate-400 italic">
+                "We come together in one place, and as we make our prayers and sacrifices in common, we are reminded of the kinship
+                which exists among us and are made to feel more kindly towards each other for the future, reviving our old friendships
+                and establishing new ties."
+                <footer className="text-xs text-slate-500 mt-1 not-italic">— Isocrates, Panegyricus (4th century BC)</footer>
+              </blockquote>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="p-6 rounded-2xl bg-gradient-to-br from-red-500/10 to-red-600/5 border border-red-500/30"
+          >
+            <h3 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
+              <span>⚖️</span> Enforcement & Notable Violations
+            </h3>
+            <div className="grid md:grid-cols-2 gap-4 text-sm text-slate-300">
+              <div>
+                <h4 className="font-medium text-white mb-2">Enforcement</h4>
+                <p className="mb-2">
+                  Violators faced <strong className="text-red-300">exclusion from the Games</strong> and heavy fines
+                  dedicated to Zeus. There was no "Olympic army" - enforcement relied on collective respect for the gods
+                  and social pressure among Greek peers.
+                </p>
+              </div>
+              <div>
+                <h4 className="font-medium text-white mb-2">The Spartan Precedent (420 BC)</h4>
+                <p>
+                  Sparta attacked Lepreum during the truce. Elis fined them <strong className="text-red-300">2,000 minae</strong> (over 30 talents of silver)
+                  and banned all Spartan athletes. When Lichas entered his chariot under another state's name, he was publicly flogged upon victory.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Context Section */}
-      <section className="py-8 px-4 bg-slate-900/30">
+      <section className="py-8 px-4">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -667,19 +833,22 @@ export default function HistoryPage() {
             viewport={{ once: true }}
             className="p-6 rounded-2xl bg-blue-500/10 border border-blue-500/30"
           >
-            <h2 className="text-lg font-semibold text-white mb-3">The Modern Olympic Truce</h2>
+            <h2 className="text-lg font-semibold text-white mb-3">The Modern Revival (1992-Present)</h2>
             <div className="space-y-3 text-sm text-slate-300">
               <p>
-                In 1992, the International Olympic Committee renewed the ancient Greek tradition of <em>ekecheiria</em> (holding of hands),
-                calling upon all nations to observe the Olympic Truce during the modern Games.
+                After the ancient Olympics were abolished in <strong>393 AD</strong> by Emperor Theodosius I, the concept of ekecheiria
+                fell into obscurity for over 1,500 years. The "Truce of God" (<em>Treuga Dei</em>) in medieval Europe and sacred
+                pilgrimage periods in other cultures preserved the idea of religiously-mandated peace, but the Olympic Truce itself was dormant.
+              </p>
+              <p>
+                In <strong>1992</strong>, IOC President <strong>Juan Antonio Samaranch</strong> made the first public appeal for an Olympic Truce
+                at the Barcelona Games. UN Secretary-General <strong>Boutros Boutros-Ghali</strong> sent a letter calling for "a truce in the
+                former Yugoslavia, which would be the Olympic Truce of classical tradition" - the first explicit reference to ancient ekecheiria on a modern Olympic stage.
               </p>
               <p>
                 The Truce was formally established by <strong>UN Resolution 48/11</strong> on October 25, 1993, urging Member States
                 to observe the Truce from the seventh day before the opening to the seventh day following the closing of each Olympic Games.
-              </p>
-              <p>
-                Since 1994, the President of the UN General Assembly has made a <strong>Solemn Appeal</strong> before each Games.
-                Beginning in 2006, this appeal was extended to cover the Paralympic Games as well.
+                Since then, <strong>Greece</strong> has led the initiative at the UN, and every Olympics has had a corresponding resolution.
               </p>
             </div>
           </motion.div>
@@ -956,7 +1125,9 @@ export default function HistoryPage() {
                       <span className="text-2xl">{sigConfig.icon}</span>
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-1">
-                          <span className={`font-bold ${sigConfig.color}`}>{moment.year}</span>
+                          <span className={`font-bold ${sigConfig.color}`}>
+                            {moment.year < 0 ? `${Math.abs(moment.year)} BC` : moment.year === 393 ? '393 AD' : moment.year}
+                          </span>
                           <h4 className="font-semibold text-white">{moment.title}</h4>
                         </div>
                         <p className="text-sm text-slate-300">{moment.description}</p>
@@ -1157,18 +1328,48 @@ export default function HistoryPage() {
       <section className="py-8 px-4">
         <div className="max-w-4xl mx-auto">
           <h3 className="text-sm font-semibold text-slate-500 mb-4 text-center">Sources</h3>
-          <div className="flex flex-wrap justify-center gap-4 text-xs text-slate-500">
-            <a href="https://www.un.org/en/olympictruce" target="_blank" rel="noopener noreferrer" className="hover:text-slate-300 transition-colors">
-              UN Olympic Truce
-            </a>
-            <span>|</span>
-            <a href="https://www.olympics.com/ioc/olympic-truce/resolutions" target="_blank" rel="noopener noreferrer" className="hover:text-slate-300 transition-colors">
-              IOC Resolutions
-            </a>
-            <span>|</span>
-            <a href="https://olympictruce.org/en/profile/the-truce-timeline/" target="_blank" rel="noopener noreferrer" className="hover:text-slate-300 transition-colors">
-              IOTC Timeline
-            </a>
+          <div className="space-y-3">
+            <div className="flex flex-wrap justify-center gap-4 text-xs text-slate-500">
+              <a href="https://www.un.org/en/olympictruce" target="_blank" rel="noopener noreferrer" className="hover:text-slate-300 transition-colors">
+                UN Olympic Truce
+              </a>
+              <span>|</span>
+              <a href="https://www.olympics.com/ioc/olympic-truce/resolutions" target="_blank" rel="noopener noreferrer" className="hover:text-slate-300 transition-colors">
+                IOC Resolutions
+              </a>
+              <span>|</span>
+              <a href="https://olympictruce.org/en/profile/the-truce-timeline/" target="_blank" rel="noopener noreferrer" className="hover:text-slate-300 transition-colors">
+                IOTC Timeline
+              </a>
+            </div>
+            <div className="flex flex-wrap justify-center gap-4 text-xs text-slate-500">
+              <span className="text-slate-600">Ancient:</span>
+              <a href="http://www.perseus.tufts.edu/hopper/text?doc=Paus.+5.4" target="_blank" rel="noopener noreferrer" className="hover:text-amber-300 transition-colors">
+                Pausanias
+              </a>
+              <span>|</span>
+              <a href="http://www.perseus.tufts.edu/hopper/text?doc=Thuc.+5.49" target="_blank" rel="noopener noreferrer" className="hover:text-amber-300 transition-colors">
+                Thucydides
+              </a>
+              <span>|</span>
+              <a href="http://www.perseus.tufts.edu/hopper/text?doc=Isoc.+4.43" target="_blank" rel="noopener noreferrer" className="hover:text-amber-300 transition-colors">
+                Isocrates
+              </a>
+            </div>
+            <div className="flex flex-wrap justify-center gap-4 text-xs text-slate-500">
+              <span className="text-slate-600">Academic:</span>
+              <a href="https://www.ejiltalk.org/the-olympic-truce-tradition-or-international-law/" target="_blank" rel="noopener noreferrer" className="hover:text-purple-300 transition-colors">
+                EJIL:Talk (Legal Analysis)
+              </a>
+              <span>|</span>
+              <a href="https://www.swissinfo.ch/eng/sport/the-olympic-truce-noble-myth-harsh-reality/" target="_blank" rel="noopener noreferrer" className="hover:text-purple-300 transition-colors">
+                SwissInfo
+              </a>
+              <span>|</span>
+              <Link href="/documents" className="hover:text-blue-300 transition-colors">
+                Full Document Archive
+              </Link>
+            </div>
           </div>
         </div>
       </section>
