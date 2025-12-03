@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Hero from '@/components/Hero';
 import SubSiteCard from '@/components/SubSiteCard';
 import ExpertQuotes from '@/components/ExpertQuotes';
+import AncientWisdom from '@/components/AncientWisdom';
 import Footer from '@/components/Footer';
 import { SUB_SITES } from '@/lib/constants';
 
@@ -45,6 +46,9 @@ export default function Home() {
 
       {/* Expert Quotes Section */}
       <ExpertQuotes />
+
+      {/* Ancient Wisdom Section */}
+      <AncientWisdom />
 
       {/* Mission Statement Section */}
       <section className="relative py-16 sm:py-24 px-4">
