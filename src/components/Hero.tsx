@@ -64,6 +64,24 @@ export default function Hero() {
           <Countdown />
         </motion.div>
 
+        {/* Key Stats */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.6 }}
+          className="flex flex-wrap justify-center gap-4 text-xs sm:text-sm"
+        >
+          <div className="px-4 py-2 bg-blue-500/10 border border-blue-500/30 rounded-lg text-blue-300">
+            <span className="font-bold">165</span> UN Co-Sponsors
+          </div>
+          <div className="px-4 py-2 bg-pink-500/10 border border-pink-500/30 rounded-lg text-pink-300">
+            Most <span className="font-bold">Gender-Balanced</span> Winter Games
+          </div>
+          <div className="px-4 py-2 bg-green-500/10 border border-green-500/30 rounded-lg text-green-300">
+            Adopted by <span className="font-bold">Consensus</span>
+          </div>
+        </motion.div>
+
         {/* CTA Button */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

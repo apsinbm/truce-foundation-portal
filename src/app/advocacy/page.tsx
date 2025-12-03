@@ -7,10 +7,12 @@ interface ToolkitItem {
   id: string;
   title: string;
   description: string;
-  type: 'pdf' | 'image' | 'social' | 'video';
+  type: 'pdf' | 'image' | 'social' | 'video' | 'external';
   category: 'infographic' | 'policy' | 'social' | 'template';
   downloadUrl?: string;
+  externalUrl?: string;
   comingSoon?: boolean;
+  highlight?: boolean;
 }
 
 const TOOLKIT_ITEMS: ToolkitItem[] = [
@@ -39,14 +41,52 @@ const TOOLKIT_ITEMS: ToolkitItem[] = [
     category: 'infographic',
     comingSoon: true,
   },
-  // Policy Briefs
+  // Policy Briefs - UN Resolutions
   {
-    id: 'policy-brief-un',
-    title: 'UN Resolution A/RES/78/10',
-    description: 'Summary of the 2023 Olympic Truce resolution and its implications',
+    id: 'policy-brief-un-2026',
+    title: 'UN Resolution A/80/L.10 (2025)',
+    description: 'Official Olympic Truce resolution for Milano-Cortina 2026 - 165 co-sponsors, adopted by consensus',
     type: 'pdf',
     category: 'policy',
-    comingSoon: true,
+    downloadUrl: '/downloads/A_80_L.10-EN.pdf',
+    comingSoon: false,
+    highlight: true,
+  },
+  {
+    id: 'policy-brief-un-2024',
+    title: 'UN Resolution A/RES/78/10 (2023)',
+    description: 'Olympic Truce resolution for Paris 2024 - adopted 118-0-2',
+    type: 'external',
+    category: 'policy',
+    externalUrl: 'https://docs.un.org/en/A/RES/78/10',
+    comingSoon: false,
+  },
+  {
+    id: 'policy-brief-original',
+    title: 'UN Resolution A/RES/48/11 (1993)',
+    description: 'The foundational resolution that revived the ancient ekecheiria tradition',
+    type: 'external',
+    category: 'policy',
+    externalUrl: 'https://digitallibrary.un.org/record/197368',
+    comingSoon: false,
+  },
+  {
+    id: 'policy-sdgs',
+    title: 'UN 2030 Agenda A/RES/70/1',
+    description: 'The 17 SDGs - Olympic Truce supports SDG 16 (peace) and SDG 17 (partnerships)',
+    type: 'external',
+    category: 'policy',
+    externalUrl: 'https://www.un.org/en/development/desa/population/migration/generalassembly/docs/globalcompact/A_RES_70_1_E.pdf',
+    comingSoon: false,
+  },
+  {
+    id: 'policy-millennium',
+    title: 'Millennium Declaration A/RES/55/2',
+    description: 'Landmark 2000 declaration on peace, development, and human rights',
+    type: 'external',
+    category: 'policy',
+    externalUrl: 'https://www.un.org/en/development/desa/population/migration/generalassembly/docs/globalcompact/A_RES_55_2.pdf',
+    comingSoon: false,
   },
   {
     id: 'policy-brief-stakeholders',
@@ -126,6 +166,11 @@ const TYPE_ICONS = {
   video: (
     <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+    </svg>
+  ),
+  external: (
+    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
     </svg>
   ),
 };
@@ -218,18 +263,24 @@ export default function AdvocacyPage() {
                     className={`p-5 rounded-xl border transition-all ${
                       item.comingSoon
                         ? 'bg-slate-900/30 border-slate-700/30'
+                        : item.highlight
+                        ? 'bg-blue-500/10 border-blue-500/30 hover:border-blue-400/50'
                         : 'bg-slate-900/50 border-slate-700/50 hover:border-blue-500/50 cursor-pointer'
                     }`}
                   >
                     <div className="flex items-start gap-3">
                       <div className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${
-                        item.comingSoon ? 'bg-slate-800/50 text-slate-500' : 'bg-blue-500/20 text-blue-400'
+                        item.comingSoon
+                          ? 'bg-slate-800/50 text-slate-500'
+                          : item.highlight
+                          ? 'bg-blue-500/30 text-blue-300'
+                          : 'bg-blue-500/20 text-blue-400'
                       }`}>
                         {TYPE_ICONS[item.type]}
                       </div>
                       <div className="flex-1 min-w-0">
-                        <div className="flex items-center gap-2">
-                          <h3 className={`font-semibold truncate ${item.comingSoon ? 'text-slate-400' : 'text-white'}`}>
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <h3 className={`font-semibold ${item.comingSoon ? 'text-slate-400' : 'text-white'}`}>
                             {item.title}
                           </h3>
                           {item.comingSoon && (
@@ -237,19 +288,39 @@ export default function AdvocacyPage() {
                               Coming Soon
                             </span>
                           )}
+                          {item.highlight && (
+                            <span className="px-2 py-0.5 text-xs bg-blue-500/30 text-blue-300 rounded-full flex-shrink-0">
+                              Current
+                            </span>
+                          )}
                         </div>
                         <p className="text-sm text-slate-500 mt-1">{item.description}</p>
-                        {!item.comingSoon && item.downloadUrl && (
-                          <a
-                            href={item.downloadUrl}
-                            className="inline-flex items-center gap-1 text-xs text-blue-400 mt-2 hover:text-blue-300"
-                          >
-                            <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                            </svg>
-                            Download
-                          </a>
-                        )}
+                        <div className="flex items-center gap-3 mt-2">
+                          {!item.comingSoon && item.downloadUrl && (
+                            <a
+                              href={item.downloadUrl}
+                              className="inline-flex items-center gap-1 text-xs text-green-400 hover:text-green-300"
+                            >
+                              <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                              </svg>
+                              Download PDF
+                            </a>
+                          )}
+                          {!item.comingSoon && item.externalUrl && (
+                            <a
+                              href={item.externalUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1 text-xs text-blue-400 hover:text-blue-300"
+                            >
+                              <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                              </svg>
+                              View at UN
+                            </a>
+                          )}
+                        </div>
                       </div>
                     </div>
                   </motion.div>

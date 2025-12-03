@@ -1,9 +1,14 @@
 // Truce Window dates for Milano-Cortina 2026
-export const TRUCE_START_DATE = new Date('2026-01-23T00:00:00Z');
+// Truce starts 7 days before Opening Ceremony (Feb 6), ends 7 days after Paralympics closing (Mar 15)
+// Games: Feb 6 - Feb 22, 2026 | Paralympics: Mar 6 - Mar 15, 2026
+export const TRUCE_START_DATE = new Date('2026-01-30T00:00:00Z');
 export const TRUCE_END_DATE = new Date('2026-03-22T23:59:59Z');
 
 // External URLs
 export const TRUCE_INDEX_URL = 'https://truce-index.vercel.app';
+export const TRUCE_INDEX_PRESS_URL = 'https://truce-index.vercel.app/press';
+export const TRUCE_INDEX_BRIEFING_URL = 'https://truce-index.vercel.app/briefing';
+export const TRUCE_INDEX_LEADERBOARD_URL = 'https://truce-index.vercel.app/leaderboard';
 export const WOA_URL = 'https://worldolympians.org';
 export const TRUCE_FOUNDATION_URL = 'https://trucefoundation.world';
 
@@ -42,7 +47,7 @@ export const SUB_SITES: SubSite[] = [
     title: 'Forum',
     description: 'Real-time monitoring and storytelling from truce-enabled zones',
     href: '/forum',
-    status: 'coming-soon',
+    status: 'live',
   },
   {
     id: 'advocacy',
@@ -58,7 +63,7 @@ export const SUB_SITES: SubSite[] = [
     title: 'Global Candle Wall',
     description: 'Geo-tagged peace gestures from around the world',
     href: '/candles',
-    status: 'coming-soon',
+    status: 'live',
   },
   {
     id: 'stories',
@@ -66,7 +71,7 @@ export const SUB_SITES: SubSite[] = [
     title: 'Youth Stories',
     description: 'First-person accounts from truce-enabled zones',
     href: '/stories',
-    status: 'coming-soon',
+    status: 'live',
   },
   {
     id: 'methodology',
@@ -85,12 +90,12 @@ export const SUB_SITES: SubSite[] = [
     status: 'live',
   },
   {
-    id: 'scorecards',
-    icon: '📊',
-    title: 'Member Scorecards',
-    description: 'Compliance benchmarks for UN member states',
-    href: '/scorecards',
-    status: 'coming-soon',
+    id: 'accountability',
+    icon: '🏛️',
+    title: 'Accountability Record',
+    description: 'Historical record of Truce violations, inspired by the ancient Wall of Shame',
+    href: '/accountability',
+    status: 'live',
   },
   {
     id: 'reports',
@@ -98,7 +103,39 @@ export const SUB_SITES: SubSite[] = [
     title: 'Report Archives',
     description: 'Monthly and final reports, infographics, and data',
     href: '/reports',
-    status: 'coming-soon',
+    status: 'live',
+  },
+  {
+    id: 'briefing',
+    icon: '📋',
+    title: 'Daily Briefing',
+    description: 'Auto-generated daily summary of global incidents and trends',
+    href: '/briefing',
+    status: 'live',
+  },
+  {
+    id: 'leaderboard',
+    icon: '🏆',
+    title: 'Country Leaderboard',
+    description: 'Countries ranked by incidents and compliance metrics',
+    href: '/leaderboard',
+    status: 'live',
+  },
+  {
+    id: 'press',
+    icon: '📰',
+    title: 'Press & Media',
+    description: 'Media resources, embed widgets, and press contacts',
+    href: '/press',
+    status: 'live',
+  },
+  {
+    id: 'briefing-sheet',
+    icon: '📋',
+    title: 'Donor Briefing Sheet',
+    description: 'Sport for Development & Peace engagement materials based on UN A/79/289',
+    href: '/briefing-sheet',
+    status: 'live',
   },
 ];
 

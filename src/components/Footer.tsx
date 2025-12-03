@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { WOA_URL, TRUCE_FOUNDATION_URL } from '@/lib/constants';
+import { WOA_URL, TRUCE_FOUNDATION_URL, TRUCE_INDEX_URL } from '@/lib/constants';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -81,7 +81,7 @@ export default function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="/index" className="text-sm text-slate-400 hover:text-white transition-colors">
+                  <a href={TRUCE_INDEX_URL} target="_blank" rel="noopener noreferrer" className="text-sm text-slate-400 hover:text-white transition-colors">
                     Compliance Index
                   </a>
                 </li>
@@ -93,6 +93,11 @@ export default function Footer() {
                 <li>
                   <a href="/reports" className="text-sm text-slate-400 hover:text-white transition-colors">
                     Reports
+                  </a>
+                </li>
+                <li>
+                  <a href="/press" className="text-sm text-slate-400 hover:text-white transition-colors">
+                    Press & Media
                   </a>
                 </li>
               </ul>

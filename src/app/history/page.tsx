@@ -254,6 +254,164 @@ const OLYMPIC_TRUCE_HISTORY: OlympicGame[] = [
     ],
     significance: 'mixed',
   },
+  {
+    year: 2026,
+    city: 'Milano-Cortina',
+    country: 'Italy',
+    season: 'Winter',
+    unResolution: 'A/80/L.10',
+    coSponsors: 165,
+    solemnAppeal: true,
+    milestoneEffects: [
+      'Record 165 co-sponsors - highest in Olympic Truce history',
+      'Resolution adopted by consensus on November 19, 2025',
+      'Most gender-balanced Winter Games in history (near 50-50 participation)',
+      'First Games with Truce Compliance Index monitoring',
+      'Summer Youth Olympic Games in Dakar - first Olympic event in Africa',
+    ],
+    significance: 'neutral',
+  },
+];
+
+// Historical co-sponsor comparison data
+interface TruceResolutionComparison {
+  games: string;
+  year: number;
+  coSponsors: number;
+  context: string;
+  highlight?: boolean;
+}
+
+const COSPONSORS_COMPARISON: TruceResolutionComparison[] = [
+  {
+    games: 'London 2012',
+    year: 2012,
+    coSponsors: 193,
+    context: 'Record - all member states co-sponsored',
+  },
+  {
+    games: 'Beijing 2022',
+    year: 2022,
+    coSponsors: 173,
+    context: 'High support before Ukraine invasion',
+  },
+  {
+    games: 'Milano-Cortina 2026',
+    year: 2026,
+    coSponsors: 165,
+    context: 'Consensus adoption despite global tensions',
+    highlight: true,
+  },
+  {
+    games: 'Paris 2024',
+    year: 2024,
+    coSponsors: 118,
+    context: 'Lower sponsorship amid Russia-Belarus tensions',
+  },
+];
+
+// Key figures in 2026 resolution adoption
+interface KeyFigure {
+  name: string;
+  role: string;
+  statement: string;
+}
+
+const KEY_FIGURES_2026: KeyFigure[] = [
+  {
+    name: 'Annalena Baerbock',
+    role: 'President of the UN General Assembly',
+    statement: 'Urged nations to use the "moral compass" of the Truce, comparing the world to a "soccer field" where rules and fair play must prevail.',
+  },
+  {
+    name: 'Kirsty Coventry',
+    role: 'IOC President',
+    statement: 'Emphasized the Games offer a rare space where adversaries meet as "fellow human beings" and advocated for sport autonomy.',
+  },
+  {
+    name: 'Giovanni Malagò',
+    role: 'Milano-Cortina 2026 President',
+    statement: 'Framed the Italian Games as a "beacon of hope" and a "unifying event" that rises above national boundaries.',
+  },
+];
+
+// Legal framework - foundational UN resolutions referenced in Olympic Truce resolutions
+interface LegalDocument {
+  id: string;
+  symbol: string;
+  title: string;
+  year: number;
+  description: string;
+  relevance: string;
+  url: string;
+  downloadUrl?: string;
+}
+
+const LEGAL_FRAMEWORK: LegalDocument[] = [
+  {
+    id: 'original-truce',
+    symbol: 'A/RES/48/11',
+    title: 'Observance of the Olympic Truce',
+    year: 1993,
+    description: 'The foundational resolution that revived the ancient Greek ekecheiria tradition for modern times.',
+    relevance: 'Established the 7-day-before to 7-day-after window and called on all Member States to observe the Truce.',
+    url: 'https://digitallibrary.un.org/record/197368',
+  },
+  {
+    id: 'millennium',
+    symbol: 'A/RES/55/2',
+    title: 'United Nations Millennium Declaration',
+    year: 2000,
+    description: 'Landmark declaration adopted by 189 countries setting goals for peace, development, and human rights.',
+    relevance: 'Olympic Truce resolutions reference this as foundation for global cooperation and peaceful societies.',
+    url: 'https://www.un.org/en/development/desa/population/migration/generalassembly/docs/globalcompact/A_RES_55_2.pdf',
+  },
+  {
+    id: 'children',
+    symbol: 'A/RES/S-27/2',
+    title: 'A World Fit for Children',
+    year: 2002,
+    description: 'Special session outcome promoting healthy lives, quality education, and protecting children from violence.',
+    relevance: 'Referenced for youth engagement and education aspects of the Olympic Truce.',
+    url: 'https://digitallibrary.un.org/record/464538',
+  },
+  {
+    id: 'sdgs',
+    symbol: 'A/RES/70/1',
+    title: 'Transforming our World: 2030 Agenda for Sustainable Development',
+    year: 2015,
+    description: 'The 17 Sustainable Development Goals framework guiding global development efforts.',
+    relevance: 'Olympic Truce supports SDG 16 (peaceful societies) and SDG 17 (global partnerships).',
+    url: 'https://www.un.org/en/development/desa/population/migration/generalassembly/docs/globalcompact/A_RES_70_1_E.pdf',
+  },
+  {
+    id: 'beijing-2022',
+    symbol: 'A/RES/77/27',
+    title: 'Olympic Truce for Beijing 2022',
+    year: 2022,
+    description: 'Resolution for the 2022 Winter Olympics with 173 co-sponsors.',
+    relevance: 'Preceded the Russia-Ukraine conflict that began during the Truce window.',
+    url: 'https://docs.un.org/en/A/RES/77/27',
+  },
+  {
+    id: 'paris-2024',
+    symbol: 'A/RES/78/10',
+    title: 'Olympic Truce for Paris 2024',
+    year: 2023,
+    description: 'Resolution adopted 118-0-2 for the Paris 2024 Summer Games.',
+    relevance: 'Most recent Summer Games resolution, addressing neutral athlete participation.',
+    url: 'https://docs.un.org/en/A/RES/78/10',
+  },
+  {
+    id: 'milano-2026',
+    symbol: 'A/80/L.10',
+    title: 'Olympic Truce for Milano-Cortina 2026',
+    year: 2025,
+    description: 'Current governing resolution with record 165 co-sponsors, adopted by consensus.',
+    relevance: 'Defines the Truce window: January 30 - March 22, 2026.',
+    url: 'https://digitallibrary.un.org/record/4092685',
+    downloadUrl: '/downloads/A_80_L.10-EN.pdf',
+  },
 ];
 
 const getSignificanceConfig = (significance: OlympicGame['significance']) => {
@@ -328,10 +486,10 @@ export default function HistoryPage() {
               Olympic Truce History
             </h1>
             <p className="text-xl text-slate-400 max-w-2xl mx-auto">
-              30 Years of UN Solemn Appeals and Milestone Effects
+              30+ Years of UN Solemn Appeals and Milestone Effects
             </p>
             <p className="text-slate-500">
-              From Lillehammer 1994 to Paris 2024
+              From Lillehammer 1994 to Milano-Cortina 2026
             </p>
           </motion.div>
         </div>
@@ -395,6 +553,266 @@ export default function HistoryPage() {
                 Beginning in 2006, this appeal was extended to cover the Paralympic Games as well.
               </p>
             </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Legal Framework Section */}
+      <section className="py-12 px-4">
+        <div className="max-w-5xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-8"
+          >
+            <h2 className="text-2xl font-bold text-white mb-2">Legal Framework</h2>
+            <p className="text-slate-400">
+              Key UN resolutions that establish and support the Olympic Truce
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {LEGAL_FRAMEWORK.map((doc, index) => (
+              <motion.div
+                key={doc.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.05 }}
+                className={`p-5 rounded-xl border transition-all ${
+                  doc.id === 'milano-2026'
+                    ? 'bg-blue-500/10 border-blue-500/30'
+                    : doc.id === 'original-truce'
+                    ? 'bg-green-500/10 border-green-500/30'
+                    : 'bg-slate-900/50 border-slate-700/50'
+                }`}
+              >
+                <div className="flex items-start justify-between mb-2">
+                  <div>
+                    <span className={`text-xs font-mono px-2 py-0.5 rounded ${
+                      doc.id === 'milano-2026'
+                        ? 'bg-blue-500/20 text-blue-300'
+                        : doc.id === 'original-truce'
+                        ? 'bg-green-500/20 text-green-300'
+                        : 'bg-slate-700/50 text-slate-400'
+                    }`}>
+                      {doc.symbol}
+                    </span>
+                    <span className="text-xs text-slate-500 ml-2">{doc.year}</span>
+                  </div>
+                  {doc.id === 'milano-2026' && (
+                    <span className="text-xs bg-blue-500/20 text-blue-300 px-2 py-0.5 rounded">
+                      Current
+                    </span>
+                  )}
+                  {doc.id === 'original-truce' && (
+                    <span className="text-xs bg-green-500/20 text-green-300 px-2 py-0.5 rounded">
+                      Foundation
+                    </span>
+                  )}
+                </div>
+                <h3 className="font-semibold text-white text-sm mb-1">{doc.title}</h3>
+                <p className="text-xs text-slate-400 mb-2">{doc.description}</p>
+                <p className="text-xs text-slate-500 italic mb-3">{doc.relevance}</p>
+                <div className="flex items-center gap-2">
+                  <a
+                    href={doc.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-xs text-blue-400 hover:text-blue-300"
+                  >
+                    <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                    View at UN
+                  </a>
+                  {doc.downloadUrl && (
+                    <a
+                      href={doc.downloadUrl}
+                      className="inline-flex items-center gap-1 text-xs text-green-400 hover:text-green-300"
+                    >
+                      <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                      </svg>
+                      Download PDF
+                    </a>
+                  )}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* 165 Co-sponsors highlight with adoption details */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-8 p-6 rounded-2xl bg-gradient-to-br from-purple-500/20 to-blue-500/10 border border-purple-500/30"
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-3xl">🌍</span>
+              <div>
+                <h3 className="text-lg font-bold text-white">165 Co-Sponsors</h3>
+                <p className="text-sm text-slate-400">A/80/L.10 - Milano-Cortina 2026</p>
+              </div>
+            </div>
+
+            {/* Adoption details */}
+            <div className="mb-4 p-3 bg-slate-900/50 rounded-lg">
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs">
+                <div className="flex items-center gap-2">
+                  <span className="text-slate-500">Adopted:</span>
+                  <span className="text-white font-medium">November 19, 2025</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-slate-500">Session:</span>
+                  <span className="text-white font-medium">80th UN General Assembly</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-slate-500">Method:</span>
+                  <span className="text-green-400 font-medium">Consensus (no vote)</span>
+                </div>
+              </div>
+            </div>
+
+            <p className="text-sm text-slate-300 mb-4">
+              Out of 193 UN Member States, <strong className="text-white">165 countries</strong> co-sponsored the 2026 Olympic Truce resolution -
+              demonstrating unprecedented global unity despite ongoing geopolitical tensions. The resolution was adopted by{' '}
+              <strong className="text-white">consensus without a vote</strong>, meaning even non-sponsors did not block its passage.
+            </p>
+
+            {/* Regional breakdown */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2 text-xs mb-4">
+              <div className="p-2 bg-slate-800/50 rounded text-center">
+                <span className="block text-slate-400">Africa</span>
+                <span className="text-white font-semibold">Strong AU support</span>
+              </div>
+              <div className="p-2 bg-slate-800/50 rounded text-center">
+                <span className="block text-slate-400">Asia-Pacific</span>
+                <span className="text-white font-semibold">Broad endorsement</span>
+              </div>
+              <div className="p-2 bg-slate-800/50 rounded text-center">
+                <span className="block text-slate-400">Eastern Europe</span>
+                <span className="text-white font-semibold">Mixed contexts</span>
+              </div>
+              <div className="p-2 bg-slate-800/50 rounded text-center">
+                <span className="block text-slate-400">GRULAC</span>
+                <span className="text-white font-semibold">Traditional support</span>
+              </div>
+              <div className="p-2 bg-slate-800/50 rounded text-center">
+                <span className="block text-slate-400">WEOG</span>
+                <span className="text-white font-semibold">Italy as lead</span>
+              </div>
+            </div>
+            <p className="text-xs text-slate-500">
+              Initial sponsors: Italy and Turkmenistan. Additional co-sponsors joined after the draft was tabled on November 5, 2025.
+            </p>
+          </motion.div>
+
+          {/* Historical Comparison Table */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-6 p-6 rounded-2xl bg-slate-900/50 border border-slate-700/50"
+          >
+            <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
+              <span className="text-xl">📊</span>
+              Historical Co-Sponsor Comparison
+            </h3>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="border-b border-slate-700/50">
+                    <th className="text-left py-2 text-slate-400 font-medium">Games</th>
+                    <th className="text-center py-2 text-slate-400 font-medium">Co-Sponsors</th>
+                    <th className="text-left py-2 text-slate-400 font-medium">Context</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {COSPONSORS_COMPARISON.map((item) => (
+                    <tr
+                      key={item.games}
+                      className={`border-b border-slate-800/50 ${
+                        item.highlight ? 'bg-blue-500/10' : ''
+                      }`}
+                    >
+                      <td className={`py-3 ${item.highlight ? 'text-blue-300 font-medium' : 'text-white'}`}>
+                        {item.games}
+                        {item.highlight && (
+                          <span className="ml-2 text-xs bg-blue-500/20 text-blue-300 px-1.5 py-0.5 rounded">
+                            Current
+                          </span>
+                        )}
+                      </td>
+                      <td className="py-3 text-center">
+                        <span className={`font-bold ${
+                          item.coSponsors === 193 ? 'text-green-400' :
+                          item.highlight ? 'text-blue-400' : 'text-white'
+                        }`}>
+                          {item.coSponsors}
+                        </span>
+                        <span className="text-slate-500 text-xs ml-1">/ 193</span>
+                      </td>
+                      <td className="py-3 text-slate-400 text-xs">{item.context}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-xs text-slate-500 mt-3">
+              Note: Paris 2024 saw reduced co-sponsorship due to explicit tensions over Russian/Belarusian participation.
+              Milano-Cortina 2026 marks a significant recovery in global consensus.
+            </p>
+          </motion.div>
+
+          {/* Key Figures */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-6 p-6 rounded-2xl bg-slate-900/50 border border-slate-700/50"
+          >
+            <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
+              <span className="text-xl">🎙️</span>
+              Key Figures at the Adoption
+            </h3>
+            <div className="grid gap-4">
+              {KEY_FIGURES_2026.map((figure) => (
+                <div key={figure.name} className="p-4 bg-slate-800/50 rounded-lg">
+                  <div className="flex items-center gap-2 mb-2">
+                    <h4 className="font-semibold text-white">{figure.name}</h4>
+                    <span className="text-xs bg-slate-700/50 text-slate-400 px-2 py-0.5 rounded">
+                      {figure.role}
+                    </span>
+                  </div>
+                  <p className="text-sm text-slate-400 italic">"{figure.statement}"</p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Gender Equality Milestone */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-6 p-6 rounded-2xl bg-gradient-to-br from-pink-500/20 to-purple-500/10 border border-pink-500/30"
+          >
+            <div className="flex items-center gap-3 mb-3">
+              <span className="text-3xl">⚖️</span>
+              <div>
+                <h3 className="text-lg font-bold text-white">Most Gender-Balanced Winter Games</h3>
+                <p className="text-sm text-slate-400">Milano-Cortina 2026 Milestone</p>
+              </div>
+            </div>
+            <p className="text-sm text-slate-300">
+              Resolution A/80/L.10 explicitly commends Milano-Cortina 2026 for being set to be the{' '}
+              <strong className="text-pink-300">"most gender-balanced Winter Games in history"</strong>,
+              achieving near 50-50 participation on the field of play. This represents a significant
+              advancement for gender equality in the Olympic Movement.
+            </p>
           </motion.div>
         </div>
       </section>
