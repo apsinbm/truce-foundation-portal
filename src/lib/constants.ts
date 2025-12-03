@@ -75,6 +75,14 @@ export const SUB_SITES: SubSite[] = [
     href: '/methodology',
     status: 'live',
   },
+  {
+    id: 'humanitarian',
+    icon: '🚑',
+    title: 'Humanitarian Access',
+    description: 'Monitoring barriers to humanitarian aid delivery during Truce periods',
+    href: '/humanitarian',
+    status: 'live',
+  },
   // === HUMAN STORIES & COMMUNITY (emotional engagement) ===
   {
     id: 'stories',

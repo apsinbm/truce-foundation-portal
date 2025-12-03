@@ -42,7 +42,7 @@ export default function AboutPage() {
       {/* Content Sections */}
       <section className="py-12 px-4">
         <div className="max-w-4xl mx-auto space-y-16">
-          {/* History */}
+          {/* The Olympic Truce - from Hugh's essay */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -51,29 +51,75 @@ export default function AboutPage() {
           >
             <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
               <span className="text-3xl">🏛️</span>
-              The Olympic Truce Tradition
+              The Olympic Truce
             </h2>
             <div className="space-y-4 text-slate-300">
               <p>
-                The Olympic Truce, known as "ekecheiria" in ancient Greek, dates back to the 9th century BCE.
-                It was a sacred agreement that allowed athletes, artists, and spectators to travel safely
-                to and from the Olympic Games.
+                The Olympic Truce is the source and the highest principle of the Olympic Movement. It is the{' '}
+                <strong className="text-white">oldest, continuous international agreement in history</strong>,
+                dating from 776 BCE. The warring Greek city-states were in perpetual civil wars. Their leadership
+                sought reprieve and appealed to the Oracle at Delphi for assistance. The Oracle suggested a truce
+                among them all to precede and continue through a major cultural conclave of sport where athletes
+                would show their prowess in praise of Zeus.
               </p>
               <p>
-                In 1992, the International Olympic Committee revived this tradition by calling upon all
-                nations to observe the Olympic Truce during the modern Games. Since 1993, the United Nations
-                General Assembly has adopted a resolution before each Olympic Games, calling for a worldwide
-                ceasefire during the Olympic period.
+                All would be enabled <strong className="text-white">safe passage</strong> to the sacred grove at Olympia
+                (not itself part of any city state), safe participation there, and again safe passage back to their homelands.
+                The truce was not a ceasefire "per se", but rather a guarantee to enable all to pass freely and safely
+                among and through the city states to and from the Games, and to participate without fear of attack
+                or reprisal from enemies also in attendance.
+              </p>
+              <p>
+                The impetus of the Olympic Truce was to manage through civil wars. The convening of the games as a
+                near religious ritual called upon each person in their soul to abide by the sacred Truce which was
+                etched on a ceremonial discus housed in the Temple of Hera facing the gate to the field of play.
+                By convening from various directions to common ground, it enabled a practice of{' '}
+                <strong className="text-white">people-to-people interaction</strong> meant to surmount the tensions
+                of their respective regimes.
+              </p>
+              <p>
+                The Olympic Truce was all the corpus of international law for centuries until law was further
+                elaborated to encompass other areas. The United Nations subsequently formalized its status in the
+                modern era through a series of resolutions that have been the{' '}
+                <strong className="text-white">most supported UN agreements in history</strong>.
               </p>
               <p>
                 For Milano-Cortina 2026, the UN General Assembly adopted resolution{' '}
                 <a href="/downloads/A_80_L.10-EN.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">
                   A/80/L.10
                 </a>{' '}
-                on November 19, 2025 with a record <strong className="text-white">165 co-sponsors</strong> - the highest in Olympic Truce history -
-                demonstrating unprecedented global unity. The resolution was adopted by consensus and explicitly commends
-                the Games for being the <strong className="text-white">most gender-balanced Winter Games in history</strong>.
-                The Truce window runs from January 30 to March 22, 2026.
+                on November 19, 2025 with a record <strong className="text-white">165 co-sponsors</strong> - the highest
+                in Olympic Truce history. There will be one in late October 2027 for the LA28 Summer Games.
+                The Truce window for Milano-Cortina runs from January 30 to March 22, 2026.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Our Approach */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="glass-card p-8 sm:p-10"
+          >
+            <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+              <span className="text-3xl">🕊️</span>
+              Our Approach
+            </h2>
+            <div className="space-y-4 text-slate-300">
+              <p>
+                The Truce Foundation advocates the Olympic Truce in the modern era through recognition of
+                international figures and through monitoring compliance with UN resolutions. Mindful that
+                what the world today knows of the ancient Olympic Games comes principally through{' '}
+                <strong className="text-white">statuary and poetry</strong> of that era, the Truce Foundation
+                has made gifts of statuary at Olympic headquarters in Lausanne, Switzerland, and in
+                Colorado Springs, Colorado, USA. It makes gifts of original poetry to key figures in
+                the movement of peace through sport.
+              </p>
+              <p>
+                We believe that <strong className="text-white">what gets measured gets managed</strong>, and
+                what gets verified gets respected. The Truce Compliance Index represents the first systematic,
+                evidence-based mechanism for monitoring adherence to the Olympic Truce resolution.
               </p>
             </div>
           </motion.div>
@@ -92,8 +138,7 @@ export default function AboutPage() {
             <div className="space-y-4 text-slate-300">
               <p>
                 The Truce Foundation exists to transform the symbolic Olympic Truce into a meaningful
-                instrument for peace. We believe that what gets measured gets managed, and what gets
-                verified gets respected.
+                instrument for peace.
               </p>
               <p className="font-medium text-white">
                 Our core objectives:

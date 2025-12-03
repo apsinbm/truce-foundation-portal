@@ -79,6 +79,8 @@ const COMPLIANCE_CATEGORIES = [
 const DATA_SOURCES = [
   { name: 'ACLED', description: 'Armed Conflict Location & Event Data Project', url: 'https://acleddata.com' },
   { name: 'UCDP', description: 'Uppsala Conflict Data Program', url: 'https://ucdp.uu.se' },
+  { name: 'ACAPS', description: 'Humanitarian Access Overview (80+ countries)', url: 'https://www.acaps.org/en/thematics/all-topics/humanitarian-access' },
+  { name: 'Humanitarian Outcomes', description: 'CORE surveys on aid accessibility', url: 'https://humanitarianoutcomes.org/projects/core' },
   { name: 'UNHCR', description: 'UN Refugee Agency displacement data', url: 'https://www.unhcr.org' },
   { name: 'UN Documents', description: 'Official UN resolutions and reports', url: 'https://documents.un.org' },
   { name: 'Crisis Group', description: 'International Crisis Group analysis', url: 'https://www.crisisgroup.org' },
