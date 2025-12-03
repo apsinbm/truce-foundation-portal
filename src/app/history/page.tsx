@@ -273,40 +273,127 @@ const OLYMPIC_TRUCE_HISTORY: OlympicGame[] = [
   },
 ];
 
-// Historical co-sponsor comparison data
-interface TruceResolutionComparison {
+// Complete historical co-sponsor data from IOC (all resolutions since 1994)
+interface TruceResolutionData {
   games: string;
   year: number;
   coSponsors: number;
-  context: string;
+  totalMembers: number;
   highlight?: boolean;
 }
 
-const COSPONSORS_COMPARISON: TruceResolutionComparison[] = [
+const ALL_RESOLUTIONS_DATA: TruceResolutionData[] = [
+  { games: 'Milano Cortina 2026', year: 2026, coSponsors: 165, totalMembers: 193, highlight: true },
+  { games: 'Paris 2024', year: 2024, coSponsors: 77, totalMembers: 193 },
+  { games: 'Beijing 2022', year: 2022, coSponsors: 173, totalMembers: 193 },
+  { games: 'Tokyo 2020', year: 2020, coSponsors: 186, totalMembers: 193 },
+  { games: 'PyeongChang 2018', year: 2018, coSponsors: 157, totalMembers: 193 },
+  { games: 'Rio 2016', year: 2016, coSponsors: 180, totalMembers: 193 },
+  { games: 'Sochi 2014', year: 2014, coSponsors: 121, totalMembers: 193 },
+  { games: 'London 2012', year: 2012, coSponsors: 193, totalMembers: 193 },
+  { games: 'Vancouver 2010', year: 2010, coSponsors: 154, totalMembers: 193 },
+  { games: 'Beijing 2008', year: 2008, coSponsors: 183, totalMembers: 192 },
+  { games: 'Torino 2006', year: 2006, coSponsors: 190, totalMembers: 191 },
+  { games: 'Athens 2004', year: 2004, coSponsors: 190, totalMembers: 191 },
+  { games: 'Salt Lake City 2002', year: 2002, coSponsors: 172, totalMembers: 189 },
+  { games: 'Sydney 2000', year: 2000, coSponsors: 179, totalMembers: 188 },
+  { games: 'Nagano 1998', year: 1998, coSponsors: 177, totalMembers: 185 },
+  { games: 'Atlanta 1996', year: 1996, coSponsors: 161, totalMembers: 185 },
+  { games: 'Lillehammer 1994', year: 1994, coSponsors: 116, totalMembers: 184 },
+];
+
+// Key moments in Olympic Truce history from IOC
+interface KeyMoment {
+  year: number;
+  title: string;
+  description: string;
+  significance: 'milestone' | 'record' | 'diplomatic' | 'symbolic';
+}
+
+const KEY_MOMENTS: KeyMoment[] = [
   {
-    games: 'London 2012',
-    year: 2012,
-    coSponsors: 193,
-    context: 'Record - all member states co-sponsored',
+    year: 1992,
+    title: 'IOC Launches Olympic Truce Appeal',
+    description: 'The IOC launched an Appeal for the observance of the Olympic Truce and negotiated with the UN to facilitate participation of athletes from the former Republic of Yugoslavia in Barcelona.',
+    significance: 'milestone',
   },
   {
-    games: 'Beijing 2022',
-    year: 2022,
-    coSponsors: 173,
-    context: 'High support before Ukraine invasion',
+    year: 1993,
+    title: 'First UN Resolution Adopted',
+    description: 'The first resolution on the observance of the Olympic Truce was adopted by the 48th Session of the UN General Assembly, facilitating participation of athletes from former Yugoslavia in Lillehammer 1994.',
+    significance: 'milestone',
   },
   {
-    games: 'Milano-Cortina 2026',
-    year: 2026,
-    coSponsors: 165,
-    context: 'Consensus adoption despite global tensions',
-    highlight: true,
+    year: 1994,
+    title: 'International Year of Sport',
+    description: 'The year was proclaimed the International Year of Sport and the Olympic Ideal by the UN.',
+    significance: 'symbolic',
   },
   {
-    games: 'Paris 2024',
-    year: 2024,
-    coSponsors: 118,
-    context: 'Lower sponsorship amid Russia-Belarus tensions',
+    year: 1995,
+    title: 'IOC President Addresses UN',
+    description: 'The IOC President addressed the UN General Assembly for the first time in history.',
+    significance: 'diplomatic',
+  },
+  {
+    year: 1998,
+    title: 'Truce Influences Iraq Mediation',
+    description: 'The Olympic Truce was taken into consideration during the Nagano Winter Games and contributed to setting up a UN Secretary General mediation mission, leading to a memorandum of understanding with Iraq.',
+    significance: 'diplomatic',
+  },
+  {
+    year: 1999,
+    title: 'Record 180 Co-Sponsors',
+    description: 'A record number of 180 Member States co-sponsored the resolution ahead of the Sydney 2000 Olympic Games.',
+    significance: 'record',
+  },
+  {
+    year: 2000,
+    title: 'Millennium Declaration & Korean Unity',
+    description: 'The UN Millennium Summit adopted a declaration including Olympic Truce observance. At Sydney 2000, South and North Korean delegations paraded together under the flag of the Korean peninsula.',
+    significance: 'symbolic',
+  },
+  {
+    year: 2004,
+    title: '300+ Personalities Sign Truce Appeal',
+    description: 'More than 300 personalities from around the world signed a Truce Appeal. Many also signed a Truce Wall created by the Greek Government during Athens 2004.',
+    significance: 'symbolic',
+  },
+  {
+    year: 2007,
+    title: 'Beijing 2008 Resolution Adopted',
+    description: 'The 62nd session of the UN General Assembly adopted the resolution on the Olympic Truce in preparation for the 2008 Olympic Games in Beijing.',
+    significance: 'milestone',
+  },
+  {
+    year: 2008,
+    title: 'UN Secretary General\'s Beijing Message',
+    description: 'During the Opening Ceremony of the Olympic Games in Beijing, the international community, particularly the United Nations, reiterated the importance of the Games and the value of sport to promote development and peace worldwide.',
+    significance: 'diplomatic',
+  },
+  {
+    year: 2018,
+    title: 'Unified Korean Team at PyeongChang',
+    description: 'Teams from DPRK and Republic of Korea marched side by side at the Opening Ceremony; women\'s ice hockey players competed together as a unified team.',
+    significance: 'diplomatic',
+  },
+  {
+    year: 2019,
+    title: 'Tokyo 2020 Resolution (186 co-sponsors)',
+    description: 'The Tokyo 2020 Olympic Truce resolution was adopted with 186 co-sponsors, later reiterated in 2020 due to COVID-19 postponement.',
+    significance: 'record',
+  },
+  {
+    year: 2021,
+    title: 'Beijing 2022 Resolution by Consensus',
+    description: 'The Beijing 2022 Olympic Truce resolution was adopted by consensus with 173 Member States co-sponsoring it.',
+    significance: 'milestone',
+  },
+  {
+    year: 2023,
+    title: 'Paris 2024 Resolution Adopted',
+    description: 'The Paris 2024 Olympic Truce resolution was co-sponsored by 77 member countries and adopted with 118 votes in favour and two abstentions.',
+    significance: 'milestone',
   },
 ];
 
@@ -710,7 +797,91 @@ export default function HistoryPage() {
             </p>
           </motion.div>
 
-          {/* Historical Comparison Table */}
+          {/* Complete Resolutions Table - All Games */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-6 p-6 rounded-2xl bg-slate-900/50 border border-slate-700/50"
+          >
+            <h3 className="text-lg font-bold text-white mb-2 flex items-center gap-2">
+              <span className="text-xl">📊</span>
+              Complete Resolution Co-Sponsor History
+            </h3>
+            <p className="text-xs text-slate-400 mb-4">
+              All Olympic Truce resolutions have been adopted by consensus. Member States show support by co-sponsoring.
+            </p>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="border-b border-slate-700/50">
+                    <th className="text-left py-2 text-slate-400 font-medium">Edition</th>
+                    <th className="text-center py-2 text-slate-400 font-medium">Co-Sponsors</th>
+                    <th className="text-center py-2 text-slate-400 font-medium">Total Members</th>
+                    <th className="text-center py-2 text-slate-400 font-medium">%</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {ALL_RESOLUTIONS_DATA.map((item) => {
+                    const percentage = Math.round((item.coSponsors / item.totalMembers) * 100);
+                    const isRecord = item.coSponsors === item.totalMembers;
+                    return (
+                      <tr
+                        key={item.games}
+                        className={`border-b border-slate-800/50 ${
+                          item.highlight ? 'bg-blue-500/10' : ''
+                        }`}
+                      >
+                        <td className={`py-2 ${item.highlight ? 'text-blue-300 font-medium' : 'text-white'}`}>
+                          {item.games}
+                          {item.highlight && (
+                            <span className="ml-2 text-xs bg-blue-500/20 text-blue-300 px-1.5 py-0.5 rounded">
+                              Current
+                            </span>
+                          )}
+                          {isRecord && (
+                            <span className="ml-2 text-xs bg-green-500/20 text-green-300 px-1.5 py-0.5 rounded">
+                              100%
+                            </span>
+                          )}
+                        </td>
+                        <td className="py-2 text-center">
+                          <span className={`font-bold ${
+                            isRecord ? 'text-green-400' :
+                            item.highlight ? 'text-blue-400' : 'text-white'
+                          }`}>
+                            {item.coSponsors}
+                          </span>
+                        </td>
+                        <td className="py-2 text-center text-slate-400">{item.totalMembers}</td>
+                        <td className="py-2 text-center">
+                          <div className="flex items-center justify-center gap-2">
+                            <div className="w-16 h-2 bg-slate-700 rounded-full overflow-hidden">
+                              <div
+                                className={`h-full rounded-full ${
+                                  isRecord ? 'bg-green-500' :
+                                  percentage >= 90 ? 'bg-blue-500' :
+                                  percentage >= 70 ? 'bg-amber-500' : 'bg-red-500'
+                                }`}
+                                style={{ width: `${percentage}%` }}
+                              />
+                            </div>
+                            <span className="text-xs text-slate-400">{percentage}%</span>
+                          </div>
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-xs text-slate-500 mt-3">
+              <strong>London 2012</strong> achieved 100% co-sponsorship (all 193 member states).{' '}
+              <strong>Paris 2024</strong> saw the lowest recent support (77 co-sponsors) due to Russia-Belarus tensions.
+            </p>
+          </motion.div>
+
+          {/* Key Moments Timeline */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -718,52 +889,43 @@ export default function HistoryPage() {
             className="mt-6 p-6 rounded-2xl bg-slate-900/50 border border-slate-700/50"
           >
             <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
-              <span className="text-xl">📊</span>
-              Historical Co-Sponsor Comparison
+              <span className="text-xl">🏛️</span>
+              Key Moments in Olympic Truce History
             </h3>
-            <div className="overflow-x-auto">
-              <table className="w-full text-sm">
-                <thead>
-                  <tr className="border-b border-slate-700/50">
-                    <th className="text-left py-2 text-slate-400 font-medium">Games</th>
-                    <th className="text-center py-2 text-slate-400 font-medium">Co-Sponsors</th>
-                    <th className="text-left py-2 text-slate-400 font-medium">Context</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {COSPONSORS_COMPARISON.map((item) => (
-                    <tr
-                      key={item.games}
-                      className={`border-b border-slate-800/50 ${
-                        item.highlight ? 'bg-blue-500/10' : ''
-                      }`}
-                    >
-                      <td className={`py-3 ${item.highlight ? 'text-blue-300 font-medium' : 'text-white'}`}>
-                        {item.games}
-                        {item.highlight && (
-                          <span className="ml-2 text-xs bg-blue-500/20 text-blue-300 px-1.5 py-0.5 rounded">
-                            Current
-                          </span>
-                        )}
-                      </td>
-                      <td className="py-3 text-center">
-                        <span className={`font-bold ${
-                          item.coSponsors === 193 ? 'text-green-400' :
-                          item.highlight ? 'text-blue-400' : 'text-white'
-                        }`}>
-                          {item.coSponsors}
-                        </span>
-                        <span className="text-slate-500 text-xs ml-1">/ 193</span>
-                      </td>
-                      <td className="py-3 text-slate-400 text-xs">{item.context}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+            <div className="space-y-4">
+              {KEY_MOMENTS.map((moment, index) => {
+                const sigConfig = {
+                  milestone: { bg: 'bg-blue-500/10', border: 'border-blue-500/30', icon: '📌', color: 'text-blue-300' },
+                  record: { bg: 'bg-green-500/10', border: 'border-green-500/30', icon: '🏆', color: 'text-green-300' },
+                  diplomatic: { bg: 'bg-purple-500/10', border: 'border-purple-500/30', icon: '🕊️', color: 'text-purple-300' },
+                  symbolic: { bg: 'bg-amber-500/10', border: 'border-amber-500/30', icon: '✨', color: 'text-amber-300' },
+                }[moment.significance];
+
+                return (
+                  <motion.div
+                    key={moment.year}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.03 }}
+                    className={`p-4 rounded-lg ${sigConfig.bg} border ${sigConfig.border}`}
+                  >
+                    <div className="flex items-start gap-3">
+                      <span className="text-2xl">{sigConfig.icon}</span>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 mb-1">
+                          <span className={`font-bold ${sigConfig.color}`}>{moment.year}</span>
+                          <h4 className="font-semibold text-white">{moment.title}</h4>
+                        </div>
+                        <p className="text-sm text-slate-300">{moment.description}</p>
+                      </div>
+                    </div>
+                  </motion.div>
+                );
+              })}
             </div>
-            <p className="text-xs text-slate-500 mt-3">
-              Note: Paris 2024 saw reduced co-sponsorship due to explicit tensions over Russian/Belarusian participation.
-              Milano-Cortina 2026 marks a significant recovery in global consensus.
+            <p className="text-xs text-slate-500 mt-4 text-center">
+              Source: <a href="https://www.olympics.com/ioc/olympic-truce/resolutions" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">IOC Olympic Truce Resolutions</a>
             </p>
           </motion.div>
 

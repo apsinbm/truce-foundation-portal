@@ -137,6 +137,14 @@ export const SUB_SITES: SubSite[] = [
     href: '/briefing-sheet',
     status: 'live',
   },
+  {
+    id: 'documents',
+    icon: '📚',
+    title: 'UN Documents Archive',
+    description: 'Complete collection of UN resolutions and IOC documents on Olympic Truce',
+    href: '/documents',
+    status: 'live',
+  },
 ];
 
 // Calculate days until truce window
