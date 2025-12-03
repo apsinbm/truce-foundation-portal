@@ -859,6 +859,135 @@ export default function AccountabilityPage() {
         </div>
       </section>
 
+      {/* Visual Timeline */}
+      <section className="py-12 px-4">
+        <div className="max-w-5xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-2xl font-bold text-white mb-2 text-center">Timeline of Truce Compliance</h2>
+            <p className="text-slate-400 mb-8 text-center">30+ years of Olympic Truce history at a glance</p>
+
+            {/* Timeline Chart */}
+            <div className="p-6 rounded-2xl bg-slate-900/50 border border-slate-700/50">
+              <div className="overflow-x-auto">
+                <div className="min-w-[800px]">
+                  {/* Year labels */}
+                  <div className="flex justify-between mb-2 px-2">
+                    {[1992, 1996, 2000, 2004, 2008, 2012, 2016, 2020, 2024].map(year => (
+                      <span key={year} className="text-xs text-slate-500">{year}</span>
+                    ))}
+                  </div>
+
+                  {/* Timeline bar */}
+                  <div className="relative h-16 bg-slate-800/50 rounded-lg mb-4">
+                    {/* Grid lines */}
+                    <div className="absolute inset-0 flex justify-between">
+                      {[...Array(9)].map((_, i) => (
+                        <div key={i} className="w-px h-full bg-slate-700/50" />
+                      ))}
+                    </div>
+
+                    {/* Events */}
+                    {TRUCE_PERIODS.slice().reverse().map((period) => {
+                      // Calculate position (1992-2024 = 32 years range)
+                      const yearOffset = period.year - 1992;
+                      const position = (yearOffset / 32) * 100;
+
+                      return (
+                        <div
+                          key={period.id}
+                          className="absolute top-1/2 -translate-y-1/2 group cursor-pointer"
+                          style={{ left: `${position}%` }}
+                        >
+                          <div
+                            className={`w-4 h-4 rounded-full border-2 ${
+                              period.status === 'observed'
+                                ? 'bg-green-500 border-green-300'
+                                : period.status === 'violated'
+                                ? 'bg-red-500 border-red-300'
+                                : 'bg-amber-500 border-amber-300'
+                            } transition-transform group-hover:scale-150`}
+                          />
+                          {/* Tooltip */}
+                          <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10">
+                            <div className="px-3 py-2 bg-slate-800 border border-slate-700 rounded-lg shadow-xl whitespace-nowrap">
+                              <p className="text-xs font-bold text-white">{period.games}</p>
+                              <p className={`text-xs ${
+                                period.status === 'observed' ? 'text-green-400' :
+                                period.status === 'violated' ? 'text-red-400' : 'text-amber-400'
+                              }`}>
+                                {period.status === 'observed' ? 'Truce Observed' :
+                                 period.status === 'violated' ? `${period.violations.length} violation${period.violations.length !== 1 ? 's' : ''}` :
+                                 'Mixed'}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+
+                  {/* Legend */}
+                  <div className="flex justify-center gap-6">
+                    <div className="flex items-center gap-2">
+                      <div className="w-3 h-3 rounded-full bg-green-500" />
+                      <span className="text-xs text-slate-400">Observed</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-3 h-3 rounded-full bg-red-500" />
+                      <span className="text-xs text-slate-400">Violated</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-3 h-3 rounded-full bg-amber-500" />
+                      <span className="text-xs text-slate-400">Mixed</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Violations by Year Chart */}
+            <div className="mt-8 p-6 rounded-2xl bg-slate-900/50 border border-slate-700/50">
+              <h3 className="text-lg font-bold text-white mb-4">Violations per Truce Period</h3>
+              <div className="space-y-3">
+                {TRUCE_PERIODS.slice().reverse().map((period) => {
+                  const maxViolations = Math.max(...TRUCE_PERIODS.map(p => p.violations.length));
+                  const width = maxViolations > 0 ? (period.violations.length / maxViolations) * 100 : 0;
+
+                  return (
+                    <div key={period.id} className="flex items-center gap-3">
+                      <span className="text-xs text-slate-500 w-24 text-right truncate">
+                        {period.games.replace(/\d{4}/, '').trim()} '{period.year.toString().slice(-2)}
+                      </span>
+                      <div className="flex-1 h-6 bg-slate-800/50 rounded overflow-hidden">
+                        <motion.div
+                          initial={{ width: 0 }}
+                          whileInView={{ width: `${width}%` }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.5, ease: 'easeOut' }}
+                          className={`h-full ${
+                            period.violations.length === 0 ? 'bg-green-500/50' :
+                            period.violations.length <= 2 ? 'bg-orange-500/50' : 'bg-red-500/50'
+                          }`}
+                        />
+                      </div>
+                      <span className={`text-xs w-6 ${
+                        period.violations.length === 0 ? 'text-green-400' : 'text-red-400'
+                      }`}>
+                        {period.violations.length}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Repeat Offenders Analysis */}
       {REPEAT_OFFENDERS.length > 0 && (
         <section className="py-12 px-4 bg-slate-900/30">
@@ -882,22 +1011,33 @@ export default function AccountabilityPage() {
                     className="p-5 rounded-xl bg-red-500/10 border border-red-500/30"
                   >
                     <div className="flex items-center justify-between mb-3">
-                      <div className="flex items-center gap-3">
+                      <Link
+                        href={`/accountability/country/${offender.countryIso3.toLowerCase()}`}
+                        className="flex items-center gap-3 group"
+                      >
                         <div className="w-10 h-10 rounded-lg bg-red-500/20 flex items-center justify-center">
                           <span className="text-xl font-bold text-red-400">{offender.violationCount}</span>
                         </div>
                         <div>
-                          <h3 className="font-bold text-white">{offender.country}</h3>
+                          <h3 className="font-bold text-white group-hover:text-red-300 transition-colors">{offender.country}</h3>
                         </div>
+                      </Link>
+                      <div className="flex items-center gap-2">
+                        <Link
+                          href={`/accountability/country/${offender.countryIso3.toLowerCase()}`}
+                          className="px-3 py-1.5 text-xs bg-red-500/20 hover:bg-red-500/30 text-red-300 rounded-lg transition-colors"
+                        >
+                          View Profile
+                        </Link>
+                        <a
+                          href={`${TRUCE_INDEX_URL}/?country=${offender.countryIso3}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="px-3 py-1.5 text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg transition-colors"
+                        >
+                          Live Data
+                        </a>
                       </div>
-                      <a
-                        href={`${TRUCE_INDEX_URL}/?country=${offender.countryIso3}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="px-3 py-1.5 text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg transition-colors"
-                      >
-                        View Current Data
-                      </a>
                     </div>
                     <div className="flex flex-wrap gap-2">
                       {offender.gamesViolated.map((game) => (
