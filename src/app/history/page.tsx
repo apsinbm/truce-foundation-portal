@@ -337,16 +337,52 @@ const KEY_MOMENTS: KeyMoment[] = [
     significance: 'milestone',
   },
   {
+    year: -312,
+    title: 'Macedonian Treasury Looting',
+    description: 'Macedonian general Telesphorus invades Elis and loots the treasury of the sanctuary to pay his mercenaries - a direct violation of the territory\'s sacred inviolability.',
+    significance: 'milestone',
+  },
+  {
+    year: -80,
+    title: 'Sulla Sacks Olympia',
+    description: 'Roman general Sulla sacks the sanctuary and transfers the 175th Olympiad to Rome, treating the Truce as a quaint relic irrelevant to Roman power.',
+    significance: 'milestone',
+  },
+  {
     year: 393,
     title: 'Ancient Olympics Abolished',
-    description: 'Emperor Theodosius I bans pagan religious festivals including the Olympic Games. After over 1,100 years, the ekecheiria tradition ends. The concept falls into obscurity until the 19th century.',
+    description: 'Emperor Theodosius I issues edicts banning all pagan festivals and cults, stripping the Games of legal status and funding. After over 1,100 years, the ekecheiria tradition ends.',
+    significance: 'milestone',
+  },
+  {
+    year: 426,
+    title: 'Temples Destroyed',
+    description: 'Theodosius II orders the destruction of pagan temples. The great Statue of Zeus (one of the Seven Wonders) is removed and the sanctuary is burned. Earthquakes in 522 and 551 AD will complete the destruction.',
     significance: 'milestone',
   },
   // Gap Period & Revival
   {
+    year: 989,
+    title: 'Peace of God (Pax Dei)',
+    description: 'Council of Charroux proclaims the Peace of God, granting immunity to non-combatants (clergy, peasants, poor). Like the ekecheiria\'s safe passage, it relied on spiritual enforcement (excommunication vs. divine pollution).',
+    significance: 'symbolic',
+  },
+  {
+    year: 1027,
+    title: 'Truce of God (Treuga Dei)',
+    description: 'Council of Toulouges establishes the Truce of God - a temporal suspension of violence banning fighting from Wednesday evening to Monday morning, and during Advent and Lent. The medieval echo of sacred peace times.',
+    significance: 'symbolic',
+  },
+  {
     year: 1612,
     title: 'Cotswold Olympicks',
     description: 'Robert Dover organizes the "Cotswold Olympicks" in England - early rural games inspired by antiquity, though without international dimension or warfare to pause.',
+    significance: 'symbolic',
+  },
+  {
+    year: 1796,
+    title: 'Olympiade de la République',
+    description: 'Revolutionary France revives athletic contests (1796-1798) and even the metric system, but ignores the Truce - the Republic was actively at war with monarchist Europe and had no interest in suspending hostilities for sport.',
     significance: 'symbolic',
   },
   {
@@ -357,8 +393,8 @@ const KEY_MOMENTS: KeyMoment[] = [
   },
   {
     year: 1894,
-    title: 'Modern Olympics Founded',
-    description: 'Baron Pierre de Coubertin founds the IOC, believing sports could promote peace. His 1892 speech: "the cause of peace will have received a new and strong ally." The ancient truce is not formally revived but its spirit lives on.',
+    title: 'Modern Olympics Founded (Without Truce)',
+    description: 'Coubertin founds the IOC but deliberately omits the Truce from the founding constitution. In the hyper-nationalistic climate, demanding nations surrender their right to wage war for sport would seem "utopian lunacy." This omission meant no protection from war - leading to cancelled 1916, 1940, 1944 Games.',
     significance: 'milestone',
   },
   {
@@ -370,7 +406,7 @@ const KEY_MOMENTS: KeyMoment[] = [
   {
     year: 1992,
     title: 'Modern Olympic Truce Revived at Barcelona',
-    description: 'IOC President Juan Antonio Samaranch makes the first public appeal for Olympic Truce. UN Secretary-General Boutros Boutros-Ghali sends letter calling for "a truce in the former Yugoslavia, which would be the Olympic Truce of classical tradition." IOC flies plane into besieged Sarajevo to evacuate athletes.',
+    description: 'IOC President Samaranch appeals for Olympic Truce. UN Security Council Resolution 757 imposed sanctions on Yugoslavia. Kéba Mbaye (IOC member, former ICJ judge) drafted legal language allowing Yugoslav athletes to compete as "Independent Olympic Participants" - proving the IOC could negotiate directly with the UN, setting the stage for a formal truce mechanism.',
     significance: 'milestone',
   },
   {
@@ -394,7 +430,7 @@ const KEY_MOMENTS: KeyMoment[] = [
   {
     year: 1998,
     title: 'Kofi Annan\'s Iraq Diplomacy (Nagano)',
-    description: 'During the Nagano Games, tensions with Iraq over UNSCOM inspections reach crisis point. UN Secretary-General Kofi Annan flies to Baghdad in the final days, striking a deal with Saddam Hussein on Feb 23, 1998 - averting immediate war. The Olympic Truce appeal provided moral context for the diplomatic opening.',
+    description: 'The most significant operational use of the modern Truce. During escalating US-Iraq tensions over UNSCOM inspections, Annan used the Olympic Truce window (Resolution 52/21) to justify a diplomatic mission. On Feb 20-23, he met with Tariq Aziz and Saddam Hussein, negotiating a "Memorandum of Understanding" that averted imminent airstrikes.',
     significance: 'diplomatic',
   },
   {
@@ -406,7 +442,7 @@ const KEY_MOMENTS: KeyMoment[] = [
   {
     year: 2000,
     title: 'IOTC Founded & Korean Unity',
-    description: 'The International Olympic Truce Centre is founded by the IOC. The UN Millennium Summit adopts a declaration including Olympic Truce. At Sydney 2000, North and South Korean delegations parade together under the flag of the Korean peninsula.',
+    description: 'The International Olympic Truce Centre is established by IOC and Greek Government (July 2000). Founding board: Samaranch, George Papandreou, Kéba Mbaye (who drafted statutes), Henry Kissinger, Kofi Annan. At Sydney 2000, North and South Korea parade together under unified flag for the first time.',
     significance: 'milestone',
   },
   {
@@ -423,8 +459,8 @@ const KEY_MOMENTS: KeyMoment[] = [
   },
   {
     year: 2004,
-    title: '300+ Personalities Sign Truce Appeal',
-    description: 'More than 300 personalities from around the world signed a Truce Appeal. Many also signed a Truce Wall created by the Greek Government during Athens 2004.',
+    title: 'Athens Truce Wall Inaugurated',
+    description: 'The "Truce Wall" is inaugurated at Athens 2004 - signed by dignitaries including George W. Bush and Tony Blair. Over 300 personalities from around the world signed the Truce Appeal. Games returned to the birthplace of Olympics and ancient Truce.',
     significance: 'symbolic',
   },
   {
@@ -752,18 +788,17 @@ export default function HistoryPage() {
               </h3>
               <div className="space-y-3 text-sm text-slate-300">
                 <p>
-                  <strong className="text-green-300">Spondophoroi</strong> ("truce-bearers") - heralds crowned with olive branches -
-                  traveled across Greece announcing the sacred truce and the Games' schedule.
+                  <strong className="text-green-300">Spondophoroi</strong> ("truce-bearers") - noble heralds crowned with olive, carrying the <em>kerykeion</em> (herald's staff) -
+                  traveled three distinct circuits: <strong>Northern</strong> (Athens, Thebes, Macedonia, Black Sea), <strong>Eastern</strong> (Aegean, Ionia, Egypt), and <strong>Western</strong> (Sicily, Italy, Gaul). The announcement (<em>epangelia</em>) was a diplomatic test - refusing the heralds excluded a city from the Greek community.
                 </p>
                 <p>
-                  The truce evolved from <strong className="text-green-300">one month to three months</strong> as participation expanded
-                  geographically - allowing athletes from distant Greek colonies time to travel safely.
+                  Duration evolved: <strong className="text-green-300">one month</strong> (Archaic, <em>hieromenia</em>) → <strong className="text-green-300">three months</strong> (Classical - one for travel, one for Games, one for return) → potentially <strong className="text-green-300">ten months</strong> in Hellenistic period for distant colonies.
                 </p>
                 <ul className="list-disc list-inside text-xs text-slate-400 space-y-1">
-                  <li>Armed conflict forbidden between participating city-states</li>
-                  <li>Elis declared neutral ground, immune from attack</li>
-                  <li>Safe passage for athletes, trainers, and pilgrims</li>
-                  <li>Death penalties suspended during the truce period</li>
+                  <li>Elis declared <em>asylos</em> (sacred and inviolable) - a "mobile sanctuary" around pilgrims</li>
+                  <li>Armed forces forbidden from entering the <em>Altis</em> (sanctuary)</li>
+                  <li>All legal disputes and executions suspended during the truce</li>
+                  <li>Wars between states could continue - only Olympia and travelers were protected</li>
                 </ul>
               </div>
             </motion.div>
@@ -805,18 +840,22 @@ export default function HistoryPage() {
             </h3>
             <div className="grid md:grid-cols-2 gap-4 text-sm text-slate-300">
               <div>
-                <h4 className="font-medium text-white mb-2">Enforcement</h4>
+                <h4 className="font-medium text-white mb-2">Enforcement: The <em>Hellanodikai</em></h4>
                 <p className="mb-2">
-                  Violators faced <strong className="text-red-300">exclusion from the Games</strong> and heavy fines
-                  dedicated to Zeus. There was no "Olympic army" - enforcement relied on collective respect for the gods
-                  and social pressure among Greek peers.
+                  The <strong className="text-red-300">Hellanodikai</strong> (Elean judges) acted as the supreme court of the Games.
+                  Enforcement relied on religious fear and social pressure - no "Olympic army" existed. Violators faced <strong className="text-red-300">exclusion</strong>, heavy fines
+                  dedicated to Zeus, and the threat of excommunication from the Panhellenic community.
+                </p>
+                <p className="text-xs text-slate-400 mt-2">
+                  The "Host State Rule" held that the Truce was active the moment proclaimed in Elis - all participants bound from that date.
                 </p>
               </div>
               <div>
                 <h4 className="font-medium text-white mb-2">The Spartan Precedent (420 BC)</h4>
                 <p>
-                  Sparta attacked Lepreum during the truce. Elis fined them <strong className="text-red-300">2,000 minae</strong> (over 30 talents of silver)
-                  and banned all Spartan athletes. When Lichas entered his chariot under another state's name, he was publicly flogged upon victory.
+                  Sparta deployed 1,000 hoplites to Lepreum after proclamation. Their legalistic defense (not yet announced <em>in Sparta</em>) was rejected.
+                  Elis fined them <strong className="text-red-300">2,000 minae</strong> (2 minae per soldier - cost of a trireme fleet).
+                  When Lichas entered his chariot under Thebes's flag and won, he was <strong className="text-red-300">publicly flogged</strong> in the stadium - demonstrating the supra-national authority of Olympic officials.
                 </p>
               </div>
             </div>

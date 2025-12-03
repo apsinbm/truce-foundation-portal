@@ -409,17 +409,33 @@ const ANCIENT_SOURCES: AncientSource[] = [
     author: 'Pausanias',
     title: 'Description of Greece',
     date: '2nd century AD',
-    description: 'Greek traveler\'s account of Olympia, including the origins of the ekecheiria and the bronze Discus of Iphitos.',
-    passages: ['Book 5.4 (Origin myth)', 'Book 5.10 (Statue of Ekecheiria)', 'Book 5.20 (Bronze discus)'],
+    description: 'Greek traveler\'s account of Olympia, including the origins of the ekecheiria and the bronze Discus of Iphitos. Notes the discus inscription "is not written in a straight line, but the letters run in a circle round the quoit" - archaic style suggesting 8th c. BC origin.',
+    passages: ['Book 5.4 (Origin myth)', 'Book 5.10 (Statue of Ekecheiria)', 'Book 5.20.1 (Bronze discus circular inscription)'],
     url: 'http://www.perseus.tufts.edu/hopper/text?doc=Paus.+5.4',
   },
   {
     author: 'Thucydides',
     title: 'History of the Peloponnesian War',
     date: '5th century BC',
-    description: 'Primary source on the 420 BC Spartan violation - the most famously documented truce breach.',
+    description: 'Primary source on the 420 BC Spartan violation - the most famously documented truce breach. Documents the legal battle, the "Host State Rule," and the 2,000 minae fine.',
     passages: ['Book 5.49-5.50 (Sparta banned, Lichas flogged)'],
     url: 'http://www.perseus.tufts.edu/hopper/text?doc=Thuc.+5.49',
+  },
+  {
+    author: 'Xenophon',
+    title: 'Hellenica',
+    date: '4th century BC',
+    description: 'Vivid eyewitness-style account of the 364 BC battle in the Altis - archers firing from temple roofs while athletes watched, thinking it was a performance before realizing actual warfare had erupted in the sanctuary.',
+    passages: ['Book 7.4 (Battle in the sanctuary)'],
+    url: 'http://www.perseus.tufts.edu/hopper/text?doc=Xen.+Hell.+7.4',
+  },
+  {
+    author: 'Phlegon of Tralles',
+    title: 'Olympiad Lists (Fragments)',
+    date: '2nd century AD',
+    description: 'Greek freedman of Hadrian who compiled Olympic victor lists and historical chronologies. His fragments support the Delphic mandate to "restore unanimity" through the Games.',
+    passages: ['Fragments on Olympic chronology'],
+    url: 'https://www.theoi.com/Text/Pausanias5B.html',
   },
   {
     author: 'Isocrates',
@@ -443,7 +459,7 @@ const ANCIENT_SOURCES: AncientSource[] = [
     date: '1st-2nd century AD',
     description: 'References Lycurgus\'s connection to Iphitos and the establishment of the Olympic Truce.',
     passages: ['Section 1.1'],
-    url: 'http://www.perseus.tufts.edu/hopper/text?doc=Plut.+Lyc.+1',
+    url: 'https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Plutarch/Lives/Lycurgus*.html',
   },
 ];
 
@@ -467,6 +483,21 @@ const SCHOLARLY_SOURCES: ScholarlySource[] = [
     url: 'https://ioa.org.gr/en/publications/',
   },
   {
+    author: 'Müller, Norbert',
+    title: 'Pierre de Coubertin: Olympism - Selected Writings',
+    publication: 'IOC',
+    year: 2000,
+    description: 'Preeminent scholar on Coubertin\'s writings and the early philosophy of Olympism. Key for understanding why Coubertin omitted the Truce in 1894.',
+    url: 'https://www.coubertin.org/wp-content/uploads/2018/04/Pierre-de-Coubertin-and-the-Future.pdf',
+  },
+  {
+    author: 'Clastres, Patrick',
+    title: 'Olympic Neutrality and Sports Diplomacy',
+    publication: 'Sciences Po',
+    year: 2018,
+    description: 'Historian focused on Olympic neutrality, IOC diplomacy, and the political dimensions of the Games.',
+  },
+  {
     author: 'Christesen, Paul',
     title: 'Olympic Victor Lists and Ancient Greek History (Ch. 7)',
     publication: 'Cambridge University Press',
@@ -481,6 +512,30 @@ const SCHOLARLY_SOURCES: ScholarlySource[] = [
     year: 2022,
     description: 'Legal analysis of the Olympic Truce\'s status in international law - soft law vs. binding.',
     url: 'https://www.ejiltalk.org/the-olympic-truce-tradition-or-international-law/',
+  },
+  {
+    author: 'Chernykh & Grear',
+    title: 'Opinio Juris and Customary International Law',
+    publication: 'ResearchGate',
+    year: 2015,
+    description: 'Argument that consistent repetition of Truce resolutions (by consensus of 193 nations every 2 years) may be creating customary international law via opinio juris.',
+    url: 'https://www.researchgate.net/publication/275458912_The_Function_of_Opinio_Juris_in_Customary_International_Law',
+  },
+  {
+    author: 'Abrams, Harvey',
+    title: 'The Olympic Truce - Myth and Reality',
+    publication: 'Sport Library',
+    year: 2008,
+    description: 'Olympic historian\'s examination of the gap between Truce ideals and actual enforcement.',
+    url: 'https://sportlibrary.org/article/the-olympic-truce-myth-and-reality/',
+  },
+  {
+    author: 'Gardiner, E. Norman',
+    title: 'Greek Athletic Sports and Festivals',
+    publication: 'Macmillan (Project Gutenberg)',
+    year: 1910,
+    description: 'Classic scholarly work on ancient Greek athletics, including detailed analysis of the ekecheiria.',
+    url: 'https://www.gutenberg.org/files/59952/59952-h/59952-h.htm',
   },
   {
     author: 'Young, David C.',
@@ -830,23 +885,34 @@ export default function DocumentsPage() {
           <div className="p-6 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700">
             <h3 className="text-lg font-bold text-white mb-3 flex items-center gap-2">
               <span>⚖️</span>
-              Legal Status: Soft Law
+              Legal Status: Soft Law → Lex Olympica
             </h3>
             <div className="space-y-3 text-sm text-slate-300">
               <p>
                 The Olympic Truce as embodied in UN resolutions is <strong className="text-amber-300">not legally binding</strong> under international law.
                 UN General Assembly resolutions are "recommendations" - they create no obligations the way a treaty or Security Council Chapter VII resolution would.
-              </p>
-              <p>
                 The resolutions use language like "urges," "calls upon," and "requests" rather than "decides" or "demands."
-                They rely on voluntary compliance and peer pressure. As international law scholar <strong>Bruno Simma</strong> notes,
-                GA resolutions "cannot by themselves create legal obligations."
               </p>
               <p>
-                While frequent violations (2008, 2014, 2022) demonstrate the truce's weakness as enforceable law, the regular unanimous adoption
-                could signal an <strong className="text-green-300">emerging customary norm</strong>. The IOC's 2022 recommendation to ban Russian/Belarusian
-                athletes was the first quasi-"punishment" aligned with a truce violation.
+                As international law scholar <strong>Bruno Simma</strong> notes, GA resolutions "cannot by themselves create legal obligations."
+                However, some scholars (Chernykh, Grear) argue the consistent repetition every two years - usually by consensus of all 193 nations -
+                may be creating <strong className="text-green-300">Customary International Law</strong> via <em>opinio juris</em> (belief the practice is required by law).
               </p>
+              <div className="p-4 mt-4 rounded-xl bg-blue-500/10 border border-blue-500/30">
+                <h4 className="font-semibold text-blue-300 mb-2">2022 Paradigm Shift: Lex Olympica Integration</h4>
+                <p>
+                  The <strong className="text-white">2022 Ukraine invasion</strong> marked a turning point. The IOC Executive Board explicitly cited breach of the Olympic Truce
+                  as the <strong className="text-blue-200">legal basis</strong> for recommending the ban of Russian and Belarusian athletes.
+                  This was the first time the Truce was weaponized as a <strong className="text-blue-200">sanctioning mechanism</strong> ("hard law")
+                  rather than just a peace appeal ("soft law").
+                </p>
+                <p className="mt-2 text-slate-400 text-xs">
+                  By using the Truce violation to justify 2022 sanctions, the IOC effectively incorporated the UN resolution into its own
+                  disciplinary code - the <strong className="text-white">Lex Olympica</strong> (internal law of the Olympic Movement).
+                  This bridges the gap between diplomatic soft law and enforceable sports sanctions, reclaiming some of the punitive teeth
+                  the Truce lost when the <em>Hellanodikai</em> last flogged a Spartan violator in Olympia.
+                </p>
+              </div>
             </div>
           </div>
         </motion.section>
