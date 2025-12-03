@@ -275,33 +275,36 @@ const OLYMPIC_TRUCE_HISTORY: OlympicGame[] = [
   },
 ];
 
-// Complete historical co-sponsor data from IOC (all resolutions since 1994)
+// Complete historical co-sponsor data from IOC/UN (all resolutions since 1994)
+// Note: Co-sponsor counts vary slightly between sources; using UN official records where available
 interface TruceResolutionData {
   games: string;
   year: number;
   coSponsors: number;
   totalMembers: number;
+  adoptionDate: string;
   highlight?: boolean;
+  notes?: string;
 }
 
 const ALL_RESOLUTIONS_DATA: TruceResolutionData[] = [
-  { games: 'Milano Cortina 2026', year: 2026, coSponsors: 165, totalMembers: 193, highlight: true },
-  { games: 'Paris 2024', year: 2024, coSponsors: 77, totalMembers: 193 },
-  { games: 'Beijing 2022', year: 2022, coSponsors: 173, totalMembers: 193 },
-  { games: 'Tokyo 2020', year: 2020, coSponsors: 186, totalMembers: 193 },
-  { games: 'PyeongChang 2018', year: 2018, coSponsors: 157, totalMembers: 193 },
-  { games: 'Rio 2016', year: 2016, coSponsors: 180, totalMembers: 193 },
-  { games: 'Sochi 2014', year: 2014, coSponsors: 121, totalMembers: 193 },
-  { games: 'London 2012', year: 2012, coSponsors: 193, totalMembers: 193 },
-  { games: 'Vancouver 2010', year: 2010, coSponsors: 154, totalMembers: 193 },
-  { games: 'Beijing 2008', year: 2008, coSponsors: 183, totalMembers: 192 },
-  { games: 'Torino 2006', year: 2006, coSponsors: 190, totalMembers: 191 },
-  { games: 'Athens 2004', year: 2004, coSponsors: 190, totalMembers: 191 },
-  { games: 'Salt Lake City 2002', year: 2002, coSponsors: 172, totalMembers: 189 },
-  { games: 'Sydney 2000', year: 2000, coSponsors: 179, totalMembers: 188 },
-  { games: 'Nagano 1998', year: 1998, coSponsors: 177, totalMembers: 185 },
-  { games: 'Atlanta 1996', year: 1996, coSponsors: 161, totalMembers: 185 },
-  { games: 'Lillehammer 1994', year: 1994, coSponsors: 116, totalMembers: 184 },
+  { games: 'Milano Cortina 2026', year: 2026, coSponsors: 165, totalMembers: 193, adoptionDate: '2025-11-19', highlight: true, notes: 'Adopted by consensus' },
+  { games: 'Paris 2024', year: 2024, coSponsors: 118, totalMembers: 193, adoptionDate: '2023-11-21', notes: 'Vote: 118-0-2 (Russia, Syria abstained)' },
+  { games: 'Beijing 2022', year: 2022, coSponsors: 173, totalMembers: 193, adoptionDate: '2021-12-02', notes: 'Truce violated Feb 24, 2022' },
+  { games: 'Tokyo 2020', year: 2020, coSponsors: 186, totalMembers: 193, adoptionDate: '2019-12-09', notes: 'Games postponed to 2021' },
+  { games: 'PyeongChang 2018', year: 2018, coSponsors: 157, totalMembers: 193, adoptionDate: '2017-11-13', notes: 'Unified Korean team' },
+  { games: 'Rio 2016', year: 2016, coSponsors: 180, totalMembers: 193, adoptionDate: '2015-10-26', notes: 'First Refugee Olympic Team' },
+  { games: 'Sochi 2014', year: 2014, coSponsors: 193, totalMembers: 193, adoptionDate: '2013-11-06', notes: 'Crimea annexed during Paralympics' },
+  { games: 'London 2012', year: 2012, coSponsors: 193, totalMembers: 193, adoptionDate: '2011-10-17', notes: '100% - all UN members. Presented by Sebastian Coe' },
+  { games: 'Vancouver 2010', year: 2010, coSponsors: 192, totalMembers: 192, adoptionDate: '2009-10-19', notes: 'Universal support' },
+  { games: 'Beijing 2008', year: 2008, coSponsors: 183, totalMembers: 192, adoptionDate: '2007-10-31', notes: 'Russo-Georgian War during Truce' },
+  { games: 'Torino 2006', year: 2006, coSponsors: 191, totalMembers: 191, adoptionDate: '2005-10-31', notes: 'All 191 members co-sponsored' },
+  { games: 'Athens 2004', year: 2004, coSponsors: 190, totalMembers: 191, adoptionDate: '2003-11-03', notes: 'First to include Paralympics' },
+  { games: 'Salt Lake City 2002', year: 2002, coSponsors: 173, totalMembers: 189, adoptionDate: '2001-12-11', notes: 'Post-9/11 Games' },
+  { games: 'Sydney 2000', year: 2000, coSponsors: 180, totalMembers: 188, adoptionDate: '1999-11-24', notes: 'Korean teams marched together' },
+  { games: 'Nagano 1998', year: 1998, coSponsors: 178, totalMembers: 185, adoptionDate: '1997-12-08', notes: 'Kofi Annan Iraq diplomacy' },
+  { games: 'Atlanta 1996', year: 1996, coSponsors: 161, totalMembers: 185, adoptionDate: '1995-11-07', notes: 'Centennial Games' },
+  { games: 'Lillehammer 1994', year: 1994, coSponsors: 121, totalMembers: 184, adoptionDate: '1993-10-25', notes: 'First Olympic Truce resolution' },
 ];
 
 // Key moments in Olympic Truce history from IOC
@@ -456,7 +459,7 @@ const KEY_MOMENTS: KeyMoment[] = [
   {
     year: 2000,
     title: 'IOTC Founded & Korean Unity',
-    description: 'The International Olympic Truce Centre is officially launched at Zappeion Palace, Athens (July 24, 2000). Key leaders: Samaranch (Chairman), George Papandreou (Vice Chairman), Konstantinos Stefanopoulos (President of Greece), Theodore Ben Gurirab (UN GA Chairman), Javier Pérez de Cuéllar (former UN SG). Fekrou Kidane (Ethiopian journalist/diplomat, IOC Director of International Relations) "played a key role in making the Olympic truce a reality" - campaigning at the UN, contacting every Security Council delegation. At Sydney, North and South Korea parade together under unified flag for the first time.',
+    description: 'The International Olympic Truce Centre is officially launched at Zappeion Palace, Athens (July 24, 2000). Located at 1A Likavittou Street, Athens. Key leaders: Samaranch (Chairman), George A. Papandreou (Vice Chairman, later Prime Minister of Greece), Konstantinos Stefanopoulos (President of Greece), Theodore Ben Gurirab (UN GA Chairman), Javier Pérez de Cuéllar (former UN SG). Fekrou Kidane (Ethiopian journalist/diplomat, IOC Director of International Relations) "played a key role in making the Olympic truce a reality" - campaigning at the UN, contacting every Security Council delegation. IOTC programs include Olympic Truce promotion, youth education for peace, Hestia FC (refugee women\'s football), and Erasmus+ Sport Projects. At Sydney, North and South Korea parade together under unified flag for the first time.',
     significance: 'milestone',
   },
   {
@@ -1147,8 +1150,9 @@ export default function HistoryPage() {
               </table>
             </div>
             <p className="text-xs text-slate-500 mt-3">
-              <strong>London 2012</strong> achieved 100% co-sponsorship (all 193 member states).{' '}
-              <strong>Paris 2024</strong> saw the lowest recent support (77 co-sponsors) due to Russia-Belarus tensions.
+              <strong>London 2012</strong> achieved 100% co-sponsorship - the only time all UN member states co-sponsored (presented by Sebastian Coe).{' '}
+              <strong>Paris 2024</strong> was the first resolution put to a vote rather than consensus (118-0-2, Russia and Syria abstaining).{' '}
+              <strong>Torino 2006</strong> and <strong>Vancouver 2010</strong> also achieved universal support at the time.
             </p>
           </motion.div>
 

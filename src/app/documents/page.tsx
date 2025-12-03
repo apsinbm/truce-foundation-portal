@@ -391,6 +391,16 @@ const SG_REPORTS = [
     url: 'https://documents.un.org/doc/undoc/gen/n24/232/53/pdf/n2423253.pdf',
     alternateUrl: 'https://documents.un.org/doc/undoc/gen/n24/174/10/pdf/n2417410.pdf',
     description: 'UN Secretary-General report on sport as driver of sustainable development and peace.',
+    keyFindings: [
+      '1 in 3 adults don\'t meet physical activity recommendations',
+      '4 in 5 adolescents inactive globally',
+      '21% of female athletes experienced childhood sexual abuse',
+      'Global gender pay gap: 20%',
+      '$10 billion global investment for sustainable sport infrastructure by 2030',
+      '€500 million from French Development Agency',
+      '$650 million increase in IOC Olympic Solidarity (2025-2028)',
+    ],
+    focusAreas: ['Social inclusion through sport', 'Physical activity and education', 'Gender equality', 'Peacebuilding and crime prevention', 'Sustainable development'],
   },
 ];
 
@@ -720,7 +730,28 @@ export default function DocumentsPage() {
                 <span className="text-xs font-mono bg-blue-500/20 text-blue-300 px-2 py-0.5 rounded">{SG_REPORTS[0].symbol}</span>
                 <h2 className="text-xl font-bold text-white mt-2">{SG_REPORTS[0].title}</h2>
                 <p className="text-slate-300 text-sm mt-1">{SG_REPORTS[0].description}</p>
+
+                {/* Focus Areas */}
                 <div className="flex flex-wrap gap-2 mt-3">
+                  {SG_REPORTS[0].focusAreas.map((area) => (
+                    <span key={area} className="text-xs px-2 py-1 bg-slate-700/50 text-slate-300 rounded-full">{area}</span>
+                  ))}
+                </div>
+
+                {/* Key Findings */}
+                <div className="mt-4 p-3 bg-slate-800/50 rounded-lg">
+                  <h4 className="text-xs font-semibold text-slate-400 mb-2">Key Findings</h4>
+                  <div className="grid md:grid-cols-2 gap-2 text-xs text-slate-300">
+                    {SG_REPORTS[0].keyFindings.slice(0, 6).map((finding, i) => (
+                      <div key={i} className="flex items-start gap-2">
+                        <span className="text-blue-400">•</span>
+                        <span>{finding}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap gap-2 mt-4">
                   <a
                     href={SG_REPORTS[0].url}
                     target="_blank"
