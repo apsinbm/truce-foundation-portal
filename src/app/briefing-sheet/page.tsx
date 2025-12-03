@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Header from '@/components/Header';
 
 // Key statistics from A/79/289
 const KEY_STATISTICS = [
@@ -157,8 +158,10 @@ const KEY_RECOMMENDATIONS = [
 export default function BriefingSheetPage() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">
-      {/* Header */}
-      <div className="bg-gradient-to-b from-blue-900/50 to-slate-950 py-16">
+      <Header />
+
+      {/* Hero */}
+      <div className="bg-gradient-to-b from-blue-900/50 to-slate-950 pt-32 pb-16">
         <div className="max-w-6xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

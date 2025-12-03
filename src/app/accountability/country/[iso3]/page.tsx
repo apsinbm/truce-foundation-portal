@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useParams, notFound } from 'next/navigation';
 import { TRUCE_INDEX_URL } from '@/lib/constants';
 import { getCountryByIso3, getViolationsForCountry, REPEAT_OFFENDERS } from '@/lib/truce-data';
+import Header from '@/components/Header';
 
 const getSeverityColor = (severity: string) => {
   switch (severity) {
@@ -29,20 +30,7 @@ export default function CountryProfilePage() {
   if (!countryData || violations.length === 0) {
     return (
       <main className="min-h-screen bg-slate-950">
-        <header className="fixed top-0 left-0 right-0 z-50 bg-slate-950/90 backdrop-blur-xl border-b border-slate-800/50">
-          <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-            <Link href="/" className="flex items-center gap-3">
-              <img src="/truce-foundation-logo.jpg" alt="Truce Foundation" className="w-10 h-10 object-contain rounded-full" />
-              <span className="font-semibold text-white">Truce Foundation</span>
-            </Link>
-            <Link
-              href="/accountability"
-              className="text-slate-400 hover:text-white transition-colors text-sm"
-            >
-              Back to Accountability
-            </Link>
-          </div>
-        </header>
+        <Header />
 
         <section className="pt-32 pb-16 px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -76,21 +64,7 @@ export default function CountryProfilePage() {
 
   return (
     <main className="min-h-screen bg-slate-950">
-      {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-slate-950/90 backdrop-blur-xl border-b border-slate-800/50">
-        <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3">
-            <img src="/truce-foundation-logo.jpg" alt="Truce Foundation" className="w-10 h-10 object-contain rounded-full" />
-            <span className="font-semibold text-white">Truce Foundation</span>
-          </Link>
-          <Link
-            href="/accountability"
-            className="text-slate-400 hover:text-white transition-colors text-sm"
-          >
-            Back to Accountability
-          </Link>
-        </div>
-      </header>
+      <Header />
 
       {/* Hero Section */}
       <section className="pt-32 pb-12 px-4">

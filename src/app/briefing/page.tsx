@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { format, subDays, parseISO } from 'date-fns';
 import { TRUCE_INDEX_URL } from '@/lib/constants';
+import Header from '@/components/Header';
 
 interface BriefingIncident {
   id: string;
@@ -115,21 +116,7 @@ export default function DailyBriefingPage() {
 
   return (
     <main className="min-h-screen bg-slate-950">
-      {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-slate-950/90 backdrop-blur-xl border-b border-slate-800/50">
-        <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3">
-            <img src="/truce-foundation-logo.jpg" alt="Truce Foundation" className="w-10 h-10 object-contain rounded-full" />
-            <span className="font-semibold text-white">Truce Foundation</span>
-          </Link>
-          <Link
-            href="/"
-            className="text-slate-400 hover:text-white transition-colors text-sm"
-          >
-            Back to Home
-          </Link>
-        </div>
-      </header>
+      <Header />
 
       <div className="pt-24 pb-8 px-4">
         <div className="max-w-6xl mx-auto">
