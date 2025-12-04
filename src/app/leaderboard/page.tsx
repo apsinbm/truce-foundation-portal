@@ -80,6 +80,86 @@ export default function LeaderboardPage() {
   const [timeFilter, setTimeFilter] = useState<TimeFilter>('30d');
   const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
 
+  // Export data as CSV
+  const exportCSV = () => {
+    if (!data) return;
+
+    const headers = [
+      'Rank',
+      'Country',
+      'ISO3',
+      'Total Incidents',
+      'Conflict Incidents',
+      'Humanitarian Access',
+      'Truce Violations',
+      'Positive Measures',
+      'Critical Incidents',
+      'High Incidents',
+      'Fatality Estimate',
+      'GPI Score',
+      'Crisis Level',
+    ];
+
+    const rows = data.rankings.map((r) => [
+      r.rank,
+      r.country_name,
+      r.country_iso3,
+      r.total_incidents,
+      r.conflict_incidents,
+      r.humanitarian_access_incidents,
+      r.truce_violations,
+      r.positive_measures,
+      r.critical_incidents,
+      r.high_incidents,
+      r.fatality_estimate || '',
+      r.gpi_score || '',
+      r.crisis_level || '',
+    ]);
+
+    const csvContent = [headers, ...rows].map((row) => row.join(',')).join('\n');
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `truce-leaderboard-${data.time_window.label.replace(/\s+/g, '-').toLowerCase()}.csv`;
+    link.click();
+    URL.revokeObjectURL(url);
+  };
+
+  // Export data as JSON
+  const exportJSON = () => {
+    if (!data) return;
+
+    const exportData = {
+      generated_at: data.generated_at,
+      time_window: data.time_window,
+      totals: data.totals,
+      rankings: data.rankings.map((r) => ({
+        rank: r.rank,
+        country_name: r.country_name,
+        country_iso3: r.country_iso3,
+        total_incidents: r.total_incidents,
+        conflict_incidents: r.conflict_incidents,
+        humanitarian_access_incidents: r.humanitarian_access_incidents,
+        truce_violations: r.truce_violations,
+        positive_measures: r.positive_measures,
+        critical_incidents: r.critical_incidents,
+        high_incidents: r.high_incidents,
+        fatality_estimate: r.fatality_estimate,
+        gpi_score: r.gpi_score,
+        crisis_level: r.crisis_level,
+      })),
+    };
+
+    const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `truce-leaderboard-${data.time_window.label.replace(/\s+/g, '-').toLowerCase()}.json`;
+    link.click();
+    URL.revokeObjectURL(url);
+  };
+
   useEffect(() => {
     async function fetchLeaderboard() {
       setLoading(true);
@@ -143,12 +223,12 @@ export default function LeaderboardPage() {
             </p>
           </motion.div>
 
-          {/* Time Filter & Summary Cards */}
+          {/* Time Filter & Export Options */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="flex flex-col md:flex-row gap-4 mb-6"
+            className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6"
           >
             {/* Time Filter Buttons */}
             <div className="flex gap-2 bg-slate-900/50 p-1 rounded-lg">
@@ -166,6 +246,31 @@ export default function LeaderboardPage() {
                 </button>
               ))}
             </div>
+
+            {/* Export Buttons */}
+            {data && (
+              <div className="flex items-center gap-2">
+                <span className="text-xs text-slate-500 mr-1">Export:</span>
+                <button
+                  onClick={exportCSV}
+                  className="flex items-center gap-1.5 px-3 py-1.5 text-xs text-slate-400 hover:text-white bg-slate-800/50 hover:bg-slate-800 border border-slate-700 rounded-lg transition-colors"
+                >
+                  <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                  CSV
+                </button>
+                <button
+                  onClick={exportJSON}
+                  className="flex items-center gap-1.5 px-3 py-1.5 text-xs text-slate-400 hover:text-white bg-slate-800/50 hover:bg-slate-800 border border-slate-700 rounded-lg transition-colors"
+                >
+                  <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                  JSON
+                </button>
+              </div>
+            )}
           </motion.div>
 
           {/* Summary Stats */}

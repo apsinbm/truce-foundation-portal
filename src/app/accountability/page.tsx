@@ -741,6 +741,25 @@ export default function AccountabilityPage() {
     p.violations.forEach(v => violatingCountries.add(v.countryIso3));
   });
 
+  // Calculate violations per country for bar chart
+  const violationsByCountry = useMemo(() => {
+    const counts: Record<string, { count: number; name: string }> = {};
+    TRUCE_PERIODS.forEach(p => {
+      p.violations.forEach(v => {
+        if (!counts[v.countryIso3]) {
+          counts[v.countryIso3] = { count: 0, name: v.country };
+        }
+        counts[v.countryIso3].count++;
+      });
+    });
+    return Object.entries(counts)
+      .map(([iso, data]) => ({ iso, ...data }))
+      .sort((a, b) => b.count - a.count)
+      .slice(0, 8); // Top 8
+  }, []);
+
+  const maxViolations = violationsByCountry[0]?.count || 1;
+
   const hasActiveFilters = countryFilter !== 'all' || seasonFilter !== 'all' || statusFilter !== 'all' || searchQuery.trim() !== '';
 
   const clearFilters = () => {
@@ -841,6 +860,119 @@ export default function AccountabilityPage() {
             >
               <span className="text-3xl font-bold text-slate-300">{violatingCountries.size}</span>
               <p className="text-xs text-slate-500 mt-1">Countries Recorded</p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Data Visualizations */}
+      <section className="py-8 px-4">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Compliance Rate Donut */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="p-6 rounded-2xl bg-slate-900/50 border border-slate-700/50"
+            >
+              <h3 className="text-lg font-semibold text-white mb-4">Compliance Rate</h3>
+              <div className="flex items-center gap-6">
+                {/* Donut Chart */}
+                <div className="relative w-32 h-32 flex-shrink-0">
+                  <svg viewBox="0 0 36 36" className="w-full h-full transform -rotate-90">
+                    {/* Background circle */}
+                    <circle
+                      cx="18"
+                      cy="18"
+                      r="15.91549430918954"
+                      fill="transparent"
+                      stroke="#1e293b"
+                      strokeWidth="3"
+                    />
+                    {/* Observed (green) */}
+                    <circle
+                      cx="18"
+                      cy="18"
+                      r="15.91549430918954"
+                      fill="transparent"
+                      stroke="#22c55e"
+                      strokeWidth="3"
+                      strokeDasharray={`${(observedPeriods / TRUCE_PERIODS.length) * 100} ${100 - (observedPeriods / TRUCE_PERIODS.length) * 100}`}
+                      strokeLinecap="round"
+                    />
+                    {/* Violated (red) */}
+                    <circle
+                      cx="18"
+                      cy="18"
+                      r="15.91549430918954"
+                      fill="transparent"
+                      stroke="#ef4444"
+                      strokeWidth="3"
+                      strokeDasharray={`${(violatedPeriods / TRUCE_PERIODS.length) * 100} ${100 - (violatedPeriods / TRUCE_PERIODS.length) * 100}`}
+                      strokeDashoffset={`-${(observedPeriods / TRUCE_PERIODS.length) * 100}`}
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                  <div className="absolute inset-0 flex flex-col items-center justify-center">
+                    <span className="text-2xl font-bold text-white">
+                      {Math.round((observedPeriods / TRUCE_PERIODS.length) * 100)}%
+                    </span>
+                    <span className="text-[10px] text-slate-500">Observed</span>
+                  </div>
+                </div>
+                {/* Legend */}
+                <div className="space-y-2">
+                  <div className="flex items-center gap-2">
+                    <div className="w-3 h-3 rounded-full bg-green-500" />
+                    <span className="text-sm text-slate-400">Observed ({observedPeriods})</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-3 h-3 rounded-full bg-red-500" />
+                    <span className="text-sm text-slate-400">Violated ({violatedPeriods})</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-3 h-3 rounded-full bg-amber-500" />
+                    <span className="text-sm text-slate-400">Mixed ({TRUCE_PERIODS.length - observedPeriods - violatedPeriods})</span>
+                  </div>
+                </div>
+              </div>
+              <p className="text-xs text-slate-500 mt-4">
+                Since 1992, {observedPeriods} of {TRUCE_PERIODS.length} Olympic Truce periods were fully observed.
+              </p>
+            </motion.div>
+
+            {/* Violations by Country Bar Chart */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="p-6 rounded-2xl bg-slate-900/50 border border-slate-700/50"
+            >
+              <h3 className="text-lg font-semibold text-white mb-4">Repeat Offenders</h3>
+              <div className="space-y-3">
+                {violationsByCountry.map((item, index) => (
+                  <div key={item.iso} className="flex items-center gap-3">
+                    <span className="w-20 text-sm text-slate-400 truncate">{item.name}</span>
+                    <div className="flex-1 h-6 bg-slate-800 rounded-full overflow-hidden">
+                      <motion.div
+                        initial={{ width: 0 }}
+                        whileInView={{ width: `${(item.count / maxViolations) * 100}%` }}
+                        viewport={{ once: true }}
+                        transition={{ delay: index * 0.05, duration: 0.5 }}
+                        className={`h-full rounded-full ${
+                          index === 0 ? 'bg-red-500' : index < 3 ? 'bg-orange-500' : 'bg-amber-500'
+                        }`}
+                      />
+                    </div>
+                    <span className="w-6 text-sm font-medium text-slate-300 text-right">{item.count}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="text-xs text-slate-500 mt-4">
+                Countries recorded multiple times across different Truce periods.
+              </p>
             </motion.div>
           </div>
         </div>

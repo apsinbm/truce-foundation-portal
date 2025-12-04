@@ -1,53 +1,13 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { WOA_URL, TRUCE_FOUNDATION_URL, TRUCE_INDEX_URL } from '@/lib/constants';
+import { TRUCE_INDEX_URL } from '@/lib/constants';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="relative border-t border-slate-800">
-      {/* Affiliated Organizations Section */}
-      <section className="py-12 px-4">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-8"
-          >
-            <h3 className="text-sm uppercase tracking-wider text-slate-500 mb-2">
-              Affiliated Organizations
-            </h3>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="flex justify-center items-center gap-12"
-          >
-            <a
-              href={WOA_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="opacity-60 hover:opacity-100 transition-opacity group"
-            >
-              <Image
-                src="/woa-logo.png"
-                alt="World Olympians Association"
-                width={128}
-                height={128}
-                className="group-hover:scale-105 transition-transform"
-              />
-            </a>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Main Footer */}
       <div className="bg-slate-900/50 py-8 px-4">
         <div className="max-w-6xl mx-auto">

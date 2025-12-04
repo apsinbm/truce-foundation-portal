@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import Header from '@/components/Header';
 
 // Priority countries identified by humanitarian experts
@@ -72,6 +73,181 @@ const EXEMPLARY_COUNTRIES = [
     highlight: 'Hosted refugees equivalent to 5% of its population',
   },
 ];
+
+// Post-conflict zones requiring careful monitoring - peace is fragile
+const FRAGILE_PEACE_ZONES = [
+  {
+    region: 'Africa',
+    countries: [
+      {
+        name: 'Northern Mozambique',
+        area: 'Cabo Delgado',
+        status: 'stabilizing',
+        description: 'Insurgency reduced after regional military interventions',
+        focus: ['Community dialogue', 'Economic recovery', 'Displaced population reintegration'],
+      },
+      {
+        name: 'South Sudan',
+        area: 'Nationwide',
+        status: 'fragile',
+        description: '2018 peace agreement holding tenuously',
+        focus: ['Disarmament', 'Reconciliation', 'Transitional governance'],
+      },
+      {
+        name: 'Libya',
+        area: 'Post-ceasefire zones',
+        status: 'fragile',
+        description: 'Ceasefire since 2020 largely intact',
+        focus: ['Political reconciliation', 'UN-led dialogue', 'Factional mediation'],
+      },
+    ],
+  },
+  {
+    region: 'Middle East',
+    countries: [
+      {
+        name: 'Iraq',
+        area: 'Post-ISIS zones',
+        status: 'recovering',
+        description: 'Military defeat of ISIS left regions in recovery mode',
+        focus: ['Sectarian reconciliation', 'Governance rebuilding', 'Counter-extremism'],
+      },
+      {
+        name: 'Syria',
+        area: 'Ceasefire zones',
+        status: 'fragile',
+        description: 'Some areas stabilized under ceasefire agreements',
+        focus: ['Reconstruction', 'Reconciliation', 'International aid coordination'],
+      },
+    ],
+  },
+  {
+    region: 'Europe & Caucasus',
+    countries: [
+      {
+        name: 'Nagorno-Karabakh',
+        area: 'Armenia–Azerbaijan',
+        status: 'fragile',
+        description: 'Ceasefires since 2020, renewed agreements in 2023',
+        focus: ['Displaced population return', 'Ethnic reconciliation', 'Border demarcation'],
+      },
+      {
+        name: 'Kosovo & Bosnia',
+        area: 'Western Balkans',
+        status: 'stabilizing',
+        description: 'No renewed conflict, but reconciliation ongoing',
+        focus: ['EU-led governance initiatives', 'Dialogue', 'Ethnic tension prevention'],
+      },
+    ],
+  },
+  {
+    region: 'Latin America',
+    countries: [
+      {
+        name: 'Colombia',
+        area: 'Post-FARC zones',
+        status: 'fragile',
+        description: 'Peace agreement implementation continues',
+        focus: ['Ex-combatant reintegration', 'Reconciliation programs', 'Criminal group containment'],
+      },
+    ],
+  },
+];
+
+const getFragileStatusColor = (status: string) => {
+  switch (status) {
+    case 'fragile':
+      return 'bg-amber-500/20 text-amber-300 border-amber-500/30';
+    case 'stabilizing':
+      return 'bg-blue-500/20 text-blue-300 border-blue-500/30';
+    case 'recovering':
+      return 'bg-green-500/20 text-green-300 border-green-500/30';
+    default:
+      return 'bg-slate-800 text-slate-300 border-slate-700';
+  }
+};
+
+// Maritime Mine Zones - threats to shipping and global trade
+// Source: Dryad Global, Lloyd's List, World Ports Source
+const MARITIME_MINE_ZONES = [
+  {
+    severity: 'urgent',
+    zones: [
+      {
+        name: 'Black Sea',
+        area: 'Ukraine conflict zone',
+        description: 'Cargo vessel NS Pride struck explosive device near Odesa in August 2025. Ongoing hazard from floating mines and debris.',
+        impact: ['Grain export disruption', 'Floating mine hazards', 'War-risk insurance required'],
+      },
+      {
+        name: 'Red Sea & Gulf of Aden',
+        area: 'Yemen conflict zone',
+        description: 'Houthi forces have deployed sea mines alongside missile and drone attacks. MV Eternity C sunk, multiple vessels damaged.',
+        impact: ['Suez Canal revenues down 40%', 'Global shipping rerouted via Cape of Good Hope', 'Insurance costs tripled'],
+      },
+    ],
+  },
+  {
+    severity: 'ongoing',
+    zones: [
+      {
+        name: 'Baltic Sea',
+        area: 'NATO clearance operations',
+        description: 'NATO and EU-led operations continue to clear WWII-era mines, especially around shipping lanes.',
+        impact: ['Active clearance operations', 'Shipping lane protection', 'Periodic discoveries'],
+      },
+      {
+        name: 'Persian Gulf',
+        area: 'Oil shipping routes',
+        description: 'Regular clearance operations reduce risks to oil shipping routes, though hazards persist from historical conflicts.',
+        impact: ['Oil shipping route protection', 'Active clearance programs', 'Legacy Iran-Iraq War hazards'],
+      },
+    ],
+  },
+  {
+    severity: 'legacy',
+    zones: [
+      {
+        name: 'South China Sea',
+        area: 'Territorial waters',
+        description: 'Historic mines and tensions over territorial waters pose risks to fishing and trade.',
+        impact: ['Fishing restrictions', 'Trade route hazards', 'Territorial tensions compound risk'],
+      },
+      {
+        name: 'Pacific Islands',
+        area: 'WWII remnants',
+        description: 'WWII mines still affect fishing communities, limiting safe access to coastal waters.',
+        impact: ['Fishing restrictions', 'Coastal hazards', 'Limited clearance resources'],
+      },
+    ],
+  },
+];
+
+const getMineSeverityColor = (severity: string) => {
+  switch (severity) {
+    case 'urgent':
+      return 'bg-red-500/20 text-red-300 border-red-500/30';
+    case 'ongoing':
+      return 'bg-amber-500/20 text-amber-300 border-amber-500/30';
+    case 'legacy':
+      return 'bg-indigo-500/20 text-indigo-300 border-indigo-500/30';
+    default:
+      return 'bg-slate-800 text-slate-300 border-slate-700';
+  }
+};
+
+const getSeverityLabel = (severity: string) => {
+  switch (severity) {
+    case 'urgent':
+      return 'Urgent Incidents';
+    case 'ongoing':
+      return 'Ongoing Clearance';
+    case 'legacy':
+      return 'Legacy Risks';
+    default:
+      return severity;
+  }
+};
 
 const DATA_SOURCES = [
   {
@@ -211,8 +387,162 @@ export default function HumanitarianPage() {
         </div>
       </section>
 
-      {/* Exemplary Response */}
+      {/* Fragile Peace Zones */}
       <section className="py-12 px-4 bg-slate-900/30">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-8"
+          >
+            <div className="flex items-center gap-3 mb-2">
+              <h2 className="text-2xl font-bold text-white">Fragile Peace Zones</h2>
+              <span className="px-2 py-1 text-xs bg-amber-500/20 text-amber-300 border border-amber-500/30 rounded-full">
+                ICU Watch
+              </span>
+            </div>
+            <p className="text-slate-400">
+              Post-conflict regions where military hostilities have ceased but stability remains fragile.
+              These require careful monitoring during the Olympic Truce to prevent re-escalation.
+            </p>
+          </motion.div>
+
+          <div className="space-y-8">
+            {FRAGILE_PEACE_ZONES.map((zone, zoneIndex) => (
+              <motion.div
+                key={zone.region}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: zoneIndex * 0.1 }}
+              >
+                <h3 className="text-lg font-semibold text-slate-300 mb-4 flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-amber-400" />
+                  {zone.region}
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {zone.countries.map((country) => (
+                    <div
+                      key={country.name}
+                      className="p-4 rounded-xl bg-slate-950/50 border border-slate-700/50"
+                    >
+                      <div className="flex items-start justify-between mb-2">
+                        <div>
+                          <h4 className="font-semibold text-white">{country.name}</h4>
+                          <span className="text-xs text-slate-500">{country.area}</span>
+                        </div>
+                        <span className={`px-2 py-0.5 text-xs rounded-full border ${getFragileStatusColor(country.status)}`}>
+                          {country.status}
+                        </span>
+                      </div>
+                      <p className="text-sm text-slate-400 mb-3">{country.description}</p>
+                      <div className="space-y-1">
+                        {country.focus.map((item) => (
+                          <div key={item} className="flex items-center gap-2 text-xs text-slate-500">
+                            <span className="w-1 h-1 rounded-full bg-amber-500/50" />
+                            {item}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="mt-8 p-4 rounded-xl bg-amber-500/5 border border-amber-500/20">
+            <p className="text-sm text-amber-200/80">
+              <strong className="text-amber-300">Why monitor post-conflict zones?</strong> These regions are engaged in
+              reconciliation, disarmament, and peacebuilding. Risks of relapse remain high due to weak institutions,
+              economic instability, ethnic divisions, and external interference. The Olympic Truce provides a symbolic
+              window for reinforcing these fragile peace processes.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Maritime Mine Threats */}
+      <section className="py-12 px-4">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-8"
+          >
+            <div className="flex items-center gap-3 mb-2">
+              <h2 className="text-2xl font-bold text-white">Maritime Mine Threats</h2>
+              <span className="px-2 py-1 text-xs bg-red-500/20 text-red-300 border border-red-500/30 rounded-full">
+                Shipping Risk
+              </span>
+            </div>
+            <p className="text-slate-400">
+              Global maritime mine incidents threaten shipping lanes, disrupt trade, and endanger humanitarian supply chains.
+              These hotspots highlight urgent risks to mariners and global commerce.
+            </p>
+          </motion.div>
+
+          <div className="space-y-8">
+            {MARITIME_MINE_ZONES.map((group, groupIndex) => (
+              <motion.div
+                key={group.severity}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: groupIndex * 0.1 }}
+              >
+                <h3 className="text-lg font-semibold text-slate-300 mb-4 flex items-center gap-2">
+                  <span className={`px-2 py-0.5 text-xs rounded-full border ${getMineSeverityColor(group.severity)}`}>
+                    {getSeverityLabel(group.severity)}
+                  </span>
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {group.zones.map((zone) => (
+                    <div
+                      key={zone.name}
+                      className="p-4 rounded-xl bg-slate-950/50 border border-slate-700/50"
+                    >
+                      <div className="flex items-start justify-between mb-2">
+                        <div>
+                          <h4 className="font-semibold text-white">{zone.name}</h4>
+                          <span className="text-xs text-slate-500">{zone.area}</span>
+                        </div>
+                      </div>
+                      <p className="text-sm text-slate-400 mb-3">{zone.description}</p>
+                      <div className="space-y-1">
+                        {zone.impact.map((item) => (
+                          <div key={item} className="flex items-center gap-2 text-xs text-slate-500">
+                            <span className="w-1 h-1 rounded-full bg-red-500/50" />
+                            {item}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="mt-8 p-4 rounded-xl bg-red-500/5 border border-red-500/20">
+            <p className="text-sm text-red-200/80">
+              <strong className="text-red-300">Strategic Impact:</strong> The Black Sea and Red Sea are the most urgent
+              maritime mine zones today. Rerouting ships away from the Red Sea has cut Suez Canal revenues by 40% since 2023.
+              Mines threaten food security by blocking grain exports from Ukraine and disrupting fishing in the Pacific.
+              These are not just remnants of past wars — they are active threats to civilians, economies, and global stability.
+            </p>
+          </div>
+
+          <div className="mt-4 text-xs text-slate-500">
+            <p>Sources: <a href="https://channel16.dryadglobal.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">Dryad Global</a>, <a href="https://www.lloydslist.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">Lloyd&apos;s List</a>, <a href="https://www.worldports.org" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">World Ports Source</a></p>
+          </div>
+        </div>
+      </section>
+
+      {/* Exemplary Response */}
+      <section className="py-12 px-4">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

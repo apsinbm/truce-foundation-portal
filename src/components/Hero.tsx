@@ -59,7 +59,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
-          className="py-8"
+          className="pt-8 pb-0"
         >
           <Countdown />
         </motion.div>
@@ -68,8 +68,8 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.6 }}
-          className="flex flex-wrap justify-center gap-4 text-xs sm:text-sm"
+          transition={{ delay: 0.45, duration: 0.6 }}
+          className="flex flex-wrap justify-center gap-4 text-xs sm:text-sm -mt-1"
         >
           <div className="px-4 py-2 bg-blue-500/10 border border-blue-500/30 rounded-lg text-blue-300">
             <span className="font-bold">165</span> UN Co-Sponsors
@@ -82,43 +82,28 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* CTA Button */}
+        {/* Navigation Links */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 0.6 }}
+          transition={{ delay: 0.5, duration: 0.6 }}
+          className="flex items-center justify-center gap-6 sm:gap-8 text-base sm:text-lg mt-8"
         >
           <a
             href={TRUCE_INDEX_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-blue-600/30 hover:shadow-blue-500/40 hover:scale-105"
+            className="text-slate-300 hover:text-white transition-colors duration-200"
           >
-            <span className="text-xl">🗺️</span>
-            <span>Compliance Index Map</span>
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-            </svg>
+            Compliance Index
           </a>
-        </motion.div>
-
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.2, duration: 0.6 }}
-          className="pt-12"
-        >
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-            className="text-slate-500"
+          <span className="text-slate-600">|</span>
+          <a
+            href="/portal"
+            className="text-slate-300 hover:text-white transition-colors duration-200"
           >
-            <svg className="w-6 h-6 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-            </svg>
-            <span className="text-xs uppercase tracking-wider mt-2 block">Explore</span>
-          </motion.div>
+            Truce Portal
+          </a>
         </motion.div>
       </div>
     </section>

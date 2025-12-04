@@ -83,6 +83,14 @@ export const SUB_SITES: SubSite[] = [
     href: '/humanitarian',
     status: 'live',
   },
+  {
+    id: 'ceasefire',
+    icon: '🕊️',
+    title: 'Ceasefire Watch',
+    description: 'Tracking fragile peace agreements and ceasefires that need to hold during the Truce',
+    href: '/ceasefire',
+    status: 'live',
+  },
   // === HUMAN STORIES & COMMUNITY (emotional engagement) ===
   {
     id: 'stories',

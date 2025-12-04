@@ -3,6 +3,9 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Header from '@/components/Header';
+import ExpertQuotes from '@/components/ExpertQuotes';
+import AncientWisdom from '@/components/AncientWisdom';
+import Footer from '@/components/Footer';
 
 export default function AboutPage() {
   return (
@@ -177,7 +180,18 @@ export default function AboutPage() {
             </div>
           </motion.div>
 
-          {/* Get Involved */}
+        </div>
+      </section>
+
+      {/* Voices for Peace - Expert Quotes */}
+      <ExpertQuotes />
+
+      {/* Ancient Wisdom */}
+      <AncientWisdom />
+
+      {/* Get Involved Section */}
+      <section className="py-12 px-4">
+        <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -247,11 +261,7 @@ export default function AboutPage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-4 border-t border-slate-800/50">
-        <div className="max-w-6xl mx-auto text-center text-slate-500 text-sm">
-          <p>&copy; {new Date().getFullYear()} Truce Foundation. All rights reserved.</p>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }

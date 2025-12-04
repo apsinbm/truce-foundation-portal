@@ -22,13 +22,13 @@ const COMPLIANCE_CATEGORIES = [
   {
     id: 'corridors',
     name: 'Humanitarian Corridors',
-    description: 'Tracking the establishment and maintenance of safe passage for humanitarian aid, medical supplies, and civilian movement.',
+    description: 'Tracking the establishment and maintenance of safe passage for humanitarian aid, medical supplies, and civilian movement—including maritime shipping lanes.',
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M22 12h-4l-3 9L9 3l-3 9H2" />
       </svg>
     ),
-    metrics: ['Active corridors', 'Aid deliveries', 'Civilian evacuations', 'Medical access'],
+    metrics: ['Active corridors', 'Aid deliveries', 'Civilian evacuations', 'Maritime security'],
     color: 'from-blue-500/20 to-blue-600/10',
     border: 'border-blue-500/30',
     iconColor: 'text-blue-400',
@@ -85,6 +85,7 @@ const DATA_SOURCES = [
   { name: 'UNHCR', description: 'UN Refugee Agency displacement data', url: 'https://www.unhcr.org' },
   { name: 'UN Documents', description: 'Official UN resolutions and reports', url: 'https://documents.un.org' },
   { name: 'Crisis Group', description: 'International Crisis Group analysis', url: 'https://www.crisisgroup.org' },
+  { name: 'World Ports Source', description: 'Maritime intelligence on shipping lane security', url: 'https://www.worldports.org' },
 ];
 
 export default function MethodologyPage() {

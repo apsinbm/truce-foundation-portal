@@ -1,8 +1,40 @@
 'use client';
 
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Header from '@/components/Header';
+
+// Talking points for one-click copy
+const TALKING_POINTS = [
+  {
+    id: 'what',
+    title: 'What is the Olympic Truce?',
+    text: 'The Olympic Truce is a UN-backed tradition dating back to ancient Greece. For Milano-Cortina 2026, the Truce Window runs from January 30 to March 22, 2026, calling on all nations to cease hostilities and allow athletes safe passage.',
+  },
+  {
+    id: 'why',
+    title: 'Why does it matter?',
+    text: 'While symbolic, the Truce reminds us that humanity can unite for common goals. Past Olympics have seen ceasefires, prisoner exchanges, and humanitarian corridors. Every act of peace counts.',
+  },
+  {
+    id: 'how',
+    title: 'How is compliance measured?',
+    text: 'The Truce Index tracks 5 categories: Armed Conflict, Political Violence, Athlete Safety, Aid Access, and Diplomatic Actions. Data comes from verified sources including ACLED, UCDP, and UN agencies.',
+  },
+  {
+    id: 'cta',
+    title: 'Call to Action',
+    text: 'Join us in calling for peace during the Milano-Cortina 2026 Olympic Truce. Share, advocate, and hold nations accountable. Visit trucefoundation.world to track compliance in real-time.',
+  },
+];
+
+// Social share links
+const getSocialLinks = (message: string) => ({
+  twitter: `https://twitter.com/intent/tweet?text=${encodeURIComponent(message)}&url=${encodeURIComponent('https://trucefoundation.world')}`,
+  linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent('https://trucefoundation.world')}`,
+  facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://trucefoundation.world')}&quote=${encodeURIComponent(message)}`,
+});
 
 interface ToolkitItem {
   id: string;
@@ -177,6 +209,17 @@ const TYPE_ICONS = {
 };
 
 export default function AdvocacyPage() {
+  const [copiedId, setCopiedId] = useState<string | null>(null);
+
+  const copyToClipboard = async (text: string, id: string) => {
+    await navigator.clipboard.writeText(text);
+    setCopiedId(id);
+    setTimeout(() => setCopiedId(null), 2000);
+  };
+
+  const defaultShareMessage = "Support the Olympic Truce for Milano-Cortina 2026. Track global compliance in real-time.";
+  const socialLinks = getSocialLinks(defaultShareMessage);
+
   return (
     <main className="min-h-screen bg-slate-950">
       <Header />
@@ -195,6 +238,147 @@ export default function AdvocacyPage() {
             <p className="text-xl text-slate-400 max-w-2xl mx-auto">
               Resources to champion the Olympic Truce in your community, organization, and media
             </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Quick Actions Section */}
+      <section className="py-8 px-4 bg-gradient-to-b from-blue-500/5 to-transparent">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mb-6"
+          >
+            <h2 className="text-2xl font-bold text-white mb-2">Quick Actions</h2>
+            <p className="text-slate-400">Share instantly on social media or copy talking points</p>
+          </motion.div>
+
+          {/* Social Share Buttons */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="p-6 rounded-2xl bg-slate-900/50 border border-slate-700/50"
+            >
+              <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+                <span className="text-xl">Share Now</span>
+              </h3>
+              <div className="flex flex-wrap gap-3">
+                <a
+                  href={socialLinks.twitter}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#1DA1F2]/20 hover:bg-[#1DA1F2]/30 text-[#1DA1F2] rounded-lg transition-colors"
+                >
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                  </svg>
+                  X / Twitter
+                </a>
+                <a
+                  href={socialLinks.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#0A66C2]/20 hover:bg-[#0A66C2]/30 text-[#0A66C2] rounded-lg transition-colors"
+                >
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                  </svg>
+                  LinkedIn
+                </a>
+                <a
+                  href={socialLinks.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#1877F2]/20 hover:bg-[#1877F2]/30 text-[#1877F2] rounded-lg transition-colors"
+                >
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                  </svg>
+                  Facebook
+                </a>
+                <button
+                  onClick={() => copyToClipboard('https://trucefoundation.world', 'link')}
+                  className="flex items-center gap-2 px-4 py-2 bg-slate-700/50 hover:bg-slate-700 text-slate-300 rounded-lg transition-colors"
+                >
+                  {copiedId === 'link' ? (
+                    <>
+                      <svg className="w-5 h-5 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      Copied!
+                    </>
+                  ) : (
+                    <>
+                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                      </svg>
+                      Copy Link
+                    </>
+                  )}
+                </button>
+              </div>
+            </motion.div>
+
+            {/* Hashtags */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="p-6 rounded-2xl bg-slate-900/50 border border-slate-700/50"
+            >
+              <h3 className="text-lg font-semibold text-white mb-4">Official Hashtags</h3>
+              <div className="flex flex-wrap gap-2">
+                {['#OlympicTruce', '#MilanoCortina2026', '#PeaceInSport', '#TruceIndex'].map((tag) => (
+                  <button
+                    key={tag}
+                    onClick={() => copyToClipboard(tag, tag)}
+                    className={`px-3 py-1.5 rounded-full text-sm transition-all ${
+                      copiedId === tag
+                        ? 'bg-green-500/20 text-green-400 border border-green-500/50'
+                        : 'bg-blue-500/10 text-blue-400 border border-blue-500/30 hover:bg-blue-500/20'
+                    }`}
+                  >
+                    {copiedId === tag ? 'Copied!' : tag}
+                  </button>
+                ))}
+              </div>
+              <p className="text-xs text-slate-500 mt-3">Click to copy hashtag</p>
+            </motion.div>
+          </div>
+
+          {/* Talking Points */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+          >
+            <h3 className="text-lg font-semibold text-white mb-4">Ready-to-Use Talking Points</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {TALKING_POINTS.map((point) => (
+                <div
+                  key={point.id}
+                  className="p-4 rounded-xl bg-slate-900/30 border border-slate-700/30 hover:border-slate-600/50 transition-colors"
+                >
+                  <div className="flex items-start justify-between gap-3 mb-2">
+                    <h4 className="font-medium text-white">{point.title}</h4>
+                    <button
+                      onClick={() => copyToClipboard(point.text, point.id)}
+                      className={`flex-shrink-0 px-2 py-1 rounded text-xs transition-all ${
+                        copiedId === point.id
+                          ? 'bg-green-500/20 text-green-400'
+                          : 'bg-slate-700/50 text-slate-400 hover:text-white hover:bg-slate-700'
+                      }`}
+                    >
+                      {copiedId === point.id ? 'Copied!' : 'Copy'}
+                    </button>
+                  </div>
+                  <p className="text-sm text-slate-400">{point.text}</p>
+                </div>
+              ))}
+            </div>
           </motion.div>
         </div>
       </section>
