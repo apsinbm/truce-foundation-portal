@@ -71,9 +71,9 @@ export default function Hero() {
           transition={{ delay: 0.45, duration: 0.6 }}
           className="flex flex-wrap justify-center gap-4 text-xs sm:text-sm -mt-1"
         >
-          <div className="px-4 py-2 bg-blue-500/10 border border-blue-500/30 rounded-lg text-blue-300">
-            <span className="font-bold">165</span> UN Co-Sponsors
-          </div>
+          <a href="/co-sponsors" className="px-4 py-2 bg-blue-500/10 border border-blue-500/30 rounded-lg text-blue-300 hover:bg-blue-500/20 transition-colors">
+            <span className="font-bold">166</span> UN Co-Sponsors
+          </a>
           <div className="px-4 py-2 bg-pink-500/10 border border-pink-500/30 rounded-lg text-pink-300">
             Most <span className="font-bold">Gender-Balanced</span> Winter Games
           </div>
@@ -104,6 +104,68 @@ export default function Hero() {
           >
             Truce Portal
           </a>
+        </motion.div>
+
+        {/* Collaborating Organizations */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6, duration: 0.6 }}
+          className="pt-16"
+        >
+          <p className="text-xs uppercase tracking-widest text-slate-500 mb-6">
+            Collaborating Organizations
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12">
+            <a
+              href="https://www.bfrv.it"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="opacity-70 hover:opacity-100 transition-opacity"
+            >
+              <img
+                src="/logos/partners/house-of-sport-volunteers.jpeg"
+                alt="The House of Sport Volunteers"
+                className="h-10 sm:h-12 w-auto object-contain bg-white rounded px-2 py-1"
+              />
+            </a>
+            <a
+              href="https://www.bciu.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="opacity-70 hover:opacity-100 transition-opacity"
+            >
+              <img
+                src="/logos/partners/bciu.jpeg"
+                alt="BCIU - Business Council for International Understanding"
+                className="h-10 sm:h-12 w-auto object-contain bg-white rounded px-2 py-1"
+              />
+            </a>
+            <a
+              href="https://www.savethedream.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="opacity-70 hover:opacity-100 transition-opacity"
+            >
+              <img
+                src="/logos/partners/save-the-dream.jpeg"
+                alt="Save the Dream"
+                className="h-10 sm:h-12 w-auto object-contain bg-white rounded px-2 py-1"
+              />
+            </a>
+            <a
+              href="https://www.thatcherandco.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="opacity-70 hover:opacity-100 transition-opacity"
+            >
+              <img
+                src="/logos/partners/thatcher-co.jpeg"
+                alt="Thatcher+Co."
+                className="h-10 sm:h-12 w-auto object-contain bg-white rounded px-2 py-1"
+              />
+            </a>
+          </div>
         </motion.div>
       </div>
     </section>

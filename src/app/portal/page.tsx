@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import Header from '@/components/Header';
 import SubSiteCard from '@/components/SubSiteCard';
 import Footer from '@/components/Footer';
@@ -38,8 +39,51 @@ export default function PortalHub() {
         <div className="relative z-10 max-w-6xl mx-auto">
           {/* Cards Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+            {/* Co-Sponsors Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0 }}
+            >
+              <Link
+                href="/co-sponsors"
+                className="glass-card p-6 relative overflow-hidden group transition-all duration-300 cursor-pointer hover:border-green-500/50 hover:shadow-lg hover:shadow-green-500/10 block h-full"
+              >
+                {/* Status badge */}
+                <div className="absolute top-4 right-4 px-2 py-1 rounded-full text-xs font-medium bg-green-500/20 text-green-400 border border-green-500/30">
+                  Live
+                </div>
+
+                {/* Icon */}
+                <div className="text-4xl mb-4">🌍</div>
+
+                {/* Title */}
+                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-green-400 transition-colors">
+                  166 Co-Sponsors
+                </h3>
+
+                {/* Description */}
+                <p className="text-sm text-slate-400 line-clamp-2">
+                  Milano-Cortina 2026 Olympic Truce resolution A/80/L.10
+                </p>
+
+                {/* Arrow indicator */}
+                <div className="mt-4 flex items-center gap-2 text-green-400 text-sm font-medium">
+                  <span>View Full List</span>
+                  <svg
+                    className="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </div>
+              </Link>
+            </motion.div>
+
             {SUB_SITES.map((site, index) => (
-              <SubSiteCard key={site.id} site={site} index={index} />
+              <SubSiteCard key={site.id} site={site} index={index + 1} />
             ))}
           </div>
         </div>

@@ -78,7 +78,7 @@ const TOOLKIT_ITEMS: ToolkitItem[] = [
   {
     id: 'policy-brief-un-2026',
     title: 'UN Resolution A/80/L.10 (2025)',
-    description: 'Official Olympic Truce resolution for Milano-Cortina 2026 - 165 co-sponsors, adopted by consensus',
+    description: 'Official Olympic Truce resolution for Milano-Cortina 2026 - 166 co-sponsors, adopted by consensus',
     type: 'pdf',
     category: 'policy',
     downloadUrl: '/downloads/A_80_L.10-EN.pdf',

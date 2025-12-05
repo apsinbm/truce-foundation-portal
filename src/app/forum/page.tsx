@@ -91,7 +91,7 @@ const SAMPLE_THREADS: DiscussionThread[] = [
   },
   {
     id: '2',
-    title: '165 Co-Sponsors: What does record support mean for 2026?',
+    title: '166 Co-Sponsors: What does record support mean for 2026?',
     author: 'Truce Foundation',
     category: 'milano-cortina-2026',
     replies: 0,

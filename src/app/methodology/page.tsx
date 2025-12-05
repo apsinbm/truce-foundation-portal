@@ -314,7 +314,7 @@ export default function MethodologyPage() {
                   <span className="text-xs text-blue-300">Current</span>
                 </div>
                 <h3 className="font-semibold text-white text-sm">Milano-Cortina 2026 Resolution</h3>
-                <p className="text-xs text-slate-400 mt-1">165 co-sponsors. Defines Truce window: Jan 30 - Mar 22, 2026.</p>
+                <p className="text-xs text-slate-400 mt-1">166 co-sponsors. Defines Truce window: Jan 30 - Mar 22, 2026.</p>
                 <a href="/downloads/A_80_L.10-EN.pdf" className="inline-flex items-center gap-1 text-xs text-green-400 mt-2 hover:text-green-300">
                   <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />

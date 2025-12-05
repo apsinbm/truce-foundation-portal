@@ -82,7 +82,7 @@ const RECENT_COVERAGE: CoverageItem[] = [
 // Key talking points for journalists
 const KEY_TALKING_POINTS = [
   {
-    stat: '165',
+    stat: '166',
     label: 'UN Co-Sponsors',
     context: 'Out of 193 member states - highest in Olympic Truce history',
   },

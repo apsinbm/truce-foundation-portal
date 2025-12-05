@@ -23,8 +23,9 @@ const NAV_GROUPS = [
     label: 'Learn',
     items: [
       { href: '/history', label: 'Truce History' },
+      { href: '/co-sponsors', label: 'Co-Sponsors (166)' },
       { href: '/methodology', label: 'Methodology' },
-      { href: '/documents', label: 'UN Documents' },
+      { href: '/documents', label: 'Documents' },
       { href: '/accountability', label: 'Accountability' },
     ],
   },
@@ -38,11 +39,18 @@ const NAV_GROUPS = [
     ],
   },
   {
+    label: 'Media',
+    items: [
+      { href: '/gallery', label: 'Photo Gallery' },
+      { href: '/videos', label: 'Video Gallery' },
+      { href: '/press', label: 'Press & Media' },
+    ],
+  },
+  {
     label: 'About',
     items: [
       { href: '/about', label: 'About Us' },
       { href: '/partners', label: 'Partners' },
-      { href: '/press', label: 'Press & Media' },
       { href: '/reports', label: 'Reports' },
     ],
   },

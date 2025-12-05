@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { format, subDays, parseISO } from 'date-fns';
 import { TRUCE_INDEX_URL } from '@/lib/constants';
 import Header from '@/components/Header';
+import SourceBadge, { FatalityRange } from '@/components/SourceBadge';
 
 interface BriefingIncident {
   id: string;
@@ -17,6 +18,13 @@ interface BriefingIncident {
   narrative: string;
   latitude: number;
   longitude: number;
+  // Source metadata
+  source_primary?: string;
+  source_dataset_version?: string;
+  // Fatality estimates
+  fatalities_best?: number;
+  fatalities_low?: number;
+  fatalities_high?: number;
 }
 
 interface CountryBreakdown {
@@ -275,13 +283,16 @@ export default function DailyBriefingPage() {
                         >
                           <div className={`w-2 h-2 mt-2 rounded-full ${SEVERITY_COLORS[incident.severity]}`}></div>
                           <div className="flex-1 min-w-0">
-                            <div className="flex items-center gap-2 mb-1">
+                            <div className="flex items-center gap-2 mb-1 flex-wrap">
                               <span className="text-xs px-2 py-0.5 bg-slate-700 rounded uppercase text-slate-300">
                                 {incident.severity}
                               </span>
                               <span className="text-xs text-slate-500">
                                 {TYPE_LABELS[incident.type] || incident.type}
                               </span>
+                              {incident.source_primary && (
+                                <SourceBadge source={incident.source_primary} size="sm" />
+                              )}
                             </div>
                             <p className="text-sm font-medium text-slate-200 mb-1">
                               {incident.location_name}, {incident.country_iso3}
@@ -290,6 +301,16 @@ export default function DailyBriefingPage() {
                               <p className="text-xs text-slate-400 line-clamp-2">
                                 {incident.narrative}
                               </p>
+                            )}
+                            {incident.fatalities_best && (
+                              <div className="mt-1.5">
+                                <FatalityRange
+                                  low={incident.fatalities_low}
+                                  best={incident.fatalities_best}
+                                  high={incident.fatalities_high}
+                                  compact
+                                />
+                              </div>
                             )}
                           </div>
                         </div>

@@ -3,9 +3,83 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Header from '@/components/Header';
-import ExpertQuotes from '@/components/ExpertQuotes';
-import AncientWisdom from '@/components/AncientWisdom';
 import Footer from '@/components/Footer';
+
+// Previous Olympic Truce Award recipients
+const PREVIOUS_AWARDEES = [
+  { name: 'H.E. Kostas Karamanlis', title: 'Prime Minister', country: 'Greece' },
+  { name: 'H.E. George Papandreou', title: 'Foreign Minister', country: 'Greece' },
+  { name: 'Mitt Romney', title: 'President, Salt Lake Olympic Games', country: 'USA' },
+  { name: 'H.E. Gianfranco Fini', title: 'Foreign Minister', country: 'Italy' },
+  { name: 'Peter Ueberroth', title: 'President, US Olympic Committee', country: 'USA' },
+  { name: 'H.E. Olusegun Obasanjo', title: 'President', country: 'Nigeria' },
+  { name: 'H.E. Ellen Johnson-Sirleaf', title: 'President', country: 'Liberia' },
+  { name: 'H.S.H. Prince Albert II', title: 'Sovereign Prince', country: 'Monaco' },
+  { name: 'H.E. Lillian Boyce', title: 'Minister', country: 'Turks and Caicos' },
+  { name: 'Juan Antonio Samaranch', title: 'President-Emeritus, IOC', country: 'Spain' },
+  { name: 'H.E. Cai Mingzhao', title: 'Vice Minister', country: 'China' },
+  { name: 'Irwin Belk', title: 'Co-founder, US Olympic Committee', country: 'USA' },
+  { name: 'Richard C. Levin', title: 'President, Yale University', country: 'USA' },
+  { name: 'Lord Michael Bates', title: 'Olympic Truce Advocate, House of Lords', country: 'United Kingdom' },
+  { name: 'Mario Pescante', title: 'Vice President, IOC', country: 'Italy' },
+  { name: 'Anita DeFrantz', title: 'Vice President, IOC', country: 'USA' },
+  { name: 'Wilfried Lemke', title: 'Special Advisor on Sport for Peace, UN', country: 'Germany' },
+  { name: 'Andrew Parsons', title: 'President, Brazilian Paralympics', country: 'Brazil' },
+  { name: 'Carlos Henrique Schroder', title: 'General Director, Globo TV', country: 'Brazil' },
+  { name: 'Admiral James G. Stavridis', title: 'Supreme Allied Commander-Europe, NATO', country: 'USA' },
+  { name: 'Choi Moon-soon', title: 'Governor, Gangwon Province', country: 'Republic of Korea' },
+  { name: 'Lee Hee-beom', title: 'President, PyeongChang Olympic Committee', country: 'Republic of Korea' },
+  { name: 'Miroslav L. Lajcak', title: 'President, UN 72nd General Assembly', country: 'Slovakia' },
+];
+
+// Articles and publications
+const PUBLICATIONS = [
+  {
+    title: 'Can the Olympics Help Us Understand Each Other?',
+    author: 'Hugh Dugan',
+    publication: 'Newsmax',
+    date: 'July 30, 2024',
+    description: 'Writing from Paris about the 2024 Olympics, Dugan introduces "Geolympics" — tracking the Olympic Truce\'s real-time effects on international relations.',
+    url: 'https://www.newsmax.com/hughdugan/olympics-trucy-humanity/2024/07/30/id/1174522/',
+    type: 'article',
+  },
+  {
+    title: 'May Olympic Truce Day Align our Troubled World Through Sport',
+    author: 'Hugh Dugan',
+    publication: 'Newsmax',
+    date: 'February 29, 2024',
+    description: 'A proposal to establish February 29 (leap day) as "Olympic Truce Day" to promote global peace through athletics.',
+    url: 'https://www.newsmax.com/hughdugan/games-olympians-truce/2024/02/29/id/1155380/',
+    type: 'article',
+  },
+  {
+    title: 'In Ethiopia, an Unfinished Peace Risks Betraying the People of Tigray',
+    author: 'Sarah Miller & Abdullahi Boru Halakhe',
+    publication: 'Just Security',
+    date: 'December 3, 2025',
+    description: 'Examining the fragile state of the Pretoria Agreement, with 600,000 civilians killed and 760,000+ internally displaced.',
+    url: 'https://www.justsecurity.org/125778/ethiopia-unfinished-peace-tigray-region/',
+    type: 'featured',
+  },
+  {
+    title: 'Maritime Intelligence Brief: Expanding Risks in the Red Sea and Black Sea',
+    author: 'World Ports Organization',
+    publication: 'World Ports Organization',
+    date: '2024',
+    description: 'Analysis of maritime threats affecting global shipping routes, including Houthi attacks in the Red Sea and Russian naval operations in the Black Sea.',
+    url: 'https://www.worldports.org/maritime-intelligence-brief-expanding-risks-in-the-red-sea-and-black-sea/',
+    type: 'reference',
+  },
+  {
+    title: 'Landmine Crisis: Casualties Rising as Funding Falls',
+    author: 'UN News / Mine Monitor',
+    publication: 'UN News',
+    date: 'December 2025',
+    description: 'Mine action workers warn that the deadly legacy of conflicts continues to kill and maim civilians in Gaza, Sudan, and beyond while facing significant funding cuts.',
+    url: 'https://us15.campaign-archive.com/?e=553d9831d6&u=372753f560ef60c400f1a4f3f&id=e1c759d235',
+    type: 'reference',
+  },
+];
 
 export default function AboutPage() {
   return (
@@ -13,210 +87,288 @@ export default function AboutPage() {
       <Header />
 
       {/* Hero */}
-      <section className="pt-32 pb-16 px-4">
+      <section className="pt-32 pb-12 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
+            className="space-y-4"
           >
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
+            <h1 className="text-4xl sm:text-5xl font-bold text-white">
               About the Truce Foundation
             </h1>
-            <p className="text-lg text-slate-400 max-w-2xl mx-auto">
-              Transforming the ancient tradition of Olympic Truce into measurable, verifiable action for peace.
+            <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+              Transforming the Olympic Truce tradition into action for global peace
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Content Sections */}
-      <section className="py-12 px-4">
-        <div className="max-w-4xl mx-auto space-y-16">
-          {/* The Olympic Truce - from Hugh's essay */}
-          <motion.div
+      {/* Foundation Flyer Download */}
+      <section className="py-8 px-4">
+        <div className="max-w-4xl mx-auto">
+          <motion.a
+            href="/documents/truce-foundation-flyer.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="glass-card p-8 sm:p-10"
+            className="block p-6 rounded-2xl bg-gradient-to-br from-blue-500/20 to-purple-500/10 border border-blue-500/30 hover:border-blue-400/50 transition-all group"
           >
-            <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-              <span className="text-3xl">🏛️</span>
-              The Olympic Truce
-            </h2>
-            <div className="space-y-4 text-slate-300">
-              <p>
-                The Olympic Truce is the source and the highest principle of the Olympic Movement. It is the{' '}
-                <strong className="text-white">oldest, continuous international agreement in history</strong>,
-                dating from 776 BCE. The warring Greek city-states were in perpetual civil wars. Their leadership
-                sought reprieve and appealed to the Oracle at Delphi for assistance. The Oracle suggested a truce
-                among them all to precede and continue through a major cultural conclave of sport where athletes
-                would show their prowess in praise of Zeus.
-              </p>
-              <p>
-                All would be enabled <strong className="text-white">safe passage</strong> to the sacred grove at Olympia
-                (not itself part of any city state), safe participation there, and again safe passage back to their homelands.
-                The truce was not a ceasefire "per se", but rather a guarantee to enable all to pass freely and safely
-                among and through the city states to and from the Games, and to participate without fear of attack
-                or reprisal from enemies also in attendance.
-              </p>
-              <p>
-                The impetus of the Olympic Truce was to manage through civil wars. The convening of the games as a
-                near religious ritual called upon each person in their soul to abide by the sacred Truce which was
-                etched on a ceremonial discus housed in the Temple of Hera facing the gate to the field of play.
-                By convening from various directions to common ground, it enabled a practice of{' '}
-                <strong className="text-white">people-to-people interaction</strong> meant to surmount the tensions
-                of their respective regimes.
-              </p>
-              <p>
-                The Olympic Truce was all the corpus of international law for centuries until law was further
-                elaborated to encompass other areas. The United Nations subsequently formalized its status in the
-                modern era through a series of resolutions that have been the{' '}
-                <strong className="text-white">most supported UN agreements in history</strong>.
-              </p>
-              <p>
-                For Milano-Cortina 2026, the UN General Assembly adopted resolution{' '}
-                <a href="/downloads/A_80_L.10-EN.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">
-                  A/80/L.10
-                </a>{' '}
-                on November 19, 2025 with a record <strong className="text-white">165 co-sponsors</strong> - the highest
-                in Olympic Truce history. There will be one in late October 2027 for the LA28 Summer Games.
-                The Truce window for Milano-Cortina runs from January 30 to March 22, 2026.
-              </p>
-            </div>
-          </motion.div>
-
-          {/* Our Approach */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="glass-card p-8 sm:p-10"
-          >
-            <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-              <span className="text-3xl">🕊️</span>
-              Our Approach
-            </h2>
-            <div className="space-y-4 text-slate-300">
-              <p>
-                The Truce Foundation advocates the Olympic Truce in the modern era through recognition of
-                international figures and through monitoring compliance with UN resolutions. Mindful that
-                what the world today knows of the ancient Olympic Games comes principally through{' '}
-                <strong className="text-white">statuary and poetry</strong> of that era, the Truce Foundation
-                has made gifts of statuary at Olympic headquarters in Lausanne, Switzerland, and in
-                Colorado Springs, Colorado, USA. It makes gifts of original poetry to key figures in
-                the movement of peace through sport.
-              </p>
-              <p>
-                We believe that <strong className="text-white">what gets measured gets managed</strong>, and
-                what gets verified gets respected. The Truce Compliance Index represents the first systematic,
-                evidence-based mechanism for monitoring adherence to the Olympic Truce resolution.
-              </p>
-            </div>
-          </motion.div>
-
-          {/* Mission */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="glass-card p-8 sm:p-10"
-          >
-            <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-              <span className="text-3xl">🎯</span>
-              Our Mission
-            </h2>
-            <div className="space-y-4 text-slate-300">
-              <p>
-                The Truce Foundation exists to transform the symbolic Olympic Truce into a meaningful
-                instrument for peace.
-              </p>
-              <p className="font-medium text-white">
-                Our core objectives:
-              </p>
-              <ul className="list-disc list-inside space-y-2 ml-4">
-                <li>Monitor and document compliance with the Olympic Truce resolution</li>
-                <li>Provide independent, verifiable assessments of member state actions</li>
-                <li>Create transparency and accountability around truce commitments</li>
-                <li>Engage youth, athletes, and civil society in peace advocacy</li>
-                <li>Archive and report on truce-related activities for future reference</li>
-              </ul>
-            </div>
-          </motion.div>
-
-          {/* Methodology */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="glass-card p-8 sm:p-10"
-          >
-            <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-              <span className="text-3xl">📊</span>
-              Our Methodology
-            </h2>
-            <div className="space-y-4 text-slate-300">
-              <p>
-                The Truce Compliance Index uses a multi-source verification approach to assess
-                compliance with the Olympic Truce. Our methodology includes:
-              </p>
-              <div className="grid sm:grid-cols-2 gap-4 mt-6">
-                <div className="bg-slate-800/50 p-4 rounded-lg">
-                  <h3 className="font-semibold text-white mb-2">Data Sources</h3>
-                  <p className="text-sm">UN reports, conflict databases, NGO assessments, and verified media reports</p>
-                </div>
-                <div className="bg-slate-800/50 p-4 rounded-lg">
-                  <h3 className="font-semibold text-white mb-2">Verification</h3>
-                  <p className="text-sm">Multi-tier verification with independent audit capabilities</p>
-                </div>
-                <div className="bg-slate-800/50 p-4 rounded-lg">
-                  <h3 className="font-semibold text-white mb-2">Scoring</h3>
-                  <p className="text-sm">Composite scoring across multiple compliance dimensions</p>
-                </div>
-                <div className="bg-slate-800/50 p-4 rounded-lg">
-                  <h3 className="font-semibold text-white mb-2">Transparency</h3>
-                  <p className="text-sm">Open methodology documentation and data accessibility</p>
-                </div>
+            <div className="flex items-center gap-4">
+              <div className="w-16 h-16 bg-blue-500/20 rounded-xl flex items-center justify-center text-3xl">
+                📄
+              </div>
+              <div className="flex-1">
+                <h2 className="text-xl font-bold text-white group-hover:text-blue-300 transition-colors">
+                  Truce Foundation Flyer
+                </h2>
+                <p className="text-slate-400 text-sm mt-1">
+                  Download our official flyer featuring the Olympic Truce Award, previous awardees, and foundation information
+                </p>
+              </div>
+              <div className="text-blue-400 group-hover:translate-x-1 transition-transform">
+                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
               </div>
             </div>
-          </motion.div>
-
+          </motion.a>
         </div>
       </section>
 
-      {/* Voices for Peace - Expert Quotes */}
-      <ExpertQuotes />
+      {/* Featured Article */}
+      <section className="py-8 px-4">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-6"
+          >
+            <h2 className="text-2xl font-bold text-white mb-2">Featured Analysis</h2>
+            <p className="text-slate-400">Critical perspectives on peace and conflict</p>
+          </motion.div>
 
-      {/* Ancient Wisdom */}
-      <AncientWisdom />
+          {PUBLICATIONS.filter(p => p.type === 'featured').map((pub, index) => (
+            <motion.a
+              key={pub.url}
+              href={pub.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              className="block p-6 rounded-2xl bg-gradient-to-br from-amber-500/20 to-red-500/10 border border-amber-500/30 hover:border-amber-400/50 transition-all group"
+            >
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-amber-500/20 rounded-lg flex items-center justify-center text-2xl flex-shrink-0">
+                  🔥
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="px-2 py-0.5 text-xs bg-amber-500/20 text-amber-400 rounded">Featured</span>
+                    <span className="text-xs text-slate-500">{pub.publication} • {pub.date}</span>
+                  </div>
+                  <h3 className="text-lg font-semibold text-white group-hover:text-amber-300 transition-colors mb-2">
+                    {pub.title}
+                  </h3>
+                  <p className="text-sm text-slate-400 mb-2">{pub.description}</p>
+                  <p className="text-xs text-slate-500">By {pub.author}</p>
+                </div>
+              </div>
+            </motion.a>
+          ))}
+        </div>
+      </section>
 
-      {/* Get Involved Section */}
+      {/* Publications by Hugh Dugan */}
+      <section className="py-8 px-4">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-6"
+          >
+            <h2 className="text-2xl font-bold text-white mb-2">Publications by Hugh Dugan</h2>
+            <p className="text-slate-400">Founder's writings on the Olympic Truce</p>
+          </motion.div>
+
+          <div className="space-y-4">
+            {PUBLICATIONS.filter(p => p.author === 'Hugh Dugan').map((pub, index) => (
+              <motion.a
+                key={pub.url}
+                href={pub.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="block p-5 rounded-xl bg-slate-900/50 border border-slate-700/50 hover:border-blue-500/50 transition-all group"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center text-xl flex-shrink-0">
+                    📰
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="text-xs text-slate-500">{pub.publication} • {pub.date}</span>
+                    </div>
+                    <h3 className="font-semibold text-white group-hover:text-blue-400 transition-colors mb-1">
+                      {pub.title}
+                    </h3>
+                    <p className="text-sm text-slate-400">{pub.description}</p>
+                  </div>
+                  <div className="text-slate-500 group-hover:text-blue-400 transition-colors">
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </div>
+                </div>
+              </motion.a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Reference Materials */}
+      <section className="py-8 px-4">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-6"
+          >
+            <h2 className="text-2xl font-bold text-white mb-2">Reference Materials</h2>
+            <p className="text-slate-400">Key reports and analysis on global conflicts</p>
+          </motion.div>
+
+          <div className="space-y-4">
+            {PUBLICATIONS.filter(p => p.type === 'reference').map((pub, index) => (
+              <motion.a
+                key={pub.url}
+                href={pub.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="block p-5 rounded-xl bg-slate-900/50 border border-slate-700/50 hover:border-cyan-500/50 transition-all group"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-cyan-500/20 rounded-lg flex items-center justify-center text-xl flex-shrink-0">
+                    📊
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="text-xs text-slate-500">{pub.publication} • {pub.date}</span>
+                    </div>
+                    <h3 className="font-semibold text-white group-hover:text-cyan-400 transition-colors mb-1">
+                      {pub.title}
+                    </h3>
+                    <p className="text-sm text-slate-400">{pub.description}</p>
+                  </div>
+                  <div className="text-slate-500 group-hover:text-cyan-400 transition-colors">
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </div>
+                </div>
+              </motion.a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Previous Awardees */}
+      <section className="py-12 px-4 bg-slate-900/30">
+        <div className="max-w-5xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-8"
+          >
+            <h2 className="text-2xl font-bold text-white mb-2">Olympic Truce Award Recipients</h2>
+            <p className="text-slate-400">Honoring leaders who champion peace through sport</p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {PREVIOUS_AWARDEES.map((awardee, index) => (
+              <motion.div
+                key={awardee.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.02 }}
+                className="p-3 rounded-lg bg-slate-800/30 border border-slate-700/30"
+              >
+                <p className="font-medium text-white text-sm">{awardee.name}</p>
+                <p className="text-xs text-slate-400">{awardee.title}</p>
+                <p className="text-xs text-slate-500">{awardee.country}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* The Truce Sculpture */}
       <section className="py-12 px-4">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="glass-card p-8 sm:p-10 text-center"
+            className="p-8 rounded-2xl bg-gradient-to-br from-purple-500/10 to-slate-900/50 border border-purple-500/30 text-center"
           >
-            <h2 className="text-2xl font-bold text-white mb-4">
-              Get Involved
-            </h2>
-            <p className="text-slate-400 mb-6 max-w-xl mx-auto">
-              The Olympic Truce belongs to everyone. Join us in making peace measurable and achievable.
+            <h2 className="text-xl font-bold text-white mb-4">The Olympic Truce Sculpture</h2>
+            <p className="text-slate-300 leading-relaxed mb-4">
+              The Foundation's monument "Olympic Truce" by Rosa Serra (Spain, 2001) stands at the
+              Olympic Museum in Lausanne, Switzerland — a permanent symbol of the world's oldest
+              peace tradition.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                href="/advocacy"
-                className="px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-medium rounded-lg transition-colors"
-              >
-                Advocacy Toolkit
-              </Link>
-              <Link
-                href="/partners"
-                className="px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white font-medium rounded-lg transition-colors"
-              >
-                Partner With Us
-              </Link>
+            <p className="text-sm text-slate-500">
+              Olympic Museum, Lausanne
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section className="py-12 px-4">
+        <div className="max-w-2xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="p-8 rounded-2xl bg-slate-900/50 border border-slate-700/50 text-center"
+          >
+            <h2 className="text-xl font-bold text-white mb-4">Contact</h2>
+            <div className="space-y-2 text-slate-400">
+              <p className="font-medium text-white">Truce Foundation</p>
+              <p>451 Seven Ponds Towd Road</p>
+              <p>Water Mill, NY 11976 USA</p>
+              <p className="pt-2">
+                <a href="tel:+12123806975" className="text-blue-400 hover:text-blue-300">
+                  +1 (212) 380-6975
+                </a>
+              </p>
+              <p>
+                <a href="mailto:Hugh.Dugan@TruceFoundation.world" className="text-blue-400 hover:text-blue-300">
+                  Hugh.Dugan@TruceFoundation.world
+                </a>
+              </p>
+              <p>
+                <a href="https://www.TruceFoundation.world" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">
+                  www.TruceFoundation.world
+                </a>
+              </p>
             </div>
           </motion.div>
         </div>
@@ -232,35 +384,32 @@ export default function AboutPage() {
               className="p-4 rounded-xl bg-slate-900/50 border border-slate-700/50 hover:border-blue-500/50 transition-colors group"
             >
               <h3 className="font-semibold text-white group-hover:text-blue-400 transition-colors">
-                Truce History
+                Olympic Truce History
               </h3>
-              <p className="text-sm text-slate-400 mt-1">30+ years of Olympic Truce</p>
+              <p className="text-sm text-slate-400 mt-1">From ancient Greece to today</p>
             </Link>
             <Link
-              href="/methodology"
+              href="/co-sponsors"
               className="p-4 rounded-xl bg-slate-900/50 border border-slate-700/50 hover:border-blue-500/50 transition-colors group"
             >
               <h3 className="font-semibold text-white group-hover:text-blue-400 transition-colors">
-                Index Methodology
+                166 Co-Sponsors
               </h3>
-              <p className="text-sm text-slate-400 mt-1">How we measure compliance</p>
+              <p className="text-sm text-slate-400 mt-1">Milano-Cortina 2026 resolution</p>
             </Link>
-            <a
-              href="https://truce-index.vercel.app"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/portal"
               className="p-4 rounded-xl bg-slate-900/50 border border-slate-700/50 hover:border-blue-500/50 transition-colors group"
             >
               <h3 className="font-semibold text-white group-hover:text-blue-400 transition-colors">
-                Live Index
+                Truce Portal
               </h3>
-              <p className="text-sm text-slate-400 mt-1">Real-time compliance data</p>
-            </a>
+              <p className="text-sm text-slate-400 mt-1">All resources and tools</p>
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
       <Footer />
     </main>
   );

@@ -152,7 +152,7 @@ export default function HistoryHubPage() {
                     <li>• 17 Olympic Games with formal Truce resolutions</li>
                     <li>• Key moments: Korean unity, Kofi Annan's diplomacy</li>
                     <li>• Violations: Georgia 2008, Crimea 2014, Ukraine 2022</li>
-                    <li>• Milano-Cortina 2026: 165 co-sponsors</li>
+                    <li>• Milano-Cortina 2026: 166 co-sponsors</li>
                   </ul>
                   <span className="inline-flex items-center gap-2 text-blue-400 group-hover:gap-3 transition-all">
                     Explore Modern History
@@ -197,7 +197,7 @@ export default function HistoryHubPage() {
               transition={{ delay: 0.2 }}
               className="p-4 rounded-xl bg-slate-800/50 border border-slate-700/50 text-center"
             >
-              <span className="text-3xl font-bold text-blue-400">165</span>
+              <span className="text-3xl font-bold text-blue-400">166</span>
               <p className="text-xs text-slate-500 mt-1">2026 Co-Sponsors</p>
             </motion.div>
             <motion.div

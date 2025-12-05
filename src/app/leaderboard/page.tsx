@@ -42,6 +42,7 @@ interface LeaderboardData {
 }
 
 type TimeFilter = '7d' | '30d' | '90d' | '1y' | 'all';
+type SourceFilter = 'all' | 'ACLED' | 'UCDP';
 
 const TIME_FILTERS: { value: TimeFilter; label: string }[] = [
   { value: '7d', label: 'Last 7 Days' },
@@ -49,6 +50,37 @@ const TIME_FILTERS: { value: TimeFilter; label: string }[] = [
   { value: '90d', label: 'Last 3 Months' },
   { value: '1y', label: 'Last Year' },
   { value: 'all', label: 'All Time' },
+];
+
+// Data source presets - matches the date ranges where each source has data
+const SOURCE_PRESETS: {
+  value: SourceFilter;
+  label: string;
+  description: string;
+  methodology: string;
+  dateRange?: { start: string; end?: string };
+}[] = [
+  {
+    value: 'all',
+    label: 'All Sources',
+    description: 'UCDP 2022-2023 + ACLED 2024',
+    methodology: 'Combined data from both academic (UCDP) and near real-time (ACLED) sources',
+    dateRange: { start: '2022-01-01T00:00:00Z' },
+  },
+  {
+    value: 'UCDP',
+    label: 'UCDP',
+    description: 'Uppsala Conflict Data (2022-2023)',
+    methodology: 'Academic dataset with 25+ death threshold. Provides low/best/high fatality estimates.',
+    dateRange: { start: '2022-01-01T00:00:00Z', end: '2023-12-31T23:59:59Z' },
+  },
+  {
+    value: 'ACLED',
+    label: 'ACLED',
+    description: 'Armed Conflict Location & Event Data (2024)',
+    methodology: 'Near real-time, human-coded events. No fatality threshold. Weekly updates.',
+    dateRange: { start: '2024-01-01T00:00:00Z' },
+  },
 ];
 
 function getTrendIcon(trend: string) {
@@ -78,6 +110,7 @@ export default function LeaderboardPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [timeFilter, setTimeFilter] = useState<TimeFilter>('30d');
+  const [sourceFilter, setSourceFilter] = useState<SourceFilter>('all');
   const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
 
   // Export data as CSV
@@ -165,31 +198,47 @@ export default function LeaderboardPage() {
       setLoading(true);
       setError(null);
 
-      let start: string;
-      const end = new Date().toISOString();
+      // Get the source preset for date ranges
+      const sourcePreset = SOURCE_PRESETS.find(s => s.value === sourceFilter);
 
-      switch (timeFilter) {
-        case '7d':
-          start = subDays(new Date(), 7).toISOString();
-          break;
-        case '30d':
-          start = subDays(new Date(), 30).toISOString();
-          break;
-        case '90d':
-          start = subMonths(new Date(), 3).toISOString();
-          break;
-        case '1y':
-          start = subMonths(new Date(), 12).toISOString();
-          break;
-        case 'all':
-          start = subMonths(new Date(), 36).toISOString();
-          break;
-        default:
-          start = subDays(new Date(), 30).toISOString();
+      let start: string;
+      let end: string = new Date().toISOString();
+
+      // If source filter has a fixed date range, use it
+      if (sourcePreset?.dateRange) {
+        start = sourcePreset.dateRange.start;
+        if (sourcePreset.dateRange.end) {
+          end = sourcePreset.dateRange.end;
+        }
+      } else {
+        // Use time filter for relative date ranges
+        switch (timeFilter) {
+          case '7d':
+            start = subDays(new Date(), 7).toISOString();
+            break;
+          case '30d':
+            start = subDays(new Date(), 30).toISOString();
+            break;
+          case '90d':
+            start = subMonths(new Date(), 3).toISOString();
+            break;
+          case '1y':
+            start = subMonths(new Date(), 12).toISOString();
+            break;
+          case 'all':
+            start = subMonths(new Date(), 36).toISOString();
+            break;
+          default:
+            start = subDays(new Date(), 30).toISOString();
+        }
       }
 
       try {
-        const res = await fetch(`${TRUCE_INDEX_URL}/api/leaderboard?start=${start}&end=${end}&limit=50`);
+        let url = `${TRUCE_INDEX_URL}/api/leaderboard?start=${start}&end=${end}&limit=50`;
+        if (sourceFilter !== 'all') {
+          url += `&source=${sourceFilter}`;
+        }
+        const res = await fetch(url);
         if (!res.ok) throw new Error('Failed to fetch leaderboard');
         const result = await res.json();
         setData(result);
@@ -202,7 +251,7 @@ export default function LeaderboardPage() {
     }
 
     fetchLeaderboard();
-  }, [timeFilter]);
+  }, [timeFilter, sourceFilter]);
 
   return (
     <main className="min-h-screen bg-slate-950">
@@ -223,54 +272,99 @@ export default function LeaderboardPage() {
             </p>
           </motion.div>
 
-          {/* Time Filter & Export Options */}
+          {/* Filter Controls & Export Options */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6"
+            className="flex flex-col gap-4 mb-6"
           >
-            {/* Time Filter Buttons */}
-            <div className="flex gap-2 bg-slate-900/50 p-1 rounded-lg">
-              {TIME_FILTERS.map((filter) => (
-                <button
-                  key={filter.value}
-                  onClick={() => setTimeFilter(filter.value)}
-                  className={`px-4 py-2 text-sm rounded-md transition-colors ${
-                    timeFilter === filter.value
-                      ? 'bg-blue-600 text-white'
-                      : 'text-slate-400 hover:text-white hover:bg-slate-800'
-                  }`}
-                >
-                  {filter.label}
-                </button>
-              ))}
+            {/* Data Source Filter */}
+            <div className="flex flex-col gap-3">
+              <div className="flex flex-col md:flex-row md:items-center gap-3">
+                <span className="text-sm text-slate-400">Data Source:</span>
+                <div className="flex gap-2 bg-slate-900/50 p-1 rounded-lg">
+                  {SOURCE_PRESETS.map((source) => (
+                    <button
+                      key={source.value}
+                      onClick={() => setSourceFilter(source.value)}
+                      title={source.methodology}
+                      className={`px-4 py-2 text-sm rounded-md transition-colors ${
+                        sourceFilter === source.value
+                          ? source.value === 'ACLED' ? 'bg-blue-600 text-white'
+                            : source.value === 'UCDP' ? 'bg-purple-600 text-white'
+                            : 'bg-blue-600 text-white'
+                          : 'text-slate-400 hover:text-white hover:bg-slate-800'
+                      }`}
+                    >
+                      {source.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+              {/* Show methodology info for selected source */}
+              <div className={`text-xs p-2 rounded-lg border ${
+                sourceFilter === 'ACLED' ? 'bg-blue-900/20 border-blue-800/50 text-blue-300'
+                : sourceFilter === 'UCDP' ? 'bg-purple-900/20 border-purple-800/50 text-purple-300'
+                : 'bg-slate-800/50 border-slate-700/50 text-slate-400'
+              }`}>
+                <span className="font-medium">
+                  {SOURCE_PRESETS.find(s => s.value === sourceFilter)?.description}
+                </span>
+                <span className="mx-2">•</span>
+                <span className="text-slate-500">
+                  {SOURCE_PRESETS.find(s => s.value === sourceFilter)?.methodology}
+                </span>
+              </div>
             </div>
 
-            {/* Export Buttons */}
-            {data && (
-              <div className="flex items-center gap-2">
-                <span className="text-xs text-slate-500 mr-1">Export:</span>
-                <button
-                  onClick={exportCSV}
-                  className="flex items-center gap-1.5 px-3 py-1.5 text-xs text-slate-400 hover:text-white bg-slate-800/50 hover:bg-slate-800 border border-slate-700 rounded-lg transition-colors"
-                >
-                  <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                  </svg>
-                  CSV
-                </button>
-                <button
-                  onClick={exportJSON}
-                  className="flex items-center gap-1.5 px-3 py-1.5 text-xs text-slate-400 hover:text-white bg-slate-800/50 hover:bg-slate-800 border border-slate-700 rounded-lg transition-colors"
-                >
-                  <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                  </svg>
-                  JSON
-                </button>
+            {/* Time Filter & Export Row */}
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+              {/* Time Filter Buttons - only show when not using source presets */}
+              <div className="flex gap-2 bg-slate-900/50 p-1 rounded-lg">
+                {TIME_FILTERS.map((filter) => (
+                  <button
+                    key={filter.value}
+                    onClick={() => setTimeFilter(filter.value)}
+                    disabled={sourceFilter !== 'all'}
+                    className={`px-4 py-2 text-sm rounded-md transition-colors ${
+                      timeFilter === filter.value && sourceFilter === 'all'
+                        ? 'bg-blue-600 text-white'
+                        : sourceFilter !== 'all'
+                        ? 'text-slate-600 cursor-not-allowed'
+                        : 'text-slate-400 hover:text-white hover:bg-slate-800'
+                    }`}
+                  >
+                    {filter.label}
+                  </button>
+                ))}
               </div>
-            )}
+
+              {/* Export Buttons */}
+              {data && (
+                <div className="flex items-center gap-2">
+                  <span className="text-xs text-slate-500 mr-1">Export:</span>
+                  <button
+                    onClick={exportCSV}
+                    className="flex items-center gap-1.5 px-3 py-1.5 text-xs text-slate-400 hover:text-white bg-slate-800/50 hover:bg-slate-800 border border-slate-700 rounded-lg transition-colors"
+                  >
+                    <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    CSV
+                  </button>
+                  <button
+                    onClick={exportJSON}
+                    className="flex items-center gap-1.5 px-3 py-1.5 text-xs text-slate-400 hover:text-white bg-slate-800/50 hover:bg-slate-800 border border-slate-700 rounded-lg transition-colors"
+                  >
+                    <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    JSON
+                  </button>
+                </div>
+              )}
+            </div>
           </motion.div>
 
           {/* Summary Stats */}

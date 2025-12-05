@@ -22,8 +22,8 @@ const TRUCE_RESOLUTIONS: TruceResolution[] = [
     season: 'Winter',
     symbol: 'A/80/L.10',
     url: 'https://digitallibrary.un.org/record/4092685',
-    coSponsors: 165,
-    notes: 'Current resolution. Adopted by consensus Nov 19, 2025.',
+    coSponsors: 166,
+    notes: 'Current resolution. Adopted by consensus Nov 19, 2025. View full co-sponsor list.',
   },
   {
     games: 'Paris 2024',
@@ -694,19 +694,46 @@ export default function DocumentsPage() {
       <section className="pt-32 pb-12 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/20 border border-blue-500/30 rounded-full text-blue-300 text-sm mb-6">
-              <span>📚</span>
-              <span>Official UN & IOC Sources</span>
-            </div>
-            <h1 className="text-4xl font-bold mb-4">UN Documents Archive</h1>
+            <h1 className="text-4xl font-bold mb-4">Documents Archive</h1>
             <p className="text-xl text-slate-400 max-w-2xl mx-auto">
-              Complete collection of UN resolutions, IOC appeals, and foundational documents related to the Olympic Truce.
+              Collection of UN resolutions, IOC appeals, and foundational documents related to the Olympic Truce.
             </p>
           </motion.div>
         </div>
       </section>
 
       <div className="max-w-6xl mx-auto px-4 py-8">
+        {/* Featured: Milano-Cortina 2026 Co-Sponsors */}
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="mb-12"
+        >
+          <Link href="/co-sponsors" className="block group">
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-green-500/20 to-blue-500/10 border border-green-500/30 hover:border-green-400/50 transition-colors">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div className="flex items-start gap-4">
+                  <span className="text-4xl">🌍</span>
+                  <div>
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="text-xs font-mono bg-green-500/20 text-green-300 px-2 py-0.5 rounded">A/80/L.10</span>
+                      <span className="text-xs text-slate-500">Milano-Cortina 2026</span>
+                    </div>
+                    <h2 className="text-xl font-bold text-white group-hover:text-green-300 transition-colors">166 Nations Co-Sponsored the Olympic Truce</h2>
+                    <p className="text-slate-300 text-sm mt-1">85% of UN Member States signed on. Adopted by consensus November 19, 2025.</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2 text-green-400 group-hover:text-green-300">
+                  <span className="text-sm font-medium">View Full List</span>
+                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </Link>
+        </motion.section>
+
         {/* Featured: 2024 SG Report */}
         <motion.section
           initial={{ opacity: 0, y: 20 }}

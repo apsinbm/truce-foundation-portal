@@ -306,10 +306,10 @@ const OLYMPIC_TRUCE_HISTORY: OlympicGame[] = [
     country: 'Italy',
     season: 'Winter',
     unResolution: 'A/80/L.10',
-    coSponsors: 165,
+    coSponsors: 166,
     solemnAppeal: true,
     milestoneEffects: [
-      'Record 165 co-sponsors - highest in Olympic Truce history',
+      'Record 166 co-sponsors - highest in Olympic Truce history',
       'Resolution adopted by consensus on November 19, 2025',
       'Most gender-balanced Winter Games in history (near 50-50 participation)',
       'First Games with Truce Compliance Index monitoring',
@@ -331,7 +331,7 @@ interface TruceResolutionData {
 }
 
 const ALL_RESOLUTIONS_DATA: TruceResolutionData[] = [
-  { games: 'Milano Cortina 2026', year: 2026, coSponsors: 165, totalMembers: 193, adoptionDate: '2025-11-19', highlight: true, notes: 'Adopted by consensus' },
+  { games: 'Milano Cortina 2026', year: 2026, coSponsors: 166, totalMembers: 193, adoptionDate: '2025-11-19', highlight: true, notes: 'Adopted by consensus' },
   { games: 'Paris 2024', year: 2024, coSponsors: 118, totalMembers: 193, adoptionDate: '2023-11-21', notes: 'Vote: 118-0-2 (Russia, Syria abstained)' },
   { games: 'Beijing 2022', year: 2022, coSponsors: 173, totalMembers: 193, adoptionDate: '2021-12-02', notes: 'Truce violated Feb 24, 2022' },
   { games: 'Tokyo 2020', year: 2020, coSponsors: 186, totalMembers: 193, adoptionDate: '2019-12-09', notes: 'Games postponed to 2021' },
@@ -705,7 +705,7 @@ export default function ModernHistoryPage() {
         </div>
       </section>
 
-      {/* 165 Co-sponsors highlight */}
+      {/* 166 Co-sponsors highlight */}
       <section className="py-12 px-4 bg-slate-900/30">
         <div className="max-w-4xl mx-auto">
           <motion.div
@@ -717,7 +717,7 @@ export default function ModernHistoryPage() {
             <div className="flex items-center gap-3 mb-4">
               <span className="text-3xl">🌍</span>
               <div>
-                <h3 className="text-lg font-bold text-white">165 Co-Sponsors</h3>
+                <h3 className="text-lg font-bold text-white">166 Co-Sponsors</h3>
                 <p className="text-sm text-slate-400">A/80/L.10 - Milano-Cortina 2026</p>
               </div>
             </div>
@@ -740,7 +740,7 @@ export default function ModernHistoryPage() {
             </div>
 
             <p className="text-sm text-slate-300 mb-4">
-              Out of 193 UN Member States, <strong className="text-white">165 countries</strong> co-sponsored the 2026 Olympic Truce resolution -
+              Out of 193 UN Member States, <strong className="text-white">166 countries</strong> co-sponsored the 2026 Olympic Truce resolution -
               demonstrating unprecedented global unity despite ongoing geopolitical tensions.
             </p>
 
