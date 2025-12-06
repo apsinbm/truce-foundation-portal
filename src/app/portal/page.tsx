@@ -59,12 +59,12 @@ export default function PortalHub() {
 
                 {/* Title */}
                 <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-green-400 transition-colors">
-                  166 Co-Sponsors
+                  166 UN Member States
                 </h3>
 
                 {/* Description */}
                 <p className="text-sm text-slate-400 line-clamp-2">
-                  Milano-Cortina 2026 Olympic Truce resolution A/80/L.10
+                  Co-sponsors of Milano-Cortina 2026 Olympic Truce resolution A/80/L.10
                 </p>
 
                 {/* Arrow indicator */}
