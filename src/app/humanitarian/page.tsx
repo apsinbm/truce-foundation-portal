@@ -65,12 +65,55 @@ const PRIORITY_COUNTRIES = [
 ];
 
 // Exemplary countries for humanitarian response
+// Source: ACAPS Humanitarian Access Overview July 2025, expert consultation
 const EXEMPLARY_COUNTRIES = [
   {
     name: 'Moldova',
     iso3: 'MDA',
+    acapsScore: 1,
+    trend: 'improved',
     description: 'Exemplary care for Ukrainian refugees despite limited resources',
     highlight: 'Hosted refugees equivalent to 5% of its population',
+  },
+  {
+    name: 'Romania',
+    iso3: 'ROU',
+    acapsScore: 0,
+    trend: 'stable',
+    description: 'Strong humanitarian access with no significant constraints',
+    highlight: 'Efficient refugee processing and integration programs',
+  },
+  {
+    name: 'Peru',
+    iso3: 'PER',
+    acapsScore: 1,
+    trend: 'improved',
+    description: 'Improved humanitarian access despite regional challenges',
+    highlight: 'Effective coordination with international organizations',
+  },
+  {
+    name: 'Panama',
+    iso3: 'PAN',
+    acapsScore: 1,
+    trend: 'stable',
+    description: 'Consistent humanitarian access for migrant populations',
+    highlight: 'Manages Darien Gap migration corridor effectively',
+  },
+  {
+    name: 'Angola',
+    iso3: 'AGO',
+    acapsScore: 1,
+    trend: 'stable',
+    description: 'Low humanitarian access constraints in post-conflict recovery',
+    highlight: 'Open access for international humanitarian organizations',
+  },
+  {
+    name: 'Rwanda',
+    iso3: 'RWA',
+    acapsScore: 1,
+    trend: 'stable',
+    description: 'Strong institutional support for refugee populations',
+    highlight: 'Hosts significant refugee population with minimal barriers',
   },
 ];
 
@@ -387,6 +430,57 @@ export default function HumanitarianPage() {
         </div>
       </section>
 
+      {/* ACAPS Methodology Explainer */}
+      <section className="py-8 px-4">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="p-6 rounded-2xl bg-slate-900/50 border border-slate-700/50"
+          >
+            <h3 className="text-lg font-bold text-white mb-4">Understanding ACAPS Humanitarian Access Scores</h3>
+            <p className="text-sm text-slate-400 mb-4">
+              The ACAPS methodology measures humanitarian access using 9 indicators across 3 pillars,
+              scoring each country from 0 (no constraints) to 5 (extreme constraints):
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+              <div className="p-3 rounded-lg bg-blue-500/10 border border-blue-500/20">
+                <h4 className="text-sm font-semibold text-blue-300 mb-2">Pillar 1: People&apos;s Access</h4>
+                <ul className="text-xs text-slate-400 space-y-1">
+                  <li>• Denial of humanitarian needs</li>
+                  <li>• Obstruction of services</li>
+                </ul>
+              </div>
+              <div className="p-3 rounded-lg bg-purple-500/10 border border-purple-500/20">
+                <h4 className="text-sm font-semibold text-purple-300 mb-2">Pillar 2: Org Access</h4>
+                <ul className="text-xs text-slate-400 space-y-1">
+                  <li>• Entry impediments (bureaucratic)</li>
+                  <li>• Movement restrictions</li>
+                  <li>• Programmatic interference</li>
+                  <li>• Violence against aid workers</li>
+                </ul>
+              </div>
+              <div className="p-3 rounded-lg bg-amber-500/10 border border-amber-500/20">
+                <h4 className="text-sm font-semibold text-amber-300 mb-2">Pillar 3: Physical/Security</h4>
+                <ul className="text-xs text-slate-400 space-y-1">
+                  <li>• Hostilities affecting aid</li>
+                  <li>• Landmines/IEDs/UXO</li>
+                  <li>• Environmental constraints</li>
+                </ul>
+              </div>
+            </div>
+            <div className="flex flex-wrap gap-2 text-xs">
+              <span className="px-2 py-1 bg-green-500/20 text-green-300 rounded">0-1: Low/No constraints</span>
+              <span className="px-2 py-1 bg-yellow-500/20 text-yellow-300 rounded">2: Moderate</span>
+              <span className="px-2 py-1 bg-orange-500/20 text-orange-300 rounded">3: High</span>
+              <span className="px-2 py-1 bg-red-500/20 text-red-300 rounded">4: Very High</span>
+              <span className="px-2 py-1 bg-red-600/30 text-red-200 rounded">5: Extreme</span>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Fragile Peace Zones */}
       <section className="py-12 px-4 bg-slate-900/30">
         <div className="max-w-6xl mx-auto">
@@ -542,42 +636,83 @@ export default function HumanitarianPage() {
       </section>
 
       {/* Exemplary Response */}
-      <section className="py-12 px-4">
-        <div className="max-w-4xl mx-auto">
+      <section className="py-12 px-4 bg-slate-900/30">
+        <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            className="mb-8"
           >
-            <h2 className="text-2xl font-bold text-white mb-6">Exemplary Humanitarian Response</h2>
-            <p className="text-slate-400 mb-6">
-              Countries demonstrating exceptional commitment to humanitarian principles
-            </p>
-
-            {EXEMPLARY_COUNTRIES.map((country) => (
-              <div
-                key={country.iso3}
-                className="p-6 rounded-xl bg-gradient-to-br from-green-500/10 to-green-600/5 border border-green-500/30"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0">
-                    <svg className="w-6 h-6 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-white">{country.name}</h3>
-                    <p className="text-slate-300 mt-1">{country.description}</p>
-                    <p className="text-sm text-green-400 mt-2">{country.highlight}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-
-            <p className="text-xs text-slate-500 mt-4 text-center">
-              Additional exemplary countries will be added as our humanitarian advisors provide further assessments.
+            <div className="flex items-center gap-3 mb-2">
+              <h2 className="text-2xl font-bold text-white">Exemplary Humanitarian Access</h2>
+              <span className="px-2 py-1 text-xs bg-green-500/20 text-green-300 border border-green-500/30 rounded-full">
+                Best Practices
+              </span>
+            </div>
+            <p className="text-slate-400">
+              Countries scoring well on humanitarian access (ACAPS Score 0-1), demonstrating effective
+              support for humanitarian operations and refugee populations
             </p>
           </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {EXEMPLARY_COUNTRIES.map((country, index) => (
+              <motion.div
+                key={country.iso3}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.05 }}
+                className="p-5 rounded-xl bg-gradient-to-br from-green-500/10 to-green-600/5 border border-green-500/30 hover:border-green-400/50 transition-colors"
+              >
+                <div className="flex items-start justify-between mb-3">
+                  <div>
+                    <h3 className="font-semibold text-white text-lg">{country.name}</h3>
+                    <span className={`inline-block px-2 py-0.5 text-xs rounded-full border mt-1 ${
+                      country.trend === 'improved'
+                        ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30'
+                        : 'bg-green-500/20 text-green-300 border-green-500/30'
+                    }`}>
+                      {country.trend === 'improved' ? '↑ improved' : '→ stable'}
+                    </span>
+                  </div>
+                  <div className="text-right">
+                    <div className="text-2xl font-bold text-green-400">
+                      {country.acapsScore}/5
+                    </div>
+                    <div className="text-xs text-slate-500">ACAPS Score</div>
+                  </div>
+                </div>
+                <p className="text-sm text-slate-400 mb-2">{country.description}</p>
+                <p className="text-xs text-green-400/80">{country.highlight}</p>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="mt-8 p-4 rounded-xl bg-green-500/5 border border-green-500/20">
+            <p className="text-sm text-green-200/80">
+              <strong className="text-green-300">Why highlight positive examples?</strong> These countries demonstrate
+              that effective humanitarian access is achievable. Low scores (0-1) indicate minimal bureaucratic impediments,
+              freedom of movement for aid workers, and supportive policies for refugee populations. Their practices
+              serve as models for improving humanitarian access globally.
+            </p>
+          </div>
+
+          <div className="mt-4 text-xs text-slate-500">
+            <p>
+              Source:{' '}
+              <a
+                href="https://www.acaps.org/fileadmin/Data_Product/Main_media/20250120_ACAPS_Humanitarian_Access_Overview__2025.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-400 hover:underline"
+              >
+                ACAPS Humanitarian Access Overview July 2025
+              </a>
+              , expert consultation with humanitarian professionals
+            </p>
+          </div>
         </div>
       </section>
 
@@ -648,12 +783,25 @@ export default function HumanitarianPage() {
               </div>
               <div>
                 <h2 className="text-xl font-bold text-white mb-2">Expert Consultation</h2>
-                <p className="text-slate-300 text-sm">
+                <p className="text-slate-300 text-sm mb-3">
                   The humanitarian access monitoring for the Truce Foundation is developed in consultation with
                   experienced humanitarian professionals with decades of field experience across UN agencies,
                   USAID, and international NGOs. Our advisors have directed emergency operations in complex
                   emergencies including the Ebola outbreak in West Africa, Ukrainian refugee coordination,
                   and conflict responses in Sudan, Bosnia, Angola, and Gaza.
+                </p>
+                <p className="text-slate-300 text-sm">
+                  Our humanitarian advisor{' '}
+                  <a
+                    href="https://global.utexas.edu/events/humanitarian-aid-crisis-saving-lives-time-eroding-support"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-purple-400 hover:text-purple-300 underline"
+                  >
+                    Doug Mercado
+                  </a>
+                  {' '}brings extensive experience from senior roles at USAID and the UN, having coordinated
+                  humanitarian responses to some of the most challenging crises of recent decades.
                 </p>
               </div>
             </div>

@@ -374,6 +374,72 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Collaborating Organizations */}
+      <section className="py-12 px-4 bg-slate-900/30">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-8"
+          >
+            <h2 className="text-2xl font-bold text-white mb-2">Collaborating Organizations</h2>
+            <p className="text-slate-400">Partners advancing the Olympic Truce mission</p>
+          </motion.div>
+
+          <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12">
+            <a
+              href="https://www.bfrv.it"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="opacity-80 hover:opacity-100 transition-opacity"
+            >
+              <img
+                src="/logos/partners/house-of-sport-volunteers.jpeg"
+                alt="The House of Sport Volunteers"
+                className="h-14 sm:h-16 w-auto object-contain bg-white rounded-lg px-3 py-2"
+              />
+            </a>
+            <a
+              href="https://www.bciu.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="opacity-80 hover:opacity-100 transition-opacity"
+            >
+              <img
+                src="/logos/partners/bciu.jpeg"
+                alt="BCIU - Business Council for International Understanding"
+                className="h-14 sm:h-16 w-auto object-contain bg-white rounded-lg px-3 py-2"
+              />
+            </a>
+            <a
+              href="https://www.savethedream.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="opacity-80 hover:opacity-100 transition-opacity"
+            >
+              <img
+                src="/logos/partners/save-the-dream.jpeg"
+                alt="Save the Dream"
+                className="h-14 sm:h-16 w-auto object-contain bg-white rounded-lg px-3 py-2"
+              />
+            </a>
+            <a
+              href="https://www.thatcherandco.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="opacity-80 hover:opacity-100 transition-opacity"
+            >
+              <img
+                src="/logos/partners/thatcher-co.jpeg"
+                alt="Thatcher+Co."
+                className="h-14 sm:h-16 w-auto object-contain bg-white rounded-lg px-3 py-2"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Related Links */}
       <section className="py-12 px-4">
         <div className="max-w-4xl mx-auto">
