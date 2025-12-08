@@ -638,7 +638,7 @@ export default function CoSponsorsPage() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-green-400">•</span>
-                    <span>Total duration: approximately 44 days</span>
+                    <span>Total duration: 52 days</span>
                   </li>
                 </ul>
               </div>

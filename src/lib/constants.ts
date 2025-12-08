@@ -1,8 +1,24 @@
-// Truce Window dates for Milano-Cortina 2026
-// Truce starts 7 days before Opening Ceremony (Feb 6), ends 7 days after Paralympics closing (Mar 15)
-// Games: Feb 6 - Feb 22, 2026 | Paralympics: Mar 6 - Mar 15, 2026
+/**
+ * Milano-Cortina 2026 Olympic Games - Authoritative Dates
+ *
+ * Official dates from IOC/Milano-Cortina 2026:
+ * - Opening Ceremony: February 6, 2026
+ * - Closing Ceremony: February 22, 2026
+ * - Paralympic Opening: March 6, 2026
+ * - Paralympic Closing: March 15, 2026
+ *
+ * Olympic Truce (per UN Resolution A/80/L.10):
+ * - Starts: 7 days before Opening Ceremony = January 30, 2026
+ * - Ends: 7 days after Paralympic Closing = March 22, 2026
+ * - Total duration: 52 days
+ */
+export const OPENING_CEREMONY_DATE = new Date('2026-02-06T00:00:00Z');
+export const CLOSING_CEREMONY_DATE = new Date('2026-02-22T23:59:59Z');
+export const PARALYMPIC_OPENING_DATE = new Date('2026-03-06T00:00:00Z');
+export const PARALYMPIC_CLOSING_DATE = new Date('2026-03-15T23:59:59Z');
 export const TRUCE_START_DATE = new Date('2026-01-30T00:00:00Z');
 export const TRUCE_END_DATE = new Date('2026-03-22T23:59:59Z');
+export const TRUCE_DURATION_DAYS = 52;
 
 // External URLs
 export const TRUCE_INDEX_URL = 'https://truce-index.vercel.app';
