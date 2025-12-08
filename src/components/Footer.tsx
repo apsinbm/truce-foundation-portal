@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { TRUCE_INDEX_URL } from '@/lib/constants';
+import DataAccuracyChecklist from './DataAccuracyChecklist';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -106,7 +107,8 @@ export default function Footer() {
             <p className="text-xs text-slate-500">
               © {currentYear} Truce Foundation. All rights reserved.
             </p>
-            <div className="flex gap-6">
+            <div className="flex items-center gap-6">
+              <DataAccuracyChecklist />
               <a href="#" className="text-xs text-slate-500 hover:text-slate-400 transition-colors">
                 Privacy Policy
               </a>
