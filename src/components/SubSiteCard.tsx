@@ -7,6 +7,7 @@ import { SubSite } from '@/lib/constants';
 interface SubSiteCardProps {
   site: SubSite;
   index: number;
+  compact?: boolean;
 }
 
 // Varied action words based on card type
@@ -21,14 +22,14 @@ const getActionWord = (id: string): string => {
   return actions[id] || 'Visit';
 };
 
-export default function SubSiteCard({ site, index }: SubSiteCardProps) {
+export default function SubSiteCard({ site, index, compact = false }: SubSiteCardProps) {
   const isLive = site.status === 'live';
   const isExternal = site.external;
 
   const CardContent = () => (
     <>
       {/* Status badge */}
-      <div className={`absolute top-4 right-4 px-2 py-1 rounded-full text-xs font-medium ${
+      <div className={`absolute ${compact ? 'top-3 right-3 px-2 py-0.5' : 'top-4 right-4 px-2 py-1'} rounded-full text-xs font-medium ${
         isLive
           ? 'bg-green-500/20 text-green-400 border border-green-500/30'
           : 'bg-slate-700/50 text-slate-400 border border-slate-600/30'
@@ -37,10 +38,10 @@ export default function SubSiteCard({ site, index }: SubSiteCardProps) {
       </div>
 
       {/* Icon */}
-      <div className="text-4xl mb-4">{site.icon}</div>
+      <div className={compact ? 'text-3xl mb-3' : 'text-4xl mb-4'}>{site.icon}</div>
 
       {/* Title */}
-      <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors">
+      <h3 className={`font-semibold text-white ${compact ? 'text-base mb-1.5' : 'text-lg mb-2'} group-hover:text-blue-400 transition-colors`}>
         {site.title}
       </h3>
 
@@ -49,10 +50,10 @@ export default function SubSiteCard({ site, index }: SubSiteCardProps) {
 
       {/* Arrow indicator for live sites */}
       {isLive && (
-        <div className="mt-4 flex items-center gap-2 text-blue-400 text-sm font-medium">
+        <div className={`${compact ? 'mt-3 text-xs' : 'mt-4 text-sm'} flex items-center gap-2 text-blue-400 font-medium`}>
           <span>{getActionWord(site.id)}</span>
           <svg
-            className="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
+            className={`${compact ? 'w-3.5 h-3.5' : 'w-4 h-4'} transform group-hover:translate-x-1 transition-transform`}
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -70,7 +71,7 @@ export default function SubSiteCard({ site, index }: SubSiteCardProps) {
   );
 
   const cardClasses = `
-    glass-card p-6 relative overflow-hidden group
+    glass-card ${compact ? 'p-5' : 'p-6'} relative overflow-hidden group
     transition-all duration-300
     ${isLive ? 'cursor-pointer hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/10' : 'cursor-default opacity-75'}
   `;

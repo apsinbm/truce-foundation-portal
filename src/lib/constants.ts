@@ -37,6 +37,7 @@ export interface SubSite {
   href: string;
   status: 'live' | 'coming-soon';
   external?: boolean;
+  tier: 1 | 2; // 1 = featured card, 2 = compact link
 }
 
 export const SUB_SITES: SubSite[] = [
@@ -49,6 +50,7 @@ export const SUB_SITES: SubSite[] = [
     href: TRUCE_INDEX_URL,
     status: 'live',
     external: true,
+    tier: 1,
   },
   {
     id: 'briefing',
@@ -57,6 +59,7 @@ export const SUB_SITES: SubSite[] = [
     description: 'Auto-generated daily summary of global incidents and trends',
     href: '/briefing',
     status: 'live',
+    tier: 1,
   },
   {
     id: 'leaderboard',
@@ -65,6 +68,7 @@ export const SUB_SITES: SubSite[] = [
     description: 'Countries ranked by incidents and compliance metrics',
     href: '/leaderboard',
     status: 'live',
+    tier: 1,
   },
   // === CONTEXT & BACKGROUND (understanding the truce) ===
   {
@@ -74,6 +78,7 @@ export const SUB_SITES: SubSite[] = [
     description: '2,800 years of Olympic Truce tradition, from ancient Greece to modern UN resolutions',
     href: '/history',
     status: 'live',
+    tier: 1,
   },
   {
     id: 'documents',
@@ -82,6 +87,7 @@ export const SUB_SITES: SubSite[] = [
     description: 'Complete collection of UN resolutions and IOC documents on Olympic Truce',
     href: '/documents',
     status: 'live',
+    tier: 2,
   },
   {
     id: 'methodology',
@@ -90,6 +96,7 @@ export const SUB_SITES: SubSite[] = [
     description: 'How we measure Olympic Truce compliance',
     href: '/methodology',
     status: 'live',
+    tier: 2,
   },
   {
     id: 'humanitarian',
@@ -98,6 +105,7 @@ export const SUB_SITES: SubSite[] = [
     description: 'Monitoring barriers to humanitarian aid delivery during Truce periods',
     href: '/humanitarian',
     status: 'live',
+    tier: 1,
   },
   {
     id: 'ceasefire',
@@ -106,6 +114,7 @@ export const SUB_SITES: SubSite[] = [
     description: 'Tracking fragile peace agreements and ceasefires that need to hold during the Truce',
     href: '/ceasefire',
     status: 'live',
+    tier: 1,
   },
   // === HUMAN STORIES & COMMUNITY (emotional engagement) ===
   {
@@ -115,6 +124,7 @@ export const SUB_SITES: SubSite[] = [
     description: 'First-person accounts from truce-enabled zones',
     href: '/stories',
     status: 'live',
+    tier: 2,
   },
   {
     id: 'candles',
@@ -123,6 +133,7 @@ export const SUB_SITES: SubSite[] = [
     description: 'Geo-tagged peace gestures from around the world',
     href: '/candles',
     status: 'live',
+    tier: 2,
   },
   {
     id: 'forum',
@@ -131,6 +142,7 @@ export const SUB_SITES: SubSite[] = [
     description: 'Real-time monitoring and storytelling from truce-enabled zones',
     href: '/forum',
     status: 'live',
+    tier: 2,
   },
   // === ACCOUNTABILITY & RECORDS (transparency) ===
   {
@@ -140,6 +152,7 @@ export const SUB_SITES: SubSite[] = [
     description: 'Historical record of Truce violations, inspired by the ancient Wall of Shame',
     href: '/accountability',
     status: 'live',
+    tier: 1,
   },
   {
     id: 'reports',
@@ -148,6 +161,7 @@ export const SUB_SITES: SubSite[] = [
     description: 'Monthly and final reports, infographics, and data',
     href: '/reports',
     status: 'live',
+    tier: 2,
   },
   // === ACTION & ENGAGEMENT (call to action) ===
   {
@@ -157,6 +171,7 @@ export const SUB_SITES: SubSite[] = [
     description: 'Infographics, policy briefs, and social media templates',
     href: '/advocacy',
     status: 'live',
+    tier: 2,
   },
   {
     id: 'press',
@@ -165,6 +180,7 @@ export const SUB_SITES: SubSite[] = [
     description: 'Media resources, embed widgets, and press contacts',
     href: '/press',
     status: 'live',
+    tier: 2,
   },
   {
     id: 'briefing-sheet',
@@ -173,6 +189,7 @@ export const SUB_SITES: SubSite[] = [
     description: 'Sport for Development & Peace engagement materials based on UN A/79/289',
     href: '/briefing-sheet',
     status: 'live',
+    tier: 2,
   },
   {
     id: 'partners',
@@ -181,6 +198,7 @@ export const SUB_SITES: SubSite[] = [
     description: 'Organizations supporting the Olympic Truce',
     href: '/partners',
     status: 'live',
+    tier: 2,
   },
 ];
 
