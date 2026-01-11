@@ -104,7 +104,7 @@ export default function DataIntegrityBadge({
 
       {/* Label */}
       {showLabel && (
-        <span className={`${sizeConfig.fontSize} font-medium text-slate-500`}>
+        <span className={`${sizeConfig.fontSize} font-medium text-gray-500`}>
           {config.label}
         </span>
       )}
@@ -112,9 +112,9 @@ export default function DataIntegrityBadge({
       {/* Tooltip */}
       {showTooltip && (
         <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 z-50">
-          <div className="bg-slate-800 text-white text-xs px-3 py-2 rounded-lg shadow-lg whitespace-nowrap border border-slate-700">
+          <div className="bg-gray-100 text-gray-900 text-xs px-3 py-2 rounded-lg shadow-lg whitespace-nowrap border border-gray-200">
             <div className="font-semibold mb-1">Data Integrity: {config.label}</div>
-            <div className="text-slate-300">{config.tooltip}</div>
+            <div className="text-gray-600">{config.tooltip}</div>
             {/* Arrow */}
             <div className="absolute top-full left-1/2 -translate-x-1/2 -mt-px">
               <div className="border-4 border-transparent border-t-slate-800" />

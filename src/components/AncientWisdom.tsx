@@ -65,10 +65,10 @@ export default function AncientWisdom() {
             <span className="text-xl">📜</span>
             <span className="text-amber-300 text-sm font-medium">Ancient Wisdom</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl font-bold text-white">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
             Voices from Antiquity
           </h2>
-          <p className="text-slate-400 mt-2">
+          <p className="text-gray-600 mt-2">
             Words that shaped the Olympic ideal for over 2,800 years
           </p>
         </motion.div>
@@ -82,7 +82,7 @@ export default function AncientWisdom() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5 }}
-              className="p-8 sm:p-10 rounded-2xl bg-gradient-to-br from-slate-800/80 to-slate-900/80 border border-slate-700/50 backdrop-blur-sm"
+              className="p-8 sm:p-10 rounded-2xl bg-gradient-to-br from-slate-800/80 to-slate-900/80 border border-gray-200/50 backdrop-blur-sm"
             >
               {/* Category badge */}
               <div className="flex items-center gap-2 mb-6">
@@ -98,8 +98,8 @@ export default function AncientWisdom() {
               {/* Attribution */}
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                 <div>
-                  <div className="font-semibold text-white">{currentQuote.author}</div>
-                  <div className="text-sm text-slate-400">{currentQuote.authorDates}</div>
+                  <div className="font-semibold text-gray-900">{currentQuote.author}</div>
+                  <div className="text-sm text-gray-600">{currentQuote.authorDates}</div>
                 </div>
                 <div className="text-right">
                   {currentQuote.sourceUrl ? (
@@ -112,7 +112,7 @@ export default function AncientWisdom() {
                       {currentQuote.source} ↗
                     </a>
                   ) : (
-                    <span className="text-sm text-slate-500">{currentQuote.source}</span>
+                    <span className="text-sm text-gray-500">{currentQuote.source}</span>
                   )}
                 </div>
               </div>
@@ -122,7 +122,7 @@ export default function AncientWisdom() {
           {/* Navigation arrows */}
           <button
             onClick={prevQuote}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 sm:-translate-x-12 p-2 rounded-full bg-slate-800/80 border border-slate-700/50 text-slate-400 hover:text-white hover:border-slate-600 transition-all"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 sm:-translate-x-12 p-2 rounded-full bg-gray-100/80 border border-gray-200/50 text-gray-600 hover:text-gray-900 hover:border-gray-300 transition-all"
             aria-label="Previous quote"
           >
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -131,7 +131,7 @@ export default function AncientWisdom() {
           </button>
           <button
             onClick={nextQuote}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 sm:translate-x-12 p-2 rounded-full bg-slate-800/80 border border-slate-700/50 text-slate-400 hover:text-white hover:border-slate-600 transition-all"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 sm:translate-x-12 p-2 rounded-full bg-gray-100/80 border border-gray-200/50 text-gray-600 hover:text-gray-900 hover:border-gray-300 transition-all"
             aria-label="Next quote"
           >
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -149,7 +149,7 @@ export default function AncientWisdom() {
               className={`w-2 h-2 rounded-full transition-all ${
                 index === currentIndex
                   ? 'bg-amber-400 w-6'
-                  : 'bg-slate-600 hover:bg-slate-500'
+                  : 'bg-gray-400 hover:bg-gray-500'
               }`}
               aria-label={`Go to quote ${index + 1}`}
             />
@@ -160,7 +160,7 @@ export default function AncientWisdom() {
         <div className="text-center mt-4">
           <button
             onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-            className="text-xs text-slate-500 hover:text-slate-400 transition-colors"
+            className="text-xs text-gray-500 hover:text-gray-600 transition-colors"
           >
             {isAutoPlaying ? '⏸ Auto-rotating' : '▶ Click to resume'}
           </button>

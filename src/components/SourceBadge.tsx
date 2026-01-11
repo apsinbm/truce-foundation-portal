@@ -52,8 +52,8 @@ const SOURCE_STYLES: Record<string, {
     description: 'Open-source intelligence from verified RSS/social feeds'
   },
   'Manual': {
-    bg: 'bg-slate-800 border-slate-700/50',
-    text: 'text-slate-300',
+    bg: 'bg-gray-100 border-gray-200/50',
+    text: 'text-gray-600',
     label: 'Manual',
     description: 'Manually entered or verified incident'
   }
@@ -82,7 +82,7 @@ export default function SourceBadge({
         {style.label}
       </span>
       {showDescription && (
-        <span className="text-[10px] text-slate-500 mt-0.5 max-w-[200px] leading-tight">
+        <span className="text-[10px] text-gray-500 mt-0.5 max-w-[200px] leading-tight">
           {style.description}
         </span>
       )}
@@ -125,17 +125,17 @@ export function SourceAttribution({
           {style.label}
         </span>
       </div>
-      <p className="text-[10px] text-slate-500">
+      <p className="text-[10px] text-gray-500">
         {style.description}
       </p>
       {datasetVersion && (
-        <p className="text-[10px] text-slate-600">
-          Version: <span className="text-slate-400">{datasetVersion}</span>
+        <p className="text-[10px] text-gray-600">
+          Version: <span className="text-gray-600">{datasetVersion}</span>
         </p>
       )}
       {sourceEventId && (
-        <p className="text-[10px] text-slate-600">
-          ID: <span className="font-mono text-slate-500">{sourceEventId}</span>
+        <p className="text-[10px] text-gray-600">
+          ID: <span className="font-mono text-gray-500">{sourceEventId}</span>
         </p>
       )}
     </div>
@@ -163,11 +163,11 @@ export function FatalityRange({
 
   if (compact) {
     return (
-      <span className="text-xs text-slate-400">
+      <span className="text-xs text-gray-600">
         {hasRange ? (
           <>
             <span className="text-red-400 font-medium">{best?.toLocaleString()}</span>
-            <span className="text-slate-600 text-[10px] ml-1">({low?.toLocaleString()}–{high?.toLocaleString()})</span>
+            <span className="text-gray-600 text-[10px] ml-1">({low?.toLocaleString()}–{high?.toLocaleString()})</span>
           </>
         ) : (
           <span className="text-red-400 font-medium">{(best || low || high || 0).toLocaleString()}</span>
@@ -182,17 +182,17 @@ export function FatalityRange({
         <span className="text-red-400 font-bold text-lg">
           {best?.toLocaleString() || '—'}
         </span>
-        <span className="text-slate-500 text-xs">fatalities</span>
+        <span className="text-gray-500 text-xs">fatalities</span>
       </div>
       {hasRange && (
         <>
           <div className="flex items-center gap-1 text-xs">
-            <span className="text-slate-500">Range:</span>
-            <span className="text-slate-400">
+            <span className="text-gray-500">Range:</span>
+            <span className="text-gray-600">
               {low?.toLocaleString()} – {high?.toLocaleString()}
             </span>
           </div>
-          <div className="h-1.5 bg-slate-800 rounded-full overflow-hidden relative">
+          <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden relative">
             <div
               className="absolute inset-y-0 bg-red-500/30 rounded-full"
               style={{
@@ -207,7 +207,7 @@ export function FatalityRange({
               }}
             />
           </div>
-          <p className="text-[10px] text-slate-600">
+          <p className="text-[10px] text-gray-600">
             UCDP provides uncertainty ranges for fatality estimates
           </p>
         </>

@@ -97,10 +97,10 @@ export default function ExpertQuotes() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
             Voices for Peace
           </h2>
-          <p className="text-slate-400 max-w-2xl mx-auto">
+          <p className="text-gray-600 max-w-2xl mx-auto">
             Experts, athletes, and advocates share why the Olympic Truce matters.
           </p>
         </motion.div>
@@ -122,7 +122,7 @@ export default function ExpertQuotes() {
 
           {/* Category badge */}
           <div className="flex justify-center mb-6">
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-sm">
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gray-100 text-gray-600 text-sm">
               <span>{categoryIcons[activeQuote.category]}</span>
               <span>{categoryLabels[activeQuote.category]}</span>
             </span>
@@ -139,8 +139,8 @@ export default function ExpertQuotes() {
               <span className="text-xl">{categoryIcons[activeQuote.category]}</span>
             </div>
             <div className="text-center">
-              <p className="font-semibold text-white">{activeQuote.author}</p>
-              <p className="text-sm text-slate-400">{activeQuote.title}</p>
+              <p className="font-semibold text-gray-900">{activeQuote.author}</p>
+              <p className="text-sm text-gray-600">{activeQuote.title}</p>
             </div>
           </div>
         </motion.div>
@@ -157,7 +157,7 @@ export default function ExpertQuotes() {
               className={`w-2 h-2 rounded-full transition-all ${
                 index === activeIndex
                   ? 'bg-blue-500 w-6'
-                  : 'bg-slate-600 hover:bg-slate-500'
+                  : 'bg-gray-400 hover:bg-gray-500'
               }`}
               aria-label={`Go to quote ${index + 1}`}
             />
@@ -180,12 +180,12 @@ export default function ExpertQuotes() {
               className={`p-4 rounded-lg text-left transition-all ${
                 index === activeIndex
                   ? 'bg-blue-500/20 border border-blue-500/50'
-                  : 'bg-slate-800/50 border border-slate-700/50 hover:border-slate-600'
+                  : 'bg-gray-100/50 border border-gray-200/50 hover:border-gray-300'
               }`}
             >
               <span className="text-2xl mb-2 block">{categoryIcons[quote.category]}</span>
-              <p className="text-xs text-slate-400 line-clamp-2">{quote.text.slice(0, 60)}...</p>
-              <p className="text-xs text-slate-500 mt-2">{quote.author}</p>
+              <p className="text-xs text-gray-600 line-clamp-2">{quote.text.slice(0, 60)}...</p>
+              <p className="text-xs text-gray-500 mt-2">{quote.author}</p>
             </motion.button>
           ))}
         </div>

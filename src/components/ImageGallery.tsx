@@ -23,8 +23,8 @@ export default function ImageGallery({ images, className = '' }: ImageGalleryPro
   if (images.length === 0) {
     return (
       <div className="text-center py-12">
-        <div className="text-slate-500 text-lg">No images to display yet</div>
-        <p className="text-slate-600 text-sm mt-2">Check back soon for photos and images</p>
+        <div className="text-gray-500 text-lg">No images to display yet</div>
+        <p className="text-gray-600 text-sm mt-2">Check back soon for photos and images</p>
       </div>
     );
   }
@@ -36,7 +36,7 @@ export default function ImageGallery({ images, className = '' }: ImageGalleryPro
           <button
             key={image.id}
             onClick={() => setSelectedImage(image)}
-            className="group relative aspect-square bg-slate-800 rounded-lg overflow-hidden hover:ring-2 hover:ring-blue-500 transition-all"
+            className="group relative aspect-square bg-gray-100 rounded-lg overflow-hidden hover:ring-2 hover:ring-blue-500 transition-all"
           >
             <Image
               src={image.src}
@@ -49,9 +49,9 @@ export default function ImageGallery({ images, className = '' }: ImageGalleryPro
             {/* Hover overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
               <div className="absolute bottom-0 left-0 right-0 p-3">
-                <p className="text-white text-sm font-medium truncate">{image.alt}</p>
+                <p className="text-gray-900 text-sm font-medium truncate">{image.alt}</p>
                 {image.category && (
-                  <span className="inline-block mt-1 px-2 py-0.5 text-xs bg-white/20 rounded-full text-white/80">
+                  <span className="inline-block mt-1 px-2 py-0.5 text-xs bg-white/20 rounded-full text-gray-900/80">
                     {image.category}
                   </span>
                 )}
@@ -61,7 +61,7 @@ export default function ImageGallery({ images, className = '' }: ImageGalleryPro
             {/* Expand icon */}
             <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
               <div className="p-1.5 bg-black/50 rounded-lg">
-                <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="w-4 h-4 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
                 </svg>
               </div>
@@ -87,7 +87,7 @@ export default function ImageGallery({ images, className = '' }: ImageGalleryPro
               priority
             />
             {selectedImage.caption && (
-              <p className="mt-4 text-center text-slate-300">{selectedImage.caption}</p>
+              <p className="mt-4 text-center text-gray-600">{selectedImage.caption}</p>
             )}
           </div>
         )}

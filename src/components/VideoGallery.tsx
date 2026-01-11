@@ -23,8 +23,8 @@ export default function VideoGallery({ videos, className = '' }: VideoGalleryPro
   if (videos.length === 0) {
     return (
       <div className="text-center py-12">
-        <div className="text-slate-500 text-lg">No videos to display yet</div>
-        <p className="text-slate-600 text-sm mt-2">Check back soon for video content</p>
+        <div className="text-gray-500 text-lg">No videos to display yet</div>
+        <p className="text-gray-600 text-sm mt-2">Check back soon for video content</p>
       </div>
     );
   }
@@ -39,7 +39,7 @@ export default function VideoGallery({ videos, className = '' }: VideoGalleryPro
             className="group text-left"
           >
             {/* Thumbnail with play button */}
-            <div className="relative aspect-video bg-slate-800 rounded-lg overflow-hidden">
+            <div className="relative aspect-video bg-gray-100 rounded-lg overflow-hidden">
               <img
                 src={`https://img.youtube.com/vi/${video.youtubeId}/maxresdefault.jpg`}
                 alt={video.title}
@@ -53,7 +53,7 @@ export default function VideoGallery({ videos, className = '' }: VideoGalleryPro
               {/* Play Button */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-14 h-14 bg-red-600 rounded-full flex items-center justify-center group-hover:bg-red-500 group-hover:scale-110 transition-all shadow-lg">
-                  <svg className="w-7 h-7 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-7 h-7 text-gray-900 ml-1" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M8 5v14l11-7z" />
                   </svg>
                 </div>
@@ -62,7 +62,7 @@ export default function VideoGallery({ videos, className = '' }: VideoGalleryPro
               {/* Category badge */}
               {video.category && (
                 <div className="absolute top-2 left-2">
-                  <span className="px-2 py-1 text-xs font-medium bg-black/60 text-white rounded">
+                  <span className="px-2 py-1 text-xs font-medium bg-black/60 text-gray-900 rounded">
                     {video.category}
                   </span>
                 </div>
@@ -71,11 +71,11 @@ export default function VideoGallery({ videos, className = '' }: VideoGalleryPro
 
             {/* Title and description */}
             <div className="mt-3">
-              <h3 className="text-white font-medium group-hover:text-blue-400 transition-colors line-clamp-2">
+              <h3 className="text-gray-900 font-medium group-hover:text-blue-400 transition-colors line-clamp-2">
                 {video.title}
               </h3>
               {video.description && (
-                <p className="mt-1 text-sm text-slate-400 line-clamp-2">{video.description}</p>
+                <p className="mt-1 text-sm text-gray-600 line-clamp-2">{video.description}</p>
               )}
             </div>
           </button>

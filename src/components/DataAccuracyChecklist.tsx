@@ -70,7 +70,7 @@ const STATUS_ICONS = {
     </svg>
   ),
   pending: (
-    <svg className="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <svg className="w-4 h-4 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <circle cx="12" cy="12" r="9" strokeWidth={2} />
     </svg>
   ),
@@ -96,7 +96,7 @@ export default function DataAccuracyChecklist() {
         title="Data Integrity Status"
       >
         <DataIntegrityBadge tier={CURRENT_INTEGRITY_TIER} showLabel={false} size="sm" />
-        <span className="text-xs text-slate-600 hidden sm:inline">Data Integrity</span>
+        <span className="text-xs text-gray-600 hidden sm:inline">Data Integrity</span>
       </button>
 
       {/* Checklist Panel */}
@@ -118,7 +118,7 @@ export default function DataAccuracyChecklist() {
                   onClick={() => setIsOpen(false)}
                   className="p-1 hover:bg-slate-100 rounded"
                 >
-                  <svg className="w-5 h-5 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-5 h-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                   </svg>
                 </button>
@@ -128,7 +128,7 @@ export default function DataAccuracyChecklist() {
               <div className="flex items-center gap-4">
                 <DataIntegrityBadge tier={CURRENT_INTEGRITY_TIER} size="lg" />
                 <div className="flex-1">
-                  <div className="flex justify-between text-xs text-slate-500 mb-1">
+                  <div className="flex justify-between text-xs text-gray-500 mb-1">
                     <span>{complete} complete, {partial} partial</span>
                     <span>{percentage}%</span>
                   </div>
@@ -159,12 +159,12 @@ export default function DataAccuracyChecklist() {
                     >
                       <div className="flex items-center gap-2">
                         <span className="text-sm font-medium text-slate-900">{category.name}</span>
-                        <span className="text-xs text-slate-400">
+                        <span className="text-xs text-gray-600">
                           {categoryComplete}/{category.items.length}
                         </span>
                       </div>
                       <svg
-                        className={`w-4 h-4 text-slate-400 transition-transform ${isExpanded ? 'rotate-180' : ''}`}
+                        className={`w-4 h-4 text-gray-600 transition-transform ${isExpanded ? 'rotate-180' : ''}`}
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -182,9 +182,9 @@ export default function DataAccuracyChecklist() {
                           >
                             {STATUS_ICONS[item.status]}
                             <div className="flex-1 min-w-0">
-                              <div className="text-sm text-slate-700">{item.label}</div>
+                              <div className="text-sm text-gray-700">{item.label}</div>
                               {item.detail && (
-                                <div className="text-xs text-slate-400 mt-0.5">{item.detail}</div>
+                                <div className="text-xs text-gray-600 mt-0.5">{item.detail}</div>
                               )}
                             </div>
                           </div>
@@ -200,7 +200,7 @@ export default function DataAccuracyChecklist() {
             <div className="p-4 border-t border-slate-200">
               <Link
                 href="/methodology"
-                className="flex items-center justify-center gap-2 w-full py-2 px-4 bg-blue-600 hover:bg-blue-500 text-white text-sm font-medium rounded-lg transition-colors"
+                className="flex items-center justify-center gap-2 w-full py-2 px-4 bg-blue-600 hover:bg-blue-500 text-gray-900 text-sm font-medium rounded-lg transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 View Full Methodology
@@ -208,7 +208,7 @@ export default function DataAccuracyChecklist() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
               </Link>
-              <p className="text-xs text-slate-400 text-center mt-3">
+              <p className="text-xs text-gray-600 text-center mt-3">
                 Last updated: December 8, 2025
               </p>
             </div>
