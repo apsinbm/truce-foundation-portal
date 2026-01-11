@@ -36,11 +36,11 @@ export default function GalleryPage() {
     : photos.filter(photo => photo.category === activeCategory);
 
   return (
-    <main className="min-h-screen bg-white pt-20 pb-16">
+    <main className="min-h-screen bg-white pt-32 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Hero Section */}
         <div className="text-center py-12 md:py-16">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
             Photo Gallery
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">

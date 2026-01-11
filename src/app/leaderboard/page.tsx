@@ -257,7 +257,7 @@ export default function LeaderboardPage() {
     <main className="min-h-screen bg-white">
       <Header />
 
-      <div className="pt-24 pb-8 px-4">
+      <div className="pt-32 pb-12 px-4">
         <div className="max-w-6xl mx-auto">
           {/* Title & Description */}
           <motion.div
