@@ -269,11 +269,11 @@ const MARITIME_MINE_ZONES = [
 const getMineSeverityColor = (severity: string) => {
   switch (severity) {
     case 'urgent':
-      return 'bg-red-100 text-red-300 border-red-500/30';
+      return 'bg-red-100 text-red-800 border-red-300';
     case 'ongoing':
-      return 'bg-amber-100 text-amber-800 border-amber-300 border-amber-500/30';
+      return 'bg-amber-100 text-amber-800 border-amber-300';
     case 'legacy':
-      return 'bg-indigo-100 text-indigo-300 border-indigo-500/30';
+      return 'bg-indigo-100 text-indigo-800 border-indigo-300';
     default:
       return 'bg-gray-100 text-gray-600 border-gray-200';
   }
@@ -312,11 +312,11 @@ const DATA_SOURCES = [
 const getStatusColor = (status: string) => {
   switch (status) {
     case 'extreme':
-      return 'bg-red-100 text-red-300 border-red-500/30';
+      return 'bg-red-100 text-red-800 border-red-300';
     case 'high':
-      return 'bg-orange-100 text-orange-300 border-orange-500/30';
+      return 'bg-orange-100 text-orange-800 border-orange-300';
     case 'moderate':
-      return 'bg-yellow-100 text-yellow-300 border-yellow-500/30';
+      return 'bg-yellow-100 text-yellow-800 border-yellow-300';
     default:
       return 'bg-gray-100 text-gray-600 border-gray-200';
   }
@@ -342,8 +342,8 @@ export default function HumanitarianPage() {
             animate={{ opacity: 1, y: 0 }}
             className="space-y-4"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 border border-blue-500/30 rounded-full">
-              <span className="text-blue-300 text-sm font-medium">Humanitarian Monitoring</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 border border-blue-300 rounded-full">
+              <span className="text-blue-800 text-sm font-medium">Humanitarian Monitoring</span>
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900">
               Humanitarian Access
@@ -445,15 +445,15 @@ export default function HumanitarianPage() {
               scoring each country from 0 (no constraints) to 5 (extreme constraints):
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-              <div className="p-3 rounded-lg bg-blue-100 border border-blue-500/20">
-                <h4 className="text-sm font-semibold text-blue-300 mb-2">Pillar 1: People&apos;s Access</h4>
+              <div className="p-3 rounded-lg bg-blue-100 border border-blue-300">
+                <h4 className="text-sm font-semibold text-blue-800 mb-2">Pillar 1: People&apos;s Access</h4>
                 <ul className="text-xs text-gray-600 space-y-1">
                   <li>• Denial of humanitarian needs</li>
                   <li>• Obstruction of services</li>
                 </ul>
               </div>
-              <div className="p-3 rounded-lg bg-purple-100 border border-purple-500/20">
-                <h4 className="text-sm font-semibold text-purple-300 mb-2">Pillar 2: Org Access</h4>
+              <div className="p-3 rounded-lg bg-purple-100 border border-purple-300">
+                <h4 className="text-sm font-semibold text-purple-800 mb-2">Pillar 2: Org Access</h4>
                 <ul className="text-xs text-gray-600 space-y-1">
                   <li>• Entry impediments (bureaucratic)</li>
                   <li>• Movement restrictions</li>
@@ -461,8 +461,8 @@ export default function HumanitarianPage() {
                   <li>• Violence against aid workers</li>
                 </ul>
               </div>
-              <div className="p-3 rounded-lg bg-amber-100 border border-amber-500/20">
-                <h4 className="text-sm font-semibold text-amber-300 mb-2">Pillar 3: Physical/Security</h4>
+              <div className="p-3 rounded-lg bg-amber-100 border border-amber-300">
+                <h4 className="text-sm font-semibold text-amber-800 mb-2">Pillar 3: Physical/Security</h4>
                 <ul className="text-xs text-gray-600 space-y-1">
                   <li>• Hostilities affecting aid</li>
                   <li>• Landmines/IEDs/UXO</li>
@@ -471,11 +471,11 @@ export default function HumanitarianPage() {
               </div>
             </div>
             <div className="flex flex-wrap gap-2 text-xs">
-              <span className="px-2 py-1 bg-green-100 text-green-800 border-green-300 rounded">0-1: Low/No constraints</span>
-              <span className="px-2 py-1 bg-yellow-100 text-yellow-300 rounded">2: Moderate</span>
-              <span className="px-2 py-1 bg-orange-100 text-orange-300 rounded">3: High</span>
-              <span className="px-2 py-1 bg-red-100 text-red-300 rounded">4: Very High</span>
-              <span className="px-2 py-1 bg-red-100 text-red-200 rounded">5: Extreme</span>
+              <span className="px-2 py-1 bg-green-100 text-green-800 border-green-300 border rounded">0-1: Low/No constraints</span>
+              <span className="px-2 py-1 bg-yellow-100 text-yellow-800 border-yellow-300 border rounded">2: Moderate</span>
+              <span className="px-2 py-1 bg-orange-100 text-orange-800 border-orange-300 border rounded">3: High</span>
+              <span className="px-2 py-1 bg-red-100 text-red-800 border-red-300 border rounded">4: Very High</span>
+              <span className="px-2 py-1 bg-red-100 text-red-800 border-red-300 border rounded">5: Extreme</span>
             </div>
           </motion.div>
         </div>
@@ -546,9 +546,9 @@ export default function HumanitarianPage() {
             ))}
           </div>
 
-          <div className="mt-8 p-4 rounded-xl bg-amber-100 border border-amber-500/20">
+          <div className="mt-8 p-4 rounded-xl bg-amber-100 border border-amber-300">
             <p className="text-sm text-amber-800">
-              <strong className="text-amber-300">Why monitor post-conflict zones?</strong> These regions are engaged in
+              <strong className="text-amber-900">Why monitor post-conflict zones?</strong> These regions are engaged in
               reconciliation, disarmament, and peacebuilding. Risks of relapse remain high due to weak institutions,
               economic instability, ethnic divisions, and external interference. The Olympic Truce provides a symbolic
               window for reinforcing these fragile peace processes.
@@ -620,9 +620,9 @@ export default function HumanitarianPage() {
             ))}
           </div>
 
-          <div className="mt-8 p-4 rounded-xl bg-red-100 border border-red-500/20">
+          <div className="mt-8 p-4 rounded-xl bg-red-100 border border-red-300">
             <p className="text-sm text-red-800">
-              <strong className="text-red-300">Strategic Impact:</strong> The Black Sea and Red Sea are the most urgent
+              <strong className="text-red-900">Strategic Impact:</strong> The Black Sea and Red Sea are the most urgent
               maritime mine zones today. Rerouting ships away from the Red Sea has cut Suez Canal revenues by 40% since 2023.
               Mines threaten food security by blocking grain exports from Ukraine and disrupting fishing in the Pacific.
               These are not just remnants of past wars — they are active threats to civilians, economies, and global stability.
@@ -671,8 +671,8 @@ export default function HumanitarianPage() {
                     <h3 className="font-semibold text-gray-900 text-lg">{country.name}</h3>
                     <span className={`inline-block px-2 py-0.5 text-xs rounded-full border mt-1 ${
                       country.trend === 'improved'
-                        ? 'bg-emerald-100 text-emerald-300 border-emerald-500/30'
-                        : 'bg-green-100 text-green-800 border-green-300 border-green-500/30'
+                        ? 'bg-emerald-100 text-emerald-800 border-emerald-300'
+                        : 'bg-green-100 text-green-800 border-green-300'
                     }`}>
                       {country.trend === 'improved' ? '↑ improved' : '→ stable'}
                     </span>
@@ -690,9 +690,9 @@ export default function HumanitarianPage() {
             ))}
           </div>
 
-          <div className="mt-8 p-4 rounded-xl bg-green-100 border border-green-500/20">
+          <div className="mt-8 p-4 rounded-xl bg-green-100 border border-green-300">
             <p className="text-sm text-green-800">
-              <strong className="text-green-300">Why highlight positive examples?</strong> These countries demonstrate
+              <strong className="text-green-900">Why highlight positive examples?</strong> These countries demonstrate
               that effective humanitarian access is achievable. Low scores (0-1) indicate minimal bureaucratic impediments,
               freedom of movement for aid workers, and supportive policies for refugee populations. Their practices
               serve as models for improving humanitarian access globally.
