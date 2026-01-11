@@ -91,7 +91,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-slate-950/90 backdrop-blur-xl border-b border-slate-800/50">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 border-b border-gray-200 shadow-sm">
       <div className="max-w-6xl mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -103,7 +103,7 @@ export default function Header() {
               height={36}
               className="rounded-full"
             />
-            <span className="font-semibold text-white hidden sm:block">Truce Foundation</span>
+            <span className="font-semibold text-gray-900 hidden sm:block">Truce Foundation</span>
           </Link>
 
           {/* Right side controls */}
@@ -111,12 +111,12 @@ export default function Header() {
             {/* Search Button */}
             <button
               onClick={() => setSearchOpen(true)}
-              className="flex items-center gap-2 px-3 py-1.5 text-sm text-slate-400 hover:text-white bg-slate-800/50 hover:bg-slate-800 border border-slate-700 rounded-lg transition-colors"
+              className="flex items-center gap-2 px-3 py-1.5 text-sm text-gray-600 hover:text-gray-900 bg-gray-100 hover:bg-gray-200 border border-gray-300 rounded-lg transition-colors"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
-              <kbd className="hidden sm:inline px-1.5 py-0.5 text-[10px] bg-slate-700 rounded">⌘K</kbd>
+              <kbd className="hidden sm:inline px-1.5 py-0.5 text-[10px] bg-gray-200 rounded">⌘K</kbd>
             </button>
 
             {/* Hamburger Menu Button */}
@@ -126,7 +126,7 @@ export default function Header() {
                   e.stopPropagation();
                   setMenuOpen(!menuOpen);
                 }}
-                className="p-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors"
+                className="p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
                 aria-label="Toggle menu"
               >
                 {menuOpen ? (
@@ -142,11 +142,11 @@ export default function Header() {
 
               {/* Dropdown Menu */}
               {menuOpen && (
-                <div className="absolute right-0 top-full mt-2 w-72 sm:w-80 max-h-[80vh] overflow-y-auto bg-slate-900 border border-slate-700 rounded-xl shadow-2xl">
+                <div className="absolute right-0 top-full mt-2 w-72 sm:w-80 max-h-[80vh] overflow-y-auto bg-white border border-gray-200 rounded-xl shadow-xl">
                   <div className="p-4">
                     {NAV_GROUPS.map((group, groupIndex) => (
-                      <div key={group.label} className={groupIndex > 0 ? 'mt-4 pt-4 border-t border-slate-800' : ''}>
-                        <div className="text-xs uppercase tracking-wider text-slate-500 mb-2 px-2">
+                      <div key={group.label} className={groupIndex > 0 ? 'mt-4 pt-4 border-t border-gray-200' : ''}>
+                        <div className="text-xs uppercase tracking-wider text-gray-500 mb-2 px-2">
                           {group.label}
                         </div>
                         <div className="space-y-1">
@@ -157,11 +157,11 @@ export default function Header() {
                                 href={item.href}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center justify-between px-2 py-2 text-sm text-slate-300 hover:text-white rounded-lg hover:bg-slate-800 transition-colors"
+                                className="flex items-center justify-between px-2 py-2 text-sm text-gray-700 hover:text-gray-900 rounded-lg hover:bg-gray-100 transition-colors"
                                 onClick={() => setMenuOpen(false)}
                               >
                                 {item.label}
-                                <svg className="w-3 h-3 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <svg className="w-3 h-3 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                                 </svg>
                               </a>
@@ -169,7 +169,7 @@ export default function Header() {
                               <Link
                                 key={item.href}
                                 href={item.href}
-                                className="block px-2 py-2 text-sm text-slate-300 hover:text-white rounded-lg hover:bg-slate-800 transition-colors"
+                                className="block px-2 py-2 text-sm text-gray-700 hover:text-gray-900 rounded-lg hover:bg-gray-100 transition-colors"
                                 onClick={() => setMenuOpen(false)}
                               >
                                 {item.label}
@@ -181,12 +181,12 @@ export default function Header() {
                     ))}
 
                     {/* View Live Index CTA */}
-                    <div className="mt-4 pt-4 border-t border-slate-800">
+                    <div className="mt-4 pt-4 border-t border-gray-200">
                       <a
                         href={TRUCE_INDEX_URL}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-2 w-full px-4 py-2.5 text-sm font-medium text-white bg-blue-600 hover:bg-blue-500 rounded-lg transition-colors"
+                        className="flex items-center justify-center gap-2 w-full px-4 py-2.5 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors"
                         onClick={() => setMenuOpen(false)}
                       >
                         View Live Index

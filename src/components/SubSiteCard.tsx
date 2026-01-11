@@ -31,8 +31,8 @@ export default function SubSiteCard({ site, index, compact = false }: SubSiteCar
       {/* Status badge */}
       <div className={`absolute ${compact ? 'top-3 right-3 px-2 py-0.5' : 'top-4 right-4 px-2 py-1'} rounded-full text-xs font-medium ${
         isLive
-          ? 'bg-green-500/20 text-green-400 border border-green-500/30'
-          : 'bg-slate-700/50 text-slate-400 border border-slate-600/30'
+          ? 'bg-green-600/20 text-green-700 border border-green-600/30'
+          : 'bg-gray-200 text-gray-600 border border-gray-300'
       }`}>
         {isLive ? 'Live' : 'Coming Soon'}
       </div>
@@ -41,16 +41,16 @@ export default function SubSiteCard({ site, index, compact = false }: SubSiteCar
       <div className={compact ? 'text-3xl mb-3' : 'text-4xl mb-4'}>{site.icon}</div>
 
       {/* Title */}
-      <h3 className={`font-semibold text-white ${compact ? 'text-base mb-1.5' : 'text-lg mb-2'} group-hover:text-blue-400 transition-colors`}>
+      <h3 className={`font-semibold text-gray-900 ${compact ? 'text-base mb-1.5' : 'text-lg mb-2'} group-hover:text-blue-600 transition-colors`}>
         {site.title}
       </h3>
 
       {/* Description */}
-      <p className="text-sm text-slate-400 line-clamp-2">{site.description}</p>
+      <p className="text-sm text-gray-600 line-clamp-2">{site.description}</p>
 
       {/* Arrow indicator for live sites */}
       {isLive && (
-        <div className={`${compact ? 'mt-3 text-xs' : 'mt-4 text-sm'} flex items-center gap-2 text-blue-400 font-medium`}>
+        <div className={`${compact ? 'mt-3 text-xs' : 'mt-4 text-sm'} flex items-center gap-2 text-blue-600 font-medium`}>
           <span>{getActionWord(site.id)}</span>
           <svg
             className={`${compact ? 'w-3.5 h-3.5' : 'w-4 h-4'} transform group-hover:translate-x-1 transition-transform`}
@@ -61,7 +61,7 @@ export default function SubSiteCard({ site, index, compact = false }: SubSiteCar
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>
           {isExternal && (
-            <svg className="w-3 h-3 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="w-3 h-3 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
             </svg>
           )}
@@ -73,7 +73,7 @@ export default function SubSiteCard({ site, index, compact = false }: SubSiteCar
   const cardClasses = `
     glass-card ${compact ? 'p-5' : 'p-6'} relative overflow-hidden group
     transition-all duration-300
-    ${isLive ? 'cursor-pointer hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/10' : 'cursor-default opacity-75'}
+    ${isLive ? 'cursor-pointer hover:border-blue-600/50 hover:shadow-lg hover:shadow-blue-600/10' : 'cursor-default opacity-75'}
   `;
 
   if (isLive) {
