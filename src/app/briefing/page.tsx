@@ -225,7 +225,7 @@ export default function DailyBriefingPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.15 }}
-                className="bg-gradient-to-r from-blue-600/30 to-slate-900 border border-blue-600/50 rounded-xl p-6 mb-8"
+                className="bg-gradient-to-r from-blue-600/30 to-gray-50 border border-blue-600/50 rounded-xl p-6 mb-8"
               >
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex-1">
