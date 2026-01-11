@@ -20,7 +20,7 @@ export default function Hero() {
       />
 
       {/* Blue glow effect */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-3xl" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-100 rounded-full blur-3xl" />
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto text-center space-y-8">
@@ -71,7 +71,7 @@ export default function Hero() {
           transition={{ delay: 0.45, duration: 0.6 }}
           className="flex flex-wrap justify-center gap-4 text-xs sm:text-sm -mt-1"
         >
-          <a href="/co-sponsors" className="px-4 py-2 bg-blue-600/10 border border-blue-600/30 rounded-lg text-blue-700 hover:bg-blue-600/20 transition-colors">
+          <a href="/co-sponsors" className="px-4 py-2 bg-blue-100 border border-blue-600/30 rounded-lg text-blue-700 hover:bg-blue-600/20 transition-colors">
             <span className="font-bold">166</span> UN Co-Sponsors
           </a>
           <div className="px-4 py-2 bg-pink-600/10 border border-pink-600/30 rounded-lg text-pink-700">

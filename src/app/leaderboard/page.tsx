@@ -86,9 +86,9 @@ const SOURCE_PRESETS: {
 function getTrendIcon(trend: string) {
   switch (trend) {
     case 'up':
-      return <span className="text-red-400">&#x25B2;</span>;
+      return <span className="text-red-800">&#x25B2;</span>;
     case 'down':
-      return <span className="text-green-400">&#x25BC;</span>;
+      return <span className="text-green-800">&#x25BC;</span>;
     case 'new':
       return <span className="text-blue-600 text-xs">NEW</span>;
     default:
@@ -99,9 +99,9 @@ function getTrendIcon(trend: string) {
 function getCrisisColor(level: string | null) {
   if (!level) return 'bg-gray-200';
   const l = level.toLowerCase();
-  if (l.includes('critical') || l.includes('high')) return 'bg-red-900/50 text-red-300';
-  if (l.includes('moderate') || l.includes('medium')) return 'bg-orange-900/50 text-orange-300';
-  if (l.includes('low')) return 'bg-yellow-900/50 text-yellow-300';
+  if (l.includes('critical') || l.includes('high')) return 'bg-red-100 text-red-800 border-red-300';
+  if (l.includes('moderate') || l.includes('medium')) return 'bg-orange-100 text-orange-800 border-orange-300';
+  if (l.includes('low')) return 'bg-yellow-100 text-yellow-800 border-yellow-300';
   return 'bg-gray-200 text-gray-600';
 }
 
@@ -388,7 +388,7 @@ export default function LeaderboardPage() {
                 <div className="text-sm text-gray-600">Countries Affected</div>
               </div>
               <div className="bg-gray-50/50 border border-gray-200/50 rounded-xl p-5 text-center">
-                <div className="text-3xl font-bold text-red-400 mb-1">
+                <div className="text-3xl font-bold text-red-800 mb-1">
                   {data.totals.total_critical.toLocaleString()}
                 </div>
                 <div className="text-sm text-gray-600">Critical Incidents</div>
@@ -406,7 +406,7 @@ export default function LeaderboardPage() {
           {/* Error State */}
           {error && (
             <div className="text-center py-20">
-              <p className="text-red-400">{error}</p>
+              <p className="text-red-800">{error}</p>
             </div>
           )}
 
@@ -467,13 +467,13 @@ export default function LeaderboardPage() {
                           </div>
                         </td>
                         <td className="px-4 py-4 text-right">
-                          <span className="text-red-400">
+                          <span className="text-red-800">
                             {country.conflict_incidents.toLocaleString()}
                           </span>
                         </td>
                         <td className="px-4 py-4 text-right">
                           {country.critical_incidents > 0 ? (
-                            <span className="px-2 py-1 bg-red-900/50 text-red-300 rounded text-sm">
+                            <span className="px-2 py-1 bg-red-100 text-red-800 border-red-300 rounded text-sm">
                               {country.critical_incidents}
                             </span>
                           ) : (
@@ -519,19 +519,19 @@ export default function LeaderboardPage() {
                     <h3 className="text-xl font-bold text-gray-900 mb-4">{country.country_name} - Incident Breakdown</h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                       <div className="bg-gray-100/50 rounded-lg p-4">
-                        <div className="text-2xl font-bold text-red-400">{country.conflict_incidents}</div>
+                        <div className="text-2xl font-bold text-red-800">{country.conflict_incidents}</div>
                         <div className="text-sm text-gray-600">Armed Conflicts</div>
                       </div>
                       <div className="bg-gray-100/50 rounded-lg p-4">
-                        <div className="text-2xl font-bold text-yellow-400">{country.humanitarian_access_incidents}</div>
+                        <div className="text-2xl font-bold text-yellow-800">{country.humanitarian_access_incidents}</div>
                         <div className="text-sm text-gray-600">Humanitarian Access</div>
                       </div>
                       <div className="bg-gray-100/50 rounded-lg p-4">
-                        <div className="text-2xl font-bold text-orange-400">{country.truce_violations}</div>
+                        <div className="text-2xl font-bold text-orange-800">{country.truce_violations}</div>
                         <div className="text-sm text-gray-600">Truce Violations</div>
                       </div>
                       <div className="bg-gray-100/50 rounded-lg p-4">
-                        <div className="text-2xl font-bold text-green-400">{country.positive_measures}</div>
+                        <div className="text-2xl font-bold text-green-800">{country.positive_measures}</div>
                         <div className="text-sm text-gray-600">Positive Measures</div>
                       </div>
                     </div>

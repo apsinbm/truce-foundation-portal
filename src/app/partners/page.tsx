@@ -95,7 +95,7 @@ const CATEGORY_CONFIG = {
     description: 'Organizations we are in discussions with',
     color: 'from-amber-500/20 to-amber-600/10',
     border: 'border-amber-500/30',
-    iconColor: 'text-amber-400',
+    iconColor: 'text-amber-800',
   },
 };
 
@@ -295,7 +295,7 @@ export default function PartnersPage() {
                 <p className="text-xs text-gray-600 mb-3">
                   {partner.description}
                 </p>
-                <span className="inline-flex items-center gap-1 text-xs text-amber-400">
+                <span className="inline-flex items-center gap-1 text-xs text-amber-800">
                   Learn more
                   <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />

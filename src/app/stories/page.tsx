@@ -101,10 +101,10 @@ const STORY_CATEGORIES = [
 
 const getCategoryInfo = (category: string) => {
   const categories: Record<string, { color: string; label: string }> = {
-    'conflict-zone': { color: 'bg-red-500/20 text-red-400 border-red-500/30', label: 'From Conflict Zone' },
+    'conflict-zone': { color: 'bg-red-100 text-red-800 border-red-500/30', label: 'From Conflict Zone' },
     'athlete': { color: 'bg-blue-600/20 text-blue-600 border-blue-500/30', label: 'Young Athlete' },
     'refugee': { color: 'bg-purple-500/20 text-purple-400 border-purple-500/30', label: 'Refugee Voice' },
-    'advocate': { color: 'bg-green-500/20 text-green-400 border-green-500/30', label: 'Peace Advocate' },
+    'advocate': { color: 'bg-green-500/20 text-green-800 border-green-500/30', label: 'Peace Advocate' },
   };
   return categories[category] || { color: 'bg-gray-500/20 text-gray-600', label: category };
 };
@@ -153,7 +153,7 @@ export default function StoriesPage() {
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               First-person accounts from young people around the world. Their experiences remind us why the Olympic Truce matters.
             </p>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/10 border border-green-500/30 text-green-400 text-sm">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 border border-green-500/30 text-green-800 text-sm">
               <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
               Collecting stories for 2026
             </div>
@@ -225,7 +225,7 @@ export default function StoriesPage() {
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-4 py-2 rounded-lg text-sm transition-all ${
                   selectedCategory === category.id
-                    ? 'bg-green-500/20 text-green-400 border border-green-500/50'
+                    ? 'bg-green-500/20 text-green-800 border border-green-500/50'
                     : 'bg-gray-100/50 text-gray-600 border border-gray-200/50 hover:border-gray-400/50'
                 }`}
               >
@@ -256,7 +256,7 @@ export default function StoriesPage() {
                           {categoryInfo.label}
                         </span>
                         {story.featured && (
-                          <span className="px-2 py-0.5 text-xs bg-amber-500/20 text-amber-400 rounded">
+                          <span className="px-2 py-0.5 text-xs bg-amber-500/20 text-amber-800 rounded">
                             Featured
                           </span>
                         )}
@@ -462,19 +462,19 @@ export default function StoriesPage() {
                 <h3 className="font-semibold text-gray-900 mb-2">What we're looking for:</h3>
                 <ul className="space-y-2 text-gray-600">
                   <li className="flex items-start gap-2">
-                    <span className="text-green-400">•</span>
+                    <span className="text-green-800">•</span>
                     Personal experiences with sport bringing people together
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-green-400">•</span>
+                    <span className="text-green-800">•</span>
                     How the Olympic spirit has impacted your community
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-green-400">•</span>
+                    <span className="text-green-800">•</span>
                     Stories of hope and resilience
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-green-400">•</span>
+                    <span className="text-green-800">•</span>
                     Your vision for peace during the 2026 Truce
                   </li>
                 </ul>

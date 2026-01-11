@@ -17,7 +17,7 @@ const COMPLIANCE_CATEGORIES = [
     metrics: ['Armed conflict incidents', 'Military operations', 'Casualty reports', 'Territorial violations'],
     color: 'from-green-500/20 to-green-600/10',
     border: 'border-green-500/30',
-    iconColor: 'text-green-400',
+    iconColor: 'text-green-800',
   },
   {
     id: 'corridors',
@@ -73,7 +73,7 @@ const COMPLIANCE_CATEGORIES = [
     metrics: ['Official statements', 'Media coverage sentiment', 'Social media engagement', 'Press releases'],
     color: 'from-amber-500/20 to-amber-600/10',
     border: 'border-amber-500/30',
-    iconColor: 'text-amber-400',
+    iconColor: 'text-amber-800',
   },
 ];
 
@@ -204,7 +204,7 @@ export default function MethodologyPage() {
                 </p>
                 <div className="grid grid-cols-2 sm:grid-cols-5 gap-4">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-green-400">30%</div>
+                    <div className="text-2xl font-bold text-green-800">30%</div>
                     <div className="text-xs text-gray-500">Ceasefire</div>
                   </div>
                   <div className="text-center">
@@ -220,7 +220,7 @@ export default function MethodologyPage() {
                     <div className="text-xs text-gray-500">Youth</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-amber-400">10%</div>
+                    <div className="text-2xl font-bold text-amber-800">10%</div>
                     <div className="text-xs text-gray-500">Media</div>
                   </div>
                 </div>
@@ -308,21 +308,21 @@ export default function MethodologyPage() {
               The Truce Index is anchored in the UN General Assembly resolutions that establish and support the Olympic Truce. Our compliance categories align with the obligations set forth in these documents:
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="p-4 rounded-xl bg-blue-600/10 border border-blue-500/30">
+              <div className="p-4 rounded-xl bg-blue-100 border border-blue-500/30">
                 <div className="flex items-center gap-2 mb-2">
                   <span className="text-xs font-mono bg-blue-100 text-blue-800 border-blue-300 px-2 py-0.5 rounded">A/80/L.10</span>
                   <span className="text-xs text-blue-300">Current</span>
                 </div>
                 <h3 className="font-semibold text-gray-900 text-sm">Milano-Cortina 2026 Resolution</h3>
                 <p className="text-xs text-gray-600 mt-1">166 co-sponsors. Defines Truce window: Jan 30 - Mar 22, 2026.</p>
-                <a href="/downloads/A_80_L.10-EN.pdf" className="inline-flex items-center gap-1 text-xs text-green-400 mt-2 hover:text-green-300">
+                <a href="/downloads/A_80_L.10-EN.pdf" className="inline-flex items-center gap-1 text-xs text-green-800 mt-2 hover:text-green-300">
                   <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                   </svg>
                   Download PDF
                 </a>
               </div>
-              <div className="p-4 rounded-xl bg-green-500/10 border border-green-500/30">
+              <div className="p-4 rounded-xl bg-green-100 border border-green-500/30">
                 <div className="flex items-center gap-2 mb-2">
                   <span className="text-xs font-mono bg-green-100 text-green-800 border-green-300 px-2 py-0.5 rounded">A/RES/48/11</span>
                   <span className="text-xs text-green-300">Foundation</span>

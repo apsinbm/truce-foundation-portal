@@ -71,7 +71,7 @@ export default function VideoGallery({ videos, className = '' }: VideoGalleryPro
 
             {/* Title and description */}
             <div className="mt-3">
-              <h3 className="text-gray-900 font-medium group-hover:text-blue-400 transition-colors line-clamp-2">
+              <h3 className="text-gray-900 font-medium group-hover:text-blue-800 transition-colors line-clamp-2">
                 {video.title}
               </h3>
               {video.description && (

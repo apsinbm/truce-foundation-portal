@@ -166,11 +166,11 @@ export function FatalityRange({
       <span className="text-xs text-gray-600">
         {hasRange ? (
           <>
-            <span className="text-red-400 font-medium">{best?.toLocaleString()}</span>
+            <span className="text-red-800 font-medium">{best?.toLocaleString()}</span>
             <span className="text-gray-600 text-[10px] ml-1">({low?.toLocaleString()}–{high?.toLocaleString()})</span>
           </>
         ) : (
-          <span className="text-red-400 font-medium">{(best || low || high || 0).toLocaleString()}</span>
+          <span className="text-red-800 font-medium">{(best || low || high || 0).toLocaleString()}</span>
         )}
       </span>
     );
@@ -179,7 +179,7 @@ export function FatalityRange({
   return (
     <div className="space-y-1">
       <div className="flex items-center gap-2">
-        <span className="text-red-400 font-bold text-lg">
+        <span className="text-red-800 font-bold text-lg">
           {best?.toLocaleString() || '—'}
         </span>
         <span className="text-gray-500 text-xs">fatalities</span>

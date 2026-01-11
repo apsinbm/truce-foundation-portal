@@ -89,7 +89,7 @@ export default function AncientHistoryPage() {
             animate={{ opacity: 1, y: 0 }}
             className="space-y-4"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-500/10 border border-amber-500/30 rounded-full mb-4">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-100 border border-amber-500/30 rounded-full mb-4">
               <span className="text-xl">🏛️</span>
               <span className="text-amber-300 text-sm font-medium">Ancient Era</span>
             </div>
@@ -233,9 +233,9 @@ export default function AncientHistoryPage() {
           <div className="space-y-4">
             {ANCIENT_MOMENTS.map((moment, index) => {
               const sigConfig = {
-                milestone: { bg: 'bg-blue-600/10', border: 'border-blue-500/30', icon: '📌', color: 'text-blue-300' },
+                milestone: { bg: 'bg-blue-100', border: 'border-blue-500/30', icon: '📌', color: 'text-blue-300' },
                 violation: { bg: 'bg-red-500/10', border: 'border-red-500/30', icon: '⚠️', color: 'text-red-300' },
-                symbolic: { bg: 'bg-amber-500/10', border: 'border-amber-500/30', icon: '✨', color: 'text-amber-300' },
+                symbolic: { bg: 'bg-amber-100', border: 'border-amber-500/30', icon: '✨', color: 'text-amber-300' },
               }[moment.significance];
 
               return (
@@ -310,7 +310,7 @@ export default function AncientHistoryPage() {
                       href={quote.sourceUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xs text-amber-400 hover:text-amber-300"
+                      className="text-xs text-amber-800 hover:text-amber-300"
                     >
                       {quote.source} ↗
                     </a>

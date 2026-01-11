@@ -675,13 +675,13 @@ const SCHOLARLY_SOURCES: ScholarlySource[] = [
 const getCategoryConfig = (category: FoundationalDoc['category']) => {
   switch (category) {
     case 'foundation':
-      return { bg: 'bg-blue-600/10', border: 'border-blue-500/30', text: 'text-blue-300', label: 'Foundation' };
+      return { bg: 'bg-blue-100', border: 'border-blue-300', text: 'text-blue-800', label: 'Foundation' };
     case 'sport':
-      return { bg: 'bg-green-500/10', border: 'border-green-500/30', text: 'text-green-300', label: 'Sport' };
+      return { bg: 'bg-green-100', border: 'border-green-300', text: 'text-green-800', label: 'Sport' };
     case 'development':
-      return { bg: 'bg-purple-500/10', border: 'border-purple-500/30', text: 'text-purple-300', label: 'Development' };
+      return { bg: 'bg-purple-100', border: 'border-purple-300', text: 'text-purple-800', label: 'Development' };
     case 'peace':
-      return { bg: 'bg-amber-500/10', border: 'border-amber-500/30', text: 'text-amber-300', label: 'Peace' };
+      return { bg: 'bg-amber-100', border: 'border-amber-300', text: 'text-amber-800', label: 'Peace' };
   }
 };
 
@@ -723,7 +723,7 @@ export default function DocumentsPage() {
                     <p className="text-gray-600 text-sm mt-1">85% of UN Member States signed on. Adopted by consensus November 19, 2025.</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-2 text-green-400 group-hover:text-green-300">
+                <div className="flex items-center gap-2 text-green-800 group-hover:text-green-300">
                   <span className="text-sm font-medium">View Full List</span>
                   <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -824,10 +824,10 @@ export default function DocumentsPage() {
                 </thead>
                 <tbody>
                   {TRUCE_RESOLUTIONS.map((res, index) => (
-                    <tr key={res.symbol} className={`border-t border-gray-200/50 ${index === 0 ? 'bg-blue-600/10' : ''}`}>
+                    <tr key={res.symbol} className={`border-t border-gray-200/50 ${index === 0 ? 'bg-blue-100' : ''}`}>
                       <td className="py-3 px-4">
                         <div className="flex items-center gap-2">
-                          <span className={`text-xs px-1.5 py-0.5 rounded ${res.season === 'Summer' ? 'bg-amber-100 text-amber-800 border-amber-300' : 'bg-cyan-500/20 text-cyan-300'}`}>
+                          <span className={`text-xs px-1.5 py-0.5 rounded ${res.season === 'Summer' ? 'bg-amber-100 text-amber-800 border-amber-300' : 'bg-cyan-100 text-cyan-300'}`}>
                             {res.season === 'Summer' ? '☀️' : '❄️'}
                           </span>
                           <span className={index === 0 ? 'text-blue-300 font-medium' : 'text-gray-900'}>{res.games}</span>
@@ -836,7 +836,7 @@ export default function DocumentsPage() {
                       <td className="py-3 px-4 font-mono text-xs text-gray-600">{res.symbol}</td>
                       <td className="py-3 px-4 text-center">
                         {res.coSponsors && (
-                          <span className={`font-bold ${res.coSponsors === 193 ? 'text-green-400' : 'text-gray-900'}`}>
+                          <span className={`font-bold ${res.coSponsors === 193 ? 'text-green-800' : 'text-gray-900'}`}>
                             {res.coSponsors}
                           </span>
                         )}
@@ -1045,7 +1045,7 @@ export default function DocumentsPage() {
                 However, some scholars (Chernykh, Grear) argue the consistent repetition every two years - usually by consensus of all 193 nations -
                 may be creating <strong className="text-green-300">Customary International Law</strong> via <em>opinio juris</em> (belief the practice is required by law).
               </p>
-              <div className="p-4 mt-4 rounded-xl bg-blue-600/10 border border-blue-500/30">
+              <div className="p-4 mt-4 rounded-xl bg-blue-100 border border-blue-500/30">
                 <h4 className="font-semibold text-blue-300 mb-2">2022 Paradigm Shift: Lex Olympica Integration</h4>
                 <p>
                   The <strong className="text-gray-900">2022 Ukraine invasion</strong> marked a turning point. The IOC Executive Board explicitly cited breach of the Olympic Truce

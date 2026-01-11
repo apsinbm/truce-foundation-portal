@@ -10,11 +10,11 @@ import Header from '@/components/Header';
 const getSeverityColor = (severity: string) => {
   switch (severity) {
     case 'critical':
-      return 'bg-red-900/50 text-red-300 border-red-500/30';
+      return 'bg-red-100 text-red-800 border-red-300 border-red-500/30';
     case 'major':
-      return 'bg-orange-900/50 text-orange-300 border-orange-500/30';
+      return 'bg-orange-100 text-orange-800 border-orange-300 border-orange-500/30';
     case 'significant':
-      return 'bg-yellow-900/50 text-yellow-300 border-yellow-500/30';
+      return 'bg-yellow-100 text-yellow-800 border-yellow-300 border-yellow-500/30';
     default:
       return 'bg-gray-100 text-gray-600';
   }
@@ -96,7 +96,7 @@ export default function CountryProfilePage() {
               animate={{ opacity: 1, y: 0 }}
               className="p-4 rounded-xl bg-red-500/10 border border-red-500/30 text-center"
             >
-              <span className="text-3xl font-bold text-red-400">{countryData.violationCount}</span>
+              <span className="text-3xl font-bold text-red-800">{countryData.violationCount}</span>
               <p className="text-xs text-gray-500 mt-1">Truce Periods Violated</p>
             </motion.div>
             <motion.div
@@ -114,7 +114,7 @@ export default function CountryProfilePage() {
               transition={{ delay: 0.2 }}
               className="p-4 rounded-xl bg-gray-50/50 border border-gray-200/50 text-center"
             >
-              <span className="text-3xl font-bold text-orange-400">{criticalCount}</span>
+              <span className="text-3xl font-bold text-orange-800">{criticalCount}</span>
               <p className="text-xs text-gray-500 mt-1">Critical Severity</p>
             </motion.div>
             <motion.div
@@ -186,7 +186,7 @@ export default function CountryProfilePage() {
                         </p>
                       )}
                       {v.violation.casualties && (
-                        <p className="text-xs text-red-400 mt-1">
+                        <p className="text-xs text-red-800 mt-1">
                           Estimated casualties: {v.violation.casualties.toLocaleString()}
                         </p>
                       )}
@@ -244,7 +244,7 @@ export default function CountryProfilePage() {
                   className="p-3 rounded-xl bg-gray-100/50 border border-gray-200/50 hover:border-red-500/50 transition-colors group"
                 >
                   <div className="flex items-center gap-2">
-                    <span className="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center text-xs font-bold text-red-400">
+                    <span className="w-6 h-6 rounded-full bg-red-100 flex items-center justify-center text-xs font-bold text-red-800">
                       {offender.violationCount}
                     </span>
                     <span className="text-sm text-gray-900 group-hover:text-red-300 transition-colors truncate">

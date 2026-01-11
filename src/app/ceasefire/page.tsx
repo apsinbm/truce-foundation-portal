@@ -107,7 +107,7 @@ const getStatusColor = (status: string) => {
     case 'dialogue':
       return 'bg-purple-100 text-purple-800 border-purple-300 border-purple-500/30';
     case 'diplomatic':
-      return 'bg-cyan-500/20 text-cyan-300 border-cyan-500/30';
+      return 'bg-cyan-100 text-cyan-300 border-cyan-500/30';
     default:
       return 'bg-gray-100 text-gray-600 border-gray-200';
   }
@@ -147,7 +147,7 @@ export default function CeasefireWatchPage() {
             animate={{ opacity: 1, y: 0 }}
             className="space-y-4"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/10 border border-green-500/30 rounded-full">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-100 border border-green-500/30 rounded-full">
               <span className="text-green-300 text-sm font-medium">Peace Monitoring</span>
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900">
@@ -169,17 +169,17 @@ export default function CeasefireWatchPage() {
             viewport={{ once: true }}
             className="grid grid-cols-3 gap-4"
           >
-            <div className="p-4 rounded-xl bg-green-500/10 border border-green-500/30 text-center">
-              <div className="text-3xl font-bold text-green-400">{signed}</div>
-              <div className="text-sm text-green-300/80">Peace Agreements</div>
+            <div className="p-4 rounded-xl bg-green-100 border border-green-500/30 text-center">
+              <div className="text-3xl font-bold text-green-800">{signed}</div>
+              <div className="text-sm text-green-700">Peace Agreements</div>
             </div>
-            <div className="p-4 rounded-xl bg-blue-600/10 border border-blue-500/30 text-center">
+            <div className="p-4 rounded-xl bg-blue-100 border border-blue-500/30 text-center">
               <div className="text-3xl font-bold text-blue-600">{ceasefires}</div>
-              <div className="text-sm text-blue-300/80">Active Ceasefires</div>
+              <div className="text-sm text-blue-700">Active Ceasefires</div>
             </div>
-            <div className="p-4 rounded-xl bg-amber-500/10 border border-amber-500/30 text-center">
-              <div className="text-3xl font-bold text-amber-400">{partial}</div>
-              <div className="text-sm text-amber-300/80">In Progress</div>
+            <div className="p-4 rounded-xl bg-amber-100 border border-amber-500/30 text-center">
+              <div className="text-3xl font-bold text-amber-800">{partial}</div>
+              <div className="text-sm text-amber-700">In Progress</div>
             </div>
           </motion.div>
         </div>
@@ -265,7 +265,7 @@ export default function CeasefireWatchPage() {
                 </div>
 
                 <div className="pt-3 border-t border-gray-200">
-                  <p className="text-xs text-blue-300/80">
+                  <p className="text-xs text-blue-700">
                     <strong className="text-blue-300">Truce relevance:</strong> {ceasefire.relevance}
                   </p>
                 </div>

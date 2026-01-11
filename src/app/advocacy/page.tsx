@@ -305,7 +305,7 @@ export default function AdvocacyPage() {
                 >
                   {copiedId === 'link' ? (
                     <>
-                      <svg className="w-5 h-5 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg className="w-5 h-5 text-green-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                       Copied!
@@ -337,8 +337,8 @@ export default function AdvocacyPage() {
                     onClick={() => copyToClipboard(tag, tag)}
                     className={`px-3 py-1.5 rounded-full text-sm transition-all ${
                       copiedId === tag
-                        ? 'bg-green-500/20 text-green-400 border border-green-500/50'
-                        : 'bg-blue-600/10 text-blue-600 border border-blue-500/30 hover:bg-blue-600/20'
+                        ? 'bg-green-500/20 text-green-800 border border-green-500/50'
+                        : 'bg-blue-100 text-blue-600 border border-blue-500/30 hover:bg-blue-600/20'
                     }`}
                   >
                     {copiedId === tag ? 'Copied!' : tag}
@@ -368,7 +368,7 @@ export default function AdvocacyPage() {
                       onClick={() => copyToClipboard(point.text, point.id)}
                       className={`flex-shrink-0 px-2 py-1 rounded text-xs transition-all ${
                         copiedId === point.id
-                          ? 'bg-green-500/20 text-green-400'
+                          ? 'bg-green-500/20 text-green-800'
                           : 'bg-gray-200/50 text-gray-600 hover:text-gray-900 hover:bg-gray-200'
                       }`}
                     >
@@ -435,7 +435,7 @@ export default function AdvocacyPage() {
                       item.comingSoon
                         ? 'bg-gray-50/30 border-gray-200/30'
                         : item.highlight
-                        ? 'bg-blue-600/10 border-blue-500/30 hover:border-blue-400/50'
+                        ? 'bg-blue-100 border-blue-500/30 hover:border-blue-400/50'
                         : 'bg-gray-50/50 border-gray-200/50 hover:border-blue-500/50 cursor-pointer'
                     }`}
                   >
@@ -470,7 +470,7 @@ export default function AdvocacyPage() {
                           {!item.comingSoon && item.downloadUrl && (
                             <a
                               href={item.downloadUrl}
-                              className="inline-flex items-center gap-1 text-xs text-green-400 hover:text-green-300"
+                              className="inline-flex items-center gap-1 text-xs text-green-800 hover:text-green-300"
                             >
                               <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />

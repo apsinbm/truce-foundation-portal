@@ -56,7 +56,7 @@ export default function HistoryHubPage() {
                       <h2 className="text-2xl font-bold text-gray-900 group-hover:text-amber-300 transition-colors">
                         Ancient Ekecheiria
                       </h2>
-                      <p className="text-amber-400/80 text-sm">776 BC - 393 AD</p>
+                      <p className="text-amber-800/80 text-sm">776 BC - 393 AD</p>
                     </div>
                   </div>
                   <p className="text-gray-600 mb-4">
@@ -70,7 +70,7 @@ export default function HistoryHubPage() {
                     <li>• Famous violations: Sparta, Philip II, Battle at Olympia</li>
                     <li>• Ancient wisdom from Isocrates, Pausanias, Pindar</li>
                   </ul>
-                  <span className="inline-flex items-center gap-2 text-amber-400 group-hover:gap-3 transition-all">
+                  <span className="inline-flex items-center gap-2 text-amber-800 group-hover:gap-3 transition-all">
                     Explore Ancient History
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -177,7 +177,7 @@ export default function HistoryHubPage() {
               viewport={{ once: true }}
               className="p-4 rounded-xl bg-gray-100/50 border border-gray-200/50 text-center"
             >
-              <span className="text-3xl font-bold text-amber-400">2,800+</span>
+              <span className="text-3xl font-bold text-amber-800">2,800+</span>
               <p className="text-xs text-gray-500 mt-1">Years of Tradition</p>
             </motion.div>
             <motion.div
@@ -187,7 +187,7 @@ export default function HistoryHubPage() {
               transition={{ delay: 0.1 }}
               className="p-4 rounded-xl bg-gray-100/50 border border-gray-200/50 text-center"
             >
-              <span className="text-3xl font-bold text-green-400">17</span>
+              <span className="text-3xl font-bold text-green-800">17</span>
               <p className="text-xs text-gray-500 mt-1">Modern UN Resolutions</p>
             </motion.div>
             <motion.div

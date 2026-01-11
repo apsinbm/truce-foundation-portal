@@ -629,15 +629,15 @@ export default function CoSponsorsPage() {
                 <h3 className="font-medium text-gray-900 mb-2">Truce Period</h3>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
-                    <span className="text-green-400">•</span>
+                    <span className="text-green-800">•</span>
                     <span>Begins 7 days before the Opening Ceremony (Feb 6, 2026)</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-green-400">•</span>
+                    <span className="text-green-800">•</span>
                     <span>Ends 7 days after the Paralympic Closing Ceremony (Mar 22, 2026)</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-green-400">•</span>
+                    <span className="text-green-800">•</span>
                     <span>Total duration: 52 days</span>
                   </li>
                 </ul>

@@ -50,7 +50,7 @@ export default function AncientWisdom() {
       <div className="absolute inset-0 bg-gradient-to-b from-slate-900/50 via-slate-950 to-slate-900/50" />
 
       {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-64 h-64 bg-amber-500/5 rounded-full blur-3xl" />
+      <div className="absolute top-0 left-0 w-64 h-64 bg-amber-100 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-0 w-64 h-64 bg-purple-500/5 rounded-full blur-3xl" />
 
       <div className="relative z-10 max-w-4xl mx-auto">
@@ -61,7 +61,7 @@ export default function AncientWisdom() {
           viewport={{ once: true }}
           className="text-center mb-8"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-500/10 border border-amber-500/30 rounded-full mb-4">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-100 border border-amber-500/30 rounded-full mb-4">
             <span className="text-xl">📜</span>
             <span className="text-amber-300 text-sm font-medium">Ancient Wisdom</span>
           </div>
@@ -107,7 +107,7 @@ export default function AncientWisdom() {
                       href={currentQuote.sourceUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm text-amber-400 hover:text-amber-300 transition-colors"
+                      className="text-sm text-amber-800 hover:text-amber-300 transition-colors"
                     >
                       {currentQuote.source} ↗
                     </a>

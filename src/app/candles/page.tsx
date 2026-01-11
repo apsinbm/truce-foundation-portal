@@ -112,7 +112,7 @@ export default function CandlesPage() {
       {/* Hero with animated candle */}
       <section className="pt-32 pb-12 px-4 relative overflow-hidden">
         {/* Background glow effect */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-amber-500/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-amber-100 rounded-full blur-3xl" />
 
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <motion.div
@@ -139,7 +139,7 @@ export default function CandlesPage() {
               Light a virtual candle for peace. Join voices from around the world in solidarity.
             </p>
 
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-sm">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-100 border border-amber-500/30 text-amber-800 text-sm">
               <div className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
               Wall opens January 2026
             </div>
@@ -154,9 +154,9 @@ export default function CandlesPage() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="p-4 rounded-xl bg-amber-500/10 border border-amber-500/30 text-center"
+              className="p-4 rounded-xl bg-amber-100 border border-amber-500/30 text-center"
             >
-              <span className="text-3xl font-bold text-amber-400">{CANDLE_STATS.total || '---'}</span>
+              <span className="text-3xl font-bold text-amber-800">{CANDLE_STATS.total || '---'}</span>
               <p className="text-xs text-gray-500 mt-1">Candles Lit</p>
             </motion.div>
             <motion.div

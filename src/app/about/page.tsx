@@ -169,7 +169,7 @@ export default function AboutPage() {
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-2">
-                    <span className="px-2 py-0.5 text-xs bg-amber-500/20 text-amber-400 rounded">Featured</span>
+                    <span className="px-2 py-0.5 text-xs bg-amber-500/20 text-amber-800 rounded">Featured</span>
                     <span className="text-xs text-gray-500">{pub.publication} • {pub.date}</span>
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 group-hover:text-amber-300 transition-colors mb-2">
@@ -262,19 +262,19 @@ export default function AboutPage() {
                 className="block p-5 rounded-xl bg-gray-50/50 border border-gray-200/50 hover:border-cyan-500/50 transition-all group"
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-cyan-500/20 rounded-lg flex items-center justify-center text-xl flex-shrink-0">
+                  <div className="w-10 h-10 bg-cyan-100 rounded-lg flex items-center justify-center text-xl flex-shrink-0">
                     📊
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-1">
                       <span className="text-xs text-gray-500">{pub.publication} • {pub.date}</span>
                     </div>
-                    <h3 className="font-semibold text-gray-900 group-hover:text-cyan-400 transition-colors mb-1">
+                    <h3 className="font-semibold text-gray-900 group-hover:text-cyan-800 transition-colors mb-1">
                       {pub.title}
                     </h3>
                     <p className="text-sm text-gray-600">{pub.description}</p>
                   </div>
-                  <div className="text-gray-500 group-hover:text-cyan-400 transition-colors">
+                  <div className="text-gray-500 group-hover:text-cyan-800 transition-colors">
                     <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>

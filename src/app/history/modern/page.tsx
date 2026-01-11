@@ -453,7 +453,7 @@ const getSignificanceConfig = (significance: OlympicGame['significance']) => {
         bg: 'from-green-500/20 to-green-600/10',
         border: 'border-green-500/30',
         icon: '✓',
-        iconColor: 'text-green-400',
+        iconColor: 'text-green-800',
         label: 'Truce Observed',
       };
     case 'negative':
@@ -461,7 +461,7 @@ const getSignificanceConfig = (significance: OlympicGame['significance']) => {
         bg: 'from-red-500/20 to-red-600/10',
         border: 'border-red-500/30',
         icon: '✗',
-        iconColor: 'text-red-400',
+        iconColor: 'text-red-800',
         label: 'Truce Violated',
       };
     case 'mixed':
@@ -469,7 +469,7 @@ const getSignificanceConfig = (significance: OlympicGame['significance']) => {
         bg: 'from-amber-500/20 to-amber-600/10',
         border: 'border-amber-500/30',
         icon: '~',
-        iconColor: 'text-amber-400',
+        iconColor: 'text-amber-800',
         label: 'Mixed Outcome',
       };
     default:
@@ -500,7 +500,7 @@ export default function ModernHistoryPage() {
             animate={{ opacity: 1, y: 0 }}
             className="space-y-4"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600/10 border border-blue-500/30 rounded-full mb-4">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 border border-blue-500/30 rounded-full mb-4">
               <span className="text-xl">🌍</span>
               <span className="text-blue-300 text-sm font-medium">Modern Era</span>
             </div>
@@ -530,9 +530,9 @@ export default function ModernHistoryPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="p-4 rounded-xl bg-green-500/10 border border-green-500/30 text-center"
+              className="p-4 rounded-xl bg-green-100 border border-green-500/30 text-center"
             >
-              <span className="text-3xl font-bold text-green-400">{observedGames}</span>
+              <span className="text-3xl font-bold text-green-800">{observedGames}</span>
               <p className="text-xs text-gray-500 mt-1">Observed/Neutral</p>
             </motion.div>
             <motion.div
@@ -541,7 +541,7 @@ export default function ModernHistoryPage() {
               transition={{ delay: 0.2 }}
               className="p-4 rounded-xl bg-red-500/10 border border-red-500/30 text-center"
             >
-              <span className="text-3xl font-bold text-red-400">{violatedGames}</span>
+              <span className="text-3xl font-bold text-red-800">{violatedGames}</span>
               <p className="text-xs text-gray-500 mt-1">Major Violations</p>
             </motion.div>
           </div>
@@ -555,7 +555,7 @@ export default function ModernHistoryPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="p-6 rounded-2xl bg-blue-600/10 border border-blue-500/30"
+            className="p-6 rounded-2xl bg-blue-100 border border-blue-500/30"
           >
             <h2 className="text-lg font-semibold text-gray-900 mb-3">The Modern Revival (1992-Present)</h2>
             <div className="space-y-3 text-sm text-gray-600">
@@ -592,10 +592,10 @@ export default function ModernHistoryPage() {
           <div className="space-y-4">
             {KEY_MOMENTS.map((moment, index) => {
               const sigConfig = {
-                milestone: { bg: 'bg-blue-600/10', border: 'border-blue-500/30', icon: '📌', color: 'text-blue-300' },
-                record: { bg: 'bg-green-500/10', border: 'border-green-500/30', icon: '🏆', color: 'text-green-300' },
-                diplomatic: { bg: 'bg-purple-500/10', border: 'border-purple-500/30', icon: '🕊️', color: 'text-purple-300' },
-                symbolic: { bg: 'bg-amber-500/10', border: 'border-amber-500/30', icon: '✨', color: 'text-amber-300' },
+                milestone: { bg: 'bg-blue-100', border: 'border-blue-500/30', icon: '📌', color: 'text-blue-300' },
+                record: { bg: 'bg-green-100', border: 'border-green-500/30', icon: '🏆', color: 'text-green-300' },
+                diplomatic: { bg: 'bg-purple-100', border: 'border-purple-500/30', icon: '🕊️', color: 'text-purple-300' },
+                symbolic: { bg: 'bg-amber-100', border: 'border-amber-500/30', icon: '✨', color: 'text-amber-300' },
               }[moment.significance];
 
               return (
@@ -659,7 +659,7 @@ export default function ModernHistoryPage() {
                       <tr
                         key={item.games}
                         className={`border-b border-gray-200/50 ${
-                          item.highlight ? 'bg-blue-600/10' : ''
+                          item.highlight ? 'bg-blue-100' : ''
                         }`}
                       >
                         <td className={`py-2 ${item.highlight ? 'text-blue-300 font-medium' : 'text-gray-900'}`}>
@@ -672,7 +672,7 @@ export default function ModernHistoryPage() {
                         </td>
                         <td className="py-2 text-center">
                           <span className={`font-bold ${
-                            isRecord ? 'text-green-400' :
+                            isRecord ? 'text-green-800' :
                             item.highlight ? 'text-blue-600' : 'text-gray-900'
                           }`}>
                             {item.coSponsors}
@@ -734,7 +734,7 @@ export default function ModernHistoryPage() {
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-gray-500">Method:</span>
-                  <span className="text-green-400 font-medium">Consensus (no vote)</span>
+                  <span className="text-green-800 font-medium">Consensus (no vote)</span>
                 </div>
               </div>
             </div>
@@ -831,7 +831,7 @@ export default function ModernHistoryPage() {
                     <div className="space-y-1 mb-3">
                       {game.milestoneEffects.map((effect, i) => (
                         <div key={i} className="flex items-start gap-2 text-sm">
-                          <span className="text-green-400 mt-1">+</span>
+                          <span className="text-green-800 mt-1">+</span>
                           <span className="text-gray-600">{effect}</span>
                         </div>
                       ))}
@@ -842,7 +842,7 @@ export default function ModernHistoryPage() {
                       <div className="space-y-1 pt-2 border-t border-red-500/20">
                         {game.violations.map((violation, i) => (
                           <div key={i} className="flex items-start gap-2 text-sm">
-                            <span className="text-red-400 mt-1">-</span>
+                            <span className="text-red-800 mt-1">-</span>
                             <span className="text-red-300">{violation}</span>
                           </div>
                         ))}

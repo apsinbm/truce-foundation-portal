@@ -305,7 +305,7 @@ export default function PressPage() {
                 <div className="text-sm text-gray-600">Incidents Tracked</div>
               </div>
               <div className="bg-gray-100/50 rounded-xl p-6 text-center border border-gray-200/50">
-                <div className="text-4xl font-bold text-red-400 mb-2">
+                <div className="text-4xl font-bold text-red-800 mb-2">
                   {stats?.conflict_incidents?.toLocaleString() || '---'}
                 </div>
                 <div className="text-sm text-gray-600">Conflict Events</div>

@@ -112,10 +112,10 @@ const SAMPLE_THREADS: DiscussionThread[] = [
 
 const getCategoryColor = (color: string) => {
   const colors: Record<string, string> = {
-    blue: 'bg-blue-600/10 border-blue-500/30 hover:border-blue-500/50',
-    purple: 'bg-purple-500/10 border-purple-500/30 hover:border-purple-500/50',
-    green: 'bg-green-500/10 border-green-500/30 hover:border-green-500/50',
-    amber: 'bg-amber-500/10 border-amber-500/30 hover:border-amber-500/50',
+    blue: 'bg-blue-100 border-blue-500/30 hover:border-blue-500/50',
+    purple: 'bg-purple-100 border-purple-500/30 hover:border-purple-500/50',
+    green: 'bg-green-100 border-green-500/30 hover:border-green-500/50',
+    amber: 'bg-amber-100 border-amber-500/30 hover:border-amber-500/50',
     cyan: 'bg-cyan-500/10 border-cyan-500/30 hover:border-cyan-500/50',
     pink: 'bg-pink-500/10 border-pink-500/30 hover:border-pink-500/50',
   };
@@ -126,9 +126,9 @@ const getCategoryTextColor = (color: string) => {
   const colors: Record<string, string> = {
     blue: 'text-blue-600',
     purple: 'text-purple-400',
-    green: 'text-green-400',
-    amber: 'text-amber-400',
-    cyan: 'text-cyan-400',
+    green: 'text-green-800',
+    amber: 'text-amber-800',
+    cyan: 'text-cyan-800',
     pink: 'text-pink-400',
   };
   return colors[color] || colors.blue;
@@ -169,7 +169,7 @@ export default function ForumPage() {
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Join the global conversation about peace, sport, and the Olympic Truce
             </p>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-sm">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-100 border border-amber-500/30 text-amber-800 text-sm">
               <div className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
               Community launching January 2026
             </div>
@@ -273,7 +273,7 @@ export default function ForumPage() {
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-1">
                         {thread.pinned && (
-                          <span className="px-2 py-0.5 text-xs bg-amber-500/20 text-amber-400 rounded">
+                          <span className="px-2 py-0.5 text-xs bg-amber-500/20 text-amber-800 rounded">
                             Pinned
                           </span>
                         )}
@@ -319,29 +319,29 @@ export default function ForumPage() {
             <div className="grid sm:grid-cols-2 gap-4 text-sm">
               <div className="space-y-3">
                 <div className="flex items-start gap-2">
-                  <span className="text-green-400">✓</span>
+                  <span className="text-green-800">✓</span>
                   <span className="text-gray-600">Respectful dialogue across perspectives</span>
                 </div>
                 <div className="flex items-start gap-2">
-                  <span className="text-green-400">✓</span>
+                  <span className="text-green-800">✓</span>
                   <span className="text-gray-600">Evidence-based discussions welcomed</span>
                 </div>
                 <div className="flex items-start gap-2">
-                  <span className="text-green-400">✓</span>
+                  <span className="text-green-800">✓</span>
                   <span className="text-gray-600">Share personal stories and experiences</span>
                 </div>
               </div>
               <div className="space-y-3">
                 <div className="flex items-start gap-2">
-                  <span className="text-red-400">✗</span>
+                  <span className="text-red-800">✗</span>
                   <span className="text-gray-600">No hate speech or personal attacks</span>
                 </div>
                 <div className="flex items-start gap-2">
-                  <span className="text-red-400">✗</span>
+                  <span className="text-red-800">✗</span>
                   <span className="text-gray-600">No misinformation or propaganda</span>
                 </div>
                 <div className="flex items-start gap-2">
-                  <span className="text-red-400">✗</span>
+                  <span className="text-red-800">✗</span>
                   <span className="text-gray-600">No spam or commercial promotion</span>
                 </div>
               </div>
@@ -368,7 +368,7 @@ export default function ForumPage() {
             </p>
 
             {subscribed ? (
-              <div className="p-4 rounded-lg bg-green-500/20 border border-green-500/30 text-green-400">
+              <div className="p-4 rounded-lg bg-green-500/20 border border-green-500/30 text-green-800">
                 Thank you! We'll notify you when the Forum launches.
               </div>
             ) : (

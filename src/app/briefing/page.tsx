@@ -173,7 +173,7 @@ export default function DailyBriefingPage() {
             </div>
           ) : error ? (
             <div className="text-center py-20">
-              <p className="text-red-400">{error}</p>
+              <p className="text-red-800">{error}</p>
             </div>
           ) : briefing ? (
             <>
@@ -191,7 +191,7 @@ export default function DailyBriefingPage() {
                   <div className="text-sm text-gray-600">Total Incidents</div>
                   {briefing.comparison.trend !== 'stable' && (
                     <div className={`text-xs mt-2 ${
-                      briefing.comparison.trend === 'up' ? 'text-red-400' : 'text-green-400'
+                      briefing.comparison.trend === 'up' ? 'text-red-800' : 'text-green-800'
                     }`}>
                       {briefing.comparison.trend === 'up' ? '↑' : '↓'} {Math.abs(briefing.comparison.change_percent)}% vs yesterday
                     </div>
@@ -199,14 +199,14 @@ export default function DailyBriefingPage() {
                 </div>
 
                 <div className="bg-gray-50/50 border border-gray-200/50 rounded-xl p-5">
-                  <div className="text-4xl font-bold text-red-400 mb-1">
+                  <div className="text-4xl font-bold text-red-800 mb-1">
                     {briefing.summary.conflict_incidents}
                   </div>
                   <div className="text-sm text-gray-600">Armed Conflicts</div>
                 </div>
 
                 <div className="bg-gray-50/50 border border-gray-200/50 rounded-xl p-5">
-                  <div className="text-4xl font-bold text-orange-400 mb-1">
+                  <div className="text-4xl font-bold text-orange-800 mb-1">
                     {briefing.summary.critical_incidents + briefing.summary.high_severity_incidents}
                   </div>
                   <div className="text-sm text-gray-600">High/Critical Severity</div>
@@ -358,7 +358,7 @@ export default function DailyBriefingPage() {
                             <div className="text-xs text-gray-500">incidents</div>
                           </div>
                           {country.critical_incidents > 0 && (
-                            <div className="px-2 py-1 bg-red-900/50 text-red-400 rounded text-xs">
+                            <div className="px-2 py-1 bg-red-900/50 text-red-800 rounded text-xs">
                               {country.critical_incidents} critical
                             </div>
                           )}
@@ -379,25 +379,25 @@ export default function DailyBriefingPage() {
                 <h2 className="text-xl font-bold text-gray-900 mb-4">Incident Type Breakdown</h2>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   <div className="text-center p-4 bg-gray-100/50 rounded-lg">
-                    <div className="text-2xl font-bold text-red-400 mb-1">
+                    <div className="text-2xl font-bold text-red-800 mb-1">
                       {briefing.summary.conflict_incidents}
                     </div>
                     <div className="text-sm text-gray-600">Armed Conflicts</div>
                   </div>
                   <div className="text-center p-4 bg-gray-100/50 rounded-lg">
-                    <div className="text-2xl font-bold text-yellow-400 mb-1">
+                    <div className="text-2xl font-bold text-yellow-800 mb-1">
                       {briefing.summary.humanitarian_access_incidents}
                     </div>
                     <div className="text-sm text-gray-600">Humanitarian Access</div>
                   </div>
                   <div className="text-center p-4 bg-gray-100/50 rounded-lg">
-                    <div className="text-2xl font-bold text-orange-400 mb-1">
+                    <div className="text-2xl font-bold text-orange-800 mb-1">
                       {briefing.summary.truce_violations}
                     </div>
                     <div className="text-sm text-gray-600">Truce Violations</div>
                   </div>
                   <div className="text-center p-4 bg-gray-100/50 rounded-lg">
-                    <div className="text-2xl font-bold text-green-400 mb-1">
+                    <div className="text-2xl font-bold text-green-800 mb-1">
                       {briefing.summary.positive_measures}
                     </div>
                     <div className="text-sm text-gray-600">Positive Measures</div>

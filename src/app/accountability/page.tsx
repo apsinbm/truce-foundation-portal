@@ -630,11 +630,11 @@ const REPEAT_OFFENDERS = calculateRepeatOffenders();
 const getSeverityColor = (severity: string) => {
   switch (severity) {
     case 'critical':
-      return 'bg-red-900/50 text-red-300 border-red-500/30';
+      return 'bg-red-100 text-red-800 border-red-300';
     case 'major':
-      return 'bg-orange-900/50 text-orange-300 border-orange-500/30';
+      return 'bg-orange-100 text-orange-800 border-orange-300';
     case 'significant':
-      return 'bg-yellow-900/50 text-yellow-300 border-yellow-500/30';
+      return 'bg-yellow-100 text-yellow-800 border-yellow-300';
     default:
       return 'bg-gray-100 text-gray-600';
   }
@@ -648,7 +648,7 @@ const getStatusConfig = (status: string) => {
         border: 'border-green-500/30',
         label: 'Truce Observed',
         icon: '✓',
-        iconColor: 'text-green-400',
+        iconColor: 'text-green-800',
       };
     case 'violated':
       return {
@@ -656,7 +656,7 @@ const getStatusConfig = (status: string) => {
         border: 'border-red-500/30',
         label: 'Truce Violated',
         icon: '✗',
-        iconColor: 'text-red-400',
+        iconColor: 'text-red-800',
       };
     default:
       return {
@@ -664,7 +664,7 @@ const getStatusConfig = (status: string) => {
         border: 'border-amber-500/30',
         label: 'Mixed',
         icon: '~',
-        iconColor: 'text-amber-400',
+        iconColor: 'text-amber-800',
       };
   }
 };
@@ -840,16 +840,16 @@ export default function AccountabilityPage() {
               transition={{ delay: 0.1 }}
               className="p-4 rounded-xl bg-red-500/10 border border-red-500/30 text-center"
             >
-              <span className="text-3xl font-bold text-red-400">{violatedPeriods}</span>
+              <span className="text-3xl font-bold text-red-800">{violatedPeriods}</span>
               <p className="text-xs text-gray-500 mt-1">Periods with Violations</p>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="p-4 rounded-xl bg-green-500/10 border border-green-500/30 text-center"
+              className="p-4 rounded-xl bg-green-100 border border-green-500/30 text-center"
             >
-              <span className="text-3xl font-bold text-green-400">{observedPeriods}</span>
+              <span className="text-3xl font-bold text-green-800">{observedPeriods}</span>
               <p className="text-xs text-gray-500 mt-1">Periods Observed</p>
             </motion.div>
             <motion.div
@@ -1035,8 +1035,8 @@ export default function AccountabilityPage() {
                             <div className="px-3 py-2 bg-gray-100 border border-gray-200 rounded-lg shadow-xl whitespace-nowrap">
                               <p className="text-xs font-bold text-gray-900">{period.games}</p>
                               <p className={`text-xs ${
-                                period.status === 'observed' ? 'text-green-400' :
-                                period.status === 'violated' ? 'text-red-400' : 'text-amber-400'
+                                period.status === 'observed' ? 'text-green-800' :
+                                period.status === 'violated' ? 'text-red-800' : 'text-amber-800'
                               }`}>
                                 {period.status === 'observed' ? 'Truce Observed' :
                                  period.status === 'violated' ? `${period.violations.length} violation${period.violations.length !== 1 ? 's' : ''}` :
@@ -1088,13 +1088,13 @@ export default function AccountabilityPage() {
                           viewport={{ once: true }}
                           transition={{ duration: 0.5, ease: 'easeOut' }}
                           className={`h-full ${
-                            period.violations.length === 0 ? 'bg-green-500/50' :
-                            period.violations.length <= 2 ? 'bg-orange-500/50' : 'bg-red-500/50'
+                            period.violations.length === 0 ? 'bg-green-1000' :
+                            period.violations.length <= 2 ? 'bg-orange-1000' : 'bg-red-1000'
                           }`}
                         />
                       </div>
                       <span className={`text-xs w-6 ${
-                        period.violations.length === 0 ? 'text-green-400' : 'text-red-400'
+                        period.violations.length === 0 ? 'text-green-800' : 'text-red-800'
                       }`}>
                         {period.violations.length}
                       </span>
@@ -1134,8 +1134,8 @@ export default function AccountabilityPage() {
                         href={`/accountability/country/${offender.countryIso3.toLowerCase()}`}
                         className="flex items-center gap-3 group"
                       >
-                        <div className="w-10 h-10 rounded-lg bg-red-500/20 flex items-center justify-center">
-                          <span className="text-xl font-bold text-red-400">{offender.violationCount}</span>
+                        <div className="w-10 h-10 rounded-lg bg-red-100 flex items-center justify-center">
+                          <span className="text-xl font-bold text-red-800">{offender.violationCount}</span>
                         </div>
                         <div>
                           <h3 className="font-bold text-gray-900 group-hover:text-red-300 transition-colors">{offender.country}</h3>
@@ -1144,7 +1144,7 @@ export default function AccountabilityPage() {
                       <div className="flex items-center gap-2">
                         <Link
                           href={`/accountability/country/${offender.countryIso3.toLowerCase()}`}
-                          className="px-3 py-1.5 text-xs bg-red-500/20 hover:bg-red-500/30 text-red-300 rounded-lg transition-colors"
+                          className="px-3 py-1.5 text-xs bg-red-100 hover:bg-red-500/30 text-red-300 rounded-lg transition-colors"
                         >
                           View Profile
                         </Link>
@@ -1413,8 +1413,8 @@ export default function AccountabilityPage() {
                             ))}
                           </div>
                         ) : (
-                          <div className="p-4 rounded-xl bg-green-500/10 border border-green-500/20 text-center">
-                            <span className="text-green-400">No violations recorded during this Truce period</span>
+                          <div className="p-4 rounded-xl bg-green-100 border border-green-500/20 text-center">
+                            <span className="text-green-800">No violations recorded during this Truce period</span>
                           </div>
                         )}
                       </div>

@@ -109,7 +109,7 @@ export default function ReportsPage() {
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Monthly compliance reports, final assessments, infographics, and data exports
             </p>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-sm">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-100 border border-amber-500/30 text-amber-800 text-sm">
               <div className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
               Reports begin January 2026
             </div>
@@ -172,7 +172,7 @@ export default function ReportsPage() {
                       {REPORT_TYPES.find(t => t.id === report.type)?.label}
                     </span>
                   </div>
-                  <span className="px-2 py-0.5 text-xs bg-amber-500/20 text-amber-400 rounded-full">
+                  <span className="px-2 py-0.5 text-xs bg-amber-500/20 text-amber-800 rounded-full">
                     Coming Soon
                   </span>
                 </div>
@@ -219,7 +219,7 @@ export default function ReportsPage() {
                       {REPORT_TYPES.find(t => t.id === report.type)?.label}
                     </span>
                   </div>
-                  <span className="px-2 py-0.5 text-xs bg-amber-500/20 text-amber-400 rounded-full">
+                  <span className="px-2 py-0.5 text-xs bg-amber-500/20 text-amber-800 rounded-full">
                     Coming Soon
                   </span>
                 </div>

@@ -201,19 +201,19 @@ export default function BriefingSheetPage() {
           <div className="bg-gray-50/50 border border-gray-200 rounded-xl p-6">
             <ul className="space-y-3 text-gray-600">
               <li className="flex items-start gap-3">
-                <span className="text-green-400 mt-1">✓</span>
+                <span className="text-green-800 mt-1">✓</span>
                 <span><strong className="text-gray-900">Sport is a cross-cutting enabler</strong> of the Sustainable Development Goals (SDGs).</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-green-400 mt-1">✓</span>
+                <span className="text-green-800 mt-1">✓</span>
                 <span><strong className="text-gray-900">Five priority areas:</strong> social inclusion, physical activity, gender equality, peacebuilding/crime prevention, and climate action.</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-green-400 mt-1">✓</span>
+                <span className="text-green-800 mt-1">✓</span>
                 <span><strong className="text-gray-900">Critical finding:</strong> Youth homicides account for 37% of global homicides—sport can address this through life skills training and community programs.</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-green-400 mt-1">✓</span>
+                <span className="text-green-800 mt-1">✓</span>
                 <span><strong className="text-gray-900">Calls for stronger partnerships</strong> between governments, civil society, and the private sector to maximize impact.</span>
               </li>
             </ul>
@@ -286,7 +286,7 @@ export default function BriefingSheetPage() {
                       </div>
                     </div>
                     <p className="text-gray-600 mb-2">{theme.description}</p>
-                    <p className="text-sm text-amber-300/80 bg-amber-500/10 px-3 py-2 rounded-lg">
+                    <p className="text-sm text-amber-700 bg-amber-100 px-3 py-2 rounded-lg">
                       <strong>Key Finding:</strong> {theme.keyFinding}
                     </p>
                   </div>
