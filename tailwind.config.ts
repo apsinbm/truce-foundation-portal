@@ -9,15 +9,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: '#3b82f6',
-        background: '#0f172a',
-        card: '#1e293b',
-        safe: '#22c55e',
-        warning: '#f59e0b',
-        danger: '#ef4444',
+        primary: '#2563eb',    // blue-600 (darkened for light theme)
+        background: '#ffffff', // white
+        card: '#f9fafb',      // gray-50
+        safe: '#16a34a',      // green-600 (darkened)
+        warning: '#d97706',   // amber-600 (darkened)
+        danger: '#dc2626',    // red-600 (darkened)
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Montserrat', 'system-ui', 'sans-serif'],
+        serif: ['Libre Baskerville', 'Georgia', 'serif'],
       },
     },
   },

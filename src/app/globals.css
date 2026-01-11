@@ -1,18 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-
 :root {
-  --primary: #3b82f6;
-  --background: #0f172a;
-  --card: #1e293b;
-  --safe: #22c55e;
-  --warning: #f59e0b;
-  --danger: #ef4444;
-  --text: #f8fafc;
-  --muted: #94a3b8;
+  --primary: #2563eb;
+  --background: #ffffff;
+  --card: #f9fafb;
+  --safe: #16a34a;
+  --warning: #d97706;
+  --danger: #dc2626;
+  --text: #111827;
+  --muted: #6b7280;
+  --border: #e5e7eb;
 }
 
 html {
@@ -22,25 +23,30 @@ html {
 body {
   background-color: var(--background);
   color: var(--text);
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Libre Baskerville', Georgia, serif;
 }
 
-/* Glassmorphism card style */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', system-ui, sans-serif;
+}
+
+/* Material design card style */
 .glass-card {
-  background: rgba(30, 41, 59, 0.8);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: #ffffff;
+  border: 1px solid var(--border);
   border-radius: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s;
 }
 
 .glass-card:hover {
-  border-color: rgba(148, 163, 184, 0.4);
-  background: rgba(30, 41, 59, 0.9);
+  border-color: #d1d5db;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 50%, #93c5fd 100%);
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 50%, #1e40af 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -49,10 +55,10 @@ body {
 /* Countdown animation */
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
   }
   50% {
-    box-shadow: 0 0 40px rgba(59, 130, 246, 0.5);
+    box-shadow: 0 0 40px rgba(37, 99, 235, 0.5);
   }
 }
 
@@ -88,6 +94,11 @@ body {
     background: white !important;
     box-shadow: none !important;
     text-shadow: none !important;
+    font-family: 'Libre Baskerville', Georgia, serif !important;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', system-ui, sans-serif !important;
   }
 
   /* Adjust main content */
