@@ -336,9 +336,9 @@ export default function CoSponsorsPage() {
       <section className="pt-32 pb-8 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600/20 border border-blue-500/30 rounded-full text-blue-300 text-sm mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 border border-blue-300 rounded-full text-blue-800 text-sm mb-6">
               <span>A/80/L.10</span>
-              <span className="text-gray-500">|</span>
+              <span className="text-gray-600">|</span>
               <span>Milano-Cortina 2026</span>
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold mb-4">
@@ -377,7 +377,7 @@ export default function CoSponsorsPage() {
             transition={{ delay: 0.1 }}
             className="p-6 rounded-2xl bg-gradient-to-br from-amber-500/20 to-amber-600/5 border border-amber-500/30"
           >
-            <h2 className="text-lg font-semibold text-amber-300 mb-4 flex items-center gap-2">
+            <h2 className="text-lg font-semibold text-amber-800 mb-4 flex items-center gap-2">
               <span>Primary Sponsors</span>
             </h2>
             <div className="grid sm:grid-cols-2 gap-4">
