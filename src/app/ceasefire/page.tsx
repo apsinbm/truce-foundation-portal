@@ -99,13 +99,13 @@ const CEASEFIRES_2025 = [
 const getStatusColor = (status: string) => {
   switch (status) {
     case 'signed':
-      return 'bg-green-500/20 text-green-300 border-green-500/30';
+      return 'bg-green-100 text-green-800 border-green-300 border-green-500/30';
     case 'ceasefire':
-      return 'bg-blue-600/20 text-blue-300 border-blue-500/30';
+      return 'bg-blue-100 text-blue-800 border-blue-300 border-blue-500/30';
     case 'partial':
-      return 'bg-amber-500/20 text-amber-300 border-amber-500/30';
+      return 'bg-amber-100 text-amber-800 border-amber-300 border-amber-500/30';
     case 'dialogue':
-      return 'bg-purple-500/20 text-purple-300 border-purple-500/30';
+      return 'bg-purple-100 text-purple-800 border-purple-300 border-purple-500/30';
     case 'diplomatic':
       return 'bg-cyan-500/20 text-cyan-300 border-cyan-500/30';
     default:
@@ -257,7 +257,7 @@ export default function CeasefireWatchPage() {
                   <div className="text-xs text-gray-600 mb-2 font-medium">Risks to Monitor:</div>
                   <div className="flex flex-wrap gap-2">
                     {ceasefire.risks.map((risk) => (
-                      <span key={risk} className="px-2 py-1 text-xs bg-red-500/10 text-red-300/80 rounded border border-red-500/20">
+                      <span key={risk} className="px-2 py-1 text-xs bg-red-100 text-red-800 border-red-300/80 rounded border border-red-500/20">
                         {risk}
                       </span>
                     ))}
@@ -351,7 +351,7 @@ export default function CeasefireWatchPage() {
                 href="https://truce-index.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-600 text-gray-900 font-medium rounded-xl transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-gray-900 font-medium rounded-xl transition-colors"
               >
                 View Live Index
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

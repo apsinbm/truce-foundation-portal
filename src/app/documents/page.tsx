@@ -716,7 +716,7 @@ export default function DocumentsPage() {
                   <span className="text-4xl">🌍</span>
                   <div>
                     <div className="flex items-center gap-2 mb-1">
-                      <span className="text-xs font-mono bg-green-500/20 text-green-300 px-2 py-0.5 rounded">A/80/L.10</span>
+                      <span className="text-xs font-mono bg-green-100 text-green-800 border-green-300 px-2 py-0.5 rounded">A/80/L.10</span>
                       <span className="text-xs text-gray-500">Milano-Cortina 2026</span>
                     </div>
                     <h2 className="text-xl font-bold text-gray-900 group-hover:text-green-300 transition-colors">166 Nations Co-Sponsored the Olympic Truce</h2>
@@ -744,7 +744,7 @@ export default function DocumentsPage() {
             <div className="flex items-start gap-4">
               <span className="text-4xl">📄</span>
               <div className="flex-1">
-                <span className="text-xs font-mono bg-blue-600/20 text-blue-300 px-2 py-0.5 rounded">{SG_REPORTS[0].symbol}</span>
+                <span className="text-xs font-mono bg-blue-100 text-blue-800 border-blue-300 px-2 py-0.5 rounded">{SG_REPORTS[0].symbol}</span>
                 <h2 className="text-xl font-bold text-gray-900 mt-2">{SG_REPORTS[0].title}</h2>
                 <p className="text-gray-600 text-sm mt-1">{SG_REPORTS[0].description}</p>
 
@@ -773,7 +773,7 @@ export default function DocumentsPage() {
                     href={SG_REPORTS[0].url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-600 text-gray-900 text-sm font-medium rounded-lg transition-colors"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-gray-900 text-sm font-medium rounded-lg transition-colors"
                   >
                     View Full Report (PDF)
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -785,7 +785,7 @@ export default function DocumentsPage() {
                       href={SG_REPORTS[0].alternateUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2 bg-gray-200 hover:bg-gray-200 text-gray-900 text-sm font-medium rounded-lg transition-colors"
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-900 text-sm font-medium rounded-lg transition-colors"
                     >
                       Alternate PDF
                       <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -827,7 +827,7 @@ export default function DocumentsPage() {
                     <tr key={res.symbol} className={`border-t border-gray-200/50 ${index === 0 ? 'bg-blue-600/10' : ''}`}>
                       <td className="py-3 px-4">
                         <div className="flex items-center gap-2">
-                          <span className={`text-xs px-1.5 py-0.5 rounded ${res.season === 'Summer' ? 'bg-amber-500/20 text-amber-300' : 'bg-cyan-500/20 text-cyan-300'}`}>
+                          <span className={`text-xs px-1.5 py-0.5 rounded ${res.season === 'Summer' ? 'bg-amber-100 text-amber-800 border-amber-300' : 'bg-cyan-500/20 text-cyan-300'}`}>
                             {res.season === 'Summer' ? '☀️' : '❄️'}
                           </span>
                           <span className={index === 0 ? 'text-blue-300 font-medium' : 'text-gray-900'}>{res.games}</span>
@@ -951,7 +951,7 @@ export default function DocumentsPage() {
             {ANCIENT_SOURCES.map((source) => (
               <div key={source.author} className="p-5 rounded-xl bg-gradient-to-br from-amber-500/10 to-amber-600/5 border border-amber-500/30">
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="text-xs px-2 py-0.5 rounded bg-amber-500/20 text-amber-300">{source.date}</span>
+                  <span className="text-xs px-2 py-0.5 rounded bg-amber-100 text-amber-800 border-amber-300">{source.date}</span>
                 </div>
                 <h3 className="font-semibold text-gray-900">{source.author}</h3>
                 <p className="text-sm text-amber-200 italic mb-2">{source.title}</p>
@@ -998,7 +998,7 @@ export default function DocumentsPage() {
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-1">
                       <span className="text-xs text-gray-500">{source.year}</span>
-                      <span className="text-xs px-1.5 py-0.5 rounded bg-purple-500/20 text-purple-300">{source.publication}</span>
+                      <span className="text-xs px-1.5 py-0.5 rounded bg-purple-100 text-purple-800 border-purple-300">{source.publication}</span>
                     </div>
                     <h3 className="font-semibold text-gray-900 text-sm">{source.title}</h3>
                     <p className="text-xs text-gray-500">{source.author}</p>

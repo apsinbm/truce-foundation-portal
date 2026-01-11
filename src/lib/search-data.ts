@@ -351,14 +351,14 @@ export function getCategoryLabel(category: SearchItem['category']): string {
 export function getCategoryColor(category: SearchItem['category']): string {
   switch (category) {
     case 'page':
-      return 'bg-blue-500/20 text-blue-300';
+      return 'bg-blue-100 text-blue-800 border-blue-300';
     case 'country':
-      return 'bg-green-500/20 text-green-300';
+      return 'bg-green-100 text-green-800 border-green-300';
     case 'document':
-      return 'bg-purple-500/20 text-purple-300';
+      return 'bg-purple-100 text-purple-800 border-purple-300';
     case 'topic':
-      return 'bg-amber-500/20 text-amber-300';
+      return 'bg-amber-100 text-amber-800 border-amber-300';
     default:
-      return 'bg-slate-500/20 text-slate-300';
+      return 'bg-gray-100 text-gray-800 border-gray-300';
   }
 }

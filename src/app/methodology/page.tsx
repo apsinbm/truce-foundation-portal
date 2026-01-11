@@ -310,7 +310,7 @@ export default function MethodologyPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="p-4 rounded-xl bg-blue-600/10 border border-blue-500/30">
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="text-xs font-mono bg-blue-600/20 text-blue-300 px-2 py-0.5 rounded">A/80/L.10</span>
+                  <span className="text-xs font-mono bg-blue-100 text-blue-800 border-blue-300 px-2 py-0.5 rounded">A/80/L.10</span>
                   <span className="text-xs text-blue-300">Current</span>
                 </div>
                 <h3 className="font-semibold text-gray-900 text-sm">Milano-Cortina 2026 Resolution</h3>
@@ -324,7 +324,7 @@ export default function MethodologyPage() {
               </div>
               <div className="p-4 rounded-xl bg-green-500/10 border border-green-500/30">
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="text-xs font-mono bg-green-500/20 text-green-300 px-2 py-0.5 rounded">A/RES/48/11</span>
+                  <span className="text-xs font-mono bg-green-100 text-green-800 border-green-300 px-2 py-0.5 rounded">A/RES/48/11</span>
                   <span className="text-xs text-green-300">Foundation</span>
                 </div>
                 <h3 className="font-semibold text-gray-900 text-sm">Original 1993 Resolution</h3>
@@ -427,7 +427,7 @@ export default function MethodologyPage() {
               href="https://truce-index.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-600 text-gray-900 font-medium rounded-xl transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-gray-900 font-medium rounded-xl transition-colors"
             >
               View Live Index
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

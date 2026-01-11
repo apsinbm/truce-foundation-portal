@@ -200,11 +200,11 @@ const FRAGILE_PEACE_ZONES = [
 const getFragileStatusColor = (status: string) => {
   switch (status) {
     case 'fragile':
-      return 'bg-amber-500/20 text-amber-300 border-amber-500/30';
+      return 'bg-amber-100 text-amber-800 border-amber-300 border-amber-500/30';
     case 'stabilizing':
-      return 'bg-blue-600/20 text-blue-300 border-blue-500/30';
+      return 'bg-blue-100 text-blue-800 border-blue-300 border-blue-500/30';
     case 'recovering':
-      return 'bg-green-500/20 text-green-300 border-green-500/30';
+      return 'bg-green-100 text-green-800 border-green-300 border-green-500/30';
     default:
       return 'bg-gray-100 text-gray-600 border-gray-200';
   }
@@ -271,7 +271,7 @@ const getMineSeverityColor = (severity: string) => {
     case 'urgent':
       return 'bg-red-500/20 text-red-300 border-red-500/30';
     case 'ongoing':
-      return 'bg-amber-500/20 text-amber-300 border-amber-500/30';
+      return 'bg-amber-100 text-amber-800 border-amber-300 border-amber-500/30';
     case 'legacy':
       return 'bg-indigo-500/20 text-indigo-300 border-indigo-500/30';
     default:
@@ -471,7 +471,7 @@ export default function HumanitarianPage() {
               </div>
             </div>
             <div className="flex flex-wrap gap-2 text-xs">
-              <span className="px-2 py-1 bg-green-500/20 text-green-300 rounded">0-1: Low/No constraints</span>
+              <span className="px-2 py-1 bg-green-100 text-green-800 border-green-300 rounded">0-1: Low/No constraints</span>
               <span className="px-2 py-1 bg-yellow-500/20 text-yellow-300 rounded">2: Moderate</span>
               <span className="px-2 py-1 bg-orange-500/20 text-orange-300 rounded">3: High</span>
               <span className="px-2 py-1 bg-red-500/20 text-red-300 rounded">4: Very High</span>
@@ -492,7 +492,7 @@ export default function HumanitarianPage() {
           >
             <div className="flex items-center gap-3 mb-2">
               <h2 className="text-2xl font-bold text-gray-900">Fragile Peace Zones</h2>
-              <span className="px-2 py-1 text-xs bg-amber-500/20 text-amber-300 border border-amber-500/30 rounded-full">
+              <span className="px-2 py-1 text-xs bg-amber-100 text-amber-800 border-amber-300 border border-amber-500/30 rounded-full">
                 ICU Watch
               </span>
             </div>
@@ -646,7 +646,7 @@ export default function HumanitarianPage() {
           >
             <div className="flex items-center gap-3 mb-2">
               <h2 className="text-2xl font-bold text-gray-900">Exemplary Humanitarian Access</h2>
-              <span className="px-2 py-1 text-xs bg-green-500/20 text-green-300 border border-green-500/30 rounded-full">
+              <span className="px-2 py-1 text-xs bg-green-100 text-green-800 border-green-300 border border-green-500/30 rounded-full">
                 Best Practices
               </span>
             </div>
@@ -672,7 +672,7 @@ export default function HumanitarianPage() {
                     <span className={`inline-block px-2 py-0.5 text-xs rounded-full border mt-1 ${
                       country.trend === 'improved'
                         ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30'
-                        : 'bg-green-500/20 text-green-300 border-green-500/30'
+                        : 'bg-green-100 text-green-800 border-green-300 border-green-500/30'
                     }`}>
                       {country.trend === 'improved' ? '↑ improved' : '→ stable'}
                     </span>
@@ -826,7 +826,7 @@ export default function HumanitarianPage() {
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 href="/methodology"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-600 text-gray-900 font-medium rounded-xl transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-gray-900 font-medium rounded-xl transition-colors"
               >
                 View Full Methodology
               </Link>

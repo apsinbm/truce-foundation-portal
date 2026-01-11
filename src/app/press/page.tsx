@@ -228,7 +228,7 @@ export default function PressPage() {
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-1">
                         <span className="text-sm font-semibold text-blue-600">{item.source}</span>
-                        <span className="px-2 py-0.5 text-xs bg-green-500/20 text-green-300 rounded-full">
+                        <span className="px-2 py-0.5 text-xs bg-green-100 text-green-800 border-green-300 rounded-full">
                           {item.type}
                         </span>
                         <span className="text-xs text-gray-500">
@@ -352,7 +352,7 @@ export default function PressPage() {
                 </div>
                 <button
                   onClick={copyEmbedCode}
-                  className="mt-4 w-full py-2 bg-blue-600 hover:bg-blue-600 text-gray-900 rounded-lg transition-colors"
+                  className="mt-4 w-full py-2 bg-blue-600 hover:bg-blue-700 text-gray-900 rounded-lg transition-colors"
                 >
                   {copied ? 'Copied!' : 'Copy Code'}
                 </button>
@@ -474,7 +474,7 @@ export default function PressPage() {
               href={TRUCE_INDEX_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-600 text-gray-900 font-medium rounded-xl transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-gray-900 font-medium rounded-xl transition-colors"
             >
               View Live Index
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

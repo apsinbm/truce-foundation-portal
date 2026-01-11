@@ -22,32 +22,32 @@ const SOURCE_STYLES: Record<string, {
   description: string;
 }> = {
   'ACLED': {
-    bg: 'bg-blue-900/50 border-blue-700/50',
-    text: 'text-blue-300',
+    bg: 'bg-blue-100 border-blue-300',
+    text: 'text-blue-800',
     label: 'ACLED',
     description: 'Armed Conflict Location & Event Data - Near real-time, human-coded events'
   },
   'UCDP GED': {
-    bg: 'bg-purple-900/50 border-purple-700/50',
-    text: 'text-purple-300',
+    bg: 'bg-purple-100 border-purple-300',
+    text: 'text-purple-800',
     label: 'UCDP',
     description: 'Uppsala Conflict Data Program - Academic dataset with 25+ death threshold'
   },
   'UCDP': {
-    bg: 'bg-purple-900/50 border-purple-700/50',
-    text: 'text-purple-300',
+    bg: 'bg-purple-100 border-purple-300',
+    text: 'text-purple-800',
     label: 'UCDP',
     description: 'Uppsala Conflict Data Program - Academic dataset with 25+ death threshold'
   },
   'ReliefWeb': {
-    bg: 'bg-teal-900/50 border-teal-700/50',
-    text: 'text-teal-300',
+    bg: 'bg-teal-100 border-teal-300',
+    text: 'text-teal-800',
     label: 'ReliefWeb',
     description: 'UN OCHA humanitarian reports and situation updates'
   },
   'OSINT': {
-    bg: 'bg-amber-900/50 border-amber-700/50',
-    text: 'text-amber-300',
+    bg: 'bg-amber-100 border-amber-300',
+    text: 'text-amber-800',
     label: 'OSINT',
     description: 'Open-source intelligence from verified RSS/social feeds'
   },

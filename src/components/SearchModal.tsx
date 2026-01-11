@@ -138,7 +138,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
                 onChange={(e) => setQuery(e.target.value)}
                 onKeyDown={handleKeyDown}
                 placeholder="Search pages, countries, topics..."
-                className="flex-1 bg-transparent text-gray-900 placeholder-gray-400 text-sm outline-none"
+                className="flex-1 bg-transparent text-gray-900 placeholder-gray-500 text-sm outline-none"
               />
               <div className="flex items-center gap-1 text-xs text-gray-500">
                 <kbd className="px-1.5 py-0.5 bg-gray-100 border border-gray-300 rounded text-[10px]">

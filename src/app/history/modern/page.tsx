@@ -665,7 +665,7 @@ export default function ModernHistoryPage() {
                         <td className={`py-2 ${item.highlight ? 'text-blue-300 font-medium' : 'text-gray-900'}`}>
                           {item.games}
                           {item.highlight && (
-                            <span className="ml-2 text-xs bg-blue-600/20 text-blue-300 px-1.5 py-0.5 rounded">
+                            <span className="ml-2 text-xs bg-blue-100 text-blue-800 border-blue-300 px-1.5 py-0.5 rounded">
                               Current
                             </span>
                           )}
@@ -883,7 +883,7 @@ export default function ModernHistoryPage() {
                 href="https://truce-index.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-600 text-gray-900 font-medium rounded-xl transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-gray-900 font-medium rounded-xl transition-colors"
               >
                 Explore Live Index
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

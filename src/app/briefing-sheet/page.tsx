@@ -278,7 +278,7 @@ export default function BriefingSheetPage() {
                         {theme.sdgs.map(sdg => (
                           <span
                             key={sdg}
-                            className="px-2 py-0.5 bg-blue-600/20 text-blue-300 text-xs rounded"
+                            className="px-2 py-0.5 bg-blue-100 text-blue-800 border-blue-300 text-xs rounded"
                           >
                             SDG {sdg}
                           </span>
@@ -353,7 +353,7 @@ export default function BriefingSheetPage() {
             <ol className="space-y-3">
               {KEY_RECOMMENDATIONS.map((rec, index) => (
                 <li key={index} className="flex items-start gap-3 text-gray-600">
-                  <span className="flex-shrink-0 w-6 h-6 bg-blue-600/20 text-blue-300 rounded-full flex items-center justify-center text-sm font-semibold">
+                  <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-800 border-blue-300 rounded-full flex items-center justify-center text-sm font-semibold">
                     {index + 1}
                   </span>
                   <span>{rec}</span>
@@ -417,7 +417,7 @@ export default function BriefingSheetPage() {
                 </div>
                 <Link
                   href={cta.href}
-                  className="px-4 py-2 bg-blue-600 hover:bg-blue-600 text-gray-900 text-sm font-medium rounded-lg transition-colors whitespace-nowrap"
+                  className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-gray-900 text-sm font-medium rounded-lg transition-colors whitespace-nowrap"
                 >
                   {cta.cta}
                 </Link>
@@ -528,13 +528,13 @@ export default function BriefingSheetPage() {
           <div className="flex justify-center gap-4 flex-wrap">
             <Link
               href="/partners"
-              className="px-6 py-3 bg-blue-600 hover:bg-blue-600 text-gray-900 font-medium rounded-lg transition-colors"
+              className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-gray-900 font-medium rounded-lg transition-colors"
             >
               Become a Partner
             </Link>
             <Link
               href="/advocacy"
-              className="px-6 py-3 bg-gray-200 hover:bg-gray-200 text-gray-900 font-medium rounded-lg transition-colors"
+              className="px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-900 font-medium rounded-lg transition-colors"
             >
               Advocacy Toolkit
             </Link>

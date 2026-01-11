@@ -231,9 +231,9 @@ export default function PartnersPage() {
                       {partner.description}
                     </p>
                     <div className="flex flex-wrap gap-2 mb-3">
-                      <span className="px-2 py-1 text-xs bg-purple-500/20 text-purple-300 rounded-full">Center for Sports Media</span>
-                      <span className="px-2 py-1 text-xs bg-purple-500/20 text-purple-300 rounded-full">UN & Global Governance</span>
-                      <span className="px-2 py-1 text-xs bg-purple-500/20 text-purple-300 rounded-full">Sports Polling Institute</span>
+                      <span className="px-2 py-1 text-xs bg-purple-100 text-purple-800 border-purple-300 rounded-full">Center for Sports Media</span>
+                      <span className="px-2 py-1 text-xs bg-purple-100 text-purple-800 border-purple-300 rounded-full">UN & Global Governance</span>
+                      <span className="px-2 py-1 text-xs bg-purple-100 text-purple-800 border-purple-300 rounded-full">Sports Polling Institute</span>
                     </div>
                     <span className="inline-flex items-center gap-1 text-xs text-purple-400">
                       Visit website
@@ -325,7 +325,7 @@ export default function PartnersPage() {
             </p>
             <a
               href="mailto:partnerships@trucefoundation.world"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-600 text-gray-900 font-medium rounded-xl transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-gray-900 font-medium rounded-xl transition-colors"
             >
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />

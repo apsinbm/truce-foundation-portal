@@ -5,10 +5,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ANCIENT_QUOTES, AncientQuote } from '@/lib/constants';
 
 const categoryConfig = {
-  ekecheiria: { icon: '🏛️', label: 'On the Truce', color: 'text-amber-300' },
-  athletics: { icon: '🏃', label: 'On Athletics', color: 'text-green-300' },
-  peace: { icon: '🕊️', label: 'On Peace', color: 'text-blue-300' },
-  glory: { icon: '🏆', label: 'On Glory', color: 'text-purple-300' },
+  ekecheiria: { icon: '🏛️', label: 'On the Truce', color: 'text-amber-800' },
+  athletics: { icon: '🏃', label: 'On Athletics', color: 'text-green-800' },
+  peace: { icon: '🕊️', label: 'On Peace', color: 'text-blue-800' },
+  glory: { icon: '🏆', label: 'On Glory', color: 'text-purple-800' },
 };
 
 export default function AncientWisdom() {

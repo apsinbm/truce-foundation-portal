@@ -243,12 +243,12 @@ function getRegion(country: string): string {
 }
 
 const REGION_COLORS: Record<string, { bg: string; border: string; text: string }> = {
-  'Europe': { bg: 'bg-blue-600/10', border: 'border-blue-500/30', text: 'text-blue-300' },
-  'Asia': { bg: 'bg-amber-500/10', border: 'border-amber-500/30', text: 'text-amber-300' },
-  'Africa': { bg: 'bg-green-500/10', border: 'border-green-500/30', text: 'text-green-300' },
-  'Americas': { bg: 'bg-red-500/10', border: 'border-red-500/30', text: 'text-red-300' },
-  'Oceania': { bg: 'bg-cyan-500/10', border: 'border-cyan-500/30', text: 'text-cyan-300' },
-  'Other': { bg: 'bg-gray-500/10', border: 'border-gray-500/30', text: 'text-gray-600' },
+  'Europe': { bg: 'bg-blue-100', border: 'border-blue-300', text: 'text-blue-800' },
+  'Asia': { bg: 'bg-amber-100', border: 'border-amber-300', text: 'text-amber-800' },
+  'Africa': { bg: 'bg-green-100', border: 'border-green-300', text: 'text-green-800' },
+  'Americas': { bg: 'bg-red-100', border: 'border-red-300', text: 'text-red-800' },
+  'Oceania': { bg: 'bg-cyan-100', border: 'border-cyan-300', text: 'text-cyan-800' },
+  'Other': { bg: 'bg-gray-100', border: 'border-gray-300', text: 'text-gray-800' },
 };
 
 type SortOption = 'date' | 'alphabetical' | 'region';
@@ -444,7 +444,7 @@ export default function CoSponsorsPage() {
                 placeholder="Search countries..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-4 py-2 bg-gray-100 border border-gray-200 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:border-blue-500"
+                className="w-full px-4 py-2 bg-gray-100 border border-gray-200 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-500"
               />
             </div>
 
@@ -516,12 +516,12 @@ export default function CoSponsorsPage() {
                     </div>
                     <div className="text-xs text-gray-500 mt-1">{formatShortDate(sponsor.date)}</div>
                     {sponsor.isPrimarySponsor && (
-                      <span className="inline-block mt-1 px-1.5 py-0.5 text-[10px] bg-amber-500/30 text-amber-300 rounded">
+                      <span className="inline-block mt-1 px-1.5 py-0.5 text-[10px] bg-amber-100 text-amber-800 border-amber-300 rounded">
                         Primary
                       </span>
                     )}
                     {sponsor.addedAtPlenary && (
-                      <span className="inline-block mt-1 px-1.5 py-0.5 text-[10px] bg-purple-500/30 text-purple-300 rounded">
+                      <span className="inline-block mt-1 px-1.5 py-0.5 text-[10px] bg-purple-100 text-purple-800 border-purple-300 rounded">
                         Plenary
                       </span>
                     )}
@@ -557,9 +557,9 @@ export default function CoSponsorsPage() {
                         <td className="py-3 px-4 text-gray-600">{formatDate(sponsor.date)}</td>
                         <td className="py-3 px-4 text-center">
                           {sponsor.isPrimarySponsor ? (
-                            <span className="px-2 py-0.5 text-xs bg-amber-500/30 text-amber-300 rounded">Primary</span>
+                            <span className="px-2 py-0.5 text-xs bg-amber-100 text-amber-800 border-amber-300 rounded">Primary</span>
                           ) : sponsor.addedAtPlenary ? (
-                            <span className="px-2 py-0.5 text-xs bg-purple-500/30 text-purple-300 rounded">Plenary</span>
+                            <span className="px-2 py-0.5 text-xs bg-purple-100 text-purple-800 border-purple-300 rounded">Plenary</span>
                           ) : (
                             <span className="text-gray-600">-</span>
                           )}
