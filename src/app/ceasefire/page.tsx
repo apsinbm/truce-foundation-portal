@@ -148,7 +148,7 @@ export default function CeasefireWatchPage() {
             className="space-y-4"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-100 border border-green-500/30 rounded-full">
-              <span className="text-green-300 text-sm font-medium">Peace Monitoring</span>
+              <span className="text-green-800 text-sm font-medium">Peace Monitoring</span>
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900">
               Ceasefire Watch

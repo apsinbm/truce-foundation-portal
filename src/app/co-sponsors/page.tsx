@@ -353,15 +353,15 @@ export default function CoSponsorsPage() {
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <div className="px-6 py-4 bg-gradient-to-br from-blue-500/20 to-blue-600/10 border border-blue-500/30 rounded-xl">
                 <div className="text-4xl font-bold text-gray-900">{CO_SPONSORS.length}</div>
-                <div className="text-sm text-blue-300">Total Co-Sponsors</div>
+                <div className="text-sm text-blue-800">Total Co-Sponsors</div>
               </div>
               <div className="px-6 py-4 bg-gradient-to-br from-green-500/20 to-green-600/10 border border-green-500/30 rounded-xl">
                 <div className="text-4xl font-bold text-gray-900">85%</div>
-                <div className="text-sm text-green-300">of UN Members</div>
+                <div className="text-sm text-green-800">of UN Members</div>
               </div>
               <div className="px-6 py-4 bg-gradient-to-br from-amber-500/20 to-amber-600/10 border border-amber-500/30 rounded-xl">
                 <div className="text-4xl font-bold text-gray-900">2</div>
-                <div className="text-sm text-amber-300">Primary Sponsors</div>
+                <div className="text-sm text-amber-800">Primary Sponsors</div>
               </div>
             </div>
           </motion.div>
