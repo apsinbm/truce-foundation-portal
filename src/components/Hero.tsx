@@ -8,19 +8,19 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center px-4 py-16 overflow-hidden">
       {/* Background gradient effect */}
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950" />
+      <div className="absolute inset-0 bg-gradient-to-b from-gray-50 via-white to-gray-50" />
 
       {/* Subtle grid pattern */}
       <div
         className="absolute inset-0 opacity-5"
         style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0)`,
+          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(0,0,0,0.15) 1px, transparent 0)`,
           backgroundSize: '40px 40px',
         }}
       />
 
       {/* Blue glow effect */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-3xl" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-3xl" />
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto text-center space-y-8">
@@ -46,10 +46,10 @@ export default function Hero() {
           className="space-y-4"
         >
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-            <span className="text-white">TRUCE</span>
+            <span className="text-gray-900">TRUCE</span>
             <span className="gradient-text ml-3">FOUNDATION</span>
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-slate-300 font-light">
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-600 font-light">
             Olympic Truce — Transforming Tradition into Action
           </p>
         </motion.div>
@@ -71,13 +71,13 @@ export default function Hero() {
           transition={{ delay: 0.45, duration: 0.6 }}
           className="flex flex-wrap justify-center gap-4 text-xs sm:text-sm -mt-1"
         >
-          <a href="/co-sponsors" className="px-4 py-2 bg-blue-500/10 border border-blue-500/30 rounded-lg text-blue-300 hover:bg-blue-500/20 transition-colors">
+          <a href="/co-sponsors" className="px-4 py-2 bg-blue-600/10 border border-blue-600/30 rounded-lg text-blue-700 hover:bg-blue-600/20 transition-colors">
             <span className="font-bold">166</span> UN Co-Sponsors
           </a>
-          <div className="px-4 py-2 bg-pink-500/10 border border-pink-500/30 rounded-lg text-pink-300">
+          <div className="px-4 py-2 bg-pink-600/10 border border-pink-600/30 rounded-lg text-pink-700">
             Most <span className="font-bold">Gender-Balanced</span> Winter Games
           </div>
-          <div className="px-4 py-2 bg-green-500/10 border border-green-500/30 rounded-lg text-green-300">
+          <div className="px-4 py-2 bg-green-600/10 border border-green-600/30 rounded-lg text-green-700">
             Adopted by <span className="font-bold">Consensus</span>
           </div>
         </motion.div>
@@ -93,14 +93,14 @@ export default function Hero() {
             href={TRUCE_INDEX_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-slate-300 hover:text-white transition-colors duration-200"
+            className="text-gray-600 hover:text-gray-900 transition-colors duration-200"
           >
             Compliance Index
           </a>
-          <span className="text-slate-600">|</span>
+          <span className="text-gray-400">|</span>
           <a
             href="/portal"
-            className="text-slate-300 hover:text-white transition-colors duration-200"
+            className="text-gray-600 hover:text-gray-900 transition-colors duration-200"
           >
             Truce Portal
           </a>
