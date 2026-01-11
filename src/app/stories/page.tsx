@@ -102,11 +102,11 @@ const STORY_CATEGORIES = [
 const getCategoryInfo = (category: string) => {
   const categories: Record<string, { color: string; label: string }> = {
     'conflict-zone': { color: 'bg-red-500/20 text-red-400 border-red-500/30', label: 'From Conflict Zone' },
-    'athlete': { color: 'bg-blue-500/20 text-blue-400 border-blue-500/30', label: 'Young Athlete' },
+    'athlete': { color: 'bg-blue-600/20 text-blue-600 border-blue-500/30', label: 'Young Athlete' },
     'refugee': { color: 'bg-purple-500/20 text-purple-400 border-purple-500/30', label: 'Refugee Voice' },
     'advocate': { color: 'bg-green-500/20 text-green-400 border-green-500/30', label: 'Peace Advocate' },
   };
-  return categories[category] || { color: 'bg-slate-500/20 text-slate-400', label: category };
+  return categories[category] || { color: 'bg-gray-500/20 text-gray-600', label: category };
 };
 
 export default function StoriesPage() {
@@ -135,7 +135,7 @@ export default function StoriesPage() {
   };
 
   return (
-    <main className="min-h-screen bg-slate-950">
+    <main className="min-h-screen bg-white">
       <Header />
 
       {/* Hero */}
@@ -147,10 +147,10 @@ export default function StoriesPage() {
             className="space-y-4"
           >
             <span className="text-6xl">💚</span>
-            <h1 className="text-4xl sm:text-5xl font-bold text-white">
+            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900">
               Youth Stories
             </h1>
-            <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               First-person accounts from young people around the world. Their experiences remind us why the Olympic Truce matters.
             </p>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/10 border border-green-500/30 text-green-400 text-sm">
@@ -170,8 +170,8 @@ export default function StoriesPage() {
             viewport={{ once: true }}
             className="mb-6"
           >
-            <h2 className="text-2xl font-bold text-white mb-2">Featured Stories</h2>
-            <p className="text-slate-400">Highlighted voices from our community</p>
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Featured Stories</h2>
+            <p className="text-gray-600">Highlighted voices from our community</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -189,12 +189,12 @@ export default function StoriesPage() {
                     <span className={`px-2 py-0.5 text-xs rounded-full border ${categoryInfo.color}`}>
                       {categoryInfo.label}
                     </span>
-                    <span className="text-xs text-slate-500">Featured</span>
+                    <span className="text-xs text-gray-500">Featured</span>
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-2">{story.title}</h3>
-                  <p className="text-sm text-slate-400 mb-4 line-clamp-3">{story.excerpt}</p>
-                  <div className="flex items-center gap-2 text-xs text-slate-500">
-                    <span className="font-medium text-slate-400">{story.author}, {story.age}</span>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">{story.title}</h3>
+                  <p className="text-sm text-gray-600 mb-4 line-clamp-3">{story.excerpt}</p>
+                  <div className="flex items-center gap-2 text-xs text-gray-500">
+                    <span className="font-medium text-gray-600">{story.author}, {story.age}</span>
                     <span>•</span>
                     <span>{story.location}, {story.country}</span>
                   </div>
@@ -206,7 +206,7 @@ export default function StoriesPage() {
       </section>
 
       {/* Category Filter */}
-      <section className="py-8 px-4 bg-slate-900/30">
+      <section className="py-8 px-4 bg-gray-50/30">
         <div className="max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -214,8 +214,8 @@ export default function StoriesPage() {
             viewport={{ once: true }}
             className="mb-6"
           >
-            <h2 className="text-2xl font-bold text-white mb-2">Browse by Category</h2>
-            <p className="text-slate-400">Filter stories by theme or perspective</p>
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Browse by Category</h2>
+            <p className="text-gray-600">Filter stories by theme or perspective</p>
           </motion.div>
 
           <div className="flex flex-wrap gap-3 mb-8">
@@ -226,7 +226,7 @@ export default function StoriesPage() {
                 className={`px-4 py-2 rounded-lg text-sm transition-all ${
                   selectedCategory === category.id
                     ? 'bg-green-500/20 text-green-400 border border-green-500/50'
-                    : 'bg-slate-800/50 text-slate-400 border border-slate-700/50 hover:border-slate-600/50'
+                    : 'bg-gray-100/50 text-gray-600 border border-gray-200/50 hover:border-gray-400/50'
                 }`}
               >
                 <span className="mr-2">{category.icon}</span>
@@ -246,7 +246,7 @@ export default function StoriesPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.05 }}
-                  className="p-5 rounded-xl bg-slate-900/50 border border-slate-700/50 hover:border-slate-600/50 transition-colors"
+                  className="p-5 rounded-xl bg-gray-50/50 border border-gray-200/50 hover:border-gray-400/50 transition-colors"
                 >
                   <div className="flex items-start gap-4">
                     <div className="text-3xl flex-shrink-0">💚</div>
@@ -261,11 +261,11 @@ export default function StoriesPage() {
                           </span>
                         )}
                       </div>
-                      <h3 className="text-lg font-bold text-white mb-2">{story.title}</h3>
-                      <p className="text-slate-400 mb-3">{story.excerpt}</p>
+                      <h3 className="text-lg font-bold text-gray-900 mb-2">{story.title}</h3>
+                      <p className="text-gray-600 mb-3">{story.excerpt}</p>
                       <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-2 text-xs text-slate-500">
-                          <span className="font-medium text-slate-400">{story.author}, {story.age}</span>
+                        <div className="flex items-center gap-2 text-xs text-gray-500">
+                          <span className="font-medium text-gray-600">{story.author}, {story.age}</span>
                           <span>•</span>
                           <span>{story.location}, {story.country}</span>
                           <span>•</span>
@@ -273,7 +273,7 @@ export default function StoriesPage() {
                         </div>
                         <button
                           disabled
-                          className="text-xs text-slate-500 cursor-not-allowed"
+                          className="text-xs text-gray-500 cursor-not-allowed"
                         >
                           Read Full Story (Coming Soon)
                         </button>
@@ -286,7 +286,7 @@ export default function StoriesPage() {
           </div>
 
           {filteredStories.length === 0 && (
-            <div className="text-center py-12 text-slate-500">
+            <div className="text-center py-12 text-gray-500">
               No stories in this category yet. Be the first to share yours!
             </div>
           )}
@@ -311,33 +311,33 @@ export default function StoriesPage() {
                 >
                   💚
                 </motion.div>
-                <h2 className="text-2xl font-bold text-white mb-2">
+                <h2 className="text-2xl font-bold text-gray-900 mb-2">
                   Thank You for Sharing
                 </h2>
-                <p className="text-slate-400">
+                <p className="text-gray-600">
                   Your story has been submitted. Our team will review it and may reach out for more details.
                 </p>
               </div>
             ) : showSubmitForm ? (
               <form onSubmit={handleSubmit} className="space-y-4">
-                <h2 className="text-xl font-bold text-white mb-4 text-center">
+                <h2 className="text-xl font-bold text-gray-900 mb-4 text-center">
                   Share Your Story
                 </h2>
 
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm text-slate-400 mb-1">Your First Name</label>
+                    <label className="block text-sm text-gray-600 mb-1">Your First Name</label>
                     <input
                       type="text"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       placeholder="Amara"
-                      className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-green-500"
+                      className="w-full px-4 py-3 bg-gray-100 border border-gray-200 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:border-green-500"
                       required
                     />
                   </div>
                   <div>
-                    <label className="block text-sm text-slate-400 mb-1">Your Age</label>
+                    <label className="block text-sm text-gray-600 mb-1">Your Age</label>
                     <input
                       type="number"
                       value={formData.age}
@@ -345,63 +345,63 @@ export default function StoriesPage() {
                       placeholder="17"
                       min="10"
                       max="25"
-                      className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-green-500"
+                      className="w-full px-4 py-3 bg-gray-100 border border-gray-200 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:border-green-500"
                       required
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-sm text-slate-400 mb-1">Location (City, Country)</label>
+                  <label className="block text-sm text-gray-600 mb-1">Location (City, Country)</label>
                   <input
                     type="text"
                     value={formData.location}
                     onChange={(e) => setFormData({ ...formData, location: e.target.value })}
                     placeholder="Nairobi, Kenya"
-                    className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-green-500"
+                    className="w-full px-4 py-3 bg-gray-100 border border-gray-200 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:border-green-500"
                     required
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm text-slate-400 mb-1">Story Title</label>
+                  <label className="block text-sm text-gray-600 mb-1">Story Title</label>
                   <input
                     type="text"
                     value={formData.title}
                     onChange={(e) => setFormData({ ...formData, title: e.target.value })}
                     placeholder="Give your story a meaningful title"
-                    className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-green-500"
+                    className="w-full px-4 py-3 bg-gray-100 border border-gray-200 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:border-green-500"
                     required
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm text-slate-400 mb-1">Your Story</label>
+                  <label className="block text-sm text-gray-600 mb-1">Your Story</label>
                   <textarea
                     value={formData.story}
                     onChange={(e) => setFormData({ ...formData, story: e.target.value })}
                     placeholder="Share your experience with sport, peace, or the Olympic Truce. How has it impacted your life?"
                     rows={5}
                     maxLength={2000}
-                    className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-green-500 resize-none"
+                    className="w-full px-4 py-3 bg-gray-100 border border-gray-200 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:border-green-500 resize-none"
                     required
                   />
-                  <p className="text-xs text-slate-500 mt-1 text-right">
+                  <p className="text-xs text-gray-500 mt-1 text-right">
                     {formData.story.length}/2000 characters
                   </p>
                 </div>
 
                 <div>
-                  <label className="block text-sm text-slate-400 mb-1">Email (for follow-up only)</label>
+                  <label className="block text-sm text-gray-600 mb-1">Email (for follow-up only)</label>
                   <input
                     type="email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="your@email.com"
-                    className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-green-500"
+                    className="w-full px-4 py-3 bg-gray-100 border border-gray-200 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:border-green-500"
                     required
                   />
-                  <p className="text-xs text-slate-500 mt-1">
+                  <p className="text-xs text-gray-500 mt-1">
                     Your email will not be displayed publicly.
                   </p>
                 </div>
@@ -410,13 +410,13 @@ export default function StoriesPage() {
                   <button
                     type="button"
                     onClick={() => setShowSubmitForm(false)}
-                    className="flex-1 px-4 py-3 bg-slate-800 hover:bg-slate-700 text-white rounded-lg transition-colors"
+                    className="flex-1 px-4 py-3 bg-gray-100 hover:bg-gray-200 text-gray-900 rounded-lg transition-colors"
                   >
                     Cancel
                   </button>
                   <button
                     type="submit"
-                    className="flex-1 px-4 py-3 bg-green-600 hover:bg-green-500 text-white font-medium rounded-lg transition-colors"
+                    className="flex-1 px-4 py-3 bg-green-600 hover:bg-green-500 text-gray-900 font-medium rounded-lg transition-colors"
                   >
                     Submit Story
                   </button>
@@ -424,16 +424,16 @@ export default function StoriesPage() {
               </form>
             ) : (
               <div className="text-center">
-                <h2 className="text-2xl font-bold text-white mb-4">
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">
                   Share Your Voice
                 </h2>
-                <p className="text-slate-400 mb-6">
+                <p className="text-gray-600 mb-6">
                   Are you a young person (ages 10-25) with a story about sport, peace, or the Olympic Truce?
                   We want to hear from you. Your story could inspire others around the world.
                 </p>
                 <button
                   onClick={() => setShowSubmitForm(true)}
-                  className="px-8 py-4 bg-green-600 hover:bg-green-500 text-white font-semibold rounded-xl transition-colors inline-flex items-center gap-2"
+                  className="px-8 py-4 bg-green-600 hover:bg-green-500 text-gray-900 font-semibold rounded-xl transition-colors inline-flex items-center gap-2"
                 >
                   <span className="text-xl">💚</span>
                   Share Your Story
@@ -445,22 +445,22 @@ export default function StoriesPage() {
       </section>
 
       {/* Guidelines */}
-      <section className="py-12 px-4 bg-slate-900/30">
+      <section className="py-12 px-4 bg-gray-50/30">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="p-6 rounded-2xl bg-slate-900/50 border border-slate-700/50"
+            className="p-6 rounded-2xl bg-gray-50/50 border border-gray-200/50"
           >
-            <h2 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+            <h2 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
               <span className="text-2xl">📝</span>
               Story Guidelines
             </h2>
             <div className="grid sm:grid-cols-2 gap-6 text-sm">
               <div>
-                <h3 className="font-semibold text-white mb-2">What we're looking for:</h3>
-                <ul className="space-y-2 text-slate-400">
+                <h3 className="font-semibold text-gray-900 mb-2">What we're looking for:</h3>
+                <ul className="space-y-2 text-gray-600">
                   <li className="flex items-start gap-2">
                     <span className="text-green-400">•</span>
                     Personal experiences with sport bringing people together
@@ -480,22 +480,22 @@ export default function StoriesPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="font-semibold text-white mb-2">Our commitment to you:</h3>
-                <ul className="space-y-2 text-slate-400">
+                <h3 className="font-semibold text-gray-900 mb-2">Our commitment to you:</h3>
+                <ul className="space-y-2 text-gray-600">
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400">•</span>
+                    <span className="text-blue-600">•</span>
                     Your story will be reviewed before publishing
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400">•</span>
+                    <span className="text-blue-600">•</span>
                     We'll contact you before making any edits
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400">•</span>
+                    <span className="text-blue-600">•</span>
                     You can use just your first name
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400">•</span>
+                    <span className="text-blue-600">•</span>
                     Under 18? We'll need guardian consent
                   </li>
                 </ul>
@@ -508,42 +508,42 @@ export default function StoriesPage() {
       {/* Related Links */}
       <section className="py-12 px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-xl font-bold text-white mb-6 text-center">Related Resources</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-6 text-center">Related Resources</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <Link
               href="/forum"
-              className="p-4 rounded-xl bg-slate-900/50 border border-slate-700/50 hover:border-blue-500/50 transition-colors group"
+              className="p-4 rounded-xl bg-gray-50/50 border border-gray-200/50 hover:border-blue-500/50 transition-colors group"
             >
-              <h3 className="font-semibold text-white group-hover:text-blue-400 transition-colors">
+              <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
                 Forum
               </h3>
-              <p className="text-sm text-slate-400 mt-1">Join the conversation</p>
+              <p className="text-sm text-gray-600 mt-1">Join the conversation</p>
             </Link>
             <Link
               href="/candles"
-              className="p-4 rounded-xl bg-slate-900/50 border border-slate-700/50 hover:border-blue-500/50 transition-colors group"
+              className="p-4 rounded-xl bg-gray-50/50 border border-gray-200/50 hover:border-blue-500/50 transition-colors group"
             >
-              <h3 className="font-semibold text-white group-hover:text-blue-400 transition-colors">
+              <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
                 Global Candle Wall
               </h3>
-              <p className="text-sm text-slate-400 mt-1">Light a candle for peace</p>
+              <p className="text-sm text-gray-600 mt-1">Light a candle for peace</p>
             </Link>
             <Link
               href="/advocacy"
-              className="p-4 rounded-xl bg-slate-900/50 border border-slate-700/50 hover:border-blue-500/50 transition-colors group"
+              className="p-4 rounded-xl bg-gray-50/50 border border-gray-200/50 hover:border-blue-500/50 transition-colors group"
             >
-              <h3 className="font-semibold text-white group-hover:text-blue-400 transition-colors">
+              <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
                 Advocacy Toolkit
               </h3>
-              <p className="text-sm text-slate-400 mt-1">Resources to spread the word</p>
+              <p className="text-sm text-gray-600 mt-1">Resources to spread the word</p>
             </Link>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-4 border-t border-slate-800/50">
-        <div className="max-w-6xl mx-auto text-center text-slate-500 text-sm">
+      <footer className="py-8 px-4 border-t border-gray-200/50">
+        <div className="max-w-6xl mx-auto text-center text-gray-500 text-sm">
           <p>&copy; {new Date().getFullYear()} Truce Foundation. All rights reserved.</p>
         </div>
       </footer>

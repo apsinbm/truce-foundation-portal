@@ -243,12 +243,12 @@ function getRegion(country: string): string {
 }
 
 const REGION_COLORS: Record<string, { bg: string; border: string; text: string }> = {
-  'Europe': { bg: 'bg-blue-500/10', border: 'border-blue-500/30', text: 'text-blue-300' },
+  'Europe': { bg: 'bg-blue-600/10', border: 'border-blue-500/30', text: 'text-blue-300' },
   'Asia': { bg: 'bg-amber-500/10', border: 'border-amber-500/30', text: 'text-amber-300' },
   'Africa': { bg: 'bg-green-500/10', border: 'border-green-500/30', text: 'text-green-300' },
   'Americas': { bg: 'bg-red-500/10', border: 'border-red-500/30', text: 'text-red-300' },
   'Oceania': { bg: 'bg-cyan-500/10', border: 'border-cyan-500/30', text: 'text-cyan-300' },
-  'Other': { bg: 'bg-slate-500/10', border: 'border-slate-500/30', text: 'text-slate-300' },
+  'Other': { bg: 'bg-gray-500/10', border: 'border-gray-500/30', text: 'text-gray-600' },
 };
 
 type SortOption = 'date' | 'alphabetical' | 'region';
@@ -329,38 +329,38 @@ export default function CoSponsorsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 text-white">
+    <div className="min-h-screen bg-white text-gray-900">
       <Header />
 
       {/* Hero */}
       <section className="pt-32 pb-8 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/20 border border-blue-500/30 rounded-full text-blue-300 text-sm mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600/20 border border-blue-500/30 rounded-full text-blue-300 text-sm mb-6">
               <span>A/80/L.10</span>
-              <span className="text-slate-500">|</span>
+              <span className="text-gray-500">|</span>
               <span>Milano-Cortina 2026</span>
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold mb-4">
-              <span className="text-white">Olympic Truce</span>{' '}
+              <span className="text-gray-900">Olympic Truce</span>{' '}
               <span className="gradient-text">Co-Sponsors</span>
             </h1>
-            <p className="text-xl text-slate-400 max-w-2xl mx-auto mb-8">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
               {CO_SPONSORS.length} nations co-sponsored the resolution, adopted by consensus on November 19, 2025
             </p>
 
             {/* Key Stats */}
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <div className="px-6 py-4 bg-gradient-to-br from-blue-500/20 to-blue-600/10 border border-blue-500/30 rounded-xl">
-                <div className="text-4xl font-bold text-white">{CO_SPONSORS.length}</div>
+                <div className="text-4xl font-bold text-gray-900">{CO_SPONSORS.length}</div>
                 <div className="text-sm text-blue-300">Total Co-Sponsors</div>
               </div>
               <div className="px-6 py-4 bg-gradient-to-br from-green-500/20 to-green-600/10 border border-green-500/30 rounded-xl">
-                <div className="text-4xl font-bold text-white">85%</div>
+                <div className="text-4xl font-bold text-gray-900">85%</div>
                 <div className="text-sm text-green-300">of UN Members</div>
               </div>
               <div className="px-6 py-4 bg-gradient-to-br from-amber-500/20 to-amber-600/10 border border-amber-500/30 rounded-xl">
-                <div className="text-4xl font-bold text-white">2</div>
+                <div className="text-4xl font-bold text-gray-900">2</div>
                 <div className="text-sm text-amber-300">Primary Sponsors</div>
               </div>
             </div>
@@ -382,9 +382,9 @@ export default function CoSponsorsPage() {
             </h2>
             <div className="grid sm:grid-cols-2 gap-4">
               {CO_SPONSORS.filter(s => s.isPrimarySponsor).map(sponsor => (
-                <div key={sponsor.country} className="p-4 bg-slate-900/50 rounded-xl border border-amber-500/20">
-                  <div className="text-xl font-bold text-white">{sponsor.country}</div>
-                  <div className="text-sm text-slate-400">Sponsored: {formatDate(sponsor.date)}</div>
+                <div key={sponsor.country} className="p-4 bg-gray-50/50 rounded-xl border border-amber-500/20">
+                  <div className="text-xl font-bold text-gray-900">{sponsor.country}</div>
+                  <div className="text-sm text-gray-600">Sponsored: {formatDate(sponsor.date)}</div>
                 </div>
               ))}
             </div>
@@ -400,14 +400,14 @@ export default function CoSponsorsPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.15 }}
           >
-            <h2 className="text-lg font-semibold text-white mb-4">By Region</h2>
+            <h2 className="text-lg font-semibold text-gray-900 mb-4">By Region</h2>
             <div className="flex flex-wrap gap-2">
               <button
                 onClick={() => setSelectedRegion(null)}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                   !selectedRegion
-                    ? 'bg-white text-slate-900'
-                    : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
+                    ? 'bg-white text-gray-900'
+                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                 }`}
               >
                 All ({CO_SPONSORS.length})
@@ -421,7 +421,7 @@ export default function CoSponsorsPage() {
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                       selectedRegion === region
                         ? `${colors.bg} ${colors.border} ${colors.text} border`
-                        : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
+                        : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                     }`}
                   >
                     {region} ({count})
@@ -444,17 +444,17 @@ export default function CoSponsorsPage() {
                 placeholder="Search countries..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-blue-500"
+                className="w-full px-4 py-2 bg-gray-100 border border-gray-200 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:border-blue-500"
               />
             </div>
 
             {/* Sort */}
             <div className="flex items-center gap-2">
-              <span className="text-sm text-slate-500">Sort:</span>
+              <span className="text-sm text-gray-500">Sort:</span>
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as SortOption)}
-                className="px-3 py-2 bg-slate-800 border border-slate-700 rounded-lg text-white text-sm focus:outline-none focus:border-blue-500"
+                className="px-3 py-2 bg-gray-100 border border-gray-200 rounded-lg text-gray-900 text-sm focus:outline-none focus:border-blue-500"
               >
                 <option value="date">By Date Signed</option>
                 <option value="alphabetical">Alphabetical</option>
@@ -463,22 +463,22 @@ export default function CoSponsorsPage() {
             </div>
 
             {/* View Mode */}
-            <div className="flex items-center gap-1 bg-slate-800 rounded-lg p-1">
+            <div className="flex items-center gap-1 bg-gray-100 rounded-lg p-1">
               <button
                 onClick={() => setViewMode('grid')}
-                className={`px-3 py-1.5 rounded text-sm ${viewMode === 'grid' ? 'bg-blue-600 text-white' : 'text-slate-400 hover:text-white'}`}
+                className={`px-3 py-1.5 rounded text-sm ${viewMode === 'grid' ? 'bg-blue-600 text-gray-900' : 'text-gray-600 hover:text-gray-900'}`}
               >
                 Grid
               </button>
               <button
                 onClick={() => setViewMode('list')}
-                className={`px-3 py-1.5 rounded text-sm ${viewMode === 'list' ? 'bg-blue-600 text-white' : 'text-slate-400 hover:text-white'}`}
+                className={`px-3 py-1.5 rounded text-sm ${viewMode === 'list' ? 'bg-blue-600 text-gray-900' : 'text-gray-600 hover:text-gray-900'}`}
               >
                 List
               </button>
               <button
                 onClick={() => setViewMode('timeline')}
-                className={`px-3 py-1.5 rounded text-sm ${viewMode === 'timeline' ? 'bg-blue-600 text-white' : 'text-slate-400 hover:text-white'}`}
+                className={`px-3 py-1.5 rounded text-sm ${viewMode === 'timeline' ? 'bg-blue-600 text-gray-900' : 'text-gray-600 hover:text-gray-900'}`}
               >
                 Timeline
               </button>
@@ -491,7 +491,7 @@ export default function CoSponsorsPage() {
       <section className="px-4 pb-16">
         <div className="max-w-6xl mx-auto">
           {filteredAndSortedSponsors.length === 0 ? (
-            <div className="text-center py-12 text-slate-500">
+            <div className="text-center py-12 text-gray-500">
               No countries found matching your search.
             </div>
           ) : viewMode === 'grid' ? (
@@ -511,10 +511,10 @@ export default function CoSponsorsPage() {
                     transition={{ delay: index * 0.01 }}
                     className={`p-3 rounded-xl ${colors.bg} border ${colors.border} hover:scale-105 transition-transform cursor-default`}
                   >
-                    <div className="font-medium text-white text-sm truncate" title={sponsor.country}>
+                    <div className="font-medium text-gray-900 text-sm truncate" title={sponsor.country}>
                       {sponsor.country}
                     </div>
-                    <div className="text-xs text-slate-500 mt-1">{formatShortDate(sponsor.date)}</div>
+                    <div className="text-xs text-gray-500 mt-1">{formatShortDate(sponsor.date)}</div>
                     {sponsor.isPrimarySponsor && (
                       <span className="inline-block mt-1 px-1.5 py-0.5 text-[10px] bg-amber-500/30 text-amber-300 rounded">
                         Primary
@@ -530,15 +530,15 @@ export default function CoSponsorsPage() {
               })}
             </motion.div>
           ) : viewMode === 'list' ? (
-            <div className="bg-slate-900/50 border border-slate-700 rounded-xl overflow-hidden">
+            <div className="bg-gray-50/50 border border-gray-200 rounded-xl overflow-hidden">
               <table className="w-full text-sm">
-                <thead className="bg-slate-800/50">
+                <thead className="bg-gray-100/50">
                   <tr>
-                    <th className="text-left py-3 px-4 text-slate-400 font-medium">#</th>
-                    <th className="text-left py-3 px-4 text-slate-400 font-medium">Country</th>
-                    <th className="text-left py-3 px-4 text-slate-400 font-medium">Region</th>
-                    <th className="text-left py-3 px-4 text-slate-400 font-medium">Date Signed</th>
-                    <th className="text-center py-3 px-4 text-slate-400 font-medium">Status</th>
+                    <th className="text-left py-3 px-4 text-gray-600 font-medium">#</th>
+                    <th className="text-left py-3 px-4 text-gray-600 font-medium">Country</th>
+                    <th className="text-left py-3 px-4 text-gray-600 font-medium">Region</th>
+                    <th className="text-left py-3 px-4 text-gray-600 font-medium">Date Signed</th>
+                    <th className="text-center py-3 px-4 text-gray-600 font-medium">Status</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -546,22 +546,22 @@ export default function CoSponsorsPage() {
                     const region = getRegion(sponsor.country);
                     const colors = REGION_COLORS[region] || REGION_COLORS['Other'];
                     return (
-                      <tr key={sponsor.country} className="border-t border-slate-800/50 hover:bg-slate-800/30">
-                        <td className="py-3 px-4 text-slate-500">{index + 1}</td>
-                        <td className="py-3 px-4 text-white font-medium">{sponsor.country}</td>
+                      <tr key={sponsor.country} className="border-t border-gray-200/50 hover:bg-gray-100/30">
+                        <td className="py-3 px-4 text-gray-500">{index + 1}</td>
+                        <td className="py-3 px-4 text-gray-900 font-medium">{sponsor.country}</td>
                         <td className="py-3 px-4">
                           <span className={`px-2 py-0.5 rounded text-xs ${colors.bg} ${colors.text}`}>
                             {region}
                           </span>
                         </td>
-                        <td className="py-3 px-4 text-slate-400">{formatDate(sponsor.date)}</td>
+                        <td className="py-3 px-4 text-gray-600">{formatDate(sponsor.date)}</td>
                         <td className="py-3 px-4 text-center">
                           {sponsor.isPrimarySponsor ? (
                             <span className="px-2 py-0.5 text-xs bg-amber-500/30 text-amber-300 rounded">Primary</span>
                           ) : sponsor.addedAtPlenary ? (
                             <span className="px-2 py-0.5 text-xs bg-purple-500/30 text-purple-300 rounded">Plenary</span>
                           ) : (
-                            <span className="text-slate-600">-</span>
+                            <span className="text-gray-600">-</span>
                           )}
                         </td>
                       </tr>
@@ -573,7 +573,7 @@ export default function CoSponsorsPage() {
           ) : (
             // Timeline view
             <div className="relative">
-              <div className="absolute left-4 sm:left-1/2 top-0 bottom-0 w-0.5 bg-slate-700" />
+              <div className="absolute left-4 sm:left-1/2 top-0 bottom-0 w-0.5 bg-gray-200" />
               {filteredAndSortedSponsors.map((sponsor, index) => {
                 const region = getRegion(sponsor.country);
                 const colors = REGION_COLORS[region] || REGION_COLORS['Other'];
@@ -588,11 +588,11 @@ export default function CoSponsorsPage() {
                   >
                     <div className={`flex-1 ${isLeft ? 'sm:pr-8 sm:text-right' : 'sm:pl-8'} pl-8 sm:pl-0`}>
                       <div className={`inline-block p-2 rounded-lg ${colors.bg} border ${colors.border}`}>
-                        <div className="font-medium text-white text-sm">{sponsor.country}</div>
-                        <div className="text-xs text-slate-500">{formatShortDate(sponsor.date)}</div>
+                        <div className="font-medium text-gray-900 text-sm">{sponsor.country}</div>
+                        <div className="text-xs text-gray-500">{formatShortDate(sponsor.date)}</div>
                       </div>
                     </div>
-                    <div className="absolute left-4 sm:left-1/2 w-3 h-3 -translate-x-1/2 rounded-full bg-blue-500 border-2 border-slate-950" />
+                    <div className="absolute left-4 sm:left-1/2 w-3 h-3 -translate-x-1/2 rounded-full bg-blue-600 border-2 border-gray-900" />
                     <div className="flex-1 hidden sm:block" />
                   </motion.div>
                 );
@@ -605,28 +605,28 @@ export default function CoSponsorsPage() {
       {/* Notable Absences Section */}
       <section className="px-4 pb-16">
         <div className="max-w-6xl mx-auto">
-          <div className="p-6 rounded-2xl bg-slate-900/50 border border-slate-700">
-            <h2 className="text-lg font-semibold text-white mb-4">Notable Information</h2>
-            <div className="grid md:grid-cols-2 gap-6 text-sm text-slate-300">
+          <div className="p-6 rounded-2xl bg-gray-50/50 border border-gray-200">
+            <h2 className="text-lg font-semibold text-gray-900 mb-4">Notable Information</h2>
+            <div className="grid md:grid-cols-2 gap-6 text-sm text-gray-600">
               <div>
-                <h3 className="font-medium text-white mb-2">About the Resolution</h3>
+                <h3 className="font-medium text-gray-900 mb-2">About the Resolution</h3>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400">•</span>
+                    <span className="text-blue-600">•</span>
                     <span>Resolution A/80/L.10 calls for the observance of the Olympic Truce during the Milano-Cortina 2026 Winter Olympics</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400">•</span>
+                    <span className="text-blue-600">•</span>
                     <span>Italy and Turkmenistan served as primary sponsors</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-blue-400">•</span>
+                    <span className="text-blue-600">•</span>
                     <span>Adopted by consensus on November 19, 2025 at the 46th plenary meeting</span>
                   </li>
                 </ul>
               </div>
               <div>
-                <h3 className="font-medium text-white mb-2">Truce Period</h3>
+                <h3 className="font-medium text-gray-900 mb-2">Truce Period</h3>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
                     <span className="text-green-400">•</span>
@@ -654,7 +654,7 @@ export default function CoSponsorsPage() {
             <h2 className="text-lg font-semibold text-red-300 mb-2 flex items-center gap-2">
               UN Member States That Did Not Co-Sponsor
             </h2>
-            <p className="text-sm text-slate-400 mb-4">
+            <p className="text-sm text-gray-600 mb-4">
               {NON_SIGNATORIES.length} of 193 UN member states did not co-sponsor the resolution (15% of membership).
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
@@ -663,9 +663,9 @@ export default function CoSponsorsPage() {
                 return (
                   <div
                     key={item.country}
-                    className="p-2 rounded-lg bg-slate-800/50 border border-slate-700"
+                    className="p-2 rounded-lg bg-gray-100/50 border border-gray-200"
                   >
-                    <div className="text-sm text-white truncate" title={item.country}>
+                    <div className="text-sm text-gray-900 truncate" title={item.country}>
                       {item.country}
                     </div>
                     <div className="flex items-center gap-2 mt-1">
@@ -673,7 +673,7 @@ export default function CoSponsorsPage() {
                         {item.region}
                       </span>
                       {item.note && (
-                        <span className="text-[10px] text-slate-500" title={item.note}>
+                        <span className="text-[10px] text-gray-500" title={item.note}>
                           *
                         </span>
                       )}
@@ -682,7 +682,7 @@ export default function CoSponsorsPage() {
                 );
               })}
             </div>
-            <div className="mt-4 text-xs text-slate-500">
+            <div className="mt-4 text-xs text-gray-500">
               <p>* Russia violated the 2022 Olympic Truce by invading Ukraine during the Beijing Winter Olympics.</p>
               <p className="mt-1">Note: The resolution was adopted by consensus, meaning no country voted against it.</p>
             </div>
@@ -695,7 +695,7 @@ export default function CoSponsorsPage() {
         <div className="max-w-6xl mx-auto text-center">
           <Link
             href="/documents"
-            className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
+            className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-300 transition-colors"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />

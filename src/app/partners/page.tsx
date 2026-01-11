@@ -81,7 +81,7 @@ const CATEGORY_CONFIG = {
     description: 'Core organizations driving the Truce Foundation mission',
     color: 'from-blue-500/20 to-blue-600/10',
     border: 'border-blue-500/30',
-    iconColor: 'text-blue-400',
+    iconColor: 'text-blue-600',
   },
   validation: {
     label: 'Academic Validation Partner',
@@ -105,7 +105,7 @@ export default function PartnersPage() {
   const potentialPartners = PARTNERS.filter((p) => p.category === 'potential');
 
   return (
-    <main className="min-h-screen bg-slate-950">
+    <main className="min-h-screen bg-white">
       <Header />
 
       {/* Hero Section */}
@@ -116,10 +116,10 @@ export default function PartnersPage() {
             animate={{ opacity: 1, y: 0 }}
             className="space-y-4"
           >
-            <h1 className="text-4xl sm:text-5xl font-bold text-white">
+            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900">
               Our Partners
             </h1>
-            <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Building a global coalition for peace through the Olympic Truce
             </p>
           </motion.div>
@@ -135,10 +135,10 @@ export default function PartnersPage() {
             viewport={{ once: true }}
             className="mb-8"
           >
-            <h2 className="text-2xl font-bold text-white mb-2">
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">
               {CATEGORY_CONFIG.founding.label}
             </h2>
-            <p className="text-slate-400">
+            <p className="text-gray-600">
               {CATEGORY_CONFIG.founding.description}
             </p>
           </motion.div>
@@ -158,19 +158,19 @@ export default function PartnersPage() {
                 className={`block p-6 rounded-2xl bg-gradient-to-br ${CATEGORY_CONFIG.founding.color} border ${CATEGORY_CONFIG.founding.border} hover:border-blue-400/50 transition-all duration-300`}
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-slate-800/50 flex items-center justify-center flex-shrink-0">
-                    <svg className="w-6 h-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <div className="w-12 h-12 rounded-xl bg-gray-100/50 flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                     </svg>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-white mb-2">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
                       {partner.name}
                     </h3>
-                    <p className="text-sm text-slate-400 mb-3">
+                    <p className="text-sm text-gray-600 mb-3">
                       {partner.description}
                     </p>
-                    <span className="inline-flex items-center gap-1 text-xs text-blue-400">
+                    <span className="inline-flex items-center gap-1 text-xs text-blue-600">
                       Visit website
                       <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -185,7 +185,7 @@ export default function PartnersPage() {
       </section>
 
       {/* Academic Validation Partner */}
-      <section className="py-12 px-4 bg-slate-900/30">
+      <section className="py-12 px-4 bg-gray-50/30">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -193,10 +193,10 @@ export default function PartnersPage() {
             viewport={{ once: true }}
             className="mb-8"
           >
-            <h2 className="text-2xl font-bold text-white mb-2">
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">
               {CATEGORY_CONFIG.validation.label}
             </h2>
-            <p className="text-slate-400">
+            <p className="text-gray-600">
               {CATEGORY_CONFIG.validation.description}
             </p>
           </motion.div>
@@ -216,7 +216,7 @@ export default function PartnersPage() {
                 className={`block p-6 rounded-2xl bg-gradient-to-br ${CATEGORY_CONFIG.validation.color} border ${CATEGORY_CONFIG.validation.border} hover:border-purple-400/50 transition-all duration-300`}
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-slate-800/50 flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 rounded-xl bg-gray-100/50 flex items-center justify-center flex-shrink-0">
                     <svg className="w-6 h-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
@@ -224,10 +224,10 @@ export default function PartnersPage() {
                     </svg>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-white mb-2">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
                       {partner.name}
                     </h3>
-                    <p className="text-sm text-slate-400 mb-3">
+                    <p className="text-sm text-gray-600 mb-3">
                       {partner.description}
                     </p>
                     <div className="flex flex-wrap gap-2 mb-3">
@@ -258,10 +258,10 @@ export default function PartnersPage() {
             viewport={{ once: true }}
             className="mb-8"
           >
-            <h2 className="text-2xl font-bold text-white mb-2">
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">
               {CATEGORY_CONFIG.potential.label}
             </h2>
-            <p className="text-slate-400">
+            <p className="text-gray-600">
               {CATEGORY_CONFIG.potential.description}
             </p>
           </motion.div>
@@ -289,10 +289,10 @@ export default function PartnersPage() {
                     />
                   </div>
                 )}
-                <h3 className="text-md font-semibold text-white mb-2">
+                <h3 className="text-md font-semibold text-gray-900 mb-2">
                   {partner.name}
                 </h3>
-                <p className="text-xs text-slate-400 mb-3">
+                <p className="text-xs text-gray-600 mb-3">
                   {partner.description}
                 </p>
                 <span className="inline-flex items-center gap-1 text-xs text-amber-400">
@@ -314,18 +314,18 @@ export default function PartnersPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="p-8 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50"
+            className="p-8 rounded-2xl bg-gradient-to-br from-gray-100/50 to-gray-50/50 border border-gray-200/50"
           >
-            <h2 className="text-2xl font-bold text-white mb-4">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">
               Become a Partner
             </h2>
-            <p className="text-slate-400 mb-6">
+            <p className="text-gray-600 mb-6">
               Join us in promoting peace through the Olympic Truce. We welcome partnerships
               with NGOs, governments, academic institutions, and private sector organizations.
             </p>
             <a
               href="mailto:partnerships@trucefoundation.world"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-medium rounded-xl transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-600 text-gray-900 font-medium rounded-xl transition-colors"
             >
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -337,8 +337,8 @@ export default function PartnersPage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-4 border-t border-slate-800/50">
-        <div className="max-w-6xl mx-auto text-center text-slate-500 text-sm">
+      <footer className="py-8 px-4 border-t border-gray-200/50">
+        <div className="max-w-6xl mx-auto text-center text-gray-500 text-sm">
           <p>&copy; {new Date().getFullYear()} Truce Foundation. All rights reserved.</p>
         </div>
       </footer>

@@ -36,14 +36,14 @@ export default function VideosPage() {
     : videos.filter(video => video.category === activeCategory);
 
   return (
-    <main className="min-h-screen bg-slate-950 pt-20 pb-16">
+    <main className="min-h-screen bg-white pt-20 pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Hero Section */}
         <div className="text-center py-12 md:py-16">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Video Gallery
           </h1>
-          <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Watch speeches, ceremonies, and documentaries about the Olympic Truce and global peace initiatives
           </p>
         </div>
@@ -56,8 +56,8 @@ export default function VideosPage() {
               onClick={() => setActiveCategory(category)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                 activeCategory === category
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white'
+                  ? 'bg-blue-600 text-gray-900'
+                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200 hover:text-gray-900'
               }`}
             >
               {category.charAt(0).toUpperCase() + category.slice(1)}
@@ -70,14 +70,14 @@ export default function VideosPage() {
 
         {/* Empty state with instructions */}
         {videos.length === 0 && (
-          <div className="mt-8 p-6 bg-slate-900/50 border border-slate-800 rounded-xl text-center">
-            <h3 className="text-lg font-medium text-white mb-2">Videos Coming Soon</h3>
-            <p className="text-slate-400 text-sm mb-4">
+          <div className="mt-8 p-6 bg-gray-50/50 border border-gray-200 rounded-xl text-center">
+            <h3 className="text-lg font-medium text-gray-900 mb-2">Videos Coming Soon</h3>
+            <p className="text-gray-600 text-sm mb-4">
               Videos will be added to showcase Truce Foundation events, speeches, and documentaries.
             </p>
-            <p className="text-slate-500 text-xs">
-              To add videos, edit the <code className="px-1 py-0.5 bg-slate-800 rounded">videos</code> array in{' '}
-              <code className="px-1 py-0.5 bg-slate-800 rounded">src/app/videos/page.tsx</code>
+            <p className="text-gray-500 text-xs">
+              To add videos, edit the <code className="px-1 py-0.5 bg-gray-100 rounded">videos</code> array in{' '}
+              <code className="px-1 py-0.5 bg-gray-100 rounded">src/app/videos/page.tsx</code>
             </p>
           </div>
         )}
@@ -86,7 +86,7 @@ export default function VideosPage() {
         <div className="mt-12 text-center">
           <Link
             href="/gallery"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white rounded-lg transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-900 rounded-lg transition-colors"
           >
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />

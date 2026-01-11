@@ -62,7 +62,7 @@ const SEVERITY_COLORS: Record<string, string> = {
   critical: 'bg-red-500',
   high: 'bg-orange-500',
   medium: 'bg-yellow-500',
-  low: 'bg-blue-500',
+  low: 'bg-blue-600',
 };
 
 const TYPE_LABELS: Record<string, string> = {
@@ -123,7 +123,7 @@ export default function DailyBriefingPage() {
   };
 
   return (
-    <main className="min-h-screen bg-slate-950">
+    <main className="min-h-screen bg-white">
       <Header />
 
       <div className="pt-24 pb-8 px-4">
@@ -136,7 +136,7 @@ export default function DailyBriefingPage() {
           >
             <button
               onClick={handlePrevDay}
-              className="flex items-center gap-2 text-slate-400 hover:text-white transition-colors"
+              className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -145,10 +145,10 @@ export default function DailyBriefingPage() {
             </button>
 
             <div className="text-center">
-              <h1 className="text-3xl font-bold text-white mb-1">
+              <h1 className="text-3xl font-bold text-gray-900 mb-1">
                 {format(parseISO(selectedDate), 'EEEE, MMMM d, yyyy')}
               </h1>
-              <p className="text-slate-400">
+              <p className="text-gray-600">
                 {isToday ? 'Today\'s Briefing' : 'Historical Briefing'}
               </p>
             </div>
@@ -157,7 +157,7 @@ export default function DailyBriefingPage() {
               onClick={handleNextDay}
               disabled={isToday}
               className={`flex items-center gap-2 transition-colors ${
-                isToday ? 'text-slate-600 cursor-not-allowed' : 'text-slate-400 hover:text-white'
+                isToday ? 'text-gray-600 cursor-not-allowed' : 'text-gray-600 hover:text-gray-900'
               }`}
             >
               Next Day
@@ -184,11 +184,11 @@ export default function DailyBriefingPage() {
                 transition={{ delay: 0.1 }}
                 className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8"
               >
-                <div className="bg-slate-900/50 border border-slate-800/50 rounded-xl p-5">
-                  <div className="text-4xl font-bold text-white mb-1">
+                <div className="bg-gray-50/50 border border-gray-200/50 rounded-xl p-5">
+                  <div className="text-4xl font-bold text-gray-900 mb-1">
                     {briefing.summary.total_incidents}
                   </div>
-                  <div className="text-sm text-slate-400">Total Incidents</div>
+                  <div className="text-sm text-gray-600">Total Incidents</div>
                   {briefing.comparison.trend !== 'stable' && (
                     <div className={`text-xs mt-2 ${
                       briefing.comparison.trend === 'up' ? 'text-red-400' : 'text-green-400'
@@ -198,25 +198,25 @@ export default function DailyBriefingPage() {
                   )}
                 </div>
 
-                <div className="bg-slate-900/50 border border-slate-800/50 rounded-xl p-5">
+                <div className="bg-gray-50/50 border border-gray-200/50 rounded-xl p-5">
                   <div className="text-4xl font-bold text-red-400 mb-1">
                     {briefing.summary.conflict_incidents}
                   </div>
-                  <div className="text-sm text-slate-400">Armed Conflicts</div>
+                  <div className="text-sm text-gray-600">Armed Conflicts</div>
                 </div>
 
-                <div className="bg-slate-900/50 border border-slate-800/50 rounded-xl p-5">
+                <div className="bg-gray-50/50 border border-gray-200/50 rounded-xl p-5">
                   <div className="text-4xl font-bold text-orange-400 mb-1">
                     {briefing.summary.critical_incidents + briefing.summary.high_severity_incidents}
                   </div>
-                  <div className="text-sm text-slate-400">High/Critical Severity</div>
+                  <div className="text-sm text-gray-600">High/Critical Severity</div>
                 </div>
 
-                <div className="bg-slate-900/50 border border-slate-800/50 rounded-xl p-5">
-                  <div className="text-4xl font-bold text-blue-400 mb-1">
+                <div className="bg-gray-50/50 border border-gray-200/50 rounded-xl p-5">
+                  <div className="text-4xl font-bold text-blue-600 mb-1">
                     {briefing.summary.countries_affected}
                   </div>
-                  <div className="text-sm text-slate-400">Countries Affected</div>
+                  <div className="text-sm text-gray-600">Countries Affected</div>
                 </div>
               </motion.section>
 
@@ -225,19 +225,19 @@ export default function DailyBriefingPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.15 }}
-                className="bg-gradient-to-r from-blue-900/30 to-slate-900 border border-blue-800/50 rounded-xl p-6 mb-8"
+                className="bg-gradient-to-r from-blue-600/30 to-slate-900 border border-blue-600/50 rounded-xl p-6 mb-8"
               >
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex-1">
-                    <h3 className="text-sm uppercase tracking-wider text-blue-400 mb-3">Shareable Summary</h3>
-                    <p className="text-slate-300 text-lg leading-relaxed">
+                    <h3 className="text-sm uppercase tracking-wider text-blue-600 mb-3">Shareable Summary</h3>
+                    <p className="text-gray-600 text-lg leading-relaxed">
                       "{getShareableQuote()}"
                     </p>
                   </div>
                   <div className="flex flex-col gap-2">
                     <button
                       onClick={() => copyToClipboard(getShareableQuote())}
-                      className="px-4 py-2 bg-slate-700 hover:bg-slate-600 rounded-lg text-sm transition-colors flex items-center gap-2 text-white"
+                      className="px-4 py-2 bg-gray-200 hover:bg-gray-200 rounded-lg text-sm transition-colors flex items-center gap-2 text-gray-900"
                     >
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
@@ -248,7 +248,7 @@ export default function DailyBriefingPage() {
                       href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(getShareableQuote())}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2 bg-slate-700 hover:bg-slate-600 rounded-lg text-sm transition-colors flex items-center gap-2 text-white"
+                      className="px-4 py-2 bg-gray-200 hover:bg-gray-200 rounded-lg text-sm transition-colors flex items-center gap-2 text-gray-900"
                     >
                       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
@@ -265,40 +265,40 @@ export default function DailyBriefingPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 }}
-                  className="bg-slate-900/50 border border-slate-800/50 rounded-xl p-6"
+                  className="bg-gray-50/50 border border-gray-200/50 rounded-xl p-6"
                 >
-                  <h2 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                  <h2 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
                     <span className="w-2 h-2 bg-red-500 rounded-full"></span>
                     Top Incidents by Severity
                   </h2>
 
                   {briefing.top_incidents.length === 0 ? (
-                    <p className="text-slate-500 text-center py-8">No incidents recorded for this day</p>
+                    <p className="text-gray-500 text-center py-8">No incidents recorded for this day</p>
                   ) : (
                     <div className="space-y-3">
                       {briefing.top_incidents.slice(0, 5).map((incident) => (
                         <div
                           key={incident.id}
-                          className="flex items-start gap-3 p-3 bg-slate-800/50 rounded-lg"
+                          className="flex items-start gap-3 p-3 bg-gray-100/50 rounded-lg"
                         >
                           <div className={`w-2 h-2 mt-2 rounded-full ${SEVERITY_COLORS[incident.severity]}`}></div>
                           <div className="flex-1 min-w-0">
                             <div className="flex items-center gap-2 mb-1 flex-wrap">
-                              <span className="text-xs px-2 py-0.5 bg-slate-700 rounded uppercase text-slate-300">
+                              <span className="text-xs px-2 py-0.5 bg-gray-200 rounded uppercase text-gray-600">
                                 {incident.severity}
                               </span>
-                              <span className="text-xs text-slate-500">
+                              <span className="text-xs text-gray-500">
                                 {TYPE_LABELS[incident.type] || incident.type}
                               </span>
                               {incident.source_primary && (
                                 <SourceBadge source={incident.source_primary} size="sm" />
                               )}
                             </div>
-                            <p className="text-sm font-medium text-slate-200 mb-1">
+                            <p className="text-sm font-medium text-gray-700 mb-1">
                               {incident.location_name}, {incident.country_iso3}
                             </p>
                             {incident.narrative && (
-                              <p className="text-xs text-slate-400 line-clamp-2">
+                              <p className="text-xs text-gray-600 line-clamp-2">
                                 {incident.narrative}
                               </p>
                             )}
@@ -324,38 +324,38 @@ export default function DailyBriefingPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.25 }}
-                  className="bg-slate-900/50 border border-slate-800/50 rounded-xl p-6"
+                  className="bg-gray-50/50 border border-gray-200/50 rounded-xl p-6"
                 >
-                  <h2 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                    <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                  <h2 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                    <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
                     Countries Most Affected
                   </h2>
 
                   {briefing.country_breakdown.length === 0 ? (
-                    <p className="text-slate-500 text-center py-8">No country data for this day</p>
+                    <p className="text-gray-500 text-center py-8">No country data for this day</p>
                   ) : (
                     <div className="space-y-3">
                       {briefing.country_breakdown.slice(0, 5).map((country, index) => (
                         <div
                           key={country.country_iso3}
-                          className="flex items-center gap-4 p-3 bg-slate-800/50 rounded-lg"
+                          className="flex items-center gap-4 p-3 bg-gray-100/50 rounded-lg"
                         >
-                          <div className="w-8 h-8 bg-slate-700 rounded-full flex items-center justify-center text-sm font-bold text-white">
+                          <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-sm font-bold text-gray-900">
                             {index + 1}
                           </div>
                           <div className="flex-1">
-                            <p className="font-medium text-slate-200">
+                            <p className="font-medium text-gray-700">
                               {country.country_name}
                             </p>
-                            <p className="text-xs text-slate-500">
+                            <p className="text-xs text-gray-500">
                               {country.country_iso3}
                             </p>
                           </div>
                           <div className="text-right">
-                            <div className="text-lg font-bold text-white">
+                            <div className="text-lg font-bold text-gray-900">
                               {country.total_incidents}
                             </div>
-                            <div className="text-xs text-slate-500">incidents</div>
+                            <div className="text-xs text-gray-500">incidents</div>
                           </div>
                           {country.critical_incidents > 0 && (
                             <div className="px-2 py-1 bg-red-900/50 text-red-400 rounded text-xs">
@@ -374,33 +374,33 @@ export default function DailyBriefingPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="mt-8 bg-slate-900/50 border border-slate-800/50 rounded-xl p-6"
+                className="mt-8 bg-gray-50/50 border border-gray-200/50 rounded-xl p-6"
               >
-                <h2 className="text-xl font-bold text-white mb-4">Incident Type Breakdown</h2>
+                <h2 className="text-xl font-bold text-gray-900 mb-4">Incident Type Breakdown</h2>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  <div className="text-center p-4 bg-slate-800/50 rounded-lg">
+                  <div className="text-center p-4 bg-gray-100/50 rounded-lg">
                     <div className="text-2xl font-bold text-red-400 mb-1">
                       {briefing.summary.conflict_incidents}
                     </div>
-                    <div className="text-sm text-slate-400">Armed Conflicts</div>
+                    <div className="text-sm text-gray-600">Armed Conflicts</div>
                   </div>
-                  <div className="text-center p-4 bg-slate-800/50 rounded-lg">
+                  <div className="text-center p-4 bg-gray-100/50 rounded-lg">
                     <div className="text-2xl font-bold text-yellow-400 mb-1">
                       {briefing.summary.humanitarian_access_incidents}
                     </div>
-                    <div className="text-sm text-slate-400">Humanitarian Access</div>
+                    <div className="text-sm text-gray-600">Humanitarian Access</div>
                   </div>
-                  <div className="text-center p-4 bg-slate-800/50 rounded-lg">
+                  <div className="text-center p-4 bg-gray-100/50 rounded-lg">
                     <div className="text-2xl font-bold text-orange-400 mb-1">
                       {briefing.summary.truce_violations}
                     </div>
-                    <div className="text-sm text-slate-400">Truce Violations</div>
+                    <div className="text-sm text-gray-600">Truce Violations</div>
                   </div>
-                  <div className="text-center p-4 bg-slate-800/50 rounded-lg">
+                  <div className="text-center p-4 bg-gray-100/50 rounded-lg">
                     <div className="text-2xl font-bold text-green-400 mb-1">
                       {briefing.summary.positive_measures}
                     </div>
-                    <div className="text-sm text-slate-400">Positive Measures</div>
+                    <div className="text-sm text-gray-600">Positive Measures</div>
                   </div>
                 </div>
               </motion.section>
@@ -410,18 +410,18 @@ export default function DailyBriefingPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.35 }}
-                className="mt-8 flex flex-col md:flex-row items-center justify-between gap-4 p-6 bg-slate-900/50 border border-slate-800/50 rounded-xl"
+                className="mt-8 flex flex-col md:flex-row items-center justify-between gap-4 p-6 bg-gray-50/50 border border-gray-200/50 rounded-xl"
               >
                 <div>
-                  <h3 className="font-semibold text-white mb-1">How to Cite</h3>
-                  <p className="text-sm text-slate-400">
+                  <h3 className="font-semibold text-gray-900 mb-1">How to Cite</h3>
+                  <p className="text-sm text-gray-600">
                     Truce Index Daily Briefing. ({format(parseISO(briefing.date), 'MMMM d, yyyy')}).
                     Truce Foundation. Retrieved from https://trucefoundation.world/briefing
                   </p>
                 </div>
                 <button
                   onClick={() => window.print()}
-                  className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors flex items-center gap-2 whitespace-nowrap text-white"
+                  className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors flex items-center gap-2 whitespace-nowrap text-gray-900"
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
@@ -435,18 +435,18 @@ export default function DailyBriefingPage() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4 }}
-                className="mt-8 text-center text-sm text-slate-500"
+                className="mt-8 text-center text-sm text-gray-500"
               >
                 <p>
                   Generated at {format(parseISO(briefing.generated_at), 'HH:mm:ss')} UTC |
                   Data sources: ACLED, OCHA, UNHCR
                 </p>
                 <p className="mt-2">
-                  <Link href="/press" className="text-blue-400 hover:underline">
+                  <Link href="/press" className="text-blue-600 hover:underline">
                     Press & Media Resources
                   </Link>
                   {' | '}
-                  <a href={TRUCE_INDEX_URL} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">
+                  <a href={TRUCE_INDEX_URL} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
                     View Live Map
                   </a>
                 </p>

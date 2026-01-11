@@ -474,10 +474,10 @@ const getSignificanceConfig = (significance: OlympicGame['significance']) => {
       };
     default:
       return {
-        bg: 'from-slate-500/20 to-slate-600/10',
-        border: 'border-slate-500/30',
+        bg: 'from-gray-500/20 to-gray-600/10',
+        border: 'border-gray-500/30',
         icon: '○',
-        iconColor: 'text-slate-400',
+        iconColor: 'text-gray-600',
         label: 'Neutral',
       };
   }
@@ -489,7 +489,7 @@ export default function ModernHistoryPage() {
   const violatedGames = OLYMPIC_TRUCE_HISTORY.filter(g => g.significance === 'negative').length;
 
   return (
-    <main className="min-h-screen bg-slate-950">
+    <main className="min-h-screen bg-white">
       <Header />
 
       {/* Hero Section */}
@@ -500,14 +500,14 @@ export default function ModernHistoryPage() {
             animate={{ opacity: 1, y: 0 }}
             className="space-y-4"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border border-blue-500/30 rounded-full mb-4">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600/10 border border-blue-500/30 rounded-full mb-4">
               <span className="text-xl">🌍</span>
               <span className="text-blue-300 text-sm font-medium">Modern Era</span>
             </div>
-            <h1 className="text-4xl sm:text-5xl font-bold text-white">
+            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900">
               The Modern Revival
             </h1>
-            <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               1992 - Present: 30+ Years of UN Solemn Appeals
             </p>
           </motion.div>
@@ -521,10 +521,10 @@ export default function ModernHistoryPage() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="p-4 rounded-xl bg-slate-900/50 border border-slate-700/50 text-center"
+              className="p-4 rounded-xl bg-gray-50/50 border border-gray-200/50 text-center"
             >
-              <span className="text-3xl font-bold text-white">{totalGames}</span>
-              <p className="text-xs text-slate-500 mt-1">Games with Truce</p>
+              <span className="text-3xl font-bold text-gray-900">{totalGames}</span>
+              <p className="text-xs text-gray-500 mt-1">Games with Truce</p>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -533,7 +533,7 @@ export default function ModernHistoryPage() {
               className="p-4 rounded-xl bg-green-500/10 border border-green-500/30 text-center"
             >
               <span className="text-3xl font-bold text-green-400">{observedGames}</span>
-              <p className="text-xs text-slate-500 mt-1">Observed/Neutral</p>
+              <p className="text-xs text-gray-500 mt-1">Observed/Neutral</p>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -542,7 +542,7 @@ export default function ModernHistoryPage() {
               className="p-4 rounded-xl bg-red-500/10 border border-red-500/30 text-center"
             >
               <span className="text-3xl font-bold text-red-400">{violatedGames}</span>
-              <p className="text-xs text-slate-500 mt-1">Major Violations</p>
+              <p className="text-xs text-gray-500 mt-1">Major Violations</p>
             </motion.div>
           </div>
         </div>
@@ -555,10 +555,10 @@ export default function ModernHistoryPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="p-6 rounded-2xl bg-blue-500/10 border border-blue-500/30"
+            className="p-6 rounded-2xl bg-blue-600/10 border border-blue-500/30"
           >
-            <h2 className="text-lg font-semibold text-white mb-3">The Modern Revival (1992-Present)</h2>
-            <div className="space-y-3 text-sm text-slate-300">
+            <h2 className="text-lg font-semibold text-gray-900 mb-3">The Modern Revival (1992-Present)</h2>
+            <div className="space-y-3 text-sm text-gray-600">
               <p>
                 After the ancient Olympics were abolished in <strong>393 AD</strong> by Emperor Theodosius I, the concept of ekecheiria
                 fell into obscurity for over 1,500 years.
@@ -578,13 +578,13 @@ export default function ModernHistoryPage() {
       </section>
 
       {/* Key Moments Timeline */}
-      <section className="py-12 px-4 bg-slate-900/30">
+      <section className="py-12 px-4 bg-gray-50/30">
         <div className="max-w-4xl mx-auto">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-2xl font-bold text-white mb-8 text-center"
+            className="text-2xl font-bold text-gray-900 mb-8 text-center"
           >
             Key Moments
           </motion.h2>
@@ -592,7 +592,7 @@ export default function ModernHistoryPage() {
           <div className="space-y-4">
             {KEY_MOMENTS.map((moment, index) => {
               const sigConfig = {
-                milestone: { bg: 'bg-blue-500/10', border: 'border-blue-500/30', icon: '📌', color: 'text-blue-300' },
+                milestone: { bg: 'bg-blue-600/10', border: 'border-blue-500/30', icon: '📌', color: 'text-blue-300' },
                 record: { bg: 'bg-green-500/10', border: 'border-green-500/30', icon: '🏆', color: 'text-green-300' },
                 diplomatic: { bg: 'bg-purple-500/10', border: 'border-purple-500/30', icon: '🕊️', color: 'text-purple-300' },
                 symbolic: { bg: 'bg-amber-500/10', border: 'border-amber-500/30', icon: '✨', color: 'text-amber-300' },
@@ -612,9 +612,9 @@ export default function ModernHistoryPage() {
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-1">
                         <span className={`font-bold ${sigConfig.color}`}>{moment.year}</span>
-                        <h4 className="font-semibold text-white">{moment.title}</h4>
+                        <h4 className="font-semibold text-gray-900">{moment.title}</h4>
                       </div>
-                      <p className="text-sm text-slate-300">{moment.description}</p>
+                      <p className="text-sm text-gray-600">{moment.description}</p>
                     </div>
                   </div>
                 </motion.div>
@@ -631,24 +631,24 @@ export default function ModernHistoryPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="p-6 rounded-2xl bg-slate-900/50 border border-slate-700/50"
+            className="p-6 rounded-2xl bg-gray-50/50 border border-gray-200/50"
           >
-            <h3 className="text-lg font-bold text-white mb-2 flex items-center gap-2">
+            <h3 className="text-lg font-bold text-gray-900 mb-2 flex items-center gap-2">
               <span className="text-xl">📊</span>
               Complete Resolution Co-Sponsor History
             </h3>
-            <p className="text-xs text-slate-400 mb-4">
+            <p className="text-xs text-gray-600 mb-4">
               All Olympic Truce resolutions have been adopted by consensus. Member States show support by co-sponsoring.
             </p>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="border-b border-slate-700/50">
-                    <th className="text-left py-2 text-slate-400 font-medium">Edition</th>
-                    <th className="text-center py-2 text-slate-400 font-medium">Co-Sponsors</th>
-                    <th className="text-center py-2 text-slate-400 font-medium">Total Members</th>
-                    <th className="text-center py-2 text-slate-400 font-medium">%</th>
-                    <th className="text-left py-2 text-slate-400 font-medium hidden md:table-cell">Notes</th>
+                  <tr className="border-b border-gray-200/50">
+                    <th className="text-left py-2 text-gray-600 font-medium">Edition</th>
+                    <th className="text-center py-2 text-gray-600 font-medium">Co-Sponsors</th>
+                    <th className="text-center py-2 text-gray-600 font-medium">Total Members</th>
+                    <th className="text-center py-2 text-gray-600 font-medium">%</th>
+                    <th className="text-left py-2 text-gray-600 font-medium hidden md:table-cell">Notes</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -658,14 +658,14 @@ export default function ModernHistoryPage() {
                     return (
                       <tr
                         key={item.games}
-                        className={`border-b border-slate-800/50 ${
-                          item.highlight ? 'bg-blue-500/10' : ''
+                        className={`border-b border-gray-200/50 ${
+                          item.highlight ? 'bg-blue-600/10' : ''
                         }`}
                       >
-                        <td className={`py-2 ${item.highlight ? 'text-blue-300 font-medium' : 'text-white'}`}>
+                        <td className={`py-2 ${item.highlight ? 'text-blue-300 font-medium' : 'text-gray-900'}`}>
                           {item.games}
                           {item.highlight && (
-                            <span className="ml-2 text-xs bg-blue-500/20 text-blue-300 px-1.5 py-0.5 rounded">
+                            <span className="ml-2 text-xs bg-blue-600/20 text-blue-300 px-1.5 py-0.5 rounded">
                               Current
                             </span>
                           )}
@@ -673,28 +673,28 @@ export default function ModernHistoryPage() {
                         <td className="py-2 text-center">
                           <span className={`font-bold ${
                             isRecord ? 'text-green-400' :
-                            item.highlight ? 'text-blue-400' : 'text-white'
+                            item.highlight ? 'text-blue-600' : 'text-gray-900'
                           }`}>
                             {item.coSponsors}
                           </span>
                         </td>
-                        <td className="py-2 text-center text-slate-400">{item.totalMembers}</td>
+                        <td className="py-2 text-center text-gray-600">{item.totalMembers}</td>
                         <td className="py-2 text-center">
                           <div className="flex items-center justify-center gap-2">
-                            <div className="w-16 h-2 bg-slate-700 rounded-full overflow-hidden">
+                            <div className="w-16 h-2 bg-gray-200 rounded-full overflow-hidden">
                               <div
                                 className={`h-full rounded-full ${
                                   isRecord ? 'bg-green-500' :
-                                  percentage >= 90 ? 'bg-blue-500' :
+                                  percentage >= 90 ? 'bg-blue-600' :
                                   percentage >= 70 ? 'bg-amber-500' : 'bg-red-500'
                                 }`}
                                 style={{ width: `${percentage}%` }}
                               />
                             </div>
-                            <span className="text-xs text-slate-400">{percentage}%</span>
+                            <span className="text-xs text-gray-600">{percentage}%</span>
                           </div>
                         </td>
-                        <td className="py-2 text-xs text-slate-500 hidden md:table-cell">{item.notes}</td>
+                        <td className="py-2 text-xs text-gray-500 hidden md:table-cell">{item.notes}</td>
                       </tr>
                     );
                   })}
@@ -706,7 +706,7 @@ export default function ModernHistoryPage() {
       </section>
 
       {/* 166 Co-sponsors highlight */}
-      <section className="py-12 px-4 bg-slate-900/30">
+      <section className="py-12 px-4 bg-gray-50/30">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -717,45 +717,45 @@ export default function ModernHistoryPage() {
             <div className="flex items-center gap-3 mb-4">
               <span className="text-3xl">🌍</span>
               <div>
-                <h3 className="text-lg font-bold text-white">166 Co-Sponsors</h3>
-                <p className="text-sm text-slate-400">A/80/L.10 - Milano-Cortina 2026</p>
+                <h3 className="text-lg font-bold text-gray-900">166 Co-Sponsors</h3>
+                <p className="text-sm text-gray-600">A/80/L.10 - Milano-Cortina 2026</p>
               </div>
             </div>
 
-            <div className="mb-4 p-3 bg-slate-900/50 rounded-lg">
+            <div className="mb-4 p-3 bg-gray-50/50 rounded-lg">
               <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs">
                 <div className="flex items-center gap-2">
-                  <span className="text-slate-500">Adopted:</span>
-                  <span className="text-white font-medium">November 19, 2025</span>
+                  <span className="text-gray-500">Adopted:</span>
+                  <span className="text-gray-900 font-medium">November 19, 2025</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-slate-500">Session:</span>
-                  <span className="text-white font-medium">80th UN General Assembly</span>
+                  <span className="text-gray-500">Session:</span>
+                  <span className="text-gray-900 font-medium">80th UN General Assembly</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-slate-500">Method:</span>
+                  <span className="text-gray-500">Method:</span>
                   <span className="text-green-400 font-medium">Consensus (no vote)</span>
                 </div>
               </div>
             </div>
 
-            <p className="text-sm text-slate-300 mb-4">
-              Out of 193 UN Member States, <strong className="text-white">166 countries</strong> co-sponsored the 2026 Olympic Truce resolution -
+            <p className="text-sm text-gray-600 mb-4">
+              Out of 193 UN Member States, <strong className="text-gray-900">166 countries</strong> co-sponsored the 2026 Olympic Truce resolution -
               demonstrating unprecedented global unity despite ongoing geopolitical tensions.
             </p>
 
             {/* Key Figures */}
-            <h4 className="text-sm font-semibold text-white mb-3">Key Figures at the Adoption</h4>
+            <h4 className="text-sm font-semibold text-gray-900 mb-3">Key Figures at the Adoption</h4>
             <div className="grid gap-3">
               {KEY_FIGURES_2026.map((figure) => (
-                <div key={figure.name} className="p-3 bg-slate-800/50 rounded-lg">
+                <div key={figure.name} className="p-3 bg-gray-100/50 rounded-lg">
                   <div className="flex items-center gap-2 mb-1">
-                    <span className="font-medium text-white text-sm">{figure.name}</span>
-                    <span className="text-xs bg-slate-700/50 text-slate-400 px-2 py-0.5 rounded">
+                    <span className="font-medium text-gray-900 text-sm">{figure.name}</span>
+                    <span className="text-xs bg-gray-200/50 text-gray-600 px-2 py-0.5 rounded">
                       {figure.role}
                     </span>
                   </div>
-                  <p className="text-xs text-slate-400 italic">"{figure.statement}"</p>
+                  <p className="text-xs text-gray-600 italic">"{figure.statement}"</p>
                 </div>
               ))}
             </div>
@@ -770,14 +770,14 @@ export default function ModernHistoryPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-2xl font-bold text-white mb-8 text-center"
+            className="text-2xl font-bold text-gray-900 mb-8 text-center"
           >
             Longitudinal Record
           </motion.h2>
 
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-slate-700/50 -translate-x-1/2" />
+            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gray-200/50 -translate-x-1/2" />
 
             {OLYMPIC_TRUCE_HISTORY.map((game, index) => {
               const config = getSignificanceConfig(game.significance);
@@ -805,12 +805,12 @@ export default function ModernHistoryPage() {
                     <div className="flex items-start justify-between mb-3">
                       <div>
                         <div className="flex items-center gap-2">
-                          <span className="text-2xl font-bold text-white">{game.year}</span>
-                          <span className="px-2 py-0.5 text-xs bg-slate-800/50 text-slate-300 rounded-full">
+                          <span className="text-2xl font-bold text-gray-900">{game.year}</span>
+                          <span className="px-2 py-0.5 text-xs bg-gray-100/50 text-gray-600 rounded-full">
                             {game.season}
                           </span>
                         </div>
-                        <h3 className="text-lg font-semibold text-white">
+                        <h3 className="text-lg font-semibold text-gray-900">
                           {game.city}, {game.country}
                         </h3>
                       </div>
@@ -819,8 +819,8 @@ export default function ModernHistoryPage() {
 
                     {/* Resolution info */}
                     {game.unResolution && (
-                      <div className="mb-3 text-xs text-slate-400">
-                        <span className="font-medium text-slate-300">UN Resolution:</span> {game.unResolution}
+                      <div className="mb-3 text-xs text-gray-600">
+                        <span className="font-medium text-gray-600">UN Resolution:</span> {game.unResolution}
                         {game.coSponsors && (
                           <span className="ml-2">({game.coSponsors} co-sponsors)</span>
                         )}
@@ -832,7 +832,7 @@ export default function ModernHistoryPage() {
                       {game.milestoneEffects.map((effect, i) => (
                         <div key={i} className="flex items-start gap-2 text-sm">
                           <span className="text-green-400 mt-1">+</span>
-                          <span className="text-slate-300">{effect}</span>
+                          <span className="text-gray-600">{effect}</span>
                         </div>
                       ))}
                     </div>
@@ -857,7 +857,7 @@ export default function ModernHistoryPage() {
       </section>
 
       {/* Looking Forward */}
-      <section className="py-16 px-4 bg-slate-900/30">
+      <section className="py-16 px-4 bg-gray-50/30">
         <div className="max-w-2xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -865,17 +865,17 @@ export default function ModernHistoryPage() {
             viewport={{ once: true }}
             className="p-8 rounded-2xl bg-gradient-to-br from-blue-500/20 to-purple-500/10 border border-blue-500/30"
           >
-            <h2 className="text-2xl font-bold text-white mb-4">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">
               Milano-Cortina 2026
             </h2>
-            <p className="text-slate-400 mb-6">
+            <p className="text-gray-600 mb-6">
               The next Olympic Truce window opens for the 2026 Winter Games in Italy.
               The Truce Index will track compliance in real-time.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/methodology"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white font-medium rounded-xl transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-900 font-medium rounded-xl transition-colors"
               >
                 View Methodology
               </Link>
@@ -883,7 +883,7 @@ export default function ModernHistoryPage() {
                 href="https://truce-index.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-medium rounded-xl transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-600 text-gray-900 font-medium rounded-xl transition-colors"
               >
                 Explore Live Index
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -901,7 +901,7 @@ export default function ModernHistoryPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/history/ancient"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-amber-600 hover:bg-amber-500 text-white font-medium rounded-xl transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-amber-600 hover:bg-amber-500 text-gray-900 font-medium rounded-xl transition-colors"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -910,7 +910,7 @@ export default function ModernHistoryPage() {
             </Link>
             <Link
               href="/history"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white font-medium rounded-xl transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-900 font-medium rounded-xl transition-colors"
             >
               Back to History Hub
             </Link>
@@ -921,17 +921,17 @@ export default function ModernHistoryPage() {
       {/* Sources */}
       <section className="py-8 px-4">
         <div className="max-w-4xl mx-auto">
-          <h3 className="text-sm font-semibold text-slate-500 mb-4 text-center">Sources</h3>
-          <div className="flex flex-wrap justify-center gap-4 text-xs text-slate-500">
-            <a href="https://www.un.org/en/olympictruce" target="_blank" rel="noopener noreferrer" className="hover:text-slate-300 transition-colors">
+          <h3 className="text-sm font-semibold text-gray-500 mb-4 text-center">Sources</h3>
+          <div className="flex flex-wrap justify-center gap-4 text-xs text-gray-500">
+            <a href="https://www.un.org/en/olympictruce" target="_blank" rel="noopener noreferrer" className="hover:text-gray-600 transition-colors">
               UN Olympic Truce
             </a>
             <span>|</span>
-            <a href="https://www.olympics.com/ioc/olympic-truce/resolutions" target="_blank" rel="noopener noreferrer" className="hover:text-slate-300 transition-colors">
+            <a href="https://www.olympics.com/ioc/olympic-truce/resolutions" target="_blank" rel="noopener noreferrer" className="hover:text-gray-600 transition-colors">
               IOC Resolutions
             </a>
             <span>|</span>
-            <a href="https://olympictruce.org/en/profile/the-truce-timeline/" target="_blank" rel="noopener noreferrer" className="hover:text-slate-300 transition-colors">
+            <a href="https://olympictruce.org/en/profile/the-truce-timeline/" target="_blank" rel="noopener noreferrer" className="hover:text-gray-600 transition-colors">
               IOTC Timeline
             </a>
             <span>|</span>
@@ -943,8 +943,8 @@ export default function ModernHistoryPage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-4 border-t border-slate-800/50">
-        <div className="max-w-6xl mx-auto text-center text-slate-500 text-sm">
+      <footer className="py-8 px-4 border-t border-gray-200/50">
+        <div className="max-w-6xl mx-auto text-center text-gray-500 text-sm">
           <p>&copy; {new Date().getFullYear()} Truce Foundation. All rights reserved.</p>
         </div>
       </footer>

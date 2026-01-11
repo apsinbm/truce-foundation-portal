@@ -202,11 +202,11 @@ const getFragileStatusColor = (status: string) => {
     case 'fragile':
       return 'bg-amber-500/20 text-amber-300 border-amber-500/30';
     case 'stabilizing':
-      return 'bg-blue-500/20 text-blue-300 border-blue-500/30';
+      return 'bg-blue-600/20 text-blue-300 border-blue-500/30';
     case 'recovering':
       return 'bg-green-500/20 text-green-300 border-green-500/30';
     default:
-      return 'bg-slate-800 text-slate-300 border-slate-700';
+      return 'bg-gray-100 text-gray-600 border-gray-200';
   }
 };
 
@@ -275,7 +275,7 @@ const getMineSeverityColor = (severity: string) => {
     case 'legacy':
       return 'bg-indigo-500/20 text-indigo-300 border-indigo-500/30';
     default:
-      return 'bg-slate-800 text-slate-300 border-slate-700';
+      return 'bg-gray-100 text-gray-600 border-gray-200';
   }
 };
 
@@ -318,7 +318,7 @@ const getStatusColor = (status: string) => {
     case 'moderate':
       return 'bg-yellow-500/20 text-yellow-300 border-yellow-500/30';
     default:
-      return 'bg-slate-800 text-slate-300 border-slate-700';
+      return 'bg-gray-100 text-gray-600 border-gray-200';
   }
 };
 
@@ -331,7 +331,7 @@ const getScoreColor = (score: number) => {
 
 export default function HumanitarianPage() {
   return (
-    <main className="min-h-screen bg-slate-950">
+    <main className="min-h-screen bg-white">
       <Header />
 
       {/* Hero Section */}
@@ -342,13 +342,13 @@ export default function HumanitarianPage() {
             animate={{ opacity: 1, y: 0 }}
             className="space-y-4"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border border-blue-500/30 rounded-full">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600/10 border border-blue-500/30 rounded-full">
               <span className="text-blue-300 text-sm font-medium">Humanitarian Monitoring</span>
             </div>
-            <h1 className="text-4xl sm:text-5xl font-bold text-white">
+            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900">
               Humanitarian Access
             </h1>
-            <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Monitoring barriers to humanitarian aid delivery during the Olympic Truce period
             </p>
           </motion.div>
@@ -364,9 +364,9 @@ export default function HumanitarianPage() {
             viewport={{ once: true }}
             className="p-6 rounded-2xl bg-gradient-to-br from-blue-500/10 to-blue-600/5 border border-blue-500/30"
           >
-            <h2 className="text-lg font-bold text-white mb-3">Why Humanitarian Access Matters for the Olympic Truce</h2>
-            <p className="text-slate-300 text-sm leading-relaxed">
-              The ancient Olympic Truce (ekecheiria) was not a ceasefire per se, but rather a guarantee of <strong className="text-white">safe passage</strong> -
+            <h2 className="text-lg font-bold text-gray-900 mb-3">Why Humanitarian Access Matters for the Olympic Truce</h2>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              The ancient Olympic Truce (ekecheiria) was not a ceasefire per se, but rather a guarantee of <strong className="text-gray-900">safe passage</strong> -
               allowing athletes, artists, and spectators to travel freely to and from the Games without fear of attack.
               In the modern context, this principle extends to humanitarian corridors: the ability for aid workers, medical supplies,
               and essential goods to reach populations in need. Monitoring humanitarian access during Truce periods reflects
@@ -385,8 +385,8 @@ export default function HumanitarianPage() {
             viewport={{ once: true }}
             className="mb-8"
           >
-            <h2 className="text-2xl font-bold text-white mb-2">Priority Countries</h2>
-            <p className="text-slate-400">
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Priority Countries</h2>
+            <p className="text-gray-600">
               Countries where humanitarian access is most constrained, as identified by expert advisors
             </p>
           </motion.div>
@@ -399,11 +399,11 @@ export default function HumanitarianPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.05 }}
-                className="p-5 rounded-xl bg-slate-900/50 border border-slate-700/50 hover:border-slate-600/50 transition-colors"
+                className="p-5 rounded-xl bg-gray-50/50 border border-gray-200/50 hover:border-gray-400/50 transition-colors"
               >
                 <div className="flex items-start justify-between mb-3">
                   <div>
-                    <h3 className="font-semibold text-white text-lg">{country.name}</h3>
+                    <h3 className="font-semibold text-gray-900 text-lg">{country.name}</h3>
                     <span className={`inline-block px-2 py-0.5 text-xs rounded-full border mt-1 ${getStatusColor(country.status)}`}>
                       {country.status} constraints
                     </span>
@@ -412,14 +412,14 @@ export default function HumanitarianPage() {
                     <div className={`text-2xl font-bold ${getScoreColor(country.acapsScore)}`}>
                       {country.acapsScore}/5
                     </div>
-                    <div className="text-xs text-slate-500">ACAPS Score</div>
+                    <div className="text-xs text-gray-500">ACAPS Score</div>
                   </div>
                 </div>
-                <p className="text-sm text-slate-400 mb-3">{country.description}</p>
+                <p className="text-sm text-gray-600 mb-3">{country.description}</p>
                 <div className="space-y-1">
                   {country.issues.map((issue) => (
-                    <div key={issue} className="flex items-center gap-2 text-xs text-slate-500">
-                      <span className="w-1 h-1 rounded-full bg-slate-600" />
+                    <div key={issue} className="flex items-center gap-2 text-xs text-gray-500">
+                      <span className="w-1 h-1 rounded-full bg-gray-400" />
                       {issue}
                     </div>
                   ))}
@@ -437,24 +437,24 @@ export default function HumanitarianPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="p-6 rounded-2xl bg-slate-900/50 border border-slate-700/50"
+            className="p-6 rounded-2xl bg-gray-50/50 border border-gray-200/50"
           >
-            <h3 className="text-lg font-bold text-white mb-4">Understanding ACAPS Humanitarian Access Scores</h3>
-            <p className="text-sm text-slate-400 mb-4">
+            <h3 className="text-lg font-bold text-gray-900 mb-4">Understanding ACAPS Humanitarian Access Scores</h3>
+            <p className="text-sm text-gray-600 mb-4">
               The ACAPS methodology measures humanitarian access using 9 indicators across 3 pillars,
               scoring each country from 0 (no constraints) to 5 (extreme constraints):
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-              <div className="p-3 rounded-lg bg-blue-500/10 border border-blue-500/20">
+              <div className="p-3 rounded-lg bg-blue-600/10 border border-blue-500/20">
                 <h4 className="text-sm font-semibold text-blue-300 mb-2">Pillar 1: People&apos;s Access</h4>
-                <ul className="text-xs text-slate-400 space-y-1">
+                <ul className="text-xs text-gray-600 space-y-1">
                   <li>• Denial of humanitarian needs</li>
                   <li>• Obstruction of services</li>
                 </ul>
               </div>
               <div className="p-3 rounded-lg bg-purple-500/10 border border-purple-500/20">
                 <h4 className="text-sm font-semibold text-purple-300 mb-2">Pillar 2: Org Access</h4>
-                <ul className="text-xs text-slate-400 space-y-1">
+                <ul className="text-xs text-gray-600 space-y-1">
                   <li>• Entry impediments (bureaucratic)</li>
                   <li>• Movement restrictions</li>
                   <li>• Programmatic interference</li>
@@ -463,7 +463,7 @@ export default function HumanitarianPage() {
               </div>
               <div className="p-3 rounded-lg bg-amber-500/10 border border-amber-500/20">
                 <h4 className="text-sm font-semibold text-amber-300 mb-2">Pillar 3: Physical/Security</h4>
-                <ul className="text-xs text-slate-400 space-y-1">
+                <ul className="text-xs text-gray-600 space-y-1">
                   <li>• Hostilities affecting aid</li>
                   <li>• Landmines/IEDs/UXO</li>
                   <li>• Environmental constraints</li>
@@ -482,7 +482,7 @@ export default function HumanitarianPage() {
       </section>
 
       {/* Fragile Peace Zones */}
-      <section className="py-12 px-4 bg-slate-900/30">
+      <section className="py-12 px-4 bg-gray-50/30">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -491,12 +491,12 @@ export default function HumanitarianPage() {
             className="mb-8"
           >
             <div className="flex items-center gap-3 mb-2">
-              <h2 className="text-2xl font-bold text-white">Fragile Peace Zones</h2>
+              <h2 className="text-2xl font-bold text-gray-900">Fragile Peace Zones</h2>
               <span className="px-2 py-1 text-xs bg-amber-500/20 text-amber-300 border border-amber-500/30 rounded-full">
                 ICU Watch
               </span>
             </div>
-            <p className="text-slate-400">
+            <p className="text-gray-600">
               Post-conflict regions where military hostilities have ceased but stability remains fragile.
               These require careful monitoring during the Olympic Truce to prevent re-escalation.
             </p>
@@ -511,7 +511,7 @@ export default function HumanitarianPage() {
                 viewport={{ once: true }}
                 transition={{ delay: zoneIndex * 0.1 }}
               >
-                <h3 className="text-lg font-semibold text-slate-300 mb-4 flex items-center gap-2">
+                <h3 className="text-lg font-semibold text-gray-600 mb-4 flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-amber-400" />
                   {zone.region}
                 </h3>
@@ -519,21 +519,21 @@ export default function HumanitarianPage() {
                   {zone.countries.map((country) => (
                     <div
                       key={country.name}
-                      className="p-4 rounded-xl bg-slate-950/50 border border-slate-700/50"
+                      className="p-4 rounded-xl bg-white/50 border border-gray-200/50"
                     >
                       <div className="flex items-start justify-between mb-2">
                         <div>
-                          <h4 className="font-semibold text-white">{country.name}</h4>
-                          <span className="text-xs text-slate-500">{country.area}</span>
+                          <h4 className="font-semibold text-gray-900">{country.name}</h4>
+                          <span className="text-xs text-gray-500">{country.area}</span>
                         </div>
                         <span className={`px-2 py-0.5 text-xs rounded-full border ${getFragileStatusColor(country.status)}`}>
                           {country.status}
                         </span>
                       </div>
-                      <p className="text-sm text-slate-400 mb-3">{country.description}</p>
+                      <p className="text-sm text-gray-600 mb-3">{country.description}</p>
                       <div className="space-y-1">
                         {country.focus.map((item) => (
-                          <div key={item} className="flex items-center gap-2 text-xs text-slate-500">
+                          <div key={item} className="flex items-center gap-2 text-xs text-gray-500">
                             <span className="w-1 h-1 rounded-full bg-amber-500/50" />
                             {item}
                           </div>
@@ -567,12 +567,12 @@ export default function HumanitarianPage() {
             className="mb-8"
           >
             <div className="flex items-center gap-3 mb-2">
-              <h2 className="text-2xl font-bold text-white">Maritime Mine Threats</h2>
+              <h2 className="text-2xl font-bold text-gray-900">Maritime Mine Threats</h2>
               <span className="px-2 py-1 text-xs bg-red-500/20 text-red-300 border border-red-500/30 rounded-full">
                 Shipping Risk
               </span>
             </div>
-            <p className="text-slate-400">
+            <p className="text-gray-600">
               Global maritime mine incidents threaten shipping lanes, disrupt trade, and endanger humanitarian supply chains.
               These hotspots highlight urgent risks to mariners and global commerce.
             </p>
@@ -587,7 +587,7 @@ export default function HumanitarianPage() {
                 viewport={{ once: true }}
                 transition={{ delay: groupIndex * 0.1 }}
               >
-                <h3 className="text-lg font-semibold text-slate-300 mb-4 flex items-center gap-2">
+                <h3 className="text-lg font-semibold text-gray-600 mb-4 flex items-center gap-2">
                   <span className={`px-2 py-0.5 text-xs rounded-full border ${getMineSeverityColor(group.severity)}`}>
                     {getSeverityLabel(group.severity)}
                   </span>
@@ -596,18 +596,18 @@ export default function HumanitarianPage() {
                   {group.zones.map((zone) => (
                     <div
                       key={zone.name}
-                      className="p-4 rounded-xl bg-slate-950/50 border border-slate-700/50"
+                      className="p-4 rounded-xl bg-white/50 border border-gray-200/50"
                     >
                       <div className="flex items-start justify-between mb-2">
                         <div>
-                          <h4 className="font-semibold text-white">{zone.name}</h4>
-                          <span className="text-xs text-slate-500">{zone.area}</span>
+                          <h4 className="font-semibold text-gray-900">{zone.name}</h4>
+                          <span className="text-xs text-gray-500">{zone.area}</span>
                         </div>
                       </div>
-                      <p className="text-sm text-slate-400 mb-3">{zone.description}</p>
+                      <p className="text-sm text-gray-600 mb-3">{zone.description}</p>
                       <div className="space-y-1">
                         {zone.impact.map((item) => (
-                          <div key={item} className="flex items-center gap-2 text-xs text-slate-500">
+                          <div key={item} className="flex items-center gap-2 text-xs text-gray-500">
                             <span className="w-1 h-1 rounded-full bg-red-500/50" />
                             {item}
                           </div>
@@ -629,14 +629,14 @@ export default function HumanitarianPage() {
             </p>
           </div>
 
-          <div className="mt-4 text-xs text-slate-500">
-            <p>Sources: <a href="https://channel16.dryadglobal.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">Dryad Global</a>, <a href="https://www.lloydslist.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">Lloyd&apos;s List</a>, <a href="https://www.worldports.org" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">World Ports Source</a></p>
+          <div className="mt-4 text-xs text-gray-500">
+            <p>Sources: <a href="https://channel16.dryadglobal.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Dryad Global</a>, <a href="https://www.lloydslist.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Lloyd&apos;s List</a>, <a href="https://www.worldports.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">World Ports Source</a></p>
           </div>
         </div>
       </section>
 
       {/* Exemplary Response */}
-      <section className="py-12 px-4 bg-slate-900/30">
+      <section className="py-12 px-4 bg-gray-50/30">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -645,12 +645,12 @@ export default function HumanitarianPage() {
             className="mb-8"
           >
             <div className="flex items-center gap-3 mb-2">
-              <h2 className="text-2xl font-bold text-white">Exemplary Humanitarian Access</h2>
+              <h2 className="text-2xl font-bold text-gray-900">Exemplary Humanitarian Access</h2>
               <span className="px-2 py-1 text-xs bg-green-500/20 text-green-300 border border-green-500/30 rounded-full">
                 Best Practices
               </span>
             </div>
-            <p className="text-slate-400">
+            <p className="text-gray-600">
               Countries scoring well on humanitarian access (ACAPS Score 0-1), demonstrating effective
               support for humanitarian operations and refugee populations
             </p>
@@ -668,7 +668,7 @@ export default function HumanitarianPage() {
               >
                 <div className="flex items-start justify-between mb-3">
                   <div>
-                    <h3 className="font-semibold text-white text-lg">{country.name}</h3>
+                    <h3 className="font-semibold text-gray-900 text-lg">{country.name}</h3>
                     <span className={`inline-block px-2 py-0.5 text-xs rounded-full border mt-1 ${
                       country.trend === 'improved'
                         ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30'
@@ -681,10 +681,10 @@ export default function HumanitarianPage() {
                     <div className="text-2xl font-bold text-green-400">
                       {country.acapsScore}/5
                     </div>
-                    <div className="text-xs text-slate-500">ACAPS Score</div>
+                    <div className="text-xs text-gray-500">ACAPS Score</div>
                   </div>
                 </div>
-                <p className="text-sm text-slate-400 mb-2">{country.description}</p>
+                <p className="text-sm text-gray-600 mb-2">{country.description}</p>
                 <p className="text-xs text-green-400/80">{country.highlight}</p>
               </motion.div>
             ))}
@@ -699,14 +699,14 @@ export default function HumanitarianPage() {
             </p>
           </div>
 
-          <div className="mt-4 text-xs text-slate-500">
+          <div className="mt-4 text-xs text-gray-500">
             <p>
               Source:{' '}
               <a
                 href="https://www.acaps.org/fileadmin/Data_Product/Main_media/20250120_ACAPS_Humanitarian_Access_Overview__2025.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-400 hover:underline"
+                className="text-blue-600 hover:underline"
               >
                 ACAPS Humanitarian Access Overview July 2025
               </a>
@@ -724,8 +724,8 @@ export default function HumanitarianPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl font-bold text-white mb-6">Data Sources</h2>
-            <p className="text-slate-400 mb-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Data Sources</h2>
+            <p className="text-gray-600 mb-6">
               Our humanitarian access monitoring draws on authoritative independent sources
             </p>
 
@@ -736,26 +736,26 @@ export default function HumanitarianPage() {
                   href={source.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block p-6 rounded-xl bg-slate-900/50 border border-slate-700/50 hover:border-blue-500/50 transition-colors group"
+                  className="block p-6 rounded-xl bg-gray-50/50 border border-gray-200/50 hover:border-blue-500/50 transition-colors group"
                 >
                   <div className="flex items-start justify-between">
                     <div className="flex-1">
                       <div className="flex items-center gap-2">
-                        <h3 className="font-semibold text-white group-hover:text-blue-400 transition-colors">
+                        <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
                           {source.name}
                         </h3>
-                        <span className="text-xs text-slate-500">({source.fullName})</span>
+                        <span className="text-xs text-gray-500">({source.fullName})</span>
                       </div>
-                      <p className="text-sm text-slate-400 mt-1">{source.description}</p>
+                      <p className="text-sm text-gray-600 mt-1">{source.description}</p>
                       <div className="flex flex-wrap gap-2 mt-3">
                         {source.metrics.map((metric) => (
-                          <span key={metric} className="px-2 py-1 text-xs bg-slate-800/50 text-slate-300 rounded">
+                          <span key={metric} className="px-2 py-1 text-xs bg-gray-100/50 text-gray-600 rounded">
                             {metric}
                           </span>
                         ))}
                       </div>
                     </div>
-                    <svg className="w-5 h-5 text-slate-500 group-hover:text-blue-400 transition-colors flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-5 h-5 text-gray-500 group-hover:text-blue-600 transition-colors flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
                   </div>
@@ -767,7 +767,7 @@ export default function HumanitarianPage() {
       </section>
 
       {/* Expert Consultation */}
-      <section className="py-12 px-4 bg-slate-900/30">
+      <section className="py-12 px-4 bg-gray-50/30">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -782,15 +782,15 @@ export default function HumanitarianPage() {
                 </svg>
               </div>
               <div>
-                <h2 className="text-xl font-bold text-white mb-2">Expert Consultation</h2>
-                <p className="text-slate-300 text-sm mb-3">
+                <h2 className="text-xl font-bold text-gray-900 mb-2">Expert Consultation</h2>
+                <p className="text-gray-600 text-sm mb-3">
                   The humanitarian access monitoring for the Truce Foundation is developed in consultation with
                   experienced humanitarian professionals with decades of field experience across UN agencies,
                   USAID, and international NGOs. Our advisors have directed emergency operations in complex
                   emergencies including the Ebola outbreak in West Africa, Ukrainian refugee coordination,
                   and conflict responses in Sudan, Bosnia, Angola, and Gaza.
                 </p>
-                <p className="text-slate-300 text-sm">
+                <p className="text-gray-600 text-sm">
                   Our humanitarian advisor{' '}
                   <a
                     href="https://global.utexas.edu/events/humanitarian-aid-crisis-saving-lives-time-eroding-support"
@@ -818,15 +818,15 @@ export default function HumanitarianPage() {
             viewport={{ once: true }}
             className="text-center"
           >
-            <h2 className="text-xl font-bold text-white mb-4">How This Fits Our Methodology</h2>
-            <p className="text-slate-400 mb-6 max-w-2xl mx-auto">
+            <h2 className="text-xl font-bold text-gray-900 mb-4">How This Fits Our Methodology</h2>
+            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
               Humanitarian corridors represent 25% of our composite Truce Compliance Index score.
               This data informs our assessment of whether states are enabling safe passage for aid.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 href="/methodology"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-medium rounded-xl transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-600 text-gray-900 font-medium rounded-xl transition-colors"
               >
                 View Full Methodology
               </Link>
@@ -834,7 +834,7 @@ export default function HumanitarianPage() {
                 href="https://truce-index.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white font-medium rounded-xl transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-900 font-medium rounded-xl transition-colors"
               >
                 View Live Index
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -847,8 +847,8 @@ export default function HumanitarianPage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-4 border-t border-slate-800/50">
-        <div className="max-w-6xl mx-auto text-center text-slate-500 text-sm">
+      <footer className="py-8 px-4 border-t border-gray-200/50">
+        <div className="max-w-6xl mx-auto text-center text-gray-500 text-sm">
           <p>&copy; {new Date().getFullYear()} Truce Foundation. All rights reserved.</p>
         </div>
       </footer>

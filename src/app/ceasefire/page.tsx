@@ -101,7 +101,7 @@ const getStatusColor = (status: string) => {
     case 'signed':
       return 'bg-green-500/20 text-green-300 border-green-500/30';
     case 'ceasefire':
-      return 'bg-blue-500/20 text-blue-300 border-blue-500/30';
+      return 'bg-blue-600/20 text-blue-300 border-blue-500/30';
     case 'partial':
       return 'bg-amber-500/20 text-amber-300 border-amber-500/30';
     case 'dialogue':
@@ -109,7 +109,7 @@ const getStatusColor = (status: string) => {
     case 'diplomatic':
       return 'bg-cyan-500/20 text-cyan-300 border-cyan-500/30';
     default:
-      return 'bg-slate-800 text-slate-300 border-slate-700';
+      return 'bg-gray-100 text-gray-600 border-gray-200';
   }
 };
 
@@ -136,7 +136,7 @@ export default function CeasefireWatchPage() {
   const partial = CEASEFIRES_2025.filter(c => c.status === 'partial' || c.status === 'dialogue' || c.status === 'diplomatic').length;
 
   return (
-    <main className="min-h-screen bg-slate-950">
+    <main className="min-h-screen bg-white">
       <Header />
 
       {/* Hero Section */}
@@ -150,10 +150,10 @@ export default function CeasefireWatchPage() {
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/10 border border-green-500/30 rounded-full">
               <span className="text-green-300 text-sm font-medium">Peace Monitoring</span>
             </div>
-            <h1 className="text-4xl sm:text-5xl font-bold text-white">
+            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900">
               Ceasefire Watch
             </h1>
-            <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Monitoring fragile peace agreements and ceasefires that need to hold during the Olympic Truce
             </p>
           </motion.div>
@@ -173,8 +173,8 @@ export default function CeasefireWatchPage() {
               <div className="text-3xl font-bold text-green-400">{signed}</div>
               <div className="text-sm text-green-300/80">Peace Agreements</div>
             </div>
-            <div className="p-4 rounded-xl bg-blue-500/10 border border-blue-500/30 text-center">
-              <div className="text-3xl font-bold text-blue-400">{ceasefires}</div>
+            <div className="p-4 rounded-xl bg-blue-600/10 border border-blue-500/30 text-center">
+              <div className="text-3xl font-bold text-blue-600">{ceasefires}</div>
               <div className="text-sm text-blue-300/80">Active Ceasefires</div>
             </div>
             <div className="p-4 rounded-xl bg-amber-500/10 border border-amber-500/30 text-center">
@@ -194,14 +194,14 @@ export default function CeasefireWatchPage() {
             viewport={{ once: true }}
             className="p-6 rounded-2xl bg-gradient-to-br from-blue-500/10 to-blue-600/5 border border-blue-500/30"
           >
-            <h2 className="text-lg font-bold text-white mb-3">2025: A Year of Fragile Peace</h2>
-            <p className="text-slate-300 text-sm leading-relaxed">
+            <h2 className="text-lg font-bold text-gray-900 mb-3">2025: A Year of Fragile Peace</h2>
+            <p className="text-gray-600 text-sm leading-relaxed">
               The year 2025 has seen multiple conflict settlements and ceasefires announced across different regions.
               While these represent significant diplomatic achievements, many remain fragile and require sustained
               attention. The Milano-Cortina 2026 Olympic Truce (January 30 - March 22, 2026) provides a critical window
               to reinforce these agreements and demonstrate that peace can hold.
             </p>
-            <p className="text-slate-400 text-xs mt-3">
+            <p className="text-gray-600 text-xs mt-3">
               Note: Independent verification confirms involvement in several ceasefires, though analysts caution that
               some disputes were limited confrontations or remain partially unresolved.
             </p>
@@ -218,8 +218,8 @@ export default function CeasefireWatchPage() {
             viewport={{ once: true }}
             className="mb-8"
           >
-            <h2 className="text-2xl font-bold text-white mb-2">Active Agreements & Ceasefires</h2>
-            <p className="text-slate-400">
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Active Agreements & Ceasefires</h2>
+            <p className="text-gray-600">
               Tracking peace processes that need to hold during the Olympic Truce window
             </p>
           </motion.div>
@@ -232,17 +232,17 @@ export default function CeasefireWatchPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.05 }}
-                className="p-6 rounded-xl bg-slate-900/50 border border-slate-700/50 hover:border-slate-600/50 transition-colors"
+                className="p-6 rounded-xl bg-gray-50/50 border border-gray-200/50 hover:border-gray-400/50 transition-colors"
               >
                 <div className="flex items-start justify-between mb-4">
                   <div>
-                    <h3 className="text-lg font-semibold text-white">
+                    <h3 className="text-lg font-semibold text-gray-900">
                       {ceasefire.parties.join(' – ')}
                     </h3>
                     <div className="flex items-center gap-2 mt-1">
-                      <span className="text-xs text-slate-500">{ceasefire.region}</span>
-                      <span className="text-slate-600">•</span>
-                      <span className="text-xs text-slate-500">{ceasefire.date}</span>
+                      <span className="text-xs text-gray-500">{ceasefire.region}</span>
+                      <span className="text-gray-600">•</span>
+                      <span className="text-xs text-gray-500">{ceasefire.date}</span>
                     </div>
                   </div>
                   <span className={`px-2 py-1 text-xs rounded-full border ${getStatusColor(ceasefire.status)}`}>
@@ -250,11 +250,11 @@ export default function CeasefireWatchPage() {
                   </span>
                 </div>
 
-                <p className="text-sm text-slate-300 mb-3">{ceasefire.description}</p>
-                <p className="text-xs text-slate-500 mb-4">{ceasefire.context}</p>
+                <p className="text-sm text-gray-600 mb-3">{ceasefire.description}</p>
+                <p className="text-xs text-gray-500 mb-4">{ceasefire.context}</p>
 
                 <div className="mb-4">
-                  <div className="text-xs text-slate-400 mb-2 font-medium">Risks to Monitor:</div>
+                  <div className="text-xs text-gray-600 mb-2 font-medium">Risks to Monitor:</div>
                   <div className="flex flex-wrap gap-2">
                     {ceasefire.risks.map((risk) => (
                       <span key={risk} className="px-2 py-1 text-xs bg-red-500/10 text-red-300/80 rounded border border-red-500/20">
@@ -264,7 +264,7 @@ export default function CeasefireWatchPage() {
                   </div>
                 </div>
 
-                <div className="pt-3 border-t border-slate-800">
+                <div className="pt-3 border-t border-gray-200">
                   <p className="text-xs text-blue-300/80">
                     <strong className="text-blue-300">Truce relevance:</strong> {ceasefire.relevance}
                   </p>
@@ -276,48 +276,48 @@ export default function CeasefireWatchPage() {
       </section>
 
       {/* What We Monitor */}
-      <section className="py-12 px-4 bg-slate-900/30">
+      <section className="py-12 px-4 bg-gray-50/30">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl font-bold text-white mb-6">What We Monitor</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">What We Monitor</h2>
             <div className="grid sm:grid-cols-2 gap-4">
-              <div className="p-4 rounded-xl bg-slate-950/50 border border-slate-700/50">
-                <h3 className="font-semibold text-white mb-2 flex items-center gap-2">
+              <div className="p-4 rounded-xl bg-white/50 border border-gray-200/50">
+                <h3 className="font-semibold text-gray-900 mb-2 flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-green-400" />
                   Agreement Compliance
                 </h3>
-                <p className="text-sm text-slate-400">
+                <p className="text-sm text-gray-600">
                   Whether parties are adhering to signed agreements, implementing provisions, and meeting timelines
                 </p>
               </div>
-              <div className="p-4 rounded-xl bg-slate-950/50 border border-slate-700/50">
-                <h3 className="font-semibold text-white mb-2 flex items-center gap-2">
+              <div className="p-4 rounded-xl bg-white/50 border border-gray-200/50">
+                <h3 className="font-semibold text-gray-900 mb-2 flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-blue-400" />
                   Ceasefire Violations
                 </h3>
-                <p className="text-sm text-slate-400">
+                <p className="text-sm text-gray-600">
                   Incidents of violence, military movements, or provocations that threaten fragile peace
                 </p>
               </div>
-              <div className="p-4 rounded-xl bg-slate-950/50 border border-slate-700/50">
-                <h3 className="font-semibold text-white mb-2 flex items-center gap-2">
+              <div className="p-4 rounded-xl bg-white/50 border border-gray-200/50">
+                <h3 className="font-semibold text-gray-900 mb-2 flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-amber-400" />
                   Humanitarian Access
                 </h3>
-                <p className="text-sm text-slate-400">
+                <p className="text-sm text-gray-600">
                   Whether peace allows for improved aid delivery, refugee returns, and civilian protection
                 </p>
               </div>
-              <div className="p-4 rounded-xl bg-slate-950/50 border border-slate-700/50">
-                <h3 className="font-semibold text-white mb-2 flex items-center gap-2">
+              <div className="p-4 rounded-xl bg-white/50 border border-gray-200/50">
+                <h3 className="font-semibold text-gray-900 mb-2 flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-purple-400" />
                   Diplomatic Progress
                 </h3>
-                <p className="text-sm text-slate-400">
+                <p className="text-sm text-gray-600">
                   Continued dialogue, negotiation milestones, and international mediation efforts
                 </p>
               </div>
@@ -335,15 +335,15 @@ export default function CeasefireWatchPage() {
             viewport={{ once: true }}
             className="text-center"
           >
-            <h2 className="text-xl font-bold text-white mb-4">Connected to the Truce Compliance Index</h2>
-            <p className="text-slate-400 mb-6 max-w-2xl mx-auto">
+            <h2 className="text-xl font-bold text-gray-900 mb-4">Connected to the Truce Compliance Index</h2>
+            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
               Ceasefire compliance is a key factor in our assessment of how nations honor the Olympic Truce.
               Maintaining peace agreements during the Truce window demonstrates genuine commitment to the spirit of ekecheiria.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 href="/humanitarian"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white font-medium rounded-xl transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-900 font-medium rounded-xl transition-colors"
               >
                 Humanitarian Access
               </Link>
@@ -351,7 +351,7 @@ export default function CeasefireWatchPage() {
                 href="https://truce-index.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-medium rounded-xl transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-600 text-gray-900 font-medium rounded-xl transition-colors"
               >
                 View Live Index
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -364,8 +364,8 @@ export default function CeasefireWatchPage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-4 border-t border-slate-800/50">
-        <div className="max-w-6xl mx-auto text-center text-slate-500 text-sm">
+      <footer className="py-8 px-4 border-t border-gray-200/50">
+        <div className="max-w-6xl mx-auto text-center text-gray-500 text-sm">
           <p>&copy; {new Date().getFullYear()} Truce Foundation. All rights reserved.</p>
         </div>
       </footer>

@@ -221,7 +221,7 @@ export default function AdvocacyPage() {
   const socialLinks = getSocialLinks(defaultShareMessage);
 
   return (
-    <main className="min-h-screen bg-slate-950">
+    <main className="min-h-screen bg-white">
       <Header />
 
       {/* Hero Section */}
@@ -232,10 +232,10 @@ export default function AdvocacyPage() {
             animate={{ opacity: 1, y: 0 }}
             className="space-y-4"
           >
-            <h1 className="text-4xl sm:text-5xl font-bold text-white">
+            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900">
               Advocacy Toolkit
             </h1>
-            <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Resources to champion the Olympic Truce in your community, organization, and media
             </p>
           </motion.div>
@@ -250,8 +250,8 @@ export default function AdvocacyPage() {
             animate={{ opacity: 1, y: 0 }}
             className="mb-6"
           >
-            <h2 className="text-2xl font-bold text-white mb-2">Quick Actions</h2>
-            <p className="text-slate-400">Share instantly on social media or copy talking points</p>
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Quick Actions</h2>
+            <p className="text-gray-600">Share instantly on social media or copy talking points</p>
           </motion.div>
 
           {/* Social Share Buttons */}
@@ -260,9 +260,9 @@ export default function AdvocacyPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="p-6 rounded-2xl bg-slate-900/50 border border-slate-700/50"
+              className="p-6 rounded-2xl bg-gray-50/50 border border-gray-200/50"
             >
-              <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
                 <span className="text-xl">Share Now</span>
               </h3>
               <div className="flex flex-wrap gap-3">
@@ -301,7 +301,7 @@ export default function AdvocacyPage() {
                 </a>
                 <button
                   onClick={() => copyToClipboard('https://trucefoundation.world', 'link')}
-                  className="flex items-center gap-2 px-4 py-2 bg-slate-700/50 hover:bg-slate-700 text-slate-300 rounded-lg transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 bg-gray-200/50 hover:bg-gray-200 text-gray-600 rounded-lg transition-colors"
                 >
                   {copiedId === 'link' ? (
                     <>
@@ -327,9 +327,9 @@ export default function AdvocacyPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="p-6 rounded-2xl bg-slate-900/50 border border-slate-700/50"
+              className="p-6 rounded-2xl bg-gray-50/50 border border-gray-200/50"
             >
-              <h3 className="text-lg font-semibold text-white mb-4">Official Hashtags</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Official Hashtags</h3>
               <div className="flex flex-wrap gap-2">
                 {['#OlympicTruce', '#MilanoCortina2026', '#PeaceInSport', '#TruceIndex'].map((tag) => (
                   <button
@@ -338,14 +338,14 @@ export default function AdvocacyPage() {
                     className={`px-3 py-1.5 rounded-full text-sm transition-all ${
                       copiedId === tag
                         ? 'bg-green-500/20 text-green-400 border border-green-500/50'
-                        : 'bg-blue-500/10 text-blue-400 border border-blue-500/30 hover:bg-blue-500/20'
+                        : 'bg-blue-600/10 text-blue-600 border border-blue-500/30 hover:bg-blue-600/20'
                     }`}
                   >
                     {copiedId === tag ? 'Copied!' : tag}
                   </button>
                 ))}
               </div>
-              <p className="text-xs text-slate-500 mt-3">Click to copy hashtag</p>
+              <p className="text-xs text-gray-500 mt-3">Click to copy hashtag</p>
             </motion.div>
           </div>
 
@@ -355,27 +355,27 @@ export default function AdvocacyPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
           >
-            <h3 className="text-lg font-semibold text-white mb-4">Ready-to-Use Talking Points</h3>
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">Ready-to-Use Talking Points</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {TALKING_POINTS.map((point) => (
                 <div
                   key={point.id}
-                  className="p-4 rounded-xl bg-slate-900/30 border border-slate-700/30 hover:border-slate-600/50 transition-colors"
+                  className="p-4 rounded-xl bg-gray-50/30 border border-gray-200/30 hover:border-gray-400/50 transition-colors"
                 >
                   <div className="flex items-start justify-between gap-3 mb-2">
-                    <h4 className="font-medium text-white">{point.title}</h4>
+                    <h4 className="font-medium text-gray-900">{point.title}</h4>
                     <button
                       onClick={() => copyToClipboard(point.text, point.id)}
                       className={`flex-shrink-0 px-2 py-1 rounded text-xs transition-all ${
                         copiedId === point.id
                           ? 'bg-green-500/20 text-green-400'
-                          : 'bg-slate-700/50 text-slate-400 hover:text-white hover:bg-slate-700'
+                          : 'bg-gray-200/50 text-gray-600 hover:text-gray-900 hover:bg-gray-200'
                       }`}
                     >
                       {copiedId === point.id ? 'Copied!' : 'Copy'}
                     </button>
                   </div>
-                  <p className="text-sm text-slate-400">{point.text}</p>
+                  <p className="text-sm text-gray-600">{point.text}</p>
                 </div>
               ))}
             </div>
@@ -393,11 +393,11 @@ export default function AdvocacyPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="p-4 rounded-xl bg-slate-900/50 border border-slate-700/50 text-center"
+                className="p-4 rounded-xl bg-gray-50/50 border border-gray-200/50 text-center"
               >
                 <span className="text-3xl mb-2 block">{cat.icon}</span>
-                <h3 className="font-semibold text-white text-sm">{cat.label}</h3>
-                <p className="text-xs text-slate-500 mt-1">{cat.description}</p>
+                <h3 className="font-semibold text-gray-900 text-sm">{cat.label}</h3>
+                <p className="text-xs text-gray-500 mt-1">{cat.description}</p>
               </motion.div>
             ))}
           </div>
@@ -418,9 +418,9 @@ export default function AdvocacyPage() {
               >
                 <div className="flex items-center gap-3 mb-2">
                   <span className="text-2xl">{category.icon}</span>
-                  <h2 className="text-2xl font-bold text-white">{category.label}</h2>
+                  <h2 className="text-2xl font-bold text-gray-900">{category.label}</h2>
                 </div>
-                <p className="text-slate-400">{category.description}</p>
+                <p className="text-gray-600">{category.description}</p>
               </motion.div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -433,39 +433,39 @@ export default function AdvocacyPage() {
                     transition={{ delay: index * 0.1 }}
                     className={`p-5 rounded-xl border transition-all ${
                       item.comingSoon
-                        ? 'bg-slate-900/30 border-slate-700/30'
+                        ? 'bg-gray-50/30 border-gray-200/30'
                         : item.highlight
-                        ? 'bg-blue-500/10 border-blue-500/30 hover:border-blue-400/50'
-                        : 'bg-slate-900/50 border-slate-700/50 hover:border-blue-500/50 cursor-pointer'
+                        ? 'bg-blue-600/10 border-blue-500/30 hover:border-blue-400/50'
+                        : 'bg-gray-50/50 border-gray-200/50 hover:border-blue-500/50 cursor-pointer'
                     }`}
                   >
                     <div className="flex items-start gap-3">
                       <div className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${
                         item.comingSoon
-                          ? 'bg-slate-800/50 text-slate-500'
+                          ? 'bg-gray-100/50 text-gray-500'
                           : item.highlight
-                          ? 'bg-blue-500/30 text-blue-300'
-                          : 'bg-blue-500/20 text-blue-400'
+                          ? 'bg-blue-600/30 text-blue-300'
+                          : 'bg-blue-600/20 text-blue-600'
                       }`}>
                         {TYPE_ICONS[item.type]}
                       </div>
                       <div className="flex-1 min-w-0">
                         <div className="flex items-center gap-2 flex-wrap">
-                          <h3 className={`font-semibold ${item.comingSoon ? 'text-slate-400' : 'text-white'}`}>
+                          <h3 className={`font-semibold ${item.comingSoon ? 'text-gray-600' : 'text-gray-900'}`}>
                             {item.title}
                           </h3>
                           {item.comingSoon && (
-                            <span className="px-2 py-0.5 text-xs bg-slate-700/50 text-slate-400 rounded-full flex-shrink-0">
+                            <span className="px-2 py-0.5 text-xs bg-gray-200/50 text-gray-600 rounded-full flex-shrink-0">
                               Coming Soon
                             </span>
                           )}
                           {item.highlight && (
-                            <span className="px-2 py-0.5 text-xs bg-blue-500/30 text-blue-300 rounded-full flex-shrink-0">
+                            <span className="px-2 py-0.5 text-xs bg-blue-600/30 text-blue-300 rounded-full flex-shrink-0">
                               Current
                             </span>
                           )}
                         </div>
-                        <p className="text-sm text-slate-500 mt-1">{item.description}</p>
+                        <p className="text-sm text-gray-500 mt-1">{item.description}</p>
                         <div className="flex items-center gap-3 mt-2">
                           {!item.comingSoon && item.downloadUrl && (
                             <a
@@ -483,7 +483,7 @@ export default function AdvocacyPage() {
                               href={item.externalUrl}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="inline-flex items-center gap-1 text-xs text-blue-400 hover:text-blue-300"
+                              className="inline-flex items-center gap-1 text-xs text-blue-600 hover:text-blue-300"
                             >
                               <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -503,24 +503,24 @@ export default function AdvocacyPage() {
       })}
 
       {/* Request Custom Resources */}
-      <section className="py-16 px-4 bg-slate-900/30">
+      <section className="py-16 px-4 bg-gray-50/30">
         <div className="max-w-2xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="p-8 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50"
+            className="p-8 rounded-2xl bg-gradient-to-br from-gray-100/50 to-gray-50/50 border border-gray-200/50"
           >
-            <h2 className="text-2xl font-bold text-white mb-4">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">
               Need Custom Resources?
             </h2>
-            <p className="text-slate-400 mb-6">
+            <p className="text-gray-600 mb-6">
               We can create tailored materials for your organization, event, or campaign.
               Contact us to discuss your advocacy needs.
             </p>
             <a
               href="mailto:advocacy@trucefoundation.world"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-medium rounded-xl transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-600 text-gray-900 font-medium rounded-xl transition-colors"
             >
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -534,44 +534,44 @@ export default function AdvocacyPage() {
       {/* Links */}
       <section className="py-12 px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-xl font-bold text-white mb-6 text-center">Related Resources</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-6 text-center">Related Resources</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <Link
               href="/methodology"
-              className="p-4 rounded-xl bg-slate-900/50 border border-slate-700/50 hover:border-blue-500/50 transition-colors group"
+              className="p-4 rounded-xl bg-gray-50/50 border border-gray-200/50 hover:border-blue-500/50 transition-colors group"
             >
-              <h3 className="font-semibold text-white group-hover:text-blue-400 transition-colors">
+              <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
                 Index Methodology
               </h3>
-              <p className="text-sm text-slate-400 mt-1">Learn how compliance is measured</p>
+              <p className="text-sm text-gray-600 mt-1">Learn how compliance is measured</p>
             </Link>
             <Link
               href="/partners"
-              className="p-4 rounded-xl bg-slate-900/50 border border-slate-700/50 hover:border-blue-500/50 transition-colors group"
+              className="p-4 rounded-xl bg-gray-50/50 border border-gray-200/50 hover:border-blue-500/50 transition-colors group"
             >
-              <h3 className="font-semibold text-white group-hover:text-blue-400 transition-colors">
+              <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
                 Our Partners
               </h3>
-              <p className="text-sm text-slate-400 mt-1">Organizations supporting the Truce</p>
+              <p className="text-sm text-gray-600 mt-1">Organizations supporting the Truce</p>
             </Link>
             <a
               href="https://truce-index.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-4 rounded-xl bg-slate-900/50 border border-slate-700/50 hover:border-blue-500/50 transition-colors group"
+              className="p-4 rounded-xl bg-gray-50/50 border border-gray-200/50 hover:border-blue-500/50 transition-colors group"
             >
-              <h3 className="font-semibold text-white group-hover:text-blue-400 transition-colors">
+              <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
                 Live Index
               </h3>
-              <p className="text-sm text-slate-400 mt-1">View real-time compliance data</p>
+              <p className="text-sm text-gray-600 mt-1">View real-time compliance data</p>
             </a>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-4 border-t border-slate-800/50">
-        <div className="max-w-6xl mx-auto text-center text-slate-500 text-sm">
+      <footer className="py-8 px-4 border-t border-gray-200/50">
+        <div className="max-w-6xl mx-auto text-center text-gray-500 text-sm">
           <p>&copy; {new Date().getFullYear()} Truce Foundation. All rights reserved.</p>
         </div>
       </footer>

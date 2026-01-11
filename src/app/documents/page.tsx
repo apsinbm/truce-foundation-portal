@@ -675,7 +675,7 @@ const SCHOLARLY_SOURCES: ScholarlySource[] = [
 const getCategoryConfig = (category: FoundationalDoc['category']) => {
   switch (category) {
     case 'foundation':
-      return { bg: 'bg-blue-500/10', border: 'border-blue-500/30', text: 'text-blue-300', label: 'Foundation' };
+      return { bg: 'bg-blue-600/10', border: 'border-blue-500/30', text: 'text-blue-300', label: 'Foundation' };
     case 'sport':
       return { bg: 'bg-green-500/10', border: 'border-green-500/30', text: 'text-green-300', label: 'Sport' };
     case 'development':
@@ -687,7 +687,7 @@ const getCategoryConfig = (category: FoundationalDoc['category']) => {
 
 export default function DocumentsPage() {
   return (
-    <div className="min-h-screen bg-slate-950 text-white">
+    <div className="min-h-screen bg-white text-gray-900">
       <Header />
 
       {/* Hero */}
@@ -695,7 +695,7 @@ export default function DocumentsPage() {
         <div className="max-w-4xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <h1 className="text-4xl font-bold mb-4">Documents Archive</h1>
-            <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Collection of UN resolutions, IOC appeals, and foundational documents related to the Olympic Truce.
             </p>
           </motion.div>
@@ -717,10 +717,10 @@ export default function DocumentsPage() {
                   <div>
                     <div className="flex items-center gap-2 mb-1">
                       <span className="text-xs font-mono bg-green-500/20 text-green-300 px-2 py-0.5 rounded">A/80/L.10</span>
-                      <span className="text-xs text-slate-500">Milano-Cortina 2026</span>
+                      <span className="text-xs text-gray-500">Milano-Cortina 2026</span>
                     </div>
-                    <h2 className="text-xl font-bold text-white group-hover:text-green-300 transition-colors">166 Nations Co-Sponsored the Olympic Truce</h2>
-                    <p className="text-slate-300 text-sm mt-1">85% of UN Member States signed on. Adopted by consensus November 19, 2025.</p>
+                    <h2 className="text-xl font-bold text-gray-900 group-hover:text-green-300 transition-colors">166 Nations Co-Sponsored the Olympic Truce</h2>
+                    <p className="text-gray-600 text-sm mt-1">85% of UN Member States signed on. Adopted by consensus November 19, 2025.</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-2 text-green-400 group-hover:text-green-300">
@@ -744,24 +744,24 @@ export default function DocumentsPage() {
             <div className="flex items-start gap-4">
               <span className="text-4xl">📄</span>
               <div className="flex-1">
-                <span className="text-xs font-mono bg-blue-500/20 text-blue-300 px-2 py-0.5 rounded">{SG_REPORTS[0].symbol}</span>
-                <h2 className="text-xl font-bold text-white mt-2">{SG_REPORTS[0].title}</h2>
-                <p className="text-slate-300 text-sm mt-1">{SG_REPORTS[0].description}</p>
+                <span className="text-xs font-mono bg-blue-600/20 text-blue-300 px-2 py-0.5 rounded">{SG_REPORTS[0].symbol}</span>
+                <h2 className="text-xl font-bold text-gray-900 mt-2">{SG_REPORTS[0].title}</h2>
+                <p className="text-gray-600 text-sm mt-1">{SG_REPORTS[0].description}</p>
 
                 {/* Focus Areas */}
                 <div className="flex flex-wrap gap-2 mt-3">
                   {SG_REPORTS[0].focusAreas.map((area) => (
-                    <span key={area} className="text-xs px-2 py-1 bg-slate-700/50 text-slate-300 rounded-full">{area}</span>
+                    <span key={area} className="text-xs px-2 py-1 bg-gray-200/50 text-gray-600 rounded-full">{area}</span>
                   ))}
                 </div>
 
                 {/* Key Findings */}
-                <div className="mt-4 p-3 bg-slate-800/50 rounded-lg">
-                  <h4 className="text-xs font-semibold text-slate-400 mb-2">Key Findings</h4>
-                  <div className="grid md:grid-cols-2 gap-2 text-xs text-slate-300">
+                <div className="mt-4 p-3 bg-gray-100/50 rounded-lg">
+                  <h4 className="text-xs font-semibold text-gray-600 mb-2">Key Findings</h4>
+                  <div className="grid md:grid-cols-2 gap-2 text-xs text-gray-600">
                     {SG_REPORTS[0].keyFindings.slice(0, 6).map((finding, i) => (
                       <div key={i} className="flex items-start gap-2">
-                        <span className="text-blue-400">•</span>
+                        <span className="text-blue-600">•</span>
                         <span>{finding}</span>
                       </div>
                     ))}
@@ -773,7 +773,7 @@ export default function DocumentsPage() {
                     href={SG_REPORTS[0].url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white text-sm font-medium rounded-lg transition-colors"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-600 text-gray-900 text-sm font-medium rounded-lg transition-colors"
                   >
                     View Full Report (PDF)
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -785,7 +785,7 @@ export default function DocumentsPage() {
                       href={SG_REPORTS[0].alternateUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white text-sm font-medium rounded-lg transition-colors"
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-gray-200 hover:bg-gray-200 text-gray-900 text-sm font-medium rounded-lg transition-colors"
                     >
                       Alternate PDF
                       <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -810,44 +810,44 @@ export default function DocumentsPage() {
             <span className="text-3xl">🏅</span>
             Olympic Truce Resolutions by Games
           </h2>
-          <div className="bg-slate-900/50 border border-slate-700 rounded-xl overflow-hidden">
+          <div className="bg-gray-50/50 border border-gray-200 rounded-xl overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
-                <thead className="bg-slate-800/50">
+                <thead className="bg-gray-100/50">
                   <tr>
-                    <th className="text-left py-3 px-4 text-slate-400 font-medium">Games</th>
-                    <th className="text-left py-3 px-4 text-slate-400 font-medium">Symbol</th>
-                    <th className="text-center py-3 px-4 text-slate-400 font-medium">Co-Sponsors</th>
-                    <th className="text-left py-3 px-4 text-slate-400 font-medium">Notes</th>
-                    <th className="text-center py-3 px-4 text-slate-400 font-medium">Link</th>
+                    <th className="text-left py-3 px-4 text-gray-600 font-medium">Games</th>
+                    <th className="text-left py-3 px-4 text-gray-600 font-medium">Symbol</th>
+                    <th className="text-center py-3 px-4 text-gray-600 font-medium">Co-Sponsors</th>
+                    <th className="text-left py-3 px-4 text-gray-600 font-medium">Notes</th>
+                    <th className="text-center py-3 px-4 text-gray-600 font-medium">Link</th>
                   </tr>
                 </thead>
                 <tbody>
                   {TRUCE_RESOLUTIONS.map((res, index) => (
-                    <tr key={res.symbol} className={`border-t border-slate-800/50 ${index === 0 ? 'bg-blue-500/10' : ''}`}>
+                    <tr key={res.symbol} className={`border-t border-gray-200/50 ${index === 0 ? 'bg-blue-600/10' : ''}`}>
                       <td className="py-3 px-4">
                         <div className="flex items-center gap-2">
                           <span className={`text-xs px-1.5 py-0.5 rounded ${res.season === 'Summer' ? 'bg-amber-500/20 text-amber-300' : 'bg-cyan-500/20 text-cyan-300'}`}>
                             {res.season === 'Summer' ? '☀️' : '❄️'}
                           </span>
-                          <span className={index === 0 ? 'text-blue-300 font-medium' : 'text-white'}>{res.games}</span>
+                          <span className={index === 0 ? 'text-blue-300 font-medium' : 'text-gray-900'}>{res.games}</span>
                         </div>
                       </td>
-                      <td className="py-3 px-4 font-mono text-xs text-slate-400">{res.symbol}</td>
+                      <td className="py-3 px-4 font-mono text-xs text-gray-600">{res.symbol}</td>
                       <td className="py-3 px-4 text-center">
                         {res.coSponsors && (
-                          <span className={`font-bold ${res.coSponsors === 193 ? 'text-green-400' : 'text-white'}`}>
+                          <span className={`font-bold ${res.coSponsors === 193 ? 'text-green-400' : 'text-gray-900'}`}>
                             {res.coSponsors}
                           </span>
                         )}
                       </td>
-                      <td className="py-3 px-4 text-xs text-slate-400">{res.notes || '-'}</td>
+                      <td className="py-3 px-4 text-xs text-gray-600">{res.notes || '-'}</td>
                       <td className="py-3 px-4 text-center">
                         <a
                           href={res.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-blue-400 hover:text-blue-300"
+                          className="text-blue-600 hover:text-blue-300"
                         >
                           <svg className="w-4 h-4 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -875,18 +875,18 @@ export default function DocumentsPage() {
           </h2>
           <div className="grid md:grid-cols-2 gap-4">
             {IOC_DOCUMENTS.map((doc) => (
-              <div key={doc.title} className="p-5 rounded-xl bg-slate-900/50 border border-slate-700 hover:border-blue-500/50 transition-colors">
+              <div key={doc.title} className="p-5 rounded-xl bg-gray-50/50 border border-gray-200 hover:border-blue-500/50 transition-colors">
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="text-xs px-2 py-0.5 rounded bg-slate-700 text-slate-300 capitalize">{doc.type}</span>
-                  <span className="text-xs text-slate-500">{doc.year}</span>
+                  <span className="text-xs px-2 py-0.5 rounded bg-gray-200 text-gray-600 capitalize">{doc.type}</span>
+                  <span className="text-xs text-gray-500">{doc.year}</span>
                 </div>
-                <h3 className="font-semibold text-white mb-2">{doc.title}</h3>
-                <p className="text-sm text-slate-400 mb-3">{doc.description}</p>
+                <h3 className="font-semibold text-gray-900 mb-2">{doc.title}</h3>
+                <p className="text-sm text-gray-600 mb-3">{doc.description}</p>
                 <a
                   href={doc.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-sm text-blue-400 hover:text-blue-300"
+                  className="inline-flex items-center gap-1 text-sm text-blue-600 hover:text-blue-300"
                 >
                   View Document (PDF)
                   <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -910,7 +910,7 @@ export default function DocumentsPage() {
             Beijing 2022 Document Set
           </h2>
           <div className="p-5 rounded-xl bg-red-500/10 border border-red-500/30">
-            <p className="text-sm text-slate-300 mb-4">
+            <p className="text-sm text-gray-600 mb-4">
               Complete documentation for Beijing 2022 Winter Olympics - notably the Truce window during which Russia invaded Ukraine.
             </p>
             <div className="flex flex-wrap gap-3">
@@ -920,11 +920,11 @@ export default function DocumentsPage() {
                   href={doc.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-3 py-2 bg-slate-800/50 hover:bg-slate-700/50 rounded-lg text-sm transition-colors"
+                  className="inline-flex items-center gap-2 px-3 py-2 bg-gray-100/50 hover:bg-gray-200/50 rounded-lg text-sm transition-colors"
                 >
-                  <span className="font-mono text-xs text-slate-400">{doc.symbol}</span>
-                  <span className="text-white">{doc.title}</span>
-                  <svg className="w-3 h-3 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <span className="font-mono text-xs text-gray-600">{doc.symbol}</span>
+                  <span className="text-gray-900">{doc.title}</span>
+                  <svg className="w-3 h-3 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
                 </a>
@@ -944,7 +944,7 @@ export default function DocumentsPage() {
             <span className="text-3xl">🏛️</span>
             Ancient Primary Sources
           </h2>
-          <p className="text-slate-400 text-sm mb-6">
+          <p className="text-gray-600 text-sm mb-6">
             Classical Greek and Roman texts documenting the original ekecheiria (Olympic Truce). All texts available via Perseus Digital Library.
           </p>
           <div className="grid md:grid-cols-2 gap-4">
@@ -953,19 +953,19 @@ export default function DocumentsPage() {
                 <div className="flex items-center gap-2 mb-2">
                   <span className="text-xs px-2 py-0.5 rounded bg-amber-500/20 text-amber-300">{source.date}</span>
                 </div>
-                <h3 className="font-semibold text-white">{source.author}</h3>
+                <h3 className="font-semibold text-gray-900">{source.author}</h3>
                 <p className="text-sm text-amber-200 italic mb-2">{source.title}</p>
-                <p className="text-xs text-slate-400 mb-3">{source.description}</p>
+                <p className="text-xs text-gray-600 mb-3">{source.description}</p>
                 <div className="flex flex-wrap gap-1 mb-3">
                   {source.passages.map((passage) => (
-                    <span key={passage} className="px-2 py-0.5 text-xs bg-slate-800/50 text-slate-300 rounded">{passage}</span>
+                    <span key={passage} className="px-2 py-0.5 text-xs bg-gray-100/50 text-gray-600 rounded">{passage}</span>
                   ))}
                 </div>
                 <a
                   href={source.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-sm text-blue-400 hover:text-blue-300"
+                  className="inline-flex items-center gap-1 text-sm text-blue-600 hover:text-blue-300"
                 >
                   Read on Perseus
                   <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -988,30 +988,30 @@ export default function DocumentsPage() {
             <span className="text-3xl">📚</span>
             Academic & Scholarly Sources
           </h2>
-          <p className="text-slate-400 text-sm mb-6">
+          <p className="text-gray-600 text-sm mb-6">
             Modern academic works analyzing the Olympic Truce from historical, legal, and political perspectives.
           </p>
           <div className="grid gap-3">
             {SCHOLARLY_SOURCES.map((source) => (
-              <div key={source.title} className="p-4 rounded-xl bg-slate-900/50 border border-slate-700 hover:border-purple-500/50 transition-colors">
+              <div key={source.title} className="p-4 rounded-xl bg-gray-50/50 border border-gray-200 hover:border-purple-500/50 transition-colors">
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-1">
-                      <span className="text-xs text-slate-500">{source.year}</span>
+                      <span className="text-xs text-gray-500">{source.year}</span>
                       <span className="text-xs px-1.5 py-0.5 rounded bg-purple-500/20 text-purple-300">{source.publication}</span>
                     </div>
-                    <h3 className="font-semibold text-white text-sm">{source.title}</h3>
-                    <p className="text-xs text-slate-500">{source.author}</p>
-                    <p className="text-xs text-slate-400 mt-1">{source.description}</p>
+                    <h3 className="font-semibold text-gray-900 text-sm">{source.title}</h3>
+                    <p className="text-xs text-gray-500">{source.author}</p>
+                    <p className="text-xs text-gray-600 mt-1">{source.description}</p>
                   </div>
                   {source.url && (
                     <a
                       href={source.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-shrink-0 p-2 rounded-lg bg-slate-800/50 hover:bg-slate-700/50 transition-colors"
+                      className="flex-shrink-0 p-2 rounded-lg bg-gray-100/50 hover:bg-gray-200/50 transition-colors"
                     >
-                      <svg className="w-4 h-4 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg className="w-4 h-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                       </svg>
                     </a>
@@ -1029,12 +1029,12 @@ export default function DocumentsPage() {
           viewport={{ once: true }}
           className="mb-12"
         >
-          <div className="p-6 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700">
-            <h3 className="text-lg font-bold text-white mb-3 flex items-center gap-2">
+          <div className="p-6 rounded-2xl bg-gradient-to-br from-gray-100/50 to-gray-50/50 border border-gray-200">
+            <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
               <span>⚖️</span>
               Legal Status: Soft Law → Lex Olympica
             </h3>
-            <div className="space-y-3 text-sm text-slate-300">
+            <div className="space-y-3 text-sm text-gray-600">
               <p>
                 The Olympic Truce as embodied in UN resolutions is <strong className="text-amber-300">not legally binding</strong> under international law.
                 UN General Assembly resolutions are "recommendations" - they create no obligations the way a treaty or Security Council Chapter VII resolution would.
@@ -1045,17 +1045,17 @@ export default function DocumentsPage() {
                 However, some scholars (Chernykh, Grear) argue the consistent repetition every two years - usually by consensus of all 193 nations -
                 may be creating <strong className="text-green-300">Customary International Law</strong> via <em>opinio juris</em> (belief the practice is required by law).
               </p>
-              <div className="p-4 mt-4 rounded-xl bg-blue-500/10 border border-blue-500/30">
+              <div className="p-4 mt-4 rounded-xl bg-blue-600/10 border border-blue-500/30">
                 <h4 className="font-semibold text-blue-300 mb-2">2022 Paradigm Shift: Lex Olympica Integration</h4>
                 <p>
-                  The <strong className="text-white">2022 Ukraine invasion</strong> marked a turning point. The IOC Executive Board explicitly cited breach of the Olympic Truce
+                  The <strong className="text-gray-900">2022 Ukraine invasion</strong> marked a turning point. The IOC Executive Board explicitly cited breach of the Olympic Truce
                   as the <strong className="text-blue-200">legal basis</strong> for recommending the ban of Russian and Belarusian athletes.
                   This was the first time the Truce was weaponized as a <strong className="text-blue-200">sanctioning mechanism</strong> ("hard law")
                   rather than just a peace appeal ("soft law").
                 </p>
-                <p className="mt-2 text-slate-400 text-xs">
+                <p className="mt-2 text-gray-600 text-xs">
                   By using the Truce violation to justify 2022 sanctions, the IOC effectively incorporated the UN resolution into its own
-                  disciplinary code - the <strong className="text-white">Lex Olympica</strong> (internal law of the Olympic Movement).
+                  disciplinary code - the <strong className="text-gray-900">Lex Olympica</strong> (internal law of the Olympic Movement).
                   This bridges the gap between diplomatic soft law and enforceable sports sanctions, reclaiming some of the punitive teeth
                   the Truce lost when the <em>Hellanodikai</em> last flogged a Spartan violator in Olympia.
                 </p>
@@ -1075,7 +1075,7 @@ export default function DocumentsPage() {
             <span className="text-3xl">📜</span>
             Foundational UN Resolutions
           </h2>
-          <p className="text-slate-400 text-sm mb-6">
+          <p className="text-gray-600 text-sm mb-6">
             Key UN documents referenced in Olympic Truce resolutions, establishing the legal and normative framework.
           </p>
           <div className="grid gap-3">
@@ -1089,20 +1089,20 @@ export default function DocumentsPage() {
                   <div className="flex items-start justify-between gap-4">
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-1">
-                        <span className="font-mono text-xs text-slate-400">{doc.symbol}</span>
+                        <span className="font-mono text-xs text-gray-600">{doc.symbol}</span>
                         <span className={`text-xs px-1.5 py-0.5 rounded ${config.bg} ${config.text}`}>{config.label}</span>
-                        <span className="text-xs text-slate-500">{doc.year}</span>
+                        <span className="text-xs text-gray-500">{doc.year}</span>
                       </div>
-                      <h3 className="font-semibold text-white text-sm">{doc.title}</h3>
-                      <p className="text-xs text-slate-400 mt-1">{doc.description}</p>
+                      <h3 className="font-semibold text-gray-900 text-sm">{doc.title}</h3>
+                      <p className="text-xs text-gray-600 mt-1">{doc.description}</p>
                     </div>
                     <a
                       href={doc.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-shrink-0 p-2 rounded-lg bg-slate-800/50 hover:bg-slate-700/50 transition-colors"
+                      className="flex-shrink-0 p-2 rounded-lg bg-gray-100/50 hover:bg-gray-200/50 transition-colors"
                     >
-                      <svg className="w-4 h-4 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg className="w-4 h-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                       </svg>
                     </a>
@@ -1129,45 +1129,45 @@ export default function DocumentsPage() {
               href="https://www.olympics.com/ioc/olympic-truce/resolutions"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-5 rounded-xl bg-slate-900/50 border border-slate-700 hover:border-blue-500/50 transition-colors group"
+              className="p-5 rounded-xl bg-gray-50/50 border border-gray-200 hover:border-blue-500/50 transition-colors group"
             >
               <div className="text-2xl mb-2">🏅</div>
-              <h3 className="font-semibold text-white group-hover:text-blue-400 transition-colors">IOC Olympic Truce</h3>
-              <p className="text-sm text-slate-400 mt-1">Official IOC page with resolutions, appeals, and history</p>
+              <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">IOC Olympic Truce</h3>
+              <p className="text-sm text-gray-600 mt-1">Official IOC page with resolutions, appeals, and history</p>
             </a>
             <a
               href="https://social.desa.un.org/issues/sport-for-development-and-peace/general-assembly"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-5 rounded-xl bg-slate-900/50 border border-slate-700 hover:border-blue-500/50 transition-colors group"
+              className="p-5 rounded-xl bg-gray-50/50 border border-gray-200 hover:border-blue-500/50 transition-colors group"
             >
               <div className="text-2xl mb-2">🇺🇳</div>
-              <h3 className="font-semibold text-white group-hover:text-blue-400 transition-colors">UN DESA Sport</h3>
-              <p className="text-sm text-slate-400 mt-1">Sport for Development and Peace resources</p>
+              <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">UN DESA Sport</h3>
+              <p className="text-sm text-gray-600 mt-1">Sport for Development and Peace resources</p>
             </a>
             <a
               href="https://olympictruce.org"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-5 rounded-xl bg-slate-900/50 border border-slate-700 hover:border-blue-500/50 transition-colors group"
+              className="p-5 rounded-xl bg-gray-50/50 border border-gray-200 hover:border-blue-500/50 transition-colors group"
             >
               <div className="text-2xl mb-2">🕊️</div>
-              <h3 className="font-semibold text-white group-hover:text-blue-400 transition-colors">IOTC</h3>
-              <p className="text-sm text-slate-400 mt-1">International Olympic Truce Centre</p>
+              <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">IOTC</h3>
+              <p className="text-sm text-gray-600 mt-1">International Olympic Truce Centre</p>
             </a>
           </div>
         </motion.section>
 
         {/* Footer */}
-        <div className="text-center py-8 border-t border-slate-800">
-          <p className="text-slate-500 text-sm mb-4">
+        <div className="text-center py-8 border-t border-gray-200">
+          <p className="text-gray-500 text-sm mb-4">
             All documents link to official UN and IOC sources.
           </p>
           <div className="flex justify-center gap-4">
-            <Link href="/history" className="text-blue-400 hover:text-blue-300 text-sm">
+            <Link href="/history" className="text-blue-600 hover:text-blue-300 text-sm">
               View History Timeline
             </Link>
-            <Link href="/briefing-sheet" className="text-blue-400 hover:text-blue-300 text-sm">
+            <Link href="/briefing-sheet" className="text-blue-600 hover:text-blue-300 text-sm">
               Donor Briefing Sheet
             </Link>
           </div>

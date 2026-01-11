@@ -31,7 +31,7 @@ const COMPLIANCE_CATEGORIES = [
     metrics: ['Active corridors', 'Aid deliveries', 'Civilian evacuations', 'Maritime security'],
     color: 'from-blue-500/20 to-blue-600/10',
     border: 'border-blue-500/30',
-    iconColor: 'text-blue-400',
+    iconColor: 'text-blue-600',
   },
   {
     id: 'stakeholder',
@@ -90,7 +90,7 @@ const DATA_SOURCES = [
 
 export default function MethodologyPage() {
   return (
-    <main className="min-h-screen bg-slate-950">
+    <main className="min-h-screen bg-white">
       <Header />
 
       {/* Hero Section */}
@@ -101,10 +101,10 @@ export default function MethodologyPage() {
             animate={{ opacity: 1, y: 0 }}
             className="space-y-4"
           >
-            <h1 className="text-4xl sm:text-5xl font-bold text-white">
+            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900">
               Index Methodology
             </h1>
-            <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Transparent, data-driven measurement of Olympic Truce compliance
             </p>
           </motion.div>
@@ -120,14 +120,14 @@ export default function MethodologyPage() {
             viewport={{ once: true }}
             className="prose prose-invert prose-lg max-w-none"
           >
-            <h2 className="text-2xl font-bold text-white mb-6">Overview</h2>
-            <div className="space-y-4 text-slate-300">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Overview</h2>
+            <div className="space-y-4 text-gray-600">
               <p>
                 The Olympic Truce Compliance Index provides the first systematic, evidence-based
                 mechanism for monitoring adherence to the Olympic Truce resolution. Our methodology
                 combines quantitative conflict data with qualitative diplomatic assessments to produce
                 a comprehensive measure of global compliance. For Milano-Cortina 2026, the governing
-                resolution is <a href="/downloads/A_80_L.10-EN.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline">A/80/L.10</a> (November 2025).
+                resolution is <a href="/downloads/A_80_L.10-EN.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-300 underline">A/80/L.10</a> (November 2025).
               </p>
               <p>
                 The Index is designed by <strong>Multilateral Accountability Associates (MAA)</strong> and
@@ -140,7 +140,7 @@ export default function MethodologyPage() {
       </section>
 
       {/* Five Categories */}
-      <section className="py-12 px-4 bg-slate-900/30">
+      <section className="py-12 px-4 bg-gray-50/30">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -148,10 +148,10 @@ export default function MethodologyPage() {
             viewport={{ once: true }}
             className="mb-12 text-center"
           >
-            <h2 className="text-2xl font-bold text-white mb-4">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">
               Five Compliance Categories
             </h2>
-            <p className="text-slate-400 max-w-2xl mx-auto">
+            <p className="text-gray-600 max-w-2xl mx-auto">
               Each category is weighted and scored to produce the composite Truce Compliance Index
             </p>
           </motion.div>
@@ -166,16 +166,16 @@ export default function MethodologyPage() {
                 transition={{ delay: index * 0.1 }}
                 className={`p-6 rounded-2xl bg-gradient-to-br ${category.color} border ${category.border}`}
               >
-                <div className={`w-12 h-12 rounded-xl bg-slate-800/50 flex items-center justify-center mb-4 ${category.iconColor}`}>
+                <div className={`w-12 h-12 rounded-xl bg-gray-100/50 flex items-center justify-center mb-4 ${category.iconColor}`}>
                   {category.icon}
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{category.name}</h3>
-                <p className="text-sm text-slate-400 mb-4">{category.description}</p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{category.name}</h3>
+                <p className="text-sm text-gray-600 mb-4">{category.description}</p>
                 <div className="space-y-1">
-                  <p className="text-xs text-slate-500 uppercase tracking-wider">Key Metrics:</p>
+                  <p className="text-xs text-gray-500 uppercase tracking-wider">Key Metrics:</p>
                   <div className="flex flex-wrap gap-1">
                     {category.metrics.map((metric) => (
-                      <span key={metric} className="px-2 py-1 text-xs bg-slate-800/50 text-slate-300 rounded">
+                      <span key={metric} className="px-2 py-1 text-xs bg-gray-100/50 text-gray-600 rounded">
                         {metric}
                       </span>
                     ))}
@@ -195,59 +195,59 @@ export default function MethodologyPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl font-bold text-white mb-6">Scoring Methodology</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Scoring Methodology</h2>
             <div className="space-y-6">
-              <div className="p-6 rounded-xl bg-slate-900/50 border border-slate-700/50">
-                <h3 className="font-semibold text-white mb-3">Composite Score Calculation</h3>
-                <p className="text-slate-400 text-sm mb-4">
+              <div className="p-6 rounded-xl bg-gray-50/50 border border-gray-200/50">
+                <h3 className="font-semibold text-gray-900 mb-3">Composite Score Calculation</h3>
+                <p className="text-gray-600 text-sm mb-4">
                   The composite score (0-100) is calculated as a weighted average of the five category scores:
                 </p>
                 <div className="grid grid-cols-2 sm:grid-cols-5 gap-4">
                   <div className="text-center">
                     <div className="text-2xl font-bold text-green-400">30%</div>
-                    <div className="text-xs text-slate-500">Ceasefire</div>
+                    <div className="text-xs text-gray-500">Ceasefire</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-blue-400">25%</div>
-                    <div className="text-xs text-slate-500">Corridors</div>
+                    <div className="text-2xl font-bold text-blue-600">25%</div>
+                    <div className="text-xs text-gray-500">Corridors</div>
                   </div>
                   <div className="text-center">
                     <div className="text-2xl font-bold text-purple-400">20%</div>
-                    <div className="text-xs text-slate-500">Stakeholder</div>
+                    <div className="text-xs text-gray-500">Stakeholder</div>
                   </div>
                   <div className="text-center">
                     <div className="text-2xl font-bold text-pink-400">15%</div>
-                    <div className="text-xs text-slate-500">Youth</div>
+                    <div className="text-xs text-gray-500">Youth</div>
                   </div>
                   <div className="text-center">
                     <div className="text-2xl font-bold text-amber-400">10%</div>
-                    <div className="text-xs text-slate-500">Media</div>
+                    <div className="text-xs text-gray-500">Media</div>
                   </div>
                 </div>
               </div>
 
-              <div className="p-6 rounded-xl bg-slate-900/50 border border-slate-700/50">
-                <h3 className="font-semibold text-white mb-3">Score Interpretation</h3>
+              <div className="p-6 rounded-xl bg-gray-50/50 border border-gray-200/50">
+                <h3 className="font-semibold text-gray-900 mb-3">Score Interpretation</h3>
                 <div className="space-y-2">
                   <div className="flex items-center gap-3">
                     <div className="w-4 h-4 rounded bg-green-500"></div>
-                    <span className="text-slate-300">80-100: Strong Compliance</span>
+                    <span className="text-gray-600">80-100: Strong Compliance</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-4 h-4 rounded bg-lime-500"></div>
-                    <span className="text-slate-300">60-79: Moderate Compliance</span>
+                    <span className="text-gray-600">60-79: Moderate Compliance</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-4 h-4 rounded bg-yellow-500"></div>
-                    <span className="text-slate-300">40-59: Partial Compliance</span>
+                    <span className="text-gray-600">40-59: Partial Compliance</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-4 h-4 rounded bg-orange-500"></div>
-                    <span className="text-slate-300">20-39: Limited Compliance</span>
+                    <span className="text-gray-600">20-39: Limited Compliance</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-4 h-4 rounded bg-red-500"></div>
-                    <span className="text-slate-300">0-19: Non-Compliance</span>
+                    <span className="text-gray-600">0-19: Non-Compliance</span>
                   </div>
                 </div>
               </div>
@@ -257,15 +257,15 @@ export default function MethodologyPage() {
       </section>
 
       {/* Data Sources */}
-      <section className="py-12 px-4 bg-slate-900/30">
+      <section className="py-12 px-4 bg-gray-50/30">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl font-bold text-white mb-6">Data Sources</h2>
-            <p className="text-slate-400 mb-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Data Sources</h2>
+            <p className="text-gray-600 mb-6">
               The Index draws on multiple authoritative sources to ensure accuracy and comprehensiveness:
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -275,16 +275,16 @@ export default function MethodologyPage() {
                   href={source.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-4 rounded-xl bg-slate-800/50 border border-slate-700/50 hover:border-blue-500/50 transition-colors group"
+                  className="p-4 rounded-xl bg-gray-100/50 border border-gray-200/50 hover:border-blue-500/50 transition-colors group"
                 >
                   <div className="flex items-center justify-between">
                     <div>
-                      <h3 className="font-semibold text-white group-hover:text-blue-400 transition-colors">
+                      <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
                         {source.name}
                       </h3>
-                      <p className="text-sm text-slate-400">{source.description}</p>
+                      <p className="text-sm text-gray-600">{source.description}</p>
                     </div>
-                    <svg className="w-4 h-4 text-slate-500 group-hover:text-blue-400 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-4 h-4 text-gray-500 group-hover:text-blue-600 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
                   </div>
@@ -303,18 +303,18 @@ export default function MethodologyPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl font-bold text-white mb-6">Legal Grounding</h2>
-            <p className="text-slate-400 mb-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Legal Grounding</h2>
+            <p className="text-gray-600 mb-6">
               The Truce Index is anchored in the UN General Assembly resolutions that establish and support the Olympic Truce. Our compliance categories align with the obligations set forth in these documents:
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="p-4 rounded-xl bg-blue-500/10 border border-blue-500/30">
+              <div className="p-4 rounded-xl bg-blue-600/10 border border-blue-500/30">
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="text-xs font-mono bg-blue-500/20 text-blue-300 px-2 py-0.5 rounded">A/80/L.10</span>
+                  <span className="text-xs font-mono bg-blue-600/20 text-blue-300 px-2 py-0.5 rounded">A/80/L.10</span>
                   <span className="text-xs text-blue-300">Current</span>
                 </div>
-                <h3 className="font-semibold text-white text-sm">Milano-Cortina 2026 Resolution</h3>
-                <p className="text-xs text-slate-400 mt-1">166 co-sponsors. Defines Truce window: Jan 30 - Mar 22, 2026.</p>
+                <h3 className="font-semibold text-gray-900 text-sm">Milano-Cortina 2026 Resolution</h3>
+                <p className="text-xs text-gray-600 mt-1">166 co-sponsors. Defines Truce window: Jan 30 - Mar 22, 2026.</p>
                 <a href="/downloads/A_80_L.10-EN.pdf" className="inline-flex items-center gap-1 text-xs text-green-400 mt-2 hover:text-green-300">
                   <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
@@ -327,35 +327,35 @@ export default function MethodologyPage() {
                   <span className="text-xs font-mono bg-green-500/20 text-green-300 px-2 py-0.5 rounded">A/RES/48/11</span>
                   <span className="text-xs text-green-300">Foundation</span>
                 </div>
-                <h3 className="font-semibold text-white text-sm">Original 1993 Resolution</h3>
-                <p className="text-xs text-slate-400 mt-1">Revived the ancient ekecheiria. Established the 7-day window.</p>
-                <a href="https://digitallibrary.un.org/record/197368" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-blue-400 mt-2 hover:text-blue-300">
+                <h3 className="font-semibold text-gray-900 text-sm">Original 1993 Resolution</h3>
+                <p className="text-xs text-gray-600 mt-1">Revived the ancient ekecheiria. Established the 7-day window.</p>
+                <a href="https://digitallibrary.un.org/record/197368" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-blue-600 mt-2 hover:text-blue-300">
                   <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
                   View at UN
                 </a>
               </div>
-              <div className="p-4 rounded-xl bg-slate-900/50 border border-slate-700/50">
+              <div className="p-4 rounded-xl bg-gray-50/50 border border-gray-200/50">
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="text-xs font-mono bg-slate-700/50 text-slate-400 px-2 py-0.5 rounded">A/RES/70/1</span>
+                  <span className="text-xs font-mono bg-gray-200/50 text-gray-600 px-2 py-0.5 rounded">A/RES/70/1</span>
                 </div>
-                <h3 className="font-semibold text-white text-sm">2030 Agenda (SDGs)</h3>
-                <p className="text-xs text-slate-400 mt-1">Olympic Truce supports SDG 16 (peace) and SDG 17 (partnerships).</p>
-                <a href="https://www.un.org/en/development/desa/population/migration/generalassembly/docs/globalcompact/A_RES_70_1_E.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-blue-400 mt-2 hover:text-blue-300">
+                <h3 className="font-semibold text-gray-900 text-sm">2030 Agenda (SDGs)</h3>
+                <p className="text-xs text-gray-600 mt-1">Olympic Truce supports SDG 16 (peace) and SDG 17 (partnerships).</p>
+                <a href="https://www.un.org/en/development/desa/population/migration/generalassembly/docs/globalcompact/A_RES_70_1_E.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-blue-600 mt-2 hover:text-blue-300">
                   <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
                   View at UN
                 </a>
               </div>
-              <div className="p-4 rounded-xl bg-slate-900/50 border border-slate-700/50">
+              <div className="p-4 rounded-xl bg-gray-50/50 border border-gray-200/50">
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="text-xs font-mono bg-slate-700/50 text-slate-400 px-2 py-0.5 rounded">A/RES/S-27/2</span>
+                  <span className="text-xs font-mono bg-gray-200/50 text-gray-600 px-2 py-0.5 rounded">A/RES/S-27/2</span>
                 </div>
-                <h3 className="font-semibold text-white text-sm">A World Fit for Children</h3>
-                <p className="text-xs text-slate-400 mt-1">Referenced for youth protection aspects of Truce compliance.</p>
-                <a href="https://digitallibrary.un.org/record/464538" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-blue-400 mt-2 hover:text-blue-300">
+                <h3 className="font-semibold text-gray-900 text-sm">A World Fit for Children</h3>
+                <p className="text-xs text-gray-600 mt-1">Referenced for youth protection aspects of Truce compliance.</p>
+                <a href="https://digitallibrary.un.org/record/464538" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-blue-600 mt-2 hover:text-blue-300">
                   <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
@@ -363,15 +363,15 @@ export default function MethodologyPage() {
                 </a>
               </div>
             </div>
-            <p className="text-xs text-slate-500 mt-4 text-center">
-              See the full <Link href="/history" className="text-blue-400 hover:text-blue-300 underline">Legal Framework</Link> on the History page.
+            <p className="text-xs text-gray-500 mt-4 text-center">
+              See the full <Link href="/history" className="text-blue-600 hover:text-blue-300 underline">Legal Framework</Link> on the History page.
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* Validation */}
-      <section className="py-12 px-4 bg-slate-900/30">
+      <section className="py-12 px-4 bg-gray-50/30">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -386,12 +386,12 @@ export default function MethodologyPage() {
                 </svg>
               </div>
               <div>
-                <h2 className="text-xl font-bold text-white mb-2">Independent Validation</h2>
-                <p className="text-slate-400 mb-4">
+                <h2 className="text-xl font-bold text-gray-900 mb-2">Independent Validation</h2>
+                <p className="text-gray-600 mb-4">
                   The Index methodology is independently validated by Seton Hall University, ensuring
                   academic rigor and impartiality. The validation process includes:
                 </p>
-                <ul className="space-y-2 text-slate-300">
+                <ul className="space-y-2 text-gray-600">
                   <li className="flex items-start gap-2">
                     <span className="text-purple-400 mt-1">&#8226;</span>
                     Methodology review by the Center for Sports Media
@@ -419,15 +419,15 @@ export default function MethodologyPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl font-bold text-white mb-4">Explore the Index</h2>
-            <p className="text-slate-400 mb-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Explore the Index</h2>
+            <p className="text-gray-600 mb-6">
               See the methodology in action with real-time compliance data
             </p>
             <a
               href="https://truce-index.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-medium rounded-xl transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-600 text-gray-900 font-medium rounded-xl transition-colors"
             >
               View Live Index
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -439,8 +439,8 @@ export default function MethodologyPage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-4 border-t border-slate-800/50">
-        <div className="max-w-6xl mx-auto text-center text-slate-500 text-sm">
+      <footer className="py-8 px-4 border-t border-gray-200/50">
+        <div className="max-w-6xl mx-auto text-center text-gray-500 text-sm">
           <p>&copy; {new Date().getFullYear()} Truce Foundation. All rights reserved.</p>
         </div>
       </footer>

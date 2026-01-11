@@ -157,28 +157,28 @@ const KEY_RECOMMENDATIONS = [
 
 export default function BriefingSheetPage() {
   return (
-    <div className="min-h-screen bg-slate-950 text-white">
+    <div className="min-h-screen bg-white text-gray-900">
       <Header />
 
       {/* Hero */}
-      <div className="bg-gradient-to-b from-blue-900/50 to-slate-950 pt-32 pb-16">
+      <div className="bg-gradient-to-b from-blue-900/50 to-gray-50 pt-32 pb-16">
         <div className="max-w-6xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-center"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/20 border border-blue-500/30 rounded-full text-blue-300 text-sm mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600/20 border border-blue-500/30 rounded-full text-blue-300 text-sm mb-6">
               <span>📋</span>
               <span>Donor & Coalition Engagement</span>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               Sport for Development & Peace
             </h1>
-            <h2 className="text-2xl md:text-3xl text-blue-400 mb-6">
+            <h2 className="text-2xl md:text-3xl text-blue-600 mb-6">
               Briefing Sheet: UN Secretary-General Report A/79/289
             </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Key findings, donor engagement points, and calls-to-action from the 2024 UN report
               on sport as a driver of peace and sustainable development.
             </p>
@@ -198,23 +198,23 @@ export default function BriefingSheetPage() {
             <span className="text-3xl">📌</span>
             Executive Summary
           </h2>
-          <div className="bg-slate-900/50 border border-slate-700 rounded-xl p-6">
-            <ul className="space-y-3 text-slate-300">
+          <div className="bg-gray-50/50 border border-gray-200 rounded-xl p-6">
+            <ul className="space-y-3 text-gray-600">
               <li className="flex items-start gap-3">
                 <span className="text-green-400 mt-1">✓</span>
-                <span><strong className="text-white">Sport is a cross-cutting enabler</strong> of the Sustainable Development Goals (SDGs).</span>
+                <span><strong className="text-gray-900">Sport is a cross-cutting enabler</strong> of the Sustainable Development Goals (SDGs).</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-green-400 mt-1">✓</span>
-                <span><strong className="text-white">Five priority areas:</strong> social inclusion, physical activity, gender equality, peacebuilding/crime prevention, and climate action.</span>
+                <span><strong className="text-gray-900">Five priority areas:</strong> social inclusion, physical activity, gender equality, peacebuilding/crime prevention, and climate action.</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-green-400 mt-1">✓</span>
-                <span><strong className="text-white">Critical finding:</strong> Youth homicides account for 37% of global homicides—sport can address this through life skills training and community programs.</span>
+                <span><strong className="text-gray-900">Critical finding:</strong> Youth homicides account for 37% of global homicides—sport can address this through life skills training and community programs.</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-green-400 mt-1">✓</span>
-                <span><strong className="text-white">Calls for stronger partnerships</strong> between governments, civil society, and the private sector to maximize impact.</span>
+                <span><strong className="text-gray-900">Calls for stronger partnerships</strong> between governments, civil society, and the private sector to maximize impact.</span>
               </li>
             </ul>
           </div>
@@ -238,12 +238,12 @@ export default function BriefingSheetPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 + index * 0.05 }}
-                className="bg-slate-900/50 border border-slate-700 rounded-xl p-6 text-center"
+                className="bg-gray-50/50 border border-gray-200 rounded-xl p-6 text-center"
               >
                 <div className="text-3xl mb-2">{item.icon}</div>
-                <div className="text-3xl font-bold text-blue-400 mb-1">{item.stat}</div>
-                <div className="text-slate-300 text-sm mb-2">{item.label}</div>
-                <div className="text-xs text-slate-500">{item.source}</div>
+                <div className="text-3xl font-bold text-blue-600 mb-1">{item.stat}</div>
+                <div className="text-gray-600 text-sm mb-2">{item.label}</div>
+                <div className="text-xs text-gray-500">{item.source}</div>
               </motion.div>
             ))}
           </div>
@@ -267,7 +267,7 @@ export default function BriefingSheetPage() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.3 + index * 0.05 }}
-                className="bg-slate-900/50 border border-slate-700 rounded-xl p-6"
+                className="bg-gray-50/50 border border-gray-200 rounded-xl p-6"
               >
                 <div className="flex items-start gap-4">
                   <div className="text-4xl">{theme.icon}</div>
@@ -278,14 +278,14 @@ export default function BriefingSheetPage() {
                         {theme.sdgs.map(sdg => (
                           <span
                             key={sdg}
-                            className="px-2 py-0.5 bg-blue-500/20 text-blue-300 text-xs rounded"
+                            className="px-2 py-0.5 bg-blue-600/20 text-blue-300 text-xs rounded"
                           >
                             SDG {sdg}
                           </span>
                         ))}
                       </div>
                     </div>
-                    <p className="text-slate-300 mb-2">{theme.description}</p>
+                    <p className="text-gray-600 mb-2">{theme.description}</p>
                     <p className="text-sm text-amber-300/80 bg-amber-500/10 px-3 py-2 rounded-lg">
                       <strong>Key Finding:</strong> {theme.keyFinding}
                     </p>
@@ -310,8 +310,8 @@ export default function BriefingSheetPage() {
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <h3 className="font-semibold text-white mb-3">The Problem</h3>
-                <ul className="space-y-2 text-slate-300 text-sm">
+                <h3 className="font-semibold text-gray-900 mb-3">The Problem</h3>
+                <ul className="space-y-2 text-gray-600 text-sm">
                   <li>• Youth violence results in numerous deaths, injuries, and disabilities</li>
                   <li>• <strong className="text-red-300">Youth homicides account for 37%</strong> of global homicides annually</li>
                   <li>• Violence affects victims, families, and entire communities</li>
@@ -319,8 +319,8 @@ export default function BriefingSheetPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="font-semibold text-white mb-3">How Sport Helps</h3>
-                <ul className="space-y-2 text-slate-300 text-sm">
+                <h3 className="font-semibold text-gray-900 mb-3">How Sport Helps</h3>
+                <ul className="space-y-2 text-gray-600 text-sm">
                   <li>• Promotes fair play, teamwork, and conflict resolution</li>
                   <li>• Prevents violent extremism through community engagement</li>
                   <li>• Creates safe environments that protect vulnerable youth</li>
@@ -328,9 +328,9 @@ export default function BriefingSheetPage() {
                 </ul>
               </div>
             </div>
-            <div className="mt-6 p-4 bg-slate-900/50 rounded-lg">
-              <p className="text-sm text-slate-300">
-                <strong className="text-white">UNODC Line Up, Live Up Program:</strong> 43 capacity-building events,
+            <div className="mt-6 p-4 bg-gray-50/50 rounded-lg">
+              <p className="text-sm text-gray-600">
+                <strong className="text-gray-900">UNODC Line Up, Live Up Program:</strong> 43 capacity-building events,
                 1,200+ coaches trained, 31,000+ young people reached in school and community settings—strengthening
                 resilience to violence, crime, and drug use.
               </p>
@@ -349,11 +349,11 @@ export default function BriefingSheetPage() {
             <span className="text-3xl">📋</span>
             Key Recommendations
           </h2>
-          <div className="bg-slate-900/50 border border-slate-700 rounded-xl p-6">
+          <div className="bg-gray-50/50 border border-gray-200 rounded-xl p-6">
             <ol className="space-y-3">
               {KEY_RECOMMENDATIONS.map((rec, index) => (
-                <li key={index} className="flex items-start gap-3 text-slate-300">
-                  <span className="flex-shrink-0 w-6 h-6 bg-blue-500/20 text-blue-300 rounded-full flex items-center justify-center text-sm font-semibold">
+                <li key={index} className="flex items-start gap-3 text-gray-600">
+                  <span className="flex-shrink-0 w-6 h-6 bg-blue-600/20 text-blue-300 rounded-full flex items-center justify-center text-sm font-semibold">
                     {index + 1}
                   </span>
                   <span>{rec}</span>
@@ -385,7 +385,7 @@ export default function BriefingSheetPage() {
               >
                 <div className="text-2xl mb-2">{point.icon}</div>
                 <h3 className="font-semibold text-green-300 mb-2">{point.title}</h3>
-                <p className="text-sm text-slate-300">{point.description}</p>
+                <p className="text-sm text-gray-600">{point.description}</p>
               </motion.div>
             ))}
           </div>
@@ -409,15 +409,15 @@ export default function BriefingSheetPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.7 + index * 0.05 }}
-                className="bg-slate-900/50 border border-slate-700 rounded-xl p-6 flex items-center justify-between"
+                className="bg-gray-50/50 border border-gray-200 rounded-xl p-6 flex items-center justify-between"
               >
                 <div>
-                  <h3 className="font-semibold text-white mb-1">{cta.action}</h3>
-                  <p className="text-sm text-slate-400">{cta.description}</p>
+                  <h3 className="font-semibold text-gray-900 mb-1">{cta.action}</h3>
+                  <p className="text-sm text-gray-600">{cta.description}</p>
                 </div>
                 <Link
                   href={cta.href}
-                  className="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white text-sm font-medium rounded-lg transition-colors whitespace-nowrap"
+                  className="px-4 py-2 bg-blue-600 hover:bg-blue-600 text-gray-900 text-sm font-medium rounded-lg transition-colors whitespace-nowrap"
                 >
                   {cta.cta}
                 </Link>
@@ -438,20 +438,20 @@ export default function BriefingSheetPage() {
             Deployment Format
           </h2>
           <div className="grid md:grid-cols-3 gap-4">
-            <div className="bg-slate-900/50 border border-slate-700 rounded-xl p-5 text-center">
+            <div className="bg-gray-50/50 border border-gray-200 rounded-xl p-5 text-center">
               <div className="text-3xl mb-3">📄</div>
               <h3 className="font-semibold mb-2">One-Page Briefing</h3>
-              <p className="text-sm text-slate-400">Quick donor review format with key stats and CTAs</p>
+              <p className="text-sm text-gray-600">Quick donor review format with key stats and CTAs</p>
             </div>
-            <div className="bg-slate-900/50 border border-slate-700 rounded-xl p-5 text-center">
+            <div className="bg-gray-50/50 border border-gray-200 rounded-xl p-5 text-center">
               <div className="text-3xl mb-3">📊</div>
               <h3 className="font-semibold mb-2">Infographic Overlays</h3>
-              <p className="text-sm text-slate-400">Visual mapping of sport's contribution to SDGs</p>
+              <p className="text-sm text-gray-600">Visual mapping of sport's contribution to SDGs</p>
             </div>
-            <div className="bg-slate-900/50 border border-slate-700 rounded-xl p-5 text-center">
+            <div className="bg-gray-50/50 border border-gray-200 rounded-xl p-5 text-center">
               <div className="text-3xl mb-3">📁</div>
               <h3 className="font-semibold mb-2">Modular Inserts</h3>
-              <p className="text-sm text-slate-400">Endorsement letters, pledge forms, recognition templates</p>
+              <p className="text-sm text-gray-600">Endorsement letters, pledge forms, recognition templates</p>
             </div>
           </div>
         </motion.section>
@@ -467,48 +467,48 @@ export default function BriefingSheetPage() {
             <span className="text-3xl">📚</span>
             Source Documents
           </h2>
-          <div className="bg-slate-900/50 border border-slate-700 rounded-xl p-6">
+          <div className="bg-gray-50/50 border border-gray-200 rounded-xl p-6">
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-3">
-                <span className="text-blue-400">📄</span>
+                <span className="text-blue-600">📄</span>
                 <div>
                   <a
                     href="https://documents.un.org/doc/undoc/gen/n24/232/53/pdf/n2423253.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-400 hover:text-blue-300 underline"
+                    className="text-blue-600 hover:text-blue-300 underline"
                   >
                     A/79/289 - Full Report
                   </a>
-                  <span className="text-slate-400 ml-2">UN Secretary-General's Report on Sport for Development and Peace (2024)</span>
+                  <span className="text-gray-600 ml-2">UN Secretary-General's Report on Sport for Development and Peace (2024)</span>
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-blue-400">📄</span>
+                <span className="text-blue-600">📄</span>
                 <div>
                   <a
                     href="https://social.desa.un.org/sites/default/files/inline-files/Secretary-General%27s%20Report%20Presentation%20-%20Group%20of%20Friends%20%281%29.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-400 hover:text-blue-300 underline"
+                    className="text-blue-600 hover:text-blue-300 underline"
                   >
                     Presentation Slides
                   </a>
-                  <span className="text-slate-400 ml-2">Secretary-General's Report Presentation to Group of Friends</span>
+                  <span className="text-gray-600 ml-2">Secretary-General's Report Presentation to Group of Friends</span>
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-blue-400">📄</span>
+                <span className="text-blue-600">📄</span>
                 <div>
                   <a
                     href="https://social.desa.un.org/issues/sport-for-development-and-peace/general-assembly"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-400 hover:text-blue-300 underline"
+                    className="text-blue-600 hover:text-blue-300 underline"
                   >
                     UN DESA Sport for Development and Peace
                   </a>
-                  <span className="text-slate-400 ml-2">Full menu of reports, resolutions, and resources</span>
+                  <span className="text-gray-600 ml-2">Full menu of reports, resolutions, and resources</span>
                 </div>
               </li>
             </ul>
@@ -520,27 +520,27 @@ export default function BriefingSheetPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.0 }}
-          className="text-center py-12 border-t border-slate-800"
+          className="text-center py-12 border-t border-gray-200"
         >
-          <p className="text-slate-400 mb-6">
+          <p className="text-gray-600 mb-6">
             Ready to support the Olympic Truce and sport for development?
           </p>
           <div className="flex justify-center gap-4 flex-wrap">
             <Link
               href="/partners"
-              className="px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-medium rounded-lg transition-colors"
+              className="px-6 py-3 bg-blue-600 hover:bg-blue-600 text-gray-900 font-medium rounded-lg transition-colors"
             >
               Become a Partner
             </Link>
             <Link
               href="/advocacy"
-              className="px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white font-medium rounded-lg transition-colors"
+              className="px-6 py-3 bg-gray-200 hover:bg-gray-200 text-gray-900 font-medium rounded-lg transition-colors"
             >
               Advocacy Toolkit
             </Link>
             <Link
               href="/"
-              className="px-6 py-3 border border-slate-600 hover:border-slate-500 text-slate-300 font-medium rounded-lg transition-colors"
+              className="px-6 py-3 border border-gray-400 hover:border-gray-500 text-gray-600 font-medium rounded-lg transition-colors"
             >
               Back to Home
             </Link>

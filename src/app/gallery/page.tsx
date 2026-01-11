@@ -36,14 +36,14 @@ export default function GalleryPage() {
     : photos.filter(photo => photo.category === activeCategory);
 
   return (
-    <main className="min-h-screen bg-slate-950 pt-20 pb-16">
+    <main className="min-h-screen bg-white pt-20 pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Hero Section */}
         <div className="text-center py-12 md:py-16">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Photo Gallery
           </h1>
-          <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Explore moments from Olympic Truce events, ceremonies, and our global peace initiatives
           </p>
         </div>
@@ -56,8 +56,8 @@ export default function GalleryPage() {
               onClick={() => setActiveCategory(category)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                 activeCategory === category
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white'
+                  ? 'bg-blue-600 text-gray-900'
+                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200 hover:text-gray-900'
               }`}
             >
               {category.charAt(0).toUpperCase() + category.slice(1)}
@@ -70,14 +70,14 @@ export default function GalleryPage() {
 
         {/* Empty state with instructions */}
         {photos.length === 0 && (
-          <div className="mt-8 p-6 bg-slate-900/50 border border-slate-800 rounded-xl text-center">
-            <h3 className="text-lg font-medium text-white mb-2">Gallery Coming Soon</h3>
-            <p className="text-slate-400 text-sm mb-4">
+          <div className="mt-8 p-6 bg-gray-50/50 border border-gray-200 rounded-xl text-center">
+            <h3 className="text-lg font-medium text-gray-900 mb-2">Gallery Coming Soon</h3>
+            <p className="text-gray-600 text-sm mb-4">
               Photos will be added to showcase Truce Foundation events and initiatives.
             </p>
-            <p className="text-slate-500 text-xs">
-              To add photos, edit the <code className="px-1 py-0.5 bg-slate-800 rounded">photos</code> array in{' '}
-              <code className="px-1 py-0.5 bg-slate-800 rounded">src/app/gallery/page.tsx</code>
+            <p className="text-gray-500 text-xs">
+              To add photos, edit the <code className="px-1 py-0.5 bg-gray-100 rounded">photos</code> array in{' '}
+              <code className="px-1 py-0.5 bg-gray-100 rounded">src/app/gallery/page.tsx</code>
             </p>
           </div>
         )}
@@ -86,7 +86,7 @@ export default function GalleryPage() {
         <div className="mt-12 text-center">
           <Link
             href="/videos"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white rounded-lg transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-900 rounded-lg transition-colors"
           >
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
               <path d="M8 5v14l11-7z" />

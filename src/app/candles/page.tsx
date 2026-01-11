@@ -106,7 +106,7 @@ export default function CandlesPage() {
   };
 
   return (
-    <main className="min-h-screen bg-slate-950">
+    <main className="min-h-screen bg-white">
       <Header />
 
       {/* Hero with animated candle */}
@@ -132,10 +132,10 @@ export default function CandlesPage() {
               🕯️
             </motion.div>
 
-            <h1 className="text-4xl sm:text-5xl font-bold text-white">
+            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900">
               Global Candle Wall
             </h1>
-            <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Light a virtual candle for peace. Join voices from around the world in solidarity.
             </p>
 
@@ -157,25 +157,25 @@ export default function CandlesPage() {
               className="p-4 rounded-xl bg-amber-500/10 border border-amber-500/30 text-center"
             >
               <span className="text-3xl font-bold text-amber-400">{CANDLE_STATS.total || '---'}</span>
-              <p className="text-xs text-slate-500 mt-1">Candles Lit</p>
+              <p className="text-xs text-gray-500 mt-1">Candles Lit</p>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="p-4 rounded-xl bg-slate-900/50 border border-slate-700/50 text-center"
+              className="p-4 rounded-xl bg-gray-50/50 border border-gray-200/50 text-center"
             >
-              <span className="text-3xl font-bold text-white">{CANDLE_STATS.countries || '---'}</span>
-              <p className="text-xs text-slate-500 mt-1">Countries</p>
+              <span className="text-3xl font-bold text-gray-900">{CANDLE_STATS.countries || '---'}</span>
+              <p className="text-xs text-gray-500 mt-1">Countries</p>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="p-4 rounded-xl bg-slate-900/50 border border-slate-700/50 text-center"
+              className="p-4 rounded-xl bg-gray-50/50 border border-gray-200/50 text-center"
             >
-              <span className="text-3xl font-bold text-white">{CANDLE_STATS.thisWeek || '---'}</span>
-              <p className="text-xs text-slate-500 mt-1">This Week</p>
+              <span className="text-3xl font-bold text-gray-900">{CANDLE_STATS.thisWeek || '---'}</span>
+              <p className="text-xs text-gray-500 mt-1">This Week</p>
             </motion.div>
           </div>
         </div>
@@ -188,15 +188,15 @@ export default function CandlesPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="relative rounded-2xl overflow-hidden border border-slate-700/50"
+            className="relative rounded-2xl overflow-hidden border border-gray-200/50"
           >
             {/* Map placeholder with candle dots */}
-            <div className="aspect-[2/1] bg-slate-900/50 relative">
+            <div className="aspect-[2/1] bg-gray-50/50 relative">
               {/* World map silhouette placeholder */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center">
-                  <p className="text-slate-500 text-sm mb-2">Interactive World Map</p>
-                  <p className="text-slate-600 text-xs">Each candle will appear as a glowing point on the map</p>
+                  <p className="text-gray-500 text-sm mb-2">Interactive World Map</p>
+                  <p className="text-gray-600 text-xs">Each candle will appear as a glowing point on the map</p>
                 </div>
               </div>
 
@@ -249,56 +249,56 @@ export default function CandlesPage() {
                 >
                   🕯️
                 </motion.div>
-                <h2 className="text-2xl font-bold text-white mb-2">
+                <h2 className="text-2xl font-bold text-gray-900 mb-2">
                   Your Candle is Reserved
                 </h2>
-                <p className="text-slate-400">
+                <p className="text-gray-600">
                   Thank you for your message of peace. Your candle will be lit when the wall opens in January 2026.
                 </p>
               </div>
             ) : showLightForm ? (
               <form onSubmit={handleSubmit} className="space-y-4">
-                <h2 className="text-xl font-bold text-white mb-4 text-center">
+                <h2 className="text-xl font-bold text-gray-900 mb-4 text-center">
                   Light Your Candle
                 </h2>
 
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm text-slate-400 mb-1">Your Name (or initials)</label>
+                    <label className="block text-sm text-gray-600 mb-1">Your Name (or initials)</label>
                     <input
                       type="text"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       placeholder="Maria G."
-                      className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-amber-500"
+                      className="w-full px-4 py-3 bg-gray-100 border border-gray-200 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:border-amber-500"
                       required
                     />
                   </div>
                   <div>
-                    <label className="block text-sm text-slate-400 mb-1">City / Location</label>
+                    <label className="block text-sm text-gray-600 mb-1">City / Location</label>
                     <input
                       type="text"
                       value={formData.location}
                       onChange={(e) => setFormData({ ...formData, location: e.target.value })}
                       placeholder="Rome, Italy"
-                      className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-amber-500"
+                      className="w-full px-4 py-3 bg-gray-100 border border-gray-200 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:border-amber-500"
                       required
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-sm text-slate-400 mb-1">Your Message of Peace</label>
+                  <label className="block text-sm text-gray-600 mb-1">Your Message of Peace</label>
                   <textarea
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder="Share your hope for the Olympic Truce..."
                     rows={3}
                     maxLength={200}
-                    className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-amber-500 resize-none"
+                    className="w-full px-4 py-3 bg-gray-100 border border-gray-200 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:border-amber-500 resize-none"
                     required
                   />
-                  <p className="text-xs text-slate-500 mt-1 text-right">
+                  <p className="text-xs text-gray-500 mt-1 text-right">
                     {formData.message.length}/200 characters
                   </p>
                 </div>
@@ -307,13 +307,13 @@ export default function CandlesPage() {
                   <button
                     type="button"
                     onClick={() => setShowLightForm(false)}
-                    className="flex-1 px-4 py-3 bg-slate-800 hover:bg-slate-700 text-white rounded-lg transition-colors"
+                    className="flex-1 px-4 py-3 bg-gray-100 hover:bg-gray-200 text-gray-900 rounded-lg transition-colors"
                   >
                     Cancel
                   </button>
                   <button
                     type="submit"
-                    className="flex-1 px-4 py-3 bg-amber-600 hover:bg-amber-500 text-white font-medium rounded-lg transition-colors"
+                    className="flex-1 px-4 py-3 bg-amber-600 hover:bg-amber-500 text-gray-900 font-medium rounded-lg transition-colors"
                   >
                     Light Candle
                   </button>
@@ -321,15 +321,15 @@ export default function CandlesPage() {
               </form>
             ) : (
               <div className="text-center">
-                <h2 className="text-2xl font-bold text-white mb-4">
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">
                   Add Your Light to the Wall
                 </h2>
-                <p className="text-slate-400 mb-6">
+                <p className="text-gray-600 mb-6">
                   Light a virtual candle and share a message of peace. Your candle will join thousands of others from around the world.
                 </p>
                 <button
                   onClick={() => setShowLightForm(true)}
-                  className="px-8 py-4 bg-amber-600 hover:bg-amber-500 text-white font-semibold rounded-xl transition-colors inline-flex items-center gap-2"
+                  className="px-8 py-4 bg-amber-600 hover:bg-amber-500 text-gray-900 font-semibold rounded-xl transition-colors inline-flex items-center gap-2"
                 >
                   <span className="text-xl">🕯️</span>
                   Light a Candle
@@ -341,7 +341,7 @@ export default function CandlesPage() {
       </section>
 
       {/* Recent Candles */}
-      <section className="py-12 px-4 bg-slate-900/30">
+      <section className="py-12 px-4 bg-gray-50/30">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -349,8 +349,8 @@ export default function CandlesPage() {
             viewport={{ once: true }}
             className="mb-6"
           >
-            <h2 className="text-2xl font-bold text-white mb-2">Recent Messages</h2>
-            <p className="text-slate-400">Preview of messages from our community</p>
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Recent Messages</h2>
+            <p className="text-gray-600">Preview of messages from our community</p>
           </motion.div>
 
           <div className="grid gap-4">
@@ -361,14 +361,14 @@ export default function CandlesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="p-5 rounded-xl bg-slate-900/50 border border-slate-700/50"
+                className="p-5 rounded-xl bg-gray-50/50 border border-gray-200/50"
               >
                 <div className="flex items-start gap-4">
                   <div className="text-2xl flex-shrink-0">🕯️</div>
                   <div className="flex-1">
-                    <p className="text-slate-300 mb-2">"{candle.message}"</p>
-                    <div className="flex items-center gap-2 text-sm text-slate-500">
-                      <span className="font-medium text-slate-400">{candle.name}</span>
+                    <p className="text-gray-600 mb-2">"{candle.message}"</p>
+                    <div className="flex items-center gap-2 text-sm text-gray-500">
+                      <span className="font-medium text-gray-600">{candle.name}</span>
                       <span>•</span>
                       <span>{candle.location}, {candle.country}</span>
                       <span>•</span>
@@ -389,13 +389,13 @@ export default function CandlesPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="p-6 rounded-2xl bg-slate-900/50 border border-slate-700/50"
+            className="p-6 rounded-2xl bg-gray-50/50 border border-gray-200/50"
           >
-            <h2 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+            <h2 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
               <span className="text-2xl">🔥</span>
               The Olympic Flame Tradition
             </h2>
-            <div className="text-sm text-slate-300 space-y-3">
+            <div className="text-sm text-gray-600 space-y-3">
               <p>
                 The Olympic flame has been a symbol of peace and unity since ancient Greece.
                 The flame was kept burning throughout the ancient Games at Olympia.
@@ -405,7 +405,7 @@ export default function CandlesPage() {
                 people everywhere to light a virtual candle and add their voice to the call
                 for peace during the Olympic Truce.
               </p>
-              <p className="text-slate-400 text-xs">
+              <p className="text-gray-600 text-xs">
                 Each candle on the wall represents a commitment to the ideals of the Olympic
                 Truce: cessation of hostilities, safe passage, and the unifying power of sport.
               </p>
@@ -417,42 +417,42 @@ export default function CandlesPage() {
       {/* Related Links */}
       <section className="py-12 px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-xl font-bold text-white mb-6 text-center">Related Resources</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-6 text-center">Related Resources</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <Link
               href="/forum"
-              className="p-4 rounded-xl bg-slate-900/50 border border-slate-700/50 hover:border-blue-500/50 transition-colors group"
+              className="p-4 rounded-xl bg-gray-50/50 border border-gray-200/50 hover:border-blue-500/50 transition-colors group"
             >
-              <h3 className="font-semibold text-white group-hover:text-blue-400 transition-colors">
+              <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
                 Forum
               </h3>
-              <p className="text-sm text-slate-400 mt-1">Join the conversation</p>
+              <p className="text-sm text-gray-600 mt-1">Join the conversation</p>
             </Link>
             <Link
               href="/stories"
-              className="p-4 rounded-xl bg-slate-900/50 border border-slate-700/50 hover:border-blue-500/50 transition-colors group"
+              className="p-4 rounded-xl bg-gray-50/50 border border-gray-200/50 hover:border-blue-500/50 transition-colors group"
             >
-              <h3 className="font-semibold text-white group-hover:text-blue-400 transition-colors">
+              <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
                 Youth Stories
               </h3>
-              <p className="text-sm text-slate-400 mt-1">First-person accounts</p>
+              <p className="text-sm text-gray-600 mt-1">First-person accounts</p>
             </Link>
             <Link
               href="/advocacy"
-              className="p-4 rounded-xl bg-slate-900/50 border border-slate-700/50 hover:border-blue-500/50 transition-colors group"
+              className="p-4 rounded-xl bg-gray-50/50 border border-gray-200/50 hover:border-blue-500/50 transition-colors group"
             >
-              <h3 className="font-semibold text-white group-hover:text-blue-400 transition-colors">
+              <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
                 Advocacy Toolkit
               </h3>
-              <p className="text-sm text-slate-400 mt-1">Spread the message</p>
+              <p className="text-sm text-gray-600 mt-1">Spread the message</p>
             </Link>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-4 border-t border-slate-800/50">
-        <div className="max-w-6xl mx-auto text-center text-slate-500 text-sm">
+      <footer className="py-8 px-4 border-t border-gray-200/50">
+        <div className="max-w-6xl mx-auto text-center text-gray-500 text-sm">
           <p>&copy; {new Date().getFullYear()} Truce Foundation. All rights reserved.</p>
         </div>
       </footer>

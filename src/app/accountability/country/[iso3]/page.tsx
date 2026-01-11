@@ -16,7 +16,7 @@ const getSeverityColor = (severity: string) => {
     case 'significant':
       return 'bg-yellow-900/50 text-yellow-300 border-yellow-500/30';
     default:
-      return 'bg-slate-800 text-slate-300';
+      return 'bg-gray-100 text-gray-600';
   }
 };
 
@@ -29,18 +29,18 @@ export default function CountryProfilePage() {
 
   if (!countryData || violations.length === 0) {
     return (
-      <main className="min-h-screen bg-slate-950">
+      <main className="min-h-screen bg-white">
         <Header />
 
         <section className="pt-32 pb-16 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl font-bold text-white mb-4">Country Not Found</h1>
-            <p className="text-slate-400 mb-8">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Country Not Found</h1>
+            <p className="text-gray-600 mb-8">
               No violation record found for country code: {iso3.toUpperCase()}
             </p>
             <Link
               href="/accountability"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-medium rounded-xl transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-600 text-gray-900 font-medium rounded-xl transition-colors"
             >
               View All Records
             </Link>
@@ -63,7 +63,7 @@ export default function CountryProfilePage() {
   const majorCount = violations.filter(v => v.violation.severity === 'major').length;
 
   return (
-    <main className="min-h-screen bg-slate-950">
+    <main className="min-h-screen bg-white">
       <Header />
 
       {/* Hero Section */}
@@ -77,10 +77,10 @@ export default function CountryProfilePage() {
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-500/10 border border-red-500/30 rounded-full mb-4">
               <span className="text-red-300 text-sm font-medium">Country Profile</span>
             </div>
-            <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
+            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
               {countryData.country}
             </h1>
-            <p className="text-xl text-slate-400">
+            <p className="text-xl text-gray-600">
               {countryData.violationCount} Truce Period{countryData.violationCount !== 1 ? 's' : ''} with Documented Violations
             </p>
           </motion.div>
@@ -97,34 +97,34 @@ export default function CountryProfilePage() {
               className="p-4 rounded-xl bg-red-500/10 border border-red-500/30 text-center"
             >
               <span className="text-3xl font-bold text-red-400">{countryData.violationCount}</span>
-              <p className="text-xs text-slate-500 mt-1">Truce Periods Violated</p>
+              <p className="text-xs text-gray-500 mt-1">Truce Periods Violated</p>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="p-4 rounded-xl bg-slate-900/50 border border-slate-700/50 text-center"
+              className="p-4 rounded-xl bg-gray-50/50 border border-gray-200/50 text-center"
             >
-              <span className="text-3xl font-bold text-white">{violations.length}</span>
-              <p className="text-xs text-slate-500 mt-1">Total Incidents</p>
+              <span className="text-3xl font-bold text-gray-900">{violations.length}</span>
+              <p className="text-xs text-gray-500 mt-1">Total Incidents</p>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="p-4 rounded-xl bg-slate-900/50 border border-slate-700/50 text-center"
+              className="p-4 rounded-xl bg-gray-50/50 border border-gray-200/50 text-center"
             >
               <span className="text-3xl font-bold text-orange-400">{criticalCount}</span>
-              <p className="text-xs text-slate-500 mt-1">Critical Severity</p>
+              <p className="text-xs text-gray-500 mt-1">Critical Severity</p>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="p-4 rounded-xl bg-slate-900/50 border border-slate-700/50 text-center"
+              className="p-4 rounded-xl bg-gray-50/50 border border-gray-200/50 text-center"
             >
-              <span className="text-3xl font-bold text-slate-300">{lastViolation}</span>
-              <p className="text-xs text-slate-500 mt-1">Most Recent</p>
+              <span className="text-3xl font-bold text-gray-600">{lastViolation}</span>
+              <p className="text-xs text-gray-500 mt-1">Most Recent</p>
             </motion.div>
           </div>
         </div>
@@ -137,9 +137,9 @@ export default function CountryProfilePage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="p-6 rounded-2xl bg-slate-900/50 border border-slate-700/50 mb-8"
+            className="p-6 rounded-2xl bg-gray-50/50 border border-gray-200/50 mb-8"
           >
-            <h3 className="text-lg font-bold text-white mb-4">Violation Timeline</h3>
+            <h3 className="text-lg font-bold text-gray-900 mb-4">Violation Timeline</h3>
             <div className="relative">
               {/* Timeline line */}
               <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-red-500/30" />
@@ -166,22 +166,22 @@ export default function CountryProfilePage() {
                       <div className="flex items-start justify-between gap-4 mb-2">
                         <div>
                           <div className="flex items-center gap-2">
-                            <span className="font-bold text-white">{v.period.games}</span>
-                            <span className="px-2 py-0.5 text-xs bg-slate-800/50 text-slate-300 rounded-full">
+                            <span className="font-bold text-gray-900">{v.period.games}</span>
+                            <span className="px-2 py-0.5 text-xs bg-gray-100/50 text-gray-600 rounded-full">
                               {v.period.season}
                             </span>
                             <span className={`px-2 py-0.5 text-xs rounded-full ${getSeverityColor(v.violation.severity)}`}>
                               {v.violation.severity}
                             </span>
                           </div>
-                          <p className="text-xs text-slate-500 mt-1">
+                          <p className="text-xs text-gray-500 mt-1">
                             {v.period.truceWindow.start} to {v.period.truceWindow.end}
                           </p>
                         </div>
                       </div>
-                      <p className="text-sm text-slate-300 mb-2">{v.violation.description}</p>
+                      <p className="text-sm text-gray-600 mb-2">{v.violation.description}</p>
                       {v.violation.date && (
-                        <p className="text-xs text-slate-500">
+                        <p className="text-xs text-gray-500">
                           Date: {new Date(v.violation.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
                         </p>
                       )}
@@ -191,7 +191,7 @@ export default function CountryProfilePage() {
                         </p>
                       )}
                       {v.violation.sources && v.violation.sources.length > 0 && (
-                        <p className="text-xs text-slate-500 mt-1">
+                        <p className="text-xs text-gray-500 mt-1">
                           Sources: {v.violation.sources.join(', ')}
                         </p>
                       )}
@@ -212,7 +212,7 @@ export default function CountryProfilePage() {
               href={`${TRUCE_INDEX_URL}/?country=${iso3.toUpperCase()}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-medium rounded-xl transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-600 text-gray-900 font-medium rounded-xl transition-colors"
             >
               View on Live Index
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -221,7 +221,7 @@ export default function CountryProfilePage() {
             </a>
             <Link
               href="/accountability"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white font-medium rounded-xl transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-900 font-medium rounded-xl transition-colors"
             >
               Back to Full Record
             </Link>
@@ -230,9 +230,9 @@ export default function CountryProfilePage() {
       </section>
 
       {/* Other Countries */}
-      <section className="py-12 px-4 bg-slate-900/30">
+      <section className="py-12 px-4 bg-gray-50/30">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-xl font-bold text-white mb-6 text-center">Other Countries with Multiple Violations</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-6 text-center">Other Countries with Multiple Violations</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
             {REPEAT_OFFENDERS
               .filter(o => o.countryIso3 !== iso3.toUpperCase())
@@ -241,13 +241,13 @@ export default function CountryProfilePage() {
                 <Link
                   key={offender.countryIso3}
                   href={`/accountability/country/${offender.countryIso3.toLowerCase()}`}
-                  className="p-3 rounded-xl bg-slate-800/50 border border-slate-700/50 hover:border-red-500/50 transition-colors group"
+                  className="p-3 rounded-xl bg-gray-100/50 border border-gray-200/50 hover:border-red-500/50 transition-colors group"
                 >
                   <div className="flex items-center gap-2">
                     <span className="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center text-xs font-bold text-red-400">
                       {offender.violationCount}
                     </span>
-                    <span className="text-sm text-white group-hover:text-red-300 transition-colors truncate">
+                    <span className="text-sm text-gray-900 group-hover:text-red-300 transition-colors truncate">
                       {offender.country}
                     </span>
                   </div>
@@ -258,8 +258,8 @@ export default function CountryProfilePage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-4 border-t border-slate-800/50">
-        <div className="max-w-6xl mx-auto text-center text-slate-500 text-sm">
+      <footer className="py-8 px-4 border-t border-gray-200/50">
+        <div className="max-w-6xl mx-auto text-center text-gray-500 text-sm">
           <p>&copy; {new Date().getFullYear()} Truce Foundation. All rights reserved.</p>
         </div>
       </footer>

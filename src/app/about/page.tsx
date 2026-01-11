@@ -83,7 +83,7 @@ const PUBLICATIONS = [
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-slate-950">
+    <main className="min-h-screen bg-white">
       <Header />
 
       {/* Hero */}
@@ -94,10 +94,10 @@ export default function AboutPage() {
             animate={{ opacity: 1, y: 0 }}
             className="space-y-4"
           >
-            <h1 className="text-4xl sm:text-5xl font-bold text-white">
+            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900">
               About the Truce Foundation
             </h1>
-            <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Transforming the Olympic Truce tradition into action for global peace
             </p>
           </motion.div>
@@ -117,18 +117,18 @@ export default function AboutPage() {
             className="block p-6 rounded-2xl bg-gradient-to-br from-blue-500/20 to-purple-500/10 border border-blue-500/30 hover:border-blue-400/50 transition-all group"
           >
             <div className="flex items-center gap-4">
-              <div className="w-16 h-16 bg-blue-500/20 rounded-xl flex items-center justify-center text-3xl">
+              <div className="w-16 h-16 bg-blue-600/20 rounded-xl flex items-center justify-center text-3xl">
                 📄
               </div>
               <div className="flex-1">
-                <h2 className="text-xl font-bold text-white group-hover:text-blue-300 transition-colors">
+                <h2 className="text-xl font-bold text-gray-900 group-hover:text-blue-300 transition-colors">
                   Truce Foundation Flyer
                 </h2>
-                <p className="text-slate-400 text-sm mt-1">
+                <p className="text-gray-600 text-sm mt-1">
                   Download our official flyer featuring the Olympic Truce Award, previous awardees, and foundation information
                 </p>
               </div>
-              <div className="text-blue-400 group-hover:translate-x-1 transition-transform">
+              <div className="text-blue-600 group-hover:translate-x-1 transition-transform">
                 <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
@@ -147,8 +147,8 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="mb-6"
           >
-            <h2 className="text-2xl font-bold text-white mb-2">Featured Analysis</h2>
-            <p className="text-slate-400">Critical perspectives on peace and conflict</p>
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Featured Analysis</h2>
+            <p className="text-gray-600">Critical perspectives on peace and conflict</p>
           </motion.div>
 
           {PUBLICATIONS.filter(p => p.type === 'featured').map((pub, index) => (
@@ -170,13 +170,13 @@ export default function AboutPage() {
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-2">
                     <span className="px-2 py-0.5 text-xs bg-amber-500/20 text-amber-400 rounded">Featured</span>
-                    <span className="text-xs text-slate-500">{pub.publication} • {pub.date}</span>
+                    <span className="text-xs text-gray-500">{pub.publication} • {pub.date}</span>
                   </div>
-                  <h3 className="text-lg font-semibold text-white group-hover:text-amber-300 transition-colors mb-2">
+                  <h3 className="text-lg font-semibold text-gray-900 group-hover:text-amber-300 transition-colors mb-2">
                     {pub.title}
                   </h3>
-                  <p className="text-sm text-slate-400 mb-2">{pub.description}</p>
-                  <p className="text-xs text-slate-500">By {pub.author}</p>
+                  <p className="text-sm text-gray-600 mb-2">{pub.description}</p>
+                  <p className="text-xs text-gray-500">By {pub.author}</p>
                 </div>
               </div>
             </motion.a>
@@ -193,8 +193,8 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="mb-6"
           >
-            <h2 className="text-2xl font-bold text-white mb-2">Publications by Hugh Dugan</h2>
-            <p className="text-slate-400">Founder's writings on the Olympic Truce</p>
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Publications by Hugh Dugan</h2>
+            <p className="text-gray-600">Founder's writings on the Olympic Truce</p>
           </motion.div>
 
           <div className="space-y-4">
@@ -208,22 +208,22 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="block p-5 rounded-xl bg-slate-900/50 border border-slate-700/50 hover:border-blue-500/50 transition-all group"
+                className="block p-5 rounded-xl bg-gray-50/50 border border-gray-200/50 hover:border-blue-500/50 transition-all group"
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center text-xl flex-shrink-0">
+                  <div className="w-10 h-10 bg-blue-600/20 rounded-lg flex items-center justify-center text-xl flex-shrink-0">
                     📰
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-1">
-                      <span className="text-xs text-slate-500">{pub.publication} • {pub.date}</span>
+                      <span className="text-xs text-gray-500">{pub.publication} • {pub.date}</span>
                     </div>
-                    <h3 className="font-semibold text-white group-hover:text-blue-400 transition-colors mb-1">
+                    <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors mb-1">
                       {pub.title}
                     </h3>
-                    <p className="text-sm text-slate-400">{pub.description}</p>
+                    <p className="text-sm text-gray-600">{pub.description}</p>
                   </div>
-                  <div className="text-slate-500 group-hover:text-blue-400 transition-colors">
+                  <div className="text-gray-500 group-hover:text-blue-600 transition-colors">
                     <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
@@ -244,8 +244,8 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="mb-6"
           >
-            <h2 className="text-2xl font-bold text-white mb-2">Reference Materials</h2>
-            <p className="text-slate-400">Key reports and analysis on global conflicts</p>
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Reference Materials</h2>
+            <p className="text-gray-600">Key reports and analysis on global conflicts</p>
           </motion.div>
 
           <div className="space-y-4">
@@ -259,7 +259,7 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="block p-5 rounded-xl bg-slate-900/50 border border-slate-700/50 hover:border-cyan-500/50 transition-all group"
+                className="block p-5 rounded-xl bg-gray-50/50 border border-gray-200/50 hover:border-cyan-500/50 transition-all group"
               >
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 bg-cyan-500/20 rounded-lg flex items-center justify-center text-xl flex-shrink-0">
@@ -267,14 +267,14 @@ export default function AboutPage() {
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-1">
-                      <span className="text-xs text-slate-500">{pub.publication} • {pub.date}</span>
+                      <span className="text-xs text-gray-500">{pub.publication} • {pub.date}</span>
                     </div>
-                    <h3 className="font-semibold text-white group-hover:text-cyan-400 transition-colors mb-1">
+                    <h3 className="font-semibold text-gray-900 group-hover:text-cyan-400 transition-colors mb-1">
                       {pub.title}
                     </h3>
-                    <p className="text-sm text-slate-400">{pub.description}</p>
+                    <p className="text-sm text-gray-600">{pub.description}</p>
                   </div>
-                  <div className="text-slate-500 group-hover:text-cyan-400 transition-colors">
+                  <div className="text-gray-500 group-hover:text-cyan-400 transition-colors">
                     <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
@@ -287,7 +287,7 @@ export default function AboutPage() {
       </section>
 
       {/* Previous Awardees */}
-      <section className="py-12 px-4 bg-slate-900/30">
+      <section className="py-12 px-4 bg-gray-50/30">
         <div className="max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -295,8 +295,8 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center mb-8"
           >
-            <h2 className="text-2xl font-bold text-white mb-2">Olympic Truce Award Recipients</h2>
-            <p className="text-slate-400">Honoring leaders who champion peace through sport</p>
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Olympic Truce Award Recipients</h2>
+            <p className="text-gray-600">Honoring leaders who champion peace through sport</p>
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -307,11 +307,11 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.02 }}
-                className="p-3 rounded-lg bg-slate-800/30 border border-slate-700/30"
+                className="p-3 rounded-lg bg-gray-100/30 border border-gray-200/30"
               >
-                <p className="font-medium text-white text-sm">{awardee.name}</p>
-                <p className="text-xs text-slate-400">{awardee.title}</p>
-                <p className="text-xs text-slate-500">{awardee.country}</p>
+                <p className="font-medium text-gray-900 text-sm">{awardee.name}</p>
+                <p className="text-xs text-gray-600">{awardee.title}</p>
+                <p className="text-xs text-gray-500">{awardee.country}</p>
               </motion.div>
             ))}
           </div>
@@ -325,15 +325,15 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="p-8 rounded-2xl bg-gradient-to-br from-purple-500/10 to-slate-900/50 border border-purple-500/30 text-center"
+            className="p-8 rounded-2xl bg-gradient-to-br from-purple-500/10 to-gray-50/50 border border-purple-500/30 text-center"
           >
-            <h2 className="text-xl font-bold text-white mb-4">The Olympic Truce Sculpture</h2>
-            <p className="text-slate-300 leading-relaxed mb-4">
+            <h2 className="text-xl font-bold text-gray-900 mb-4">The Olympic Truce Sculpture</h2>
+            <p className="text-gray-600 leading-relaxed mb-4">
               The Foundation's monument "Olympic Truce" by Rosa Serra (Spain, 2001) stands at the
               Olympic Museum in Lausanne, Switzerland — a permanent symbol of the world's oldest
               peace tradition.
             </p>
-            <p className="text-sm text-slate-500">
+            <p className="text-sm text-gray-500">
               Olympic Museum, Lausanne
             </p>
           </motion.div>
@@ -347,25 +347,25 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="p-8 rounded-2xl bg-slate-900/50 border border-slate-700/50 text-center"
+            className="p-8 rounded-2xl bg-gray-50/50 border border-gray-200/50 text-center"
           >
-            <h2 className="text-xl font-bold text-white mb-4">Contact</h2>
-            <div className="space-y-2 text-slate-400">
-              <p className="font-medium text-white">Truce Foundation</p>
+            <h2 className="text-xl font-bold text-gray-900 mb-4">Contact</h2>
+            <div className="space-y-2 text-gray-600">
+              <p className="font-medium text-gray-900">Truce Foundation</p>
               <p>451 Seven Ponds Towd Road</p>
               <p>Water Mill, NY 11976 USA</p>
               <p className="pt-2">
-                <a href="tel:+12123806975" className="text-blue-400 hover:text-blue-300">
+                <a href="tel:+12123806975" className="text-blue-600 hover:text-blue-300">
                   +1 (212) 380-6975
                 </a>
               </p>
               <p>
-                <a href="mailto:Hugh.Dugan@TruceFoundation.world" className="text-blue-400 hover:text-blue-300">
+                <a href="mailto:Hugh.Dugan@TruceFoundation.world" className="text-blue-600 hover:text-blue-300">
                   Hugh.Dugan@TruceFoundation.world
                 </a>
               </p>
               <p>
-                <a href="https://www.TruceFoundation.world" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">
+                <a href="https://www.TruceFoundation.world" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-300">
                   www.TruceFoundation.world
                 </a>
               </p>
@@ -375,7 +375,7 @@ export default function AboutPage() {
       </section>
 
       {/* Collaborating Organizations */}
-      <section className="py-12 px-4 bg-slate-900/30">
+      <section className="py-12 px-4 bg-gray-50/30">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -383,8 +383,8 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center mb-8"
           >
-            <h2 className="text-2xl font-bold text-white mb-2">Collaborating Organizations</h2>
-            <p className="text-slate-400">Partners advancing the Olympic Truce mission</p>
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Collaborating Organizations</h2>
+            <p className="text-gray-600">Partners advancing the Olympic Truce mission</p>
           </motion.div>
 
           <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12">
@@ -443,34 +443,34 @@ export default function AboutPage() {
       {/* Related Links */}
       <section className="py-12 px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-xl font-bold text-white mb-6 text-center">Explore More</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-6 text-center">Explore More</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <Link
               href="/history"
-              className="p-4 rounded-xl bg-slate-900/50 border border-slate-700/50 hover:border-blue-500/50 transition-colors group"
+              className="p-4 rounded-xl bg-gray-50/50 border border-gray-200/50 hover:border-blue-500/50 transition-colors group"
             >
-              <h3 className="font-semibold text-white group-hover:text-blue-400 transition-colors">
+              <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
                 Olympic Truce History
               </h3>
-              <p className="text-sm text-slate-400 mt-1">From ancient Greece to today</p>
+              <p className="text-sm text-gray-600 mt-1">From ancient Greece to today</p>
             </Link>
             <Link
               href="/co-sponsors"
-              className="p-4 rounded-xl bg-slate-900/50 border border-slate-700/50 hover:border-blue-500/50 transition-colors group"
+              className="p-4 rounded-xl bg-gray-50/50 border border-gray-200/50 hover:border-blue-500/50 transition-colors group"
             >
-              <h3 className="font-semibold text-white group-hover:text-blue-400 transition-colors">
+              <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
                 166 Co-Sponsors
               </h3>
-              <p className="text-sm text-slate-400 mt-1">Milano-Cortina 2026 resolution</p>
+              <p className="text-sm text-gray-600 mt-1">Milano-Cortina 2026 resolution</p>
             </Link>
             <Link
               href="/portal"
-              className="p-4 rounded-xl bg-slate-900/50 border border-slate-700/50 hover:border-blue-500/50 transition-colors group"
+              className="p-4 rounded-xl bg-gray-50/50 border border-gray-200/50 hover:border-blue-500/50 transition-colors group"
             >
-              <h3 className="font-semibold text-white group-hover:text-blue-400 transition-colors">
+              <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
                 Truce Portal
               </h3>
-              <p className="text-sm text-slate-400 mt-1">All resources and tools</p>
+              <p className="text-sm text-gray-600 mt-1">All resources and tools</p>
             </Link>
           </div>
         </div>

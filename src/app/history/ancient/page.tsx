@@ -78,7 +78,7 @@ const ANCIENT_MOMENTS: AncientMoment[] = [
 
 export default function AncientHistoryPage() {
   return (
-    <main className="min-h-screen bg-slate-950">
+    <main className="min-h-screen bg-white">
       <Header />
 
       {/* Hero Section */}
@@ -93,10 +93,10 @@ export default function AncientHistoryPage() {
               <span className="text-xl">🏛️</span>
               <span className="text-amber-300 text-sm font-medium">Ancient Era</span>
             </div>
-            <h1 className="text-4xl sm:text-5xl font-bold text-white">
+            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900">
               The Ancient Ekecheiria
             </h1>
-            <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               776 BC - 393 AD: Over 1,100 Years of Sacred Peace
             </p>
           </motion.div>
@@ -104,7 +104,7 @@ export default function AncientHistoryPage() {
       </section>
 
       {/* Origins Section */}
-      <section className="py-12 px-4 bg-slate-900/30">
+      <section className="py-12 px-4 bg-gray-50/30">
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             <motion.div
@@ -113,10 +113,10 @@ export default function AncientHistoryPage() {
               viewport={{ once: true }}
               className="p-6 rounded-2xl bg-gradient-to-br from-amber-500/10 to-amber-600/5 border border-amber-500/30"
             >
-              <h3 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-center gap-2">
                 <span>🏛️</span> Origins & Founders
               </h3>
-              <div className="space-y-3 text-sm text-slate-300">
+              <div className="space-y-3 text-sm text-gray-600">
                 <p>
                   Greece in the 8th century BC was suffering from constant wars and plague. <strong className="text-amber-300">King Iphitos of Elis</strong> sought
                   guidance from the Oracle of Delphi, who ordained that he "must renew the Olympic games."
@@ -125,7 +125,7 @@ export default function AncientHistoryPage() {
                   Iphitos enlisted <strong className="text-amber-300">King Cleisthenes of Pisa</strong> and the Spartan lawgiver <strong className="text-amber-300">Lycurgus</strong> to
                   forge a sacred peace pact. The treaty was inscribed on a bronze discus stored in the Temple of Hera at Olympia.
                 </p>
-                <p className="text-xs text-slate-500 italic">
+                <p className="text-xs text-gray-500 italic">
                   "The ekecheiria declared the sanctuary of Olympia and the territory of Elis to be inviolable during the Games." — Pausanias
                 </p>
               </div>
@@ -138,10 +138,10 @@ export default function AncientHistoryPage() {
               transition={{ delay: 0.1 }}
               className="p-6 rounded-2xl bg-gradient-to-br from-green-500/10 to-green-600/5 border border-green-500/30"
             >
-              <h3 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-center gap-2">
                 <span>📜</span> How It Worked
               </h3>
-              <div className="space-y-3 text-sm text-slate-300">
+              <div className="space-y-3 text-sm text-gray-600">
                 <p>
                   <strong className="text-green-300">Spondophoroi</strong> ("truce-bearers") - noble heralds crowned with olive, carrying the <em>kerykeion</em> (herald's staff) -
                   traveled three distinct circuits: <strong>Northern</strong> (Athens, Thebes, Macedonia, Black Sea), <strong>Eastern</strong> (Aegean, Ionia, Egypt), and <strong>Western</strong> (Sicily, Italy, Gaul). The announcement (<em>epangelia</em>) was a diplomatic test - refusing the heralds excluded a city from the Greek community.
@@ -149,7 +149,7 @@ export default function AncientHistoryPage() {
                 <p>
                   Duration evolved: <strong className="text-green-300">one month</strong> (Archaic, <em>hieromenia</em>) → <strong className="text-green-300">three months</strong> (Classical - one for travel, one for Games, one for return) → potentially <strong className="text-green-300">ten months</strong> in Hellenistic period for distant colonies.
                 </p>
-                <ul className="list-disc list-inside text-xs text-slate-400 space-y-1">
+                <ul className="list-disc list-inside text-xs text-gray-600 space-y-1">
                   <li>Elis declared <em>asylos</em> (sacred and inviolable) - a "mobile sanctuary" around pilgrims</li>
                   <li>Armed forces forbidden from entering the <em>Altis</em> (sanctuary); no weapons in sacred territory</li>
                   <li>Official delegations (<em>theoriai</em>) sent by cities received protected status</li>
@@ -166,10 +166,10 @@ export default function AncientHistoryPage() {
             viewport={{ once: true }}
             className="p-6 rounded-2xl bg-gradient-to-br from-purple-500/10 to-purple-600/5 border border-purple-500/30 mb-8"
           >
-            <h3 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
+            <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-center gap-2">
               <span>🎭</span> Religious & Cultural Significance
             </h3>
-            <div className="space-y-3 text-sm text-slate-300">
+            <div className="space-y-3 text-sm text-gray-600">
               <p>
                 The ekecheiria was fundamentally tied to <strong className="text-purple-300">Zeus</strong>, king of the Greek gods.
                 Waging war during Zeus's festival was seen as impious. Inside the Temple of Zeus stood a statue depicting King Iphitos
@@ -191,22 +191,22 @@ export default function AncientHistoryPage() {
             viewport={{ once: true }}
             className="p-6 rounded-2xl bg-gradient-to-br from-red-500/10 to-red-600/5 border border-red-500/30"
           >
-            <h3 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
+            <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-center gap-2">
               <span>⚖️</span> Enforcement: The Hellanodikai
             </h3>
-            <div className="grid md:grid-cols-2 gap-4 text-sm text-slate-300">
+            <div className="grid md:grid-cols-2 gap-4 text-sm text-gray-600">
               <div>
                 <p className="mb-2">
                   The <strong className="text-red-300">Hellanodikai</strong> (10 Elean judges, given 10 months of training before each Games) acted as the supreme court of the festival.
                   Enforcement relied on religious fear (<em>asebeia</em> - sacrilege) and social pressure - no "Olympic army" existed. Violators faced <strong className="text-red-300">exclusion</strong>, heavy fines
                   converted into bronze statues of Zeus called <strong className="text-red-300">Zanes</strong> - perpetual monuments to the violators' transgression lining the entrance to the stadium.
                 </p>
-                <p className="text-xs text-slate-400 mt-2">
+                <p className="text-xs text-gray-600 mt-2">
                   The "Host State Rule" held that the Truce was active the moment proclaimed in Elis - all participants bound from that date. Aristophanes' <em>Lysistrata</em> (411 BC) cites the Truce as evidence that even bitter enemies could find peaceful common ground.
                 </p>
               </div>
               <div>
-                <h4 className="font-medium text-white mb-2">The Spartan Precedent (420 BC)</h4>
+                <h4 className="font-medium text-gray-900 mb-2">The Spartan Precedent (420 BC)</h4>
                 <p>
                   Sparta deployed 1,000 hoplites to Lepreum after proclamation. Their legalistic defense (not yet announced <em>in Sparta</em>) was rejected.
                   Elis fined them <strong className="text-red-300">2,000 minae</strong> (2 minae per soldier - cost of a trireme fleet).
@@ -219,13 +219,13 @@ export default function AncientHistoryPage() {
       </section>
 
       {/* Timeline */}
-      <section className="py-12 px-4 bg-slate-900/30">
+      <section className="py-12 px-4 bg-gray-50/30">
         <div className="max-w-4xl mx-auto">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-2xl font-bold text-white mb-8 text-center"
+            className="text-2xl font-bold text-gray-900 mb-8 text-center"
           >
             Ancient Timeline
           </motion.h2>
@@ -233,7 +233,7 @@ export default function AncientHistoryPage() {
           <div className="space-y-4">
             {ANCIENT_MOMENTS.map((moment, index) => {
               const sigConfig = {
-                milestone: { bg: 'bg-blue-500/10', border: 'border-blue-500/30', icon: '📌', color: 'text-blue-300' },
+                milestone: { bg: 'bg-blue-600/10', border: 'border-blue-500/30', icon: '📌', color: 'text-blue-300' },
                 violation: { bg: 'bg-red-500/10', border: 'border-red-500/30', icon: '⚠️', color: 'text-red-300' },
                 symbolic: { bg: 'bg-amber-500/10', border: 'border-amber-500/30', icon: '✨', color: 'text-amber-300' },
               }[moment.significance];
@@ -254,9 +254,9 @@ export default function AncientHistoryPage() {
                         <span className={`font-bold ${sigConfig.color}`}>
                           {moment.year < 0 ? `${Math.abs(moment.year)} BC` : `${moment.year} AD`}
                         </span>
-                        <h4 className="font-semibold text-white">{moment.title}</h4>
+                        <h4 className="font-semibold text-gray-900">{moment.title}</h4>
                       </div>
-                      <p className="text-sm text-slate-300">{moment.description}</p>
+                      <p className="text-sm text-gray-600">{moment.description}</p>
                     </div>
                   </div>
                 </motion.div>
@@ -275,11 +275,11 @@ export default function AncientHistoryPage() {
             viewport={{ once: true }}
             className="text-center mb-8"
           >
-            <h2 className="text-2xl font-bold text-white mb-2 flex items-center justify-center gap-2">
+            <h2 className="text-2xl font-bold text-gray-900 mb-2 flex items-center justify-center gap-2">
               <span className="text-2xl">📜</span>
               Ancient Wisdom
             </h2>
-            <p className="text-slate-400">Voices from antiquity on the Olympic ideal</p>
+            <p className="text-gray-600">Voices from antiquity on the Olympic ideal</p>
           </motion.div>
 
           <div className="grid gap-4">
@@ -297,13 +297,13 @@ export default function AncientHistoryPage() {
                   <span className="text-lg">🏛️</span>
                   <span className="text-xs text-amber-300 font-medium">On the Truce</span>
                 </div>
-                <blockquote className="text-slate-300 italic mb-3 text-sm leading-relaxed">
+                <blockquote className="text-gray-600 italic mb-3 text-sm leading-relaxed">
                   "{quote.text}"
                 </blockquote>
                 <div className="flex items-center justify-between">
                   <div>
-                    <span className="text-white font-medium text-sm">{quote.author}</span>
-                    <span className="text-slate-500 text-xs ml-2">({quote.authorDates})</span>
+                    <span className="text-gray-900 font-medium text-sm">{quote.author}</span>
+                    <span className="text-gray-500 text-xs ml-2">({quote.authorDates})</span>
                   </div>
                   {quote.sourceUrl ? (
                     <a
@@ -315,7 +315,7 @@ export default function AncientHistoryPage() {
                       {quote.source} ↗
                     </a>
                   ) : (
-                    <span className="text-xs text-slate-500">{quote.source}</span>
+                    <span className="text-xs text-gray-500">{quote.source}</span>
                   )}
                 </div>
               </motion.div>
@@ -341,12 +341,12 @@ export default function AncientHistoryPage() {
                       <span className="text-lg">{config.icon}</span>
                       <span className={`text-xs font-medium ${config.labelColor}`}>{config.label}</span>
                     </div>
-                    <blockquote className="text-slate-300 italic text-sm leading-relaxed mb-2">
+                    <blockquote className="text-gray-600 italic text-sm leading-relaxed mb-2">
                       "{quote.text}"
                     </blockquote>
                     <div className="text-xs">
-                      <span className="text-white font-medium">{quote.author}</span>
-                      <span className="text-slate-500 ml-1">— {quote.source}</span>
+                      <span className="text-gray-900 font-medium">{quote.author}</span>
+                      <span className="text-gray-500 ml-1">— {quote.source}</span>
                     </div>
                   </motion.div>
                 );
@@ -362,7 +362,7 @@ export default function AncientHistoryPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/history"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white font-medium rounded-xl transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-900 font-medium rounded-xl transition-colors"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -371,7 +371,7 @@ export default function AncientHistoryPage() {
             </Link>
             <Link
               href="/history/modern"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-medium rounded-xl transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-600 text-gray-900 font-medium rounded-xl transition-colors"
             >
               Continue to Modern Era
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -385,8 +385,8 @@ export default function AncientHistoryPage() {
       {/* Sources */}
       <section className="py-8 px-4">
         <div className="max-w-4xl mx-auto">
-          <h3 className="text-sm font-semibold text-slate-500 mb-4 text-center">Ancient Sources</h3>
-          <div className="flex flex-wrap justify-center gap-4 text-xs text-slate-500">
+          <h3 className="text-sm font-semibold text-gray-500 mb-4 text-center">Ancient Sources</h3>
+          <div className="flex flex-wrap justify-center gap-4 text-xs text-gray-500">
             <a href="http://www.perseus.tufts.edu/hopper/text?doc=Paus.+5.4" target="_blank" rel="noopener noreferrer" className="hover:text-amber-300 transition-colors">
               Pausanias
             </a>
@@ -407,8 +407,8 @@ export default function AncientHistoryPage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-4 border-t border-slate-800/50">
-        <div className="max-w-6xl mx-auto text-center text-slate-500 text-sm">
+      <footer className="py-8 px-4 border-t border-gray-200/50">
+        <div className="max-w-6xl mx-auto text-center text-gray-500 text-sm">
           <p>&copy; {new Date().getFullYear()} Truce Foundation. All rights reserved.</p>
         </div>
       </footer>

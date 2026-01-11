@@ -90,19 +90,19 @@ function getTrendIcon(trend: string) {
     case 'down':
       return <span className="text-green-400">&#x25BC;</span>;
     case 'new':
-      return <span className="text-blue-400 text-xs">NEW</span>;
+      return <span className="text-blue-600 text-xs">NEW</span>;
     default:
-      return <span className="text-slate-500">&#x2014;</span>;
+      return <span className="text-gray-500">&#x2014;</span>;
   }
 }
 
 function getCrisisColor(level: string | null) {
-  if (!level) return 'bg-slate-700';
+  if (!level) return 'bg-gray-200';
   const l = level.toLowerCase();
   if (l.includes('critical') || l.includes('high')) return 'bg-red-900/50 text-red-300';
   if (l.includes('moderate') || l.includes('medium')) return 'bg-orange-900/50 text-orange-300';
   if (l.includes('low')) return 'bg-yellow-900/50 text-yellow-300';
-  return 'bg-slate-700 text-slate-300';
+  return 'bg-gray-200 text-gray-600';
 }
 
 export default function LeaderboardPage() {
@@ -254,7 +254,7 @@ export default function LeaderboardPage() {
   }, [timeFilter, sourceFilter]);
 
   return (
-    <main className="min-h-screen bg-slate-950">
+    <main className="min-h-screen bg-white">
       <Header />
 
       <div className="pt-24 pb-8 px-4">
@@ -265,8 +265,8 @@ export default function LeaderboardPage() {
             animate={{ opacity: 1, y: 0 }}
             className="mb-8"
           >
-            <h1 className="text-3xl font-bold text-white mb-2">Country Compliance Leaderboard</h1>
-            <p className="text-slate-400">
+            <h1 className="text-3xl font-bold text-gray-900 mb-2">Country Compliance Leaderboard</h1>
+            <p className="text-gray-600">
               Countries ranked by total incidents during the selected time period.
               Higher rank indicates more violations of peaceful conditions.
             </p>
@@ -282,8 +282,8 @@ export default function LeaderboardPage() {
             {/* Data Source Filter */}
             <div className="flex flex-col gap-3">
               <div className="flex flex-col md:flex-row md:items-center gap-3">
-                <span className="text-sm text-slate-400">Data Source:</span>
-                <div className="flex gap-2 bg-slate-900/50 p-1 rounded-lg">
+                <span className="text-sm text-gray-600">Data Source:</span>
+                <div className="flex gap-2 bg-gray-50/50 p-1 rounded-lg">
                   {SOURCE_PRESETS.map((source) => (
                     <button
                       key={source.value}
@@ -291,10 +291,10 @@ export default function LeaderboardPage() {
                       title={source.methodology}
                       className={`px-4 py-2 text-sm rounded-md transition-colors ${
                         sourceFilter === source.value
-                          ? source.value === 'ACLED' ? 'bg-blue-600 text-white'
-                            : source.value === 'UCDP' ? 'bg-purple-600 text-white'
-                            : 'bg-blue-600 text-white'
-                          : 'text-slate-400 hover:text-white hover:bg-slate-800'
+                          ? source.value === 'ACLED' ? 'bg-blue-600 text-gray-900'
+                            : source.value === 'UCDP' ? 'bg-purple-600 text-gray-900'
+                            : 'bg-blue-600 text-gray-900'
+                          : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
                       }`}
                     >
                       {source.label}
@@ -304,15 +304,15 @@ export default function LeaderboardPage() {
               </div>
               {/* Show methodology info for selected source */}
               <div className={`text-xs p-2 rounded-lg border ${
-                sourceFilter === 'ACLED' ? 'bg-blue-900/20 border-blue-800/50 text-blue-300'
+                sourceFilter === 'ACLED' ? 'bg-blue-900/20 border-blue-600/50 text-blue-300'
                 : sourceFilter === 'UCDP' ? 'bg-purple-900/20 border-purple-800/50 text-purple-300'
-                : 'bg-slate-800/50 border-slate-700/50 text-slate-400'
+                : 'bg-gray-100/50 border-gray-200/50 text-gray-600'
               }`}>
                 <span className="font-medium">
                   {SOURCE_PRESETS.find(s => s.value === sourceFilter)?.description}
                 </span>
                 <span className="mx-2">•</span>
-                <span className="text-slate-500">
+                <span className="text-gray-500">
                   {SOURCE_PRESETS.find(s => s.value === sourceFilter)?.methodology}
                 </span>
               </div>
@@ -321,7 +321,7 @@ export default function LeaderboardPage() {
             {/* Time Filter & Export Row */}
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
               {/* Time Filter Buttons - only show when not using source presets */}
-              <div className="flex gap-2 bg-slate-900/50 p-1 rounded-lg">
+              <div className="flex gap-2 bg-gray-50/50 p-1 rounded-lg">
                 {TIME_FILTERS.map((filter) => (
                   <button
                     key={filter.value}
@@ -329,10 +329,10 @@ export default function LeaderboardPage() {
                     disabled={sourceFilter !== 'all'}
                     className={`px-4 py-2 text-sm rounded-md transition-colors ${
                       timeFilter === filter.value && sourceFilter === 'all'
-                        ? 'bg-blue-600 text-white'
+                        ? 'bg-blue-600 text-gray-900'
                         : sourceFilter !== 'all'
-                        ? 'text-slate-600 cursor-not-allowed'
-                        : 'text-slate-400 hover:text-white hover:bg-slate-800'
+                        ? 'text-gray-600 cursor-not-allowed'
+                        : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
                     }`}
                   >
                     {filter.label}
@@ -343,10 +343,10 @@ export default function LeaderboardPage() {
               {/* Export Buttons */}
               {data && (
                 <div className="flex items-center gap-2">
-                  <span className="text-xs text-slate-500 mr-1">Export:</span>
+                  <span className="text-xs text-gray-500 mr-1">Export:</span>
                   <button
                     onClick={exportCSV}
-                    className="flex items-center gap-1.5 px-3 py-1.5 text-xs text-slate-400 hover:text-white bg-slate-800/50 hover:bg-slate-800 border border-slate-700 rounded-lg transition-colors"
+                    className="flex items-center gap-1.5 px-3 py-1.5 text-xs text-gray-600 hover:text-gray-900 bg-gray-100/50 hover:bg-gray-100 border border-gray-200 rounded-lg transition-colors"
                   >
                     <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -355,7 +355,7 @@ export default function LeaderboardPage() {
                   </button>
                   <button
                     onClick={exportJSON}
-                    className="flex items-center gap-1.5 px-3 py-1.5 text-xs text-slate-400 hover:text-white bg-slate-800/50 hover:bg-slate-800 border border-slate-700 rounded-lg transition-colors"
+                    className="flex items-center gap-1.5 px-3 py-1.5 text-xs text-gray-600 hover:text-gray-900 bg-gray-100/50 hover:bg-gray-100 border border-gray-200 rounded-lg transition-colors"
                   >
                     <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -375,23 +375,23 @@ export default function LeaderboardPage() {
               transition={{ delay: 0.15 }}
               className="grid grid-cols-3 gap-4 mb-8"
             >
-              <div className="bg-slate-900/50 border border-slate-800/50 rounded-xl p-5 text-center">
-                <div className="text-3xl font-bold text-white mb-1">
+              <div className="bg-gray-50/50 border border-gray-200/50 rounded-xl p-5 text-center">
+                <div className="text-3xl font-bold text-gray-900 mb-1">
                   {data.totals.total_incidents.toLocaleString()}
                 </div>
-                <div className="text-sm text-slate-400">Total Incidents</div>
+                <div className="text-sm text-gray-600">Total Incidents</div>
               </div>
-              <div className="bg-slate-900/50 border border-slate-800/50 rounded-xl p-5 text-center">
-                <div className="text-3xl font-bold text-blue-400 mb-1">
+              <div className="bg-gray-50/50 border border-gray-200/50 rounded-xl p-5 text-center">
+                <div className="text-3xl font-bold text-blue-600 mb-1">
                   {data.totals.total_countries}
                 </div>
-                <div className="text-sm text-slate-400">Countries Affected</div>
+                <div className="text-sm text-gray-600">Countries Affected</div>
               </div>
-              <div className="bg-slate-900/50 border border-slate-800/50 rounded-xl p-5 text-center">
+              <div className="bg-gray-50/50 border border-gray-200/50 rounded-xl p-5 text-center">
                 <div className="text-3xl font-bold text-red-400 mb-1">
                   {data.totals.total_critical.toLocaleString()}
                 </div>
-                <div className="text-sm text-slate-400">Critical Incidents</div>
+                <div className="text-sm text-gray-600">Critical Incidents</div>
               </div>
             </motion.div>
           )}
@@ -416,12 +416,12 @@ export default function LeaderboardPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="bg-slate-900/50 border border-slate-800/50 rounded-xl overflow-hidden"
+              className="bg-gray-50/50 border border-gray-200/50 rounded-xl overflow-hidden"
             >
               <div className="overflow-x-auto">
                 <table className="w-full">
                   <thead>
-                    <tr className="border-b border-slate-700 text-left text-sm text-slate-400">
+                    <tr className="border-b border-gray-200 text-left text-sm text-gray-600">
                       <th className="px-4 py-3 w-16">Rank</th>
                       <th className="px-4 py-3 w-12"></th>
                       <th className="px-4 py-3">Country</th>
@@ -442,14 +442,14 @@ export default function LeaderboardPage() {
                         onClick={() => setSelectedCountry(
                           selectedCountry === country.country_iso3 ? null : country.country_iso3
                         )}
-                        className={`border-b border-slate-800/50 hover:bg-slate-800/30 cursor-pointer transition-colors ${
-                          selectedCountry === country.country_iso3 ? 'bg-slate-800/50' : ''
+                        className={`border-b border-gray-200/50 hover:bg-gray-100/30 cursor-pointer transition-colors ${
+                          selectedCountry === country.country_iso3 ? 'bg-gray-100/50' : ''
                         }`}
                       >
                         <td className="px-4 py-4">
-                          <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold text-white ${
+                          <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold text-gray-900 ${
                             country.rank <= 3 ? 'bg-red-600' :
-                            country.rank <= 10 ? 'bg-orange-600' : 'bg-slate-700'
+                            country.rank <= 10 ? 'bg-orange-600' : 'bg-gray-200'
                           }`}>
                             {country.rank}
                           </div>
@@ -458,11 +458,11 @@ export default function LeaderboardPage() {
                           {getTrendIcon(country.trend)}
                         </td>
                         <td className="px-4 py-4">
-                          <div className="font-medium text-white">{country.country_name}</div>
-                          <div className="text-xs text-slate-500">{country.country_iso3}</div>
+                          <div className="font-medium text-gray-900">{country.country_name}</div>
+                          <div className="text-xs text-gray-500">{country.country_iso3}</div>
                         </td>
                         <td className="px-4 py-4 text-right">
-                          <div className="text-lg font-bold text-white">
+                          <div className="text-lg font-bold text-gray-900">
                             {country.total_incidents.toLocaleString()}
                           </div>
                         </td>
@@ -477,7 +477,7 @@ export default function LeaderboardPage() {
                               {country.critical_incidents}
                             </span>
                           ) : (
-                            <span className="text-slate-500">-</span>
+                            <span className="text-gray-500">-</span>
                           )}
                         </td>
                         <td className="px-4 py-4 text-center">
@@ -486,14 +486,14 @@ export default function LeaderboardPage() {
                               {country.crisis_level}
                             </span>
                           ) : (
-                            <span className="text-slate-500">-</span>
+                            <span className="text-gray-500">-</span>
                           )}
                         </td>
                         <td className="px-4 py-4 text-center">
                           {country.gpi_rank ? (
-                            <span className="text-slate-300">#{country.gpi_rank}</span>
+                            <span className="text-gray-600">#{country.gpi_rank}</span>
                           ) : (
-                            <span className="text-slate-500">-</span>
+                            <span className="text-gray-500">-</span>
                           )}
                         </td>
                       </motion.tr>
@@ -509,30 +509,30 @@ export default function LeaderboardPage() {
             <motion.div
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
-              className="mt-4 bg-slate-900/50 border border-slate-800/50 rounded-xl p-6"
+              className="mt-4 bg-gray-50/50 border border-gray-200/50 rounded-xl p-6"
             >
               {(() => {
                 const country = data.rankings.find(c => c.country_iso3 === selectedCountry);
                 if (!country) return null;
                 return (
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-4">{country.country_name} - Incident Breakdown</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-4">{country.country_name} - Incident Breakdown</h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                      <div className="bg-slate-800/50 rounded-lg p-4">
+                      <div className="bg-gray-100/50 rounded-lg p-4">
                         <div className="text-2xl font-bold text-red-400">{country.conflict_incidents}</div>
-                        <div className="text-sm text-slate-400">Armed Conflicts</div>
+                        <div className="text-sm text-gray-600">Armed Conflicts</div>
                       </div>
-                      <div className="bg-slate-800/50 rounded-lg p-4">
+                      <div className="bg-gray-100/50 rounded-lg p-4">
                         <div className="text-2xl font-bold text-yellow-400">{country.humanitarian_access_incidents}</div>
-                        <div className="text-sm text-slate-400">Humanitarian Access</div>
+                        <div className="text-sm text-gray-600">Humanitarian Access</div>
                       </div>
-                      <div className="bg-slate-800/50 rounded-lg p-4">
+                      <div className="bg-gray-100/50 rounded-lg p-4">
                         <div className="text-2xl font-bold text-orange-400">{country.truce_violations}</div>
-                        <div className="text-sm text-slate-400">Truce Violations</div>
+                        <div className="text-sm text-gray-600">Truce Violations</div>
                       </div>
-                      <div className="bg-slate-800/50 rounded-lg p-4">
+                      <div className="bg-gray-100/50 rounded-lg p-4">
                         <div className="text-2xl font-bold text-green-400">{country.positive_measures}</div>
-                        <div className="text-sm text-slate-400">Positive Measures</div>
+                        <div className="text-sm text-gray-600">Positive Measures</div>
                       </div>
                     </div>
                     <div className="mt-4 flex gap-4">
@@ -540,13 +540,13 @@ export default function LeaderboardPage() {
                         href={`${TRUCE_INDEX_URL}/?country=${country.country_iso3}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-sm transition-colors text-white"
+                        className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-sm transition-colors text-gray-900"
                       >
                         View on Map
                       </a>
                       {country.gpi_score && (
-                        <div className="px-4 py-2 bg-slate-800 rounded-lg text-sm text-slate-300">
-                          GPI Score: <span className="font-bold text-white">{country.gpi_score.toFixed(2)}</span>
+                        <div className="px-4 py-2 bg-gray-100 rounded-lg text-sm text-gray-600">
+                          GPI Score: <span className="font-bold text-gray-900">{country.gpi_score.toFixed(2)}</span>
                         </div>
                       )}
                     </div>
@@ -561,7 +561,7 @@ export default function LeaderboardPage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
-            className="mt-8 text-center text-sm text-slate-500"
+            className="mt-8 text-center text-sm text-gray-500"
           >
             {data && (
               <p>
@@ -570,15 +570,15 @@ export default function LeaderboardPage() {
               </p>
             )}
             <p className="mt-2">
-              <Link href="/briefing" className="text-blue-400 hover:underline">
+              <Link href="/briefing" className="text-blue-600 hover:underline">
                 Daily Briefing
               </Link>
               {' | '}
-              <Link href="/press" className="text-blue-400 hover:underline">
+              <Link href="/press" className="text-blue-600 hover:underline">
                 Press & Media
               </Link>
               {' | '}
-              <a href={TRUCE_INDEX_URL} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">
+              <a href={TRUCE_INDEX_URL} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
                 Live Map
               </a>
             </p>

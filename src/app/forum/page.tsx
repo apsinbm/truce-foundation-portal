@@ -112,7 +112,7 @@ const SAMPLE_THREADS: DiscussionThread[] = [
 
 const getCategoryColor = (color: string) => {
   const colors: Record<string, string> = {
-    blue: 'bg-blue-500/10 border-blue-500/30 hover:border-blue-500/50',
+    blue: 'bg-blue-600/10 border-blue-500/30 hover:border-blue-500/50',
     purple: 'bg-purple-500/10 border-purple-500/30 hover:border-purple-500/50',
     green: 'bg-green-500/10 border-green-500/30 hover:border-green-500/50',
     amber: 'bg-amber-500/10 border-amber-500/30 hover:border-amber-500/50',
@@ -124,7 +124,7 @@ const getCategoryColor = (color: string) => {
 
 const getCategoryTextColor = (color: string) => {
   const colors: Record<string, string> = {
-    blue: 'text-blue-400',
+    blue: 'text-blue-600',
     purple: 'text-purple-400',
     green: 'text-green-400',
     amber: 'text-amber-400',
@@ -152,7 +152,7 @@ export default function ForumPage() {
     : SAMPLE_THREADS;
 
   return (
-    <main className="min-h-screen bg-slate-950">
+    <main className="min-h-screen bg-white">
       <Header />
 
       {/* Hero */}
@@ -163,10 +163,10 @@ export default function ForumPage() {
             animate={{ opacity: 1, y: 0 }}
             className="space-y-4"
           >
-            <h1 className="text-4xl sm:text-5xl font-bold text-white">
+            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900">
               Truce Forum
             </h1>
-            <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Join the global conversation about peace, sport, and the Olympic Truce
             </p>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-sm">
@@ -186,8 +186,8 @@ export default function ForumPage() {
             viewport={{ once: true }}
             className="mb-6"
           >
-            <h2 className="text-2xl font-bold text-white mb-2">Discussion Categories</h2>
-            <p className="text-slate-400">Browse topics by category or view all discussions</p>
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Discussion Categories</h2>
+            <p className="text-gray-600">Browse topics by category or view all discussions</p>
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -208,11 +208,11 @@ export default function ForumPage() {
                     {category.name}
                   </h3>
                 </div>
-                <p className="text-sm text-slate-400 mb-3">{category.description}</p>
-                <div className="flex items-center justify-between text-xs text-slate-500">
+                <p className="text-sm text-gray-600 mb-3">{category.description}</p>
+                <div className="flex items-center justify-between text-xs text-gray-500">
                   <span>{category.topicCount} topics</span>
                   {selectedCategory === category.id && (
-                    <span className="text-white">Viewing</span>
+                    <span className="text-gray-900">Viewing</span>
                   )}
                 </div>
               </motion.button>
@@ -222,7 +222,7 @@ export default function ForumPage() {
           {selectedCategory && (
             <button
               onClick={() => setSelectedCategory(null)}
-              className="mt-4 text-sm text-slate-400 hover:text-white transition-colors"
+              className="mt-4 text-sm text-gray-600 hover:text-gray-900 transition-colors"
             >
               Clear filter
             </button>
@@ -240,18 +240,18 @@ export default function ForumPage() {
             className="mb-6 flex items-center justify-between"
           >
             <div>
-              <h2 className="text-2xl font-bold text-white mb-1">
+              <h2 className="text-2xl font-bold text-gray-900 mb-1">
                 {selectedCategory
                   ? FORUM_CATEGORIES.find(c => c.id === selectedCategory)?.name
                   : 'All Discussions'}
               </h2>
-              <p className="text-slate-400 text-sm">
+              <p className="text-gray-600 text-sm">
                 {filteredThreads.length} topic{filteredThreads.length !== 1 ? 's' : ''}
               </p>
             </div>
             <button
               disabled
-              className="px-4 py-2 bg-slate-800 text-slate-500 rounded-lg text-sm cursor-not-allowed"
+              className="px-4 py-2 bg-gray-100 text-gray-500 rounded-lg text-sm cursor-not-allowed"
             >
               New Topic (Coming Soon)
             </button>
@@ -267,7 +267,7 @@ export default function ForumPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.05 }}
-                  className="p-4 rounded-xl bg-slate-900/50 border border-slate-700/50 hover:border-slate-600/50 transition-colors"
+                  className="p-4 rounded-xl bg-gray-50/50 border border-gray-200/50 hover:border-gray-400/50 transition-colors"
                 >
                   <div className="flex items-start gap-4">
                     <div className="flex-1">
@@ -281,8 +281,8 @@ export default function ForumPage() {
                           {category?.name}
                         </span>
                       </div>
-                      <h3 className="font-semibold text-white mb-1">{thread.title}</h3>
-                      <div className="flex items-center gap-4 text-xs text-slate-500">
+                      <h3 className="font-semibold text-gray-900 mb-1">{thread.title}</h3>
+                      <div className="flex items-center gap-4 text-xs text-gray-500">
                         <span>by {thread.author}</span>
                         <span>{thread.replies} replies</span>
                         <span>{thread.views} views</span>
@@ -296,7 +296,7 @@ export default function ForumPage() {
           </div>
 
           {filteredThreads.length === 0 && (
-            <div className="text-center py-12 text-slate-500">
+            <div className="text-center py-12 text-gray-500">
               No topics in this category yet. Be the first to start a discussion!
             </div>
           )}
@@ -304,15 +304,15 @@ export default function ForumPage() {
       </section>
 
       {/* Community Guidelines Preview */}
-      <section className="py-12 px-4 bg-slate-900/30">
+      <section className="py-12 px-4 bg-gray-50/30">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="p-6 rounded-2xl bg-slate-900/50 border border-slate-700/50"
+            className="p-6 rounded-2xl bg-gray-50/50 border border-gray-200/50"
           >
-            <h2 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+            <h2 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
               <span className="text-2xl">📜</span>
               Community Guidelines
             </h2>
@@ -320,29 +320,29 @@ export default function ForumPage() {
               <div className="space-y-3">
                 <div className="flex items-start gap-2">
                   <span className="text-green-400">✓</span>
-                  <span className="text-slate-300">Respectful dialogue across perspectives</span>
+                  <span className="text-gray-600">Respectful dialogue across perspectives</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <span className="text-green-400">✓</span>
-                  <span className="text-slate-300">Evidence-based discussions welcomed</span>
+                  <span className="text-gray-600">Evidence-based discussions welcomed</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <span className="text-green-400">✓</span>
-                  <span className="text-slate-300">Share personal stories and experiences</span>
+                  <span className="text-gray-600">Share personal stories and experiences</span>
                 </div>
               </div>
               <div className="space-y-3">
                 <div className="flex items-start gap-2">
                   <span className="text-red-400">✗</span>
-                  <span className="text-slate-300">No hate speech or personal attacks</span>
+                  <span className="text-gray-600">No hate speech or personal attacks</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <span className="text-red-400">✗</span>
-                  <span className="text-slate-300">No misinformation or propaganda</span>
+                  <span className="text-gray-600">No misinformation or propaganda</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <span className="text-red-400">✗</span>
-                  <span className="text-slate-300">No spam or commercial promotion</span>
+                  <span className="text-gray-600">No spam or commercial promotion</span>
                 </div>
               </div>
             </div>
@@ -359,10 +359,10 @@ export default function ForumPage() {
             viewport={{ once: true }}
             className="p-8 rounded-2xl bg-gradient-to-br from-blue-500/20 to-purple-500/10 border border-blue-500/30 text-center"
           >
-            <h2 className="text-2xl font-bold text-white mb-4">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">
               Get Early Access
             </h2>
-            <p className="text-slate-400 mb-6">
+            <p className="text-gray-600 mb-6">
               Be among the first to join the conversation when the Forum launches in January 2026.
               We'll notify you when it's ready.
             </p>
@@ -378,12 +378,12 @@ export default function ForumPage() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-blue-500"
+                  className="flex-1 px-4 py-3 bg-gray-100 border border-gray-200 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:border-blue-500"
                   required
                 />
                 <button
                   type="submit"
-                  className="px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-medium rounded-lg transition-colors"
+                  className="px-6 py-3 bg-blue-600 hover:bg-blue-600 text-gray-900 font-medium rounded-lg transition-colors"
                 >
                   Notify Me
                 </button>
@@ -396,42 +396,42 @@ export default function ForumPage() {
       {/* Related Links */}
       <section className="py-12 px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-xl font-bold text-white mb-6 text-center">Related Resources</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-6 text-center">Related Resources</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <Link
               href="/stories"
-              className="p-4 rounded-xl bg-slate-900/50 border border-slate-700/50 hover:border-blue-500/50 transition-colors group"
+              className="p-4 rounded-xl bg-gray-50/50 border border-gray-200/50 hover:border-blue-500/50 transition-colors group"
             >
-              <h3 className="font-semibold text-white group-hover:text-blue-400 transition-colors">
+              <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
                 Youth Stories
               </h3>
-              <p className="text-sm text-slate-400 mt-1">First-person accounts</p>
+              <p className="text-sm text-gray-600 mt-1">First-person accounts</p>
             </Link>
             <Link
               href="/candles"
-              className="p-4 rounded-xl bg-slate-900/50 border border-slate-700/50 hover:border-blue-500/50 transition-colors group"
+              className="p-4 rounded-xl bg-gray-50/50 border border-gray-200/50 hover:border-blue-500/50 transition-colors group"
             >
-              <h3 className="font-semibold text-white group-hover:text-blue-400 transition-colors">
+              <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
                 Global Candle Wall
               </h3>
-              <p className="text-sm text-slate-400 mt-1">Light a candle for peace</p>
+              <p className="text-sm text-gray-600 mt-1">Light a candle for peace</p>
             </Link>
             <Link
               href="/advocacy"
-              className="p-4 rounded-xl bg-slate-900/50 border border-slate-700/50 hover:border-blue-500/50 transition-colors group"
+              className="p-4 rounded-xl bg-gray-50/50 border border-gray-200/50 hover:border-blue-500/50 transition-colors group"
             >
-              <h3 className="font-semibold text-white group-hover:text-blue-400 transition-colors">
+              <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
                 Advocacy Toolkit
               </h3>
-              <p className="text-sm text-slate-400 mt-1">Resources to spread the word</p>
+              <p className="text-sm text-gray-600 mt-1">Resources to spread the word</p>
             </Link>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-4 border-t border-slate-800/50">
-        <div className="max-w-6xl mx-auto text-center text-slate-500 text-sm">
+      <footer className="py-8 px-4 border-t border-gray-200/50">
+        <div className="max-w-6xl mx-auto text-center text-gray-500 text-sm">
           <p>&copy; {new Date().getFullYear()} Truce Foundation. All rights reserved.</p>
         </div>
       </footer>
