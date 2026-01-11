@@ -8,9 +8,9 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative border-t border-slate-800">
+    <footer className="relative border-t border-gray-200">
       {/* Main Footer */}
-      <div className="bg-slate-900/50 py-8 px-4">
+      <div className="bg-gray-50 py-8 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Logo & Description */}
@@ -23,41 +23,41 @@ export default function Footer() {
                   height={40}
                   className="rounded-full"
                 />
-                <span className="font-bold text-white">Truce Foundation</span>
+                <span className="font-bold text-gray-900">Truce Foundation</span>
               </div>
-              <p className="text-sm text-slate-400 max-w-xs">
+              <p className="text-sm text-gray-600 max-w-xs">
                 Transforming the Olympic Truce tradition into meaningful action for peace.
               </p>
             </div>
 
             {/* Quick Links */}
             <div className="space-y-4">
-              <h4 className="font-semibold text-white text-sm uppercase tracking-wider">
+              <h4 className="font-semibold text-gray-900 text-sm uppercase tracking-wider">
                 Quick Links
               </h4>
               <ul className="space-y-2">
                 <li>
-                  <a href="/about" className="text-sm text-slate-400 hover:text-white transition-colors">
+                  <a href="/about" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
                     About Us
                   </a>
                 </li>
                 <li>
-                  <a href={TRUCE_INDEX_URL} target="_blank" rel="noopener noreferrer" className="text-sm text-slate-400 hover:text-white transition-colors">
+                  <a href={TRUCE_INDEX_URL} target="_blank" rel="noopener noreferrer" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
                     Compliance Index
                   </a>
                 </li>
                 <li>
-                  <a href="/advocacy" className="text-sm text-slate-400 hover:text-white transition-colors">
+                  <a href="/advocacy" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
                     Advocacy
                   </a>
                 </li>
                 <li>
-                  <a href="/reports" className="text-sm text-slate-400 hover:text-white transition-colors">
+                  <a href="/reports" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
                     Reports
                   </a>
                 </li>
                 <li>
-                  <a href="/press" className="text-sm text-slate-400 hover:text-white transition-colors">
+                  <a href="/press" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
                     Press & Media
                   </a>
                 </li>
@@ -66,13 +66,13 @@ export default function Footer() {
 
             {/* Social & Contact */}
             <div className="space-y-4">
-              <h4 className="font-semibold text-white text-sm uppercase tracking-wider">
+              <h4 className="font-semibold text-gray-900 text-sm uppercase tracking-wider">
                 Connect
               </h4>
               <div className="flex gap-4">
                 {/* Social icons */}
                 <span
-                  className="w-10 h-10 rounded-full bg-slate-800/50 flex items-center justify-center text-slate-500 cursor-not-allowed"
+                  className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 cursor-not-allowed"
                   title="Coming soon"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -80,7 +80,7 @@ export default function Footer() {
                   </svg>
                 </span>
                 <span
-                  className="w-10 h-10 rounded-full bg-slate-800/50 flex items-center justify-center text-slate-500 cursor-not-allowed"
+                  className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 cursor-not-allowed"
                   title="Coming soon"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -88,7 +88,7 @@ export default function Footer() {
                   </svg>
                 </span>
                 <span
-                  className="w-10 h-10 rounded-full bg-slate-800/50 flex items-center justify-center text-slate-500 cursor-not-allowed"
+                  className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 cursor-not-allowed"
                   title="Coming soon"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -100,16 +100,16 @@ export default function Footer() {
           </div>
 
           {/* Bottom bar */}
-          <div className="mt-8 pt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p className="text-xs text-slate-500">
+          <div className="mt-8 pt-8 border-t border-gray-200 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p className="text-xs text-gray-500">
               © {currentYear} Truce Foundation. All rights reserved.
             </p>
             <div className="flex items-center gap-6">
               <DataAccuracyChecklist />
-              <span className="text-xs text-slate-600 cursor-not-allowed" title="Coming soon">
+              <span className="text-xs text-gray-500 cursor-not-allowed" title="Coming soon">
                 Privacy Policy
               </span>
-              <span className="text-xs text-slate-600 cursor-not-allowed" title="Coming soon">
+              <span className="text-xs text-gray-500 cursor-not-allowed" title="Coming soon">
                 Terms of Service
               </span>
             </div>
