@@ -265,7 +265,7 @@ export default function LeaderboardPage() {
             animate={{ opacity: 1, y: 0 }}
             className="mb-8"
           >
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">Country Compliance Leaderboard</h1>
+            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-2">Country Compliance Leaderboard</h1>
             <p className="text-gray-600">
               Countries ranked by total incidents during the selected time period.
               Higher rank indicates more violations of peaceful conditions.
@@ -373,7 +373,7 @@ export default function LeaderboardPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.15 }}
-              className="grid grid-cols-3 gap-4 mb-8"
+              className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8"
             >
               <div className="bg-gray-50/50 border border-gray-200/50 rounded-xl p-5 text-center">
                 <div className="text-3xl font-bold text-gray-900 mb-1">

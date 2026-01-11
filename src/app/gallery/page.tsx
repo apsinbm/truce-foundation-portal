@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import ImageGallery, { GalleryImage } from '@/components/ImageGallery';
 import Link from 'next/link';
+import Header from '@/components/Header';
 
 // Categories for filtering
 const CATEGORIES = ['all', 'events', 'awardees', 'sculpture', 'ceremonies'] as const;
@@ -36,8 +37,9 @@ export default function GalleryPage() {
     : photos.filter(photo => photo.category === activeCategory);
 
   return (
-    <main className="min-h-screen bg-white pt-32 pb-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+    <main className="min-h-screen bg-white">
+      <Header />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-32 pb-12">
         {/* Hero Section */}
         <div className="text-center py-12 md:py-16">
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
@@ -56,7 +58,7 @@ export default function GalleryPage() {
               onClick={() => setActiveCategory(category)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                 activeCategory === category
-                  ? 'bg-blue-600 text-gray-900'
+                  ? 'bg-blue-600 text-white hover:bg-blue-700'
                   : 'bg-gray-100 text-gray-600 hover:bg-gray-200 hover:text-gray-900'
               }`}
             >
