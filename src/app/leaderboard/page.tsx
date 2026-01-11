@@ -291,9 +291,9 @@ export default function LeaderboardPage() {
                       title={source.methodology}
                       className={`px-4 py-2 text-sm rounded-md transition-colors ${
                         sourceFilter === source.value
-                          ? source.value === 'ACLED' ? 'bg-blue-600 text-gray-900'
-                            : source.value === 'UCDP' ? 'bg-purple-600 text-gray-900'
-                            : 'bg-blue-600 text-gray-900'
+                          ? source.value === 'ACLED' ? 'bg-blue-500 text-white hover:bg-blue-600'
+                            : source.value === 'UCDP' ? 'bg-purple-600 text-white hover:bg-purple-700'
+                            : 'bg-blue-500 text-white hover:bg-blue-600'
                           : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
                       }`}
                     >
@@ -329,7 +329,7 @@ export default function LeaderboardPage() {
                     disabled={sourceFilter !== 'all'}
                     className={`px-4 py-2 text-sm rounded-md transition-colors ${
                       timeFilter === filter.value && sourceFilter === 'all'
-                        ? 'bg-blue-600 text-gray-900'
+                        ? 'bg-blue-500 text-white hover:bg-blue-600'
                         : sourceFilter !== 'all'
                         ? 'text-gray-600 cursor-not-allowed'
                         : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
