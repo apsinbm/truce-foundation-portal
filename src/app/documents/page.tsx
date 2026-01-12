@@ -719,11 +719,11 @@ export default function DocumentsPage() {
                       <span className="text-xs font-mono bg-green-100 text-green-800 border-green-300 px-2 py-0.5 rounded">A/80/L.10</span>
                       <span className="text-xs text-gray-500">Milano-Cortina 2026</span>
                     </div>
-                    <h2 className="text-xl font-bold text-gray-900 group-hover:text-green-300 transition-colors">166 Nations Co-Sponsored the Olympic Truce</h2>
+                    <h2 className="text-xl font-bold text-gray-900 group-hover:text-green-500 transition-colors">166 Nations Co-Sponsored the Olympic Truce</h2>
                     <p className="text-gray-600 text-sm mt-1">85% of UN Member States signed on. Adopted by consensus November 19, 2025.</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-2 text-green-800 group-hover:text-green-300">
+                <div className="flex items-center gap-2 text-green-800 group-hover:text-green-500">
                   <span className="text-sm font-medium">View Full List</span>
                   <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -827,10 +827,10 @@ export default function DocumentsPage() {
                     <tr key={res.symbol} className={`border-t border-gray-200/50 ${index === 0 ? 'bg-blue-100' : ''}`}>
                       <td className="py-3 px-4">
                         <div className="flex items-center gap-2">
-                          <span className={`text-xs px-1.5 py-0.5 rounded ${res.season === 'Summer' ? 'bg-amber-100 text-amber-800 border-amber-300' : 'bg-cyan-100 text-cyan-300'}`}>
+                          <span className={`text-xs px-1.5 py-0.5 rounded ${res.season === 'Summer' ? 'bg-amber-100 text-amber-800 border-amber-300' : 'bg-cyan-100 text-cyan-600'}`}>
                             {res.season === 'Summer' ? '☀️' : '❄️'}
                           </span>
-                          <span className={index === 0 ? 'text-blue-300 font-medium' : 'text-gray-900'}>{res.games}</span>
+                          <span className={index === 0 ? 'text-blue-500 font-medium' : 'text-gray-900'}>{res.games}</span>
                         </div>
                       </td>
                       <td className="py-3 px-4 font-mono text-xs text-gray-600">{res.symbol}</td>
@@ -847,7 +847,7 @@ export default function DocumentsPage() {
                           href={res.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-blue-600 hover:text-blue-300"
+                          className="text-blue-600 hover:text-blue-500"
                         >
                           <svg className="w-4 h-4 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -886,7 +886,7 @@ export default function DocumentsPage() {
                   href={doc.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-sm text-blue-600 hover:text-blue-300"
+                  className="inline-flex items-center gap-1 text-sm text-blue-600 hover:text-blue-500"
                 >
                   View Document (PDF)
                   <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -965,7 +965,7 @@ export default function DocumentsPage() {
                   href={source.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-sm text-blue-600 hover:text-blue-300"
+                  className="inline-flex items-center gap-1 text-sm text-blue-600 hover:text-blue-500"
                 >
                   Read on Perseus
                   <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1036,17 +1036,17 @@ export default function DocumentsPage() {
             </h3>
             <div className="space-y-3 text-sm text-gray-600">
               <p>
-                The Olympic Truce as embodied in UN resolutions is <strong className="text-amber-300">not legally binding</strong> under international law.
+                The Olympic Truce as embodied in UN resolutions is <strong className="text-amber-500">not legally binding</strong> under international law.
                 UN General Assembly resolutions are "recommendations" - they create no obligations the way a treaty or Security Council Chapter VII resolution would.
                 The resolutions use language like "urges," "calls upon," and "requests" rather than "decides" or "demands."
               </p>
               <p>
                 As international law scholar <strong>Bruno Simma</strong> notes, GA resolutions "cannot by themselves create legal obligations."
                 However, some scholars (Chernykh, Grear) argue the consistent repetition every two years - usually by consensus of all 193 nations -
-                may be creating <strong className="text-green-300">Customary International Law</strong> via <em>opinio juris</em> (belief the practice is required by law).
+                may be creating <strong className="text-green-500">Customary International Law</strong> via <em>opinio juris</em> (belief the practice is required by law).
               </p>
               <div className="p-4 mt-4 rounded-xl bg-blue-100 border border-blue-500/30">
-                <h4 className="font-semibold text-blue-300 mb-2">2022 Paradigm Shift: Lex Olympica Integration</h4>
+                <h4 className="font-semibold text-blue-500 mb-2">2022 Paradigm Shift: Lex Olympica Integration</h4>
                 <p>
                   The <strong className="text-gray-900">2022 Ukraine invasion</strong> marked a turning point. The IOC Executive Board explicitly cited breach of the Olympic Truce
                   as the <strong className="text-blue-200">legal basis</strong> for recommending the ban of Russian and Belarusian athletes.
@@ -1164,10 +1164,10 @@ export default function DocumentsPage() {
             All documents link to official UN and IOC sources.
           </p>
           <div className="flex justify-center gap-4">
-            <Link href="/history" className="text-blue-600 hover:text-blue-300 text-sm">
+            <Link href="/history" className="text-blue-600 hover:text-blue-500 text-sm">
               View History Timeline
             </Link>
-            <Link href="/briefing-sheet" className="text-blue-600 hover:text-blue-300 text-sm">
+            <Link href="/briefing-sheet" className="text-blue-600 hover:text-blue-500 text-sm">
               Donor Briefing Sheet
             </Link>
           </div>

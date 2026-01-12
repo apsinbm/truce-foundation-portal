@@ -168,7 +168,7 @@ export default function BriefingSheetPage() {
             animate={{ opacity: 1, y: 0 }}
             className="text-center"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600/20 border border-blue-500/30 rounded-full text-blue-300 text-sm mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600/20 border border-blue-500/30 rounded-full text-blue-400 text-sm mb-6">
               <span>📋</span>
               <span>Donor & Coalition Engagement</span>
             </div>
@@ -304,7 +304,7 @@ export default function BriefingSheetPage() {
           className="mb-16"
         >
           <div className="bg-gradient-to-r from-red-900/30 to-orange-900/30 border border-red-500/30 rounded-xl p-8">
-            <h2 className="text-2xl font-bold mb-4 flex items-center gap-3 text-red-300">
+            <h2 className="text-2xl font-bold mb-4 flex items-center gap-3 text-red-500">
               <span className="text-3xl">⚠️</span>
               Focus: Sport Addressing Youth Violence
             </h2>
@@ -313,7 +313,7 @@ export default function BriefingSheetPage() {
                 <h3 className="font-semibold text-gray-900 mb-3">The Problem</h3>
                 <ul className="space-y-2 text-gray-600 text-sm">
                   <li>• Youth violence results in numerous deaths, injuries, and disabilities</li>
-                  <li>• <strong className="text-red-300">Youth homicides account for 37%</strong> of global homicides annually</li>
+                  <li>• <strong className="text-red-500">Youth homicides account for 37%</strong> of global homicides annually</li>
                   <li>• Violence affects victims, families, and entire communities</li>
                   <li>• Often starts with hate speech and escalates to violent extremism</li>
                 </ul>
@@ -384,7 +384,7 @@ export default function BriefingSheetPage() {
                 className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-xl p-5"
               >
                 <div className="text-2xl mb-2">{point.icon}</div>
-                <h3 className="font-semibold text-green-300 mb-2">{point.title}</h3>
+                <h3 className="font-semibold text-green-500 mb-2">{point.title}</h3>
                 <p className="text-sm text-gray-600">{point.description}</p>
               </motion.div>
             ))}
@@ -476,7 +476,7 @@ export default function BriefingSheetPage() {
                     href="https://documents.un.org/doc/undoc/gen/n24/232/53/pdf/n2423253.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-600 hover:text-blue-300 underline"
+                    className="text-blue-600 hover:text-blue-400 underline"
                   >
                     A/79/289 - Full Report
                   </a>
@@ -490,7 +490,7 @@ export default function BriefingSheetPage() {
                     href="https://social.desa.un.org/sites/default/files/inline-files/Secretary-General%27s%20Report%20Presentation%20-%20Group%20of%20Friends%20%281%29.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-600 hover:text-blue-300 underline"
+                    className="text-blue-600 hover:text-blue-400 underline"
                   >
                     Presentation Slides
                   </a>
@@ -504,7 +504,7 @@ export default function BriefingSheetPage() {
                     href="https://social.desa.un.org/issues/sport-for-development-and-peace/general-assembly"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-600 hover:text-blue-300 underline"
+                    className="text-blue-600 hover:text-blue-400 underline"
                   >
                     UN DESA Sport for Development and Peace
                   </a>

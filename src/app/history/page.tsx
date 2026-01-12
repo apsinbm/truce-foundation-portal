@@ -53,7 +53,7 @@ export default function HistoryHubPage() {
                   <div className="flex items-center gap-3 mb-4">
                     <span className="text-4xl">🏛️</span>
                     <div>
-                      <h2 className="text-2xl font-bold text-gray-900 group-hover:text-amber-300 transition-colors">
+                      <h2 className="text-2xl font-bold text-gray-900 group-hover:text-amber-500 transition-colors">
                         Ancient Ekecheiria
                       </h2>
                       <p className="text-amber-800/80 text-sm">776 BC - 393 AD</p>
@@ -83,7 +83,7 @@ export default function HistoryHubPage() {
                   <div className="flex items-center gap-4">
                     <div className="w-6 h-6 rounded-full bg-amber-500 border-4 border-gray-900 shadow-lg shadow-amber-500/50" />
                     <div className="text-gray-600">
-                      <div className="font-bold text-amber-300">776 BC</div>
+                      <div className="font-bold text-amber-500">776 BC</div>
                       <div className="text-xs">First Olympic Games</div>
                     </div>
                   </div>
@@ -123,7 +123,7 @@ export default function HistoryHubPage() {
                 <div className="hidden md:flex items-center justify-end order-1 md:order-none">
                   <div className="flex items-center gap-4">
                     <div className="text-gray-600 text-right">
-                      <div className="font-bold text-blue-300">1993</div>
+                      <div className="font-bold text-blue-500">1993</div>
                       <div className="text-xs">UN Resolution 48/11</div>
                     </div>
                     <div className="w-6 h-6 rounded-full bg-blue-600 border-4 border-gray-900 shadow-lg shadow-blue-500/50" />
@@ -137,7 +137,7 @@ export default function HistoryHubPage() {
                   <div className="flex items-center gap-3 mb-4">
                     <span className="text-4xl">🌍</span>
                     <div>
-                      <h2 className="text-2xl font-bold text-gray-900 group-hover:text-blue-300 transition-colors">
+                      <h2 className="text-2xl font-bold text-gray-900 group-hover:text-blue-500 transition-colors">
                         Modern Revival
                       </h2>
                       <p className="text-blue-600/80 text-sm">1992 - Present</p>
@@ -228,7 +228,7 @@ export default function HistoryHubPage() {
             </h2>
             <p className="text-gray-600 leading-relaxed mb-6">
               Though the ancient Games ended in 393 AD and the modern Olympics began in 1896,
-              the Olympic Truce was not formally revived until <strong className="text-purple-300">1993</strong>.
+              the Olympic Truce was not formally revived until <strong className="text-purple-500">1993</strong>.
               It took nearly a century for the modern Olympic movement to rediscover what the
               ancient Greeks knew: that sport could be a catalyst for peace.
             </p>

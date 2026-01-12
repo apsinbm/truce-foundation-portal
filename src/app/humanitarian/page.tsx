@@ -200,11 +200,11 @@ const FRAGILE_PEACE_ZONES = [
 const getFragileStatusColor = (status: string) => {
   switch (status) {
     case 'fragile':
-      return 'bg-amber-100 text-amber-800 border-amber-300 border-amber-500/30';
+      return 'bg-amber-100 text-amber-800 border-amber-500/30';
     case 'stabilizing':
-      return 'bg-blue-100 text-blue-800 border-blue-300 border-blue-500/30';
+      return 'bg-blue-100 text-blue-800 border-blue-500/30';
     case 'recovering':
-      return 'bg-green-100 text-green-800 border-green-300 border-green-500/30';
+      return 'bg-green-100 text-green-800 border-green-500/30';
     default:
       return 'bg-gray-100 text-gray-600 border-gray-200';
   }
@@ -492,7 +492,7 @@ export default function HumanitarianPage() {
           >
             <div className="flex items-center gap-3 mb-2">
               <h2 className="text-2xl font-bold text-gray-900">Fragile Peace Zones</h2>
-              <span className="px-2 py-1 text-xs bg-amber-100 text-amber-800 border-amber-300 border border-amber-500/30 rounded-full">
+              <span className="px-2 py-1 text-xs bg-amber-100 text-amber-800 border border-amber-500/30 rounded-full">
                 ICU Watch
               </span>
             </div>
@@ -534,7 +534,7 @@ export default function HumanitarianPage() {
                       <div className="space-y-1">
                         {country.focus.map((item) => (
                           <div key={item} className="flex items-center gap-2 text-xs text-gray-500">
-                            <span className="w-1 h-1 rounded-full bg-amber-1000" />
+                            <span className="w-1 h-1 rounded-full bg-amber-950" />
                             {item}
                           </div>
                         ))}
@@ -568,7 +568,7 @@ export default function HumanitarianPage() {
           >
             <div className="flex items-center gap-3 mb-2">
               <h2 className="text-2xl font-bold text-gray-900">Maritime Mine Threats</h2>
-              <span className="px-2 py-1 text-xs bg-red-100 text-red-300 border border-red-500/30 rounded-full">
+              <span className="px-2 py-1 text-xs bg-red-100 text-red-500 border border-red-500/30 rounded-full">
                 Shipping Risk
               </span>
             </div>
@@ -608,7 +608,7 @@ export default function HumanitarianPage() {
                       <div className="space-y-1">
                         {zone.impact.map((item) => (
                           <div key={item} className="flex items-center gap-2 text-xs text-gray-500">
-                            <span className="w-1 h-1 rounded-full bg-red-1000" />
+                            <span className="w-1 h-1 rounded-full bg-red-950" />
                             {item}
                           </div>
                         ))}
@@ -646,7 +646,7 @@ export default function HumanitarianPage() {
           >
             <div className="flex items-center gap-3 mb-2">
               <h2 className="text-2xl font-bold text-gray-900">Exemplary Humanitarian Access</h2>
-              <span className="px-2 py-1 text-xs bg-green-100 text-green-800 border-green-300 border border-green-500/30 rounded-full">
+              <span className="px-2 py-1 text-xs bg-green-100 text-green-800 border border-green-500/30 rounded-full">
                 Best Practices
               </span>
             </div>
@@ -796,7 +796,7 @@ export default function HumanitarianPage() {
                     href="https://global.utexas.edu/events/humanitarian-aid-crisis-saving-lives-time-eroding-support"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-purple-400 hover:text-purple-300 underline"
+                    className="text-purple-600 hover:text-purple-500 underline"
                   >
                     Doug Mercado
                   </a>

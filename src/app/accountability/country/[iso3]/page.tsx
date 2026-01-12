@@ -10,11 +10,11 @@ import Header from '@/components/Header';
 const getSeverityColor = (severity: string) => {
   switch (severity) {
     case 'critical':
-      return 'bg-red-100 text-red-800 border-red-300 border-red-500/30';
+      return 'bg-red-100 text-red-800 border-red-500/30';
     case 'major':
-      return 'bg-orange-100 text-orange-800 border-orange-300 border-orange-500/30';
+      return 'bg-orange-100 text-orange-800 border-orange-500/30';
     case 'significant':
-      return 'bg-yellow-100 text-yellow-800 border-yellow-300 border-yellow-500/30';
+      return 'bg-yellow-100 text-yellow-800 border-yellow-500/30';
     default:
       return 'bg-gray-100 text-gray-600';
   }
@@ -75,7 +75,7 @@ export default function CountryProfilePage() {
             className="text-center"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-500/10 border border-red-500/30 rounded-full mb-4">
-              <span className="text-red-300 text-sm font-medium">Country Profile</span>
+              <span className="text-red-500 text-sm font-medium">Country Profile</span>
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
               {countryData.country}
@@ -247,7 +247,7 @@ export default function CountryProfilePage() {
                     <span className="w-6 h-6 rounded-full bg-red-100 flex items-center justify-center text-xs font-bold text-red-800">
                       {offender.violationCount}
                     </span>
-                    <span className="text-sm text-gray-900 group-hover:text-red-300 transition-colors truncate">
+                    <span className="text-sm text-gray-900 group-hover:text-red-500 transition-colors truncate">
                       {offender.country}
                     </span>
                   </div>

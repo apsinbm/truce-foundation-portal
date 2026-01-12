@@ -63,7 +63,7 @@ export default function AncientWisdom() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-100 border border-amber-500/30 rounded-full mb-4">
             <span className="text-xl">📜</span>
-            <span className="text-amber-300 text-sm font-medium">Ancient Wisdom</span>
+            <span className="text-amber-500 text-sm font-medium">Ancient Wisdom</span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
             Voices from Antiquity
@@ -107,7 +107,7 @@ export default function AncientWisdom() {
                       href={currentQuote.sourceUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm text-amber-800 hover:text-amber-300 transition-colors"
+                      className="text-sm text-amber-800 hover:text-amber-500 transition-colors"
                     >
                       {currentQuote.source} ↗
                     </a>

@@ -502,7 +502,7 @@ export default function ModernHistoryPage() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 border border-blue-500/30 rounded-full mb-4">
               <span className="text-xl">🌍</span>
-              <span className="text-blue-300 text-sm font-medium">Modern Era</span>
+              <span className="text-blue-500 text-sm font-medium">Modern Era</span>
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900">
               The Modern Revival
@@ -592,10 +592,10 @@ export default function ModernHistoryPage() {
           <div className="space-y-4">
             {KEY_MOMENTS.map((moment, index) => {
               const sigConfig = {
-                milestone: { bg: 'bg-blue-100', border: 'border-blue-500/30', icon: '📌', color: 'text-blue-300' },
-                record: { bg: 'bg-green-100', border: 'border-green-500/30', icon: '🏆', color: 'text-green-300' },
-                diplomatic: { bg: 'bg-purple-100', border: 'border-purple-500/30', icon: '🕊️', color: 'text-purple-300' },
-                symbolic: { bg: 'bg-amber-100', border: 'border-amber-500/30', icon: '✨', color: 'text-amber-300' },
+                milestone: { bg: 'bg-blue-100', border: 'border-blue-500/30', icon: '📌', color: 'text-blue-500' },
+                record: { bg: 'bg-green-100', border: 'border-green-500/30', icon: '🏆', color: 'text-green-500' },
+                diplomatic: { bg: 'bg-purple-100', border: 'border-purple-500/30', icon: '🕊️', color: 'text-purple-500' },
+                symbolic: { bg: 'bg-amber-100', border: 'border-amber-500/30', icon: '✨', color: 'text-amber-500' },
               }[moment.significance];
 
               return (
@@ -662,7 +662,7 @@ export default function ModernHistoryPage() {
                           item.highlight ? 'bg-blue-100' : ''
                         }`}
                       >
-                        <td className={`py-2 ${item.highlight ? 'text-blue-300 font-medium' : 'text-gray-900'}`}>
+                        <td className={`py-2 ${item.highlight ? 'text-blue-500 font-medium' : 'text-gray-900'}`}>
                           {item.games}
                           {item.highlight && (
                             <span className="ml-2 text-xs bg-blue-100 text-blue-800 border-blue-300 px-1.5 py-0.5 rounded">
@@ -843,7 +843,7 @@ export default function ModernHistoryPage() {
                         {game.violations.map((violation, i) => (
                           <div key={i} className="flex items-start gap-2 text-sm">
                             <span className="text-red-800 mt-1">-</span>
-                            <span className="text-red-300">{violation}</span>
+                            <span className="text-red-500">{violation}</span>
                           </div>
                         ))}
                       </div>
@@ -935,7 +935,7 @@ export default function ModernHistoryPage() {
               IOTC Timeline
             </a>
             <span>|</span>
-            <Link href="/documents" className="hover:text-blue-300 transition-colors">
+            <Link href="/documents" className="hover:text-blue-500 transition-colors">
               Full Document Archive
             </Link>
           </div>

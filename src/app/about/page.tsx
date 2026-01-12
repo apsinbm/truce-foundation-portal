@@ -121,7 +121,7 @@ export default function AboutPage() {
                 📄
               </div>
               <div className="flex-1">
-                <h2 className="text-xl font-bold text-gray-900 group-hover:text-blue-300 transition-colors">
+                <h2 className="text-xl font-bold text-gray-900 group-hover:text-blue-500 transition-colors">
                   Truce Foundation Flyer
                 </h2>
                 <p className="text-gray-600 text-sm mt-1">
@@ -172,7 +172,7 @@ export default function AboutPage() {
                     <span className="px-2 py-0.5 text-xs bg-amber-500/20 text-amber-800 rounded">Featured</span>
                     <span className="text-xs text-gray-500">{pub.publication} • {pub.date}</span>
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900 group-hover:text-amber-300 transition-colors mb-2">
+                  <h3 className="text-lg font-semibold text-gray-900 group-hover:text-amber-500 transition-colors mb-2">
                     {pub.title}
                   </h3>
                   <p className="text-sm text-gray-600 mb-2">{pub.description}</p>
@@ -355,17 +355,17 @@ export default function AboutPage() {
               <p>451 Seven Ponds Towd Road</p>
               <p>Water Mill, NY 11976 USA</p>
               <p className="pt-2">
-                <a href="tel:+12123806975" className="text-blue-600 hover:text-blue-300">
+                <a href="tel:+12123806975" className="text-blue-600 hover:text-blue-500">
                   +1 (212) 380-6975
                 </a>
               </p>
               <p>
-                <a href="mailto:Hugh.Dugan@TruceFoundation.world" className="text-blue-600 hover:text-blue-300">
+                <a href="mailto:Hugh.Dugan@TruceFoundation.world" className="text-blue-600 hover:text-blue-500">
                   Hugh.Dugan@TruceFoundation.world
                 </a>
               </p>
               <p>
-                <a href="https://www.TruceFoundation.world" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-300">
+                <a href="https://www.TruceFoundation.world" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-500">
                   www.TruceFoundation.world
                 </a>
               </p>

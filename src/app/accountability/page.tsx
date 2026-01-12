@@ -1088,8 +1088,8 @@ export default function AccountabilityPage() {
                           viewport={{ once: true }}
                           transition={{ duration: 0.5, ease: 'easeOut' }}
                           className={`h-full ${
-                            period.violations.length === 0 ? 'bg-green-1000' :
-                            period.violations.length <= 2 ? 'bg-orange-1000' : 'bg-red-1000'
+                            period.violations.length === 0 ? 'bg-green-950' :
+                            period.violations.length <= 2 ? 'bg-orange-950' : 'bg-red-950'
                           }`}
                         />
                       </div>
@@ -1138,13 +1138,13 @@ export default function AccountabilityPage() {
                           <span className="text-xl font-bold text-red-800">{offender.violationCount}</span>
                         </div>
                         <div>
-                          <h3 className="font-bold text-gray-900 group-hover:text-red-300 transition-colors">{offender.country}</h3>
+                          <h3 className="font-bold text-gray-900 group-hover:text-red-500 transition-colors">{offender.country}</h3>
                         </div>
                       </Link>
                       <div className="flex items-center gap-2">
                         <Link
                           href={`/accountability/country/${offender.countryIso3.toLowerCase()}`}
-                          className="px-3 py-1.5 text-xs bg-red-100 hover:bg-red-500/30 text-red-300 rounded-lg transition-colors"
+                          className="px-3 py-1.5 text-xs bg-red-100 hover:bg-red-500/30 text-red-600 rounded-lg transition-colors"
                         >
                           View Profile
                         </Link>
@@ -1287,7 +1287,7 @@ export default function AccountabilityPage() {
                 <p className="text-gray-600">No Olympic Games match your filters.</p>
                 <button
                   onClick={clearFilters}
-                  className="mt-2 text-sm text-blue-600 hover:text-blue-300"
+                  className="mt-2 text-sm text-blue-600 hover:text-blue-500"
                 >
                   Clear all filters
                 </button>
@@ -1441,7 +1441,7 @@ export default function AccountabilityPage() {
               Milano-Cortina 2026
             </h2>
             <p className="text-gray-600 mb-2">
-              The next Olympic Truce window per <a href="/downloads/A_80_L.10-EN.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-300 underline">UN Resolution A/80/L.10</a>:
+              The next Olympic Truce window per <a href="/downloads/A_80_L.10-EN.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-500 underline">UN Resolution A/80/L.10</a>:
             </p>
             <p className="text-lg text-gray-900 font-medium mb-6">
               January 30 - March 22, 2026

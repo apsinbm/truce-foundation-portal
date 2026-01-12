@@ -195,7 +195,7 @@ export default function PressPage() {
                   className="p-4 rounded-xl bg-gradient-to-br from-blue-500/10 to-purple-500/10 border border-blue-500/30 text-center"
                 >
                   <span className="text-2xl font-bold text-gray-900 block">{point.stat}</span>
-                  <span className="text-sm text-blue-300 font-medium">{point.label}</span>
+                  <span className="text-sm text-blue-500 font-medium">{point.label}</span>
                   <p className="text-xs text-gray-500 mt-2">{point.context}</p>
                 </motion.div>
               ))}
@@ -235,7 +235,7 @@ export default function PressPage() {
                           {new Date(item.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
                         </span>
                       </div>
-                      <h3 className="text-gray-900 group-hover:text-blue-300 transition-colors text-sm">
+                      <h3 className="text-gray-900 group-hover:text-blue-500 transition-colors text-sm">
                         {item.title}
                       </h3>
                     </div>
@@ -444,7 +444,7 @@ export default function PressPage() {
                 <p className="text-gray-600 mb-4">Truce Foundation</p>
                 <a
                   href="mailto:press@trucefoundation.world"
-                  className="text-blue-600 hover:text-blue-300 transition-colors"
+                  className="text-blue-600 hover:text-blue-500 transition-colors"
                 >
                   press@trucefoundation.world
                 </a>

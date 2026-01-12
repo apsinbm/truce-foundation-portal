@@ -444,7 +444,7 @@ export default function AdvocacyPage() {
                         item.comingSoon
                           ? 'bg-gray-100/50 text-gray-500'
                           : item.highlight
-                          ? 'bg-blue-600/30 text-blue-300'
+                          ? 'bg-blue-600/30 text-blue-500'
                           : 'bg-blue-600/20 text-blue-600'
                       }`}>
                         {TYPE_ICONS[item.type]}
@@ -460,7 +460,7 @@ export default function AdvocacyPage() {
                             </span>
                           )}
                           {item.highlight && (
-                            <span className="px-2 py-0.5 text-xs bg-blue-600/30 text-blue-300 rounded-full flex-shrink-0">
+                            <span className="px-2 py-0.5 text-xs bg-blue-600/30 text-blue-500 rounded-full flex-shrink-0">
                               Current
                             </span>
                           )}
@@ -470,7 +470,7 @@ export default function AdvocacyPage() {
                           {!item.comingSoon && item.downloadUrl && (
                             <a
                               href={item.downloadUrl}
-                              className="inline-flex items-center gap-1 text-xs text-green-800 hover:text-green-300"
+                              className="inline-flex items-center gap-1 text-xs text-green-800 hover:text-green-500"
                             >
                               <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
@@ -483,7 +483,7 @@ export default function AdvocacyPage() {
                               href={item.externalUrl}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="inline-flex items-center gap-1 text-xs text-blue-600 hover:text-blue-300"
+                              className="inline-flex items-center gap-1 text-xs text-blue-600 hover:text-blue-500"
                             >
                               <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />

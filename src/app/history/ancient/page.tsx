@@ -91,7 +91,7 @@ export default function AncientHistoryPage() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-100 border border-amber-500/30 rounded-full mb-4">
               <span className="text-xl">🏛️</span>
-              <span className="text-amber-300 text-sm font-medium">Ancient Era</span>
+              <span className="text-amber-500 text-sm font-medium">Ancient Era</span>
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900">
               The Ancient Ekecheiria
@@ -118,11 +118,11 @@ export default function AncientHistoryPage() {
               </h3>
               <div className="space-y-3 text-sm text-gray-600">
                 <p>
-                  Greece in the 8th century BC was suffering from constant wars and plague. <strong className="text-amber-300">King Iphitos of Elis</strong> sought
+                  Greece in the 8th century BC was suffering from constant wars and plague. <strong className="text-amber-500">King Iphitos of Elis</strong> sought
                   guidance from the Oracle of Delphi, who ordained that he "must renew the Olympic games."
                 </p>
                 <p>
-                  Iphitos enlisted <strong className="text-amber-300">King Cleisthenes of Pisa</strong> and the Spartan lawgiver <strong className="text-amber-300">Lycurgus</strong> to
+                  Iphitos enlisted <strong className="text-amber-500">King Cleisthenes of Pisa</strong> and the Spartan lawgiver <strong className="text-amber-500">Lycurgus</strong> to
                   forge a sacred peace pact. The treaty was inscribed on a bronze discus stored in the Temple of Hera at Olympia.
                 </p>
                 <p className="text-xs text-gray-500 italic">
@@ -143,11 +143,11 @@ export default function AncientHistoryPage() {
               </h3>
               <div className="space-y-3 text-sm text-gray-600">
                 <p>
-                  <strong className="text-green-300">Spondophoroi</strong> ("truce-bearers") - noble heralds crowned with olive, carrying the <em>kerykeion</em> (herald's staff) -
+                  <strong className="text-green-500">Spondophoroi</strong> ("truce-bearers") - noble heralds crowned with olive, carrying the <em>kerykeion</em> (herald's staff) -
                   traveled three distinct circuits: <strong>Northern</strong> (Athens, Thebes, Macedonia, Black Sea), <strong>Eastern</strong> (Aegean, Ionia, Egypt), and <strong>Western</strong> (Sicily, Italy, Gaul). The announcement (<em>epangelia</em>) was a diplomatic test - refusing the heralds excluded a city from the Greek community.
                 </p>
                 <p>
-                  Duration evolved: <strong className="text-green-300">one month</strong> (Archaic, <em>hieromenia</em>) → <strong className="text-green-300">three months</strong> (Classical - one for travel, one for Games, one for return) → potentially <strong className="text-green-300">ten months</strong> in Hellenistic period for distant colonies.
+                  Duration evolved: <strong className="text-green-500">one month</strong> (Archaic, <em>hieromenia</em>) → <strong className="text-green-500">three months</strong> (Classical - one for travel, one for Games, one for return) → potentially <strong className="text-green-500">ten months</strong> in Hellenistic period for distant colonies.
                 </p>
                 <ul className="list-disc list-inside text-xs text-gray-600 space-y-1">
                   <li>Elis declared <em>asylos</em> (sacred and inviolable) - a "mobile sanctuary" around pilgrims</li>
@@ -171,16 +171,16 @@ export default function AncientHistoryPage() {
             </h3>
             <div className="space-y-3 text-sm text-gray-600">
               <p>
-                The ekecheiria was fundamentally tied to <strong className="text-purple-300">Zeus</strong>, king of the Greek gods.
+                The ekecheiria was fundamentally tied to <strong className="text-purple-500">Zeus</strong>, king of the Greek gods.
                 Waging war during Zeus's festival was seen as impious. Inside the Temple of Zeus stood a statue depicting King Iphitos
-                being crowned by <strong className="text-purple-300">Ekecheiria</strong> - a female personification of Peace/Truce (Pausanias 5.10.10),
-                implying the Greeks deified the concept itself. A statue of <strong className="text-purple-300">Agon</strong> (personified Competition)
+                being crowned by <strong className="text-purple-500">Ekecheiria</strong> - a female personification of Peace/Truce (Pausanias 5.10.10),
+                implying the Greeks deified the concept itself. A statue of <strong className="text-purple-500">Agon</strong> (personified Competition)
                 holding dumbbells also stood at Olympia - the Greek concept of <em>agon</em> (ἀγών) channeled competitive spirit from warfare to athletics.
               </p>
               <p>
-                Athletes swore sacred oaths on slices of <strong className="text-purple-300">boar's flesh</strong> at the altar of Zeus Horkios ("Zeus of Oaths").
+                Athletes swore sacred oaths on slices of <strong className="text-purple-500">boar's flesh</strong> at the altar of Zeus Horkios ("Zeus of Oaths").
                 Pausanias (5.24.9) notes Zeus in the Council Chamber was called "Oath-god" and "most likely to strike terror into the hearts of sinners."
-                The main sacrifice was a <strong className="text-purple-300">hecatomb</strong> (100 oxen) to Zeus on the third day.
+                The main sacrifice was a <strong className="text-purple-500">hecatomb</strong> (100 oxen) to Zeus on the third day.
               </p>
             </div>
           </motion.div>
@@ -197,9 +197,9 @@ export default function AncientHistoryPage() {
             <div className="grid md:grid-cols-2 gap-4 text-sm text-gray-600">
               <div>
                 <p className="mb-2">
-                  The <strong className="text-red-300">Hellanodikai</strong> (10 Elean judges, given 10 months of training before each Games) acted as the supreme court of the festival.
-                  Enforcement relied on religious fear (<em>asebeia</em> - sacrilege) and social pressure - no "Olympic army" existed. Violators faced <strong className="text-red-300">exclusion</strong>, heavy fines
-                  converted into bronze statues of Zeus called <strong className="text-red-300">Zanes</strong> - perpetual monuments to the violators' transgression lining the entrance to the stadium.
+                  The <strong className="text-red-500">Hellanodikai</strong> (10 Elean judges, given 10 months of training before each Games) acted as the supreme court of the festival.
+                  Enforcement relied on religious fear (<em>asebeia</em> - sacrilege) and social pressure - no "Olympic army" existed. Violators faced <strong className="text-red-500">exclusion</strong>, heavy fines
+                  converted into bronze statues of Zeus called <strong className="text-red-500">Zanes</strong> - perpetual monuments to the violators' transgression lining the entrance to the stadium.
                 </p>
                 <p className="text-xs text-gray-600 mt-2">
                   The "Host State Rule" held that the Truce was active the moment proclaimed in Elis - all participants bound from that date. Aristophanes' <em>Lysistrata</em> (411 BC) cites the Truce as evidence that even bitter enemies could find peaceful common ground.
@@ -209,8 +209,8 @@ export default function AncientHistoryPage() {
                 <h4 className="font-medium text-gray-900 mb-2">The Spartan Precedent (420 BC)</h4>
                 <p>
                   Sparta deployed 1,000 hoplites to Lepreum after proclamation. Their legalistic defense (not yet announced <em>in Sparta</em>) was rejected.
-                  Elis fined them <strong className="text-red-300">2,000 minae</strong> (2 minae per soldier - cost of a trireme fleet).
-                  When Lichas entered his chariot under Thebes's flag and won, he was <strong className="text-red-300">publicly flogged</strong> in the stadium - demonstrating the supra-national authority of Olympic officials.
+                  Elis fined them <strong className="text-red-500">2,000 minae</strong> (2 minae per soldier - cost of a trireme fleet).
+                  When Lichas entered his chariot under Thebes's flag and won, he was <strong className="text-red-500">publicly flogged</strong> in the stadium - demonstrating the supra-national authority of Olympic officials.
                 </p>
               </div>
             </div>
@@ -233,9 +233,9 @@ export default function AncientHistoryPage() {
           <div className="space-y-4">
             {ANCIENT_MOMENTS.map((moment, index) => {
               const sigConfig = {
-                milestone: { bg: 'bg-blue-100', border: 'border-blue-500/30', icon: '📌', color: 'text-blue-300' },
-                violation: { bg: 'bg-red-500/10', border: 'border-red-500/30', icon: '⚠️', color: 'text-red-300' },
-                symbolic: { bg: 'bg-amber-100', border: 'border-amber-500/30', icon: '✨', color: 'text-amber-300' },
+                milestone: { bg: 'bg-blue-100', border: 'border-blue-500/30', icon: '📌', color: 'text-blue-500' },
+                violation: { bg: 'bg-red-500/10', border: 'border-red-500/30', icon: '⚠️', color: 'text-red-500' },
+                symbolic: { bg: 'bg-amber-100', border: 'border-amber-500/30', icon: '✨', color: 'text-amber-500' },
               }[moment.significance];
 
               return (
@@ -295,7 +295,7 @@ export default function AncientHistoryPage() {
               >
                 <div className="flex items-center gap-2 mb-3">
                   <span className="text-lg">🏛️</span>
-                  <span className="text-xs text-amber-300 font-medium">On the Truce</span>
+                  <span className="text-xs text-amber-500 font-medium">On the Truce</span>
                 </div>
                 <blockquote className="text-gray-600 italic mb-3 text-sm leading-relaxed">
                   "{quote.text}"
@@ -310,7 +310,7 @@ export default function AncientHistoryPage() {
                       href={quote.sourceUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xs text-amber-800 hover:text-amber-300"
+                      className="text-xs text-amber-800 hover:text-amber-500"
                     >
                       {quote.source} ↗
                     </a>
@@ -325,8 +325,8 @@ export default function AncientHistoryPage() {
             <div className="grid md:grid-cols-2 gap-4 mt-2">
               {ANCIENT_QUOTES.filter(q => q.category === 'athletics' || q.category === 'glory').map((quote, index) => {
                 const config = quote.category === 'athletics'
-                  ? { icon: '🏃', color: 'from-green-500/10 to-green-600/5', border: 'border-green-500/30', label: 'On Athletics', labelColor: 'text-green-300' }
-                  : { icon: '🏆', color: 'from-purple-500/10 to-purple-600/5', border: 'border-purple-500/30', label: 'On Glory', labelColor: 'text-purple-300' };
+                  ? { icon: '🏃', color: 'from-green-500/10 to-green-600/5', border: 'border-green-500/30', label: 'On Athletics', labelColor: 'text-green-500' }
+                  : { icon: '🏆', color: 'from-purple-500/10 to-purple-600/5', border: 'border-purple-500/30', label: 'On Glory', labelColor: 'text-purple-500' };
 
                 return (
                   <motion.div
@@ -387,19 +387,19 @@ export default function AncientHistoryPage() {
         <div className="max-w-4xl mx-auto">
           <h3 className="text-sm font-semibold text-gray-500 mb-4 text-center">Ancient Sources</h3>
           <div className="flex flex-wrap justify-center gap-4 text-xs text-gray-500">
-            <a href="http://www.perseus.tufts.edu/hopper/text?doc=Paus.+5.4" target="_blank" rel="noopener noreferrer" className="hover:text-amber-300 transition-colors">
+            <a href="http://www.perseus.tufts.edu/hopper/text?doc=Paus.+5.4" target="_blank" rel="noopener noreferrer" className="hover:text-amber-500 transition-colors">
               Pausanias
             </a>
             <span>|</span>
-            <a href="http://www.perseus.tufts.edu/hopper/text?doc=Thuc.+5.49" target="_blank" rel="noopener noreferrer" className="hover:text-amber-300 transition-colors">
+            <a href="http://www.perseus.tufts.edu/hopper/text?doc=Thuc.+5.49" target="_blank" rel="noopener noreferrer" className="hover:text-amber-500 transition-colors">
               Thucydides
             </a>
             <span>|</span>
-            <a href="http://www.perseus.tufts.edu/hopper/text?doc=Isoc.+4.43" target="_blank" rel="noopener noreferrer" className="hover:text-amber-300 transition-colors">
+            <a href="http://www.perseus.tufts.edu/hopper/text?doc=Isoc.+4.43" target="_blank" rel="noopener noreferrer" className="hover:text-amber-500 transition-colors">
               Isocrates
             </a>
             <span>|</span>
-            <a href="https://www.theoi.com/Daimon/Ekekheira.html" target="_blank" rel="noopener noreferrer" className="hover:text-amber-300 transition-colors">
+            <a href="https://www.theoi.com/Daimon/Ekekheira.html" target="_blank" rel="noopener noreferrer" className="hover:text-amber-500 transition-colors">
               Theoi (Ekecheiria)
             </a>
           </div>

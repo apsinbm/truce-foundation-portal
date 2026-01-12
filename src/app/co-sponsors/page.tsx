@@ -651,7 +651,7 @@ export default function CoSponsorsPage() {
       <section className="px-4 pb-16">
         <div className="max-w-6xl mx-auto">
           <div className="p-6 rounded-2xl bg-red-500/10 border border-red-500/30">
-            <h2 className="text-lg font-semibold text-red-300 mb-2 flex items-center gap-2">
+            <h2 className="text-lg font-semibold text-red-500 mb-2 flex items-center gap-2">
               UN Member States That Did Not Co-Sponsor
             </h2>
             <p className="text-sm text-gray-600 mb-4">
@@ -695,7 +695,7 @@ export default function CoSponsorsPage() {
         <div className="max-w-6xl mx-auto text-center">
           <Link
             href="/documents"
-            className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-300 transition-colors"
+            className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-500 transition-colors"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />

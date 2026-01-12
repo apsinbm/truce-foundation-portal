@@ -304,8 +304,8 @@ export default function LeaderboardPage() {
               </div>
               {/* Show methodology info for selected source */}
               <div className={`text-xs p-2 rounded-lg border ${
-                sourceFilter === 'ACLED' ? 'bg-blue-900/20 border-blue-600/50 text-blue-300'
-                : sourceFilter === 'UCDP' ? 'bg-purple-900/20 border-purple-800/50 text-purple-300'
+                sourceFilter === 'ACLED' ? 'bg-blue-900/20 border-blue-600/50 text-blue-400'
+                : sourceFilter === 'UCDP' ? 'bg-purple-900/20 border-purple-800/50 text-purple-400'
                 : 'bg-gray-100/50 border-gray-200/50 text-gray-600'
               }`}>
                 <span className="font-medium">

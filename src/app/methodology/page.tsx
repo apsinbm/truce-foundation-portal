@@ -127,7 +127,7 @@ export default function MethodologyPage() {
                 mechanism for monitoring adherence to the Olympic Truce resolution. Our methodology
                 combines quantitative conflict data with qualitative diplomatic assessments to produce
                 a comprehensive measure of global compliance. For Milano-Cortina 2026, the governing
-                resolution is <a href="/downloads/A_80_L.10-EN.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-300 underline">A/80/L.10</a> (November 2025).
+                resolution is <a href="/downloads/A_80_L.10-EN.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-500 underline">A/80/L.10</a> (November 2025).
               </p>
               <p>
                 The Index is designed by <strong>Multilateral Accountability Associates (MAA)</strong> and
@@ -311,11 +311,11 @@ export default function MethodologyPage() {
               <div className="p-4 rounded-xl bg-blue-100 border border-blue-500/30">
                 <div className="flex items-center gap-2 mb-2">
                   <span className="text-xs font-mono bg-blue-100 text-blue-800 border-blue-300 px-2 py-0.5 rounded">A/80/L.10</span>
-                  <span className="text-xs text-blue-300">Current</span>
+                  <span className="text-xs text-blue-500">Current</span>
                 </div>
                 <h3 className="font-semibold text-gray-900 text-sm">Milano-Cortina 2026 Resolution</h3>
                 <p className="text-xs text-gray-600 mt-1">166 co-sponsors. Defines Truce window: Jan 30 - Mar 22, 2026.</p>
-                <a href="/downloads/A_80_L.10-EN.pdf" className="inline-flex items-center gap-1 text-xs text-green-800 mt-2 hover:text-green-300">
+                <a href="/downloads/A_80_L.10-EN.pdf" className="inline-flex items-center gap-1 text-xs text-green-800 mt-2 hover:text-green-500">
                   <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                   </svg>
@@ -325,11 +325,11 @@ export default function MethodologyPage() {
               <div className="p-4 rounded-xl bg-green-100 border border-green-500/30">
                 <div className="flex items-center gap-2 mb-2">
                   <span className="text-xs font-mono bg-green-100 text-green-800 border-green-300 px-2 py-0.5 rounded">A/RES/48/11</span>
-                  <span className="text-xs text-green-300">Foundation</span>
+                  <span className="text-xs text-green-500">Foundation</span>
                 </div>
                 <h3 className="font-semibold text-gray-900 text-sm">Original 1993 Resolution</h3>
                 <p className="text-xs text-gray-600 mt-1">Revived the ancient ekecheiria. Established the 7-day window.</p>
-                <a href="https://digitallibrary.un.org/record/197368" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-blue-600 mt-2 hover:text-blue-300">
+                <a href="https://digitallibrary.un.org/record/197368" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-blue-600 mt-2 hover:text-blue-500">
                   <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
@@ -342,7 +342,7 @@ export default function MethodologyPage() {
                 </div>
                 <h3 className="font-semibold text-gray-900 text-sm">2030 Agenda (SDGs)</h3>
                 <p className="text-xs text-gray-600 mt-1">Olympic Truce supports SDG 16 (peace) and SDG 17 (partnerships).</p>
-                <a href="https://www.un.org/en/development/desa/population/migration/generalassembly/docs/globalcompact/A_RES_70_1_E.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-blue-600 mt-2 hover:text-blue-300">
+                <a href="https://www.un.org/en/development/desa/population/migration/generalassembly/docs/globalcompact/A_RES_70_1_E.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-blue-600 mt-2 hover:text-blue-500">
                   <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
@@ -355,7 +355,7 @@ export default function MethodologyPage() {
                 </div>
                 <h3 className="font-semibold text-gray-900 text-sm">A World Fit for Children</h3>
                 <p className="text-xs text-gray-600 mt-1">Referenced for youth protection aspects of Truce compliance.</p>
-                <a href="https://digitallibrary.un.org/record/464538" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-blue-600 mt-2 hover:text-blue-300">
+                <a href="https://digitallibrary.un.org/record/464538" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-blue-600 mt-2 hover:text-blue-500">
                   <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
@@ -364,7 +364,7 @@ export default function MethodologyPage() {
               </div>
             </div>
             <p className="text-xs text-gray-500 mt-4 text-center">
-              See the full <Link href="/history" className="text-blue-600 hover:text-blue-300 underline">Legal Framework</Link> on the History page.
+              See the full <Link href="/history" className="text-blue-600 hover:text-blue-500 underline">Legal Framework</Link> on the History page.
             </p>
           </motion.div>
         </div>

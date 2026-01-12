@@ -99,15 +99,15 @@ const CEASEFIRES_2025 = [
 const getStatusColor = (status: string) => {
   switch (status) {
     case 'signed':
-      return 'bg-green-100 text-green-800 border-green-300 border-green-500/30';
+      return 'bg-green-100 text-green-800 border-green-500/30';
     case 'ceasefire':
-      return 'bg-blue-100 text-blue-800 border-blue-300 border-blue-500/30';
+      return 'bg-blue-100 text-blue-800 border-blue-500/30';
     case 'partial':
-      return 'bg-amber-100 text-amber-800 border-amber-300 border-amber-500/30';
+      return 'bg-amber-100 text-amber-800 border-amber-500/30';
     case 'dialogue':
-      return 'bg-purple-100 text-purple-800 border-purple-300 border-purple-500/30';
+      return 'bg-purple-100 text-purple-800 border-purple-500/30';
     case 'diplomatic':
-      return 'bg-cyan-100 text-cyan-300 border-cyan-500/30';
+      return 'bg-cyan-100 text-cyan-600 border-cyan-500/30';
     default:
       return 'bg-gray-100 text-gray-600 border-gray-200';
   }
@@ -266,7 +266,7 @@ export default function CeasefireWatchPage() {
 
                 <div className="pt-3 border-t border-gray-200">
                   <p className="text-xs text-blue-700">
-                    <strong className="text-blue-300">Truce relevance:</strong> {ceasefire.relevance}
+                    <strong className="text-blue-500">Truce relevance:</strong> {ceasefire.relevance}
                   </p>
                 </div>
               </motion.div>
