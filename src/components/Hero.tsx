@@ -6,7 +6,7 @@ import { TRUCE_INDEX_URL } from '@/lib/constants';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-4 py-8 overflow-hidden">
+    <section className="relative h-screen flex flex-col items-center justify-center px-4 py-4 overflow-hidden">
       {/* Background gradient effect */}
       <div className="absolute inset-0 bg-gradient-to-b from-gray-50 via-white to-gray-50" />
 
@@ -23,18 +23,18 @@ export default function Hero() {
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-100 rounded-full blur-3xl" />
 
       {/* Content */}
-      <div className="relative z-10 max-w-4xl mx-auto text-center space-y-6">
+      <div className="relative z-10 max-w-4xl mx-auto text-center space-y-4">
         {/* Official Truce Foundation Logo */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
-          className="flex justify-center mb-4"
+          className="flex justify-center mb-2"
         >
           <img
             src="/truce-foundation-logo.jpg"
             alt="Truce Foundation"
-            className="w-24 h-24 sm:w-32 sm:h-32 md:w-36 md:h-36 object-contain drop-shadow-2xl rounded-full"
+            className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 object-contain drop-shadow-2xl rounded-full"
           />
         </motion.div>
 
@@ -59,7 +59,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}
-          className="flex items-center justify-center gap-4 pt-2"
+          className="flex items-center justify-center gap-4 pt-1"
         >
           <a
             href={TRUCE_INDEX_URL}
@@ -83,7 +83,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
-          className="pt-4 pb-0"
+          className="pt-2 pb-0"
         >
           <Countdown />
         </motion.div>
@@ -93,7 +93,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.45, duration: 0.6 }}
-          className="flex flex-wrap justify-center gap-3 text-xs sm:text-sm pt-2"
+          className="flex flex-wrap justify-center gap-2 text-xs sm:text-sm pt-1"
         >
           <a href="/co-sponsors" className="px-4 py-2 bg-blue-100 border border-blue-600/30 rounded-lg text-blue-700 hover:bg-blue-600/20 transition-colors">
             <span className="font-bold">166</span> UN Co-Sponsors

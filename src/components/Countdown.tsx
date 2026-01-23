@@ -60,32 +60,32 @@ export default function Countdown() {
 
   const TimeBlock = ({ value, label }: { value: number; label: string }) => (
     <div className="flex flex-col items-center">
-      <div className="glass-card px-4 py-3 min-w-[70px] sm:min-w-[80px]">
-        <span className="text-2xl sm:text-3xl font-bold text-gray-900 tabular-nums">
+      <div className="glass-card px-3 py-2 min-w-[55px] sm:min-w-[65px]">
+        <span className="text-xl sm:text-2xl font-bold text-gray-900 tabular-nums">
           {value.toString().padStart(2, '0')}
         </span>
       </div>
-      <span className="text-xs sm:text-sm text-gray-500 mt-2 uppercase tracking-wider">
+      <span className="text-[10px] sm:text-xs text-gray-500 mt-1 uppercase tracking-wider">
         {label}
       </span>
     </div>
   );
 
   return (
-    <div className="flex flex-col items-center gap-4">
-      <p className="text-gray-500 text-sm sm:text-base">
+    <div className="flex flex-col items-center gap-2">
+      <p className="text-gray-500 text-xs sm:text-sm">
         Countdown to Olympic Truce Window
       </p>
-      <div className="flex gap-2 sm:gap-4">
+      <div className="flex gap-2 sm:gap-3">
         <TimeBlock value={timeLeft.days} label="Days" />
-        <span className="text-2xl sm:text-3xl text-gray-400 self-start mt-3">:</span>
+        <span className="text-xl sm:text-2xl text-gray-400 self-start mt-2">:</span>
         <TimeBlock value={timeLeft.hours} label="Hours" />
-        <span className="text-2xl sm:text-3xl text-gray-400 self-start mt-3">:</span>
+        <span className="text-xl sm:text-2xl text-gray-400 self-start mt-2">:</span>
         <TimeBlock value={timeLeft.minutes} label="Min" />
-        <span className="text-2xl sm:text-3xl text-gray-400 self-start mt-3">:</span>
+        <span className="text-xl sm:text-2xl text-gray-400 self-start mt-2">:</span>
         <TimeBlock value={timeLeft.seconds} label="Sec" />
       </div>
-      <p className="text-gray-500 text-xs sm:text-sm mt-2">
+      <p className="text-gray-500 text-xs mt-1">
         Milano-Cortina 2026 Winter Olympics
       </p>
     </div>
