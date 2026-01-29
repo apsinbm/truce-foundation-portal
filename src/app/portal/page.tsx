@@ -7,8 +7,8 @@ import Footer from '@/components/Footer';
 import { SUB_SITES } from '@/lib/constants';
 
 export default function PortalHub() {
-  // All sites are now tier 1 (boxes)
-  const allSites = SUB_SITES.filter(site => site.tier === 1);
+  // All sites are tier 1 (boxes), filter out hidden ones
+  const allSites = SUB_SITES.filter(site => site.tier === 1 && !site.hidden);
 
   return (
     <main className="min-h-screen bg-white">

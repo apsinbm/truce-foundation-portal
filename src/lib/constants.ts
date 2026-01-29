@@ -38,6 +38,7 @@ export interface SubSite {
   status: 'live' | 'coming-soon';
   external?: boolean;
   tier: 1 | 2; // 1 = featured card, 2 = compact link
+  hidden?: boolean; // Hide from portal display
 }
 
 export const SUB_SITES: SubSite[] = [
@@ -78,6 +79,7 @@ export const SUB_SITES: SubSite[] = [
     href: '/briefing',
     status: 'live',
     tier: 1,
+    hidden: true,
   },
   // === ROW 2: Hugh's requested order ===
   {
@@ -170,6 +172,7 @@ export const SUB_SITES: SubSite[] = [
     href: '/reports',
     status: 'live',
     tier: 1,
+    hidden: true,
   },
   {
     id: 'advocacy',
@@ -188,6 +191,7 @@ export const SUB_SITES: SubSite[] = [
     href: '/press',
     status: 'live',
     tier: 1,
+    hidden: true,
   },
   {
     id: 'briefing-sheet',
