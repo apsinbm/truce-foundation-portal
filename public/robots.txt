@@ -1,0 +1,9 @@
+# Truce Foundation Portal - robots.txt
+User-agent: *
+Allow: /
+
+# Block API routes
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://index.trucefoundation.world/sitemap.xml

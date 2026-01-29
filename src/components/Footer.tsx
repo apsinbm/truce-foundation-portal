@@ -106,12 +106,6 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-6">
               <DataAccuracyChecklist />
-              <span className="text-xs text-gray-500 cursor-not-allowed" title="Coming soon">
-                Privacy Policy
-              </span>
-              <span className="text-xs text-gray-500 cursor-not-allowed" title="Coming soon">
-                Terms of Service
-              </span>
             </div>
           </div>
         </div>
