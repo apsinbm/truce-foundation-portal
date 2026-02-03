@@ -9,7 +9,7 @@ interface Partner {
   name: string;
   description: string;
   url: string;
-  category: 'founding' | 'validation' | 'potential';
+  category: 'founding' | 'validation' | 'potential' | 'friendship';
   logo?: string;
 }
 
@@ -60,18 +60,10 @@ const PARTNERS: Partner[] = [
   {
     id: 'woa',
     name: 'World Olympians Association',
-    description: 'Global network of Olympic athletes working together to make a positive impact in the world.',
+    description: 'Global network of Olympic athletes working together to make a positive impact in the world. A long-standing friend in promoting peace through sport.',
     url: 'https://olympians.org',
-    category: 'potential',
+    category: 'friendship',
     logo: '/woa-logo.png',
-  },
-  {
-    id: 'peacesport',
-    name: 'Peace and Sport',
-    description: 'International organization dedicated to using sport as a tool for peace and social stability.',
-    url: 'https://www.peace-sport.org',
-    category: 'potential',
-    logo: '/peace-and-sport-logo.svg',
   },
 ];
 
@@ -97,12 +89,20 @@ const CATEGORY_CONFIG = {
     border: 'border-amber-500/30',
     iconColor: 'text-amber-800',
   },
+  friendship: {
+    label: 'Friendship Links',
+    description: 'Organizations we have worked with over many years',
+    color: 'from-green-500/20 to-green-600/10',
+    border: 'border-green-500/30',
+    iconColor: 'text-green-600',
+  },
 };
 
 export default function PartnersPage() {
   const foundingPartners = PARTNERS.filter((p) => p.category === 'founding');
   const validationPartners = PARTNERS.filter((p) => p.category === 'validation');
   const potentialPartners = PARTNERS.filter((p) => p.category === 'potential');
+  const friendshipPartners = PARTNERS.filter((p) => p.category === 'friendship');
 
   return (
     <main className="min-h-screen bg-white">
@@ -306,6 +306,70 @@ export default function PartnersPage() {
           </div>
         </div>
       </section>
+
+      {/* Friendship Links */}
+      {friendshipPartners.length > 0 && (
+        <section className="py-12 px-4 bg-gray-50/30">
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mb-8"
+            >
+              <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                {CATEGORY_CONFIG.friendship.label}
+              </h2>
+              <p className="text-gray-600">
+                {CATEGORY_CONFIG.friendship.description}
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {friendshipPartners.map((partner, index) => (
+                <motion.a
+                  key={partner.id}
+                  href={partner.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  whileHover={{ scale: 1.02, y: -4 }}
+                  className={`block p-5 rounded-xl bg-gradient-to-br ${CATEGORY_CONFIG.friendship.color} border ${CATEGORY_CONFIG.friendship.border} hover:border-green-400/50 transition-all duration-300`}
+                >
+                  <div className="flex items-start gap-4">
+                    {partner.logo && (
+                      <div className="w-16 h-16 rounded-xl bg-white/50 flex items-center justify-center flex-shrink-0 p-2">
+                        <img
+                          src={partner.logo}
+                          alt={`${partner.name} logo`}
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
+                    )}
+                    <div className="flex-1">
+                      <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                        {partner.name}
+                      </h3>
+                      <p className="text-sm text-gray-600 mb-3">
+                        {partner.description}
+                      </p>
+                      <span className="inline-flex items-center gap-1 text-xs text-green-600">
+                        Visit website
+                        <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                </motion.a>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Become a Partner CTA */}
       <section className="py-16 px-4">
