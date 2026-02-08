@@ -2,10 +2,10 @@
 // mapped against Olympic Truce principles
 
 export type FocusArea =
-  | 'Safe Passage'
+  | 'Diplomatic Engagement'
   | 'Humanitarian Access'
   | 'De-escalation'
-  | 'Peace Through Sport';
+  | 'Regional Stability';
 
 export interface PulseBulletPoint {
   headline: string; // Bold label (e.g., "Iran–U.S. Indirect Talks (Oman)")
@@ -41,7 +41,7 @@ export const PULSE_ENTRIES: PulseEntry[] = [
     periodStart: '2026-01-30',
     periodEnd: '2026-02-06',
     periodLabel: '30 January 2026 – 6 February 2026',
-    focusAreas: ['Safe Passage', 'Humanitarian Access', 'De-escalation', 'Peace Through Sport'],
+    focusAreas: ['Diplomatic Engagement', 'Humanitarian Access', 'De-escalation', 'Regional Stability'],
     sections: [
       {
         id: 'diplomatic',

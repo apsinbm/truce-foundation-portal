@@ -63,10 +63,10 @@ const ALIGNMENT_STYLES: Record<string, { bg: string; border: string; text: strin
 };
 
 const FOCUS_COLORS: Record<string, string> = {
-  'Safe Passage': 'bg-blue-100 text-blue-800 border-blue-200',
+  'Diplomatic Engagement': 'bg-blue-100 text-blue-800 border-blue-200',
   'Humanitarian Access': 'bg-amber-100 text-amber-800 border-amber-200',
   'De-escalation': 'bg-green-100 text-green-800 border-green-200',
-  'Peace Through Sport': 'bg-purple-100 text-purple-800 border-purple-200',
+  'Regional Stability': 'bg-purple-100 text-purple-800 border-purple-200',
 };
 
 function SectionCard({ section, index }: { section: PulseSection; index: number }) {
