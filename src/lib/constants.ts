@@ -63,6 +63,15 @@ export const SUB_SITES: SubSite[] = [
     tier: 1,
   },
   {
+    id: 'truce-pulse',
+    icon: '📡',
+    title: 'Truce Pulse',
+    description: 'Weekly expert analysis of current events mapped against Olympic Truce principles',
+    href: '/truce-pulse',
+    status: 'live',
+    tier: 1,
+  },
+  {
     id: 'ceasefire',
     icon: '🕊️',
     title: 'Ceasefire Watch',

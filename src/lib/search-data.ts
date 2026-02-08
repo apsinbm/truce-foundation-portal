@@ -38,6 +38,14 @@ export const SEARCH_INDEX: SearchItem[] = [
     keywords: ['daily', 'summary', 'news', 'update', 'incidents', 'today'],
   },
   {
+    id: 'truce-pulse',
+    title: 'Truce Pulse',
+    description: 'Weekly expert analysis of current events mapped against Olympic Truce principles',
+    href: '/truce-pulse',
+    category: 'page',
+    keywords: ['pulse', 'weekly', 'analysis', 'expert', 'diplomatic', 'humanitarian', 'de-escalation', 'peace through sport', 'truce alignment'],
+  },
+  {
     id: 'leaderboard',
     title: 'Country Leaderboard',
     description: 'Countries ranked by incidents and compliance metrics',

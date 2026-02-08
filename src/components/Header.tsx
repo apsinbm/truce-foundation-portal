@@ -14,6 +14,7 @@ const NAV_GROUPS = [
       { href: TRUCE_INDEX_URL, label: 'Live Index', external: true },
       { href: '/portal', label: 'Portal Hub' },
       { href: '/briefing', label: 'Daily Briefing' },
+      { href: '/truce-pulse', label: 'Truce Pulse' },
       { href: '/leaderboard', label: 'Leaderboard' },
       { href: '/humanitarian', label: 'Humanitarian Access' },
       { href: '/ceasefire', label: 'Ceasefire Watch' },

@@ -18,6 +18,7 @@ const getActionWord = (id: string): string => {
     advocacy: 'Access Tools',
     methodology: 'Learn More',
     partners: 'Meet Partners',
+    'truce-pulse': 'Read Analysis',
   };
   return actions[id] || 'Visit';
 };
