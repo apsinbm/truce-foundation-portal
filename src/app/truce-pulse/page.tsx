@@ -139,7 +139,7 @@ export default function TrucePulsePage() {
               Truce Pulse
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Weekly curated analysis of current events mapped against Olympic Truce principles
+              Curated analysis of current events mapped against Olympic Truce principles
             </p>
           </motion.div>
         </div>
