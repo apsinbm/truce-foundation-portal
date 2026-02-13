@@ -130,9 +130,8 @@ export default function MethodologyPage() {
                 resolution is <a href="/downloads/A_80_L.10-EN.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-500 underline">A/80/L.10</a> (November 2025).
               </p>
               <p>
-                The Index is designed by <strong>Multilateral Accountability Associates (MAA)</strong> and
-                independently validated by <strong>Seton Hall University</strong> through its Center for
-                Sports Media, Center for UN and Global Governance Studies, and Sports Polling Institute.
+                The Index is designed by <strong>Multilateral Accountability Associates (MAA)</strong>.
+                Independent validation of the Truce Index will be performed upon the conclusion of the Truce period.
               </p>
             </div>
           </motion.div>
@@ -387,24 +386,10 @@ export default function MethodologyPage() {
               </div>
               <div>
                 <h2 className="text-xl font-bold text-gray-900 mb-2">Independent Validation</h2>
-                <p className="text-gray-600 mb-4">
-                  The Index methodology is independently validated by Seton Hall University, ensuring
-                  academic rigor and impartiality. The validation process includes:
+                <p className="text-gray-600">
+                  Independent validation of the Truce Index will be performed upon the conclusion of the Truce period,
+                  ensuring academic rigor and impartiality in the final assessment.
                 </p>
-                <ul className="space-y-2 text-gray-600">
-                  <li className="flex items-start gap-2">
-                    <span className="text-purple-400 mt-1">&#8226;</span>
-                    Methodology review by the Center for Sports Media
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-purple-400 mt-1">&#8226;</span>
-                    Data verification through the Sports Polling Institute
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-purple-400 mt-1">&#8226;</span>
-                    Policy alignment review by the Center for UN and Global Governance Studies
-                  </li>
-                </ul>
               </div>
             </div>
           </motion.div>
