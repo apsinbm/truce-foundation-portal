@@ -5,7 +5,9 @@ export type FocusArea =
   | 'Diplomatic Engagement'
   | 'Humanitarian Access'
   | 'De-escalation'
-  | 'Regional Stability';
+  | 'Regional Stability'
+  | 'Safe Passage'
+  | 'Participation';
 
 export interface PulseBulletPoint {
   headline: string; // Bold label (e.g., "Iran–U.S. Indirect Talks (Oman)")
@@ -36,6 +38,92 @@ export interface PulseEntry {
 }
 
 export const PULSE_ENTRIES: PulseEntry[] = [
+  {
+    id: 'pulse-2026-02-11',
+    periodStart: '2026-02-11',
+    periodEnd: '2026-02-11',
+    periodLabel: '11 February 2026',
+    focusAreas: ['Safe Passage', 'Participation', 'De-escalation', 'Diplomatic Engagement'],
+    sections: [
+      {
+        id: 'safe-passage',
+        title: 'Safe Passage',
+        icon: '🛡️',
+        color: 'green',
+        bullets: [
+          {
+            headline: 'Middle East Military Escalation',
+            text: 'U.S. carrier deployments, missile readiness in Qatar, and ongoing Israel-Hamas hostilities directly threaten regional stability and could impede safe transit routes for Olympic participants.',
+          },
+          {
+            headline: 'Russia–Ukraine Conflict',
+            text: 'Russian advances toward strategic Ukrainian cities pose risks to athletes and officials from affected regions, potentially limiting their ability to travel safely to the Games.',
+          },
+        ],
+      },
+      {
+        id: 'participation',
+        title: 'Participation in the Games',
+        icon: '🏅',
+        color: 'blue',
+        bullets: [
+          {
+            headline: 'Indonesia Humanitarian Deployment to Gaza',
+            text: 'Indonesia\'s preparation to send medical and engineering personnel to Gaza demonstrates a commitment to humanitarian support, echoing the Truce\'s principle of enabling participation and assistance even amid conflict.',
+          },
+          {
+            headline: 'Conflict Zones Hindering Athletes',
+            text: 'Ongoing violence in Myanmar, South Sudan, and Gaza may hinder athletes\' ability to train, qualify, or attend the Games, challenging the universality of Olympic participation.',
+          },
+        ],
+      },
+      {
+        id: 'calming-hostilities',
+        title: 'Calming Hostilities & Humanitarian Access',
+        icon: '🚑',
+        color: 'amber',
+        bullets: [
+          {
+            headline: 'Qatari Emir–Trump De-escalation Call',
+            text: 'Diplomatic efforts such as the Qatari Emir\'s call with President Trump for regional de-escalation reflect attempts to calm hostilities in line with the Truce\'s spirit.',
+          },
+          {
+            headline: 'U.S. Draft Plan for Hamas & Indonesia Deployment',
+            text: 'The U.S. negotiation team\'s draft plan for Hamas and Indonesia\'s humanitarian deployment are practical steps toward reducing violence and enabling humanitarian corridors.',
+          },
+          {
+            headline: 'Persistent Barriers to Humanitarian Access',
+            text: 'Ongoing airstrikes, restrictions on humanitarian access in South Sudan and Myanmar, and continued military buildups in the Arctic and Europe highlight challenges to the Truce\'s humanitarian aims.',
+          },
+        ],
+      },
+      {
+        id: 'diplomatic-frame',
+        title: 'Broader Diplomatic Frame',
+        icon: '🤝',
+        color: 'purple',
+        bullets: [
+          {
+            headline: 'Diplomatic Engagement',
+            text: 'U.S.-Qatar and U.S.-Azerbaijan dialogues, along with humanitarian missions, support the Truce\'s ideals of restraint, dialogue, and coexistence.',
+          },
+          {
+            headline: 'Rising Militarization & Political Deadlocks',
+            text: 'Increasing militarization, political deadlocks, and fragmented conflict landscapes underscore the difficulties of achieving global restraint and peaceful coexistence during the Games.',
+          },
+        ],
+      },
+    ],
+    overallAlignment: {
+      level: 'moderate',
+      summary: 'Mixed: Diplomatic and humanitarian efforts echo Truce principles, while ongoing conflicts and militarization threaten safe passage, participation, and the broader vision for peace and dialogue.',
+    },
+    keyConstraints: [
+      'Military escalations in the Middle East and Europe threaten safe transit routes for Olympic participants.',
+      'Ongoing violence in Myanmar, South Sudan, and Gaza may hinder athletes\' ability to train, qualify, or attend the Games.',
+    ],
+    publishedAt: '2026-02-11',
+  },
   {
     id: 'pulse-2026-02-10',
     periodStart: '2026-02-10',
