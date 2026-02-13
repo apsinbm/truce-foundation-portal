@@ -50,6 +50,13 @@ interface CoverageItem {
 
 const RECENT_COVERAGE: CoverageItem[] = [
   {
+    source: 'X / @andrii_sybiha',
+    title: 'Ukraine FM Reports Massive Russian Drone & Missile Attack on Three Cities',
+    date: '2026-02-12',
+    url: 'https://x.com/andrii_sybiha/status/2021811503121260589',
+    type: 'media',
+  },
+  {
     source: 'UN Press',
     title: 'General Assembly Adopts Olympic Truce Resolution, Citing Sport\'s Unifying Power',
     date: '2025-11-19',

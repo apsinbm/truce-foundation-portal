@@ -200,7 +200,6 @@ export const SUB_SITES: SubSite[] = [
     href: '/press',
     status: 'live',
     tier: 1,
-    hidden: true,
   },
   {
     id: 'briefing-sheet',
