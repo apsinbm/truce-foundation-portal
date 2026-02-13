@@ -39,6 +39,85 @@ export interface PulseEntry {
 
 export const PULSE_ENTRIES: PulseEntry[] = [
   {
+    id: 'pulse-2026-02-12',
+    periodStart: '2026-02-12',
+    periodEnd: '2026-02-12',
+    periodLabel: '12 February 2026',
+    focusAreas: ['Safe Passage', 'Participation', 'De-escalation', 'Diplomatic Engagement'],
+    sections: [
+      {
+        id: 'safe-passage',
+        title: 'Safe Passage & Protection of Civilians',
+        icon: '🛡️',
+        color: 'green',
+        bullets: [
+          {
+            headline: 'Iran Protest Crackdown',
+            text: 'The death toll from Iran\'s crackdown on nationwide protests has reached at least 7,002 people, underscoring a domestic environment where safe passage is far from guaranteed.',
+          },
+          {
+            headline: 'Afghan Migrant Deaths Near Chios',
+            text: 'Deaths of Afghan migrants near Chios, where autopsies show they died of head injuries rather than drowning, reveal the acute vulnerability of displaced populations the Truce explicitly aims to protect.',
+          },
+        ],
+      },
+      {
+        id: 'participation',
+        title: 'Participation in the Games',
+        icon: '🏅',
+        color: 'blue',
+        bullets: [
+          {
+            headline: 'U.S. Aircraft Carrier Deployment Toward Iran',
+            text: 'The Pentagon\'s preparation of a second U.S. aircraft carrier for potential deployment toward Iran signals rising tensions that could impede athletes\' ability to travel safely or represent their nations without political pressure.',
+          },
+          {
+            headline: 'Russian Strike on Odesa Infrastructure',
+            text: 'A Russian strike leaving nearly 300,000 people without electricity and water in Odesa illustrates how ongoing conflict disrupts the basic infrastructure necessary for training, qualification, and international mobility.',
+          },
+        ],
+      },
+      {
+        id: 'calming-hostilities',
+        title: 'Calming Hostilities & Humanitarian Access',
+        icon: '🚑',
+        color: 'amber',
+        bullets: [
+          {
+            headline: 'Iran Nuclear Negotiations',
+            text: 'President Trump insisted that negotiations with Iran continue, and Turkey\'s foreign minister emphasized that expanding the talks could risk another war. These gestures toward dialogue align with the Truce\'s spirit of de-escalation.',
+          },
+          {
+            headline: 'Gaza Humanitarian Crisis',
+            text: 'The Gaza situation, where hundreds of Palestinians were killed near aid sites, shows how far current realities are from the Truce\'s humanitarian aspirations for safe access and civilian protection.',
+          },
+        ],
+      },
+      {
+        id: 'diplomatic-frame',
+        title: 'Broader Diplomatic Frame',
+        icon: '🤝',
+        color: 'purple',
+        bullets: [
+          {
+            headline: 'Munich Security Conference',
+            text: 'Secretary of State Rubio\'s plan to emphasize cooperation on the Middle East, Ukraine, and China at the Munich Security Conference reflects the Truce\'s diplomatic ethos. His intention to take a less contentious approach mirrors the Truce\'s aim to create space for coexistence amid strategic rivalry.',
+          },
+        ],
+      },
+    ],
+    overallAlignment: {
+      level: 'moderate',
+      summary: 'Mixed: Diplomatic channels on Iran and the Munich Security Conference signal alignment with Truce principles, but severe civilian harm in Iran, Gaza, and Ukraine, alongside military escalation, underscores persistent gaps between Truce aspirations and ground realities.',
+    },
+    keyConstraints: [
+      'Iran\'s protest crackdown and Afghan migrant deaths highlight severe threats to civilian safety and safe passage.',
+      'Military escalation (U.S. carrier deployment, Russian infrastructure strikes) directly threatens athlete participation and regional stability.',
+      'Humanitarian access in Gaza remains critically obstructed despite ongoing diplomatic efforts.',
+    ],
+    publishedAt: '2026-02-12',
+  },
+  {
     id: 'pulse-2026-02-11',
     periodStart: '2026-02-11',
     periodEnd: '2026-02-11',
