@@ -39,6 +39,92 @@ export interface PulseEntry {
 
 export const PULSE_ENTRIES: PulseEntry[] = [
   {
+    id: 'pulse-2026-02-13',
+    periodStart: '2026-02-13',
+    periodEnd: '2026-02-13',
+    periodLabel: '13 February 2026',
+    focusAreas: ['Safe Passage', 'Participation', 'De-escalation', 'Diplomatic Engagement'],
+    sections: [
+      {
+        id: 'safe-passage',
+        title: 'Safe Passage',
+        icon: '🛡️',
+        color: 'green',
+        bullets: [
+          {
+            headline: 'U.N. Peacekeeping in DR Congo',
+            text: 'The U.N. peacekeeping mission\'s reconnaissance flights to monitor a ceasefire in the Democratic Republic of the Congo directly support the Truce\'s goal of enabling humanitarian access and safe movement.',
+          },
+          {
+            headline: 'U.S. Withdrawal from Al-Tanf, Syria',
+            text: 'U.S. Central Command\'s orderly departure from the al-Tanf garrison in Syria, repositioning troops and reducing direct conflict, may contribute to safer regional conditions aligned with the Truce\'s call for restraint and secure transit.',
+          },
+        ],
+      },
+      {
+        id: 'participation',
+        title: 'Participation in the Games',
+        icon: '🏅',
+        color: 'blue',
+        bullets: [
+          {
+            headline: 'Reduced Hostilities in Conflict Zones',
+            text: 'The reduction of hostilities in conflict zones such as Syria and Congo, along with multinational defense initiatives proposed by the U.K., create environments more conducive to international sporting events and Olympic participation.',
+          },
+          {
+            headline: 'U.N. Global Scientific Panel on AI',
+            text: 'A new global scientific panel on AI approved by the U.N. reflects international cooperation and dialogue foundational to the Olympic spirit and the Truce\'s encouragement of peaceful participation.',
+          },
+        ],
+      },
+      {
+        id: 'calming-hostilities',
+        title: 'Calming Hostilities & Reducing Tensions',
+        icon: '🚑',
+        color: 'amber',
+        bullets: [
+          {
+            headline: 'U.S.–China Diplomatic Restraint',
+            text: 'The U.S. pausing bans on Chinese telecom operations ahead of a summit with China signals diplomatic restraint and dialogue, resonating with the Truce\'s appeal for calming tensions.',
+          },
+          {
+            headline: 'Bangladesh Election & Peaceful Transition',
+            text: 'The Bangladesh Nationalist Party\'s landslide election win, if followed by peaceful transition, could reduce domestic tensions and support the Truce\'s humanitarian aims.',
+          },
+          {
+            headline: 'High Court Ruling on Palestine Action',
+            text: 'The High Court ruling on Palestine Action demonstrates legal processes over violent confrontation, echoing the Truce\'s preference for dialogue and institutional resolution.',
+          },
+        ],
+      },
+      {
+        id: 'diplomatic-frame',
+        title: 'Broader Diplomatic Frame',
+        icon: '🤝',
+        color: 'purple',
+        bullets: [
+          {
+            headline: 'Multinational Defense & Reconstruction Plans',
+            text: 'Multinational defense and reconstruction plans for Gaza and joint U.S.-Mexico military exercises show efforts at international cooperation and coexistence fitting the Truce\'s diplomatic frame.',
+          },
+          {
+            headline: 'Intelligence & Alliance Coordination',
+            text: 'CIA outreach in China and NATO\'s coordinated support for Ukraine, while rooted in security interests, reflect the importance of communication and alliances that can foster restraint and coexistence if managed constructively.',
+          },
+        ],
+      },
+    ],
+    overallAlignment: {
+      level: 'moderate',
+      summary: 'Positive Signals: Peacekeeping operations, diplomatic pauses, multinational initiatives, and legal restraint collectively align with the Truce\'s core values of safe passage, participation, calming hostilities, and fostering dialogue.',
+    },
+    keyConstraints: [
+      'Ongoing conflict in DR Congo and Syria continues to challenge full realization of safe passage despite peacekeeping and withdrawal efforts.',
+      'Geopolitical tensions between major powers (U.S.-China, NATO-Russia) remain an underlying risk to the Truce\'s vision of global restraint.',
+    ],
+    publishedAt: '2026-02-13',
+  },
+  {
     id: 'pulse-2026-02-12',
     periodStart: '2026-02-12',
     periodEnd: '2026-02-12',
