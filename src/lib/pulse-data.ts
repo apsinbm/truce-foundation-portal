@@ -39,6 +39,88 @@ export interface PulseEntry {
 
 export const PULSE_ENTRIES: PulseEntry[] = [
   {
+    id: 'pulse-2026-02-14',
+    periodStart: '2026-02-14',
+    periodEnd: '2026-02-15',
+    periodLabel: '14–15 February 2026',
+    focusAreas: ['Safe Passage', 'Participation', 'De-escalation', 'Diplomatic Engagement'],
+    sections: [
+      {
+        id: 'safe-passage',
+        title: 'Safe Passage',
+        icon: '🛡️',
+        color: 'green',
+        bullets: [
+          {
+            headline: 'Russian Missile & Drone Attacks on Ukrainian Cities',
+            text: 'Intensified Russian missile and drone attacks on Ukrainian cities, resulting in civilian casualties and infrastructure damage, directly challenge the Truce\'s principle of safe passage and undermine the ability of athletes and delegations to travel safely from affected regions.',
+          },
+          {
+            headline: 'Blackouts & Heating Outages',
+            text: 'The resulting blackouts and heating outages further jeopardize the safety and mobility of populations, including potential Olympic participants, creating conditions incompatible with the Truce\'s call for safe passage.',
+          },
+        ],
+      },
+      {
+        id: 'participation',
+        title: 'Participation in the Games',
+        icon: '🏅',
+        color: 'blue',
+        bullets: [
+          {
+            headline: 'Ukraine Conflict & Regional Instability',
+            text: 'The escalation of conflict and regional instability—highlighted in both the Ukraine conflict and the Munich Security Conference 2026—could impede athletes\' ability to train, qualify, or travel.',
+          },
+          {
+            headline: 'Disrupted Infrastructure in Conflict Zones',
+            text: 'The broader climate of insecurity and disrupted infrastructure in conflict zones poses indirect barriers to participation, even where Olympic attendance is not explicitly addressed.',
+          },
+        ],
+      },
+      {
+        id: 'calming-hostilities',
+        title: 'Calming Hostilities & Humanitarian Access',
+        icon: '🚑',
+        color: 'amber',
+        bullets: [
+          {
+            headline: 'UAE–Russia Diplomatic Engagement',
+            text: 'Diplomatic engagements between the UAE and Russia reflect efforts to de-escalate tensions and promote dialogue, aligning with the Truce\'s spirit by advocating peaceful solutions and regional stability.',
+          },
+          {
+            headline: 'UAE–Iran Dialogue',
+            text: 'The UAE–Iran dialogue emphasizes cooperation in the Gulf, echoing the Truce\'s humanitarian intent—enabling environments where humanitarian access and coexistence are possible.',
+          },
+        ],
+      },
+      {
+        id: 'diplomatic-frame',
+        title: 'Broader Diplomatic Frame',
+        icon: '🤝',
+        color: 'purple',
+        bullets: [
+          {
+            headline: 'Munich Security Conference 2026',
+            text: 'The Munich Security Conference and global governance discussions underscore the urgent need for renewed multilateralism, trust, and institutional reform—themes that resonate with the Olympic Truce\'s broader aims of fostering restraint, dialogue, and coexistence.',
+          },
+          {
+            headline: 'Security Council Reform & Inclusive Cooperation',
+            text: 'Calls for Security Council reform and inclusive cooperation mirror the Truce\'s vision of a world where international events like the Olympics can proceed in peace amid fragmentation and polarization.',
+          },
+        ],
+      },
+    ],
+    overallAlignment: {
+      level: 'moderate',
+      summary: 'While active conflicts starkly violate the Truce\'s ideals, ongoing diplomatic efforts and calls for multilateral reform offer hope for alignment with its principles of safe passage, participation, and peaceful coexistence.',
+    },
+    keyConstraints: [
+      'Russian missile and drone attacks on Ukrainian cities, causing civilian casualties, blackouts, and heating outages, directly challenge safe passage and athlete mobility.',
+      'Escalation of conflict and regional instability could impede athletes\' ability to train, qualify, or travel from affected regions.',
+    ],
+    publishedAt: '2026-02-15',
+  },
+  {
     id: 'pulse-2026-02-13',
     periodStart: '2026-02-13',
     periodEnd: '2026-02-13',
