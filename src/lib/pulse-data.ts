@@ -39,6 +39,88 @@ export interface PulseEntry {
 
 export const PULSE_ENTRIES: PulseEntry[] = [
   {
+    id: 'pulse-2026-02-17',
+    periodStart: '2026-02-17',
+    periodEnd: '2026-02-17',
+    periodLabel: '17 February 2026',
+    focusAreas: ['Safe Passage', 'Participation', 'De-escalation', 'Diplomatic Engagement'],
+    sections: [
+      {
+        id: 'safe-passage',
+        title: 'Safe Passage',
+        icon: '🛡️',
+        color: 'green',
+        bullets: [
+          {
+            headline: 'Israel–Hamas War & Sudanese Civil War',
+            text: 'Airstrikes in Gaza and Sudan create environments where safe passage is severely compromised, directly threatening the safe movement of athletes, officials, and spectators.',
+          },
+          {
+            headline: 'Russia–Ukraine Military Operations',
+            text: 'Ongoing military operations in Ukraine continue to undermine safe transit, underscoring the urgent need for adherence to the Truce\'s principle of allowing unhindered access and movement for Olympic participants.',
+          },
+        ],
+      },
+      {
+        id: 'participation',
+        title: 'Participation in the Games',
+        icon: '🏅',
+        color: 'blue',
+        bullets: [
+          {
+            headline: 'Conflict Zones Threatening Olympic Access',
+            text: 'The Israel–Hamas war, Russia–Ukraine war, and Sudanese civil war directly threaten the ability of athletes, officials, and spectators to participate in the Games.',
+          },
+          {
+            headline: 'Compromised Training & Travel Conditions',
+            text: 'Active conflict environments create barriers to unhindered access and movement, highlighting the gap between the Truce\'s ideals and current realities for Olympic participants.',
+          },
+        ],
+      },
+      {
+        id: 'calming-hostilities',
+        title: 'Calming Hostilities & Humanitarian Access',
+        icon: '🚑',
+        color: 'amber',
+        bullets: [
+          {
+            headline: 'Doctors Without Borders Suspends Gaza Operations',
+            text: 'The suspension of medical operations by Doctors Without Borders in Gaza due to security breaches highlights the critical importance of reducing violence to facilitate humanitarian aid.',
+          },
+          {
+            headline: 'Mass Casualties in Sudan',
+            text: 'The humanitarian crisis in Sudan underscores how a pause in conflict could allow medical and relief efforts to reach those in need, echoing the Truce\'s call for enabling humanitarian access.',
+          },
+        ],
+      },
+      {
+        id: 'diplomatic-frame',
+        title: 'Broader Diplomatic Frame',
+        icon: '🤝',
+        color: 'purple',
+        bullets: [
+          {
+            headline: 'U.S.–Iran Indirect Talks',
+            text: 'Indirect talks between the U.S. and Iran align with the Truce\'s broader diplomatic frame, advocating for restraint, dialogue, and peaceful resolution of disputes.',
+          },
+          {
+            headline: 'U.S.-Brokered Ukraine–Russia Peace Talks',
+            text: 'U.S.-brokered peace talks between Ukraine and Russia demonstrate ongoing attempts to resolve disputes peacefully, resonating with the Truce\'s ethos of coexistence and international mediation.',
+          },
+        ],
+      },
+    ],
+    overallAlignment: {
+      level: 'moderate',
+      summary: 'While diplomatic efforts and calls for humanitarian access reflect the Olympic Truce\'s spirit, ongoing conflicts and security challenges highlight the gap between the Truce\'s ideals and current realities—a reminder of the urgent need for global leaders to honor the Truce by prioritizing safe passage, participation, and peaceful coexistence.',
+    },
+    keyConstraints: [
+      'Preparation for sustained operations against Iran, Israeli strikes in Gaza, and drone attacks in Sudan illustrate ongoing tensions that undermine the Truce\'s call for global calm and cooperation.',
+      'Escalation of military operations and continued hostilities in several regions run counter to the Truce\'s objectives despite diplomatic efforts.',
+    ],
+    publishedAt: '2026-02-17',
+  },
+  {
     id: 'pulse-2026-02-14',
     periodStart: '2026-02-14',
     periodEnd: '2026-02-15',
