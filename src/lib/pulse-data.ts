@@ -39,6 +39,88 @@ export interface PulseEntry {
 
 export const PULSE_ENTRIES: PulseEntry[] = [
   {
+    id: 'pulse-2026-02-18',
+    periodStart: '2026-02-18',
+    periodEnd: '2026-02-18',
+    periodLabel: '18 February 2026',
+    focusAreas: ['Safe Passage', 'Participation', 'De-escalation', 'Diplomatic Engagement'],
+    sections: [
+      {
+        id: 'safe-passage',
+        title: 'Safe Passage',
+        icon: '🛡️',
+        color: 'green',
+        bullets: [
+          {
+            headline: 'U.S.–Iran Nuclear Negotiations',
+            text: 'Iran\'s willingness to suspend nuclear enrichment and exchange drafts for a potential deal suggests a diplomatic opening that could reduce barriers to safe passage for Olympic participants. However, Vice President Vance\'s statement that military action remains an option signals that safe passage is not yet guaranteed.',
+          },
+          {
+            headline: 'Russia–Ukraine Talks Stalled on Territorial Disputes',
+            text: 'The continuation of talks between Russia, Ukraine, and the U.S. reflects attempts at dialogue that could support the Truce\'s aims, but the lack of substantive progress and ongoing territorial disputes pose persistent risks to the movement of athletes and delegations.',
+          },
+        ],
+      },
+      {
+        id: 'participation',
+        title: 'Participation in the Games',
+        icon: '🏅',
+        color: 'blue',
+        bullets: [
+          {
+            headline: 'Poland Bars Chinese-Made Vehicles from Military Facilities',
+            text: 'Poland\'s security restrictions on Chinese-made vehicles illustrate how geopolitical tensions can spill over into restrictions that, while not directly targeting Olympic participation, highlight an environment where exclusionary actions may affect athletes, officials, or national delegations.',
+          },
+          {
+            headline: 'Belgium–U.S. Diplomatic Tensions over Antisemitism Accusations',
+            text: 'Diplomatic friction between Belgium and the U.S. over accusations of antisemitism underscores how political disputes can create a climate of tension that risks affecting the inclusive spirit the Truce seeks to protect for all participants.',
+          },
+        ],
+      },
+      {
+        id: 'calming-hostilities',
+        title: 'Calming Hostilities & Humanitarian Access',
+        icon: '🚑',
+        color: 'amber',
+        bullets: [
+          {
+            headline: 'Lebanese Disarmament Plan Rejected by Hezbollah',
+            text: 'The Lebanese government\'s disarmament plan and its rejection by Hezbollah illustrate ongoing regional tensions that hinder humanitarian access and the calming of hostilities, running counter to the Truce\'s call for a cessation of violence.',
+          },
+          {
+            headline: 'U.S. Military Operations & Cambodian-Thai Border Dispute',
+            text: 'U.S. military operations in the Caribbean and Pacific, the indictment of a tanker captain, and the Cambodian-Thai border dispute further underscore the persistence of conflict and enforcement actions that impede the Truce\'s vision of humanitarian corridors.',
+          },
+        ],
+      },
+      {
+        id: 'diplomatic-frame',
+        title: 'Broader Diplomatic Frame',
+        icon: '🤝',
+        color: 'purple',
+        bullets: [
+          {
+            headline: 'Geneva Negotiations & Continued Dialogue',
+            text: 'The fact that negotiations are taking place in Geneva and that parties remain willing to continue talks aligns with the Truce\'s spirit of restraint and dialogue, even as concrete outcomes remain elusive.',
+          },
+          {
+            headline: 'U.N. Human Rights Council & Canada\'s Defense Strategy',
+            text: 'The U.N. Human Rights Council\'s investigation into global criminal enterprises and Canada\'s "Buy Canadian" defense strategy reflect international commitments to justice, sovereignty, and reduced dependency—steps toward the coexistence and self-determination the Truce envisions.',
+          },
+        ],
+      },
+    ],
+    overallAlignment: {
+      level: 'moderate',
+      summary: 'Diplomatic negotiations in Geneva, Iran\'s willingness to engage, and continued Russia–Ukraine–U.S. talks show alignment with the Truce\'s spirit of dialogue—yet military threats, sanctions, and unresolved territorial disputes reveal the gap between current realities and the Truce\'s vision of restraint, safe passage, and coexistence.',
+    },
+    keyConstraints: [
+      'Vice President Vance\'s statement that military action against Iran remains on the table, combined with persistent sanctions and embargoes, undermine the Truce\'s call for safe passage and peaceful resolution.',
+      'Lack of progress in Russia–Ukraine negotiations and ongoing regional conflicts—from Lebanon to the Cambodian-Thai border—run counter to the Truce\'s objectives of calming hostilities and enabling humanitarian access.',
+    ],
+    publishedAt: '2026-02-18',
+  },
+  {
     id: 'pulse-2026-02-17',
     periodStart: '2026-02-17',
     periodEnd: '2026-02-17',
