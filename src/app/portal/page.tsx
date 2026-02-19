@@ -5,6 +5,7 @@ import Header from '@/components/Header';
 import SubSiteCard from '@/components/SubSiteCard';
 import Footer from '@/components/Footer';
 import { SUB_SITES } from '@/lib/constants';
+import NewsFlash from '@/components/NewsFlash';
 
 export default function PortalHub() {
   // All sites are tier 1 (boxes), filter out hidden ones
@@ -32,6 +33,9 @@ export default function PortalHub() {
           </motion.div>
         </div>
       </section>
+
+      {/* News Flash Banner */}
+      <NewsFlash />
 
       {/* All Cards Section */}
       <section className="relative pt-2 pb-16 px-4">
