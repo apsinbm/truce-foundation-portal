@@ -39,6 +39,88 @@ export interface PulseEntry {
 
 export const PULSE_ENTRIES: PulseEntry[] = [
   {
+    id: 'pulse-2026-02-19',
+    periodStart: '2026-02-19',
+    periodEnd: '2026-02-19',
+    periodLabel: '19 February 2026',
+    focusAreas: ['Safe Passage', 'Participation', 'De-escalation', 'Diplomatic Engagement'],
+    sections: [
+      {
+        id: 'safe-passage',
+        title: 'Safe Passage',
+        icon: '🛡️',
+        color: 'green',
+        bullets: [
+          {
+            headline: 'Russia–Ukraine, Israel–Hamas & Sudan Conflicts Persist',
+            text: 'Multiple conflicts continue through the Truce period, with the Russia–Ukraine war, Israel–Hamas war, and Sudanese civil war all undermining the Truce\'s call for safe passage of athletes and delegations.',
+          },
+          {
+            headline: 'Geneva Talks & U.S. Restraint on Iran',
+            text: 'Ongoing negotiations—including Geneva talks between Moscow and Kyiv and U.S. military readiness but restraint regarding Iran—reflect attempts to create corridors for dialogue and humanitarian access, echoing the Truce\'s spirit of reduced violence and increased mobility.',
+          },
+        ],
+      },
+      {
+        id: 'participation',
+        title: 'Participation in the Games',
+        icon: '🏅',
+        color: 'blue',
+        bullets: [
+          {
+            headline: 'U.N. Security Council & NATO Diplomatic Activity',
+            text: 'U.N. Security Council meetings and the U.S. push for NATO to scale back foreign operations suggest a global environment prioritizing dialogue and cooperation—frameworks essential for ensuring athletes from conflict zones can participate safely.',
+          },
+          {
+            headline: 'International Gaza Stabilization Board',
+            text: 'The formation of international boards for Gaza stabilization reflects diplomatic cooperation that, while not directly tied to Olympic events, supports the broader environment of engagement the Truce seeks to protect for all participants.',
+          },
+        ],
+      },
+      {
+        id: 'calming-hostilities',
+        title: 'Calming Hostilities & Humanitarian Access',
+        icon: '🚑',
+        color: 'amber',
+        bullets: [
+          {
+            headline: 'Geneva Russia–Ukraine Talks & Belarus/Russia Sanctions',
+            text: 'The Geneva talks on Russia–Ukraine, despite skepticism, represent ongoing efforts to reduce tensions. Sanctions and diplomatic pressure on Belarus and Russia aim to curb escalation and promote accountability, aligning with the Truce\'s call for calming hostilities.',
+          },
+          {
+            headline: 'Gaza & Sudan Humanitarian Interventions',
+            text: 'U.N. and international boards addressing Gaza and Sudan focus on humanitarian access and reconstruction, directly supporting the Truce\'s humanitarian objectives. U.S. military restraint regarding Iran signals a preference for dialogue over immediate conflict.',
+          },
+        ],
+      },
+      {
+        id: 'diplomatic-frame',
+        title: 'Broader Diplomatic Frame',
+        icon: '🤝',
+        color: 'purple',
+        bullets: [
+          {
+            headline: 'International Negotiations & Multilateral Cooperation',
+            text: 'Current international negotiations, sanctions, and humanitarian interventions illustrate a world grappling with conflict but striving for diplomatic solutions. The emphasis on meetings, boards, and international cooperation mirrors the Truce\'s ethos of restraint and dialogue.',
+          },
+          {
+            headline: 'Frameworks for Peaceful Coexistence',
+            text: 'While direct links to Olympic participation are not always explicit, the broader context of diplomatic engagement offers hope that such frameworks may eventually support safe passage and participation—reflecting the Truce\'s foundational commitment to peaceful coexistence.',
+          },
+        ],
+      },
+    ],
+    overallAlignment: {
+      level: 'moderate',
+      summary: 'Global attempts to reduce violence, enable humanitarian access, and foster diplomatic dialogue—from Geneva talks to Gaza stabilization boards—align with the Truce\'s call for restraint and coexistence, even as ongoing conflicts in Ukraine, Gaza, and Sudan underscore the distance between aspiration and reality.',
+    },
+    keyConstraints: [
+      'The Russia–Ukraine war, Israel–Hamas war, and Sudanese civil war continue through the Truce period, directly undermining safe passage and the cessation of hostilities the Truce demands.',
+      'Despite diplomatic frameworks and international cooperation, outcomes remain uncertain and the gap between dialogue and concrete de-escalation persists across multiple conflict zones.',
+    ],
+    publishedAt: '2026-02-19',
+  },
+  {
     id: 'pulse-2026-02-18',
     periodStart: '2026-02-18',
     periodEnd: '2026-02-18',
