@@ -39,6 +39,88 @@ export interface PulseEntry {
 
 export const PULSE_ENTRIES: PulseEntry[] = [
   {
+    id: 'pulse-2026-02-20',
+    periodStart: '2026-02-20',
+    periodEnd: '2026-02-20',
+    periodLabel: '20 February 2026',
+    focusAreas: ['Safe Passage', 'Participation', 'De-escalation', 'Diplomatic Engagement'],
+    sections: [
+      {
+        id: 'safe-passage',
+        title: 'Safe Passage',
+        icon: '🛡️',
+        color: 'green',
+        bullets: [
+          {
+            headline: 'Violence Against Ukrainian Women & Kenyan Recruitment',
+            text: 'Reports of hundreds of Ukrainian women and girls suffering violence and the recruitment of Kenyans to fight in Ukraine illustrate how war zones impede not only athletes\' travel but their very safety, directly threatening the Truce\'s principle of safe passage.',
+          },
+          {
+            headline: 'Restrictions on Palestinian Movement',
+            text: 'Israel\'s limitation on West Bank residents\' access to Al-Aqsa Mosque reflects broader barriers to free movement that could extend to Olympic participation, undermining the Truce\'s call for unhindered passage of athletes and delegations.',
+          },
+        ],
+      },
+      {
+        id: 'participation',
+        title: 'Participation in the Games',
+        icon: '🏅',
+        color: 'blue',
+        bullets: [
+          {
+            headline: 'Ongoing Conflicts Threaten Athlete Participation',
+            text: 'The Russia–Ukraine war, the Israel–Hamas war, and tensions involving Iran create environments where athletes from conflict zones face significant barriers to training, qualifying, and traveling to compete in the Games.',
+          },
+          {
+            headline: 'Movement Restrictions & Conflict-Zone Barriers',
+            text: 'Restrictions on civilian movement in the West Bank and ongoing violence across multiple regions highlight how geopolitical tensions can extend to exclude athletes and delegations from international sporting events.',
+          },
+        ],
+      },
+      {
+        id: 'calming-hostilities',
+        title: 'Calming Hostilities & Humanitarian Access',
+        icon: '🚑',
+        color: 'amber',
+        bullets: [
+          {
+            headline: 'Gaza Civilian Casualties & U.N. Report on Aid Denial',
+            text: 'Ongoing violence in Gaza and the West Bank, with high civilian casualties and reports of ethnic cleansing, contradicts the Truce\'s humanitarian aims. The U.N. Human Rights Office\'s report on destruction and denial of aid in Gaza directly undermines the Truce\'s call for humanitarian access.',
+          },
+          {
+            headline: '$7 Billion Gaza Reconstruction Pledges & Peacekeeping Deployments',
+            text: 'The U.S. announcement of $7 billion in pledges for Gaza\'s reconstruction and the deployment of peacekeeping troops by several countries represent steps toward enabling humanitarian access and calming tensions, albeit within a highly contested and fragile context.',
+          },
+        ],
+      },
+      {
+        id: 'diplomatic-frame',
+        title: 'Broader Diplomatic Frame',
+        icon: '🤝',
+        color: 'purple',
+        bullets: [
+          {
+            headline: '"Board of Peace" & Multilateral Reconstruction Pledges',
+            text: 'The formation of the "Board of Peace" with pledges for reconstruction and peacekeeping echoes the Truce\'s call for dialogue and multilateral cooperation. However, the lack of clarity on disarmament and withdrawal from Gaza reveals the limits of current diplomatic efforts.',
+          },
+          {
+            headline: 'Military Build-Ups & Treaty Withdrawals',
+            text: 'U.S. naval deployments near Iran, Poland\'s use of landmines, new nuclear agreements lacking non-proliferation safeguards, and countries withdrawing from restraint treaties challenge the Truce\'s spirit and expose the escalation of military postures alongside diplomatic initiatives.',
+          },
+        ],
+      },
+    ],
+    overallAlignment: {
+      level: 'moderate',
+      summary: 'While diplomatic initiatives like the "Board of Peace" and humanitarian pledges for Gaza align with the Truce\'s ideals, the persistence of armed conflict, restrictions on movement, and escalation of military postures starkly undermine its core principles—highlighting both the urgent need for the Truce\'s vision and the formidable obstacles to its realization.',
+    },
+    keyConstraints: [
+      'Ongoing violence in Gaza and Ukraine, restrictions on Palestinian movement, and reports of violence against Ukrainian civilians directly undermine safe passage and humanitarian access.',
+      'Military build-ups, nuclear agreements without non-proliferation safeguards, and treaty withdrawals reveal the gap between diplomatic rhetoric and the Truce\'s call for restraint and coexistence.',
+    ],
+    publishedAt: '2026-02-20',
+  },
+  {
     id: 'pulse-2026-02-19',
     periodStart: '2026-02-19',
     periodEnd: '2026-02-19',
