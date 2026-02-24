@@ -39,6 +39,88 @@ export interface PulseEntry {
 
 export const PULSE_ENTRIES: PulseEntry[] = [
   {
+    id: 'pulse-2026-02-22',
+    periodStart: '2026-02-22',
+    periodEnd: '2026-02-22',
+    periodLabel: '22 February 2026',
+    focusAreas: ['Safe Passage', 'Participation', 'De-escalation', 'Diplomatic Engagement'],
+    sections: [
+      {
+        id: 'safe-passage',
+        title: 'Safe Passage',
+        icon: '🛡️',
+        color: 'green',
+        bullets: [
+          {
+            headline: 'Mexican Cartel Violence Threatens Transit in Guadalajara',
+            text: 'The killing of cartel leader "El Mencho" triggered widespread violence, road blockades, and public safety warnings in Guadalajara—instability that directly threatens safe passage of individuals, including athletes, and could impede participation in international events.',
+          },
+          {
+            headline: 'Conflict Zones in Lebanon, Pakistan & Syria',
+            text: 'Israeli strikes in Lebanon\'s Bekaa valley, Pakistani military operations along the Afghan border, and Islamic State attacks in Syria create environments where travel is perilous and the movement of athletes or delegations could be severely restricted, starkly contrasting the Truce\'s intent.',
+          },
+        ],
+      },
+      {
+        id: 'participation',
+        title: 'Participation in the Games',
+        icon: '🏅',
+        color: 'blue',
+        bullets: [
+          {
+            headline: 'Escalatory Military Actions Undermine Access',
+            text: 'U.S. military operations in the Pacific, threats of strikes against Iran, and heightened military posturing—including increased U.S. aircraft deployments in Jordan—risk further escalation rather than calming tensions, undermining the environment needed for safe Olympic participation.',
+          },
+          {
+            headline: 'Multi-Region Instability Barriers',
+            text: 'Active conflicts across Mexico, Lebanon, Pakistan, and Syria, combined with military build-ups, create compounding barriers to the free movement and safe participation of athletes and delegations from affected regions.',
+          },
+        ],
+      },
+      {
+        id: 'calming-hostilities',
+        title: 'Calming Hostilities & Humanitarian Access',
+        icon: '🚑',
+        color: 'amber',
+        bullets: [
+          {
+            headline: 'U.S.–Iran Geneva Negotiations',
+            text: 'Ongoing negotiations between U.S. and Iranian officials in Geneva represent attempts at dialogue and compromise. Iran\'s willingness to offer concessions on uranium enrichment in exchange for recognition of peaceful nuclear rights and sanctions relief is a fragile but meaningful step toward reducing tensions.',
+          },
+          {
+            headline: 'U.S. Ends Humanitarian Funding in Africa',
+            text: 'The U.S. State Department\'s decision to end humanitarian funding in several African nations, citing a lack of alignment with national interests, could hinder humanitarian efforts and runs counter to the Truce\'s call for facilitating aid and relief during periods of conflict.',
+          },
+        ],
+      },
+      {
+        id: 'diplomatic-frame',
+        title: 'Broader Diplomatic Frame',
+        icon: '🤝',
+        color: 'purple',
+        bullets: [
+          {
+            headline: 'EU Divisions on Ukraine Support',
+            text: 'While the EU seeks to support Ukraine financially, internal divisions—such as Hungary\'s objection—and accusations of blackmail reflect the complexities of achieving unity and dialogue in times of crisis, testing the Truce\'s call for multilateral restraint.',
+          },
+          {
+            headline: 'EU Diplomatic Convening on Gaza Peace',
+            text: 'The convening of EU diplomats to discuss peace in Gaza and the inclusion of multiple nations in dialogue efforts mirror the Truce\'s call for multilateral engagement and peaceful resolution, even as the region remains volatile.',
+          },
+        ],
+      },
+    ],
+    overallAlignment: {
+      level: 'moderate',
+      summary: 'While diplomatic efforts such as U.S.–Iran Geneva negotiations and EU multilateral engagement echo the Truce\'s call for dialogue and restraint, ongoing violence from Mexico to the Middle East, military escalation, and restrictions on humanitarian access highlight the persistent distance between the Truce\'s vision and current realities.',
+    },
+    keyConstraints: [
+      'Cartel violence in Mexico, Israeli strikes in Lebanon, and military operations in Pakistan and Syria create direct barriers to safe passage and athlete mobility across multiple regions.',
+      'U.S. military posturing, the withdrawal of humanitarian funding in Africa, and EU internal divisions undermine the Truce\'s objectives of restraint, humanitarian access, and multilateral cooperation.',
+    ],
+    publishedAt: '2026-02-22',
+  },
+  {
     id: 'pulse-2026-02-20',
     periodStart: '2026-02-20',
     periodEnd: '2026-02-20',
