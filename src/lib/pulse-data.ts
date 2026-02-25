@@ -39,6 +39,88 @@ export interface PulseEntry {
 
 export const PULSE_ENTRIES: PulseEntry[] = [
   {
+    id: 'pulse-2026-02-23',
+    periodStart: '2026-02-23',
+    periodEnd: '2026-02-24',
+    periodLabel: '23–24 February 2026',
+    focusAreas: ['Safe Passage', 'Participation', 'De-escalation', 'Diplomatic Engagement'],
+    sections: [
+      {
+        id: 'safe-passage',
+        title: 'Safe Passage',
+        icon: '🛡️',
+        color: 'green',
+        bullets: [
+          {
+            headline: 'U.S. Personnel Ordered to Depart Beirut',
+            text: 'The ordered departure of non-emergency U.S. personnel from Beirut due to security concerns underscores how escalating regional tensions restrict freedom of movement and jeopardize civilian safety, running counter to the Truce\'s objective of keeping borders and transit routes open for peaceful travel.',
+          },
+          {
+            headline: 'Chad Closes Border with Sudan After Cross-Border Attacks',
+            text: 'Chad\'s decision to close its border with Sudan following cross-border attacks reflects a breakdown of conditions necessary for safe passage, even for civilians fleeing violence—directly opposing the Truce\'s call for unhindered movement of athletes, officials, and humanitarian actors.',
+          },
+        ],
+      },
+      {
+        id: 'participation',
+        title: 'Participation in the Games',
+        icon: '🏅',
+        color: 'blue',
+        bullets: [
+          {
+            headline: 'Cartel Violence Destabilizes Mexican States',
+            text: 'Widespread cartel-related unrest across Mexico\'s states creates domestic instability that strains national resources and attention. The scale of violence and loss of life illustrates internal security crises that can impede preparation, athlete mobility, and equitable participation.',
+          },
+          {
+            headline: 'Sustained Insecurity Barriers to Equitable Access',
+            text: 'Countries grappling with sustained insecurity face compounding barriers to Olympic participation, as ongoing conflicts and retaliatory violence divert resources from athlete development and restrict the conditions needed for equitable access to the Games.',
+          },
+        ],
+      },
+      {
+        id: 'calming-hostilities',
+        title: 'Calming Hostilities & Humanitarian Access',
+        icon: '🚑',
+        color: 'amber',
+        bullets: [
+          {
+            headline: 'U.S. Caution on Iran Military Strikes',
+            text: 'Discussions within U.S. leadership about the risks of military strikes on Iran—including concerns about prolonged conflict and casualties—reflect an awareness of the costs of escalation, aligning conceptually with the Truce\'s emphasis on restraint.',
+          },
+          {
+            headline: 'Intensified Settler Violence in the West Bank',
+            text: 'Intensified settler violence, attacks on civilians, and the displacement of Palestinian communities starkly violate the Truce\'s humanitarian spirit, exacerbating tensions and obstructing humanitarian access in direct opposition to the Truce\'s call for calming hostilities.',
+          },
+        ],
+      },
+      {
+        id: 'diplomatic-frame',
+        title: 'Broader Diplomatic Frame',
+        icon: '🤝',
+        color: 'purple',
+        bullets: [
+          {
+            headline: 'Hungary\'s Veto on EU Russia–Ukraine Sanctions',
+            text: 'Hungary\'s maintenance of its veto on EU sanctions related to the Russia–Ukraine war highlights diplomatic fragmentation rather than collective restraint, showing how geopolitical divisions can undermine unified peace signals the Truce seeks to promote.',
+          },
+          {
+            headline: 'ICC Hearings on Crimes Against Humanity',
+            text: 'International Criminal Court hearings on alleged crimes against humanity demonstrate alternative, non-violent mechanisms for accountability that resonate with the Truce\'s underlying values of justice over force and the pursuit of coexistence through legal rather than military means.',
+          },
+        ],
+      },
+    ],
+    overallAlignment: {
+      level: 'moderate',
+      summary: 'Current events reveal a world in which the Olympic Truce remains profoundly relevant but insufficiently realized—some diplomatic caution and international legal processes align with its spirit, while border closures, settler violence, cartel unrest, and diplomatic fragmentation underscore that even temporary restraint and protection of civilians remain urgent and unmet objectives.',
+    },
+    keyConstraints: [
+      'Border closures between Chad and Sudan, the departure of U.S. personnel from Beirut, and widespread cartel violence in Mexico directly undermine safe passage and athlete mobility across multiple regions.',
+      'Intensified settler violence in the West Bank and Hungary\'s veto on EU sanctions illustrate how both ground-level hostilities and diplomatic fragmentation obstruct the Truce\'s vision of restraint, humanitarian access, and collective peace.',
+    ],
+    publishedAt: '2026-02-24',
+  },
+  {
     id: 'pulse-2026-02-22',
     periodStart: '2026-02-22',
     periodEnd: '2026-02-22',
