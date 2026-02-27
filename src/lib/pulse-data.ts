@@ -39,6 +39,88 @@ export interface PulseEntry {
 
 export const PULSE_ENTRIES: PulseEntry[] = [
   {
+    id: 'pulse-2026-02-26',
+    periodStart: '2026-02-26',
+    periodEnd: '2026-02-26',
+    periodLabel: '26 February 2026',
+    focusAreas: ['Safe Passage', 'Participation', 'De-escalation', 'Diplomatic Engagement'],
+    sections: [
+      {
+        id: 'safe-passage',
+        title: 'Safe Passage',
+        icon: '🛡️',
+        color: 'green',
+        bullets: [
+          {
+            headline: 'Pakistan Strikes Taliban Forces in Afghan Cities',
+            text: 'Pakistan\'s direct strikes on Taliban government forces in Afghanistan\'s major cities, following retaliatory border attacks, illustrate an escalation that places civilians and cross-border movement at risk rather than safeguarding the safe passage the Truce demands.',
+          },
+          {
+            headline: 'Mass Graves in DRC & Migrant Deaths on Transit Routes',
+            text: 'The discovery of mass graves in eastern Democratic Republic of the Congo following M-23\'s withdrawal underscores a breakdown in civilian protection, while reported deaths of migrants on Mediterranean and Horn of Africa routes highlight how insecurity undermines safe passage far beyond battlefields.',
+          },
+        ],
+      },
+      {
+        id: 'participation',
+        title: 'Participation in the Games',
+        icon: '🏅',
+        color: 'blue',
+        bullets: [
+          {
+            headline: 'Travel Advisories Urging Evacuation from Iran',
+            text: 'Advisories urging citizens to avoid or evacuate Iran due to security concerns signal environments where international mobility is constrained, at odds with the Truce\'s aim of facilitating unhindered participation in the Olympic Games.',
+          },
+          {
+            headline: 'Authorized Departures of U.S. Embassy Staff from Israel',
+            text: 'The authorized departure of U.S. embassy staff from Israel reflects security conditions that constrain international travel and reduce confidence in safe movement—conditions incompatible with the Truce\'s goal of reducing security risks and travel barriers for athletes, officials, and spectators.',
+          },
+        ],
+      },
+      {
+        id: 'calming-hostilities',
+        title: 'Calming Hostilities & Humanitarian Access',
+        icon: '🚑',
+        color: 'amber',
+        bullets: [
+          {
+            headline: 'Sudanese RSF Attacks & Gaza Civilian Casualties',
+            text: 'The Sudanese Rapid Support Forces\' attacks causing deaths, injuries, and mass displacement, alongside intensified military actions in Gaza resulting in civilian casualties, run counter to the Truce\'s appeal for restraint, protection of non-combatants, and enabling humanitarian access.',
+          },
+          {
+            headline: 'U.S.–Iran Geneva Negotiations Continue',
+            text: 'The continuation of U.S.–Iran negotiations in Geneva, despite the absence of a breakthrough, aligns with the Truce\'s emphasis on dialogue and conflict prevention—particularly given the stated intention to continue talks to avert war.',
+          },
+        ],
+      },
+      {
+        id: 'diplomatic-frame',
+        title: 'Broader Diplomatic Frame',
+        icon: '🤝',
+        color: 'purple',
+        bullets: [
+          {
+            headline: 'Congressional Authorization Required for Iran Strikes',
+            text: 'U.S. legislative efforts to require explicit congressional authorization for military action against Iran emphasize institutional restraint and deliberation over unilateral escalation, resonating with the Truce\'s call for measured, accountable decision-making.',
+          },
+          {
+            headline: 'Fragile Restraint Amid Competing Narratives',
+            text: 'Statements downplaying the likelihood of prolonged war gesture toward caution, yet competing narratives, evacuation advisories, and preparations for possible strikes illustrate how fragile the commitment to restraint remains—the Truce serving as a normative benchmark against which this gap is measured.',
+          },
+        ],
+      },
+    ],
+    overallAlignment: {
+      level: 'moderate',
+      summary: 'Events reveal a world largely diverging from the Truce\'s ideals—escalating conflicts, humanitarian crises, and restricted mobility undermine safe passage and peaceful participation. Yet ongoing Geneva negotiations and calls for legislative oversight show that diplomatic pathways persist, with the Truce serving as a normative benchmark highlighting the gap between current tensions and aspirational goals of restraint and coexistence.',
+    },
+    keyConstraints: [
+      'Pakistan\'s strikes in Afghanistan, mass graves in the DRC, Sudanese RSF attacks, and Gaza civilian casualties demonstrate escalating violence and breakdown of civilian protection across multiple regions.',
+      'Travel advisories for Iran, embassy staff departures from Israel, and preparations for possible strikes constrain international mobility and expose the fragility of diplomatic restraint during the Truce period.',
+    ],
+    publishedAt: '2026-02-26',
+  },
+  {
     id: 'pulse-2026-02-25',
     periodStart: '2026-02-25',
     periodEnd: '2026-02-25',
