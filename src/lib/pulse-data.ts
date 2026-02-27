@@ -39,6 +39,88 @@ export interface PulseEntry {
 
 export const PULSE_ENTRIES: PulseEntry[] = [
   {
+    id: 'pulse-2026-02-25',
+    periodStart: '2026-02-25',
+    periodEnd: '2026-02-25',
+    periodLabel: '25 February 2026',
+    focusAreas: ['Safe Passage', 'Participation', 'De-escalation', 'Diplomatic Engagement'],
+    sections: [
+      {
+        id: 'safe-passage',
+        title: 'Safe Passage',
+        icon: '🛡️',
+        color: 'green',
+        bullets: [
+          {
+            headline: '18 Additional F-35s & U.S. Tankers Deployed to Middle East',
+            text: 'The arrival of 18 additional F-35 fighter jets and several U.S. tankers in the Middle East underscores rising militarization that threatens mobility and civilian transit, directly challenging the Truce\'s call for safe, unobstructed movement of athletes, delegations, and humanitarian actors.',
+          },
+          {
+            headline: 'Iranian Military Drill in the Strait of Hormuz',
+            text: 'Iran\'s initiation of a large-scale military drill in the Strait of Hormuz heightens tensions in a strategic chokepoint critical for global mobility, threatening maritime stability that humanitarian shipments rely on and intersecting with the Truce\'s call to safeguard passage and humanitarian access.',
+          },
+        ],
+      },
+      {
+        id: 'participation',
+        title: 'Participation in the Games',
+        icon: '🏅',
+        color: 'blue',
+        bullets: [
+          {
+            headline: 'Regional Uncertainty Threatens Olympic Team Dispatch',
+            text: 'Military drills and escalating tensions around the Strait of Hormuz increase regional uncertainty, raising concerns about whether nations can freely and confidently dispatch their Olympic teams during periods of acute geopolitical strain.',
+          },
+          {
+            headline: 'U.S.–Iran–Israel Triangular Mistrust',
+            text: 'Ongoing triangular tensions between the U.S., Iran, and Israel—including reported discussions about overflight permissions for potential air operations—reveal an atmosphere of deep mistrust that the Truce urges states to counter by modeling coexistence and peaceful interaction.',
+          },
+        ],
+      },
+      {
+        id: 'calming-hostilities',
+        title: 'Calming Hostilities & Humanitarian Access',
+        icon: '🚑',
+        color: 'amber',
+        bullets: [
+          {
+            headline: 'U.S. Military Preparing Weeks-Long Iran Operations',
+            text: 'Reports that the U.S. military is preparing for possible weeks-long operations against Iran illustrate escalating rhetoric and planning that run counter to the Truce\'s appeal for calming hostilities, highlighting the need for a symbolic pause to reduce the momentum toward confrontation.',
+          },
+          {
+            headline: 'Maritime Corridor Threats to Humanitarian Shipments',
+            text: 'Iran\'s Strait of Hormuz drill, combined with increased U.S. and Israeli discussions on potential strikes, threatens the maritime stability that humanitarian shipments depend on—any disruption to sea-based corridors directly undermines the Truce\'s call to safeguard humanitarian access.',
+          },
+        ],
+      },
+      {
+        id: 'diplomatic-frame',
+        title: 'Broader Diplomatic Frame',
+        icon: '🤝',
+        color: 'purple',
+        bullets: [
+          {
+            headline: 'Geneva Indirect Talks via Witkoff & Kushner',
+            text: 'Indirect U.S.–Iran talks in Geneva, mediated by Oman and involving envoys Steve Witkoff and Jared Kushner, exemplify diplomatic engagement aligned with the Truce\'s call for communication over confrontation. Their fragility amid simultaneous military build-ups amplifies the importance of protecting diplomatic avenues.',
+          },
+          {
+            headline: 'Trump Supports Israeli Strikes on Iran\'s Missile Program',
+            text: 'President Trump\'s willingness to support Israeli strikes on Iran\'s ballistic missile program represents political brinkmanship that the Truce seeks to counterbalance, emphasizing the need to lower the temperature during high-risk periods and pursue stability over escalatory signaling.',
+          },
+        ],
+      },
+    ],
+    overallAlignment: {
+      level: 'moderate',
+      summary: 'Geneva indirect talks and Oman-mediated diplomacy align with the Truce\'s spirit of dialogue and restraint, but massive military deployments, Strait of Hormuz drills, and preparations for weeks-long operations against Iran reveal an escalatory trajectory that starkly challenges the Truce\'s vision of safe passage, humanitarian access, and coexistence.',
+    },
+    keyConstraints: [
+      'The deployment of 18 F-35s to the Middle East, Iranian military drills in the Strait of Hormuz, and U.S. preparations for weeks-long Iran operations represent an accelerating militarization that directly undermines the Truce\'s call for restraint and safe passage.',
+      'Simultaneous military build-ups and diplomatic talks expose the fragility of current engagement channels, with discussions of overflight permissions and support for strikes risking the collapse of dialogue the Truce seeks to protect.',
+    ],
+    publishedAt: '2026-02-25',
+  },
+  {
     id: 'pulse-2026-02-23',
     periodStart: '2026-02-23',
     periodEnd: '2026-02-24',
