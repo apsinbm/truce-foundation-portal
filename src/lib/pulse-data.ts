@@ -39,6 +39,88 @@ export interface PulseEntry {
 
 export const PULSE_ENTRIES: PulseEntry[] = [
   {
+    id: 'pulse-2026-03-02',
+    periodStart: '2026-03-02',
+    periodEnd: '2026-03-02',
+    periodLabel: '2 March 2026',
+    focusAreas: ['Safe Passage', 'Participation', 'De-escalation', 'Diplomatic Engagement'],
+    sections: [
+      {
+        id: 'safe-passage',
+        title: 'Safe Passage',
+        icon: '🛡️',
+        color: 'green',
+        bullets: [
+          {
+            headline: 'U.S. Carrier Groups & Israeli Target Lists',
+            text: 'U.S. carrier groups positioned in multiple strategic waterways, Israeli target lists, and anticipated reactions from Russia and China reflect heightened militarization rather than the Truce\'s aim of creating space for diplomacy, humanitarian access, and peaceful assembly.',
+          },
+          {
+            headline: 'No Reference to Humanitarian Corridors or Dialogue',
+            text: 'Current reporting and analysis focus on deterrence, preemption, and regime change scenarios—with no reference to safe passage for athletes, humanitarian access, or diplomatic engagement. This absence runs counter to the Truce\'s peacebuilding ethos and its traditional encouragement of unimpeded transit.',
+          },
+        ],
+      },
+      {
+        id: 'participation',
+        title: 'Participation in the Games',
+        icon: '🏅',
+        color: 'blue',
+        bullets: [
+          {
+            headline: 'Symbolic Restraint Recognized During Olympic Period',
+            text: 'The commonly held norm that "you can\'t bomb somebody during the Olympics" reflects a core Truce principle—the suspension of hostilities during the Games to allow peaceful international engagement. Even if the motivation is political optics rather than moral commitment, the acknowledgment itself aligns with the Truce\'s purpose.',
+          },
+          {
+            headline: 'Global Attention Elevates Cost of Violence',
+            text: 'The discussion of timing—waiting until after the Olympics—shows awareness that global norms discourage escalation during periods meant for peaceful competition. This mirrors the Truce\'s intent to use the Games as a platform for diplomacy and de-escalation, though the Truce is treated as a scheduling constraint rather than a peace instrument.',
+          },
+        ],
+      },
+      {
+        id: 'calming-hostilities',
+        title: 'Calming Hostilities & Humanitarian Access',
+        icon: '🚑',
+        color: 'amber',
+        bullets: [
+          {
+            headline: 'Iranian Internal Repression & Mass Killings',
+            text: 'The Iranian regime has killed an estimated 32,000 demonstrators and may be executing thousands more—a direct violation of the Truce\'s core purpose to reduce violence, protect civilians, and promote human dignity. State violence against its own population is fundamentally incompatible with the Truce.',
+          },
+          {
+            headline: 'Military Assets Embedded in Civilian Areas',
+            text: 'Iranian military assets embedded in hospitals, mosques, and apartments raise the risk of mass civilian casualties. That this is treated as a strategic and moral complication reflects, at least indirectly, the Truce\'s principle of protecting civilians and reducing suffering amid active hostilities.',
+          },
+        ],
+      },
+      {
+        id: 'diplomatic-frame',
+        title: 'Broader Diplomatic Frame',
+        icon: '🤝',
+        color: 'purple',
+        bullets: [
+          {
+            headline: 'Strikes Planned Around the Games Undermine Truce Spirit',
+            text: 'U.S. military posture reaching "extreme readiness" with action anticipated within days of the Games ending undermines the Truce\'s spirit. While the Truce contemplates a temporary pause, its purpose is to encourage longer-term dialogue and de-escalation—not to serve as a countdown to resumed hostilities.',
+          },
+          {
+            headline: 'Truce Acknowledged but Not Honored',
+            text: 'The only real alignment with the Truce is an implied recognition of the norm against military action during the Games. Everything else—internal repression, military escalation, strategic timing of strikes, and absence of peacebuilding measures—reveals a Truce acknowledged as a pause in a conflict cycle but not sourced as a catalyst for peace.',
+          },
+        ],
+      },
+    ],
+    overallAlignment: {
+      level: 'weak',
+      summary: 'The Olympic Truce is acknowledged as a symbolic constraint on military timing, but this instrumentalization falls far short of its purpose. Iranian internal repression, U.S. extreme military readiness, strikes planned around the Games, and the complete absence of humanitarian or diplomatic frameworks reveal a Truce recognized in form but not honored in substance—a pause in a conflict cycle rather than a catalyst for peace.',
+    },
+    keyConstraints: [
+      'The Iranian regime\'s killing of an estimated 32,000 demonstrators and the embedding of military assets in civilian areas represent direct violations of the Truce\'s principles of civilian protection and human dignity.',
+      'U.S. military posture at extreme readiness with strikes anticipated days after the Games, combined with the treatment of the Olympic period as a scheduling constraint rather than a peace opportunity, fundamentally undermines the Truce\'s purpose.',
+    ],
+    publishedAt: '2026-03-02',
+  },
+  {
     id: 'pulse-2026-03-01',
     periodStart: '2026-03-01',
     periodEnd: '2026-03-01',
