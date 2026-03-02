@@ -251,12 +251,16 @@ export default function CeasefireWatchPage() {
             <p className="text-gray-600 text-sm leading-relaxed">
               Multiple ceasefires negotiated in 2025 have come under severe strain or collapsed entirely during the
               Milano-Cortina 2026 Olympic Truce window (January 30 – March 22, 2026). The Israel–Hamas partial
-              settlement has broken down with renewed operations and closed crossings. The Israel–Iran ceasefire
-              collapsed following U.S.–Israel strikes on March 1, and Iran retaliated with missile strikes on Israel,
-              UAE, Bahrain, Kuwait, and British bases in Cyprus — expanding the conflict from a bilateral confrontation
-              into a regional war spanning the Persian Gulf and Eastern Mediterranean. Pakistan cross-border strikes into
-              Afghanistan threaten the India–Pakistan ceasefire. These developments underscore the fragility of peace
-              agreements and the catastrophic speed at which localized conflicts can escalate during the Truce window.
+              settlement has broken down with renewed operations and closed crossings. On February 28, the U.S. and
+              Israel launched coordinated strikes on Iranian nuclear and military facilities, killing Supreme Leader
+              Khamenei. Iran responded on March 1 with the largest retaliatory missile barrage in its history, striking
+              10 countries: Israel, Saudi Arabia, UAE, Bahrain, Kuwait, Qatar (Al Udeid/CENTCOM), Iraq (Erbil/Al-Asad),
+              Jordan, Oman, and Cyprus (RAF Akrotiri) — expanding the conflict from a bilateral confrontation into a
+              regional war spanning from the Eastern Mediterranean to the Persian Gulf. Russia continued its full-scale
+              invasion of Ukraine with daily attacks throughout the Truce period. Pakistan cross-border strikes into
+              Afghanistan threaten the India–Pakistan ceasefire. Sudan&apos;s civil war between SAF and RSF forces has
+              displaced millions. These developments underscore the catastrophic failure of the Olympic Truce and the
+              speed at which localized conflicts can escalate into regional wars.
             </p>
             <p className="text-gray-600 text-xs mt-3">
               Note: Status assessments reflect verified developments through March 2, 2026. Analysts caution that
