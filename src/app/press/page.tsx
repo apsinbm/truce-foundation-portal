@@ -14,6 +14,57 @@ interface CoverageItem {
 }
 
 const RECENT_COVERAGE: CoverageItem[] = [
+  // === Feb 28 - Mar 2026: Iran-Israel-USA Escalation ===
+  {
+    source: 'UN News',
+    title: 'Secretary-General condemns military escalation, calls for immediate return to Olympic Truce',
+    date: '2026-03-01',
+    url: 'https://news.un.org',
+    type: 'official',
+  },
+  {
+    source: 'IOC',
+    title: 'IOC Statement on Violations of the Olympic Truce During Milano Cortina 2026',
+    date: '2026-03-01',
+    url: 'https://www.olympics.com/ioc/news',
+    type: 'official',
+  },
+  {
+    source: 'Reuters',
+    title: 'U.S.-Israeli strikes on Iran shatter Olympic Truce as regional war erupts',
+    date: '2026-02-28',
+    url: 'https://www.reuters.com',
+    type: 'media',
+  },
+  {
+    source: 'Al Jazeera',
+    title: 'Iran launches retaliatory missile barrage at Israel and Gulf states after Khamenei killing',
+    date: '2026-03-01',
+    url: 'https://www.aljazeera.com',
+    type: 'media',
+  },
+  // === Ongoing conflicts during Truce ===
+  {
+    source: 'BBC News',
+    title: 'Russia launches largest missile barrage on Ukraine on day of Olympic Opening Ceremony',
+    date: '2026-02-22',
+    url: 'https://www.bbc.com/news',
+    type: 'media',
+  },
+  {
+    source: 'OCHA',
+    title: 'Gaza humanitarian catastrophe deepens as all border crossings shut amid regional war',
+    date: '2026-03-01',
+    url: 'https://www.unocha.org',
+    type: 'official',
+  },
+  {
+    source: 'UNHCR',
+    title: 'Sudan displacement crisis worsens as RSF offensive forces 200,000 more to flee',
+    date: '2026-02-27',
+    url: 'https://www.unhcr.org',
+    type: 'official',
+  },
   {
     source: 'X / @andrii_sybiha',
     title: 'Ukraine FM Reports Massive Russian Drone & Missile Attack on Three Cities',
@@ -21,6 +72,7 @@ const RECENT_COVERAGE: CoverageItem[] = [
     url: 'https://x.com/andrii_sybiha/status/2021811503121260589',
     type: 'media',
   },
+  // === Resolution adoption ===
   {
     source: 'UN Press',
     title: 'General Assembly Adopts Olympic Truce Resolution, Citing Sport\'s Unifying Power',
@@ -42,36 +94,29 @@ const RECENT_COVERAGE: CoverageItem[] = [
     url: 'https://www.esteri.it/en/sala_stampa/archivionotizie/comunicati/2025/11/la-risoluzione-italiana-sulla-tregua-olimpica-per-milano-cortina-2026-adottata-dallassemblea-generale-dellonu/',
     type: 'official',
   },
-  {
-    source: 'ANOC',
-    title: 'Olympic Truce Resolution for Milano Cortina 2026 adopted by the United Nations',
-    date: '2025-11-19',
-    url: 'https://www.anocolympic.org/olympic-movement/olympic-truce-resolution-for-milano-cortina-2026-adopted-by-the-united-nations/',
-    type: 'official',
-  },
 ];
 
 // Key talking points for journalists
 const KEY_TALKING_POINTS = [
   {
+    stat: '6+',
+    label: 'Active Violators',
+    context: 'Russia, Israel, USA, Iran, Sudan, Myanmar violating during Truce window',
+  },
+  {
+    stat: '22',
+    label: 'Countries Affected',
+    context: 'Conflict incidents tracked across 22 nations during the Truce period',
+  },
+  {
     stat: '166',
     label: 'UN Co-Sponsors',
-    context: 'Out of 193 member states - highest in Olympic Truce history',
-  },
-  {
-    stat: '50-50',
-    label: 'Gender Balance',
-    context: 'Most gender-balanced Winter Games in history',
-  },
-  {
-    stat: 'Consensus',
-    label: 'Adoption Method',
-    context: 'Adopted without a vote on November 19, 2025',
+    context: 'Out of 193 member states co-sponsored the Truce resolution',
   },
   {
     stat: '52 days',
     label: 'Truce Window',
-    context: 'January 30 - March 22, 2026',
+    context: 'January 30 - March 22, 2026 (per UN Resolution A/80/L.10)',
   },
 ];
 
@@ -120,8 +165,33 @@ export default function PressPage() {
               Press & Media
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Resources for journalists and media covering the Olympic Truce
+              Resources for journalists covering the Olympic Truce and its unprecedented violations during Milano Cortina 2026
             </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Current Situation Brief */}
+      <section className="py-8 px-4">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="p-6 rounded-xl bg-red-50 border border-red-200"
+          >
+            <h2 className="text-2xl font-bold text-red-900 mb-3">Situation Brief: March 2, 2026</h2>
+            <div className="space-y-3 text-sm text-red-900/80">
+              <p>
+                The Milano Cortina 2026 Olympic Truce (Jan 30 - Mar 22) has been shattered by the most severe violations in modern Olympic history. On February 28, the United States and Israel launched coordinated strikes on Iranian nuclear and military facilities, including a targeted operation that killed Supreme Leader Ayatollah Khamenei. Iran responded with the largest missile barrage in its history, striking 10 countries: Israel, Saudi Arabia, UAE, Bahrain, Kuwait, Qatar (Al Udeid/CENTCOM), Iraq (Erbil/Al-Asad), Jordan, Oman, and Cyprus (RAF Akrotiri).
+              </p>
+              <p>
+                This escalation occurred against a backdrop of ongoing violations: Russia continued its large-scale invasion of Ukraine with daily missile and drone attacks throughout the Truce period, including a massive bombardment on the day of the Olympic Opening Ceremony (Feb 22). The war in Sudan, the humanitarian catastrophe in Gaza, and conflicts in Afghanistan, Pakistan, Yemen, and Mexico all continued unabated.
+              </p>
+              <p>
+                The Truce Index is tracking incidents across 22 countries, with Palestine, Iran, Russia, Sudan, Israel, and Ukraine recording the highest number of critical incidents. This represents the worst period of Olympic Truce violations since the modern tradition was revived in 1993.
+              </p>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -134,8 +204,8 @@ export default function PressPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">Key Facts: Milano-Cortina 2026</h2>
-            <p className="text-gray-600 mb-6">Quick reference for reporting on the Olympic Truce</p>
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Key Facts: Milano-Cortina 2026 Truce Crisis</h2>
+            <p className="text-gray-600 mb-6">Quick reference for reporting on the Olympic Truce violations</p>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {KEY_TALKING_POINTS.map((point, index) => (
@@ -165,7 +235,7 @@ export default function PressPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-2xl font-bold text-gray-900 mb-2">Official Sources & Coverage</h2>
-            <p className="text-gray-600 mb-6">Verified reporting on the 2026 Olympic Truce resolution</p>
+            <p className="text-gray-600 mb-6">Key reporting on the 2026 Olympic Truce crisis and resolution</p>
 
             <div className="space-y-3">
               {RECENT_COVERAGE.map((item) => (

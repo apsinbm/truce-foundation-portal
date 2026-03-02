@@ -126,6 +126,30 @@ const PRIORITY_COUNTRIES = [
     acapsScore: 2,
     issues: ['Iranian missile strikes', 'British base targeting', 'Mediterranean transit disruption'],
   },
+  {
+    name: 'Qatar',
+    iso3: 'QAT',
+    status: 'high',
+    description: 'Iranian ballistic missiles targeted Al Udeid Air Base hosting U.S. Central Command (Mar 1). Qatar, a critical humanitarian logistics hub for the region, faces severe disruption to aid coordination.',
+    acapsScore: 3,
+    issues: ['Iranian missile strikes on Al Udeid', 'Humanitarian logistics hub disruption', 'Regional aid coordination threatened'],
+  },
+  {
+    name: 'Oman',
+    iso3: 'OMN',
+    status: 'moderate',
+    description: 'Iranian missile debris fell in Omani territory and Strait of Hormuz approaches closed to commercial shipping (Mar 1). Oman\'s traditional role as regional mediator complicated by direct territorial impact.',
+    acapsScore: 2,
+    issues: ['Airspace violations', 'Strait of Hormuz closure', 'Shipping disruption'],
+  },
+  {
+    name: 'Iraq',
+    iso3: 'IRQ',
+    status: 'critical',
+    description: 'Iranian ballistic missiles struck U.S. military facilities at Erbil and Al-Asad Air Base (Mar 1). Iran-backed militias launched attacks on coalition positions in Baghdad. Ongoing internal displacement crisis compounded by regional escalation.',
+    acapsScore: 4,
+    issues: ['Iranian missile strikes', 'Militia attacks on Baghdad', 'Humanitarian access blocked', 'Mass displacement ongoing'],
+  },
 ];
 
 // Exemplary countries for humanitarian response
@@ -306,7 +330,7 @@ const MARITIME_MINE_ZONES = [
       {
         name: 'Persian Gulf',
         area: 'Oil shipping routes',
-        description: 'Active conflict zone following Iranian retaliatory strikes on UAE, Bahrain, and Kuwait (Mar 1). Strait of Hormuz transit severely threatened. Iranian naval drill (Feb 25) preceded direct military strikes on Gulf states.',
+        description: 'Active war zone following Iranian retaliatory missile strikes on 10 countries including Saudi Arabia, UAE, Bahrain, Kuwait, Qatar, Iraq, and Oman (Mar 1). Strait of Hormuz closed by Oman. U.S. carrier battle groups engaged with Iranian naval forces.',
         impact: ['Iranian strikes on Gulf states (Mar 1)', 'Strait of Hormuz transit under direct threat', 'Oil shipping disruption amid regional war'],
       },
     ],

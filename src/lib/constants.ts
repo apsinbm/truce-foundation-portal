@@ -192,6 +192,7 @@ export const SUB_SITES: SubSite[] = [
     href: '/advocacy',
     status: 'live',
     tier: 1,
+    hidden: true,
   },
   {
     id: 'press',

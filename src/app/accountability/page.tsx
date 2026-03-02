@@ -74,7 +74,7 @@ const TRUCE_PERIODS: TrucePeriod[] = [
       {
         country: 'Iran',
         countryIso3: 'IRN',
-        description: 'Retaliatory missile strikes targeting Israel, UAE, Bahrain, Kuwait, and British bases in Cyprus following U.S.–Israel strikes',
+        description: 'Largest retaliatory missile barrage in Iranian history, striking 10 countries: Israel, Saudi Arabia, UAE, Bahrain, Kuwait, Qatar (Al Udeid/CENTCOM), Iraq (Erbil/Al-Asad), Jordan, Oman, and Cyprus (RAF Akrotiri)',
         date: '2026-03-01',
         severity: 'critical',
         sources: ['UN Reports', 'Media Reports'],
@@ -1531,8 +1531,8 @@ export default function AccountabilityPage() {
             </p>
             <p className="text-gray-600 mb-6">
               Multiple critical violations have been recorded, including the U.S.–Israel strikes on Iran,
-              Iranian retaliatory attacks on Gulf states and Cyprus, ongoing Russia–Ukraine and Gaza conflicts,
-              and the Sudan civil war. The Truce Index is tracking compliance in real-time.
+              Iranian retaliatory missile strikes on 10 countries (Israel, Saudi Arabia, UAE, Bahrain, Kuwait, Qatar, Iraq, Jordan, Oman, Cyprus),
+              ongoing Russia–Ukraine and Gaza conflicts, and the Sudan civil war. The Truce Index is tracking compliance across 22 countries.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
