@@ -101,7 +101,7 @@ export async function GET(request: NextRequest) {
       },
       generated_at: new Date().toISOString(),
     }, {
-      headers: { 'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600' },
+      headers: { 'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=120' },
     });
   } catch (error) {
     console.error('Leaderboard error:', error);
