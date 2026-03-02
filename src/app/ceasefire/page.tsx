@@ -21,22 +21,22 @@ const CEASEFIRES_2025 = [
     id: 'isr-hms',
     parties: ['Israel', 'Hamas'],
     region: 'Middle East',
-    status: 'partial',
-    date: '2025',
-    description: 'Ceasefire and hostage-for-prisoner exchanges following extended conflict',
-    context: 'Partial settlement after two-year conflict in Gaza',
-    risks: ['Fragile implementation', 'Humanitarian crisis continuation', 'Regional tensions'],
+    status: 'collapsed',
+    date: '2025–2026',
+    description: 'Ceasefire has broken down with renewed military operations in Gaza, border crossings closed, and MSF forced to suspend operations',
+    context: 'Partial settlement collapsed during Olympic Truce window',
+    risks: ['Crossings closed', 'MSF operations suspended', 'Humanitarian crisis deepening'],
     relevance: 'Humanitarian corridors essential for aid delivery during Truce',
   },
   {
     id: 'isr-irn',
     parties: ['Israel', 'Iran'],
     region: 'Middle East',
-    status: 'ceasefire',
-    date: 'June 2025',
-    description: 'Ceasefire following 12-day escalation after strikes on nuclear sites',
-    context: 'Regional de-escalation following direct military confrontation',
-    risks: ['Proxy conflict continuation', 'Nuclear program concerns', 'Regional instability'],
+    status: 'collapsed',
+    date: 'June 2025–Mar 2026',
+    description: 'Ceasefire collapsed following U.S.–Israel coordinated strikes on Iran (March 1, 2026) and Iranian retaliatory strikes',
+    context: 'Major regional escalation during Olympic Truce window',
+    risks: ['Active military strikes', 'Iranian retaliation', 'Strait of Hormuz tensions'],
     relevance: 'Regional stability critical for broader Middle East peace',
   },
   {
@@ -60,6 +60,17 @@ const CEASEFIRES_2025 = [
     context: 'De-escalation following border tensions',
     risks: ['Kashmir tensions', 'Nuclear-armed states', 'Cross-border incidents'],
     relevance: 'Nuclear de-escalation aligned with Olympic peace principles',
+  },
+  {
+    id: 'ind-pak-2026',
+    parties: ['India', 'Pakistan'],
+    region: 'South Asia',
+    status: 'partial',
+    date: 'Feb 2026',
+    description: 'May 2025 ceasefire under strain from Pakistan cross-border strikes into Afghanistan (Feb 22, Feb 26)',
+    context: 'Border operations risk broader destabilization between nuclear-armed states',
+    risks: ['Cross-border strikes into Afghanistan', 'Ceasefire strain', 'Regional spillover'],
+    relevance: 'Nuclear de-escalation critical during Olympic Truce window',
   },
   {
     id: 'tha-khm',
@@ -108,6 +119,8 @@ const getStatusColor = (status: string) => {
       return 'bg-purple-100 text-purple-800 border-purple-500/30';
     case 'diplomatic':
       return 'bg-cyan-100 text-cyan-600 border-cyan-500/30';
+    case 'collapsed':
+      return 'bg-red-100 text-red-800 border-red-500/30';
     default:
       return 'bg-gray-100 text-gray-600 border-gray-200';
   }
@@ -125,6 +138,8 @@ const getStatusLabel = (status: string) => {
       return 'Active Dialogue';
     case 'diplomatic':
       return 'Diplomatic Resolution';
+    case 'collapsed':
+      return 'Collapsed';
     default:
       return status;
   }
@@ -133,6 +148,7 @@ const getStatusLabel = (status: string) => {
 export default function CeasefireWatchPage() {
   const signed = CEASEFIRES_2025.filter(c => c.status === 'signed').length;
   const ceasefires = CEASEFIRES_2025.filter(c => c.status === 'ceasefire').length;
+  const collapsed = CEASEFIRES_2025.filter(c => c.status === 'collapsed').length;
   const partial = CEASEFIRES_2025.filter(c => c.status === 'partial' || c.status === 'dialogue' || c.status === 'diplomatic').length;
 
   return (
@@ -167,7 +183,7 @@ export default function CeasefireWatchPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="grid grid-cols-3 gap-4"
+            className="grid grid-cols-4 gap-4"
           >
             <div className="p-4 rounded-xl bg-green-100 border border-green-500/30 text-center">
               <div className="text-3xl font-bold text-green-800">{signed}</div>
@@ -176,6 +192,10 @@ export default function CeasefireWatchPage() {
             <div className="p-4 rounded-xl bg-blue-100 border border-blue-500/30 text-center">
               <div className="text-3xl font-bold text-blue-600">{ceasefires}</div>
               <div className="text-sm text-blue-700">Active Ceasefires</div>
+            </div>
+            <div className="p-4 rounded-xl bg-red-100 border border-red-500/30 text-center">
+              <div className="text-3xl font-bold text-red-800">{collapsed}</div>
+              <div className="text-sm text-red-700">Collapsed</div>
             </div>
             <div className="p-4 rounded-xl bg-amber-100 border border-amber-500/30 text-center">
               <div className="text-3xl font-bold text-amber-800">{partial}</div>
@@ -194,16 +214,18 @@ export default function CeasefireWatchPage() {
             viewport={{ once: true }}
             className="p-6 rounded-2xl bg-gradient-to-br from-blue-500/10 to-blue-600/5 border border-blue-500/30"
           >
-            <h2 className="text-lg font-bold text-gray-900 mb-3">2025: A Year of Fragile Peace</h2>
+            <h2 className="text-lg font-bold text-gray-900 mb-3">Ceasefires Under Pressure</h2>
             <p className="text-gray-600 text-sm leading-relaxed">
-              The year 2025 has seen multiple conflict settlements and ceasefires announced across different regions.
-              While these represent significant diplomatic achievements, many remain fragile and require sustained
-              attention. The Milano-Cortina 2026 Olympic Truce (January 30 - March 22, 2026) provides a critical window
-              to reinforce these agreements and demonstrate that peace can hold.
+              Multiple ceasefires negotiated in 2025 have come under severe strain or collapsed entirely during the
+              Milano-Cortina 2026 Olympic Truce window (January 30 – March 22, 2026). The Israel–Hamas partial
+              settlement has broken down with renewed operations and closed crossings. The Israel–Iran ceasefire
+              collapsed following U.S.–Israel strikes on March 1. Pakistan cross-border strikes into Afghanistan
+              threaten the India–Pakistan ceasefire. These developments underscore the fragility of peace agreements
+              and the gap between diplomatic commitments and ground reality.
             </p>
             <p className="text-gray-600 text-xs mt-3">
-              Note: Independent verification confirms involvement in several ceasefires, though analysts caution that
-              some disputes were limited confrontations or remain partially unresolved.
+              Note: Status assessments reflect verified developments through March 2, 2026. Analysts caution that
+              conditions remain fluid and some agreements may still be partially operative in limited areas.
             </p>
           </motion.div>
         </div>

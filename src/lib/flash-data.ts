@@ -10,6 +10,15 @@ export interface FlashEntry {
 
 export const FLASH_ENTRIES: FlashEntry[] = [
   {
+    id: 'flash-2026-03-01-escalation',
+    headline: 'Middle East Conflict Escalation',
+    body: 'U.S.–Israel coordinated strikes on Iran and Iranian retaliation have triggered a major regional escalation. Israeli operations in Lebanon and Gaza continue. Multiple borders closed. The Truce Pulse tracks these developments against Olympic Truce principles.',
+    icon: '🔴',
+    activeFrom: '2026-03-01',
+    activeUntil: '2026-03-22',
+    publishedAt: '2026-03-01',
+  },
+  {
     id: 'flash-2026-02-17-transport',
     headline: 'Milano Cortina 2026 Transport Alert',
     body: 'The Italian government is pursuing an Olympic truce to stabilize transport during Milano Cortina 2026, even as February brings a dense calendar of strikes across aviation, rail, maritime, and local transit. A nationwide airport walkout has been pushed to 26 February to protect Olympic operations, though unions continue pressing for contract reforms. Travelers face significant disruption and are urged to secure alternatives.',
