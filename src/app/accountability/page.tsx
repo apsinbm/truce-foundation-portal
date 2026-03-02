@@ -36,6 +36,66 @@ interface Violation {
 // Historical data - violations during Olympic Truce windows
 const TRUCE_PERIODS: TrucePeriod[] = [
   {
+    id: 'milano-cortina-2026',
+    games: 'Milano-Cortina 2026',
+    year: 2026,
+    city: 'Milano-Cortina',
+    country: 'Italy',
+    season: 'Winter',
+    truceWindow: {
+      start: '2026-01-30',
+      end: '2026-03-22',
+    },
+    unResolution: 'A/80/L.10',
+    status: 'violated',
+    violations: [
+      {
+        country: 'Russia',
+        countryIso3: 'RUS',
+        description: 'Continued missile and drone strikes on Ukrainian cities and infrastructure throughout the Truce window',
+        severity: 'critical',
+        sources: ['ACLED', 'UN Reports', 'OHCHR'],
+      },
+      {
+        country: 'Israel',
+        countryIso3: 'ISR',
+        description: 'Military operations in Gaza, coordinated strikes on Iran with the United States, and strikes on Lebanon during Truce window',
+        severity: 'critical',
+        sources: ['UN Reports', 'OCHA'],
+      },
+      {
+        country: 'United States',
+        countryIso3: 'USA',
+        description: 'Coordinated strikes on Iranian military and nuclear facilities (March 1, 2026)',
+        date: '2026-03-01',
+        severity: 'critical',
+        sources: ['UN Reports', 'Media Reports'],
+      },
+      {
+        country: 'Iran',
+        countryIso3: 'IRN',
+        description: 'Retaliatory missile strikes targeting Israel, UAE, Bahrain, Kuwait, and British bases in Cyprus (March 1, 2026)',
+        date: '2026-03-01',
+        severity: 'critical',
+        sources: ['UN Reports', 'Media Reports'],
+      },
+      {
+        country: 'Sudan',
+        countryIso3: 'SDN',
+        description: 'Ongoing civil conflict between SAF and RSF forces with mass civilian displacement',
+        severity: 'critical',
+        sources: ['ACLED', 'Crisis Group'],
+      },
+      {
+        country: 'Myanmar',
+        countryIso3: 'MMR',
+        description: 'Continued military operations against civilian populations',
+        severity: 'major',
+        sources: ['ACLED', 'UN Reports'],
+      },
+    ],
+  },
+  {
     id: 'paris-2024',
     games: 'Paris 2024',
     year: 2024,
@@ -995,7 +1055,7 @@ export default function AccountabilityPage() {
                 <div className="min-w-[800px]">
                   {/* Year labels */}
                   <div className="flex justify-between mb-2 px-2">
-                    {[1992, 1996, 2000, 2004, 2008, 2012, 2016, 2020, 2024].map(year => (
+                    {[1992, 1996, 2000, 2004, 2008, 2012, 2016, 2020, 2026].map(year => (
                       <span key={year} className="text-xs text-gray-500">{year}</span>
                     ))}
                   </div>
@@ -1011,9 +1071,9 @@ export default function AccountabilityPage() {
 
                     {/* Events */}
                     {TRUCE_PERIODS.slice().reverse().map((period) => {
-                      // Calculate position (1992-2024 = 32 years range)
+                      // Calculate position (1992-2026 = 34 years range)
                       const yearOffset = period.year - 1992;
-                      const position = (yearOffset / 32) * 100;
+                      const position = (yearOffset / 34) * 100;
 
                       return (
                         <div
@@ -1438,16 +1498,18 @@ export default function AccountabilityPage() {
             className="p-8 rounded-2xl bg-gradient-to-br from-blue-500/20 to-purple-500/10 border border-blue-500/30"
           >
             <h2 className="text-2xl font-bold text-gray-900 mb-4">
-              Milano-Cortina 2026
+              Milano-Cortina 2026 — Truce Active
             </h2>
             <p className="text-gray-600 mb-2">
-              The next Olympic Truce window per <a href="/downloads/A_80_L.10-EN.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-500 underline">UN Resolution A/80/L.10</a>:
+              The Olympic Truce per <a href="/downloads/A_80_L.10-EN.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-500 underline">UN Resolution A/80/L.10</a> is currently in effect:
             </p>
             <p className="text-lg text-gray-900 font-medium mb-6">
               January 30 - March 22, 2026
             </p>
             <p className="text-gray-600 mb-6">
-              The Truce Index will track compliance in real-time. Will this be a Truce observed?
+              Multiple critical violations have been recorded, including the U.S.–Israel strikes on Iran,
+              Iranian retaliatory attacks on Gulf states and Cyprus, ongoing Russia–Ukraine and Gaza conflicts,
+              and the Sudan civil war. The Truce Index is tracking compliance in real-time.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

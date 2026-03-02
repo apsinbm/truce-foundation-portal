@@ -86,6 +86,38 @@ const PRIORITY_COUNTRIES = [
     acapsScore: 3,
     issues: ['Cross-border military strikes', 'Border displacement', 'Access constraints'],
   },
+  {
+    name: 'United Arab Emirates',
+    iso3: 'ARE',
+    status: 'high',
+    description: 'Iranian retaliatory strikes targeted UAE military infrastructure and Al Dhafra Air Base (Mar 1). Civilian areas affected, humanitarian operations disrupted.',
+    acapsScore: 3,
+    issues: ['Iranian missile strikes', 'Military base targeting', 'Civilian infrastructure damage'],
+  },
+  {
+    name: 'Bahrain',
+    iso3: 'BHR',
+    status: 'high',
+    description: 'Iranian missile strikes targeted Bahrain, home to U.S. Fifth Fleet naval base (Mar 1). Regional escalation threatens Gulf maritime humanitarian corridors.',
+    acapsScore: 3,
+    issues: ['Iranian missile strikes', 'Naval base targeting', 'Maritime corridor disruption'],
+  },
+  {
+    name: 'Kuwait',
+    iso3: 'KWT',
+    status: 'moderate',
+    description: 'Iranian attacks struck near U.S. military installations in Kuwait (Mar 1). Border and airspace restrictions impede humanitarian transit.',
+    acapsScore: 2,
+    issues: ['Iranian missile strikes', 'Airspace restrictions', 'Transit disruption'],
+  },
+  {
+    name: 'Cyprus',
+    iso3: 'CYP',
+    status: 'moderate',
+    description: 'Iranian strikes targeted RAF Akrotiri British military base (Mar 1). Eastern Mediterranean humanitarian transit affected.',
+    acapsScore: 2,
+    issues: ['Iranian missile strikes', 'British base targeting', 'Mediterranean transit disruption'],
+  },
 ];
 
 // Exemplary countries for humanitarian response
@@ -266,8 +298,8 @@ const MARITIME_MINE_ZONES = [
       {
         name: 'Persian Gulf',
         area: 'Oil shipping routes',
-        description: 'Regular clearance operations reduce risks to oil shipping routes. Iranian Strait of Hormuz naval drill (Feb 25) has elevated shipping risk beyond legacy levels amid broader U.S.–Israel–Iran escalation.',
-        impact: ['Oil shipping route protection', 'Iranian Hormuz drill (Feb 25)', 'Elevated shipping risk from regional escalation'],
+        description: 'Active conflict zone following Iranian retaliatory strikes on UAE, Bahrain, and Kuwait (Mar 1). Strait of Hormuz transit severely threatened. Iranian naval drill (Feb 25) preceded direct military strikes on Gulf states.',
+        impact: ['Iranian strikes on Gulf states (Mar 1)', 'Strait of Hormuz transit under direct threat', 'Oil shipping disruption amid regional war'],
       },
     ],
   },

@@ -163,6 +163,7 @@ export const SUB_SITES: SubSite[] = [
     href: '/candles',
     status: 'live',
     tier: 1,
+    hidden: true,
   },
   {
     id: 'forum',

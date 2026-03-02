@@ -105,6 +105,28 @@ const CEASEFIRES_2025 = [
     risks: ['Water allocation tensions', 'Regional power dynamics', 'Climate impacts'],
     relevance: 'Peaceful dispute resolution model',
   },
+  {
+    id: 'irn-gulf',
+    parties: ['Iran', 'UAE / Bahrain / Kuwait'],
+    region: 'Persian Gulf',
+    status: 'collapsed',
+    date: 'Mar 2026',
+    description: 'Iranian retaliatory missile strikes hit UAE (Al Dhafra Air Base), Bahrain (Fifth Fleet base), and Kuwait (Mar 1, 2026) following U.S.–Israel strikes on Iran',
+    context: 'First direct Iranian attacks on Gulf Arab states, escalating from bilateral to regional war',
+    risks: ['Strait of Hormuz closure', 'Oil supply disruption', 'Gulf state retaliation'],
+    relevance: 'Regional stability critical for Olympic Truce observance and humanitarian access',
+  },
+  {
+    id: 'irn-cyp',
+    parties: ['Iran', 'Cyprus (UK bases)'],
+    region: 'Eastern Mediterranean',
+    status: 'collapsed',
+    date: 'Mar 2026',
+    description: 'Iranian strikes targeted RAF Akrotiri British military base in Cyprus (Mar 1, 2026), expanding the conflict into the Eastern Mediterranean',
+    context: 'Iranian targeting of NATO-aligned bases extends conflict beyond Middle East',
+    risks: ['NATO involvement escalation', 'Mediterranean shipping disruption', 'European security threat'],
+    relevance: 'Conflict expansion threatens Olympic Truce principles of safe passage across regions',
+  },
 ];
 
 const getStatusColor = (status: string) => {
@@ -219,9 +241,11 @@ export default function CeasefireWatchPage() {
               Multiple ceasefires negotiated in 2025 have come under severe strain or collapsed entirely during the
               Milano-Cortina 2026 Olympic Truce window (January 30 – March 22, 2026). The Israel–Hamas partial
               settlement has broken down with renewed operations and closed crossings. The Israel–Iran ceasefire
-              collapsed following U.S.–Israel strikes on March 1. Pakistan cross-border strikes into Afghanistan
-              threaten the India–Pakistan ceasefire. These developments underscore the fragility of peace agreements
-              and the gap between diplomatic commitments and ground reality.
+              collapsed following U.S.–Israel strikes on March 1, and Iran retaliated with missile strikes on Israel,
+              UAE, Bahrain, Kuwait, and British bases in Cyprus — expanding the conflict from a bilateral confrontation
+              into a regional war spanning the Persian Gulf and Eastern Mediterranean. Pakistan cross-border strikes into
+              Afghanistan threaten the India–Pakistan ceasefire. These developments underscore the fragility of peace
+              agreements and the catastrophic speed at which localized conflicts can escalate during the Truce window.
             </p>
             <p className="text-gray-600 text-xs mt-3">
               Note: Status assessments reflect verified developments through March 2, 2026. Analysts caution that
