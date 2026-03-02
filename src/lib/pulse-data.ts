@@ -39,6 +39,88 @@ export interface PulseEntry {
 
 export const PULSE_ENTRIES: PulseEntry[] = [
   {
+    id: 'pulse-2026-03-01',
+    periodStart: '2026-03-01',
+    periodEnd: '2026-03-01',
+    periodLabel: '1 March 2026',
+    focusAreas: ['Safe Passage', 'Participation', 'De-escalation', 'Diplomatic Engagement'],
+    sections: [
+      {
+        id: 'safe-passage',
+        title: 'Safe Passage',
+        icon: '🛡️',
+        color: 'green',
+        bullets: [
+          {
+            headline: 'U.S.–Israel–Iran Strikes & Iranian Retaliation',
+            text: 'Large-scale military strikes between the United States, Israel, and Iran, followed by Iranian retaliation across states hosting foreign forces, create a widening conflict arc. Missile and drone activity across airspace in Iran, Israel, the Gulf, and neighboring Arab states heightens risks to commercial aviation, relief corridors, and diplomatic movements.',
+          },
+          {
+            headline: 'Afghanistan–Pakistan Aerial Engagements Over Kabul',
+            text: 'Active fighting between Afghanistan and Pakistan, including reported aerial engagements over Kabul, threatens civilian airspace safety and humanitarian operations. The absence of clear de-escalatory mechanisms increases the risk of miscalculation, directly challenging the Truce\'s call for safe, unobstructed passage.',
+          },
+        ],
+      },
+      {
+        id: 'participation',
+        title: 'Participation in the Games',
+        icon: '🏅',
+        color: 'blue',
+        bullets: [
+          {
+            headline: 'Widening Conflict Arc Across Multiple Theatres',
+            text: 'Simultaneous military activity spanning Iran, Israel, the Gulf, Lebanon, Afghanistan, and Pakistan creates compounding barriers to international mobility, undermining the conditions needed for athletes, officials, and delegations to travel safely and participate in the Games.',
+          },
+          {
+            headline: 'Horizontal Escalation into Lebanon',
+            text: 'Israeli strikes in Beirut and southern Lebanon resulting in fatalities reflect the risk of horizontal escalation across interconnected conflict theatres, challenging efforts to localize hostilities and amplifying threats to safe participation during a period dedicated to peace and international cooperation.',
+          },
+        ],
+      },
+      {
+        id: 'calming-hostilities',
+        title: 'Calming Hostilities & Humanitarian Access',
+        icon: '🚑',
+        color: 'amber',
+        bullets: [
+          {
+            headline: 'Gaza Crossings Closed Amid Regional Escalation',
+            text: 'Judicial action temporarily enabling aid organizations to continue operations in Gaza aligned with the Truce\'s humanitarian spirit, yet the subsequent closure of crossings demonstrates how rapidly access conditions deteriorate in response to broader regional military developments, undermining predictability of relief delivery.',
+          },
+          {
+            headline: 'Civilian Casualties & South Sudan Security Deterioration',
+            text: 'Reported civilian fatalities at a school site amid active hostilities, combined with warnings of deteriorating security and civilian killings in South Sudan, underline the Truce\'s emphasis on protecting non-combatants and the ongoing need for renewed commitment to peace processes in fragile environments.',
+          },
+        ],
+      },
+      {
+        id: 'diplomatic-frame',
+        title: 'Broader Diplomatic Frame',
+        icon: '🤝',
+        color: 'purple',
+        bullets: [
+          {
+            headline: 'Conflict Diffusion Challenges De-escalation Frameworks',
+            text: 'The spillover of violence from Israel into Lebanon and the cross-border exchanges between Afghanistan and Pakistan illustrate how conflict diffusion undermines de-escalation efforts, reinforcing the Truce\'s relevance as a framework encouraging the prevention of conflict spread during globally symbolic periods.',
+          },
+          {
+            headline: 'Truce as Normative Reference Amid Simultaneous Crises',
+            text: 'Collectively, these developments across diverse and simultaneous crises demonstrate the Truce\'s potential role as a unifying normative reference point amid intensifying global hostilities—its core calls for restraint, humanitarian access, and safe passage remaining directly relevant even where formal observance is limited.',
+          },
+        ],
+      },
+    ],
+    overallAlignment: {
+      level: 'weak',
+      summary: 'Escalating military strikes between the U.S., Israel, and Iran, horizontal escalation into Lebanon, cross-border aerial engagements over Kabul, and the closure of Gaza crossings represent a significant deterioration from the Truce\'s ideals—though the Truce remains relevant as a normative benchmark against which the urgency of restraint, humanitarian access, and civilian protection is measured.',
+    },
+    keyConstraints: [
+      'Large-scale U.S.–Israel–Iran military exchanges, Iranian retaliation across multiple states, and aerial engagements between Afghanistan and Pakistan represent an unprecedented widening of active conflict theatres during the Truce period.',
+      'The closure of Gaza crossings despite judicial intervention, civilian casualties at a school site, and deteriorating security in South Sudan and Lebanon demonstrate a collapse of humanitarian access and civilian protection across simultaneous crises.',
+    ],
+    publishedAt: '2026-03-01',
+  },
+  {
     id: 'pulse-2026-02-26',
     periodStart: '2026-02-26',
     periodEnd: '2026-02-26',
