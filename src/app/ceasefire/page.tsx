@@ -117,6 +117,17 @@ const CEASEFIRES_2025 = [
     relevance: 'Regional stability critical for Olympic Truce observance and humanitarian access',
   },
   {
+    id: 'pak-afg',
+    parties: ['Pakistan', 'Afghanistan'],
+    region: 'South Asia',
+    status: 'collapsed',
+    date: 'Feb 2026',
+    description: 'Pakistan launched cross-border airstrikes and ground operations into Afghanistan targeting Taliban positions (Feb 22, Feb 26), breaking de facto arrangements with Taliban government',
+    context: 'Pakistan military operations escalated despite diplomatic channels, creating mass displacement along the border',
+    risks: ['Cross-border military escalation', 'Mass refugee displacement', 'Regional destabilization'],
+    relevance: 'Border conflicts during Truce window violate safe passage and humanitarian access principles',
+  },
+  {
     id: 'irn-cyp',
     parties: ['Iran', 'Cyprus (UK bases)'],
     region: 'Eastern Mediterranean',

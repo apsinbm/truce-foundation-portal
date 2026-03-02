@@ -87,6 +87,14 @@ const PRIORITY_COUNTRIES = [
     issues: ['Cross-border military strikes', 'Border displacement', 'Access constraints'],
   },
   {
+    name: 'Mexico',
+    iso3: 'MEX',
+    status: 'high',
+    description: 'Cartel violence persists with major security operations including reported killing of CJNG leader (Feb 22). Humanitarian access impeded by organized crime control of territory.',
+    acapsScore: 3,
+    issues: ['Cartel territorial control', 'Violence against aid workers', 'Displacement from organized crime'],
+  },
+  {
     name: 'United Arab Emirates',
     iso3: 'ARE',
     status: 'high',

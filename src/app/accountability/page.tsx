@@ -66,15 +66,15 @@ const TRUCE_PERIODS: TrucePeriod[] = [
       {
         country: 'United States',
         countryIso3: 'USA',
-        description: 'Coordinated strikes on Iranian military and nuclear facilities (March 1, 2026)',
-        date: '2026-03-01',
+        description: 'Coordinated strikes on Iranian military and nuclear facilities (February 28, 2026), culminating in the assassination of Supreme Leader Ali Khamenei',
+        date: '2026-02-28',
         severity: 'critical',
-        sources: ['UN Reports', 'Media Reports'],
+        sources: ['NPR', 'UN Reports', 'Media Reports'],
       },
       {
         country: 'Iran',
         countryIso3: 'IRN',
-        description: 'Retaliatory missile strikes targeting Israel, UAE, Bahrain, Kuwait, and British bases in Cyprus (March 1, 2026)',
+        description: 'Retaliatory missile strikes targeting Israel, UAE, Bahrain, Kuwait, and British bases in Cyprus following U.S.–Israel strikes',
         date: '2026-03-01',
         severity: 'critical',
         sources: ['UN Reports', 'Media Reports'],
@@ -302,6 +302,14 @@ const TRUCE_PERIODS: TrucePeriod[] = [
     status: 'violated',
     violations: [
       {
+        country: 'United States',
+        countryIso3: 'USA',
+        description: 'Operation Moshtarak (Feb 13) - major US/NATO offensive in Helmand Province, Afghanistan during Games',
+        date: '2010-02-13',
+        severity: 'critical',
+        sources: ['History News Network', 'UN Reports', 'NATO'],
+      },
+      {
         country: 'Afghanistan',
         countryIso3: 'AFG',
         description: 'Operation Moshtarak (Feb 13) - major NATO offensive in Helmand during Games',
@@ -417,6 +425,13 @@ const TRUCE_PERIODS: TrucePeriod[] = [
         sources: ['UN Security Council', 'Human Rights Watch'],
       },
       {
+        country: 'United States',
+        countryIso3: 'USA',
+        description: 'Iraq War continued during Games - Battle of Najaf (Aug 5-27) conducted by US-led coalition forces',
+        severity: 'critical',
+        sources: ['Al Jazeera', 'Voice of America', 'UN Reports'],
+      },
+      {
         country: 'Russia',
         countryIso3: 'RUS',
         description: 'Second Chechen War operations continued',
@@ -439,6 +454,14 @@ const TRUCE_PERIODS: TrucePeriod[] = [
     unResolution: 'A/RES/56/75',
     status: 'violated',
     violations: [
+      {
+        country: 'United States',
+        countryIso3: 'USA',
+        description: 'As host nation, introduced a Truce resolution that exempted its ongoing war in Afghanistan. Operation Anaconda (Mar 2-18) launched during Paralympic period',
+        date: '2002-03-02',
+        severity: 'critical',
+        sources: ['AP News', 'US DoD', 'UN Reports'],
+      },
       {
         country: 'Afghanistan',
         countryIso3: 'AFG',
