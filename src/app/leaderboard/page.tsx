@@ -234,7 +234,7 @@ export default function LeaderboardPage() {
       }
 
       try {
-        let url = `${TRUCE_INDEX_URL}/api/leaderboard?start=${start}&end=${end}&limit=50`;
+        let url = `/api/truce-index/leaderboard?start=${start}&end=${end}&limit=50`;
         if (sourceFilter !== 'all') {
           url += `&source=${sourceFilter}`;
         }

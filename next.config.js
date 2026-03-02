@@ -1,6 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  async rewrites() {
+    return [
+      {
+        source: '/api/truce-index/:path*',
+        destination: 'https://truce-index.vercel.app/api/:path*',
+      },
+    ];
+  },
   async redirects() {
     return [
       {
@@ -24,7 +32,7 @@ const nextConfig = {
               "font-src 'self' fonts.gstatic.com",
               "img-src 'self' data: https: blob:",
               "frame-src www.youtube-nocookie.com www.youtube.com",
-              "connect-src 'self'",
+              "connect-src 'self' https://truce-index.vercel.app",
               "media-src 'self'",
               "object-src 'none'",
               "base-uri 'self'",
