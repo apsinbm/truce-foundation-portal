@@ -1151,12 +1151,12 @@ export default function AccountabilityPage() {
             <p className="text-gray-600 mb-8 text-center">30+ years of Olympic Truce history at a glance</p>
 
             {/* Timeline Chart */}
-            <div className="p-6 rounded-2xl bg-gray-50/50 border border-gray-200/50">
-              <div className="overflow-x-auto">
-                <div className="min-w-[800px]">
+            <div className="p-4 sm:p-6 rounded-2xl bg-gray-50/50 border border-gray-200/50">
+              <div>
+                <div>
                   {/* Year labels */}
-                  <div className="flex justify-between mb-2 px-2">
-                    {[1992, 1996, 2000, 2004, 2008, 2012, 2016, 2020, 2026].map(year => (
+                  <div className="flex justify-between mb-2 px-1">
+                    {[1992, 2000, 2008, 2016, 2026].map(year => (
                       <span key={year} className="text-xs text-gray-500">{year}</span>
                     ))}
                   </div>
@@ -1183,7 +1183,7 @@ export default function AccountabilityPage() {
                           style={{ left: `${position}%` }}
                         >
                           <div
-                            className={`w-4 h-4 rounded-full border-2 ${
+                            className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full border-2 ${
                               period.status === 'observed'
                                 ? 'bg-green-500 border-green-300'
                                 : period.status === 'violated'
