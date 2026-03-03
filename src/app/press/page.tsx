@@ -4,95 +4,203 @@ import { motion } from 'framer-motion';
 import { TRUCE_INDEX_URL } from '@/lib/constants';
 import Header from '@/components/Header';
 
-// Recent coverage and key sources
+// Coverage items with descriptions
 interface CoverageItem {
   source: string;
   title: string;
   date: string;
   url: string;
   type: 'official' | 'media' | 'analysis';
+  description: string;
 }
 
-const RECENT_COVERAGE: CoverageItem[] = [
-  // === Feb 28 - Mar 2026: Iran-Israel-USA Escalation ===
+interface CoverageSection {
+  title: string;
+  dateRange: string;
+  items: CoverageItem[];
+}
+
+const COVERAGE_SECTIONS: CoverageSection[] = [
+  // === PHASE 3 ===
   {
-    source: 'UN News',
-    title: 'Secretary-General condemns military escalation, calls for immediate return to Olympic Truce',
-    date: '2026-03-01',
-    url: 'https://news.un.org',
-    type: 'official',
+    title: 'Middle Eastern Military Escalation Breaches the Olympic Truce',
+    dateRange: 'February 27 \u2013 March 3, 2026',
+    items: [
+      {
+        source: 'Olympics.com',
+        title: 'IOC statement on athletes\u2019 safe passage',
+        date: '2026-03-03',
+        url: 'https://www.olympics.com/ioc/news/ioc-statement-on-athletes-safe-passage',
+        type: 'official',
+        description: 'The IOC reaffirmed its commitment to the \u201cneutrality principle,\u201d stating that the primary goal of the UN Olympic Truce Resolution is to guarantee the safe travel and peaceful competition of all qualified athletes, regardless of their government\u2019s actions.',
+      },
+      {
+        source: 'Inside The Games',
+        title: 'IOC silent on Olympic Truce amid Middle East escalation',
+        date: '2026-03-03',
+        url: 'https://www.insidethegames.biz/articles/ioc-silent-olympic-truce-middle-east-escalation',
+        type: 'analysis',
+        description: 'The IOC faces diplomatic scrutiny for failing to formally condemn the Middle East military strikes during the Truce period. Media outlets contrast this silence with the IOC\u2019s swift condemnation of Russia when it breached the truce by invading Ukraine during the 2022 Beijing Games.',
+      },
+      {
+        source: 'Inside The Games',
+        title: 'Italy\u2019s sport chiefs condemn Iran strikes',
+        date: '2026-03-03',
+        url: 'https://www.insidethegames.biz/articles/italys-olympic-chiefs-condemn-iran-strikes',
+        type: 'media',
+        description: 'CONI President Luciano Buonfiglio expressed deep frustration over the breach of the Olympic Truce. Speaking ahead of the Paralympic Opening Ceremony in Verona, Italian sporting officials lamented the recurring global disrespect for the UN-sanctioned peace period.',
+      },
+      {
+        source: 'Sport & Politics',
+        title: '\u201cConflict in the Middle East,\u201d \u201cthe situation\u201d: the shameful Olympic silence',
+        date: '2026-03-02',
+        url: 'https://www.sportandpolitics.de/conflict-in-the-middle-east-the-situation-shameful-olympic-silence/',
+        type: 'analysis',
+        description: 'Critical sports journalism piece examining the lack of public condemnation from international sporting bodies regarding the breach of the Olympic Truce, highlighting the disparity in response depending on the geopolitical power of the nations involved.',
+      },
+      {
+        source: 'NPR',
+        title: 'Mideast clashes breach Olympic truce as athletes gather for Winter Paralympic Games',
+        date: '2026-03-01',
+        url: 'https://newsfeed.wtjx.org/2026-03-01/mideast-clashes-breach-olympic-truce-as-athletes-gather-for-winter-paralympic-games',
+        type: 'media',
+        description: 'Airstrikes involving Israel, the United States, and Iran shattered the Olympic Truce ahead of the Winter Paralympic Games. The conflict disrupted international air traffic, stranding families of para-athletes attempting to travel through Middle East transit hubs.',
+      },
+      {
+        source: 'Devdiscourse',
+        title: 'Global Sporting Events Thrown Into Chaos Amid Middle East Tensions',
+        date: '2026-03-02',
+        url: 'https://www.devdiscourse.com/article/sports-games/3824896-global-sporting-events-thrown-into-chaos-amid-middle-east-tensions',
+        type: 'media',
+        description: 'Coverage of how Middle East military operations disrupted global sporting events, including the 2026 Winter Paralympics and tennis tournaments in the Gulf.',
+      },
+      {
+        source: 'AP (via The Morning Call)',
+        title: 'Tennis stars in Dubai and Paralympians face travel issues as Middle East war continues',
+        date: '2026-03-02',
+        url: 'https://www.mcall.com/2026/03/02/iran-war-sports-travel-issues/',
+        type: 'media',
+        description: 'Airspace closures across Iran, Iraq, Kuwait, Israel, Bahrain, and Qatar forced the shutdown of Dubai International Airport, stranding athletes. Paralympic contingents faced delays reaching Italy.',
+      },
+    ],
   },
+  // === PHASE 2 ===
   {
-    source: 'IOC',
-    title: 'IOC Statement on Violations of the Olympic Truce During Milano Cortina 2026',
-    date: '2026-03-01',
-    url: 'https://www.olympics.com/ioc/news',
-    type: 'official',
+    title: 'Preparations and Global Appeals as the Truce Period Begins',
+    dateRange: 'February 1 \u2013 February 26, 2026',
+    items: [
+      {
+        source: 'IOC Newsroom',
+        title: 'IOC President Kirsty Coventry joins athletes to sign Milano Cortina 2026 Olympic Truce Mural',
+        date: '2026-02-06',
+        url: 'https://newsroom.olympics.com/record/3166',
+        type: 'official',
+        description: 'Coventry signed the Olympic Truce Mural in the Milan Olympic Village alongside athletes including IOC Athletes\u2019 Commission Chair Emma Terho ahead of the Opening Ceremony.',
+      },
+      {
+        source: '3BL Media / IOC',
+        title: 'United Nations Calls for Global Observance of Olympic Truce To Ensure Safe Passage for Athletes',
+        date: '2026-02-09',
+        url: 'https://www.3blmedia.com/news/united-nations-calls-global-observance-olympic-truce-ensure-safe-passage-athletes-and',
+        type: 'official',
+        description: 'Days before the Opening Ceremony, the UN General Assembly issued a solemn global appeal, urging all Member States to uphold the truce and specifically requesting safe passage for all athletes to Italy.',
+      },
+      {
+        source: 'Vatican News',
+        title: 'Pope appeals for Olympic truce ahead of 2026 Winter Games',
+        date: '2026-02-06',
+        url: 'https://www.vaticannews.va/en/pope/news/2026-02/pope-leo-xiv-angelus-appeal-winter-olympic-truce.html',
+        type: 'official',
+        description: 'Pope Leo XIV issued a letter on Opening Ceremony day urging nations to respect the Olympic Truce, calling it \u201ca symbol and promise of a reconciled world.\u201d',
+      },
+      {
+        source: 'Olympics.com',
+        title: 'The Olympic Truce Wall, a symbol of peace and participation',
+        date: '2026-02-02',
+        url: 'https://www.olympics.com/en/milano-cortina-2026/news/the-olympic-truce-wall-a-symbol-of-peace-and-participation',
+        type: 'official',
+        description: 'The Milano Cortina 2026 organizing committee unveiled the Olympic Truce Wall in the Olympic Villages. Continuing a tradition from the 2004 Athens Games, athletes are invited to sign the mural as a personal commitment to peace.',
+      },
+      {
+        source: 'The Washington Post',
+        title: 'Olympic ceasefire calls lay bare the scale of global conflict',
+        date: '2026-02-02',
+        url: 'https://www.washingtonpost.com/world/2026/02/02/olympics-ceasefire-winter-games-italy-ukraine-gaza-sudan/',
+        type: 'analysis',
+        description: 'Analysis of how the Olympic ceasefire tradition exposes the scale of ongoing global conflicts, including Ukraine, Gaza, and Sudan, as the Winter Games approach.',
+      },
+      {
+        source: 'X / @andrii_sybiha',
+        title: 'Ukraine FM Reports Massive Russian Drone & Missile Attack on Three Cities',
+        date: '2026-02-12',
+        url: 'https://x.com/andrii_sybiha/status/2021811503121260589',
+        type: 'media',
+        description: 'Ukraine\u2019s Foreign Minister documents ongoing Russian attacks during the Olympic Truce period, including drone and missile strikes on multiple cities.',
+      },
+      {
+        source: 'CIVICUS',
+        title: 'Olympic Truce: \u2018A call for states to exercise restraint and facilitate humanitarian access\u2019',
+        date: '2026-02-15',
+        url: 'https://lens.civicus.org/interview/olympic-truce-a-call-for-states-to-exercise-restraint-and-facilitate-humanitarian-access/',
+        type: 'analysis',
+        description: 'Interview discussing the Olympic Truce as a call for restraint and humanitarian access during conflicts, in the context of Milano Cortina 2026.',
+      },
+    ],
   },
+  // === PHASE 1 ===
   {
-    source: 'Reuters',
-    title: 'U.S.-Israeli strikes on Iran shatter Olympic Truce as regional war erupts',
-    date: '2026-02-28',
-    url: 'https://www.reuters.com',
-    type: 'media',
-  },
-  {
-    source: 'Al Jazeera',
-    title: 'Iran launches retaliatory missile barrage at Israel and Gulf states after Khamenei killing',
-    date: '2026-03-01',
-    url: 'https://www.aljazeera.com',
-    type: 'media',
-  },
-  // === Ongoing conflicts during Truce ===
-  {
-    source: 'BBC News',
-    title: 'Russia launches largest missile barrage on Ukraine on day of Olympic Opening Ceremony',
-    date: '2026-02-22',
-    url: 'https://www.bbc.com/news',
-    type: 'media',
-  },
-  {
-    source: 'OCHA',
-    title: 'Gaza humanitarian catastrophe deepens as all border crossings shut amid regional war',
-    date: '2026-03-01',
-    url: 'https://www.unocha.org',
-    type: 'official',
-  },
-  {
-    source: 'UNHCR',
-    title: 'Sudan displacement crisis worsens as RSF offensive forces 200,000 more to flee',
-    date: '2026-02-27',
-    url: 'https://www.unhcr.org',
-    type: 'official',
-  },
-  {
-    source: 'X / @andrii_sybiha',
-    title: 'Ukraine FM Reports Massive Russian Drone & Missile Attack on Three Cities',
-    date: '2026-02-12',
-    url: 'https://x.com/andrii_sybiha/status/2021811503121260589',
-    type: 'media',
-  },
-  // === Resolution adoption ===
-  {
-    source: 'UN Press',
-    title: 'General Assembly Adopts Olympic Truce Resolution, Citing Sport\'s Unifying Power',
-    date: '2025-11-19',
-    url: 'https://press.un.org/en/2025/ga12732.doc.htm',
-    type: 'official',
-  },
-  {
-    source: 'Olympics.com',
-    title: 'Olympic Truce Resolution for Milano Cortina 2026 adopted by the United Nations',
-    date: '2025-11-19',
-    url: 'https://www.olympics.com/ioc/news/olympic-truce-resolution-for-milano-cortina-2026-adopted-by-the-united-nations',
-    type: 'official',
-  },
-  {
-    source: 'Italian Ministry of Foreign Affairs',
-    title: 'La Risoluzione Italiana sulla Tregua Olimpica per Milano Cortina 2026',
-    date: '2025-11-19',
-    url: 'https://www.esteri.it/en/sala_stampa/archivionotizie/comunicati/2025/11/la-risoluzione-italiana-sulla-tregua-olimpica-per-milano-cortina-2026-adottata-dallassemblea-generale-dellonu/',
-    type: 'official',
+    title: 'The UN General Assembly Adopts the Olympic Truce Resolution',
+    dateRange: 'October 2025 \u2013 January 31, 2026',
+    items: [
+      {
+        source: 'Euronews',
+        title: 'UN calls for 52-day pause in global wars ahead of Milan Cortina Winter Olympics',
+        date: '2026-01-30',
+        url: 'https://www.euronews.com/2026/01/30/un-calls-for-52-day-pause-in-global-wars-ahead-of-milan-cortina-winter-olympics',
+        type: 'media',
+        description: 'Coverage of the start of the 52-day Olympic Truce window, covering the Feb 6\u201322 Winter Games and Mar 6\u201315 Paralympics plus a week on either side.',
+      },
+      {
+        source: 'UN News',
+        title: 'Olympic Truce: \u2018Humanity can find common ground through sport\u2019',
+        date: '2025-11-19',
+        url: 'https://news.un.org/en/story/2025/11/1166405',
+        type: 'official',
+        description: 'The 80th Session of the UNGA officially adopted the Olympic Truce resolution. President Annalena Baerbock urged the 165 co-sponsoring Member States to honor the tradition, highlighting sport as a rare space where people can meet as equals.',
+      },
+      {
+        source: 'UN Press',
+        title: 'General Assembly Adopts Olympic Truce Resolution, Citing Sport\u2019s Unifying Power',
+        date: '2025-11-19',
+        url: 'https://press.un.org/en/2025/ga12732.doc.htm',
+        type: 'official',
+        description: 'Official UN meetings coverage of the consensus adoption of resolution A/80/L.10, calling on Member States to observe the Olympic Truce from January 30 through March 22, 2026.',
+      },
+      {
+        source: 'Olympics.com',
+        title: 'Olympic Truce Resolution for Milano Cortina 2026 adopted by the United Nations',
+        date: '2025-11-19',
+        url: 'https://www.olympics.com/ioc/news/olympic-truce-resolution-for-milano-cortina-2026-adopted-by-the-united-nations',
+        type: 'official',
+        description: 'IOC coverage of the resolution adoption. IOC President Kirsty Coventry and Milano Cortina 2026 OC President Giovanni Malag\u00f2 addressed the General Assembly.',
+      },
+      {
+        source: 'Italian Ministry of Foreign Affairs',
+        title: 'UN General Assembly adopts Italy\u2019s Resolution on the Olympic Truce',
+        date: '2025-11-19',
+        url: 'https://www.esteri.it/en/sala_stampa/archivionotizie/comunicati/2025/11/la-risoluzione-italiana-sulla-tregua-olimpica-per-milano-cortina-2026-adottata-dallassemblea-generale-dellonu/',
+        type: 'official',
+        description: 'Italian government\u2019s official announcement of the resolution they steered in coordination with the IOC and the Milano Cortina Foundation.',
+      },
+      {
+        source: 'ANOC',
+        title: 'Olympic Truce Resolution for Milano Cortina 2026 adopted by the United Nations',
+        date: '2025-11-19',
+        url: 'https://www.anocolympic.org/olympic-movement/olympic-truce-resolution-for-milano-cortina-2026-adopted-by-the-united-nations/',
+        type: 'official',
+        description: 'Association of National Olympic Committees\u2019 coverage of the UNGA resolution calling for a truce period from January 30 through March 22, 2026.',
+      },
+    ],
   },
 ];
 
@@ -180,7 +288,7 @@ export default function PressPage() {
             viewport={{ once: true }}
             className="p-6 rounded-xl bg-red-50 border border-red-200"
           >
-            <h2 className="text-2xl font-bold text-red-900 mb-3">Situation Brief: March 2, 2026</h2>
+            <h2 className="text-2xl font-bold text-red-900 mb-3">Situation Brief: March 3, 2026</h2>
             <div className="space-y-3 text-sm text-red-900/80">
               <p>
                 The Milano Cortina 2026 Olympic Truce (Jan 30 - Mar 22) has been shattered by the most severe violations in modern Olympic history. On February 28, the United States and Israel launched coordinated strikes on Iranian nuclear and military facilities, including a targeted operation that killed Supreme Leader Ayatollah Khamenei. Iran responded with the largest missile barrage in its history, striking 10 countries: Israel, Saudi Arabia, UAE, Bahrain, Kuwait, Qatar (Al Udeid/CENTCOM), Iraq (Erbil/Al-Asad), Jordan, Oman, and Cyprus (RAF Akrotiri).
@@ -226,51 +334,62 @@ export default function PressPage() {
         </div>
       </section>
 
-      {/* Recent Coverage */}
-      <section className="py-12 px-4 bg-gray-50/30">
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">Official Sources & Coverage</h2>
-            <p className="text-gray-600 mb-6">Key reporting on the 2026 Olympic Truce crisis and resolution</p>
+      {/* Coverage by Phase */}
+      {COVERAGE_SECTIONS.map((section, sectionIndex) => (
+        <section key={section.title} className={`py-12 px-4 ${sectionIndex % 2 === 0 ? 'bg-gray-50/30' : ''}`}>
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <div className="mb-6">
+                <p className="text-sm font-medium text-blue-600 mb-1">{section.dateRange}</p>
+                <h2 className="text-2xl font-bold text-gray-900">{section.title}</h2>
+              </div>
 
-            <div className="space-y-3">
-              {RECENT_COVERAGE.map((item) => (
-                <a
-                  key={item.url}
-                  href={item.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block p-4 rounded-xl bg-gray-100/50 border border-gray-200/50 hover:border-blue-500/50 transition-colors group"
-                >
-                  <div className="flex items-start justify-between gap-4">
-                    <div className="flex-1">
-                      <div className="flex items-center gap-2 mb-1">
-                        <span className="text-sm font-semibold text-blue-600">{item.source}</span>
-                        <span className="px-2 py-0.5 text-xs bg-green-100 text-green-800 border-green-300 rounded-full">
-                          {item.type}
-                        </span>
-                        <span className="text-xs text-gray-500">
-                          {new Date(item.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
-                        </span>
+              <div className="space-y-3">
+                {section.items.map((item) => (
+                  <a
+                    key={item.url}
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block p-4 rounded-xl bg-white border border-gray-200/50 hover:border-blue-500/50 transition-colors group shadow-sm"
+                  >
+                    <div className="flex items-start justify-between gap-4">
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 mb-1 flex-wrap">
+                          <span className="text-sm font-semibold text-blue-600">{item.source}</span>
+                          <span className={`px-2 py-0.5 text-xs rounded-full ${
+                            item.type === 'official'
+                              ? 'bg-green-100 text-green-800 border border-green-300'
+                              : item.type === 'analysis'
+                              ? 'bg-purple-100 text-purple-800 border border-purple-300'
+                              : 'bg-gray-100 text-gray-700 border border-gray-300'
+                          }`}>
+                            {item.type}
+                          </span>
+                          <span className="text-xs text-gray-500">
+                            {new Date(item.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+                          </span>
+                        </div>
+                        <h3 className="text-gray-900 group-hover:text-blue-500 transition-colors text-sm font-medium mb-1">
+                          {item.title}
+                        </h3>
+                        <p className="text-xs text-gray-500 line-clamp-2">{item.description}</p>
                       </div>
-                      <h3 className="text-gray-900 group-hover:text-blue-500 transition-colors text-sm">
-                        {item.title}
-                      </h3>
+                      <svg className="w-4 h-4 text-gray-500 group-hover:text-blue-600 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
                     </div>
-                    <svg className="w-4 h-4 text-gray-500 group-hover:text-blue-600 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </svg>
-                  </div>
-                </a>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
+                  </a>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      ))}
 
       {/* Visual Assets / B-Roll */}
       <section className="py-12 px-4">
