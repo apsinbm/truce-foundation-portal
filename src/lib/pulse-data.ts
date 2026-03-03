@@ -39,6 +39,89 @@ export interface PulseEntry {
 
 export const PULSE_ENTRIES: PulseEntry[] = [
   {
+    id: 'pulse-2026-03-03-risk-tile',
+    periodStart: '2026-03-03',
+    periodEnd: '2026-03-03',
+    periodLabel: '3 March 2026 — Risk Tile: Middle East Escalation & Milano Cortina Impact',
+    focusAreas: ['Safe Passage', 'Regional Stability', 'De-escalation', 'Participation'],
+    sections: [
+      {
+        id: 'safe-passage',
+        title: 'Safe Passage Under Strain',
+        icon: '\u{1F6E1}\u{FE0F}',
+        color: 'green',
+        bullets: [
+          {
+            headline: 'Airspace Closures Interrupt Athlete & Delegation Mobility',
+            text: 'Airspace closures across the Arabian Peninsula and Gulf states are interrupting athlete and delegation mobility. Strikes on civilian airports (Dubai, Kuwait) directly undermine the Truce expectation of protected transit during the Games period.',
+          },
+          {
+            headline: 'Delegations Report Delayed or Rerouted Travel',
+            text: 'Several delegations report delayed or rerouted travel into Europe, affecting training schedules and final preparations. Contingency routing is now essential as travel logistics become the most immediate vulnerability for Milano Cortina.',
+          },
+        ],
+      },
+      {
+        id: 'geopolitical-escalation',
+        title: 'Geopolitical Escalation Redrawing the Truce Environment',
+        icon: '\u{26A0}\u{FE0F}',
+        color: 'amber',
+        bullets: [
+          {
+            headline: 'Operation Epic Fury Triggers Region-Wide Retaliation',
+            text: 'Operation Epic Fury\u2014a U.S.\u2013Israeli strike targeting Iran\u2019s leadership\u2014has triggered region-wide retaliation. Iranian missile and drone attacks now span Israel, Bahrain, Qatar, Kuwait, and the UAE, expanding the conflict footprint across the Gulf.',
+          },
+          {
+            headline: 'Humanitarian Toll Reaches 500\u2013600+ Deaths',
+            text: 'The humanitarian toll of 500\u2013600+ deaths heightens global instability at a moment when the Truce seeks de-escalation. The scale and geographic spread of the conflict illustrate a deteriorating security environment that undermines the Truce\u2019s expectation of restraint.',
+          },
+        ],
+      },
+      {
+        id: 'paralympic-governance',
+        title: 'Paralympic Governance Under Dual Pressure',
+        icon: '\u{2696}\u{FE0F}',
+        color: 'blue',
+        bullets: [
+          {
+            headline: 'IPC Managing Middle East Crisis & Russia/Belarus Reinstatement',
+            text: 'IPC leadership is managing both the Middle East crisis and diplomatic fallout over Russia and Belarus\u2019s reinstatement. The convergence of active military conflict and unresolved participation disputes creates unprecedented pressure on Paralympic governance.',
+          },
+          {
+            headline: 'Political Polarization Threatens Truce Neutrality',
+            text: 'Political polarization around participation threatens the Truce\u2019s neutrality norm and risks cascading boycotts. Instead of a period of symbolic calm, the Games are unfolding against widening conflict\u2014diminishing the Truce\u2019s moral authority and complicating messaging around peace, inclusion, and unity.',
+          },
+        ],
+      },
+      {
+        id: 'operational-consequences',
+        title: 'Operational Consequences for Milano Cortina',
+        icon: '\u{1F3D4}\u{FE0F}',
+        color: 'purple',
+        bullets: [
+          {
+            headline: 'Contingency Planning Now Essential for Affected Delegations',
+            text: 'IPC and Milano Cortina organizers are coordinating solutions for affected delegations while maintaining athlete-first priorities. Travel logistics are the most immediate vulnerability, with contingency routing now essential for delegations transiting through or near the conflict zone.',
+          },
+          {
+            headline: 'No Direct Threat to Italy, But Global Volatility Elevates Risk',
+            text: 'No direct security threat to Italy has been identified, but global volatility elevates monitoring requirements. The operational burden of managing delegation travel disruptions, security assessments, and diplomatic sensitivities adds complexity to Games delivery at a critical moment.',
+          },
+        ],
+      },
+    ],
+    overallAlignment: {
+      level: 'critical',
+      summary: 'Overall Truce Risk Level: SEVERE. The Olympic Truce is under unprecedented strain as Operation Epic Fury and Iranian retaliation reshape security conditions across the Middle East. Airspace closures disrupt athlete mobility, 500\u2013600+ deaths underscore the humanitarian toll, and IPC faces dual pressure from the regional war and Russia/Belarus reinstatement politics. The Games are unfolding against widening conflict rather than the symbolic calm the Truce envisions.',
+    },
+    keyConstraints: [
+      'Strikes on civilian airports in Dubai and Kuwait and airspace closures across the Gulf are directly disrupting delegation travel into Europe, with several teams reporting delayed or rerouted journeys affecting training and final preparations.',
+      'Operation Epic Fury has expanded the conflict to at least nine countries with 500\u2013600+ deaths, while IPC simultaneously manages Russia/Belarus reinstatement fallout\u2014creating dual political and security pressure on Milano Cortina.',
+      'The Truce\u2019s moral authority is diminished as the Games unfold against widening conflict rather than symbolic calm, complicating messaging around peace, inclusion, and unity.',
+    ],
+    publishedAt: '2026-03-03',
+  },
+  {
     id: 'pulse-2026-03-03-special',
     periodStart: '2026-03-03',
     periodEnd: '2026-03-03',
