@@ -31,7 +31,7 @@ export async function GET(request: NextRequest) {
           SUM(CASE WHEN ti.type = 'POSITIVE_MEASURE' THEN 1 ELSE 0 END) as positive_measures,
           SUM(CASE WHEN ti.severity = 'critical' THEN 1 ELSE 0 END) as critical_incidents,
           SUM(CASE WHEN ti.severity = 'high' THEN 1 ELSE 0 END) as high_incidents,
-          SUM(
+          (SUM(
             CASE WHEN ti.type = 'POSITIVE_MEASURE' THEN 0
             ELSE
               (CASE ti.severity
@@ -44,7 +44,10 @@ export async function GET(request: NextRequest) {
                 WHEN 'HUMANITARIAN_ACCESS' THEN 1.5 ELSE 1.0
               END)
             END
-          ) as severity_score,
+          ) + (CASE cb.crisis_level
+            WHEN 'war' THEN 30 WHEN 'crisis' THEN 15
+            WHEN 'conflict' THEN 5 ELSE 0
+          END)) as severity_score,
           cb.gpi_score, cb.gpi_rank, cb.crisis_level
         FROM truce_incidents ti
         LEFT JOIN country_baselines cb ON ti.country_iso3 = cb.country_iso3
@@ -54,7 +57,7 @@ export async function GET(request: NextRequest) {
       `, [start, end, limit]),
       pool.query(`
         SELECT ti.country_iso3, COUNT(*) as total_incidents,
-          ROW_NUMBER() OVER (ORDER BY SUM(
+          ROW_NUMBER() OVER (ORDER BY (SUM(
             CASE WHEN ti.type = 'POSITIVE_MEASURE' THEN 0
             ELSE
               (CASE ti.severity
@@ -67,29 +70,45 @@ export async function GET(request: NextRequest) {
                 WHEN 'HUMANITARIAN_ACCESS' THEN 1.5 ELSE 1.0
               END)
             END
-          ) DESC) as prev_rank
+          ) + (CASE cb.crisis_level
+            WHEN 'war' THEN 30 WHEN 'crisis' THEN 15
+            WHEN 'conflict' THEN 5 ELSE 0
+          END)) DESC) as prev_rank
         FROM truce_incidents ti
+        LEFT JOIN country_baselines cb ON ti.country_iso3 = cb.country_iso3
         WHERE ti.occurred_at >= $1 AND ti.occurred_at < $2${sourceFilter}
-        GROUP BY ti.country_iso3
+        GROUP BY ti.country_iso3, cb.crisis_level
       `, [prevStart, start]),
       pool.query(`
-        SELECT COUNT(*) as total_incidents, COUNT(DISTINCT country_iso3) as total_countries,
-          SUM(CASE WHEN severity = 'critical' THEN 1 ELSE 0 END) as total_critical,
-          SUM(
-            CASE WHEN ti.type = 'POSITIVE_MEASURE' THEN 0
-            ELSE
-              (CASE ti.severity
-                WHEN 'critical' THEN 10 WHEN 'high' THEN 5
-                WHEN 'medium' THEN 2 WHEN 'low' THEN 1 ELSE 1
-              END)
-              *
-              (CASE ti.type
-                WHEN 'CONFLICT' THEN 3.0 WHEN 'TRUCE_VIOLATION' THEN 2.0
-                WHEN 'HUMANITARIAN_ACCESS' THEN 1.5 ELSE 1.0
-              END)
-            END
-          ) as total_severity_score
-        FROM truce_incidents ti WHERE ti.occurred_at >= $1 AND ti.occurred_at <= $2${sourceFilter}
+        SELECT s.total_incidents, s.total_countries, s.total_critical,
+          s.incident_severity + COALESCE(s.crisis_bonus, 0) as total_severity_score
+        FROM (
+          SELECT COUNT(*) as total_incidents, COUNT(DISTINCT ti.country_iso3) as total_countries,
+            SUM(CASE WHEN ti.severity = 'critical' THEN 1 ELSE 0 END) as total_critical,
+            SUM(
+              CASE WHEN ti.type = 'POSITIVE_MEASURE' THEN 0
+              ELSE
+                (CASE ti.severity
+                  WHEN 'critical' THEN 10 WHEN 'high' THEN 5
+                  WHEN 'medium' THEN 2 WHEN 'low' THEN 1 ELSE 1
+                END)
+                *
+                (CASE ti.type
+                  WHEN 'CONFLICT' THEN 3.0 WHEN 'TRUCE_VIOLATION' THEN 2.0
+                  WHEN 'HUMANITARIAN_ACCESS' THEN 1.5 ELSE 1.0
+                END)
+              END
+            ) as incident_severity,
+            (SELECT SUM(CASE cb2.crisis_level
+              WHEN 'war' THEN 30 WHEN 'crisis' THEN 15
+              WHEN 'conflict' THEN 5 ELSE 0
+            END) FROM country_baselines cb2
+            WHERE cb2.country_iso3 IN (
+              SELECT DISTINCT ti2.country_iso3 FROM truce_incidents ti2
+              WHERE ti2.occurred_at >= $1 AND ti2.occurred_at <= $2${sourceFilter}
+            )) as crisis_bonus
+          FROM truce_incidents ti WHERE ti.occurred_at >= $1 AND ti.occurred_at <= $2${sourceFilter}
+        ) s
       `, [start, end]),
     ]);
 
