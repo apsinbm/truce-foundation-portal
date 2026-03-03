@@ -44,12 +44,10 @@ export default function PortalHub() {
 
         <div className="relative z-10 max-w-6xl mx-auto">
           {/* Cards Grid - 4 columns */}
-          <div className="crisis-border p-4 sm:p-5">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
-              {allSites.map((site, index) => (
-                <SubSiteCard key={site.id} site={site} index={index} compact />
-              ))}
-            </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+            {allSites.map((site, index) => (
+              <SubSiteCard key={site.id} site={site} index={index} compact highlight={site.id === 'index' || site.id === 'truce-pulse'} />
+            ))}
           </div>
         </div>
       </section>

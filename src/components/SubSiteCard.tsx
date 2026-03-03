@@ -8,6 +8,7 @@ interface SubSiteCardProps {
   site: SubSite;
   index: number;
   compact?: boolean;
+  highlight?: boolean;
 }
 
 // Varied action words based on card type
@@ -23,7 +24,7 @@ const getActionWord = (id: string): string => {
   return actions[id] || 'Visit';
 };
 
-export default function SubSiteCard({ site, index, compact = false }: SubSiteCardProps) {
+export default function SubSiteCard({ site, index, compact = false, highlight = false }: SubSiteCardProps) {
   const isLive = site.status === 'live';
   const isExternal = site.external;
 
@@ -74,6 +75,7 @@ export default function SubSiteCard({ site, index, compact = false }: SubSiteCar
   const cardClasses = `
     glass-card ${compact ? 'p-5' : 'p-6'} relative overflow-hidden group
     transition-all duration-300
+    ${highlight ? 'crisis-border' : ''}
     ${isLive ? 'cursor-pointer hover:border-blue-600/50 hover:shadow-lg hover:shadow-blue-600/10' : 'cursor-default opacity-75'}
   `;
 
