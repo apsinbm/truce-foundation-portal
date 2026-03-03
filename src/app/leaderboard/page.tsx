@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { format, subDays, subMonths } from 'date-fns';
-import { TRUCE_INDEX_URL } from '@/lib/constants';
+import { TRUCE_INDEX_URL, TRUCE_START_DATE, TRUCE_END_DATE } from '@/lib/constants';
 import Header from '@/components/Header';
 
 interface CountryRanking {
@@ -42,7 +42,7 @@ interface LeaderboardData {
 }
 
 type TimeFilter = '7d' | '30d' | '90d' | '1y' | 'all';
-type SourceFilter = 'all' | 'ACLED' | 'UCDP';
+type SourceFilter = 'truce' | 'all' | 'ACLED' | 'UCDP';
 
 const TIME_FILTERS: { value: TimeFilter; label: string }[] = [
   { value: '7d', label: 'Last 7 Days' },
@@ -61,11 +61,20 @@ const SOURCE_PRESETS: {
   dateRange?: { start: string; end?: string };
 }[] = [
   {
+    value: 'truce',
+    label: 'Olympic Truce',
+    description: 'Jan 30 \u2013 Mar 22, 2026 (Milano-Cortina 2026)',
+    methodology: 'All verified incidents during the 52-day Olympic Truce window per UN Resolution A/80/L.10',
+    dateRange: {
+      start: '2026-01-30T00:00:00Z',
+      end: '2026-03-22T23:59:59Z',
+    },
+  },
+  {
     value: 'all',
     label: 'All Sources',
-    description: 'UCDP 2022-2023 + ACLED 2024',
-    methodology: 'Combined data from both academic (UCDP) and near real-time (ACLED) sources',
-    dateRange: { start: '2022-01-01T00:00:00Z' },
+    description: 'UCDP 2022-2023 + ACLED 2024 + Truce 2026',
+    methodology: 'Combined data from all sources including academic (UCDP), near real-time (ACLED), and curated Truce incidents',
   },
   {
     value: 'UCDP',
@@ -110,7 +119,7 @@ export default function LeaderboardPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [timeFilter, setTimeFilter] = useState<TimeFilter>('30d');
-  const [sourceFilter, setSourceFilter] = useState<SourceFilter>('all');
+  const [sourceFilter, setSourceFilter] = useState<SourceFilter>('truce');
   const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
 
   // Export data as CSV
@@ -235,7 +244,7 @@ export default function LeaderboardPage() {
 
       try {
         let url = `/api/truce-index/leaderboard?start=${start}&end=${end}&limit=50`;
-        if (sourceFilter !== 'all') {
+        if (sourceFilter !== 'all' && sourceFilter !== 'truce') {
           url += `&source=${sourceFilter}`;
         }
         const res = await fetch(url);
@@ -267,8 +276,8 @@ export default function LeaderboardPage() {
           >
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-2">Country Compliance Leaderboard</h1>
             <p className="text-gray-600">
-              Countries ranked by total incidents during the selected time period.
-              Higher rank indicates more violations of peaceful conditions.
+              Countries ranked by verified incidents during the Milano-Cortina 2026 Olympic Truce
+              (January 30 \u2013 March 22, 2026). Higher rank indicates more violations.
             </p>
           </motion.div>
 
@@ -291,7 +300,8 @@ export default function LeaderboardPage() {
                       title={source.methodology}
                       className={`px-4 py-2 text-sm rounded-md transition-colors ${
                         sourceFilter === source.value
-                          ? source.value === 'ACLED' ? 'bg-blue-500 text-white hover:bg-blue-600'
+                          ? source.value === 'truce' ? 'bg-green-600 text-white hover:bg-green-700'
+                            : source.value === 'ACLED' ? 'bg-blue-500 text-white hover:bg-blue-600'
                             : source.value === 'UCDP' ? 'bg-purple-600 text-white hover:bg-purple-700'
                             : 'bg-blue-500 text-white hover:bg-blue-600'
                           : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
@@ -304,7 +314,8 @@ export default function LeaderboardPage() {
               </div>
               {/* Show methodology info for selected source */}
               <div className={`text-xs p-2 rounded-lg border ${
-                sourceFilter === 'ACLED' ? 'bg-blue-900/20 border-blue-600/50 text-blue-400'
+                sourceFilter === 'truce' ? 'bg-green-50 border-green-300 text-green-800'
+                : sourceFilter === 'ACLED' ? 'bg-blue-900/20 border-blue-600/50 text-blue-400'
                 : sourceFilter === 'UCDP' ? 'bg-purple-900/20 border-purple-800/50 text-purple-400'
                 : 'bg-gray-100/50 border-gray-200/50 text-gray-600'
               }`}>
@@ -326,11 +337,11 @@ export default function LeaderboardPage() {
                   <button
                     key={filter.value}
                     onClick={() => setTimeFilter(filter.value)}
-                    disabled={sourceFilter !== 'all'}
+                    disabled={!!SOURCE_PRESETS.find(s => s.value === sourceFilter)?.dateRange}
                     className={`px-4 py-2 text-sm rounded-md transition-colors ${
-                      timeFilter === filter.value && sourceFilter === 'all'
+                      timeFilter === filter.value && !SOURCE_PRESETS.find(s => s.value === sourceFilter)?.dateRange
                         ? 'bg-blue-500 text-white hover:bg-blue-600'
-                        : sourceFilter !== 'all'
+                        : SOURCE_PRESETS.find(s => s.value === sourceFilter)?.dateRange
                         ? 'text-gray-600 cursor-not-allowed'
                         : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
                     }`}
