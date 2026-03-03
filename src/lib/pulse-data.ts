@@ -39,6 +39,89 @@ export interface PulseEntry {
 
 export const PULSE_ENTRIES: PulseEntry[] = [
   {
+    id: 'pulse-2026-03-03',
+    periodStart: '2026-03-03',
+    periodEnd: '2026-03-03',
+    periodLabel: '3 March 2026',
+    focusAreas: ['Safe Passage', 'Humanitarian Access', 'De-escalation', 'Regional Stability'],
+    sections: [
+      {
+        id: 'safe-passage',
+        title: 'Safe Passage',
+        icon: '🛡️',
+        color: 'green',
+        bullets: [
+          {
+            headline: 'U.S.–Israeli Air Campaign Disrupts Civilian Movement in Iran',
+            text: 'The U.S.–Israeli air campaign in Iran, including strikes on government facilities in Tehran and damage to the Natanz nuclear site, has contributed to widespread insecurity and disrupted civilian movement. Drone attacks on U.S. embassies in Saudi Arabia and Kuwait, and evacuation advisories for 14 countries, further constrain mobility for civilians, humanitarian personnel, and diplomatic actors.',
+          },
+          {
+            headline: 'Lebanon Displacement & Regional Transit Threats',
+            text: 'The displacement of at least 30,000 people in Lebanon following renewed hostilities between Israel and Hezbollah underscores the scale of forced movement triggered by the conflict. Attacks on airports, tourist areas, and urban centers—including strikes in Dubai—extend the threat to civilian transit corridors across the region and internationally, affecting the ability of athletes and others to travel safely to the Paralympic Games in Italy.',
+          },
+        ],
+      },
+      {
+        id: 'humanitarian-access',
+        title: 'Humanitarian Access',
+        icon: '🚑',
+        color: 'amber',
+        bullets: [
+          {
+            headline: 'Gaza Crossings Closed as Wartime Measure',
+            text: 'The closure of all crossings into Gaza, justified by Israeli authorities as a wartime measure, has sharply limited the entry of fuel, food, and essential supplies. Local officials warn that shortages threaten hospital operations, water systems, and sanitation services. Although Israel has indicated that the Kerem Shalom crossing will reopen for gradual aid entry, the interruption highlights the fragility of humanitarian access in conflict settings.',
+          },
+          {
+            headline: 'Afghanistan–Pakistan Border & South Sudan Violence',
+            text: 'In Afghanistan, ongoing clashes along the Pakistan–Afghanistan border have resulted in civilian casualties, further complicating humanitarian operations in an already vulnerable region. The attack in South Sudan\u2019s Ruweng Administrative Area, which killed 169 people, adds to the global picture of acute humanitarian need amid violence.',
+          },
+        ],
+      },
+      {
+        id: 'calming-hostilities',
+        title: 'Calming Hostilities',
+        icon: '⚖️',
+        color: 'blue',
+        bullets: [
+          {
+            headline: 'U.S. Signals Escalation Rather Than De-escalation',
+            text: 'Statements by senior U.S. officials that the "hardest hits are yet to come," alongside the deployment of additional troops and aircraft, signal an escalation rather than de-escalation. Regional actors are adjusting their postures: France is deploying anti-missile systems to Cyprus following drone strikes on RAF Akrotiri, while neighboring states reportedly consider retaliatory measures against Iran.',
+          },
+          {
+            headline: 'Killing of Iran\u2019s Supreme Leader Heightens Escalation Risk',
+            text: 'The killing of Iran\u2019s Supreme Leader and the subsequent intelligence assessments warning of cyber or physical retaliation further heighten the risk of continued escalation. Political rhetoric across capitals reflects hardened positions, with leaders emphasizing military objectives and deterrence over dialogue.',
+          },
+        ],
+      },
+      {
+        id: 'diplomatic-frame',
+        title: 'Broader Diplomatic Frame',
+        icon: '🤝',
+        color: 'purple',
+        bullets: [
+          {
+            headline: 'Regional Environment Marked by Heightened Insecurity',
+            text: 'The cumulative effect is a regional environment marked by heightened insecurity, constrained humanitarian access, and expanding conflict dynamics. The scale and geographic spread of military activity—from Iran, Israel, and Lebanon to the Gulf, Cyprus, and beyond—illustrate a deteriorating security environment that undermines the Truce\u2019s expectation of restraint and the protection of civilians.',
+          },
+          {
+            headline: 'Urgency of Reinforcing Truce Principles',
+            text: 'These conditions stand in direct tension with the Olympic Truce\u2019s call for restraint, dialogue, and the protection of civilians. The events described illustrate the urgency of reinforcing the Truce\u2019s principles at a moment when global hostilities are intensifying rather than calming.',
+          },
+        ],
+      },
+    ],
+    overallAlignment: {
+      level: 'critical',
+      summary: 'A rapidly widening regional conflict whose effects directly challenge the Olympic Truce\u2019s call for safe passage, humanitarian access, and the reduction of hostilities during the Games period. The scale and geographic spread of military activity—from Iran, Israel, and Lebanon to the Gulf, Cyprus, and beyond—illustrate a deteriorating security environment that undermines the Truce\u2019s expectation of restraint and the protection of civilians.',
+    },
+    keyConstraints: [
+      'The U.S.\u2013Israeli air campaign in Iran, drone attacks on embassies in Saudi Arabia and Kuwait, and evacuation advisories for 14 countries have severely constrained civilian and diplomatic mobility across the region.',
+      'The closure of all Gaza crossings, civilian casualties along the Pakistan\u2013Afghanistan border, and the killing of 169 people in South Sudan\u2019s Ruweng Administrative Area demonstrate a collapse of humanitarian access across simultaneous crises.',
+      'Signals of further escalation\u2014including deployment of additional troops, anti-missile systems to Cyprus, and intelligence warnings of Iranian retaliation\u2014indicate that hostilities are intensifying rather than calming during the Truce period.',
+    ],
+    publishedAt: '2026-03-03',
+  },
+  {
     id: 'pulse-2026-03-02',
     periodStart: '2026-03-02',
     periodEnd: '2026-03-02',
