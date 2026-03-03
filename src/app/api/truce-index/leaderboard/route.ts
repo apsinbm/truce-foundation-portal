@@ -31,23 +31,64 @@ export async function GET(request: NextRequest) {
           SUM(CASE WHEN ti.type = 'POSITIVE_MEASURE' THEN 1 ELSE 0 END) as positive_measures,
           SUM(CASE WHEN ti.severity = 'critical' THEN 1 ELSE 0 END) as critical_incidents,
           SUM(CASE WHEN ti.severity = 'high' THEN 1 ELSE 0 END) as high_incidents,
+          SUM(
+            CASE WHEN ti.type = 'POSITIVE_MEASURE' THEN 0
+            ELSE
+              (CASE ti.severity
+                WHEN 'critical' THEN 10 WHEN 'high' THEN 5
+                WHEN 'medium' THEN 2 WHEN 'low' THEN 1 ELSE 1
+              END)
+              *
+              (CASE ti.type
+                WHEN 'CONFLICT' THEN 3.0 WHEN 'TRUCE_VIOLATION' THEN 2.0
+                WHEN 'HUMANITARIAN_ACCESS' THEN 1.5 ELSE 1.0
+              END)
+            END
+          ) as severity_score,
           cb.gpi_score, cb.gpi_rank, cb.crisis_level
         FROM truce_incidents ti
         LEFT JOIN country_baselines cb ON ti.country_iso3 = cb.country_iso3
         WHERE ti.occurred_at >= $1 AND ti.occurred_at <= $2${sourceFilter}
         GROUP BY ti.country_iso3, cb.country_name, cb.gpi_score, cb.gpi_rank, cb.crisis_level
-        ORDER BY total_incidents DESC LIMIT $3
+        ORDER BY severity_score DESC LIMIT $3
       `, [start, end, limit]),
       pool.query(`
         SELECT ti.country_iso3, COUNT(*) as total_incidents,
-          ROW_NUMBER() OVER (ORDER BY COUNT(*) DESC) as prev_rank
+          ROW_NUMBER() OVER (ORDER BY SUM(
+            CASE WHEN ti.type = 'POSITIVE_MEASURE' THEN 0
+            ELSE
+              (CASE ti.severity
+                WHEN 'critical' THEN 10 WHEN 'high' THEN 5
+                WHEN 'medium' THEN 2 WHEN 'low' THEN 1 ELSE 1
+              END)
+              *
+              (CASE ti.type
+                WHEN 'CONFLICT' THEN 3.0 WHEN 'TRUCE_VIOLATION' THEN 2.0
+                WHEN 'HUMANITARIAN_ACCESS' THEN 1.5 ELSE 1.0
+              END)
+            END
+          ) DESC) as prev_rank
         FROM truce_incidents ti
         WHERE ti.occurred_at >= $1 AND ti.occurred_at < $2${sourceFilter}
         GROUP BY ti.country_iso3
       `, [prevStart, start]),
       pool.query(`
         SELECT COUNT(*) as total_incidents, COUNT(DISTINCT country_iso3) as total_countries,
-          SUM(CASE WHEN severity = 'critical' THEN 1 ELSE 0 END) as total_critical
+          SUM(CASE WHEN severity = 'critical' THEN 1 ELSE 0 END) as total_critical,
+          SUM(
+            CASE WHEN ti.type = 'POSITIVE_MEASURE' THEN 0
+            ELSE
+              (CASE ti.severity
+                WHEN 'critical' THEN 10 WHEN 'high' THEN 5
+                WHEN 'medium' THEN 2 WHEN 'low' THEN 1 ELSE 1
+              END)
+              *
+              (CASE ti.type
+                WHEN 'CONFLICT' THEN 3.0 WHEN 'TRUCE_VIOLATION' THEN 2.0
+                WHEN 'HUMANITARIAN_ACCESS' THEN 1.5 ELSE 1.0
+              END)
+            END
+          ) as total_severity_score
         FROM truce_incidents ti WHERE ti.occurred_at >= $1 AND ti.occurred_at <= $2${sourceFilter}
       `, [start, end]),
     ]);
@@ -68,6 +109,7 @@ export async function GET(request: NextRequest) {
         country_iso3: row.country_iso3,
         country_name: row.country_name,
         total_incidents: parseInt(row.total_incidents),
+        severity_score: parseFloat(row.severity_score || 0),
         conflict_incidents: parseInt(row.conflict_incidents || 0),
         humanitarian_access_incidents: parseInt(row.humanitarian_access_incidents || 0),
         truce_violations: parseInt(row.truce_violations || 0),
@@ -98,6 +140,7 @@ export async function GET(request: NextRequest) {
         total_incidents: parseInt(totals.total_incidents || 0),
         total_countries: parseInt(totals.total_countries || 0),
         total_critical: parseInt(totals.total_critical || 0),
+        total_severity_score: parseFloat(totals.total_severity_score || 0),
       },
       generated_at: new Date().toISOString(),
     }, {

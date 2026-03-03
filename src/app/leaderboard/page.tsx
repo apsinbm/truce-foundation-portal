@@ -12,6 +12,7 @@ interface CountryRanking {
   country_iso3: string;
   country_name: string;
   total_incidents: number;
+  severity_score: number;
   conflict_incidents: number;
   humanitarian_access_incidents: number;
   truce_violations: number;
@@ -37,6 +38,7 @@ interface LeaderboardData {
     total_incidents: number;
     total_countries: number;
     total_critical: number;
+    total_severity_score: number;
   };
   generated_at: string;
 }
@@ -130,6 +132,7 @@ export default function LeaderboardPage() {
       'Rank',
       'Country',
       'ISO3',
+      'Severity Score',
       'Total Incidents',
       'Conflict Incidents',
       'Humanitarian Access',
@@ -146,6 +149,7 @@ export default function LeaderboardPage() {
       r.rank,
       r.country_name,
       r.country_iso3,
+      Math.round(r.severity_score),
       r.total_incidents,
       r.conflict_incidents,
       r.humanitarian_access_incidents,
@@ -180,6 +184,7 @@ export default function LeaderboardPage() {
         rank: r.rank,
         country_name: r.country_name,
         country_iso3: r.country_iso3,
+        severity_score: Math.round(r.severity_score),
         total_incidents: r.total_incidents,
         conflict_incidents: r.conflict_incidents,
         humanitarian_access_incidents: r.humanitarian_access_incidents,
@@ -276,8 +281,8 @@ export default function LeaderboardPage() {
           >
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-2">Country Compliance Leaderboard</h1>
             <p className="text-gray-600">
-              Countries ranked by verified incidents during the Milano-Cortina 2026 Olympic Truce
-              (January 30 \u2013 March 22, 2026). Higher rank indicates more violations.
+              Countries ranked by severity-weighted score during the Milano-Cortina 2026 Olympic Truce
+              (January 30 – March 22, 2026). Critical war incidents score highest (severity × type multiplier).
             </p>
           </motion.div>
 
@@ -388,9 +393,9 @@ export default function LeaderboardPage() {
             >
               <div className="bg-gray-50/50 border border-gray-200/50 rounded-xl p-5 text-center">
                 <div className="text-3xl font-bold text-gray-900 mb-1">
-                  {data.totals.total_incidents.toLocaleString()}
+                  {Math.round(data.totals.total_severity_score).toLocaleString()}
                 </div>
-                <div className="text-sm text-gray-600">Total Incidents</div>
+                <div className="text-sm text-gray-600">Total Severity Points</div>
               </div>
               <div className="bg-gray-50/50 border border-gray-200/50 rounded-xl p-5 text-center">
                 <div className="text-3xl font-bold text-blue-600 mb-1">
@@ -436,7 +441,8 @@ export default function LeaderboardPage() {
                       <th className="px-4 py-3 w-16">Rank</th>
                       <th className="px-4 py-3 w-12"></th>
                       <th className="px-4 py-3">Country</th>
-                      <th className="px-4 py-3 text-right">Total</th>
+                      <th className="px-4 py-3 text-right">Severity</th>
+                      <th className="px-4 py-3 text-right">Incidents</th>
                       <th className="px-4 py-3 text-right">Conflicts</th>
                       <th className="px-4 py-3 text-right">Critical</th>
                       <th className="px-4 py-3 text-center">Crisis Level</th>
@@ -474,8 +480,13 @@ export default function LeaderboardPage() {
                         </td>
                         <td className="px-4 py-4 text-right">
                           <div className="text-lg font-bold text-gray-900">
-                            {country.total_incidents.toLocaleString()}
+                            {Math.round(country.severity_score).toLocaleString()}
                           </div>
+                        </td>
+                        <td className="px-4 py-4 text-right">
+                          <span className="text-gray-600 text-sm">
+                            {country.total_incidents.toLocaleString()}
+                          </span>
                         </td>
                         <td className="px-4 py-4 text-right">
                           <span className="text-red-800">
