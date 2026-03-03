@@ -66,6 +66,22 @@ h1, h2, h3, h4, h5, h6 {
   animation: pulse-glow 2s ease-in-out infinite;
 }
 
+/* Crisis border pulse */
+@keyframes border-pulse-red {
+  0%, 100% {
+    border-color: rgba(220, 38, 38, 0.3);
+  }
+  50% {
+    border-color: rgba(220, 38, 38, 0.8);
+  }
+}
+
+.crisis-border {
+  border: 1.5px solid rgba(220, 38, 38, 0.5);
+  border-radius: 1rem;
+  animation: border-pulse-red 2s ease-in-out infinite;
+}
+
 /* ===== PRINT STYLES ===== */
 @media print {
   /* Reset background and colors for print */
