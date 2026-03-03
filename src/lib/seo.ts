@@ -153,8 +153,8 @@ export const PAGE_SEO = {
   }),
   about: generatePageMetadata({
     title: 'About Us',
-    description: 'Learn about the Truce Foundation mission, team, and our commitment to transforming the Olympic Truce into action.',
-    keywords: ['about', 'mission', 'team', 'foundation', 'organization'],
+    description: 'The Truce Foundation is a 501(c)(3) non-profit founded in 1993 by Hugh Dugan promoting the ancient Olympic Truce through awards, cultural programs, compliance monitoring, and diplomacy. Meet our board, 28 advisors, and honorees.',
+    keywords: ['about', 'mission', 'team', 'foundation', 'organization', 'Hugh Dugan', 'board of directors', 'advisors', 'honorees', 'Olympic Truce Award', 'ekecheiria'],
     path: '/about',
   }),
   forum: generatePageMetadata({
