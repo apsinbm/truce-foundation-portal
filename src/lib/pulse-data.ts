@@ -39,6 +39,89 @@ export interface PulseEntry {
 
 export const PULSE_ENTRIES: PulseEntry[] = [
   {
+    id: 'pulse-2026-03-03-special',
+    periodStart: '2026-03-03',
+    periodEnd: '2026-03-03',
+    periodLabel: '3 March 2026 — Special Edition',
+    focusAreas: ['Safe Passage', 'Regional Stability', 'De-escalation', 'Participation'],
+    sections: [
+      {
+        id: 'safe-passage',
+        title: 'Safe Passage & Athlete Mobility',
+        icon: '\u{1F6E1}\u{FE0F}',
+        color: 'green',
+        bullets: [
+          {
+            headline: 'Airspace Closures Disrupt Delegation Travel',
+            text: 'Air travel across the region has been suspended or heavily restricted, with airports in Dubai and Kuwait among those hit. This has already disrupted the arrival of delegations en route to Europe for final preparations, undermining the Truce\u2019s expectation that athletes, officials, and humanitarian actors can move freely and safely during the Games period.',
+          },
+          {
+            headline: 'Operation Epic Fury Triggers Widespread Flight Disruptions',
+            text: 'The joint U.S.\u2013Israeli offensive against Iran, including the reported killing of Supreme Leader Ali Khamenei, has prompted extensive Iranian retaliation with missiles and drones striking Israel, U.S.-linked assets, and civilian infrastructure across Bahrain, Qatar, Kuwait, and the UAE. These developments have produced widespread airspace closures and flight disruptions, directly affecting safe passage\u2014one of the Truce\u2019s core guarantees.',
+          },
+        ],
+      },
+      {
+        id: 'geopolitical-tensions',
+        title: 'Heightened Geopolitical Tensions',
+        icon: '\u{26A0}\u{FE0F}',
+        color: 'amber',
+        bullets: [
+          {
+            headline: 'Conflict Expands to at Least Nine Countries',
+            text: 'The conflict\u2019s rapid expansion\u2014now affecting at least nine countries\u2014has intensified global instability at a moment when the Truce seeks de-escalation. The scale of Operation Epic Fury and Iran\u2019s retaliatory strikes have reshaped security conditions across the Middle East, straining diplomatic channels and humanitarian corridors simultaneously.',
+          },
+          {
+            headline: 'Russia & Belarus Reinstatement Compounds Diplomatic Fallout',
+            text: 'The IPC is simultaneously managing diplomatic fallout related to Russia and Belarus\u2019s reinstatement, compounding the political sensitivities surrounding Milano Cortina. The convergence of active military conflict and unresolved participation disputes creates an unprecedented challenge for the Olympic movement.',
+          },
+        ],
+      },
+      {
+        id: 'calming-hostilities',
+        title: 'Calming Hostilities',
+        icon: '\u{2696}\u{FE0F}',
+        color: 'blue',
+        bullets: [
+          {
+            headline: 'Escalating Conflict Reshapes Regional Security',
+            text: 'The Olympic Truce is being strained on multiple fronts as the escalating conflict triggered by Operation Epic Fury reshapes security conditions, disrupts mobility, and heightens geopolitical tensions across the Middle East. Rather than calming hostilities, the current trajectory reflects a dramatic intensification of military activity during the Games period.',
+          },
+          {
+            headline: 'Iranian Retaliation Strikes Civilian Infrastructure',
+            text: 'Extensive Iranian retaliation with missiles and drones has struck civilian infrastructure across Bahrain, Qatar, Kuwait, and the UAE, in addition to strikes on Israel and U.S.-linked assets. The targeting of civilian infrastructure\u2014including airports and urban areas\u2014represents a direct challenge to the Truce\u2019s call for the protection of civilians.',
+          },
+        ],
+      },
+      {
+        id: 'operational-consequences',
+        title: 'Operational Consequences for Milano Cortina',
+        icon: '\u{1F3D4}\u{FE0F}',
+        color: 'purple',
+        bullets: [
+          {
+            headline: 'IPC Assessing Risks to Games Readiness',
+            text: 'The IPC is assessing risks to logistics, delegation travel, and overall Games readiness. While committed to delivering safe, athlete-centered Paralympics, the organization acknowledges that the regional crisis may impose further operational burdens and require contingency planning.',
+          },
+          {
+            headline: 'Truce Principles Under Unprecedented Strain',
+            text: 'The convergence of active military conflict across the Middle East, disrupted air travel, and heightened geopolitical tensions creates conditions that stand in direct opposition to the Olympic Truce\u2019s core principles of safe passage, de-escalation, and the protection of civilians. The current crisis represents the most severe challenge to the Truce since its modern revival.',
+          },
+        ],
+      },
+    ],
+    overallAlignment: {
+      level: 'critical',
+      summary: 'The Olympic Truce is being strained on multiple fronts as the escalating conflict triggered by Operation Epic Fury reshapes security conditions, disrupts mobility, and heightens geopolitical tensions across the Middle East. The joint U.S.\u2013Israeli offensive against Iran and extensive Iranian retaliation across at least nine countries have produced widespread airspace closures, disrupted delegation travel, and imposed operational burdens on Milano Cortina\u2014conditions that directly contravene the Truce\u2019s guarantees of safe passage and de-escalation.',
+    },
+    keyConstraints: [
+      'Airports in Dubai and Kuwait struck, regional airspace closures disrupting athlete and delegation travel to Europe for Paralympic preparations.',
+      'Iranian retaliatory missile and drone strikes hitting civilian infrastructure across Bahrain, Qatar, Kuwait, UAE, and Israel\u2014expanding the conflict to at least nine countries during the Truce window.',
+      'IPC forced into contingency planning as Russia/Belarus reinstatement diplomacy compounds the operational and political challenges of hosting Games amid regional war.',
+    ],
+    publishedAt: '2026-03-03',
+  },
+  {
     id: 'pulse-2026-03-03',
     periodStart: '2026-03-03',
     periodEnd: '2026-03-03',
