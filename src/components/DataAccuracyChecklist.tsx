@@ -200,7 +200,7 @@ export default function DataAccuracyChecklist() {
             <div className="p-4 border-t border-slate-200">
               <Link
                 href="/methodology"
-                className="flex items-center justify-center gap-2 w-full py-2 px-4 bg-blue-600 hover:bg-blue-500 text-gray-900 text-sm font-medium rounded-lg transition-colors"
+                className="flex items-center justify-center gap-2 w-full py-2 px-4 bg-blue-600 hover:bg-blue-500 text-white text-sm font-medium rounded-lg transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 View Full Methodology

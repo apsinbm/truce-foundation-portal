@@ -417,7 +417,7 @@ export default function BriefingSheetPage() {
                 </div>
                 <Link
                   href={cta.href}
-                  className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-gray-900 text-sm font-medium rounded-lg transition-colors whitespace-nowrap"
+                  className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors whitespace-nowrap"
                 >
                   {cta.cta}
                 </Link>
@@ -528,15 +528,15 @@ export default function BriefingSheetPage() {
           <div className="flex justify-center gap-4 flex-wrap">
             <Link
               href="/partners"
-              className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-gray-900 font-medium rounded-lg transition-colors"
+              className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
             >
               Become a Partner
             </Link>
             <Link
-              href="/advocacy"
+              href="/press"
               className="px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-900 font-medium rounded-lg transition-colors"
             >
-              Advocacy Toolkit
+              Press & Media
             </Link>
             <Link
               href="/"

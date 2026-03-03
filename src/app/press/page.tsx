@@ -266,18 +266,6 @@ const VISUAL_ASSETS = [
     icon: '📄',
     url: '/downloads/A_80_L.10-EN.pdf',
   },
-  {
-    name: 'Truce Index Screenshots',
-    description: 'High-res captures of the compliance map',
-    icon: '🗺️',
-    url: '/downloads/index-screenshots.zip',
-  },
-  {
-    name: 'Infographics',
-    description: 'Pre-made social graphics and charts',
-    icon: '📈',
-    url: '/downloads/infographics.zip',
-  },
 ];
 
 export default function PressPage() {
@@ -423,8 +411,8 @@ export default function PressPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">Visual Assets & B-Roll</h2>
-            <p className="text-gray-600 mb-6">Video footage, documents, and graphics for your coverage</p>
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Visual Assets</h2>
+            <p className="text-gray-600 mb-6">Video footage and documents for your coverage</p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {VISUAL_ASSETS.map((asset) => (
@@ -467,7 +455,7 @@ export default function PressPage() {
               href={TRUCE_INDEX_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-gray-900 font-medium rounded-xl transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-xl transition-colors"
             >
               View Live Index
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

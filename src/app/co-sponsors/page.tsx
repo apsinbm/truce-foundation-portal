@@ -466,19 +466,19 @@ export default function CoSponsorsPage() {
             <div className="flex items-center gap-1 bg-gray-100 rounded-lg p-1">
               <button
                 onClick={() => setViewMode('grid')}
-                className={`px-3 py-1.5 rounded text-sm ${viewMode === 'grid' ? 'bg-blue-600 text-gray-900' : 'text-gray-600 hover:text-gray-900'}`}
+                className={`px-3 py-1.5 rounded text-sm ${viewMode === 'grid' ? 'bg-blue-600 text-white' : 'text-gray-600 hover:text-gray-900'}`}
               >
                 Grid
               </button>
               <button
                 onClick={() => setViewMode('list')}
-                className={`px-3 py-1.5 rounded text-sm ${viewMode === 'list' ? 'bg-blue-600 text-gray-900' : 'text-gray-600 hover:text-gray-900'}`}
+                className={`px-3 py-1.5 rounded text-sm ${viewMode === 'list' ? 'bg-blue-600 text-white' : 'text-gray-600 hover:text-gray-900'}`}
               >
                 List
               </button>
               <button
                 onClick={() => setViewMode('timeline')}
-                className={`px-3 py-1.5 rounded text-sm ${viewMode === 'timeline' ? 'bg-blue-600 text-gray-900' : 'text-gray-600 hover:text-gray-900'}`}
+                className={`px-3 py-1.5 rounded text-sm ${viewMode === 'timeline' ? 'bg-blue-600 text-white' : 'text-gray-600 hover:text-gray-900'}`}
               >
                 Timeline
               </button>

@@ -773,7 +773,7 @@ export default function DocumentsPage() {
                     href={SG_REPORTS[0].url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-gray-900 text-sm font-medium rounded-lg transition-colors"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors"
                   >
                     View Full Report (PDF)
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

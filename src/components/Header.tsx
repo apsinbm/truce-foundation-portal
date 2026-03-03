@@ -13,7 +13,6 @@ const NAV_GROUPS = [
     items: [
       { href: TRUCE_INDEX_URL, label: 'Live Index', external: true },
       { href: '/portal', label: 'Portal Hub' },
-      { href: '/briefing', label: 'Daily Briefing' },
       { href: '/truce-pulse', label: 'Truce Pulse' },
       { href: '/leaderboard', label: 'Leaderboard' },
       { href: '/humanitarian', label: 'Humanitarian Access' },
@@ -31,28 +30,11 @@ const NAV_GROUPS = [
     ],
   },
   {
-    label: 'Engage',
-    items: [
-      { href: '/stories', label: 'Youth Stories' },
-      { href: '/candles', label: 'Candle Wall' },
-      { href: '/advocacy', label: 'Advocacy Toolkit' },
-      { href: '/forum', label: 'Forum' },
-    ],
-  },
-  {
-    label: 'Media',
-    items: [
-      { href: '/gallery', label: 'Photo Gallery' },
-      { href: '/videos', label: 'Video Gallery' },
-      { href: '/press', label: 'Press & Media' },
-    ],
-  },
-  {
     label: 'About',
     items: [
       { href: '/about', label: 'About Us' },
       { href: '/partners', label: 'Partners' },
-      { href: '/reports', label: 'Reports' },
+      { href: '/press', label: 'Press & Media' },
     ],
   },
 ];

@@ -33,8 +33,8 @@ const CEASEFIRES_2025 = [
     parties: ['Israel', 'Iran'],
     region: 'Middle East',
     status: 'collapsed',
-    date: 'June 2025–Mar 2026',
-    description: 'Ceasefire collapsed following U.S.–Israel coordinated strikes on Iran (March 1, 2026) and Iranian retaliatory strikes',
+    date: 'June 2025–Mar 2026 (Feb 28–Mar 1)',
+    description: 'Ceasefire collapsed following U.S.–Israel coordinated strikes on Iran (Feb 28, 2026) and Iranian retaliatory strikes (Mar 1, 2026)',
     context: 'Major regional escalation during Olympic Truce window',
     risks: ['Active military strikes', 'Iranian retaliation', 'Strait of Hormuz tensions'],
     relevance: 'Regional stability critical for broader Middle East peace',
@@ -412,7 +412,7 @@ export default function CeasefireWatchPage() {
                 href="https://truce-index.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-gray-900 font-medium rounded-xl transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-xl transition-colors"
               >
                 View Live Index
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

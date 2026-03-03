@@ -562,7 +562,7 @@ export default function LeaderboardPage() {
                         href={`${TRUCE_INDEX_URL}/?country=${country.country_iso3}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-sm transition-colors text-gray-900"
+                        className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-sm transition-colors text-white"
                       >
                         View on Map
                       </a>
@@ -592,10 +592,6 @@ export default function LeaderboardPage() {
               </p>
             )}
             <p className="mt-2">
-              <Link href="/briefing" className="text-blue-600 hover:underline">
-                Daily Briefing
-              </Link>
-              {' | '}
               <Link href="/press" className="text-blue-600 hover:underline">
                 Press & Media
               </Link>

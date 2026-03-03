@@ -47,8 +47,8 @@ export default function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="/advocacy" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                    Advocacy
+                  <a href="/press" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+                    Press & Media
                   </a>
                 </li>
                 <li>

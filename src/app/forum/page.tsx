@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 import Header from '@/components/Header';
 
 // Forum topic categories
@@ -28,7 +27,7 @@ const FORUM_CATEGORIES: ForumCategory[] = [
     id: 'milano-cortina-2026',
     name: 'Milano-Cortina 2026',
     icon: '🏔️',
-    description: 'Topics specific to the upcoming 2026 Winter Games and Truce window',
+    description: 'Topics specific to the 2026 Winter Games and Truce window',
     topicCount: 0,
     color: 'purple',
   },
@@ -136,16 +135,6 @@ const getCategoryTextColor = (color: string) => {
 
 export default function ForumPage() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const [email, setEmail] = useState('');
-  const [subscribed, setSubscribed] = useState(false);
-
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email) {
-      setSubscribed(true);
-      setEmail('');
-    }
-  };
 
   const filteredThreads = selectedCategory
     ? SAMPLE_THREADS.filter(t => t.category === selectedCategory)
@@ -171,7 +160,7 @@ export default function ForumPage() {
             </p>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-100 border border-amber-500/30 text-amber-800 text-sm">
               <div className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
-              Community launching January 2026
+              Community coming soon
             </div>
           </motion.div>
         </div>
@@ -347,85 +336,6 @@ export default function ForumPage() {
               </div>
             </div>
           </motion.div>
-        </div>
-      </section>
-
-      {/* Early Access Signup */}
-      <section className="py-12 px-4">
-        <div className="max-w-2xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="p-8 rounded-2xl bg-gradient-to-br from-blue-500/20 to-purple-500/10 border border-blue-500/30 text-center"
-          >
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
-              Get Early Access
-            </h2>
-            <p className="text-gray-600 mb-6">
-              Be among the first to join the conversation when the Forum launches in January 2026.
-              We'll notify you when it's ready.
-            </p>
-
-            {subscribed ? (
-              <div className="p-4 rounded-lg bg-green-500/20 border border-green-500/30 text-green-800">
-                Thank you! We'll notify you when the Forum launches.
-              </div>
-            ) : (
-              <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 bg-gray-100 border border-gray-200 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-500"
-                  required
-                />
-                <button
-                  type="submit"
-                  className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-gray-900 font-medium rounded-lg transition-colors"
-                >
-                  Notify Me
-                </button>
-              </form>
-            )}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Related Links */}
-      <section className="py-12 px-4">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-xl font-bold text-gray-900 mb-6 text-center">Related Resources</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <Link
-              href="/stories"
-              className="p-4 rounded-xl bg-gray-50/50 border border-gray-200/50 hover:border-blue-500/50 transition-colors group"
-            >
-              <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
-                Youth Stories
-              </h3>
-              <p className="text-sm text-gray-600 mt-1">First-person accounts</p>
-            </Link>
-            <Link
-              href="/candles"
-              className="p-4 rounded-xl bg-gray-50/50 border border-gray-200/50 hover:border-blue-500/50 transition-colors group"
-            >
-              <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
-                Global Candle Wall
-              </h3>
-              <p className="text-sm text-gray-600 mt-1">Light a candle for peace</p>
-            </Link>
-            <Link
-              href="/advocacy"
-              className="p-4 rounded-xl bg-gray-50/50 border border-gray-200/50 hover:border-blue-500/50 transition-colors group"
-            >
-              <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
-                Advocacy Toolkit
-              </h3>
-              <p className="text-sm text-gray-600 mt-1">Resources to spread the word</p>
-            </Link>
-          </div>
         </div>
       </section>
 

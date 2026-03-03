@@ -40,7 +40,7 @@ export default function CountryProfilePage() {
             </p>
             <Link
               href="/accountability"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-gray-900 font-medium rounded-xl transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-xl transition-colors"
             >
               View All Records
             </Link>
@@ -212,7 +212,7 @@ export default function CountryProfilePage() {
               href={`${TRUCE_INDEX_URL}/?country=${iso3.toUpperCase()}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-gray-900 font-medium rounded-xl transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-xl transition-colors"
             >
               View on Live Index
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -416,7 +416,7 @@ export default function StoriesPage() {
                   </button>
                   <button
                     type="submit"
-                    className="flex-1 px-4 py-3 bg-green-600 hover:bg-green-500 text-gray-900 font-medium rounded-lg transition-colors"
+                    className="flex-1 px-4 py-3 bg-green-600 hover:bg-green-500 text-white font-medium rounded-lg transition-colors"
                   >
                     Submit Story
                   </button>
@@ -433,7 +433,7 @@ export default function StoriesPage() {
                 </p>
                 <button
                   onClick={() => setShowSubmitForm(true)}
-                  className="px-8 py-4 bg-green-600 hover:bg-green-500 text-gray-900 font-semibold rounded-xl transition-colors inline-flex items-center gap-2"
+                  className="px-8 py-4 bg-green-600 hover:bg-green-500 text-white font-semibold rounded-xl transition-colors inline-flex items-center gap-2"
                 >
                   <span className="text-xl">💚</span>
                   Share Your Story
@@ -509,33 +509,24 @@ export default function StoriesPage() {
       <section className="py-12 px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-xl font-bold text-gray-900 mb-6 text-center">Related Resources</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <Link
-              href="/forum"
+              href="/humanitarian"
               className="p-4 rounded-xl bg-gray-50/50 border border-gray-200/50 hover:border-blue-500/50 transition-colors group"
             >
               <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
-                Forum
+                Humanitarian Access
               </h3>
-              <p className="text-sm text-gray-600 mt-1">Join the conversation</p>
+              <p className="text-sm text-gray-600 mt-1">Monitoring barriers to aid delivery</p>
             </Link>
             <Link
-              href="/candles"
+              href="/ceasefire"
               className="p-4 rounded-xl bg-gray-50/50 border border-gray-200/50 hover:border-blue-500/50 transition-colors group"
             >
               <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
-                Global Candle Wall
+                Ceasefire Watch
               </h3>
-              <p className="text-sm text-gray-600 mt-1">Light a candle for peace</p>
-            </Link>
-            <Link
-              href="/advocacy"
-              className="p-4 rounded-xl bg-gray-50/50 border border-gray-200/50 hover:border-blue-500/50 transition-colors group"
-            >
-              <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
-                Advocacy Toolkit
-              </h3>
-              <p className="text-sm text-gray-600 mt-1">Resources to spread the word</p>
+              <p className="text-sm text-gray-600 mt-1">Tracking fragile peace agreements</p>
             </Link>
           </div>
         </div>

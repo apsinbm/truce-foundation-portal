@@ -25,7 +25,7 @@ export const TRUCE_INDEX_URL = 'https://truce-index.vercel.app';
 export const TRUCE_INDEX_PRESS_URL = 'https://truce-index.vercel.app/press';
 export const TRUCE_INDEX_BRIEFING_URL = 'https://truce-index.vercel.app/briefing';
 export const TRUCE_INDEX_LEADERBOARD_URL = 'https://truce-index.vercel.app/leaderboard';
-export const WOA_URL = 'https://worldolympians.org';
+export const WOA_URL = 'https://olympians.org';
 export const TRUCE_FOUNDATION_URL = 'https://trucefoundation.world';
 
 // Sub-site definitions
@@ -154,6 +154,7 @@ export const SUB_SITES: SubSite[] = [
     href: '/stories',
     status: 'live',
     tier: 1,
+    hidden: true,
   },
   {
     id: 'candles',
@@ -173,6 +174,7 @@ export const SUB_SITES: SubSite[] = [
     href: '/forum',
     status: 'live',
     tier: 1,
+    hidden: true,
   },
   {
     id: 'reports',
