@@ -39,6 +39,89 @@ export interface PulseEntry {
 
 export const PULSE_ENTRIES: PulseEntry[] = [
   {
+    id: 'pulse-2026-03-04-strait-escalation',
+    periodStart: '2026-03-04',
+    periodEnd: '2026-03-04',
+    periodLabel: '4 March 2026 — Strait of Hormuz Crisis & Widening Hostilities',
+    focusAreas: ['Safe Passage', 'Humanitarian Access', 'De-escalation', 'Diplomatic Engagement'],
+    sections: [
+      {
+        id: 'safe-passage',
+        title: 'Safe Passage Under Direct Threat',
+        icon: '\u{1F6E1}\u{FE0F}',
+        color: 'green',
+        bullets: [
+          {
+            headline: 'Strait of Hormuz Maritime Transit Targeted',
+            text: 'Incidents affecting maritime transit in the Strait of Hormuz directly implicate the Olympic Truce\u2019s emphasis on safe passage. Damage to a commercial container vessel, the abandonment of its crew, and explicit threats against shipping highlight the vulnerability of civilian and commercial traffic in a strategically vital international waterway that functions as a conduit for energy supplies and essential goods.',
+          },
+          {
+            headline: 'Escort and Insurance Measures Signal Eroding Norms',
+            text: 'Measures discussed by external actors to provide naval escorts or insurance guarantees for commercial vessels reflect an effort to mitigate immediate risks, but also point to a broader erosion of the norm that civilian transport should be protected from hostilities. Within the Olympic Truce framework, such maritime corridors would be expected to remain free from attack, intimidation, or militarization to ensure safe and neutral passage.',
+          },
+        ],
+      },
+      {
+        id: 'military-escalation',
+        title: 'Widening Military Operations Across Multiple Domains',
+        icon: '\u{26A0}\u{FE0F}',
+        color: 'amber',
+        bullets: [
+          {
+            headline: 'Missile Interceptions, Urban Airstrikes, and Naval Deployments Expand Conflict',
+            text: 'The expansion of military operations across multiple domains\u2014including missile interceptions, airstrikes on urban centers, and deployments of major naval assets\u2014demonstrates the widening geographic scope of hostilities. These actions increase the likelihood of miscalculation and regional spillover, conditions the Olympic Truce seeks to prevent by encouraging restraint and de-escalation.',
+          },
+          {
+            headline: 'Additional States Weighing Entry into the Conflict',
+            text: 'The reported consideration by additional states of entering the conflict further illustrates how rapidly localized hostilities can escalate into broader confrontations. The Truce\u2019s call for a temporary suspension or reduction of military activities is particularly salient in this context, as even limited pauses can create space for diplomatic engagement and confidence-building measures.',
+          },
+        ],
+      },
+      {
+        id: 'humanitarian-access',
+        title: 'Humanitarian Access & Civilian Protection',
+        icon: '\u{1F6D1}',
+        color: 'blue',
+        bullets: [
+          {
+            headline: 'Infrastructure Damage and Transport Disruptions Impede Aid',
+            text: 'Damage to infrastructure, attacks near populated areas, and the disruption of transportation routes all have downstream effects on civilian access to food, medical supplies, and emergency assistance. The abandonment of a commercial vessel\u2019s crew and the broader climate of insecurity point to obstacles facing humanitarian actors who rely on predictable and secure access.',
+          },
+          {
+            headline: 'Truce Framework Demands Facilitation of Humanitarian Activities',
+            text: 'The Olympic Truce explicitly calls for the facilitation of humanitarian activities, recognizing that the protection of civilians and aid workers is inseparable from efforts to limit suffering during conflict. The current pattern of disruption to essential supply routes and civilian infrastructure directly contravenes these principles.',
+          },
+        ],
+      },
+      {
+        id: 'diplomatic-engagement',
+        title: 'Diplomatic Pathways Amid Active Hostilities',
+        icon: '\u{1F30D}',
+        color: 'purple',
+        bullets: [
+          {
+            headline: 'Political Disagreements Persist but Diplomatic Channels Remain Open',
+            text: 'Diplomatic responses underway\u2014including public disagreements over legality, the absence of de-escalatory talks, and domestic debates over authorization and funding\u2014underscore the persistence of political pathways even amid active hostilities. The Olympic Truce tradition situates sport as a catalyst for dialogue and symbolic restraint, reinforcing international law and multilateral norms.',
+          },
+          {
+            headline: 'Truce Principles Align with Calls for Renewed Engagement',
+            text: 'In the current context, the Truce\u2019s principles align with appeals for renewed diplomatic engagement, respect for international legal frameworks, and the avoidance of actions that could further inflame tensions. The coexistence of military escalation and active political debate highlights both the fragility and the necessity of the Truce\u2019s normative framework.',
+          },
+        ],
+      },
+    ],
+    overallAlignment: {
+      level: 'critical',
+      summary: 'Today\u2019s events reveal a complex security environment in which the objectives of the Olympic Truce remain highly relevant. Safe passage is under direct threat in the Strait of Hormuz, humanitarian access is compromised by infrastructure damage and transport disruptions, and the widening of military operations across multiple domains challenges the Truce\u2019s call for de-escalation. Diplomatic pathways persist but remain fragile. Safe passage, humanitarian access, and the calming of hostilities are not abstract ideals but practical safeguards whose observance could reduce risks to civilians, preserve essential global linkages, and create openings for dialogue during this period of acute crisis.',
+    },
+    keyConstraints: [
+      'Damage to a commercial container vessel in the Strait of Hormuz, abandonment of its crew, and explicit threats against shipping directly challenge the Olympic Truce\u2019s guarantee of safe and neutral passage through critical international waterways.',
+      'Military operations have expanded across multiple domains\u2014missile interceptions, urban airstrikes, and major naval deployments\u2014with additional states reportedly considering entry into the conflict, increasing the risk of miscalculation and regional spillover.',
+      'Infrastructure damage, attacks near populated areas, and disrupted transportation routes are impeding civilian access to food, medical supplies, and emergency assistance, contravening the Truce\u2019s explicit call to facilitate humanitarian activities.',
+    ],
+    publishedAt: '2026-03-04',
+  },
+  {
     id: 'pulse-2026-03-03-ioc-response',
     periodStart: '2026-03-03',
     periodEnd: '2026-03-03',
