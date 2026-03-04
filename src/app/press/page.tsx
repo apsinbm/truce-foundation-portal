@@ -35,12 +35,28 @@ const COVERAGE_SECTIONS: CoverageSection[] = [
         description: 'The IOC reaffirmed its commitment to the \u201cneutrality principle,\u201d stating that the primary goal of the UN Olympic Truce Resolution is to guarantee the safe travel and peaceful competition of all qualified athletes, regardless of their government\u2019s actions.',
       },
       {
+        source: 'Olympics.com',
+        title: 'IOC reaffirms sport must unite the world in peaceful competition',
+        date: '2026-03-03',
+        url: 'https://www.olympics.com/ioc/news/ioc-reaffirms-sport-must-unite-the-world-in-peaceful-competition',
+        type: 'official',
+        description: 'The IOC issued a follow-up statement reaffirming that sport must serve as a unifying force for peaceful competition, reinforcing its call for all parties to respect the Olympic Truce during the Milano Cortina 2026 Paralympic Games.',
+      },
+      {
         source: 'Inside The Games',
         title: 'IOC silent on Olympic Truce amid Middle East escalation',
         date: '2026-03-03',
         url: 'https://www.insidethegames.biz/articles/ioc-silent-olympic-truce-middle-east-escalation',
         type: 'analysis',
         description: 'The IOC faces diplomatic scrutiny for failing to formally condemn the Middle East military strikes during the Truce period. Media outlets contrast this silence with the IOC\u2019s swift condemnation of Russia when it breached the truce by invading Ukraine during the 2022 Beijing Games.',
+      },
+      {
+        source: 'Inside The Games',
+        title: 'IOC finally delivers statement over Middle East tensions',
+        date: '2026-03-03',
+        url: 'https://www.insidethegames.biz/articles/ioc-finally-delivers-statement-over-middle-east-tensions',
+        type: 'media',
+        description: 'After facing criticism for its initial silence, the IOC finally issued a formal statement addressing Middle East tensions during the Olympic Truce period, marking a shift from its earlier reluctance to directly condemn the military escalation.',
       },
       {
         source: 'Inside The Games',
