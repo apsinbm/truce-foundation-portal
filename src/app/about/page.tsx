@@ -300,6 +300,42 @@ const MONUMENTS = [
 
 const PUBLICATIONS = [
   {
+    title: 'Italy cheers faith and flag in Milan after Paris\' \'woke\' Olympic spectacle sparked culture clash, experts say',
+    author: 'Efrat Lachter',
+    publication: 'Fox News',
+    date: 'February 17, 2026',
+    description:
+      'Experts contrast the Paris 2024 and Milano-Cortina 2026 opening ceremonies, with Dugan arguing that Milan\'s ceremony centered on heritage, human connection, and the Olympic Truce.',
+    url: 'https://www.foxnews.com/world/italy-cheers-faith-flag-milan-after-paris-woke-olympic-spectacle-sparked-culture-clash-experts-say',
+  },
+  {
+    title: 'The Olympic Truce reminds humanity that harmony is possible',
+    author: 'Hugh Dugan',
+    publication: 'Deseret News',
+    date: 'February 11, 2026',
+    description:
+      'Op-ed arguing that while the Olympics cannot resolve global conflicts, the ceremonial Olympic Truce interrupts cynicism and demonstrates humanity\'s capacity for cooperation.',
+    url: 'https://www.deseret.com/opinion/2026/02/11/olympic-truce-humanity-harmony-armonia/',
+  },
+  {
+    title: 'La Tregua Olimpica è un obbligo morale',
+    author: 'Hugh Dugan',
+    publication: 'Il Riformista',
+    date: 'February 10, 2026',
+    description:
+      'Writing in Italian media, Dugan argues the Olympic Truce represents a moral obligation — a global reset demonstrating that peaceful coexistence remains achievable.',
+    url: 'https://www.ilriformista.it/la-tregua-olimpica-e-un-obbligo-morale-il-reset-globale-che-ci-da-ancora-una-possibilita-499358/',
+  },
+  {
+    title: 'La Tregua olimpica ha bisogno di sostenitori',
+    author: 'Hugh Dugan',
+    publication: 'Formiche',
+    date: 'February 6, 2026',
+    description:
+      'Dugan appeals for active supporters of the Olympic Truce, highlighting its urgency amid contemporary conflicts and the introduction of the Truce Compliance Index.',
+    url: 'https://formiche.net/2026/02/la-tregua-olimpica-ha-bisogno-di-sostenitori-lappello-di-hugh-dugan/',
+  },
+  {
     title: 'Can the Olympics Help Us Understand Each Other?',
     author: 'Hugh Dugan',
     publication: 'Newsmax',
@@ -718,7 +754,7 @@ export default function AboutPage() {
             className="text-center mb-6"
           >
             <h2 className="text-2xl font-bold text-gray-900 mb-2">Publications</h2>
-            <p className="text-gray-600">Writings by Hugh Dugan on the Olympic Truce</p>
+            <p className="text-gray-600">Writings on the Olympic Truce</p>
           </motion.div>
 
           <div className="space-y-4">
