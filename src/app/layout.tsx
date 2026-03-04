@@ -12,17 +12,27 @@ export const metadata: Metadata = {
     icon: '/favicon.ico',
     apple: '/icons/icon-192x192.png',
   },
+  metadataBase: new URL('https://index.trucefoundation.world'),
   openGraph: {
     title: 'Truce Foundation - Olympic Truce',
     description: 'Transforming the Olympic Truce tradition into meaningful action for peace.',
-    url: 'https://trucefoundation.world',
+    url: 'https://index.trucefoundation.world',
     siteName: 'Truce Foundation',
     type: 'website',
+    images: [
+      {
+        url: '/truce-foundation-logo.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Truce Foundation',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Truce Foundation - Olympic Truce',
     description: 'Transforming the Olympic Truce tradition into meaningful action for peace.',
+    images: ['/truce-foundation-logo.jpg'],
   },
 };
 
@@ -47,6 +57,25 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       </head>
       <body className="antialiased font-serif">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              name: 'Truce Foundation',
+              url: 'https://index.trucefoundation.world',
+              logo: 'https://index.trucefoundation.world/truce-foundation-logo.jpg',
+              description: 'A 501(c)(3) non-profit promoting the ancient Olympic Truce through awards, cultural programs, compliance monitoring, and diplomacy.',
+              foundingDate: '1993',
+              founder: {
+                '@type': 'Person',
+                name: 'Hugh Dugan',
+              },
+              sameAs: [],
+            }),
+          }}
+        />
         {children}
         <Analytics />
       </body>

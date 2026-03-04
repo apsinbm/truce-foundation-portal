@@ -1,7 +1,7 @@
 // SEO metadata helper for consistent page metadata across the portal
 import { Metadata } from 'next';
 
-const BASE_URL = 'https://trucefoundation.world';
+const BASE_URL = 'https://index.trucefoundation.world';
 const SITE_NAME = 'Truce Foundation';
 
 interface PageSEOConfig {
@@ -17,7 +17,7 @@ export function generatePageMetadata({
   description,
   keywords = [],
   path,
-  image = '/og-default.png',
+  image = '/truce-foundation-logo.jpg',
 }: PageSEOConfig): Metadata {
   const fullTitle = `${title} | ${SITE_NAME}`;
   const url = `${BASE_URL}${path}`;
