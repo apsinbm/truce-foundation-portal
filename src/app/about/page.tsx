@@ -34,18 +34,11 @@ const ACTIVITIES = [
       'A personal commitment initiative for spectators and citizens at sporting events. Participants pledge to use the inspiration of the Games to resolve conflicts in their own lives — mirroring the athletes\' official oaths and extending the Truce from nations to individuals.',
   },
   {
-    icon: '🗿',
-    title: 'Monuments & Landmarks',
+    icon: '🎓',
+    title: 'Education & Diplomacy',
     description:
-      'Commissioning monumental bronze sculptures by Rosa Serra, Official Sculptor of the IOC, installed at the IOC Headquarters in Lausanne and the US Olympic Training Center in Colorado Springs.',
+      'Collaborating with educators, diplomats, business leaders, and NGOs to advance Olympic Truce principles. Partners include the Business Council for International Understanding, Save the Dream Foundation, and academic institutions worldwide.',
   },
-];
-
-const CULTURAL_WORKS = [
-  { title: "It's a Truceful Movement", event: 'Milan-Cortina 2026', type: 'Video / Cultural Olympiad' },
-  { title: 'Being Truceful', event: 'Paris 2024', type: 'Poetry & Spoken Word' },
-  { title: 'Peace~ability', event: 'PyeongChang 2018', type: 'Poetry & Spoken Word' },
-  { title: 'Ultramarine', event: '35th America\'s Cup 2017', type: 'Poetry Commission' },
 ];
 
 const IMPACT_MOMENTS = [
@@ -103,7 +96,7 @@ const BOARD_MEMBERS = [
   {
     name: 'Hugh Dugan',
     role: 'Founder & President',
-    bio: '', // Founder gets a dedicated section
+    bio: '',
     featured: true,
   },
   {
@@ -350,16 +343,16 @@ export default function AboutPage() {
               About the Truce Foundation
             </h1>
             <p className="text-xl text-gray-500 italic">
-              It Begins Inside You — Between Each Other
+              Inspired by the Ancient Olympic Truce
             </p>
             <p className="text-sm text-gray-500">
-              501(c)(3) Non-Profit &middot; Founded 1993
+              501(c)(3) Non-Profit &middot; Founded 1993 by Hugh Dugan
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* ── Our Story ── */}
+      {/* ── Mission & Vision ── */}
       <section className="py-12 px-4">
         <div className="max-w-3xl mx-auto">
           <motion.div
@@ -403,38 +396,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── Hugh Dugan, Founder ── */}
-      <section className="py-12 px-4 bg-gray-50/30">
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="p-8 rounded-2xl bg-gradient-to-br from-blue-500/20 to-purple-500/10 border border-blue-500/30"
-          >
-            <h2 className="text-2xl font-bold text-gray-900 mb-1">Hugh T. Dugan</h2>
-            <p className="text-sm text-blue-700 font-medium mb-5">Founder & President</p>
-
-            <div className="space-y-4 text-gray-700 leading-relaxed">
-              <p>
-                Hugh Dugan initiated the revival of the ancient Olympic Truce for the modern era in 1993 through the United Nations and International Olympic Committee. The International Olympic Committee has honored him multiple times for his contributions to the Olympic Movement.
-              </p>
-              <p>
-                Between 1989 and 2015, Dugan served as U.S. Delegate to the United Nations, advising 11 U.S. Ambassadors. His government service included acting Special Presidential Envoy for Hostage Affairs in Washington, D.C., and Senior Director on the National Security Council at the White House.
-              </p>
-              <p>
-                An educator as well as a diplomat, Dugan has taught as a professor of diplomacy and senior fellow at Seton Hall University, regularly providing international affairs commentary for major media outlets. His civic service includes leadership roles as chair of the Vanderbilt YMCA in New York, vice chair of SOS Children&apos;s Villages-USA, board member of the Academic Council on the UN System, and senior advisor to Hostage Aid Worldwide.
-              </p>
-              <p className="text-sm text-gray-600">
-                Dugan graduated with honors from Georgetown University&apos;s School of Foreign Service, Fletcher School of Law and Diplomacy, and Wharton School of Business. He grew up in Wisconsin and skated at the US Olympic Ice Rink in Milwaukee.
-              </p>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
       {/* ── What We Do ── */}
-      <section className="py-12 px-4">
+      <section className="py-12 px-4 bg-gray-50/30">
         <div className="max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -465,61 +428,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── The Truce Oath ── */}
-      <section className="py-12 px-4 bg-gray-50/30">
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="p-8 rounded-2xl bg-gradient-to-br from-emerald-500/15 to-teal-500/10 border border-emerald-500/30 text-center"
-          >
-            <h2 className="text-xl font-bold text-gray-900 mb-2">My Truce Oath</h2>
-            <p className="text-sm text-emerald-700 font-medium mb-6">Make a truce with yourself</p>
-            <blockquote className="text-lg sm:text-xl text-gray-800 italic leading-relaxed max-w-2xl mx-auto mb-6">
-              &ldquo;I promise to use the inspiration of these days to make a truce with conflicts in my life that constrain me from pursuing my goals and ideals.&rdquo;
-            </blockquote>
-            <p className="text-sm text-gray-600 max-w-xl mx-auto">
-              The Foundation invites every spectator and citizen to take this personal pledge — moving from passive observer to active participant in the Olympic ideals, extending the Truce from nations to individuals.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* ── Cultural Works ── */}
-      <section className="py-12 px-4">
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-8"
-          >
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">Cultural Works</h2>
-            <p className="text-gray-600">Poetry and media commissioned for each Games by Poet Laureate Colin Goedecke</p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            {CULTURAL_WORKS.map((work, index) => (
-              <motion.div
-                key={work.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.05 }}
-                className="p-4 rounded-xl bg-gray-50/50 border border-gray-200/30"
-              >
-                <p className="font-semibold text-gray-900">&ldquo;{work.title}&rdquo;</p>
-                <p className="text-sm text-blue-600">{work.event}</p>
-                <p className="text-xs text-gray-500 mt-1">{work.type}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── Has It Made a Difference? ── */}
-      <section className="py-12 px-4 bg-gray-50/30">
+      <section className="py-12 px-4">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -539,7 +449,7 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.03 }}
-                className="flex gap-4 p-4 rounded-xl bg-white border border-gray-200/30"
+                className="flex gap-4 p-4 rounded-xl bg-gray-50/50 border border-gray-200/30"
               >
                 <div className="flex-shrink-0 w-20 text-center">
                   <div className="text-lg font-bold text-blue-600">{moment.year}</div>
@@ -553,7 +463,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── Board of Directors ── */}
-      <section className="py-12 px-4">
+      <section className="py-12 px-4 bg-gray-50/30">
         <div className="max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -564,6 +474,32 @@ export default function AboutPage() {
             <h2 className="text-2xl font-bold text-gray-900 mb-2">Board of Directors</h2>
           </motion.div>
 
+          {/* Hugh Dugan — Founder highlight */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="p-8 rounded-2xl bg-gradient-to-br from-blue-500/20 to-purple-500/10 border border-blue-500/30 mb-6"
+          >
+            <h3 className="text-2xl font-bold text-gray-900 mb-1">Hugh T. Dugan</h3>
+            <p className="text-sm text-blue-700 font-medium mb-5">Founder & President</p>
+
+            <div className="space-y-4 text-gray-700 leading-relaxed">
+              <p>
+                Hugh Dugan initiated the revival of the ancient Olympic Truce for the modern era in 1993 through the United Nations and International Olympic Committee. The International Olympic Committee has honored him multiple times for his contributions to the Olympic Movement.
+              </p>
+              <p>
+                Between 1989 and 2015, Dugan served as U.S. Delegate to the United Nations, advising 11 U.S. Ambassadors. His government service included acting Special Presidential Envoy for Hostage Affairs in Washington, D.C., and Senior Director on the National Security Council at the White House.
+              </p>
+              <p>
+                An educator as well as a diplomat, Dugan has taught as a professor of diplomacy and senior fellow at Seton Hall University, regularly providing international affairs commentary for major media outlets. His civic service includes leadership roles as chair of the Vanderbilt YMCA in New York, vice chair of SOS Children&apos;s Villages-USA, board member of the Academic Council on the UN System, and senior advisor to Hostage Aid Worldwide.
+              </p>
+              <p className="text-sm text-gray-600">
+                Dugan graduated with honors from Georgetown University&apos;s School of Foreign Service, Fletcher School of Law and Diplomacy, and Wharton School of Business. He grew up in Wisconsin and skated at the US Olympic Ice Rink in Milwaukee.
+              </p>
+            </div>
+          </motion.div>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {BOARD_MEMBERS.filter((m) => !m.featured).map((member, index) => (
               <motion.div
@@ -572,7 +508,7 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.05 }}
-                className="p-5 rounded-xl bg-gray-50/50 border border-gray-200/30"
+                className="p-5 rounded-xl bg-white border border-gray-200/30"
               >
                 <h3 className="font-semibold text-gray-900">{member.name}</h3>
                 <p className="text-xs text-blue-600 font-medium mb-2">{member.role}</p>
@@ -584,7 +520,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── Advisors ── */}
-      <section className="py-12 px-4 bg-gray-50/30">
+      <section className="py-12 px-4">
         <div className="max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -604,7 +540,7 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.02 }}
-                className="p-3 rounded-lg bg-white border border-gray-200/30"
+                className="p-3 rounded-lg bg-gray-50/50 border border-gray-200/30"
               >
                 <p className="font-medium text-gray-900 text-sm">{advisor.name}</p>
                 <p className="text-xs text-gray-600">{advisor.title}</p>
@@ -624,7 +560,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── Honorees ── */}
-      <section className="py-12 px-4">
+      <section className="py-12 px-4 bg-gray-50/30">
         <div className="max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -680,7 +616,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── Why a Discus? ── */}
-      <section className="py-12 px-4 bg-gray-50/30">
+      <section className="py-12 px-4">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -705,7 +641,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── Monuments ── */}
-      <section className="py-12 px-4">
+      <section className="py-12 px-4 bg-gray-50/30">
         <div className="max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -739,7 +675,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── Foundation Flyer Download ── */}
-      <section className="py-8 px-4 bg-gray-50/30">
+      <section className="py-8 px-4">
         <div className="max-w-4xl mx-auto">
           <motion.a
             href="/documents/truce-foundation-flyer.pdf"
@@ -773,7 +709,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── Publications by Hugh Dugan ── */}
-      <section className="py-12 px-4">
+      <section className="py-12 px-4 bg-gray-50/30">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -796,7 +732,7 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="block p-5 rounded-xl bg-gray-50/50 border border-gray-200/50 hover:border-blue-500/50 transition-all group"
+                className="block p-5 rounded-xl bg-white border border-gray-200/50 hover:border-blue-500/50 transition-all group"
               >
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 bg-blue-600/20 rounded-lg flex items-center justify-center text-xl flex-shrink-0">
@@ -824,7 +760,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── Contact ── */}
-      <section className="py-12 px-4 bg-gray-50/30">
+      <section className="py-12 px-4">
         <div className="max-w-3xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -833,17 +769,10 @@ export default function AboutPage() {
             className="p-8 rounded-2xl bg-white border border-gray-200/50"
           >
             <h2 className="text-xl font-bold text-gray-900 mb-6 text-center">Contact</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div className="space-y-1 text-gray-600">
-                <p className="font-medium text-gray-900">Princeton Office</p>
-                <p className="text-sm">321 Nassau Street</p>
-                <p className="text-sm">Princeton, NJ 08540 USA</p>
-              </div>
-              <div className="space-y-1 text-gray-600">
-                <p className="font-medium text-gray-900">Hamptons Office</p>
-                <p className="text-sm">451 Seven Ponds Towd Road</p>
-                <p className="text-sm">Water Mill, NY 11976 USA</p>
-              </div>
+            <div className="space-y-1 text-gray-600 text-center">
+              <p className="font-medium text-gray-900">Hamptons Office</p>
+              <p className="text-sm">451 Seven Ponds Towd Road</p>
+              <p className="text-sm">Water Mill, NY 11976 USA</p>
             </div>
             <div className="mt-6 pt-6 border-t border-gray-100 flex flex-wrap gap-x-6 gap-y-2 justify-center text-sm">
               <a href="tel:+16094543000" className="text-blue-600 hover:text-blue-500">+1 (609) 454-3000</a>
@@ -857,7 +786,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── Collaborating Organizations ── */}
-      <section className="py-12 px-4">
+      <section className="py-12 px-4 bg-gray-50/30">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -887,13 +816,13 @@ export default function AboutPage() {
       </section>
 
       {/* ── Explore More ── */}
-      <section className="py-12 px-4 bg-gray-50/30">
+      <section className="py-12 px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-xl font-bold text-gray-900 mb-6 text-center">Explore More</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <Link
               href="/history"
-              className="p-4 rounded-xl bg-white border border-gray-200/50 hover:border-blue-500/50 transition-colors group"
+              className="p-4 rounded-xl bg-gray-50/50 border border-gray-200/50 hover:border-blue-500/50 transition-colors group"
             >
               <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
                 Olympic Truce History
@@ -902,7 +831,7 @@ export default function AboutPage() {
             </Link>
             <Link
               href="/co-sponsors"
-              className="p-4 rounded-xl bg-white border border-gray-200/50 hover:border-blue-500/50 transition-colors group"
+              className="p-4 rounded-xl bg-gray-50/50 border border-gray-200/50 hover:border-blue-500/50 transition-colors group"
             >
               <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
                 166 Co-Sponsors
@@ -911,7 +840,7 @@ export default function AboutPage() {
             </Link>
             <Link
               href="/portal"
-              className="p-4 rounded-xl bg-white border border-gray-200/50 hover:border-blue-500/50 transition-colors group"
+              className="p-4 rounded-xl bg-gray-50/50 border border-gray-200/50 hover:border-blue-500/50 transition-colors group"
             >
               <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
                 Truce Portal
