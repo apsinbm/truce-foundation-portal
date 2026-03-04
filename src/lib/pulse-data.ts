@@ -39,6 +39,89 @@ export interface PulseEntry {
 
 export const PULSE_ENTRIES: PulseEntry[] = [
   {
+    id: 'pulse-2026-03-03-ioc-response',
+    periodStart: '2026-03-03',
+    periodEnd: '2026-03-03',
+    periodLabel: '3 March 2026 — IOC Statement on the Olympic Truce',
+    focusAreas: ['Safe Passage', 'Diplomatic Engagement', 'Participation', 'De-escalation'],
+    sections: [
+      {
+        id: 'ioc-statement',
+        title: 'IOC Issues Carefully Worded Truce Response',
+        icon: '\u{1F3DB}\u{FE0F}',
+        color: 'blue',
+        bullets: [
+          {
+            headline: 'IOC Reaffirms Truce Commitment While Avoiding Judgment',
+            text: 'The International Olympic Committee has issued a formal response to the escalating Middle East conflict, reaffirming its commitment to the Olympic Truce while stopping short of judging whether recent military action violates the agreement. The statement reflects the IOC\u2019s long-standing position of political neutrality, even as pressure mounts for clearer moral leadership with the Milano Cortina 2026 Winter Paralympics imminent.',
+          },
+          {
+            headline: 'Resolution Described as "Aspirational and Non-Binding"',
+            text: 'The IOC characterized the Olympic Truce Resolution as "an aspirational and non-binding resolution which the UN Member States agree on for each edition of the Olympic and Paralympic Games." The organization stated that enforcement "is entirely in the remit of the UN system and outside the remit of the IOC," explicitly distancing itself from accountability for violations during the Games period.',
+          },
+        ],
+      },
+      {
+        id: 'safe-passage',
+        title: 'Safe Passage & Paralympic Mobility',
+        icon: '\u{1F6E1}\u{FE0F}',
+        color: 'green',
+        bullets: [
+          {
+            headline: 'IOC Appeals for Support of Affected Paralympic Athletes',
+            text: 'The IOC appealed to "all UN Member States to support athletes who have qualified for the Milano Cortina 2026 Winter Paralympics, and who may be affected by the most recent conflicts, in their journey to these Games." The appeal comes amid growing logistical concerns including airspace disruptions across the Middle East that have complicated delegation travel to Italy.',
+          },
+          {
+            headline: 'Athletes from Conflict Nations Set to Compete',
+            text: 'With athletes from Iran, Israel, and the United States set to compete at the Winter Paralympics, the safe passage principle faces a direct test. The IOC\u2019s statement frames the Truce Resolution\u2019s primary purpose as enabling "safe passage for all qualified athletes, from all corners of the world, as they travel to the host country."',
+          },
+        ],
+      },
+      {
+        id: 'neutrality-tension',
+        title: 'Neutrality vs. Moral Leadership',
+        icon: '\u{2696}\u{FE0F}',
+        color: 'amber',
+        bullets: [
+          {
+            headline: 'IOC Navigates Between Neutrality and Accountability',
+            text: 'The IOC acknowledged that "as a global organization, the IOC has to navigate a complex reality" and must "live up to its mission to preserve a values-based, truly global sporting platform that can give hope to the world." The careful framing positions the IOC as a platform custodian rather than a moral arbiter\u2014prioritizing universal participation over condemnation of specific actors.',
+          },
+          {
+            headline: 'Contrast with Past Responses Draws Scrutiny',
+            text: 'The measured tone of the statement has drawn scrutiny given the IOC\u2019s swift condemnation of Russia\u2019s invasion of Ukraine during the 2022 Beijing Games. The episode once again highlights the strain between the Olympic movement\u2019s peace-building ideals and the geopolitical realities that increasingly surround it.',
+          },
+        ],
+      },
+      {
+        id: 'diplomatic-context',
+        title: 'Broader Diplomatic Context',
+        icon: '\u{1F30D}',
+        color: 'purple',
+        bullets: [
+          {
+            headline: 'UN Condemnation Underscores Truce Violations',
+            text: 'The IOC\u2019s intervention comes amid broader UN condemnation of recent strikes and growing international concern over the escalation\u2019s impact on civilian populations. The convergence of active military conflict involving multiple UN Member States during the Truce period represents an unprecedented challenge to the modern Olympic Truce tradition.',
+          },
+          {
+            headline: 'Truce\u2019s Structural Limits Laid Bare',
+            text: 'By explicitly stating that enforcement lies outside its remit, the IOC has laid bare the structural limitations of the Olympic Truce as a peace instrument. The resolution\u2019s reliance on voluntary compliance by Member States\u2014with no enforcement mechanism\u2014means the Truce\u2019s effectiveness depends entirely on the political will of the very actors now engaged in escalation.',
+          },
+        ],
+      },
+    ],
+    overallAlignment: {
+      level: 'critical',
+      summary: 'The IOC\u2019s carefully worded response reaffirms its commitment to the Olympic Truce while explicitly acknowledging the resolution is "aspirational and non-binding" with enforcement outside its remit. The statement prioritizes safe passage for Paralympic athletes over moral judgment of military action, reflecting the deepening tension between the Olympic movement\u2019s peace-building mission and the geopolitical realities of the Milano Cortina 2026 Games period.',
+    },
+    keyConstraints: [
+      'The IOC characterized the Olympic Truce Resolution as "aspirational and non-binding," stating enforcement is "entirely in the remit of the UN system and outside the remit of the IOC"\u2014explicitly distancing itself from accountability for violations.',
+      'Athletes from Iran, Israel, and the United States are set to compete at the Winter Paralympics amid airspace disruptions and UN condemnation of strikes, testing the Truce\u2019s safe passage guarantee.',
+      'The measured response contrasts with the IOC\u2019s swift condemnation of Russia during the 2022 Beijing Games, highlighting inconsistencies in how the Olympic movement addresses Truce violations depending on the geopolitical actors involved.',
+    ],
+    publishedAt: '2026-03-03',
+  },
+  {
     id: 'pulse-2026-03-03-risk-tile',
     periodStart: '2026-03-03',
     periodEnd: '2026-03-03',
