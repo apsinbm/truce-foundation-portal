@@ -148,7 +148,7 @@ const ADVISORS = [
   { name: 'Heather Reid', title: 'Professor of Sport Philosophy, Morningside College' },
   { name: 'Rosa Serra', title: 'Official Sculptor of the International Olympic Committee' },
   { name: 'Jonas Serrano', title: 'President, Phyt NYC, Phyt Cares, and Phyt Puerto Rico' },
-  { name: 'Patrick Singleton OLY', title: 'Luge & Skeleton athlete; President, Bermuda Olympians Association; Treasurer, World Olympians\' Association' },
+  { name: 'Patrick Singleton OLY', title: 'Luge & Skeleton athlete; United States Tennis Association. Founder of OLY. Formerly Treasurer, World Olympians Association. Formerly IOC Athletes Commission and IOC Medical & Scientific Commission.' },
   { name: 'Thomas Sithole', title: 'Sport journalist; former Zimbabwe Olympic Committee President; former IOC International Cooperation Director' },
   { name: 'Ulysses Smith', title: 'President & CEO, Telos Governance Advisers LLC' },
   { name: 'Peter Tichansky', title: 'President and CEO, Business Council for International Understanding' },
