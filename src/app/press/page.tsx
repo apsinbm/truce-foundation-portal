@@ -24,7 +24,7 @@ const COVERAGE_SECTIONS: CoverageSection[] = [
   // === PHASE 3 ===
   {
     title: 'Middle Eastern Military Escalation Breaches the Olympic Truce',
-    dateRange: 'February 27 \u2013 March 3, 2026',
+    dateRange: 'February 27 \u2013 March 4, 2026',
     items: [
       {
         source: 'Olympics.com',
@@ -57,6 +57,14 @@ const COVERAGE_SECTIONS: CoverageSection[] = [
         url: 'https://www.insidethegames.biz/articles/ioc-finally-delivers-statement-over-middle-east-tensions',
         type: 'media',
         description: 'After facing criticism for its initial silence, the IOC finally issued a formal statement addressing Middle East tensions during the Olympic Truce period, marking a shift from its earlier reluctance to directly condemn the military escalation.',
+      },
+      {
+        source: 'Irish Sun',
+        title: 'Moscow calls out IOC hypocrisy over refusal to sanction US and Israel',
+        date: '2026-03-04',
+        url: 'https://www.irishsun.com/news/278901528/moscow-calls-out-ioc-hypocrisy-over-refusal-to-sanction-us-and-israel',
+        type: 'analysis',
+        description: 'The Kremlin demanded the IOC explain its "double standards" after the committee refused to penalize the U.S. and Israel over their military campaign against Iran while maintaining years-long restrictions on Russian athletes. Kremlin spokesman Dmitry Peskov contrasted the IOC\u2019s current neutral stance with its swift condemnation of Russia in 2022 as an "extremely grave violation of the Olympic Truce."',
       },
       {
         source: 'Inside The Games',
