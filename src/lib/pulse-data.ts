@@ -39,6 +39,89 @@ export interface PulseEntry {
 
 export const PULSE_ENTRIES: PulseEntry[] = [
   {
+    id: 'pulse-2026-03-05-paralympic-boycott-safe-passage',
+    periodStart: '2026-03-05',
+    periodEnd: '2026-03-05',
+    periodLabel: '5 March 2026 \u2014 Paralympic Boycott, Safe Passage & Humanitarian Corridors',
+    focusAreas: ['Safe Passage', 'Diplomatic Engagement', 'Humanitarian Access', 'Participation'],
+    sections: [
+      {
+        id: 'diplomatic-boycott',
+        title: 'Paralympic Ceremony Boycott Invokes Truce Norms',
+        icon: '\u{1F3DB}\u{FE0F}',
+        color: 'purple',
+        bullets: [
+          {
+            headline: 'Growing Coalition Boycotts Opening Ceremony',
+            text: 'A growing group of states has announced a diplomatic boycott of the Paralympic opening ceremony, explicitly referencing the continued violation of the Olympic Truce in the context of an ongoing international armed conflict. The boycott signals a concern that the presence of state symbols associated with active hostilities risks normalizing conflict within a space traditionally reserved for peaceful competition.',
+          },
+          {
+            headline: 'Truce as Safeguard Against Political Instrumentalization of Sport',
+            text: 'This response illustrates how the Truce functions not only as a call for cessation of hostilities, but also as a safeguard against the political instrumentalization of sport during wartime. While the boycott does not impede athlete participation or cross-border movement, it underscores the expectation that periods linked to the Olympic and Paralympic Games should be insulated from the symbolism and conduct of war.',
+          },
+        ],
+      },
+      {
+        id: 'safe-passage',
+        title: 'Safe Passage for Athletes Preserved Despite Tensions',
+        icon: '\u{1F6E1}\u{FE0F}',
+        color: 'green',
+        bullets: [
+          {
+            headline: 'Host Authorities Guarantee Freedom of Movement',
+            text: 'Italian authorities, while expressing diplomatic disagreement with certain aspects of participation, have explicitly clarified that no action will be taken to block visas for athletes or their entourages. This distinction aligns closely with the Olympic Truce\u2019s emphasis on freedom of movement and non-discrimination for participants.',
+          },
+          {
+            headline: 'Athletes Not Penalized by Geopolitical Disputes',
+            text: 'The deliberate effort by host-state authorities and international actors to preserve safe passage ensures that individuals are not penalized through travel restrictions or denied access to competition venues as a consequence of geopolitical disputes. This represents a practical application of the Truce\u2019s core principles even amid significant political opposition.',
+          },
+        ],
+      },
+      {
+        id: 'humanitarian-corridors',
+        title: 'Humanitarian Corridors & Civilian Displacement',
+        icon: '\u{1F6D1}',
+        color: 'blue',
+        bullets: [
+          {
+            headline: 'Tens of Thousands Evacuated Through Coordinated Corridors',
+            text: 'The intensification of military operations in the Middle East and the resulting civilian displacement demonstrate the Truce\u2019s relevance beyond the immediate Olympic sphere. The evacuation of tens of thousands of civilians through coordinated flights and border crossings illustrates the practical importance of safe passage and humanitarian corridors during periods of heightened conflict.',
+          },
+          {
+            headline: 'Truce Principles Applied Beyond Olympic Operations',
+            text: 'Although these movements are not formally linked to Olympic operations, they reflect the same principles embedded in the Truce: the protection of civilians, facilitation of movement, and prioritization of humanitarian considerations amid hostilities.',
+          },
+        ],
+      },
+      {
+        id: 'international-law',
+        title: 'UN Condemnation & International Legal Framework',
+        icon: '\u{1F30D}',
+        color: 'amber',
+        bullets: [
+          {
+            headline: 'UN Mechanisms Condemn Attacks Inconsistent with UN Charter',
+            text: 'The condemnation by UN mechanisms of attacks inconsistent with the UN Charter reinforces the Truce\u2019s foundational alignment with international law. The Truce\u2019s call for restraint and dialogue is mirrored in international scrutiny of military actions that endanger civilians or civilian infrastructure, including educational facilities.',
+          },
+          {
+            headline: 'Persistent Gap Between Truce Principles and Realities',
+            text: 'These developments underscore the persistent gap between Truce principles and realities on the ground, while also highlighting the Truce\u2019s role as a reference point for assessing conduct during periods that symbolically emphasize peace.',
+          },
+        ],
+      },
+    ],
+    overallAlignment: {
+      level: 'critical',
+      summary: 'Current events illustrate how the Olympic Truce operates as a connective normative thread across disparate crises. From debates over national symbols in international sport, to diplomatic efforts to protect citizens and enable humanitarian movement, the Truce provides a shared vocabulary for restraint, safe passage, and de-escalation. Even where compliance is partial or contested, repeated references to the Truce affirm its continued relevance as a global instrument for calming hostilities and reaffirming the primacy of peace during moments of collective international attention. The diplomatic boycott of the Paralympic ceremony, the preservation of athlete safe passage by Italian authorities, the evacuation of civilians through humanitarian corridors, and the condemnation of attacks by UN mechanisms all intersect with the Olympic Truce\u2019s core principles in multiple, mutually reinforcing ways.',
+    },
+    keyConstraints: [
+      'A growing diplomatic boycott of the Paralympic opening ceremony reflects concern that the presence of state symbols associated with active hostilities risks normalizing conflict within the Olympic and Paralympic space.',
+      'Intensified military operations in the Middle East have displaced tens of thousands of civilians, requiring coordinated evacuation flights and humanitarian corridors\u2014directly implicating the Truce\u2019s safe passage and humanitarian access principles.',
+      'UN mechanisms have condemned attacks on civilian infrastructure including educational facilities, underscoring the persistent gap between Truce principles and conduct on the ground.',
+    ],
+    publishedAt: '2026-03-05',
+  },
+  {
     id: 'pulse-2026-03-04-strait-escalation',
     periodStart: '2026-03-04',
     periodEnd: '2026-03-04',
