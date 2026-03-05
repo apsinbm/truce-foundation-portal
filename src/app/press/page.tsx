@@ -68,6 +68,14 @@ const COVERAGE_SECTIONS: CoverageSection[] = [
       },
       {
         source: 'Inside The Games',
+        title: 'Ukraine calls for solidarity as Paralympic boycott grows to 11 nations',
+        date: '2026-03-04',
+        url: 'https://www.insidethegames.biz/articles/mfa-ukraine-calls-for-olidarity-as-paralympic-boycott-grows',
+        type: 'media',
+        description: 'Ukraine\u2019s Foreign Affairs Ministry rallied 11 nations\u2014including Germany, Canada, and Poland\u2014to boycott the Paralympic Opening Ceremony in protest of IPC allowing Russian and Belarusian national symbols. Ukraine\u2019s Paralympic Committee president wrote to Italian PM Meloni arguing Russia is using the Games to legitimize its occupation of Ukrainian territories, citing Russian Paralympic branches established in Crimea and Sevastopol.',
+      },
+      {
+        source: 'Inside The Games',
         title: 'Italy\u2019s sport chiefs condemn Iran strikes',
         date: '2026-03-03',
         url: 'https://www.insidethegames.biz/articles/italys-olympic-chiefs-condemn-iran-strikes',
