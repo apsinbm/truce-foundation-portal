@@ -74,10 +74,10 @@ const TRUCE_PERIODS: TrucePeriod[] = [
       {
         country: 'Iran',
         countryIso3: 'IRN',
-        description: 'Largest retaliatory missile barrage in Iranian history, striking 10 countries: Israel, Saudi Arabia, UAE, Bahrain, Kuwait, Qatar (Al Udeid/CENTCOM), Iraq (Erbil/Al-Asad), Jordan, Oman, and Cyprus (RAF Akrotiri)',
+        description: 'Largest retaliatory missile barrage in Iranian history, striking 11 countries: Israel, Saudi Arabia, UAE, Bahrain, Kuwait, Qatar (Al Udeid/CENTCOM), Iraq (Erbil/Al-Asad), Jordan, Oman, Cyprus (RAF Akrotiri), and Azerbaijan. Iran\u2019s Olympic Committee formally demanded the IOC punish the US and Israel for violations of the Olympic Charter.',
         date: '2026-03-01',
         severity: 'critical',
-        sources: ['UN Reports', 'Media Reports'],
+        sources: ['Tasnim News Agency', 'The Guardian', 'Dawn (AFP)', 'Inside The Games', 'UN Reports'],
       },
       {
         country: 'Sudan',

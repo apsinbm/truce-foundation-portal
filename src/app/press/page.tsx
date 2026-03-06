@@ -24,8 +24,104 @@ const COVERAGE_SECTIONS: CoverageSection[] = [
   // === PHASE 3 ===
   {
     title: 'Middle Eastern Military Escalation Breaches the Olympic Truce',
-    dateRange: 'February 27 \u2013 March 4, 2026',
+    dateRange: 'February 27 \u2013 March 5, 2026',
     items: [
+      {
+        source: 'The Guardian',
+        title: 'Seven countries to boycott Paralympics ceremony over flag-flying Russians',
+        date: '2026-03-05',
+        url: 'https://www.theguardian.com/sport/2026/mar/05/seven-countries-to-boycott-paralympics-ceremony-over-flag-flying-russians',
+        type: 'media',
+        description: 'Seven nations and the UK government boycotted the Paralympic Opening Ceremony in protest of the IPC decision to allow Russian and Belarusian athletes to compete under their national flags, escalating diplomatic tensions around the Games.',
+      },
+      {
+        source: 'Georgia Today',
+        title: '11 countries and EU to boycott Opening Ceremony of 2026 Paralympics over Russia, Belarus participation',
+        date: '2026-03-05',
+        url: 'https://georgiatoday.ge/11-countries-and-eu-to-boycott-opening-ceremony-of-2026-paralympics-over-russia-belarus-participation/',
+        type: 'media',
+        description: 'The growing list of nations boycotting the Opening Ceremony expanded to 11 countries plus the EU, signaling widespread disapproval of the inclusion of Russian and Belarusian national symbols during the ongoing war in Ukraine.',
+      },
+      {
+        source: 'Tasnim News Agency',
+        title: 'Iran Olympic Committee demands punishment of US, Israeli regime for slaughter of athletes',
+        date: '2026-03-05',
+        url: 'https://www.tasnimnews.ir/en/news/2026/03/05/3532224/iran-olympic-committee-demands-punishment-of-us-israeli-regime-for-slaughter-of-athletes',
+        type: 'media',
+        description: 'The Iranian National Olympic Committee sent a formal letter to the IOC alleging that recent strikes constitute a direct violation of the Olympic Charter and Truce principles, demanding punishment of the United States and Israel.',
+      },
+      {
+        source: 'Deseret News',
+        title: 'With Paralympics approaching, what does Olympic Truce mean?',
+        date: '2026-03-05',
+        url: 'https://www.deseret.com/opinion/2026/03/05/with-paralympics-approaching-what-does-olympic-truce-mean/',
+        type: 'analysis',
+        description: 'Opinion analysis reflecting on the historic purpose of the Olympic Truce and questioning its relevance as modern wars continue unabated during major sporting events like the approaching Paralympics.',
+      },
+      {
+        source: 'SAN',
+        title: 'The US and Israel broke the Olympic Truce \u2014 their Paralympians will still compete',
+        date: '2026-03-05',
+        url: 'https://san.com/cc/the-us-and-israel-broke-the-olympic-truce-their-paralympians-will-still-compete/',
+        type: 'analysis',
+        description: 'Argues that ongoing military operations by the United States and Israel during the Paralympic period demonstrate the Olympic Truce remains largely symbolic and unenforceable, despite the UN resolution backed by 166 co-sponsors.',
+      },
+      {
+        source: 'Times of Malta',
+        title: 'IOC calls for support for Paralympians from war-affected nations',
+        date: '2026-03-04',
+        url: 'https://sport.timesofmalta.com/2026/03/04/ioc-calls-for-support-for-paralympians-from-war-affected-nations/',
+        type: 'media',
+        description: 'The IOC appealed to countries to assist Paralympic athletes from war-affected regions traveling to the Games, underscoring the humanitarian purpose behind the Olympic Truce and the logistical challenges created by ongoing conflicts.',
+      },
+      {
+        source: 'Dawn (AFP)',
+        title: 'IOC calls for support for Paralympians from war-hit nations',
+        date: '2026-03-04',
+        url: 'https://www.dawn.com/news/1978164/ioc-calls-for-support-for-paralympians-from-war-hit-nations',
+        type: 'media',
+        description: 'Highlights the contrast between the IOC\u2019s rapid condemnation of Russia\u2019s 2022 truce violation and its neutral stance on the current strikes involving the United States, Israel, and Iran during the Paralympic period.',
+      },
+      {
+        source: 'PlanetSki',
+        title: 'IOC reiterates support for Olympic Truce',
+        date: '2026-03-04',
+        url: 'https://planetski.eu/2026/03/04/ioc-reiterates-support-for-olympic-truce/',
+        type: 'media',
+        description: 'The IOC reaffirmed its support for the Olympic Truce as the Paralympics opened while military operations involving Iran continued, illustrating the tension between the Games\u2019 peace ideals and geopolitical reality.',
+      },
+      {
+        source: 'SportsIn',
+        title: 'The IOC\u2019s idyllic Olympic Truce ahead of the Milano Cortina 2026 Winter Paralympic Games',
+        date: '2026-03-04',
+        url: 'https://sportsin.biz/the-iocs-idyllic-olympic-truce-ahead-of-the-milano-cortina-2026-winter-paralympic-games/',
+        type: 'analysis',
+        description: 'Analyzes the IOC\u2019s invocation of the Olympic Truce, characterizing it as a symbolic gesture with limited practical efficacy in the current global climate of escalating military conflicts.',
+      },
+      {
+        source: 'Francs Jeux',
+        title: 'Amid tensions in the Middle East, the IOC calls for respect for the Olympic Truce',
+        date: '2026-03-04',
+        url: 'https://www.francsjeux.com/en/short/Amid-tensions-in-the-Middle-East--the-IOC-calls-for-respect-for-the-Olympic-truce-for-the-Winter-Paralympic-Games/',
+        type: 'media',
+        description: 'Reports on the IPC\u2019s efforts to ensure safe passage for 50 national delegations whose travel was disrupted by airspace closures across the Middle East during the escalating conflict.',
+      },
+      {
+        source: 'Deseret News',
+        title: 'What the IOC says about the war in Iran and the Olympic Truce',
+        date: '2026-03-03',
+        url: 'https://www.deseret.com/utah/2026/03/03/what-the-ioc-says-about-the-war-in-iran-and-the-olympic-truce/',
+        type: 'media',
+        description: 'Reports that the IOC urged nations to respect the Olympic Truce as the 2026 Winter Paralympics approached, while acknowledging it has no authority to enforce the truce amid the new conflict involving Iran.',
+      },
+      {
+        source: 'KSL',
+        title: 'What the IOC says about war in Iran and the Olympic Truce',
+        date: '2026-03-03',
+        url: 'https://www.ksl.com/article/51456646/what-the-ioc-says-about-war-in-iran-and-the-olympic-truce',
+        type: 'media',
+        description: 'Explains how the escalation of war involving Iran shortly before the Milano Cortina Paralympics raised questions about the Olympic Truce, with Olympic officials emphasizing the principle while stressing their political neutrality.',
+      },
       {
         source: 'Olympics.com',
         title: 'IOC statement on athletes\u2019 safe passage',
@@ -356,10 +452,10 @@ export default function PressPage() {
             viewport={{ once: true }}
             className="p-6 rounded-xl bg-red-50 border border-red-200"
           >
-            <h2 className="text-2xl font-bold text-red-900 mb-3">Situation Brief: March 3, 2026</h2>
+            <h2 className="text-2xl font-bold text-red-900 mb-3">Situation Brief: March 5, 2026</h2>
             <div className="space-y-3 text-sm text-red-900/80">
               <p>
-                The Milano Cortina 2026 Olympic Truce (Jan 30 - Mar 22) has been shattered by the most severe violations in modern Olympic history. On February 28, the United States and Israel launched coordinated strikes on Iranian nuclear and military facilities, including a targeted operation that killed Supreme Leader Ayatollah Khamenei. Iran responded with the largest missile barrage in its history, striking 10 countries: Israel, Saudi Arabia, UAE, Bahrain, Kuwait, Qatar (Al Udeid/CENTCOM), Iraq (Erbil/Al-Asad), Jordan, Oman, and Cyprus (RAF Akrotiri).
+                The Milano Cortina 2026 Olympic Truce (Jan 30 - Mar 22) has been shattered by the most severe violations in modern Olympic history. On February 28, the United States and Israel launched coordinated strikes on Iranian nuclear and military facilities, including a targeted operation that killed Supreme Leader Ayatollah Khamenei. Iran responded with the largest missile barrage in its history, striking 11 countries: Israel, Saudi Arabia, UAE, Bahrain, Kuwait, Qatar (Al Udeid/CENTCOM), Iraq (Erbil/Al-Asad), Jordan, Oman, Cyprus (RAF Akrotiri), and Azerbaijan.
               </p>
               <p>
                 This escalation occurred against a backdrop of ongoing violations: Russia continued its large-scale invasion of Ukraine with daily missile and drone attacks throughout the Truce period, including a massive bombardment on the day of the Olympic Opening Ceremony (Feb 22). The war in Sudan, the humanitarian catastrophe in Gaza, and conflicts in Afghanistan, Pakistan, Yemen, and Mexico all continued unabated.

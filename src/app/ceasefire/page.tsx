@@ -254,13 +254,15 @@ export default function CeasefireWatchPage() {
               settlement has broken down with renewed operations and closed crossings. On February 28, the U.S. and
               Israel launched coordinated strikes on Iranian nuclear and military facilities, killing Supreme Leader
               Khamenei. Iran responded on March 1 with the largest retaliatory missile barrage in its history, striking
-              10 countries: Israel, Saudi Arabia, UAE, Bahrain, Kuwait, Qatar (Al Udeid/CENTCOM), Iraq (Erbil/Al-Asad),
-              Jordan, Oman, and Cyprus (RAF Akrotiri) — expanding the conflict from a bilateral confrontation into a
-              regional war spanning from the Eastern Mediterranean to the Persian Gulf. Russia continued its full-scale
-              invasion of Ukraine with daily attacks throughout the Truce period. Pakistan cross-border strikes into
-              Afghanistan threaten the India–Pakistan ceasefire. Sudan&apos;s civil war between SAF and RSF forces has
-              displaced millions. These developments underscore the catastrophic failure of the Olympic Truce and the
-              speed at which localized conflicts can escalate into regional wars.
+              11 countries: Israel, Saudi Arabia, UAE, Bahrain, Kuwait, Qatar (Al Udeid/CENTCOM), Iraq (Erbil/Al-Asad),
+              Jordan, Oman, Cyprus (RAF Akrotiri), and Azerbaijan — expanding the conflict from a bilateral confrontation into a
+              regional war spanning from the Eastern Mediterranean to the Persian Gulf. The diplomatic fallout was immediate:
+              11 nations plus the EU boycotted the Paralympic Opening Ceremony over Russia&apos;s participation, while Iran&apos;s
+              Olympic Committee formally demanded the IOC punish the United States and Israel for breaching the Olympic Charter.
+              Russia continued its full-scale invasion of Ukraine with daily attacks throughout the Truce period. Pakistan
+              cross-border strikes into Afghanistan threaten the India–Pakistan ceasefire. Sudan&apos;s civil war between SAF
+              and RSF forces has displaced millions. These developments underscore the catastrophic failure of the Olympic
+              Truce and the speed at which localized conflicts can escalate into regional wars.
             </p>
             <p className="text-gray-600 text-xs mt-3">
               Note: Status assessments reflect verified developments through March 5, 2026. Analysts caution that
