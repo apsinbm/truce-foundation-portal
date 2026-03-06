@@ -501,12 +501,18 @@ export default function HumanitarianPage() {
             className="p-6 rounded-2xl bg-gradient-to-br from-blue-500/10 to-blue-600/5 border border-blue-500/30"
           >
             <h2 className="text-lg font-bold text-gray-900 mb-3">Why Humanitarian Access Matters for the Olympic Truce</h2>
-            <p className="text-gray-600 text-sm leading-relaxed">
+            <p className="text-gray-600 text-sm leading-relaxed mb-3">
               The ancient Olympic Truce (ekecheiria) was not a ceasefire per se, but rather a guarantee of <strong className="text-gray-900">safe passage</strong> -
               allowing athletes, artists, and spectators to travel freely to and from the Games without fear of attack.
               In the modern context, this principle extends to humanitarian corridors: the ability for aid workers, medical supplies,
               and essential goods to reach populations in need. Monitoring humanitarian access during Truce periods reflects
               this fundamental spirit of the ekecheiria.
+            </p>
+            <p className="text-gray-600 text-sm leading-relaxed">
+              This principle is under direct threat today. Nearly <strong className="text-gray-900">14,000 flights have been canceled</strong> across
+              10 Middle Eastern countries since February 28. Dubai International — connecting 291 destinations — dropped 85% of scheduled flights;
+              Doha lost 94%. Paralympic delegations from Asia and Africa relying on Gulf hub airports face severe delays reaching Milano Cortina,
+              a real-world violation of the ekecheiria&apos;s guarantee of safe passage to the Games.
             </p>
           </motion.div>
         </div>

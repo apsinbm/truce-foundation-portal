@@ -38,12 +38,12 @@ export const FLASH_ENTRIES: FlashEntry[] = [
   },
   {
     id: 'flash-2026-02-17-transport',
-    headline: 'Milano Cortina 2026 Transport Alert (Updated 3 March)',
-    body: 'Initially issued on 17 February over Italian labor strikes—including a nationwide airport walkout pushed to 26 February—transport disruption has since escalated dramatically. Airspace closures across the Arabian Peninsula and Gulf states following Operation Epic Fury and Iranian retaliatory strikes have grounded flights and forced delegation rerouting. Airports in Dubai and Kuwait have been struck. Several teams report delayed or rerouted travel into Europe, affecting training schedules and final preparations. Travelers are urged to confirm flight status and secure alternative routing.',
+    headline: 'Milano Cortina 2026 Transport Alert (Updated 6 March)',
+    body: 'Nearly 14,000 flights canceled across 10 Middle Eastern countries since Feb 28. Dubai International down 85%, Doha down 94%. Paralympic delegations from Asia and Africa relying on Gulf hub airports face severe rerouting. Airports in Dubai and Kuwait struck. Some flights resuming but capacity remains critically low. Travelers urged to confirm status and secure alternative routing.',
     icon: '⚠️',
     activeFrom: '2026-02-17',
     activeUntil: '2026-03-22',
-    publishedAt: '2026-03-03',
+    publishedAt: '2026-03-06',
   },
 ];
 

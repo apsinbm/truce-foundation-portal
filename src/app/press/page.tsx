@@ -27,6 +27,14 @@ const COVERAGE_SECTIONS: CoverageSection[] = [
     dateRange: 'February 27 \u2013 March 6, 2026',
     items: [
       {
+        source: 'CNN',
+        title: 'Nearly 14,000 canceled flights: Middle East travel chaos in 5 charts',
+        date: '2026-03-05',
+        url: 'https://edition.cnn.com/travel/middle-east-flights-travel-conflict-vis',
+        type: 'analysis',
+        description: 'Data visualization showing the scale of aviation disruption across 10 Middle Eastern countries since Operation Epic Fury. Dubai International dropped 85% of scheduled flights; Doha lost 94%. Paralympic delegations from Asia and Africa relying on Gulf hub airports faced severe delays reaching Milano Cortina.',
+      },
+      {
         source: 'Inside The Games',
         title: 'Russian Paralympians accredited amid rising diplomatic tension',
         date: '2026-03-06',
@@ -407,6 +415,12 @@ const KEY_TALKING_POINTS = [
 // B-roll and visual assets
 const VISUAL_ASSETS = [
   {
+    name: 'Middle East Flight Chaos in 5 Charts',
+    description: 'CNN interactive data visualization — 14,000 canceled flights across 10 countries',
+    icon: '📊',
+    url: 'https://edition.cnn.com/travel/middle-east-flights-travel-conflict-vis',
+  },
+  {
     name: 'UN General Assembly Adoption',
     description: 'Video footage from November 19, 2025 resolution adoption',
     icon: '🎬',
@@ -452,13 +466,16 @@ export default function PressPage() {
             viewport={{ once: true }}
             className="p-6 rounded-xl bg-red-50 border border-red-200"
           >
-            <h2 className="text-2xl font-bold text-red-900 mb-3">Situation Brief: March 5, 2026</h2>
+            <h2 className="text-2xl font-bold text-red-900 mb-3">Situation Brief: March 6, 2026</h2>
             <div className="space-y-3 text-sm text-red-900/80">
               <p>
                 The Milano Cortina 2026 Olympic Truce (Jan 30 - Mar 22) has been shattered by the most severe violations in modern Olympic history. On February 28, the United States and Israel launched coordinated strikes on Iranian nuclear and military facilities, including a targeted operation that killed Supreme Leader Ayatollah Khamenei. Iran responded with the largest missile barrage in its history, striking 11 countries: Israel, Saudi Arabia, UAE, Bahrain, Kuwait, Qatar (Al Udeid/CENTCOM), Iraq (Erbil/Al-Asad), Jordan, Oman, Cyprus (RAF Akrotiri), and Azerbaijan.
               </p>
               <p>
-                This escalation occurred against a backdrop of ongoing violations: Russia continued its large-scale invasion of Ukraine with daily missile and drone attacks throughout the Truce period, including a massive bombardment on the day of the Olympic Opening Ceremony (Feb 22). The war in Sudan, the humanitarian catastrophe in Gaza, and conflicts in Afghanistan, Pakistan, Yemen, and Mexico all continued unabated.
+                The conflict has devastated global aviation: nearly 14,000 flights have been canceled across 10 Middle Eastern countries. Dubai International — a hub connecting 291 destinations — dropped 85% of scheduled flights; Doha lost 94%. Paralympic delegations from Asia and Africa relying on Gulf airports faced severe delays reaching Milano Cortina, directly violating the ekecheiria&apos;s guarantee of safe passage to the Games.
+              </p>
+              <p>
+                This escalation occurred against a backdrop of ongoing violations: Russia continued its large-scale invasion of Ukraine with daily missile and drone attacks throughout the Truce period. The Lebanon-Israel ceasefire collapsed with 80,000 displaced. The DRC ceasefire collapsed as M23 captured Uvira. The wars in Sudan, Afghanistan-Pakistan (56 dead, 163,000 displaced), Myanmar, and Ecuador all intensified.
               </p>
               <p>
                 The Truce Index is tracking incidents across 22 countries, with Palestine, Iran, Russia, Sudan, Israel, and Ukraine recording the highest number of critical incidents. This represents the worst period of Olympic Truce violations since the modern tradition was revived in 1993.
