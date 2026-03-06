@@ -39,6 +39,89 @@ export interface PulseEntry {
 
 export const PULSE_ENTRIES: PulseEntry[] = [
   {
+    id: 'pulse-2026-03-06-civilian-protection-safe-passage',
+    periodStart: '2026-03-06',
+    periodEnd: '2026-03-06',
+    periodLabel: '6 March 2026 \u2014 Civilian Protection, Safe Passage & Humanitarian Corridors',
+    focusAreas: ['Humanitarian Access', 'Safe Passage', 'De-escalation', 'Diplomatic Engagement'],
+    sections: [
+      {
+        id: 'civilian-protection',
+        title: 'Civilian Protection & Humanitarian Access Under Strain',
+        icon: '\u{1F6D1}',
+        color: 'blue',
+        bullets: [
+          {
+            headline: 'Airstrikes on Civilian Infrastructure in Lebanon and Iran',
+            text: 'The scale and geographic spread of active hostilities underscore acute challenges to the Olympic Truce\u2019s call for the protection of civilians and the preservation of humanitarian space. Airstrikes in densely populated areas of southern Beirut, as well as strikes in Tehran affecting residential buildings, a medical clinic, and a gas station, reflect conditions in which civilian infrastructure is exposed to direct harm.',
+          },
+          {
+            headline: 'WHO Verifies Attacks on Health Infrastructure',
+            text: 'Reported casualties and mass displacement in Lebanon, alongside large-scale population movements out of Iran, illustrate the humanitarian consequences that the Truce seeks to mitigate. The verification by the World Health Organization of attacks on health infrastructure further highlights the tension between ongoing military operations and the Truce\u2019s emphasis on respect for humanitarian norms and uninterrupted medical access.',
+          },
+        ],
+      },
+      {
+        id: 'safe-passage',
+        title: 'Safe Passage & Freedom of Movement',
+        icon: '\u{1F6E1}\u{FE0F}',
+        color: 'green',
+        bullets: [
+          {
+            headline: 'Strait of Hormuz Maritime Safe Passage Discussions',
+            text: 'Discussions involving maritime safe passage through the Strait of Hormuz represent a partial alignment with the Truce\u2019s principle of safe passage, as they aim to reduce risks to shipping and maintain the flow of critical energy supplies. While driven by economic and strategic considerations, such efforts nonetheless resonate with the Truce\u2019s broader call to prevent the escalation of conflict into domains that sustain civilian livelihoods and global stability.',
+          },
+          {
+            headline: 'Sharp Decline in Tanker Transits Constrains Movement',
+            text: 'The sharp decline in tanker transits and the concentration of vessels in the strait indicate how insecurity constrains freedom of movement, with secondary humanitarian and economic effects that extend well beyond the immediate theater of conflict.',
+          },
+        ],
+      },
+      {
+        id: 'prisoner-exchange',
+        title: 'Prisoner Exchange as Confidence-Building Measure',
+        icon: '\u{1F91D}',
+        color: 'purple',
+        bullets: [
+          {
+            headline: 'Ukraine\u2013Russia Prisoner Exchange',
+            text: 'The exchange of prisoners of war between Ukraine and Russia provides a notable point of convergence with the Olympic Truce\u2019s humanitarian ethos. Prisoner exchanges are internationally recognized confidence-building measures that can reduce immediate human suffering and signal limited cooperation even amid ongoing conflict.',
+          },
+          {
+            headline: 'Human Dignity at the Forefront',
+            text: 'Such actions align with the Truce\u2019s objective of fostering pauses in hostility that place human dignity at the forefront, even if they do not constitute a broader cessation of fighting.',
+          },
+        ],
+      },
+      {
+        id: 'regional-displacement',
+        title: 'Regional Conflict & Civilian Displacement',
+        icon: '\u{26A0}\u{FE0F}',
+        color: 'amber',
+        bullets: [
+          {
+            headline: 'Pakistan\u2013Afghanistan Border Displacement',
+            text: 'The reporting on displacement resulting from fighting along the Pakistan\u2013Afghanistan border highlights the Truce\u2019s relevance beyond high-profile conflicts. Large-scale civilian displacement, contested casualty figures, and ongoing cross-border fire demonstrate how regional conflicts contribute cumulatively to global instability.',
+          },
+          {
+            headline: 'Diplomatic Appeals for Restraint Echo Truce Norms',
+            text: 'The overall international response\u2014ranging from diplomatic criticism of perceived breaches of international law to efforts to manage economic fallout\u2014illustrates the interconnected nature of modern conflict. Statements emphasizing the erosion of international law and calls for de-escalation echo the normative foundations of the Olympic Truce, which seeks to leverage global sporting moments to reaffirm commitments to peace, legality, and multilateral cooperation.',
+          },
+        ],
+      },
+    ],
+    overallAlignment: {
+      level: 'critical',
+      summary: 'Today\u2019s events do not indicate adherence to a comprehensive calming of hostilities. However, they reveal discrete points where Truce principles are implicitly engaged: in humanitarian access debates, in efforts to secure safe passage, in prisoner exchanges, and in diplomatic appeals for restraint. These intersections underscore both the continued relevance of the Olympic Truce and the gap between its aspirations and the realities of contemporary conflict.',
+    },
+    keyConstraints: [
+      'Airstrikes on densely populated areas in Lebanon and Iran, including strikes affecting residential buildings, a medical clinic, and a gas station, directly contravene the Olympic Truce\u2019s call for the protection of civilians and preservation of humanitarian space.',
+      'The sharp decline in Strait of Hormuz tanker transits and the concentration of stranded vessels demonstrate how insecurity constrains freedom of movement, with cascading humanitarian and economic effects across multiple regions.',
+      'Large-scale civilian displacement along the Pakistan\u2013Afghanistan border, with contested casualty figures and ongoing cross-border fire, illustrates how regional conflicts beyond headline crises contribute cumulatively to global instability.',
+    ],
+    publishedAt: '2026-03-06',
+  },
+  {
     id: 'pulse-2026-03-05-paralympic-boycott-safe-passage',
     periodStart: '2026-03-05',
     periodEnd: '2026-03-05',
