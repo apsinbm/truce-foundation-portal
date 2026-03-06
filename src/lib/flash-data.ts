@@ -10,13 +10,22 @@ export interface FlashEntry {
 
 export const FLASH_ENTRIES: FlashEntry[] = [
   {
+    id: 'flash-2026-03-05-hormuz',
+    headline: 'Strait of Hormuz Closed — Global Energy Crisis',
+    body: 'Iran has effectively closed the Strait of Hormuz to commercial traffic. Transit dropped from 40 ships/day to near zero. IRGC claimed complete Strait control (Mar 4). Insurance revoked for all vessels. 280 ships stranded. Qatar declared Force Majeure on LNG exports after drone strikes on Ras Laffan — 20% of global seaborne LNG offline. Oil prices surging toward $100. Europe faces critical gas storage shortfall.',
+    icon: '🛢️',
+    activeFrom: '2026-03-05',
+    activeUntil: '2026-03-22',
+    publishedAt: '2026-03-05',
+  },
+  {
     id: 'flash-2026-03-01-escalation',
-    headline: 'Middle East Conflict Escalation',
-    body: 'U.S.–Israel coordinated strikes on Iran and Iranian retaliation have triggered a major regional escalation. Israeli operations in Lebanon and Gaza continue. Multiple borders closed. The Truce Pulse tracks these developments against Olympic Truce principles.',
+    headline: 'Middle East Conflict Escalation (Updated 5 March)',
+    body: 'Iranian retaliatory strikes hit 10 countries with 26+ fatalities: Israel (12 killed, Beit Shemesh synagogue destroyed), Kuwait (4), Iraq (4), UAE (3), Bahrain (2), Oman (1). Targets include civilian areas, military bases, airports, and energy infrastructure. 8+ vessels struck in Persian Gulf. Largest Iranian military operation in history.',
     icon: '🔴',
     activeFrom: '2026-03-01',
     activeUntil: '2026-03-22',
-    publishedAt: '2026-03-01',
+    publishedAt: '2026-03-05',
   },
   {
     id: 'flash-2026-02-17-transport',

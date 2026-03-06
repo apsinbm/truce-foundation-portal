@@ -111,9 +111,9 @@ const CEASEFIRES_2025 = [
     region: 'Persian Gulf & Middle East',
     status: 'collapsed',
     date: 'Mar 2026',
-    description: 'Iranian retaliatory missile strikes hit 10 countries (Mar 1): Saudi Arabia (Aramco/military), UAE (Al Dhafra), Bahrain (Fifth Fleet), Kuwait (Camp Arifjan), Qatar (Al Udeid/CENTCOM), Iraq (Erbil/Al-Asad), Jordan (airspace violations), Oman (debris/Hormuz closure), and Cyprus (RAF Akrotiri)',
-    context: 'Largest Iranian military operation in history, first direct strikes on Gulf Arab states, Iraq, and European territory',
-    risks: ['Strait of Hormuz closure', 'Global oil supply disruption', 'Gulf state retaliation', 'NATO Article 5 implications'],
+    description: 'Iranian retaliatory missile/drone strikes hit 10 countries (Mar 1). 26+ fatalities: Israel (12), Kuwait (4), Iraq (4), UAE (3), Bahrain (2), Oman (1). Strait of Hormuz officially closed (Mar 2), IRGC claims full control (Mar 4). Qatar LNG shutdown — Force Majeure declared. Oil prices surging toward $100.',
+    context: 'Largest Iranian military operation in history. Strait of Hormuz transit dropped from 40 ships/day to near zero. 280 vessels stranded. Qatar Ras Laffan offline — 20% of global seaborne LNG gone. Insurance revoked for Strait passage.',
+    risks: ['Strait of Hormuz closed — 16-18M bbl/day disrupted', 'Qatar LNG Force Majeure — 20% global supply offline', 'Oil prices toward $100+ if blockade persists', 'NATO Article 5 implications (Cyprus)'],
     relevance: 'Regional war during Olympic Truce window represents most severe Truce violation in modern history',
   },
   {
@@ -263,7 +263,7 @@ export default function CeasefireWatchPage() {
               speed at which localized conflicts can escalate into regional wars.
             </p>
             <p className="text-gray-600 text-xs mt-3">
-              Note: Status assessments reflect verified developments through March 2, 2026. Analysts caution that
+              Note: Status assessments reflect verified developments through March 5, 2026. Analysts caution that
               conditions remain fluid and some agreements may still be partially operative in limited areas.
             </p>
           </motion.div>
