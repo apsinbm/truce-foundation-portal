@@ -29,6 +29,17 @@ const CEASEFIRES_2025 = [
     relevance: 'Humanitarian corridors essential for aid delivery during Truce',
   },
   {
+    id: 'lbn-isr',
+    parties: ['Lebanon', 'Israel'],
+    region: 'Middle East',
+    status: 'collapsed',
+    date: 'Mar 2026',
+    description: 'Hezbollah launched massive strikes on Israel from southern Lebanon. Israel struck Beirut and Dahiyeh suburb. PM Salam banned Hezbollah military activities. Area south of Litani declared combat zone. 80,000+ displaced. 50+ deaths in first week of March.',
+    context: 'Ceasefire arrangements collapsed as Hezbollah-Israel hostilities resumed with full-scale military operations on both sides of the border',
+    risks: ['80K+ displaced from south Lebanon', '50+ deaths in March', 'Litani declared combat zone', 'PM banning Hezbollah activities'],
+    relevance: 'Ceasefire collapse during Truce window with massive civilian displacement violates core Truce principles',
+  },
+  {
     id: 'isr-irn',
     parties: ['Israel', 'Iran'],
     region: 'Middle East',
@@ -43,12 +54,12 @@ const CEASEFIRES_2025 = [
     id: 'drc-rwa',
     parties: ['DR Congo', 'Rwanda'],
     region: 'Africa',
-    status: 'signed',
-    date: 'June 2025',
-    description: 'Treaty between the two nations addressing eastern DRC conflict',
-    context: 'Diplomatic breakthrough after years of proxy conflicts',
-    risks: ['M23 rebel group activity', 'Resource competition', 'Refugee returns'],
-    relevance: 'Opportunity for humanitarian access improvement in eastern DRC',
+    status: 'collapsed',
+    date: 'June 2025–Mar 2026',
+    description: 'Washington Accords ceasefire collapsed after Rwanda-backed M23 captured Uvira (Mar 3). US Treasury sanctioned RDF and 4 commanders. Hundreds of thousands displaced.',
+    context: 'Ceasefire signed June 2025 collapsed under M23 military offensive in eastern DRC',
+    risks: ['M23 territorial expansion', 'Mass displacement', 'US sanctions on Rwanda', 'Regional destabilization'],
+    relevance: 'Ceasefire collapse during Truce window represents direct violation of peace principles',
   },
   {
     id: 'ind-pak',
@@ -121,11 +132,11 @@ const CEASEFIRES_2025 = [
     parties: ['Pakistan', 'Afghanistan'],
     region: 'South Asia',
     status: 'collapsed',
-    date: 'Feb 2026',
-    description: 'Pakistan launched cross-border airstrikes and ground operations into Afghanistan targeting Taliban positions (Feb 22, Feb 26), breaking de facto arrangements with Taliban government',
-    context: 'Pakistan military operations escalated despite diplomatic channels, creating mass displacement along the border',
-    risks: ['Cross-border military escalation', 'Mass refugee displacement', 'Regional destabilization'],
-    relevance: 'Border conflicts during Truce window violate safe passage and humanitarian access principles',
+    date: 'Feb–Mar 2026',
+    description: 'Full border war: 56 deaths, 129 injuries, 163,000+ displaced (Mar 5). IOM hospital facility damaged. Pakistan cross-border operations escalated from airstrikes to ground war in Nangarhar/Kunar/Khost.',
+    context: 'Escalated from Feb 22 airstrikes to full border war. Türkiye offered mediation with Russia/China support (Mar 3).',
+    risks: ['56 deaths and rising', '163K displaced', 'IOM facilities damaged', 'Mediation uncertain'],
+    relevance: 'Border war during Truce window with humanitarian facilities targeted represents severe Truce violation',
   },
   {
     id: 'irn-cyp',
@@ -257,15 +268,17 @@ export default function CeasefireWatchPage() {
               11 countries: Israel, Saudi Arabia, UAE, Bahrain, Kuwait, Qatar (Al Udeid/CENTCOM), Iraq (Erbil/Al-Asad),
               Jordan, Oman, Cyprus (RAF Akrotiri), and Azerbaijan — expanding the conflict from a bilateral confrontation into a
               regional war spanning from the Eastern Mediterranean to the Persian Gulf. The diplomatic fallout was immediate:
-              11 nations plus the EU boycotted the Paralympic Opening Ceremony over Russia&apos;s participation, while Iran&apos;s
+              14 nations plus the EU boycotted the Paralympic Opening Ceremony over Russia&apos;s participation, while Iran&apos;s
               Olympic Committee formally demanded the IOC punish the United States and Israel for breaching the Olympic Charter.
-              Russia continued its full-scale invasion of Ukraine with daily attacks throughout the Truce period. Pakistan
-              cross-border strikes into Afghanistan threaten the India–Pakistan ceasefire. Sudan&apos;s civil war between SAF
-              and RSF forces has displaced millions. These developments underscore the catastrophic failure of the Olympic
+              Russia continued its full-scale invasion of Ukraine with daily attacks throughout the Truce period. The Lebanon-Israel
+              ceasefire collapsed as Hezbollah launched massive strikes and Israel struck Beirut, with 80,000+ displaced and 50+ killed.
+              The DRC-Rwanda Washington Accords ceasefire collapsed after M23 captured Uvira (Mar 3). Pakistan&apos;s border war with
+              Afghanistan escalated to 56 deaths and 163,000+ displaced. Sudan&apos;s Kordofan offensive struck hospitals and drew
+              UN &ldquo;domicide&rdquo; warnings. These developments underscore the catastrophic failure of the Olympic
               Truce and the speed at which localized conflicts can escalate into regional wars.
             </p>
             <p className="text-gray-600 text-xs mt-3">
-              Note: Status assessments reflect verified developments through March 5, 2026. Analysts caution that
+              Note: Status assessments reflect verified developments through March 6, 2026. Analysts caution that
               conditions remain fluid and some agreements may still be partially operative in limited areas.
             </p>
           </motion.div>
