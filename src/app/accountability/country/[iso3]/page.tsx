@@ -182,7 +182,7 @@ export default function CountryProfilePage() {
                       <p className="text-sm text-gray-600 mb-2">{v.violation.description}</p>
                       {v.violation.date && (
                         <p className="text-xs text-gray-500">
-                          Date: {new Date(v.violation.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+                          Date: {(() => { const [y, m, d] = v.violation.date.split('-'); return new Date(+y, +m - 1, +d).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }); })()}
                         </p>
                       )}
                       {v.violation.casualties && (

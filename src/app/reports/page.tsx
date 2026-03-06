@@ -178,7 +178,7 @@ export default function ReportsPage() {
                 </div>
                 <h3 className="font-semibold text-gray-600 mb-1">{report.title}</h3>
                 <p className="text-sm text-gray-500 mb-2">{report.description}</p>
-                <p className="text-xs text-gray-600">Expected: {new Date(report.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
+                <p className="text-xs text-gray-600">Expected: {(() => { const [y, m, d] = report.date.split('-'); return new Date(+y, +m - 1, +d).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }); })()}</p>
               </motion.div>
             ))}
           </div>

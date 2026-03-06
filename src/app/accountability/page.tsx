@@ -1588,7 +1588,7 @@ export default function AccountabilityPage() {
                                     <p className="text-sm text-gray-600">{violation.description}</p>
                                     {violation.date && (
                                       <p className="text-xs text-gray-500 mt-2">
-                                        Date: {new Date(violation.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+                                        Date: {(() => { const [y, m, d] = violation.date.split('-'); return new Date(+y, +m - 1, +d).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }); })()}
                                       </p>
                                     )}
                                     {violation.sources && violation.sources.length > 0 && (

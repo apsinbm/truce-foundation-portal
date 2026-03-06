@@ -300,6 +300,15 @@ const MONUMENTS = [
 
 const PUBLICATIONS = [
   {
+    title: 'What is the meaning of the Olympic \'truce?\'',
+    author: 'Hugh Dugan',
+    publication: 'Deseret News',
+    date: 'March 5, 2026',
+    description:
+      'Op-ed examining the Olympic Truce and its relevance amid military conflict, arguing that the deeper question is whether fundamental limits on violence can hold firm regardless of political circumstances or military necessity.',
+    url: 'https://www.deseret.com/opinion/2026/03/05/with-paralympics-approaching-what-does-olympic-truce-mean/',
+  },
+  {
     title: 'Italy cheers faith and flag in Milan after Paris\' \'woke\' Olympic spectacle sparked culture clash, experts say',
     author: 'Efrat Lachter',
     publication: 'Fox News',

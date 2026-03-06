@@ -535,7 +535,7 @@ export default function PressPage() {
                             {item.type}
                           </span>
                           <span className="text-xs text-gray-500">
-                            {new Date(item.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+                            {(() => { const [y, m, d] = item.date.split('-'); return new Date(+y, +m - 1, +d).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }); })()}
                           </span>
                         </div>
                         <h3 className="text-gray-900 group-hover:text-blue-500 transition-colors text-sm font-medium mb-1">
