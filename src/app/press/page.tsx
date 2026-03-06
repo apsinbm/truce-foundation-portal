@@ -29,7 +29,7 @@ const COVERAGE_SECTIONS: CoverageSection[] = [
       {
         source: 'CNN',
         title: 'Nearly 14,000 canceled flights: Middle East travel chaos in 5 charts',
-        date: '2026-03-05',
+        date: '2026-03-06',
         url: 'https://edition.cnn.com/travel/middle-east-flights-travel-conflict-vis',
         type: 'analysis',
         description: 'Data visualization showing the scale of aviation disruption across 10 Middle Eastern countries since Operation Epic Fury. Dubai International dropped 85% of scheduled flights; Doha lost 94%. Paralympic delegations from Asia and Africa relying on Gulf hub airports faced severe delays reaching Milano Cortina.',
