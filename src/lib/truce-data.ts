@@ -128,6 +128,14 @@ export const TRUCE_PERIODS: TrucePeriod[] = [
         sources: ['Reuters', 'UK MoD'],
       },
       {
+        country: 'Azerbaijan',
+        countryIso3: 'AZE',
+        description: 'Iranian missile debris fell in Azerbaijani territory during massive retaliatory barrage. Military placed on high alert along Iranian border. Airspace violations and commercial flight diversions.',
+        date: '2026-03-01',
+        severity: 'major',
+        sources: ['Reuters', 'Crisis Group'],
+      },
+      {
         country: 'Russia',
         countryIso3: 'RUS',
         description: 'Continued military operations in Ukraine throughout the Truce period',

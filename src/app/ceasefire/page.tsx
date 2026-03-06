@@ -111,7 +111,7 @@ const CEASEFIRES_2025 = [
     region: 'Persian Gulf & Middle East',
     status: 'collapsed',
     date: 'Mar 2026',
-    description: 'Iranian retaliatory missile/drone strikes hit 10 countries (Mar 1). 26+ fatalities: Israel (12), Kuwait (4), Iraq (4), UAE (3), Bahrain (2), Oman (1). Strait of Hormuz officially closed (Mar 2), IRGC claims full control (Mar 4). Qatar LNG shutdown — Force Majeure declared. Oil prices surging toward $100.',
+    description: 'Iranian retaliatory missile/drone strikes hit 11 countries (Mar 1). 26+ fatalities: Israel (12), Kuwait (4), Iraq (4), UAE (3), Bahrain (2), Oman (1). Debris fell in Azerbaijan. Strait of Hormuz officially closed (Mar 2), IRGC claims full control (Mar 4). Qatar LNG shutdown — Force Majeure declared. Oil surging toward $100.',
     context: 'Largest Iranian military operation in history. Strait of Hormuz transit dropped from 40 ships/day to near zero. 280 vessels stranded. Qatar Ras Laffan offline — 20% of global seaborne LNG gone. Insurance revoked for Strait passage.',
     risks: ['Strait of Hormuz closed — 16-18M bbl/day disrupted', 'Qatar LNG Force Majeure — 20% global supply offline', 'Oil prices toward $100+ if blockade persists', 'NATO Article 5 implications (Cyprus)'],
     relevance: 'Regional war during Olympic Truce window represents most severe Truce violation in modern history',

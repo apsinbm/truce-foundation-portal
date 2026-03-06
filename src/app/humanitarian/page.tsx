@@ -174,6 +174,14 @@ const PRIORITY_COUNTRIES = [
     acapsScore: 2,
     issues: ['73 debris incidents nationwide', 'Airspace violations', 'Civilian fallout from interceptions'],
   },
+  {
+    name: 'Azerbaijan',
+    iso3: 'AZE',
+    status: 'moderate',
+    description: 'Iranian missile debris fell in Azerbaijani territory during massive retaliatory barrage. Military on high alert along Iranian border. Airspace closures and commercial flight diversions affecting humanitarian transit.',
+    acapsScore: 2,
+    issues: ['Iranian missile debris on territory', 'Border military alert', 'Airspace closures', 'Flight diversions'],
+  },
 ];
 
 // Exemplary countries for humanitarian response
