@@ -24,8 +24,24 @@ const COVERAGE_SECTIONS: CoverageSection[] = [
   // === PHASE 3 ===
   {
     title: 'Middle Eastern Military Escalation Breaches the Olympic Truce',
-    dateRange: 'February 27 \u2013 March 5, 2026',
+    dateRange: 'February 27 \u2013 March 6, 2026',
     items: [
+      {
+        source: 'Inside The Games',
+        title: 'Russian Paralympians accredited amid rising diplomatic tension',
+        date: '2026-03-06',
+        url: 'https://www.insidethegames.biz/articles/russian-team-granted-entry-amid-rising-diplomatic-tension',
+        type: 'media',
+        description: 'Russian athletes including three-time Paralympic champion Aleksey Bugayev received IPC bipartite invitations as the boycott coalition expanded to 14 nations and the EU. Ukraine emphasized 650 athletes and coaches killed since 2022. Italy clarified it will not block visas despite opposing the IPC decision.',
+      },
+      {
+        source: 'Inside The Games',
+        title: 'Politicised Paralympics turn to sporting arena',
+        date: '2026-03-06',
+        url: 'https://www.insidethegames.biz/articles/politicised-paralympics-turn-to-sporting-arena',
+        type: 'analysis',
+        description: 'After days of diplomatic boycotts, visa disputes, and geopolitical controversy surrounding Russian participation and Middle East escalation, the Milano Cortina 2026 Paralympics shifted focus to athletic competition as events got underway.',
+      },
       {
         source: 'The Guardian',
         title: 'Seven countries to boycott Paralympics ceremony over flag-flying Russians',
@@ -75,14 +91,6 @@ const COVERAGE_SECTIONS: CoverageSection[] = [
         description: 'The IOC appealed to countries to assist Paralympic athletes from war-affected regions traveling to the Games, underscoring the humanitarian purpose behind the Olympic Truce and the logistical challenges created by ongoing conflicts.',
       },
       {
-        source: 'Dawn (AFP)',
-        title: 'IOC calls for support for Paralympians from war-hit nations',
-        date: '2026-03-04',
-        url: 'https://www.dawn.com/news/1978164/ioc-calls-for-support-for-paralympians-from-war-hit-nations',
-        type: 'media',
-        description: 'Highlights the contrast between the IOC\u2019s rapid condemnation of Russia\u2019s 2022 truce violation and its neutral stance on the current strikes involving the United States, Israel, and Iran during the Paralympic period.',
-      },
-      {
         source: 'PlanetSki',
         title: 'IOC reiterates support for Olympic Truce',
         date: '2026-03-04',
@@ -113,14 +121,6 @@ const COVERAGE_SECTIONS: CoverageSection[] = [
         url: 'https://www.deseret.com/utah/2026/03/03/what-the-ioc-says-about-the-war-in-iran-and-the-olympic-truce/',
         type: 'media',
         description: 'Reports that the IOC urged nations to respect the Olympic Truce as the 2026 Winter Paralympics approached, while acknowledging it has no authority to enforce the truce amid the new conflict involving Iran.',
-      },
-      {
-        source: 'KSL',
-        title: 'What the IOC says about war in Iran and the Olympic Truce',
-        date: '2026-03-03',
-        url: 'https://www.ksl.com/article/51456646/what-the-ioc-says-about-war-in-iran-and-the-olympic-truce',
-        type: 'media',
-        description: 'Explains how the escalation of war involving Iran shortly before the Milano Cortina Paralympics raised questions about the Olympic Truce, with Olympic officials emphasizing the principle while stressing their political neutrality.',
       },
       {
         source: 'Olympics.com',
