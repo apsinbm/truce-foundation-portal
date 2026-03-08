@@ -35,6 +35,14 @@ const COVERAGE_SECTIONS: CoverageSection[] = [
         description: "Iranian Paralympian Aboulfazl Khatibi Mianaei withdrew from the 2026 Winter Games due to safety concerns during the U.S.-Israeli military campaign against Iran, resulting in Iran's flag being removed from the opening ceremony's Athletes Parade.",
       },
       {
+        source: 'The Independent',
+        title: 'Chaos at Dubai airport after flights suspended following drone attack',
+        date: '2026-03-07',
+        url: 'https://www.independent.co.uk/news/world/middle-east/dubai-airport-departures-iran-war-drones-b2933899.html',
+        type: 'media',
+        description: 'An Iranian drone struck near the terminals of Dubai International Airport, the world\'s busiest international travel hub, forcing evacuations and flight suspensions. The attack on a key global transit corridor directly undermined the Olympic Truce\'s guarantee of safe passage, stranding Paralympic delegations from Asia and Africa who rely on Gulf hub airports to reach Milano Cortina.',
+      },
+      {
         source: 'The Guardian',
         title: 'Russian flag met largely by silence at opening ceremony of Winter Paralympics',
         date: '2026-03-06',
