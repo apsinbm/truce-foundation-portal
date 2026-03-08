@@ -27,8 +27,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/leaderboard`, priority: 0.6, changeFrequency: 'daily' },
     { url: `${BASE_URL}/videos`, priority: 0.5, changeFrequency: 'monthly' },
     { url: `${BASE_URL}/gallery`, priority: 0.5, changeFrequency: 'monthly' },
-    { url: `${BASE_URL}/stories`, priority: 0.5, changeFrequency: 'monthly' },
-    { url: `${BASE_URL}/candles`, priority: 0.5, changeFrequency: 'weekly' },
-    { url: `${BASE_URL}/forum`, priority: 0.5, changeFrequency: 'weekly' },
   ];
 }

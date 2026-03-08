@@ -84,20 +84,6 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
     }
   };
 
-  // Global keyboard shortcut listener
-  useEffect(() => {
-    const handleGlobalKeyDown = (e: KeyboardEvent) => {
-      // Cmd/Ctrl + K to open search
-      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
-        e.preventDefault();
-        // This would need to be handled by parent component
-      }
-    };
-
-    document.addEventListener('keydown', handleGlobalKeyDown);
-    return () => document.removeEventListener('keydown', handleGlobalKeyDown);
-  }, []);
-
   return (
     <AnimatePresence>
       {isOpen && (

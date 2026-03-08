@@ -3,10 +3,24 @@ import { Analytics } from '@vercel/analytics/react';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Truce Foundation - Olympic Truce',
+  title: {
+    default: 'Truce Foundation - Olympic Truce',
+    template: '%s | Truce Foundation',
+  },
   description: 'Transforming the Olympic Truce tradition into meaningful action for peace. Monitoring compliance, advocacy, and global engagement.',
   keywords: ['Olympic Truce', 'Truce Foundation', 'Peace', 'Milano-Cortina 2026', 'Olympics'],
   authors: [{ name: 'Truce Foundation' }],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   manifest: '/manifest.json',
   icons: {
     icon: '/favicon.ico',

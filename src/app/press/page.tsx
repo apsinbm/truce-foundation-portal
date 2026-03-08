@@ -24,8 +24,56 @@ const COVERAGE_SECTIONS: CoverageSection[] = [
   // === PHASE 3 ===
   {
     title: 'Middle Eastern Military Escalation Breaches the Olympic Truce',
-    dateRange: 'February 27 \u2013 March 6, 2026',
+    dateRange: 'February 27 \u2013 March 7, 2026',
     items: [
+      {
+        source: 'Fox News',
+        title: "Iran's flag removed from Paralympics opening ceremony after sole athlete withdraws over travel safety concerns",
+        date: '2026-03-07',
+        url: 'https://www.foxnews.com/sports/iran-flag-removed-paralympics-opening-ceremony-sole-athlete-withdraws-travel-safety-concerns',
+        type: 'media',
+        description: "Iranian Paralympian Aboulfazl Khatibi Mianaei withdrew from the 2026 Winter Games due to safety concerns during the U.S.-Israeli military campaign against Iran, resulting in Iran's flag being removed from the opening ceremony's Athletes Parade.",
+      },
+      {
+        source: 'The Guardian',
+        title: 'Russian flag met largely by silence at opening ceremony of Winter Paralympics',
+        date: '2026-03-06',
+        url: 'https://www.theguardian.com/sport/2026/mar/06/russian-flag-met-largely-by-silence-at-opening-ceremony-of-winter-paralympics',
+        type: 'media',
+        description: "The Russian flag's return to the Paralympic stage after 12 years was met with near silence at the opening ceremony in the Arena di Verona, as seven nations boycotted the event in protest over the IPC's decision to reinstate Russia and Belarus.",
+      },
+      {
+        source: 'BBC Sport',
+        title: 'Russia and Belarus athletes parade behind national flags in opening ceremony',
+        date: '2026-03-06',
+        url: 'https://www.bbc.com/sport/articles/c98gkg3kr1jo',
+        type: 'media',
+        description: 'Athletes from Russia and Belarus marched behind their national flags at the Milano Cortina Paralympic opening ceremony for the first time since Sochi 2014, as teams from seven nations including Ukraine boycotted the event in protest.',
+      },
+      {
+        source: 'IPC',
+        title: 'Milano Cortina 2026 Paralympic Winter Games open with stunning ceremony',
+        date: '2026-03-06',
+        url: 'https://www.paralympic.org/news/milano-cortina-2026-opening-ceremony',
+        type: 'official',
+        description: 'The Milano Cortina 2026 Paralympic Opening Ceremony took place at the ancient Arena di Verona, featuring 611 Para athletes from 55 delegations competing across six sports in a spectacle blending Italian cultural heritage with contemporary inclusive performances.',
+      },
+      {
+        source: 'Kyiv Independent',
+        title: 'Russia back at Paralympics under national flag, its war veterans eye 2028 games',
+        date: '2026-03-06',
+        url: 'https://kyivindependent.com/russia-returns-to-paralympics-its-war-veterans-are-eyeing-to-take-part/',
+        type: 'analysis',
+        description: "Investigation reveals at least 70 veterans of Russia's war in Ukraine have been recruited into national Paralympic teams, with IPC president Andrew Parsons stating injured soldiers would be allowed to compete at future Games regardless of their combat history.",
+      },
+      {
+        source: 'BBC Sport',
+        title: 'Injured Russian soldiers would be allowed at future Games, says IPC president',
+        date: '2026-03-06',
+        url: 'https://www.bbc.com/sport/articles/c2048r2rdyvo',
+        type: 'analysis',
+        description: "IPC president Andrew Parsons told BBC Sport that Russian soldiers injured in the war with Ukraine will be allowed to compete at future Paralympic Games, stating 'It doesn\u2019t matter to us what they have done in the past in the combat field.'",
+      },
       {
         source: 'CNN',
         title: 'Nearly 14,000 canceled flights: Middle East travel chaos in 5 charts',

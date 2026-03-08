@@ -8,10 +8,32 @@ const pool = new Pool({
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
-  const start = searchParams.get('start') || new Date(Date.now() - 30 * 86400000).toISOString();
-  const end = searchParams.get('end') || new Date().toISOString();
-  const limit = parseInt(searchParams.get('limit') || '50');
+
+  // Validate start date
+  const rawStart = searchParams.get('start');
+  const start = rawStart || new Date(Date.now() - 30 * 86400000).toISOString();
+  if (rawStart && isNaN(new Date(rawStart).getTime())) {
+    return NextResponse.json({ error: 'Invalid start date' }, { status: 400 });
+  }
+
+  // Validate end date
+  const rawEnd = searchParams.get('end');
+  const end = rawEnd || new Date().toISOString();
+  if (rawEnd && isNaN(new Date(rawEnd).getTime())) {
+    return NextResponse.json({ error: 'Invalid end date' }, { status: 400 });
+  }
+
+  // Validate and clamp limit (1-500, default 50)
+  let limit = parseInt(searchParams.get('limit') || '50');
+  if (isNaN(limit)) limit = 50;
+  if (limit < 1) limit = 1;
+  if (limit > 500) limit = 500;
+
+  // Validate source
   const source = searchParams.get('source');
+  if (source !== null && source !== 'UCDP' && source !== 'ACLED') {
+    return NextResponse.json({ error: 'Invalid source. Must be UCDP or ACLED.' }, { status: 400 });
+  }
 
   try {
     let sourceFilter = '';
