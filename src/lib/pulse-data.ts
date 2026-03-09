@@ -39,6 +39,94 @@ export interface PulseEntry {
 
 export const PULSE_ENTRIES: PulseEntry[] = [
   {
+    id: 'pulse-2026-03-07-08-safe-passage-humanitarian-access',
+    periodStart: '2026-03-07',
+    periodEnd: '2026-03-08',
+    periodLabel: '7\u20138 March 2026',
+    focusAreas: ['Safe Passage', 'Humanitarian Access', 'De-escalation', 'Regional Stability'],
+    sections: [
+      {
+        id: 'safe-passage',
+        title: 'Safe Passage Jeopardized Across Multiple Theaters',
+        icon: '\u{1F6E1}\u{FE0F}',
+        color: 'green',
+        bullets: [
+          {
+            headline: 'Israeli Strikes on Iranian Fuel Depots',
+            text: 'Strikes on Iranian fuel infrastructure produced widespread fires and thick, oily smoke over Tehran, highlighting acute risks to civilian movement and the broader environment. The destruction of energy supply chains compounds the barriers to safe passage for civilians, humanitarian workers, and diplomatic missions.',
+          },
+          {
+            headline: 'U.S. Cruise Missile Reportedly Strikes Girls\u2019 School Compound',
+            text: 'A reported strike on a school compound in Iran killed approximately 175 students and staff, starkly illustrating the vulnerability of noncombatants and the erosion of protected civilian spaces. Such incidents directly contravene the Olympic Truce\u2019s guarantee that civilian areas remain insulated from hostilities.',
+          },
+          {
+            headline: 'Cross-Border Spillover Threatens Regional Movement',
+            text: 'Iran\u2019s Islamic Revolutionary Guard Corps claimed drone strikes on a U.S. air combat center near Abu Dhabi, and rockets targeted the U.S. Embassy in Baghdad. These cross-border actions create unpredictable security conditions that impede the movement of civilians, humanitarian personnel, and diplomatic missions across the region.',
+          },
+        ],
+      },
+      {
+        id: 'humanitarian-access',
+        title: 'Humanitarian Access & Essential Infrastructure Under Attack',
+        icon: '\u{1F6D1}',
+        color: 'blue',
+        bullets: [
+          {
+            headline: 'Desalination Plant Strikes Threaten Water Supply',
+            text: 'Iran\u2019s foreign minister accused the United States of striking a desalination plant on Qeshm Island, affecting the water supply of 30 villages. Separately, Bahrain reported an Iranian drone caused material damage to a desalination facility. These incidents underscore how essential civilian services become entangled in military operations, with immediate humanitarian consequences.',
+          },
+          {
+            headline: 'Gaza: Civilians and UN Operations Targeted',
+            text: 'The killing of six Palestinians\u2014including two girls\u2014during Israeli air and tank strikes in Gaza, alongside an accidental Israeli strike on a UN fuel truck, demonstrates how humanitarian operations and civilian survival depend on predictable, de-escalated conditions that the Truce seeks to foster.',
+          },
+        ],
+      },
+      {
+        id: 'escalation',
+        title: 'Widening Conflict Trajectory Challenges De-escalation',
+        icon: '\u{26A0}\u{FE0F}',
+        color: 'amber',
+        bullets: [
+          {
+            headline: 'U.S. Emergency Arms Transfers and Production Surge',
+            text: 'The United States\u2019 emergency sale of thousands of bombs to Israel, the quadrupling of \u201CExquisite Class\u201D weaponry production, and discussions of potential U.S.\u2013Israeli troop deployments into Iran all signal an expanding conflict trajectory that runs directly counter to the Truce\u2019s call for calming global hostilities.',
+          },
+          {
+            headline: 'Partial Restraint Amid Continued Retaliation',
+            text: 'Iran\u2019s temporary leadership council attempted to signal restraint by suspending attacks on neighboring states unless strikes originated from their territory, yet retaliatory actions continued. Regional actors\u2014including Iraqi Kurdish leaders seeking neutrality\u2014are navigating heightened insecurity that complicates diplomatic stabilization.',
+          },
+        ],
+      },
+      {
+        id: 'global-ripple',
+        title: 'Global Economic & Political Ripple Effects',
+        icon: '\u{1F30D}',
+        color: 'purple',
+        bullets: [
+          {
+            headline: 'Oil Prices Surge Above $100/Barrel',
+            text: 'The conflict has driven oil prices above $100 per barrel, prompting G7 discussions on emergency strategic reserves. Economic volatility of this scale demonstrates how hostilities in one region destabilize global systems, amplifying tensions far beyond the battlefield.',
+          },
+          {
+            headline: 'Truce Principles Salient Amid Global Instability',
+            text: 'The Olympic Truce\u2019s emphasis on collective calm and international cooperation becomes particularly urgent when economic disruption and political polarization risk compounding the humanitarian impact of conflict across multiple continents.',
+          },
+        ],
+      },
+    ],
+    overallAlignment: {
+      level: 'critical',
+      summary: 'Unfolding events reveal a landscape where the principles of the Olympic Truce are urgently relevant yet profoundly strained. Civilian protection, humanitarian continuity, and de-escalation remain essential benchmarks for assessing progress toward peace, but reported strikes on schools, desalination plants, and energy infrastructure\u2014alongside cross-border military actions and an expanding arms pipeline\u2014demonstrate a widening gap between the Truce\u2019s aspirations and conditions on the ground. The global economic fallout further underscores that no region is insulated from the consequences of escalation.',
+    },
+    keyConstraints: [
+      'A reported strike on a school compound killing approximately 175 students and staff represents one of the most severe violations of civilian protection norms during the Truce period.',
+      'Attacks on desalination infrastructure in both Iran and Bahrain directly threaten water access for civilian populations, implicating the Truce\u2019s humanitarian access principles.',
+      'Cross-border military actions\u2014including drone strikes near Abu Dhabi and rocket attacks on the U.S. Embassy in Baghdad\u2014create unpredictable security conditions that impede safe passage across the region.',
+      'Oil prices surging above $100/barrel and G7 emergency reserve discussions illustrate the global economic destabilization resulting from conflict escalation during the Truce window.',
+    ],
+    publishedAt: '2026-03-09',
+  },
+  {
     id: 'pulse-2026-03-06-civilian-protection-safe-passage',
     periodStart: '2026-03-06',
     periodEnd: '2026-03-06',
