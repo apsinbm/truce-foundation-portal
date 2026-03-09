@@ -24,8 +24,16 @@ const COVERAGE_SECTIONS: CoverageSection[] = [
   // === PHASE 3 ===
   {
     title: 'Middle Eastern Military Escalation Breaches the Olympic Truce',
-    dateRange: 'February 27 \u2013 March 7, 2026',
+    dateRange: 'February 27 \u2013 March 9, 2026',
     items: [
+      {
+        source: 'Reuters',
+        title: "Players' union raises alarm over safety of Iran women's soccer team after Asian Cup exit",
+        date: '2026-03-09',
+        url: 'https://www.reuters.com/sports/soccer/players-union-raises-alarm-over-safety-iran-womens-soccer-team-after-asian-cup-2026-03-09/',
+        type: 'media',
+        description: "FIFPRO called on FIFA and the AFC to protect Iran's women's soccer team after players were branded 'wartime traitors' by state television for standing in silence during their national anthem at the Women's Asian Cup in Australia. The team's protest came as U.S.-Israeli strikes hit Iran, and the union warned that the players face serious safety risks upon returning home — a direct example of how the conflict's reach extends beyond the battlefield to threaten athletes the Olympic Truce is meant to protect.",
+      },
       {
         source: 'Fox News',
         title: "Iran's flag removed from Paralympics opening ceremony after sole athlete withdraws over travel safety concerns",
