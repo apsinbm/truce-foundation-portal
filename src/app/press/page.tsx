@@ -35,6 +35,22 @@ const COVERAGE_SECTIONS: CoverageSection[] = [
         description: "FIFPRO called on FIFA and the AFC to protect Iran's women's soccer team after players were branded 'wartime traitors' by state television for standing in silence during their national anthem at the Women's Asian Cup in Australia. The team's protest came as U.S.-Israeli strikes hit Iran, and the union warned that the players face serious safety risks upon returning home — a direct example of how the conflict's reach extends beyond the battlefield to threaten athletes the Olympic Truce is meant to protect.",
       },
       {
+        source: 'Inside The Games',
+        title: 'Abodi: "The IPC undermines the Olympic Truce"',
+        date: '2026-03-08',
+        url: 'https://www.insidethegames.biz/articles/abodi-the-ipc-undermine-the-olympic-truce',
+        type: 'analysis',
+        description: "Italy's Minister for Sport Andrea Abodi accused the IPC of diminishing the value of the Olympic Truce by readmitting Russian and Belarusian national flags and anthems at the Milano Cortina Paralympics, calling it a 'lack of respect for an invaded and devastated nation.' He also criticized the ban on Ukrainian athletes wearing kit featuring their national colours and borders, describing it as 'denied identity.'",
+      },
+      {
+        source: 'Inside The Games',
+        title: 'Sheikh Joaan: Dialogue first amid war',
+        date: '2026-03-08',
+        url: 'https://www.insidethegames.biz/articles/sheikh-joaan-dialogue-first-amid-conflict',
+        type: 'media',
+        description: "OCA president Sheikh Joaan bin Hamad Al Thani called for all sides to 'advocate dialogue' and urged de-escalation as Middle East airspace closures disrupted sports logistics and travel. The OCA confirmed it is coordinating with National Olympic Committees to safeguard athletes' welfare ahead of 2026 qualification events, while Iran's Paralympic committee confirmed safe travel to Milano Cortina was not possible.",
+      },
+      {
         source: 'Fox News',
         title: "Iran's flag removed from Paralympics opening ceremony after sole athlete withdraws over travel safety concerns",
         date: '2026-03-07',
@@ -65,6 +81,14 @@ const COVERAGE_SECTIONS: CoverageSection[] = [
         url: 'https://www.bbc.com/sport/articles/c98gkg3kr1jo',
         type: 'media',
         description: 'Athletes from Russia and Belarus marched behind their national flags at the Milano Cortina Paralympic opening ceremony for the first time since Sochi 2014, as teams from seven nations including Ukraine boycotted the event in protest.',
+      },
+      {
+        source: 'Inside The Games',
+        title: 'War leaves Iran out of Milano Cortina',
+        date: '2026-03-06',
+        url: 'https://www.insidethegames.biz/articles/conflict-leaves-iran-out-of-milano-cortina',
+        type: 'media',
+        description: "Iran's National Paralympic Committee confirmed that 'safe travel was not possible' due to the widening Middle East war, forcing two-time Paralympian Aboulfazl Khatibi Mianaei to miss his third Winter Games. IPC president Andrew Parsons said the organizers explored alternative travel routes but concluded 'the risk to human life remains far too high,' and Iran's flag was removed from the opening ceremony parade.",
       },
       {
         source: 'IPC',
