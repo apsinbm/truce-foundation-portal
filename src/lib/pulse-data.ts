@@ -39,6 +39,90 @@ export interface PulseEntry {
 
 export const PULSE_ENTRIES: PulseEntry[] = [
   {
+    id: 'pulse-2026-03-09-safe-passage-humanitarian-escalation',
+    periodStart: '2026-03-09',
+    periodEnd: '2026-03-09',
+    periodLabel: '9 March 2026',
+    focusAreas: ['Safe Passage', 'Humanitarian Access', 'De-escalation', 'Regional Stability'],
+    sections: [
+      {
+        id: 'safe-passage',
+        title: 'Safe Passage Constrained Across Multiple Domains',
+        icon: '\u{1F6E1}\u{FE0F}',
+        color: 'green',
+        bullets: [
+          {
+            headline: 'Airstrikes and Missile Activity Across Five Countries',
+            text: 'Airstrikes and missile activity affecting Iran, Lebanon, Syria, Bahrain, and Turkey have contributed to civilian casualties, displacement, and regional insecurity. The scale and geographic spread of ongoing military operations directly implicate the Truce\u2019s emphasis on safe passage for civilians, mediators, and neutral actors.',
+          },
+          {
+            headline: 'Strait of Hormuz and Regional Airspace Disrupted',
+            text: 'The reported disruption of flight routes, maritime traffic, and cross-border movement\u2014particularly in the Strait of Hormuz and surrounding airspace\u2014illustrates how active hostilities constrain the freedom of movement that the Truce seeks to preserve. Naval escorts for commercial shipping highlight attempts to mitigate risk, but also reflect the extent to which ordinary civilian and commercial transit has become militarized rather than safeguarded through restraint.',
+          },
+        ],
+      },
+      {
+        id: 'humanitarian-access',
+        title: 'Humanitarian Access Under Acute Pressure',
+        icon: '\u{1F6D1}',
+        color: 'blue',
+        bullets: [
+          {
+            headline: 'Large-Scale Displacement in Lebanon',
+            text: 'Large-scale displacement in Lebanon, including significant numbers of children, places immediate demands on humanitarian corridors, relief operations, and host-community support. The situation presents acute challenges to humanitarian access, a core pillar of the Olympic Truce.',
+          },
+          {
+            headline: 'Mediation and Peace-Support Functions Disrupted',
+            text: 'The expansion of hostilities across multiple theaters complicates the ability of humanitarian agencies to operate safely and predictably. Diplomatic and mediation efforts related to other conflicts have been delayed or suspended due to regional insecurity and travel disruptions, illustrating how intensified warfare can indirectly impede humanitarian and peace-support functions well beyond the immediate zone of combat.',
+          },
+        ],
+      },
+      {
+        id: 'escalation',
+        title: 'Escalation Dynamics Counter De-escalation Objectives',
+        icon: '\u{26A0}\u{FE0F}',
+        color: 'amber',
+        bullets: [
+          {
+            headline: 'Conflict Spillover Assumes Global Significance',
+            text: 'The conflict\u2019s spillover effects\u2014ranging from threats to international energy supply routes to heightened military alert levels among regional and extra-regional actors\u2014demonstrate how localized warfare can rapidly assume global significance. These escalation dynamics run counter to the Truce\u2019s objective of calming global hostilities.',
+          },
+          {
+            headline: 'Political Signals Favor Continued Military Action',
+            text: 'Political statements signaling continued or intensified military action, alongside warnings of retaliatory measures affecting international commerce, contribute to an environment of uncertainty that the Olympic Truce was designed to mitigate through symbolic and practical restraint.',
+          },
+        ],
+      },
+      {
+        id: 'convergence',
+        title: 'Limited Convergence with Truce Principles',
+        icon: '\u{1F30D}',
+        color: 'purple',
+        bullets: [
+          {
+            headline: 'Diplomatic Communications and Civilian Shipping Escorts',
+            text: 'Diplomatic communications among major powers, efforts to stabilize energy markets, and discussions around escorting civilian shipping suggest an underlying recognition of the need to contain escalation and protect civilian interests. While these measures fall short of a comprehensive cessation of hostilities, they reflect partial alignment with the Truce\u2019s broader intent to reduce harm to non-combatants.',
+          },
+          {
+            headline: 'Fragility and Relevance of the Truce Framework',
+            text: 'Today\u2019s events illustrate both the fragility and continued relevance of the Olympic Truce in a highly interconnected security environment. The widespread disruption of safe passage, constraints on humanitarian access, and escalation of hostilities reinforce the importance of the Truce as a guiding framework for restraint, even when its observance remains aspirational rather than operational.',
+          },
+        ],
+      },
+    ],
+    overallAlignment: {
+      level: 'critical',
+      summary: 'Today\u2019s events reveal multiple points of tension with the Olympic Truce\u2019s long-standing call for the protection of civilians, the facilitation of humanitarian access, and the de-escalation of armed conflict. The widespread disruption of safe passage across multiple domains, acute constraints on humanitarian operations, and escalation dynamics that extend well beyond the immediate zone of combat all underscore the gap between Truce aspirations and conditions on the ground. Limited but notable points of convergence\u2014including diplomatic communications and efforts to protect civilian shipping\u2014suggest partial recognition of Truce principles, but fall far short of the comprehensive restraint the framework envisions.',
+    },
+    keyConstraints: [
+      'Airstrikes and missile activity affecting Iran, Lebanon, Syria, Bahrain, and Turkey have caused civilian casualties, displacement, and regional insecurity, directly implicating the Truce\u2019s safe passage principles.',
+      'Large-scale displacement in Lebanon, including significant numbers of children, places acute demands on humanitarian corridors and relief operations that the Truce seeks to protect.',
+      'Disruption of the Strait of Hormuz maritime traffic and regional airspace demonstrates how active hostilities constrain civilian and commercial movement, militarizing transit that the Truce aims to safeguard.',
+      'Diplomatic and mediation efforts related to other conflicts have been delayed or suspended due to regional insecurity, illustrating how escalation impedes peace-support functions beyond the immediate combat zone.',
+    ],
+    publishedAt: '2026-03-11',
+  },
+  {
     id: 'pulse-2026-03-07-08-safe-passage-humanitarian-access',
     periodStart: '2026-03-07',
     periodEnd: '2026-03-08',
