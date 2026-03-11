@@ -32,7 +32,7 @@ const COVERAGE_SECTIONS: CoverageSection[] = [
         date: '2026-03-11',
         url: 'https://geopoliticalfutures.com/a-summary-of-the-iran-war-so-far/',
         type: 'analysis',
-        description: 'Comprehensive strategic assessment of the U.S.\u2013Israeli military campaign against Iran and its cascading regional consequences. The analysis maps the conflict\u2019s trajectory across multiple theaters\u2014including strikes on Iranian nuclear and military infrastructure, Strait of Hormuz maritime disruptions, and cross-border escalation involving Lebanon, Syria, Bahrain, and Turkey\u2014providing essential context for understanding the scale of Olympic Truce violations during the Milano Cortina 2026 Games period.',
+        description: 'George Friedman analyzes the strategic logic of the U.S.\u2013Israeli air campaign against Iran, identifying three concurrent objectives: destroying Iran\u2019s nuclear program, crippling the IRGC before a new government consolidates power, and keeping the Strait of Hormuz open as nearly one quarter of the world\u2019s oil transits through it. The analysis examines how IRGC attacks on regional oil producers threaten a global economic crisis, and why ground occupation of Iran is unlikely, leaving the war\u2019s outcome dependent on whether air power alone can achieve Washington\u2019s goals.',
       },
       {
         source: 'Reuters',
