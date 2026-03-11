@@ -39,6 +39,90 @@ export interface PulseEntry {
 
 export const PULSE_ENTRIES: PulseEntry[] = [
   {
+    id: 'pulse-2026-03-10-maritime-insecurity-humanitarian-strain',
+    periodStart: '2026-03-10',
+    periodEnd: '2026-03-10',
+    periodLabel: '10 March 2026',
+    focusAreas: ['Safe Passage', 'Humanitarian Access', 'De-escalation', 'Regional Stability'],
+    sections: [
+      {
+        id: 'maritime-insecurity',
+        title: 'Maritime Insecurity Threatens Safe Passage',
+        icon: '\u{1F6E1}\u{FE0F}',
+        color: 'green',
+        bullets: [
+          {
+            headline: 'Strait of Hormuz Attacks Intensify',
+            text: 'Maritime insecurity in the Strait of Hormuz has intensified, with three vessels struck by unknown projectiles and a total of 14 ships hit since the start of the conflict. Such attacks undermine the principle of safe passage, particularly in a waterway essential for global commerce and humanitarian logistics.',
+          },
+          {
+            headline: 'U.S. Destroys Iranian Mine-Laying Vessels',
+            text: 'The U.S. destruction of 16 Iranian mine-laying naval vessels further underscores the volatility of this corridor and the heightened risk to civilian shipping. Confusion over whether the U.S. Navy escorted an oil tanker\u2014later retracted as incorrectly captioned\u2014illustrates the fragility of communication channels during crises, complicating efforts to ensure safe maritime passage.',
+          },
+        ],
+      },
+      {
+        id: 'humanitarian-access',
+        title: 'Humanitarian Access Blocked by Refusal to Pause Hostilities',
+        icon: '\u{1F6D1}',
+        color: 'blue',
+        bullets: [
+          {
+            headline: 'Israeli Airstrikes Kill at Least 95 in Lebanon',
+            text: 'In Lebanon, the humanitarian situation is deteriorating rapidly. Israeli airstrikes killed at least 95 people, and negotiations remain stalled as Israel has rejected Lebanon\u2019s demand for a complete end to airstrikes before negotiations can take place. The refusal to pause hostilities, even temporarily, directly contradicts the Truce\u2019s call for de-escalation to enable dialogue and relief operations.',
+          },
+          {
+            headline: 'France Triples Humanitarian Aid to Lebanon',
+            text: 'France\u2019s decision to send 60 tons of humanitarian aid to Lebanon, tripling the volume dispatched so far, demonstrates the scale of need and the urgency of ensuring unimpeded humanitarian access. The expanding relief effort highlights the gap between humanitarian demand and the access constraints imposed by ongoing military operations.',
+          },
+        ],
+      },
+      {
+        id: 'escalation',
+        title: 'Widening Hostilities and Absence of Restraint',
+        icon: '\u{26A0}\u{FE0F}',
+        color: 'amber',
+        bullets: [
+          {
+            headline: '17 U.S. Sites Struck, 140 Service Members Wounded',
+            text: 'U.S. officials report that at least 17 damaged U.S. sites and other installations have been struck, and 140 U.S. service members have been wounded in 10 days of attacks. These patterns of repeated strikes highlight the absence of restraint and the widening scope of conflict\u2014conditions that run counter to the Truce\u2019s objective of calming global hostilities during periods of heightened international tension.',
+          },
+          {
+            headline: 'Energy Market Destabilization Prompts Emergency Response',
+            text: 'The International Energy Agency\u2019s proposal for the release of 400 million barrels of oil reflects the destabilizing effect of conflict on global energy markets. Economic disruption of this magnitude demonstrates how hostilities in one region cascade across global systems, amplifying tensions far beyond the battlefield.',
+          },
+        ],
+      },
+      {
+        id: 'global-truce-relevance',
+        title: 'Global Relevance of Truce Principles',
+        icon: '\u{1F30D}',
+        color: 'purple',
+        bullets: [
+          {
+            headline: 'Ukraine: Continued Deportation of Children',
+            text: 'In Ukraine, the continued deportation of children\u2014where 80% of them have yet to return\u2014represents a profound violation of protected humanitarian norms. The systematic removal of minors from conflict zones without return undermines the Truce\u2019s emphasis on the protection of vulnerable populations and the preservation of family unity.',
+          },
+          {
+            headline: 'South Sudan: UN Mission Maintains Protective Presence',
+            text: 'In South Sudan, the UN Mission\u2019s refusal to abandon its base in Akobo, insisting on maintaining a protective presence to civilians, aligns directly with the Truce\u2019s emphasis on safeguarding vulnerable populations amid conflict. This determination to hold ground for civilian protection offers a concrete example of Truce principles in practice.',
+          },
+        ],
+      },
+    ],
+    overallAlignment: {
+      level: 'critical',
+      summary: 'Ongoing international events reflect a series of escalating hostilities across multiple regions that directly challenge the Olympic Truce\u2019s foundational aims. Maritime insecurity in the Strait of Hormuz, the refusal to pause airstrikes in Lebanon to enable negotiations, the widening scope of military strikes on U.S. installations, and the continued deportation of children in Ukraine collectively demonstrate an urgent need for mechanisms of restraint. Limited points of convergence\u2014including France\u2019s expanded humanitarian aid and the UN Mission\u2019s protective stance in South Sudan\u2014underscore the Truce\u2019s continued relevance as a framework for safeguarding civilians and creating openings for diplomacy.',
+    },
+    keyConstraints: [
+      'Fourteen ships struck in the Strait of Hormuz since the start of the conflict, with three vessels hit by unknown projectiles, directly undermining the Truce\u2019s safe passage principles in a critical global waterway.',
+      'Israeli airstrikes killed at least 95 people in Lebanon while negotiations remain stalled over refusal to pause hostilities, contradicting the Truce\u2019s call for de-escalation to enable dialogue.',
+      'At least 17 U.S. sites struck and 140 service members wounded in 10 days of attacks, demonstrating the widening scope of conflict and absence of restraint.',
+      'Continued deportation of children in Ukraine, with 80% yet to return, represents a profound violation of protected humanitarian norms central to the Truce framework.',
+    ],
+    publishedAt: '2026-03-11',
+  },
+  {
     id: 'pulse-2026-03-09-safe-passage-humanitarian-escalation',
     periodStart: '2026-03-09',
     periodEnd: '2026-03-09',
