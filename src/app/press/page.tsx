@@ -24,8 +24,16 @@ const COVERAGE_SECTIONS: CoverageSection[] = [
   // === PHASE 3 ===
   {
     title: 'Middle Eastern Military Escalation Breaches the Olympic Truce',
-    dateRange: 'February 27 \u2013 March 9, 2026',
+    dateRange: 'February 27 \u2013 March 11, 2026',
     items: [
+      {
+        source: 'Geopolitical Futures',
+        title: 'A Summary of the Iran War, So Far',
+        date: '2026-03-11',
+        url: 'https://geopoliticalfutures.com/a-summary-of-the-iran-war-so-far/',
+        type: 'analysis',
+        description: 'Comprehensive strategic assessment of the U.S.\u2013Israeli military campaign against Iran and its cascading regional consequences. The analysis maps the conflict\u2019s trajectory across multiple theaters\u2014including strikes on Iranian nuclear and military infrastructure, Strait of Hormuz maritime disruptions, and cross-border escalation involving Lebanon, Syria, Bahrain, and Turkey\u2014providing essential context for understanding the scale of Olympic Truce violations during the Milano Cortina 2026 Games period.',
+      },
       {
         source: 'Reuters',
         title: "Players' union raises alarm over safety of Iran women's soccer team after Asian Cup exit",
