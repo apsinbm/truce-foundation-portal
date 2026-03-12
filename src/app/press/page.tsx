@@ -27,6 +27,14 @@ const COVERAGE_SECTIONS: CoverageSection[] = [
     dateRange: 'February 27 \u2013 March 11, 2026',
     items: [
       {
+        source: 'The Sports Examiner',
+        title: 'Letter from Iranian athletes asks IOC and Coventry for \u2018dissolution\u2019 of the Iranian Olympic Committee',
+        date: '2026-03-11',
+        url: 'https://www.thesportsexaminer.com/iran-letter-from-iranian-athletes-asks-ioc-and-coventry-for-dissolution-of-the-iranian-olympic-committee/',
+        type: 'analysis',
+        description: 'Approximately 200 Iranian athletes and public figures signed a letter to IOC President Kirsty Coventry requesting the dissolution\u2014not mere suspension\u2014of Iran\u2019s National Olympic Committee, alleging it functions as a political instrument of the Islamic Republic rather than an athletic body. The letter cites systemic gender discrimination, religious exclusion of Baha\u2019i athletes, and enforced forfeits against Israeli competitors as violations of the Olympic Charter\u2019s principles.',
+      },
+      {
         source: 'Geopolitical Futures',
         title: 'A Summary of the Iran War, So Far',
         date: '2026-03-11',
