@@ -44,9 +44,13 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
+    site: '@olympictruce',
     title: 'Truce Foundation - Olympic Truce',
     description: 'Transforming the Olympic Truce tradition into meaningful action for peace.',
     images: ['/truce-foundation-logo.jpg'],
+  },
+  alternates: {
+    canonical: 'https://index.trucefoundation.world',
   },
 };
 
@@ -86,7 +90,7 @@ export default function RootLayout({
                 '@type': 'Person',
                 name: 'Hugh Dugan',
               },
-              sameAs: [],
+              sameAs: ['https://x.com/olympictruce'],
             }),
           }}
         />

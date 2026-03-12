@@ -24,7 +24,7 @@ export function generatePageMetadata({
   const defaultKeywords = ['Olympic Truce', 'Truce Foundation', 'Peace', 'Milano-Cortina 2026'];
 
   return {
-    title: fullTitle,
+    title,
     description,
     keywords: [...defaultKeywords, ...keywords],
     alternates: {
