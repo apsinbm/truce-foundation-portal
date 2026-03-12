@@ -39,6 +39,91 @@ export interface PulseEntry {
 
 export const PULSE_ENTRIES: PulseEntry[] = [
   {
+    id: 'pulse-2026-03-11-displacement-maritime-civilian-protection',
+    periodStart: '2026-03-11',
+    periodEnd: '2026-03-11',
+    periodLabel: '11 March 2026',
+    focusAreas: ['Humanitarian Access', 'Safe Passage', 'De-escalation', 'Regional Stability'],
+    sections: [
+      {
+        id: 'displacement',
+        title: 'Mass Displacement Strains Humanitarian Corridors',
+        icon: '\u{1F6D1}',
+        color: 'blue',
+        bullets: [
+          {
+            headline: 'Millions Flee Iranian Urban Centers',
+            text: 'Large-scale displacement within Iran, with millions fleeing urban centers toward rural and northern areas, highlights an urgent need for safe passage and unimpeded humanitarian access. Population movements of this magnitude place significant strain on local capacities and create heightened vulnerability for civilians, particularly where active hostilities persist or where infrastructure has been damaged.',
+          },
+          {
+            headline: 'Humanitarian Agencies Require Predictable Security Conditions',
+            text: 'The Olympic Truce\u2019s emphasis on ensuring corridors for civilian movement and relief operations is directly implicated by such displacement, as humanitarian agencies require predictable security conditions to deliver assistance and protection.',
+          },
+        ],
+      },
+      {
+        id: 'maritime-strikes',
+        title: 'Maritime Attacks Expand Conflict Beyond Land Zones',
+        icon: '\u{1F6E1}\u{FE0F}',
+        color: 'green',
+        bullets: [
+          {
+            headline: 'Commercial Vessels Attacked in Strait of Hormuz',
+            text: 'Maritime incidents in the Strait of Hormuz and adjacent waters further illustrate the Truce\u2019s relevance beyond land-based combat zones. Attacks on commercial vessels, resulting in loss of life and disruption to global energy flows, demonstrate how armed confrontations can rapidly expand their humanitarian and economic impact.',
+          },
+          {
+            headline: 'Restraint in Strategic Corridors Could Prevent Cascading Effects',
+            text: 'The Olympic Truce\u2019s call for the calming of hostilities is particularly salient in such strategic corridors, where restraint could reduce risks to civilian mariners and prevent cascading effects on global supply chains that indirectly affect civilian populations far beyond the immediate conflict area.',
+          },
+        ],
+      },
+      {
+        id: 'civilian-protection',
+        title: 'Urban Strikes and Cyber Operations Threaten Civilian Protection',
+        icon: '\u{26A0}\u{FE0F}',
+        color: 'amber',
+        bullets: [
+          {
+            headline: 'Strikes on Residential Areas and Civilian Infrastructure',
+            text: 'Air and missile strikes impacting densely populated urban areas, including strikes on residential neighborhoods and civilian infrastructure, raise acute concerns aligned with the Truce\u2019s humanitarian principles. Civilian casualties, damage to housing, and attacks affecting schools and medical facilities undermine the protected status of such sites under international humanitarian law.',
+          },
+          {
+            headline: 'Cyberattack on Medical Device Manufacturer',
+            text: 'Cyber operations affecting a major medical device manufacturer intersect with the Truce\u2019s humanitarian dimension. Even where cyber incidents are not accompanied by physical destruction, disruptions to medical supply chains or health-related systems carry potential consequences for patient care and emergency response. The Truce\u2019s broader appeal for restraint in all forms of conflict is relevant in mitigating indirect harms that disproportionately affect civilians and essential services.',
+          },
+        ],
+      },
+      {
+        id: 'global-spillover',
+        title: 'Global Spillover Compounds Humanitarian Risk',
+        icon: '\u{1F30D}',
+        color: 'purple',
+        bullets: [
+          {
+            headline: 'West Bank Violence and Reduced Defensive Systems for Ukraine',
+            text: 'Spillover effects across other regions\u2014including violence in the West Bank, reduced availability of defensive systems for Ukraine, and lethal strikes affecting aid workers and civilians in Africa\u2014demonstrate how concurrent conflicts compound humanitarian risk globally.',
+          },
+          {
+            headline: 'Truce as Practical Humanitarian Mechanism',
+            text: 'The Olympic Truce\u2019s call for a pause in hostilities serves not only symbolic unity but also practical humanitarian benefit, offering space for diplomacy, assistance delivery, and the prevention of further escalation across interconnected crises.',
+          },
+        ],
+      },
+    ],
+    overallAlignment: {
+      level: 'critical',
+      summary: 'Today\u2019s developments demonstrate the widening humanitarian impact of ongoing hostilities across multiple domains\u2014from the mass displacement of millions within Iran, to maritime attacks threatening global energy corridors, to airstrikes on civilian infrastructure and cyberattacks on medical supply chains. The spillover into the West Bank, Ukraine, and Africa underscores how interconnected crises compound humanitarian risk far beyond any single theater. The Olympic Truce\u2019s principles of safe passage, civilian protection, and restraint remain urgently relevant, yet the gap between these norms and conditions on the ground continues to widen.',
+    },
+    keyConstraints: [
+      'Millions displaced within Iran from urban centers toward rural and northern areas, placing acute strain on humanitarian corridors and local capacities.',
+      'Maritime attacks on commercial vessels in the Strait of Hormuz resulting in loss of life and disruption to global energy flows, expanding the conflict\u2019s humanitarian impact beyond land-based zones.',
+      'Air and missile strikes on densely populated urban areas, including residential neighborhoods, schools, and medical facilities, undermining the protected status of civilian sites.',
+      'Cyber operations affecting a major medical device manufacturer carry potential consequences for patient care and emergency response, extending conflict\u2019s reach into health-related systems.',
+      'Spillover effects\u2014including West Bank violence, reduced defensive systems for Ukraine, and lethal strikes on aid workers in Africa\u2014demonstrate how concurrent conflicts compound global humanitarian risk.',
+    ],
+    publishedAt: '2026-03-12',
+  },
+  {
     id: 'pulse-2026-03-10-maritime-insecurity-humanitarian-strain',
     periodStart: '2026-03-10',
     periodEnd: '2026-03-10',
