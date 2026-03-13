@@ -39,6 +39,90 @@ export interface PulseEntry {
 
 export const PULSE_ENTRIES: PulseEntry[] = [
   {
+    id: 'pulse-2026-03-12-safe-passage-humanitarian-escalation-global',
+    periodStart: '2026-03-12',
+    periodEnd: '2026-03-12',
+    periodLabel: '12 March 2026',
+    focusAreas: ['Safe Passage', 'Humanitarian Access', 'De-escalation', 'Regional Stability'],
+    sections: [
+      {
+        id: 'safe-passage',
+        title: 'Naval Mines and Strait Threats Endanger Civilian Maritime Routes',
+        icon: '\u{1F6E1}\u{FE0F}',
+        color: 'green',
+        bullets: [
+          {
+            headline: 'Strait of Hormuz Blocked by Naval Mines',
+            text: 'The reported laying of naval mines and threats to block the Strait of Hormuz represent a significant risk to civilian maritime traffic and commercial shipping routes essential for global energy supplies and humanitarian trade. These conditions illustrate a clear divergence from the Truce\u2019s call to safeguard routes used for peaceful movement and essential civilian needs.',
+          },
+          {
+            headline: 'Civilian Supply Chains Disrupted',
+            text: 'Disruptions to shipping, rising insurance premiums, and stranded cargo underscore how restrictions on transit extend beyond military considerations to affect civilian populations worldwide, including access to fuel, food, and medicine. Safe passage, a central principle of the Olympic Truce, is directly implicated by these developments.',
+          },
+        ],
+      },
+      {
+        id: 'humanitarian-access',
+        title: 'Airstrikes on Populated Areas Constrain Humanitarian Space',
+        icon: '\u{1F6D1}',
+        color: 'blue',
+        bullets: [
+          {
+            headline: 'Strikes Near Civilian and Academic Infrastructure',
+            text: 'Airstrikes and missile attacks on populated areas in Iran, Israel, and Lebanon have damaged residential compounds and struck in the vicinity of academic institutions. Evacuation warnings issued to civilians highlight environments in which humanitarian actors face constrained access and elevated risk.',
+          },
+          {
+            headline: 'Bombed Girls\u2019 School Raises Civilian Protection Concerns',
+            text: 'Reporting on a bombed girls\u2019 school raises concerns directly related to the protection of civilian infrastructure, which is foundational to maintaining humanitarian space during conflict. The cumulative effects point to conditions in which the Truce\u2019s emphasis on protecting civilians and enabling assistance is under acute strain.',
+          },
+        ],
+      },
+      {
+        id: 'escalation',
+        title: 'Widening Conflict Scope Counters Calls for Restraint',
+        icon: '\u{26A0}\u{FE0F}',
+        color: 'amber',
+        bullets: [
+          {
+            headline: 'Cross-Border Military Operations Expand',
+            text: 'The expansion of military operations across borders, combined with rhetoric signaling prolonged confrontation and retaliation, reflects dynamics counter to the Truce\u2019s objective of encouraging restraint during symbolic periods dedicated to peace.',
+          },
+          {
+            headline: 'Energy Volatility, Arms Transfers, and Diplomatic Tensions',
+            text: 'Spillover effects\u2014including energy market volatility, arms transfers in other regions, and heightened diplomatic tensions\u2014demonstrate how localized conflicts amplify global instability, reinforcing the Truce\u2019s relevance as a mechanism for collective de-escalation.',
+          },
+        ],
+      },
+      {
+        id: 'global-systemic',
+        title: 'Systemic Consequences Underscore Truce Rationale',
+        icon: '\u{1F30D}',
+        color: 'purple',
+        bullets: [
+          {
+            headline: 'Economic Shocks Ripple Beyond Conflict Zones',
+            text: 'Sustained hostilities are producing economic shocks and political pressures affecting countries far removed from the immediate theaters of conflict. These ripple effects align with the Olympic Truce\u2019s underlying rationale: that temporary pauses, restraint, and dialogue can reduce civilian harm and prevent cascading crises that undermine international cooperation.',
+          },
+          {
+            headline: 'Truce Principles Remain a Critical Reference Point',
+            text: 'Today\u2019s events continue to illustrate not only areas where Olympic Truce principles are challenged, but also why those principles remain a critical reference point for international actors seeking to protect civilians, preserve humanitarian access, and reduce the risks of wider confrontation during periods of global attention and symbolic unity.',
+          },
+        ],
+      },
+    ],
+    overallAlignment: {
+      level: 'critical',
+      summary: 'Today\u2019s events present multiple points of intersection with the Olympic Truce\u2019s call for restraint, protection of civilians, and the facilitation of safe passage and humanitarian access. Naval mines threatening the Strait of Hormuz endanger civilian maritime routes essential for global trade. Airstrikes on populated areas in Iran, Israel, and Lebanon\u2014including strikes near academic institutions and a bombed girls\u2019 school\u2014constrain humanitarian space. The widening geographic and political scope of the conflict, with cross-border military operations and rhetoric of prolonged confrontation, runs counter to the Truce\u2019s objective of calming hostilities. Systemic consequences, including economic shocks and diplomatic tensions far from the conflict zone, reinforce the Truce\u2019s continued relevance as a framework for de-escalation and civilian protection.',
+    },
+    keyConstraints: [
+      'Naval mines laid and threats to block the Strait of Hormuz, disrupting civilian maritime traffic and global energy and humanitarian trade routes.',
+      'Airstrikes and missile attacks on populated areas in Iran, Israel, and Lebanon, including damage to residential compounds, academic institutions, and a girls\u2019 school.',
+      'Cross-border military expansion and rhetoric of prolonged confrontation counter the Truce\u2019s calls for restraint during periods dedicated to peace.',
+      'Systemic spillover effects\u2014energy market volatility, arms transfers, and diplomatic tensions\u2014demonstrate how localized conflicts cascade into global instability.',
+    ],
+    publishedAt: '2026-03-13',
+  },
+  {
     id: 'pulse-2026-03-11-displacement-maritime-civilian-protection',
     periodStart: '2026-03-11',
     periodEnd: '2026-03-11',
