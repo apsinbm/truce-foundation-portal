@@ -39,6 +39,95 @@ export interface PulseEntry {
 
 export const PULSE_ENTRIES: PulseEntry[] = [
   {
+    id: 'pulse-2026-03-14-15-safe-passage-healthcare-escalation',
+    periodStart: '2026-03-14',
+    periodEnd: '2026-03-15',
+    periodLabel: '14\u201315 March 2026',
+    focusAreas: ['Safe Passage', 'Humanitarian Access', 'De-escalation', 'Regional Stability'],
+    sections: [
+      {
+        id: 'safe-passage',
+        title: 'Civilian Transit Infrastructure Under Direct Attack',
+        icon: '\u{1F6E1}\u{FE0F}',
+        color: 'green',
+        bullets: [
+          {
+            headline: 'Baghdad International Airport Struck by Missile',
+            text: 'A missile strike on Baghdad International Airport injured four people, demonstrating the vulnerability of critical civilian infrastructure during periods of escalation. Kataib Hezbollah\u2019s claim that its rockets also struck Camp Victory, alongside a preceding attack on the U.S. Embassy, illustrates a pattern of hostilities encroaching on areas essential for civilian movement and humanitarian operations.',
+          },
+          {
+            headline: 'Strait of Hormuz Reopening Efforts Highlight Supply Route Fragility',
+            text: 'Calls for multinational naval deployments to reopen the Strait of Hormuz highlight the fragility of global supply routes and the potential for disruptions that affect civilian populations far beyond the region. The deployment of additional U.S. naval and air assets to expand military options against Iran signals a widening operational footprint at a moment when de-escalation is urgently needed to preserve humanitarian space.',
+          },
+        ],
+      },
+      {
+        id: 'humanitarian-access',
+        title: 'Healthcare Workers and Facilities Targeted in Lebanon',
+        icon: '\u{1F6D1}',
+        color: 'blue',
+        bullets: [
+          {
+            headline: 'Primary Healthcare Center Strike Kills 12 Medical Staff',
+            text: 'In Lebanon, a strike on the Bourj Qalaouiyeh primary healthcare center killed 12 doctors, paramedics, and nurses. At least 31 health professionals have been killed since March 2. Attacks on medical personnel and facilities directly undermine humanitarian access and impede the delivery of life-saving services\u2014acute violations of the protections the Olympic Truce seeks to reinforce.',
+          },
+          {
+            headline: 'Israeli Ground Operations Expand Amid Hezbollah Missile Barrages',
+            text: 'The expansion of Israeli ground operations into southern Lebanon, combined with Hezbollah\u2019s launch of more than 200 missiles, reflects a rapidly deteriorating security landscape that constrains humanitarian actors\u2019 ability to reach affected populations.',
+          },
+        ],
+      },
+      {
+        id: 'escalation',
+        title: 'Civilian Toll Mounts Across Gaza, West Bank, and Afghanistan',
+        icon: '\u{26A0}\u{FE0F}',
+        color: 'amber',
+        bullets: [
+          {
+            headline: 'Gaza Killings Include Children and Pregnant Woman',
+            text: 'In Gaza, the killing of civilians\u2014including two boys, a pregnant woman, and eight police officers\u2014further illustrates the disproportionate humanitarian impact of ongoing hostilities. The Truce\u2019s call for the calming of global tensions is particularly relevant in densely populated areas where the risks to civilians are magnified.',
+          },
+          {
+            headline: 'West Bank Family of Four Fatally Shot',
+            text: 'In the West Bank, Israeli soldiers fatally shot a family of four after reportedly sensing danger, highlighting the volatility of civilian movement in contested spaces. The Olympic Truce framework emphasizes predictable, secure conditions for families and individuals to travel without fear of sudden escalation.',
+          },
+          {
+            headline: 'Pakistani Airstrikes Kill 75 Civilians in Afghanistan',
+            text: 'Pakistani airstrikes in Afghanistan killed at least 75 civilians and displaced 115,000 people, with strikes on residential areas, civilian infrastructure, and over 20 healthcare facilities. These actions represent clear obstacles to the Truce\u2019s humanitarian objectives and demonstrate the global scope of challenges to humanitarian access.',
+          },
+        ],
+      },
+      {
+        id: 'global-systemic',
+        title: 'Cyber Domain Extends Conflict\u2019s Humanitarian Impact',
+        icon: '\u{1F30D}',
+        color: 'purple',
+        bullets: [
+          {
+            headline: 'Cyberattack Disrupts U.S. Medical Equipment Company',
+            text: 'A likely Iranian cyberattack on a U.S. medical-equipment company forced tens of thousands of employees offline, illustrating how modern conflict can disrupt health systems and impede humanitarian readiness. This expands the Truce\u2019s relevance into the digital domain, where attacks on health-related infrastructure carry consequences for patient care and emergency response.',
+          },
+          {
+            headline: 'French Proposal Offers Rare Diplomatic Opening',
+            text: 'Across these developments, diplomatic openings remain limited, though the French proposal for Lebanon\u2013Israel talks offers a rare alignment with the Truce\u2019s encouragement of dialogue. The widening gap between current conflict dynamics and the Olympic Truce\u2019s aspirations for safe passage, humanitarian access, and the calming of hostilities underscores the framework\u2019s continued necessity.',
+          },
+        ],
+      },
+    ],
+    overallAlignment: {
+      level: 'critical',
+      summary: 'Events across March 14\u201315 reflect a global security environment marked by heightened military activity, constrained humanitarian access, and diminishing diplomatic space. A missile strike on Baghdad International Airport, the killing of 12 healthcare workers at a Lebanese primary care center, civilian deaths in Gaza and the West Bank, Pakistani airstrikes killing 75 civilians in Afghanistan, and a cyberattack disrupting a U.S. medical-equipment company collectively illustrate the widening gap between current conflict dynamics and the Olympic Truce\u2019s aspirations. The French proposal for Lebanon\u2013Israel talks offers a rare diplomatic alignment, but the overall trajectory continues to diverge sharply from the Truce\u2019s call for safe passage, protection of civilians, and the calming of hostilities.',
+    },
+    keyConstraints: [
+      'Missile strike on Baghdad International Airport injured four, demonstrating the vulnerability of critical civilian transit infrastructure during escalation.',
+      'Strike on Bourj Qalaouiyeh healthcare center killed 12 medical staff; at least 31 health professionals killed in Lebanon since March 2.',
+      'Civilians killed in Gaza including children and a pregnant woman; a family of four fatally shot in the West Bank.',
+      'Pakistani airstrikes in Afghanistan killed at least 75 civilians, displaced 115,000, and struck over 20 healthcare facilities.',
+      'Likely Iranian cyberattack on U.S. medical-equipment company forced tens of thousands offline, extending conflict\u2019s impact into the digital domain.',
+    ],
+    publishedAt: '2026-03-16',
+  },
+  {
     id: 'pulse-2026-03-12-safe-passage-humanitarian-escalation-global',
     periodStart: '2026-03-12',
     periodEnd: '2026-03-12',
