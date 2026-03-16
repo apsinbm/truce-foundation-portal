@@ -24,8 +24,40 @@ const COVERAGE_SECTIONS: CoverageSection[] = [
   // === PHASE 3 ===
   {
     title: 'Middle Eastern Military Escalation Breaches the Olympic Truce',
-    dateRange: 'February 27 \u2013 March 11, 2026',
+    dateRange: 'February 27 \u2013 March 15, 2026',
     items: [
+      {
+        source: 'Inside The Games',
+        title: 'Ukraine to boycott Paralympic closing ceremony',
+        date: '2026-03-15',
+        url: 'https://www.insidethegames.biz/articles/ukraine-to-boycott-paralympic-closing-ceremony',
+        type: 'media',
+        description: 'Ukraine boycotted the Milano Cortina 2026 Paralympic closing ceremony in protest at Russia\u2019s participation under its national symbols. No Ukrainian athlete appeared in the parade of flagbearers, with the country\u2019s flag carried instead by a volunteer\u2014a visible statement of the diplomatic tension that accompanied the Games from the outset.',
+      },
+      {
+        source: 'Inside The Games',
+        title: 'UEFA and CONMEBOL cancel Qatar \u2018Finalissima\u2019 amid Middle East conflict',
+        date: '2026-03-15',
+        url: 'https://www.insidethegames.biz/articles/uefa-and-conmebol-cancel-finalissima',
+        type: 'media',
+        description: 'UEFA and CONMEBOL cancelled the 2026 Finalissima between Spain and Argentina, originally scheduled for March 27 at Lusail Stadium in Qatar, due to the security situation caused by the Iran war. Airspace disruptions and travel restrictions made it impossible for fans, players, and officials to reach the venue, and attempts to relocate the match to Madrid or Buenos Aires failed to reach agreement.',
+      },
+      {
+        source: 'Inside The Games',
+        title: 'Female Iranian footballers to return home',
+        date: '2026-03-15',
+        url: 'https://www.insidethegames.biz/articles/female-iranian-footballers-to-return-home',
+        type: 'media',
+        description: 'Several Iranian women\u2019s football players who had been granted humanitarian visas by Australia after refusing to sing Iran\u2019s national anthem at the Women\u2019s Asian Cup have decided to return home, despite being branded \u2018wartime traitors\u2019 by Iranian state television. Of the seven squad members originally granted protection, most have now withdrawn their asylum applications, leaving only two remaining in Australia.',
+      },
+      {
+        source: 'The Guardian',
+        title: 'Formula One cancels Bahrain and Saudi Arabian Grands Prix due to war in Middle East',
+        date: '2026-03-14',
+        url: 'https://www.theguardian.com/sport/2026/mar/14/formula-one-cancel-bahrain-saudi-arabia-grand-prix-war-middle-east',
+        type: 'media',
+        description: 'Formula One confirmed the cancellation of both the Bahrain and Saudi Arabian Grands Prix, reducing the 2026 calendar to 22 races. Both countries were struck by Iranian retaliatory attacks, making the events untenable. F1 CEO Stefano Domenicali called it \u2018a difficult decision\u2019 but \u2018the right one considering the current situation in the Middle East.\u2019',
+      },
       {
         source: 'The Sports Examiner',
         title: 'Letter from Iranian athletes asks IOC and Coventry for \u2018dissolution\u2019 of the Iranian Olympic Committee',
