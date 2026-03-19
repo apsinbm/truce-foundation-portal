@@ -39,6 +39,99 @@ export interface PulseEntry {
 
 export const PULSE_ENTRIES: PulseEntry[] = [
   {
+    id: 'pulse-2026-03-16-athlete-safety-regional-spillover-humanitarian-corridors',
+    periodStart: '2026-03-16',
+    periodEnd: '2026-03-16',
+    periodLabel: '16 March 2026',
+    focusAreas: ['Safe Passage', 'Humanitarian Access', 'De-escalation', 'Regional Stability'],
+    sections: [
+      {
+        id: 'safe-passage',
+        title: 'Athlete Safety, Civilian Aviation, and Maritime Corridors Under Strain',
+        icon: '\u{1F6E1}\u{FE0F}',
+        color: 'green',
+        bullets: [
+          {
+            headline: 'Iranian Women Athletes Face Uncertain Return Home',
+            text: 'Iranian women athletes who refused to sing the national anthem at a recent sporting event now face profound uncertainty as they weigh returning to Iran, where the regime\u2019s response remains unpredictable. Australia\u2019s standing offers of asylum underscore the severity of the situation. The plight of these athletes directly engages the Olympic Truce\u2019s commitment to safe passage and the protection of individuals whose participation in sport should not expose them to retribution.',
+          },
+          {
+            headline: 'UAE Airspace Closed; Saudi and Qatari Civilian Infrastructure Affected',
+            text: 'Iranian retaliation involving missiles and drones led to the temporary closure of UAE airspace and the interception of drones by Saudi Arabia, while Qatar experienced secondary effects from an intercepted missile. These disruptions to civilian aviation\u2014particularly in the immediate aftermath of the Paralympic Games\u2019 formal conclusion on 15 March\u2014highlight acute risks to safe passage for athletes, officials, and civilians alike.',
+          },
+          {
+            headline: 'EU Proposes UN-Backed Strait of Hormuz Safe Passage Mechanism',
+            text: 'The EU High Representative\u2019s proposal for a UN-backed mechanism\u2014modeled on the Black Sea grain arrangement\u2014to guarantee safe passage for oil and gas shipments through the Strait of Hormuz represents a significant attempt to operationalize Truce-aligned goals. The UN\u2019s cautious response, citing the high stakes involved, reflects both the urgency and complexity of establishing humanitarian and commercial safety corridors within an active conflict zone.',
+          },
+        ],
+      },
+      {
+        id: 'humanitarian-access',
+        title: 'Civilian Return Blocked in Lebanon; Rafah Crossing Negotiations Continue',
+        icon: '\u{1F6D1}',
+        color: 'blue',
+        bullets: [
+          {
+            headline: 'Israeli Leadership Bars Civilian Return to Southern Lebanon',
+            text: 'The declaration by Israeli leadership that civilians will be unable to return to conflict-affected areas in southern Lebanon until perceived security threats are eliminated represents a direct impediment to humanitarian access and civilian mobility. Prolonged displacement without a clear timeline for return compounds the humanitarian burden on affected populations and restricts the operating space for relief organizations.',
+          },
+          {
+            headline: 'Rafah Crossing Reopening Linked to Diplomatic Engagement',
+            text: 'In Gaza, negotiations involving Hamas representatives and international envoys have influenced decisions regarding the reopening of the Rafah Crossing\u2014a critical point of humanitarian entry. Any reopening following diplomatic engagement indicates a concrete, though fragile, alignment with Olympic Truce aspirations to safeguard humanitarian corridors and reduce suffering in conflict-affected populations.',
+          },
+        ],
+      },
+      {
+        id: 'escalation',
+        title: 'Large-Scale Strikes on Iran and Cross-Border Attacks Intensify',
+        icon: '\u{26A0}\u{FE0F}',
+        color: 'amber',
+        bullets: [
+          {
+            headline: 'Israeli Strikes Hit Tehran, Shiraz, and Tabriz',
+            text: 'Large-scale strikes attributed to Israel on multiple Iranian cities, including Tehran, Shiraz, and Tabriz, with claimed targeting of senior Iranian security officials, represent a significant escalation. These operations, combined with Iranian retaliatory actions affecting neighboring states, demonstrate a widening cycle of hostilities that runs counter to the Truce\u2019s call for the calming of tensions and the protection of civilian populations.',
+          },
+          {
+            headline: 'Deadly Strike in Kabul Attributed to Pakistan',
+            text: 'A deadly strike in Kabul attributed by Afghan authorities to Pakistan illustrates the geographic breadth of cross-border military operations that disrupt civilian life and impede humanitarian access. These events, far from the primary Gulf theater, demonstrate the global scope of challenges to the Truce\u2019s objectives.',
+          },
+          {
+            headline: 'Record-High Migrant Deaths in the Mediterranean',
+            text: 'A record-high number of migrants missing in the Mediterranean\u2014driven in part by restricted information-sharing and reduced rescue visibility among regional states\u2014reflects the widespread strain on humanitarian systems. The erosion of rescue coordination directly undermines safe passage for the most vulnerable populations.',
+          },
+        ],
+      },
+      {
+        id: 'global-systemic',
+        title: 'Diplomatic Channels and the Truce as a Stabilizing Framework',
+        icon: '\u{1F30D}',
+        color: 'purple',
+        bullets: [
+          {
+            headline: 'U.S. Pushes Allied Maritime Escort Operations in the Strait',
+            text: 'Statements by the U.S. administration regarding expectations of allied participation in maritime escort operations in the Strait of Hormuz highlight elevated geopolitical pressures on secure transport routes essential for global energy markets. While framed in security terms, these proposals carry direct implications for civilian shipping and humanitarian logistics.',
+          },
+          {
+            headline: 'Olympic Truce Principles Offer a Framework for De-escalation',
+            text: 'Across these developments, the Olympic Truce\u2019s core principles\u2014cessation of hostilities, protection of civilian mobility, and safeguarding of humanitarian channels\u2014directly address the vulnerabilities revealed by this cross-regional analysis. The convergence of athlete safety concerns, civilian infrastructure disruption, blocked humanitarian corridors, and escalating military operations underscores both the heightened need for, and the substantial barriers to, the implementation of Truce principles.',
+          },
+        ],
+      },
+    ],
+    overallAlignment: {
+      level: 'critical',
+      summary: 'The security landscape on 16 March reflects a rapidly deteriorating environment that directly engages every core objective of the Olympic Truce. Iranian women athletes face potential regime retribution for exercising their voice at a sporting event, testing the Truce\u2019s commitment to protecting participants. Large-scale Israeli strikes on Tehran, Shiraz, and Tabriz, coupled with Iranian retaliation disrupting UAE airspace and affecting Saudi and Qatari civilian infrastructure, demonstrate a widening conflict with cascading regional consequences. In southern Lebanon, civilians remain barred from returning home; in Gaza, Rafah Crossing negotiations offer a fragile opening. A deadly strike in Kabul and record migrant deaths in the Mediterranean illustrate the global scope of humanitarian strain. The EU\u2019s proposed UN-backed Strait of Hormuz mechanism represents a rare attempt to operationalize Truce-aligned goals, but the overall trajectory continues to diverge sharply from the Truce\u2019s call for safe passage, civilian protection, and the calming of hostilities.',
+    },
+    keyConstraints: [
+      'Iranian women athletes who refused to sing the national anthem face uncertain safety upon return to Iran, with Australia offering asylum\u2014directly testing the Truce\u2019s commitment to athlete protection.',
+      'Large-scale Israeli strikes on Tehran, Shiraz, and Tabriz, with Iranian retaliation closing UAE airspace and affecting Saudi and Qatari civilian infrastructure.',
+      'Israeli leadership bars civilian return to southern Lebanon; Rafah Crossing reopening remains tied to fragile diplomatic engagement.',
+      'A deadly strike in Kabul attributed to Pakistan and record-high migrant deaths in the Mediterranean demonstrate the global scope of humanitarian strain.',
+      'The EU\u2019s proposed UN-backed Strait of Hormuz safe passage mechanism represents a significant but contested attempt to operationalize Truce principles.',
+    ],
+    publishedAt: '2026-03-17',
+  },
+  {
     id: 'pulse-2026-03-14-15-safe-passage-healthcare-escalation',
     periodStart: '2026-03-14',
     periodEnd: '2026-03-15',
