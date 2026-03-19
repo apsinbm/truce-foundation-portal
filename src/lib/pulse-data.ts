@@ -39,6 +39,91 @@ export interface PulseEntry {
 
 export const PULSE_ENTRIES: PulseEntry[] = [
   {
+    id: 'pulse-2026-03-18-energy-strikes-maritime-corridor-humanitarian-erosion',
+    periodStart: '2026-03-18',
+    periodEnd: '2026-03-18',
+    periodLabel: '18 March 2026',
+    focusAreas: ['Safe Passage', 'Humanitarian Access', 'De-escalation', 'Regional Stability'],
+    sections: [
+      {
+        id: 'safe-passage',
+        title: 'Displacement, Border Operations, and Stranded Seafarers Imperil Safe Passage',
+        icon: '\u{1F6E1}\u{FE0F}',
+        color: 'green',
+        bullets: [
+          {
+            headline: 'Evacuation Routes Rendered Hazardous by Military Advances',
+            text: 'Strikes on infrastructure, displacement, and evacuation orders in border areas undermine the Truce principle of safe passage for civilians, relief personnel, and neutral actors. Military advances and house searches along frontiers render customary evacuation routes and transit corridors hazardous, requiring immediate, verifiable commitments from parties to refrain from targeting these routes.',
+          },
+          {
+            headline: 'IMO Proposal to Free 20,000 Stranded Seafarers',
+            text: 'A proposal submitted by Bahrain, Japan, Panama, Singapore, and the UAE at the UN\u2019s International Maritime Organization set out plans for a safe maritime corridor to free some 20,000 seafarers stranded in the Gulf by war in Iran. This is a practical, Truce-consistent measure that merits rapid diplomatic support and operationalization\u2014a concrete example of translating safe passage principles into verifiable practice.',
+          },
+        ],
+      },
+      {
+        id: 'humanitarian-access',
+        title: 'Civilian Infrastructure Damage Constrains Aid Delivery',
+        icon: '\u{1F6D1}',
+        color: 'blue',
+        bullets: [
+          {
+            headline: 'Health Facilities and Schools Sustain Continued Damage',
+            text: 'Ongoing damage to health facilities, schools, and other civilian infrastructure directly constrains the delivery of aid and essential services. The scale of destruction reduces local capacity to treat the wounded, protect children, and sustain basic services\u2014precisely the conditions the Olympic Truce seeks to prevent.',
+          },
+          {
+            headline: 'Short- and Medium-Term Access Measures Required',
+            text: 'Unimpeded humanitarian access demands short-term measures\u2014humanitarian pauses, deconfliction protocols, and protected convoy guarantees\u2014alongside medium-term arrangements such as safe-zone designations and independent verification to ensure relief reaches affected populations without delay or interference.',
+          },
+        ],
+      },
+      {
+        id: 'escalation',
+        title: 'Energy Infrastructure Strikes and Tit-for-Tat Escalation',
+        icon: '\u{26A0}\u{FE0F}',
+        color: 'amber',
+        bullets: [
+          {
+            headline: 'Israeli Strike on South Pars Gas Field Triggers Iranian Retaliation Against Qatar',
+            text: 'An Israeli strike on Iran\u2019s South Pars gas field\u2014carried out, according to President Trump, without advance U.S. knowledge\u2014prompted Iranian retaliation against Qatar. This tit-for-tat pattern targeting energy infrastructure increases the risk of regional escalation and global economic disruption, directly engaging the Truce\u2019s call to calm global hostilities.',
+          },
+          {
+            headline: 'Conflict Dynamics Threaten Shipping Lanes and Energy Markets',
+            text: 'Incidents at sea and strikes on energy infrastructure threaten international shipping lanes, energy markets, and the security of neighbouring states. Confidence-building measures\u2014immediate cessation of attacks on civilian infrastructure, third-party mediation for temporary stand-downs, and international monitoring of maritime and airspace safety\u2014are essential to reduce miscalculation and contain spillover.',
+          },
+        ],
+      },
+      {
+        id: 'global-systemic',
+        title: 'Monitoring Framework and Truce-Consistent Responses',
+        icon: '\u{1F30D}',
+        color: 'purple',
+        bullets: [
+          {
+            headline: 'Priority Indicators for Truce Index Tracking',
+            text: 'Priority monitoring indicators include verified attacks on civilian infrastructure, obstructions to humanitarian convoys, incidents affecting neutral actors\u2014peacekeepers, merchant shipping, diplomatic missions\u2014and displacement metrics. Each should be paired with recommended remedial actions: calls for humanitarian pauses, establishment of protected corridors, and independent investigations where civilian harm is alleged.',
+          },
+          {
+            headline: 'Translating Truce Principles into Verifiable Practice',
+            text: 'The current pattern of hostilities demonstrates how rapidly the conditions the Olympic Truce seeks to protect can be eroded. The IMO safe maritime corridor proposal exemplifies how Truce principles can be translated into immediate, operational measures. Restoring safe passage, ensuring humanitarian access, and calming hostilities will require coordinated diplomacy, transparent deconfliction, and robust protection measures for civilians and neutral actors.',
+          },
+        ],
+      },
+    ],
+    overallAlignment: {
+      level: 'critical',
+      summary: 'The operational environment on 18 March is characterized by strikes on energy infrastructure, cross-border missile and air activity, attacks on civilian sites, and disruptions to maritime traffic\u2014creating multiple concrete impediments to each Olympic Truce objective. An Israeli strike on Iran\u2019s South Pars gas field, carried out without advance U.S. knowledge, prompted Iranian retaliation against Qatar, escalating the tit-for-tat cycle. Some 20,000 seafarers remain stranded in the Gulf, prompting a five-nation IMO proposal for a safe maritime corridor\u2014a rare Truce-consistent measure. Continued damage to health facilities and schools constrains aid delivery, while military advances and evacuation orders along borders render civilian corridors hazardous. The pattern demands coordinated diplomacy, transparent deconfliction, and robust civilian protection to translate Truce principles into verifiable practice.',
+    },
+    keyConstraints: [
+      'Israeli strike on Iran\u2019s South Pars gas field\u2014without advance U.S. knowledge\u2014prompted Iranian retaliation against Qatar, escalating the tit-for-tat cycle targeting energy infrastructure.',
+      'Some 20,000 seafarers stranded in the Gulf; Bahrain, Japan, Panama, Singapore, and the UAE submitted an IMO proposal for a safe maritime corridor.',
+      'Military advances and house searches along frontiers, combined with evacuation orders, render customary civilian transit corridors hazardous.',
+      'Continued damage to health facilities and schools constrains the capacity to treat the wounded, protect children, and sustain basic services.',
+      'Restoring Truce conditions requires humanitarian pauses, deconfliction protocols, protected convoy guarantees, safe-zone designations, and independent verification.',
+    ],
+    publishedAt: '2026-03-19',
+  },
+  {
     id: 'pulse-2026-03-17-retaliatory-strikes-infrastructure-destruction-spillover',
     periodStart: '2026-03-17',
     periodEnd: '2026-03-17',
