@@ -39,6 +39,91 @@ export interface PulseEntry {
 
 export const PULSE_ENTRIES: PulseEntry[] = [
   {
+    id: 'pulse-2026-03-17-retaliatory-strikes-infrastructure-destruction-spillover',
+    periodStart: '2026-03-17',
+    periodEnd: '2026-03-17',
+    periodLabel: '17 March 2026',
+    focusAreas: ['Safe Passage', 'Humanitarian Access', 'De-escalation', 'Regional Stability'],
+    sections: [
+      {
+        id: 'safe-passage',
+        title: 'Active Strikes and Cross-Border Shelling Constrain Civilian Movement',
+        icon: '\u{1F6E1}\u{FE0F}',
+        color: 'green',
+        bullets: [
+          {
+            headline: 'Urban Strikes and Peacekeeper Casualties Disrupt Evacuation Routes',
+            text: 'Active strikes on populated urban areas and the wounding of peacekeepers indicate that corridors and routes normally used for evacuation or relief are neither secure nor predictable. These conditions directly contravene the Truce principle that parties must facilitate safe passage for civilians and neutral actors during periods of heightened tension.',
+          },
+          {
+            headline: 'Widespread Displacement Elevates Protection Priorities',
+            text: 'Where evacuation warnings and displacement are widespread, the Truce\u2019s emphasis on protecting non-combatants becomes an operational priority for humanitarian and monitoring missions. The movement of civilians, relief personnel, and diplomatic staff is severely constrained by cross-border shelling and attacks on maritime traffic.',
+          },
+        ],
+      },
+      {
+        id: 'humanitarian-access',
+        title: 'Destruction of Healthcare and Education Infrastructure at Scale',
+        icon: '\u{1F6D1}',
+        color: 'blue',
+        bullets: [
+          {
+            headline: '236 Healthcare Sites Severely Damaged, 498 Schools Struck',
+            text: 'The Iranian Red Crescent Society reported that 236 healthcare sites have been severely damaged and 498 schools struck in U.S.\u2013Israeli attacks. This scale of destruction undermines the capacity of local and international agencies to provide medical care, food distribution, and protection services\u2014directly contradicting the Olympic Truce\u2019s call for unimpeded humanitarian access.',
+          },
+          {
+            headline: 'Verifiable Access Arrangements Urgently Needed',
+            text: 'In practice, restoring humanitarian access requires ceasefire assurances, deconfliction mechanisms, and guarantees that relief convoys and medical evacuations will not be targeted. The scale of reported damage signals an urgent need for negotiated, verifiable access arrangements to prevent further deterioration of civilian welfare.',
+          },
+        ],
+      },
+      {
+        id: 'escalation',
+        title: 'Iranian Retaliatory Strikes and Regional Conflict Spread',
+        icon: '\u{26A0}\u{FE0F}',
+        color: 'amber',
+        bullets: [
+          {
+            headline: 'Iran Launches Retaliatory Strikes, Killing at Least Two in Israel',
+            text: 'Iran launched retaliatory strikes against Israel, killing at least two people. The cycle of escalation\u2014large-scale strikes followed by retaliation\u2014demonstrates the widening gap between current conflict dynamics and the Truce\u2019s objective of calming global hostilities.',
+          },
+          {
+            headline: 'Attacks on Diplomatic Facilities and Maritime Traffic Raise Spillover Risk',
+            text: 'The regional spread of hostilities\u2014including attacks on diplomatic facilities, incidents at sea, and cross-border strikes\u2014raises the risk of wider escalation. Conflict dynamics now threaten international shipping lanes, refugee flows, and food security, engaging the Truce\u2019s objective to prevent cascading crises beyond the immediate theaters of conflict.',
+          },
+        ],
+      },
+      {
+        id: 'global-systemic',
+        title: 'Truce Index Monitoring Indicators and Stabilization Measures',
+        icon: '\u{1F30D}',
+        color: 'purple',
+        bullets: [
+          {
+            headline: 'Prioritized Indicators for Truce Alignment Tracking',
+            text: 'The current environment calls for prioritized monitoring of verified attacks on civilian infrastructure, documented impediments to humanitarian convoys, incidents affecting neutral actors\u2014peacekeepers, diplomatic missions, merchant shipping\u2014and evidence of displacement and service disruption. Each indicator should be paired with confidence levels and recommended remedial actions, including calls for humanitarian pauses and protected corridors.',
+          },
+          {
+            headline: 'Coordinated Diplomacy and Deconfliction Essential to Restore Truce Conditions',
+            text: 'Stabilization measures consistent with the Truce include immediate de-escalatory communications between parties, third-party mediation to establish temporary cessation lines, and international monitoring to reduce miscalculation. Restoring safe passage, ensuring humanitarian access, and calming hostilities will require coordinated diplomatic engagement, transparent deconfliction, and robust protection measures for civilians and neutral actors.',
+          },
+        ],
+      },
+    ],
+    overallAlignment: {
+      level: 'critical',
+      summary: 'The operational environment on 17 March demonstrates how rapidly the conditions the Olympic Truce seeks to protect can be eroded. Iran launched retaliatory strikes against Israel killing at least two, while the Iranian Red Crescent Society reported 236 healthcare sites severely damaged and 498 schools struck in U.S.\u2013Israeli attacks. Active strikes on populated areas, the wounding of peacekeepers, and cross-border shelling have rendered evacuation and relief corridors neither secure nor predictable. The regional spread of hostilities\u2014including attacks on diplomatic facilities, maritime incidents, and cross-border strikes\u2014raises the risk of wider escalation threatening shipping lanes, refugee flows, and food security. The scale of infrastructure destruction demands negotiated, verifiable access arrangements, while stabilization requires de-escalatory communications, third-party mediation, and international monitoring to reduce miscalculation.',
+    },
+    keyConstraints: [
+      'Iran launched retaliatory strikes against Israel, killing at least two people, continuing the cycle of escalation.',
+      '236 healthcare sites severely damaged and 498 schools struck, as reported by the Iranian Red Crescent Society, devastating humanitarian and educational infrastructure.',
+      'Strikes on populated urban areas and wounding of peacekeepers have disrupted evacuation routes and constrained movement of civilians, relief personnel, and diplomatic staff.',
+      'Regional spread of hostilities\u2014attacks on diplomatic facilities, maritime incidents, cross-border strikes\u2014threatens international shipping lanes, refugee flows, and food security.',
+      'Restoring Truce conditions requires ceasefire assurances, deconfliction mechanisms, humanitarian pauses, protected corridors, and coordinated diplomatic engagement.',
+    ],
+    publishedAt: '2026-03-19',
+  },
+  {
     id: 'pulse-2026-03-16-athlete-safety-regional-spillover-humanitarian-corridors',
     periodStart: '2026-03-16',
     periodEnd: '2026-03-16',
