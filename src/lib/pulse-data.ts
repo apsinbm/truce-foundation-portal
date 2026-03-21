@@ -39,6 +39,96 @@ export interface PulseEntry {
 
 export const PULSE_ENTRIES: PulseEntry[] = [
   {
+    id: 'pulse-2026-03-20-iran-israel-escalation-hormuz-coalition-humanitarian-corridors',
+    periodStart: '2026-03-20',
+    periodEnd: '2026-03-20',
+    periodLabel: '20 March 2026',
+    focusAreas: ['De-escalation', 'Safe Passage', 'Humanitarian Access', 'Diplomatic Engagement', 'Regional Stability'],
+    sections: [
+      {
+        id: 'escalation',
+        title: 'Iran\u2013Israel\u2013U.S. Escalation Cycle Widens',
+        icon: '\u{26A0}\u{FE0F}',
+        color: 'amber',
+        bullets: [
+          {
+            headline: 'Iranian Drones Strike Kuwaiti Oil Refinery; Israeli Airstrikes Over Tehran Ongoing',
+            text: 'The intensification of hostilities between Iran, Israel, and the United States represents the most significant breach of the Truce\u2019s call for the \u201ccalming of global hostilities.\u201d Iranian drones hit a Kuwaiti oil refinery, while Israeli airstrikes over Tehran continue\u2014underscoring an escalatory cycle that directly undermines the Truce\u2019s expectation of reduced military activity during the Games.',
+          },
+          {
+            headline: 'Over 7,000 Targets Struck Across Iran; Energy Security Disrupted',
+            text: 'The scale of U.S.\u2013Israeli operations\u2014over 7,000 targets across Iran and its military infrastructure\u2014illustrates the widening gap between current military conduct and the Truce\u2019s emphasis on restraint and de-escalation. Iranian strikes disabling 17% of Qatar\u2019s liquefied natural gas export capacity and U.S. deliberations on releasing seized Iranian oil to stabilize markets highlight the broader systemic disruptions that conflict imposes on civilian populations worldwide.',
+          },
+        ],
+      },
+      {
+        id: 'safe-passage',
+        title: 'Seven-Nation Coalition Moves to Reopen Strait of Hormuz',
+        icon: '\u{1F6E1}\u{FE0F}',
+        color: 'green',
+        bullets: [
+          {
+            headline: 'UK, France, Germany, Italy, Netherlands, Japan, and Canada Announce Joint Maritime Initiative',
+            text: 'Seven nations announced support for a coalition to reopen the Strait of Hormuz, with the stated purpose of ensuring commercial navigation. The United Kingdom, France, Germany, Italy, the Netherlands, Japan, and Canada issued a joint statement supporting efforts to restore maritime access. Although framed in security terms, reopening a major global waterway directly supports the Truce\u2019s call for safe passage\u2014particularly for civilian shipping and energy supplies\u2014provided it is pursued through coordinated, lawful, and de-escalatory means.',
+          },
+          {
+            headline: 'Civilian Shipping and Energy Corridors Remain Under Threat',
+            text: 'The economic and energy-security consequences of the Iran\u2013Israel conflict intersect with the Truce\u2019s concern for global stability. While not humanitarian access in the narrow sense, disruptions to maritime commerce and energy supply chains affect the global conditions the Truce seeks to stabilize by reducing the risk of cascading crises that harm civilian populations far beyond the immediate conflict zones.',
+          },
+        ],
+      },
+      {
+        id: 'humanitarian-access',
+        title: 'Gaza Hostilities Continue; Rafah Crossing Opens for Wounded',
+        icon: '\u{1F6D1}',
+        color: 'blue',
+        bullets: [
+          {
+            headline: 'Israeli Airstrikes Kill at Least Four Palestinians in Gaza',
+            text: 'Israeli airstrikes in Gaza continue, with at least four Palestinians killed, reflecting ongoing hostilities inconsistent with the Truce\u2019s call for calm. The persistence of military operations in densely populated areas remains a direct contradiction of the Truce\u2019s foundational appeal for the protection of civilian life during the Games period.',
+          },
+          {
+            headline: 'Rafah Crossing Opened for Limited Medical Evacuations',
+            text: 'Israel\u2019s decision to open the Rafah crossing to allow some wounded Palestinians to leave for treatment constitutes a limited but concrete instance of humanitarian access during active conflict. The narrow scale\u2014eight wounded individuals and 17 family members\u2014illustrates both the fragility and the necessity of such corridors during the Truce period. Expanding and sustaining these openings remains essential to meeting the Truce\u2019s humanitarian obligations.',
+          },
+        ],
+      },
+      {
+        id: 'diplomatic-regional',
+        title: 'Diplomatic Signals and Regional De-escalation Efforts',
+        icon: '\u{1F30D}',
+        color: 'purple',
+        bullets: [
+          {
+            headline: 'Russia\u2013Ukraine Talks on \u201cSituational Pause\u201d; Ukraine Signals Readiness to Resume',
+            text: 'Diplomatic talks between Russia and Ukraine are on a \u201csituational pause\u201d due to the Iran war, but Ukraine has signalled readiness to resume negotiations. The willingness of parties to re-engage aligns with the Truce\u2019s encouragement of dialogue, even as the pause itself reflects the vulnerability of peace efforts to external shocks.',
+          },
+          {
+            headline: 'Belarus Releases 250 Political Prisoners; DRC\u2013Rwanda Agree to Disengage Forces',
+            text: 'Belarus\u2019s release of 250 political prisoners in exchange for sanctions relief represents a non-violent confidence-building measure consistent with the Truce\u2019s spirit. Separately, the agreement between the Democratic Republic of the Congo and Rwanda to reduce tensions\u2014including disengaging forces\u2014directly supports the Truce\u2019s call for restraint and respect for territorial integrity. These incremental steps demonstrate the Truce\u2019s enduring relevance even amid escalating global conflict.',
+          },
+          {
+            headline: 'Israeli Strikes on Syria and U.S. Greenland Contingency Planning Counter Truce Aims',
+            text: 'Israeli strikes on Syrian government infrastructure and U.S. contingency planning involving runway demolition in Greenland reflect ongoing militarisation that runs counter to the Truce\u2019s aims. These actions extend the geographic and strategic footprint of military operations during a period when the international community has called for restraint.',
+          },
+        ],
+      },
+    ],
+    overallAlignment: {
+      level: 'critical',
+      summary: 'Current events reflect a sharp deterioration across several conflict theatres, with the Iran\u2013Israel\u2013U.S. escalation representing the most significant breach of the Truce\u2019s core appeals. Over 7,000 targets struck across Iran, drone attacks on a Kuwaiti oil refinery, and the disabling of 17% of Qatar\u2019s LNG export capacity mark a widening gap between military conduct and the Truce\u2019s call for restraint. A seven-nation coalition to reopen the Strait of Hormuz offers a partial alignment with safe passage principles. In Gaza, continued airstrikes contrast with the limited opening of the Rafah crossing for medical evacuations. Isolated but meaningful actions\u2014Belarus\u2019s release of 250 political prisoners, the DRC\u2013Rwanda disengagement agreement, and Ukraine\u2019s readiness to resume talks\u2014demonstrate the Truce\u2019s enduring relevance amid escalating global conflict.',
+    },
+    keyConstraints: [
+      'Iranian drones struck a Kuwaiti oil refinery; Israeli airstrikes over Tehran are ongoing\u2014marking the most significant breach of the Truce\u2019s call for calming global hostilities.',
+      'U.S.\u2013Israeli operations have struck over 7,000 targets across Iran; Iranian strikes disabled 17% of Qatar\u2019s LNG export capacity, disrupting global energy security.',
+      'Seven nations (UK, France, Germany, Italy, Netherlands, Japan, Canada) announced a coalition to reopen the Strait of Hormuz for commercial navigation.',
+      'Israel opened the Rafah crossing for limited medical evacuations (8 wounded, 17 family members)\u2014a fragile but concrete humanitarian corridor.',
+      'Russia\u2013Ukraine talks paused due to the Iran war; Belarus released 250 political prisoners; DRC and Rwanda agreed to disengage forces.',
+      'Israeli strikes on Syrian infrastructure and U.S. contingency planning in Greenland extend militarisation counter to Truce aims.',
+    ],
+    publishedAt: '2026-03-21',
+  },
+  {
     id: 'pulse-2026-03-18-energy-strikes-maritime-corridor-humanitarian-erosion',
     periodStart: '2026-03-18',
     periodEnd: '2026-03-18',
